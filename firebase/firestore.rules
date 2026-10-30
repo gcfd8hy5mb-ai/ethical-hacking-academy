@@ -1,14 +1,23 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Each learner can access only their own academy data.
+    function enrolled(academyId) {
+      return request.auth != null
+        && (
+          (academyId == 'ethical-hacking' && request.auth.token.email_verified == true)
+          || (academyId in ['business', 'law']
+              && request.auth.token.academies is list
+              && academyId in request.auth.token.academies)
+        );
+    }
+    function ownRecord(userId, academyId) {
+      return request.auth != null
+        && request.auth.uid == userId
+        && enrolled(academyId);
+    }
     match /users/{userId}/academies/{academyId}/snapshots/{snapshotId} {
-      allow read: if request.auth != null
-        && request.auth.uid == userId
-        && academyId in ['business', 'law', 'ethical-hacking'];
-      allow create, update: if request.auth != null
-        && request.auth.uid == userId
-        && academyId in ['business', 'law', 'ethical-hacking']
+      allow get, list: if ownRecord(userId, academyId);
+      allow create, update: if ownRecord(userId, academyId)
         && request.resource.data.keys().hasOnly(['raw', 'schemaVersion', 'updatedAt', 'academy'])
         && request.resource.data.keys().hasAll(['raw', 'schemaVersion', 'updatedAt', 'academy'])
         && request.resource.data.raw is string
