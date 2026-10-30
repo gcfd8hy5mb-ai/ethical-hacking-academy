@@ -1,0 +1,6 @@
+firebase/config.js
+.env
+.env.*
+!.env.example
+*.service-account.json
+serviceAccountKey.json
