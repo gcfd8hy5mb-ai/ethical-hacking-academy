@@ -1,40 +1,37 @@
 const { test, before, after } = require('node:test');
 const { readFileSync } = require('node:fs');
 const { initializeTestEnvironment, assertFails, assertSucceeds } = require('@firebase/rules-unit-testing');
-const { serverTimestamp } = require('firebase/firestore');
+const { serverTimestamp, doc, getDoc, setDoc, deleteDoc } = require('firebase/firestore');
 let env;
-before(async () => {
-  env = await initializeTestEnvironment({projectId:'academy-rules-tests',firestore:{rules:readFileSync('firebase/firestore.rules','utf8')}});
+before(async()=>{env=await initializeTestEnvironment({projectId:'academy-rules-tests',firestore:{rules:readFileSync('firebase/firestore.rules','utf8')}})});
+after(async()=>{if(env)await env.cleanup()});
+const path=(uid,a='ethical-hacking')=>'users/'+uid+'/academies/'+a+'/snapshots/progress-v1';
+const data=(a='ethical-hacking')=>({raw:'{}',academy:a,schemaVersion:1,updatedAt:serverTimestamp()});
+const db=(uid,allowed,verified=true)=>env.authenticatedContext(uid,{academies:allowed,email_verified:verified}).firestore();
+test('anonymous denied',async()=>{await assertFails(getDoc(doc(env.unauthenticatedContext().firestore(),path('alice'))))});
+test('authorized student writes own record',async()=>{await assertSucceeds(setDoc(doc(db('alice',['ethical-hacking']),path('alice')),data()))});
+test('cross-user access denied',async()=>{
+ const x=db('bob',['ethical-hacking']);
+ await assertFails(getDoc(doc(x,path('alice'))));
+ await assertFails(setDoc(doc(x,path('alice')),data()));
 });
-after(async()=>{ if(env) await env.cleanup(); });
-const path=(user,academy='ethical-hacking')=>'users/'+user+'/academies/'+academy+'/snapshots/progress-v1';
-const data=(academy='ethical-hacking')=>({raw:'{}',academy,schemaVersion:1,updatedAt:serverTimestamp()});
-const signed=(user,academies,verified=true)=>env.authenticatedContext(user,{academies,email_verified:verified}).firestore();
-test('anonymous denied', async()=>assertFails(env.unauthenticatedContext().firestore().doc(path('alice')).get()));
-test('student can write own ethical hacking progress',async()=>assertSucceeds(signed('alice',['ethical-hacking']).doc(path('alice')).set(data())));
-test('student cannot access another student',async()=>{
-  const db=signed('bob',['ethical-hacking']);
-  await assertFails(db.doc(path('alice')).get());
-  await assertFails(db.doc(path('alice')).set(data()));
+test('hacking-only enrollment denied business and law',async()=>{
+ const x=db('bob',['ethical-hacking']);
+ for(const a of ['business','law']){
+  await assertFails(getDoc(doc(x,path('bob',a))));
+  await assertFails(setDoc(doc(x,path('bob',a)),data(a)));
+ }
 });
-test('hacking-only student denied law and business',async()=>{
-  const db=signed('bob',['ethical-hacking']);
-  for(const academy of ['business','law']){
-    await assertFails(db.doc(path('bob',academy)).get());
-    await assertFails(db.doc(path('bob',academy)).set(data(academy)));
-  }
+test('owner with claims can write all three',async()=>{
+ const x=db('owner',['business','law','ethical-hacking']);
+ for(const a of ['business','law','ethical-hacking'])await assertSucceeds(setDoc(doc(x,path('owner',a)),data(a)));
 });
-test('owner enrolled in three academies can write each',async()=>{
-  const db=signed('owner',['ethical-hacking','business','law']);
-  for(const academy of ['business','law','ethical-hacking'])
-    await assertSucceeds(db.doc(path('owner',academy)).set(data(academy)));
-});
-test('unverified and unenrolled students denied',async()=>{
-  await assertFails(signed('eve',['ethical-hacking'],false).doc(path('eve')).set(data()));
-  await assertFails(signed('eve',[]).doc(path('eve')).set(data()));
+test('unverified and unenrolled users denied',async()=>{
+ await assertFails(setDoc(doc(db('eve',['ethical-hacking'],false),path('eve')),data()));
+ await assertFails(setDoc(doc(db('eve',[]),path('eve')),data()));
 });
 test('invalid record and deletion denied',async()=>{
-  const db=signed('alice',['ethical-hacking']);
-  await assertFails(db.doc(path('alice')).set({...data(),updatedAt:'not timestamp'}));
-  await assertFails(db.doc(path('alice')).delete());
+ const x=db('alice',['ethical-hacking']);
+ await assertFails(setDoc(doc(x,path('alice')),{...data(),updatedAt:'fake'}));
+ await assertFails(deleteDoc(doc(x,path('alice'))));
 });
