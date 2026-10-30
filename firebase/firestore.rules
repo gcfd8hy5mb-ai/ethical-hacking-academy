@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Each learner can access only their own academy data.
+    match /users/{userId}/academies/{academyId}/snapshots/{snapshotId} {
+      allow read: if request.auth != null
+        && request.auth.uid == userId
+        && academyId in ['business', 'law', 'ethical-hacking'];
+      allow create, update: if request.auth != null
+        && request.auth.uid == userId
+        && academyId in ['business', 'law', 'ethical-hacking']
+        && request.resource.data.keys().hasOnly(['raw', 'schemaVersion', 'updatedAt', 'academy'])
+        && request.resource.data.keys().hasAll(['raw', 'schemaVersion', 'updatedAt', 'academy'])
+        && request.resource.data.raw is string
+        && request.resource.data.raw.size() <= 800000
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.academy == academyId
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+  }
+}
