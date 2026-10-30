@@ -1,6 +1,6 @@
 # Firebase enrollment and deployment prerequisites
 
-The Firestore rules require a verified email for Ethical Hacking Academy. Business and Law Academy additionally require **trusted, server-issued** Firebase Authentication custom claims such as `{academies: ['business', 'law']}`.
+All academies require verified email and trusted server-issued Firebase Authentication custom claims. The owner's enrollment list will include `business`, `law` and `ethical-hacking`; the second student's list will include only `ethical-hacking`.
 
 **Never let the browser set enrollment claims.** A trusted server using the Firebase Admin SDK must grant these claims only to the authorized owner UID. Do not put a service account key in public GitHub, browser code or chat.
 
