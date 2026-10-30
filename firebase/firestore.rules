@@ -3,12 +3,11 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function enrolled(academyId) {
       return request.auth != null
-        && (
-          (academyId == 'ethical-hacking' && request.auth.token.email_verified == true)
-          || (academyId in ['business', 'law']
-              && request.auth.token.academies is list
-              && academyId in request.auth.token.academies)
-        );
+        && request.auth.token.email_verified == true
+        && academyId in ['business', 'law', 'ethical-hacking']
+        && request.auth.token.keys().hasAll(['academies'])
+        && request.auth.token.academies is list
+        && academyId in request.auth.token.academies;
     }
     function ownRecord(userId, academyId) {
       return request.auth != null
