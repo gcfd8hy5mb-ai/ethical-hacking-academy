@@ -14,7 +14,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Networking Practice and Troubleshooting: 8 lessons
 - Programming Logic for Security Beginners: 8 lessons
 
-Total: **68 authored lessons across ten courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **68 authored lessons across ten courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Six additional guided scenario labs include 22 interactive decision steps, immediate explanations, and device-based completion tracking. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
