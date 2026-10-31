@@ -10,8 +10,11 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Getting Comfortable With Computers: 6 beginner lessons
 - Beginner Linux and Terminal Skills: 8 guided lessons
 - Digital Identity and Everyday Security: 6 lessons
+- Windows Administration and Security: 8 lessons
+- Networking Practice and Troubleshooting: 8 lessons
+- Programming Logic for Security Beginners: 8 lessons
 
-Total: **44 authored lessons across seven courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **68 authored lessons across ten courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
