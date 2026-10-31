@@ -56,3 +56,7 @@ Five new evidence-driven tabletop exercises cover phishing triage, ransomware re
 
 ### New large lab batch
 Eight browser-only exercises (40 decisions) cover subnetting, Linux permissions, enterprise identity, web authorization, cloud recovery, incident timelines, cryptography and risk registers. They use fictional data and do not access live targets.
+
+
+## Multi-stage case simulations
+Four new synthetic casebooks cover portal outage investigation, identity access review, DNS troubleshooting, and web-grade authorization. Each has four graded decisions with detailed explanations, a 150–250-word writing prompt, self-review criteria and locally saved drafts. These run entirely in the browser; no real target access. Open via Practice Lab → Multi-stage simulations.
