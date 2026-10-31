@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "cases": [
     {
       "title": "Linux service outage",
@@ -162,6 +162,330 @@
       ],
       "correctRemediation": 0,
       "explanation": "A valid IP, working gateway and alternate working resolver support a scoped DNS configuration hypothesis."
+    },
+    {
+      "title": "Windows service dependency failure",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A fictional Windows payroll application stops after approved maintenance.",
+      "commands": [
+        [
+          "services",
+          "PayrollApp service stopped; dependency DatabaseClient service unavailable"
+        ],
+        [
+          "events",
+          "14:01 DatabaseClient failed: configuration path not found"
+        ],
+        [
+          "changes",
+          "13:55 maintenance changed application config directory"
+        ],
+        [
+          "disk",
+          "Disk 48% used; no storage alerts"
+        ],
+        [
+          "network",
+          "Gateway and database host reachable"
+        ]
+      ],
+      "required": [
+        "services",
+        "events",
+        "changes"
+      ],
+      "diagnosis": "configuration",
+      "diagnoses": [
+        [
+          "network",
+          "Network connection is definitely unavailable"
+        ],
+        [
+          "configuration",
+          "Changed dependency configuration is the leading hypothesis"
+        ],
+        [
+          "storage",
+          "Disk capacity is exhausted"
+        ]
+      ],
+      "remediation": [
+        "Review and restore approved dependency configuration, then retest both services",
+        "Disable all antivirus protection",
+        "Delete the payroll database"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Linux disk and inode investigation",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A fictional Linux training service reports that it cannot create a new output file.",
+      "commands": [
+        [
+          "disk",
+          "/var filesystem: 42% blocks used"
+        ],
+        [
+          "inodes",
+          "/var inode utilization: 100%"
+        ],
+        [
+          "journal",
+          "writer: cannot create file: No space left on device"
+        ],
+        [
+          "files",
+          "Synthetic inventory shows 210000 tiny cache files"
+        ],
+        [
+          "changes",
+          "No package or permission changes in this window"
+        ]
+      ],
+      "required": [
+        "disk",
+        "inodes",
+        "journal"
+      ],
+      "diagnosis": "inodes",
+      "diagnoses": [
+        [
+          "blocks",
+          "Disk blocks are completely full"
+        ],
+        [
+          "inodes",
+          "Inode exhaustion prevents creating new files"
+        ],
+        [
+          "permissions",
+          "The account password expired"
+        ]
+      ],
+      "remediation": [
+        "Review retention and safely clear only approved disposable cache, then verify inode use and file creation",
+        "Delete unrelated user files",
+        "Disable all audit logging"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Cloud access rule drift",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A simulated cloud policy review finds that private submissions were mistakenly included in a broad read permission.",
+      "commands": [
+        [
+          "policy",
+          "resource=training-bucket/* action=read principal=all-users"
+        ],
+        [
+          "inventory",
+          "training-bucket/public-images and training-bucket/private-submissions"
+        ],
+        [
+          "tests",
+          "synthetic unauthenticated GET private-submissions/example returned 200"
+        ],
+        [
+          "change",
+          "08:22 IAM policy expanded from public-images/* to *"
+        ],
+        [
+          "audit",
+          "No actual customer data exists in the exercise"
+        ]
+      ],
+      "required": [
+        "policy",
+        "inventory",
+        "tests"
+      ],
+      "diagnosis": "authorization",
+      "diagnoses": [
+        [
+          "authorization",
+          "A broad policy creates an unauthorized read path in the synthetic test"
+        ],
+        [
+          "encryption",
+          "The TLS certificate has expired"
+        ],
+        [
+          "outage",
+          "The storage service is offline"
+        ]
+      ],
+      "remediation": [
+        "Restrict access to public-images only and verify both permitted and denied requests",
+        "Make all files writable to everyone",
+        "Delete all training audit records"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Web application session diagnosis",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A test-only student application appears to remain signed in after its logout button is used.",
+      "commands": [
+        [
+          "ui",
+          "Logout hides profile menu and navigates to homepage"
+        ],
+        [
+          "session",
+          "Mock API request with existing session still returns HTTP 200"
+        ],
+        [
+          "policy",
+          "On logout, active server sessions must be revoked"
+        ],
+        [
+          "identity",
+          "Synthetic account uses normal student role"
+        ],
+        [
+          "logs",
+          "No real production account details provided"
+        ]
+      ],
+      "required": [
+        "ui",
+        "session",
+        "policy"
+      ],
+      "diagnosis": "session",
+      "diagnoses": [
+        [
+          "session",
+          "The mock server continues accepting a session after logout"
+        ],
+        [
+          "dns",
+          "The hostname cannot resolve"
+        ],
+        [
+          "graphics",
+          "The homepage theme is incorrect"
+        ]
+      ],
+      "remediation": [
+        "Invalidate the active session at the trusted service and verify it is rejected afterward",
+        "Only change logout button text",
+        "Publish the session value"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Phishing alert and change correlation",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A synthetic SOC queue contains a suspicious payment message and unrelated software changes.",
+      "commands": [
+        [
+          "email",
+          "From: billing@vend0r.test; known vendor: vendor.test"
+        ],
+        [
+          "links",
+          "Message requests urgent bank update through a supplied link"
+        ],
+        [
+          "finance",
+          "Supplier bank changes require verified callback to existing contact"
+        ],
+        [
+          "deploy",
+          "Web app deployment at 12:00 unrelated to supplier records"
+        ],
+        [
+          "access",
+          "No successful account compromise confirmed in supplied window"
+        ]
+      ],
+      "required": [
+        "email",
+        "links",
+        "finance"
+      ],
+      "diagnosis": "fraud",
+      "diagnoses": [
+        [
+          "outage",
+          "The application deployment caused the supplier request"
+        ],
+        [
+          "fraud",
+          "Potential supplier impersonation requires independent verification"
+        ],
+        [
+          "breach",
+          "A confirmed company-wide compromise occurred"
+        ]
+      ],
+      "remediation": [
+        "Hold payment change and verify using established supplier contact channels",
+        "Send an MFA code to the email sender",
+        "Approve based on the sender's logo"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Network segmentation fault",
+      "course": "Advanced simulated diagnostics",
+      "brief": "A synthetic office VLAN test shows a guest client unexpectedly reaching a mock internal finance API.",
+      "commands": [
+        [
+          "topology",
+          "Guest VLAN 20; finance VLAN 40; intended policy denies guest-to-finance"
+        ],
+        [
+          "flows",
+          "Synthetic guest -> finance API TCP 443: allowed"
+        ],
+        [
+          "rules",
+          "Firewall rule guest-to-any allow placed above guest-to-finance deny"
+        ],
+        [
+          "dns",
+          "Internal host resolves successfully"
+        ],
+        [
+          "change",
+          "Policy change approved only for guest internet access"
+        ]
+      ],
+      "required": [
+        "topology",
+        "flows",
+        "rules"
+      ],
+      "diagnosis": "rule",
+      "diagnoses": [
+        [
+          "rule",
+          "Rule precedence allows an unintended guest-to-finance path"
+        ],
+        [
+          "dns",
+          "DNS is entirely unavailable"
+        ],
+        [
+          "device",
+          "The guest laptop display failed"
+        ]
+      ],
+      "remediation": [
+        "Review and correct firewall precedence, then test allowed internet and denied finance paths",
+        "Turn off all network security rules",
+        "Give guests a finance administrator account"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
     }
   ]
 }
