@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "passingPercent": 80,
   "exams": [
     {
@@ -505,6 +505,96 @@
           ],
           0,
           "A controlled lab needs clear scope and safety controls."
+        ]
+      ]
+    },
+    {
+      "title": "Windows Linux and Network Troubleshooting Exam",
+      "courses": [
+        "Windows Administration and Security",
+        "Beginner Linux and Terminal Skills",
+        "Networking Practice and Troubleshooting"
+      ],
+      "questions": [
+        [
+          "192.168.40.25/24 belongs to which network?",
+          [
+            "192.168.40.0/24",
+            "192.168.41.0/24",
+            "192.168.40.25/32"
+          ],
+          0,
+          "A /24 uses the first three octets for the network prefix."
+        ],
+        [
+          "What is the conventional broadcast address of 192.168.40.0/24?",
+          [
+            "192.168.40.255",
+            "192.168.40.1",
+            "192.168.41.255"
+          ],
+          0,
+          "The final eight host bits are ones in the broadcast address."
+        ],
+        [
+          "The gateway responds but the hostname does not resolve. Which next check is most focused?",
+          [
+            "Compare resolver configuration and DNS results",
+            "Reset all company routers",
+            "Delete the app's files"
+          ],
+          0,
+          "Local IP connectivity works, while name resolution fails."
+        ],
+        [
+          "What access does file mode 640 grant the group on an ordinary Linux file?",
+          [
+            "Read only",
+            "Read and write",
+            "Execute only"
+          ],
+          0,
+          "The group digit 4 grants read access."
+        ],
+        [
+          "A Windows sign-in failure appears in Event Viewer. What can be concluded?",
+          [
+            "A failed authentication event was recorded",
+            "Credentials were stolen",
+            "Malware was installed"
+          ],
+          0,
+          "An event's recorded outcome does not establish malicious intent."
+        ],
+        [
+          "What is a good method for studying an unfamiliar Windows startup program?",
+          [
+            "Review publisher, expected role and authorized device records",
+            "Delete it without checking",
+            "Run unrelated scripts"
+          ],
+          0,
+          "Scope and corroboration prevent unnecessary disruption."
+        ],
+        [
+          "Which is the best verification after an approved firewall change?",
+          [
+            "Confirm intended traffic works and denied traffic stays blocked",
+            "Only confirm the Save button was clicked",
+            "Disable all endpoint logs"
+          ],
+          0,
+          "Positive and negative behavior both matter."
+        ],
+        [
+          "What is a correct interpretation of the academy's simulated Linux terminal?",
+          [
+            "It models selected commands without operating the phone's real shell",
+            "It grants root on the roommate's computer",
+            "It can read neighboring Wi-Fi traffic"
+          ],
+          0,
+          "The browser simulation is an educational model, not a device control channel."
         ]
       ]
     }
