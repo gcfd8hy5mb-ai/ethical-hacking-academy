@@ -78,3 +78,7 @@ Twelve additional browser-only device-specific labs add 48 scored decisions, cov
 
 ### Device troubleshooting casebooks
 Four additional synthetic multi-stage simulations cover USB device event review, SDR spectrum analysis, RFID authentication design and wired DHCP troubleshooting. Each includes four graded decisions plus a 200–300-word technical report with self-review criteria. There are now eight simulation casebooks with 32 graded decisions in total. Drafts and best scores remain device-local, and written work is not automatically graded. Physical device competence is not certified.
+
+
+### Foundational lesson depth expansion
+Eighteen existing introductory lessons were rewritten with topic-specific explanations, worked examples and evidence-based practice prompts: six in Getting Comfortable With Computers, six in Computer and Operating-System Essentials, and six in Networking and Internet Fundamentals. The 198-lesson count and lesson order stay unchanged to preserve existing device-local progress identifiers. These remain short-to-medium browser lessons; extended graded problem sets and independent hands-on technical assessment still need development.
