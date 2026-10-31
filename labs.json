@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "disclaimer": "All scenarios are fictional. No commands run against devices or networks.",
+  "labs": [
+    {
+      "title": "Recognize a safe computer workflow",
+      "course": "Getting Comfortable With Computers",
+      "context": "You have downloaded an unfamiliar attachment from a mock email. Decide which actions protect your device and data.",
+      "steps": [
+        [
+          "A file is named invoice.pdf.exe. What do you do? ",
+          [
+            "Open immediately",
+            "Treat it as a possible executable and verify its source",
+            "Rename it invoice.pdf"
+          ],
+          1,
+          "The final extension can signal an executable. A filename is not evidence of safety."
+        ],
+        [
+          "A basic calculator requests contact access. Your response?",
+          [
+            "Allow all permissions",
+            "Deny and ask why the access would be needed",
+            "Give it an administrator password"
+          ],
+          1,
+          "Permissions should fit a documented task."
+        ],
+        [
+          "You want to protect important study notes against accidental deletion. Choose a control.",
+          [
+            "Only synchronize one copy",
+            "Keep a separate tested versioned backup",
+            "Turn off the screen"
+          ],
+          1,
+          "A separate backup can restore data after a synced deletion."
+        ]
+      ]
+    },
+    {
+      "title": "Read a simulated Linux terminal",
+      "course": "Beginner Linux and Terminal Skills",
+      "context": "You're in an isolated sample home directory, not a real machine. Interpret basic read-only commands.",
+      "steps": [
+        [
+          "What does pwd display?",
+          [
+            "Current working directory",
+            "The user's password",
+            "Every running process"
+          ],
+          0,
+          "pwd prints the working directory."
+        ],
+        [
+          "What does cd .. normally do?",
+          [
+            "Moves to a parent directory",
+            "Deletes the parent directory",
+            "Downloads a file"
+          ],
+          0,
+          "Two dots refer to the parent."
+        ],
+        [
+          "What does ls -a add?",
+          [
+            "Hidden dot-prefixed entries",
+            "Administrator privileges",
+            "Encryption"
+          ],
+          0,
+          "The -a option includes entries hidden from default listings."
+        ],
+        [
+          "You see an unfamiliar file owned by another user. What's the safe action?",
+          [
+            "Respect permissions and scope",
+            "Attempt to bypass access restrictions",
+            "Publish the file"
+          ],
+          0,
+          "Viewing another user's data requires proper authorization."
+        ]
+      ]
+    },
+    {
+      "title": "Protect a small organization",
+      "course": "Digital Identity and Everyday Security",
+      "context": "A fictional company is setting up employee accounts and recovery controls.",
+      "steps": [
+        [
+          "How should accounts be protected?",
+          [
+            "Shared passwords",
+            "Unique credentials and MFA",
+            "No passwords and no alternate controls"
+          ],
+          1,
+          "Unique passwords and MFA reduce compromise risk."
+        ],
+        [
+          "An employee changes departments. What should happen?",
+          [
+            "Retain all historical access",
+            "Review and remove unnecessary access",
+            "Make them administrator"
+          ],
+          1,
+          "Least privilege should reflect current duties."
+        ],
+        [
+          "A suspicious login page arrives by text. What should staff do?",
+          [
+            "Use a known official login route",
+            "Enter credentials to test it",
+            "Send the page to customers"
+          ],
+          0,
+          "Independent navigation helps prevent phishing."
+        ],
+        [
+          "The company has backups but never tests restores. What is missing?",
+          [
+            "Verified recovery capability",
+            "Another visual theme",
+            "A public password list"
+          ],
+          0,
+          "Test restores establish whether recovery works."
+        ]
+      ]
+    },
+    {
+      "title": "Windows security triage",
+      "course": "Windows Administration and Security",
+      "context": "A hypothetical workstation is slow following an ordinary system update. Choose a careful investigation path.",
+      "steps": [
+        [
+          "Task Manager shows high CPU. First step?",
+          [
+            "Identify process and context",
+            "Declare confirmed malware",
+            "Disable all protection"
+          ],
+          0,
+          "High CPU is an observation rather than a diagnosis."
+        ],
+        [
+          "A standard employee needs to browse reports. Appropriate permission?",
+          [
+            "Administrator access",
+            "Read-only access to reports",
+            "Unrestricted access to all folders"
+          ],
+          1,
+          "Least privilege limits mistakes and damage."
+        ],
+        [
+          "A system update is pending on a business computer. Best plan?",
+          [
+            "Backup, test, schedule, verify",
+            "Never install updates",
+            "Delete all system logs"
+          ],
+          0,
+          "Updates benefit from planning and verification."
+        ]
+      ]
+    },
+    {
+      "title": "Troubleshoot a fictional network",
+      "course": "Networking Practice and Troubleshooting",
+      "context": "A small office can connect to Wi-Fi, but a training website fails to load. No traffic is sent in this lab.",
+      "steps": [
+        [
+          "A device has no assigned IP address. What might need checking?",
+          [
+            "DHCP configuration",
+            "Monitor color",
+            "Keyboard language"
+          ],
+          0,
+          "DHCP commonly provides network settings."
+        ],
+        [
+          "An IP address is reachable but a site name fails. Investigate?",
+          [
+            "DNS resolution",
+            "Printer paper",
+            "Screen brightness"
+          ],
+          0,
+          "Name resolution is distinct from reachability."
+        ],
+        [
+          "The guest network can reach payroll records. What is the concern?",
+          [
+            "Insufficient segmentation",
+            "Too many keyboards",
+            "Web page typography"
+          ],
+          0,
+          "Visitor traffic should generally be separated from sensitive systems."
+        ],
+        [
+          "A host ignores ping. Does that prove it is offline?",
+          [
+            "No; ICMP may be filtered",
+            "Yes, always",
+            "Yes, it proves infection"
+          ],
+          0,
+          "ICMP filtering can block echo replies on healthy hosts."
+        ]
+      ]
+    },
+    {
+      "title": "Trace beginner programming logic",
+      "course": "Programming Logic for Security Beginners",
+      "context": "Interpret pseudocode running entirely inside this training page.",
+      "steps": [
+        [
+          "Set count=2, then count=count+1. The result?",
+          [
+            "2",
+            "3",
+            "4"
+          ],
+          1,
+          "The assignment increases the value by one."
+        ],
+        [
+          "If locked=true, which branch runs in 'if locked then deny else allow'?",
+          [
+            "Allow",
+            "Deny",
+            "Both"
+          ],
+          1,
+          "The true branch performs the denial."
+        ],
+        [
+          "A loop runs once for each of 4 mock log entries. How many iterations?",
+          [
+            "3",
+            "4",
+            "5"
+          ],
+          1,
+          "One iteration per list item."
+        ],
+        [
+          "A client changes a displayed role to admin. What must protect the data?",
+          [
+            "Trusted server authorization",
+            "Hidden buttons only",
+            "Larger fonts"
+          ],
+          0,
+          "Authorization belongs on the server."
+        ]
+      ]
+    }
+  ]
+}
