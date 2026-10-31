@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "passingPercent": 80,
   "exams": [
     {
@@ -595,6 +595,528 @@
           ],
           0,
           "The browser simulation is an educational model, not a device control channel."
+        ]
+      ]
+    },
+    {
+      "title": "Computer and Operating-System Essentials Mastery Examination",
+      "courses": [
+        "Computer and Operating-System Essentials"
+      ],
+      "questions": [
+        [
+          "Which memory generally loses contents when power is removed?",
+          [
+            "RAM",
+            "SSD",
+            "USB flash storage"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "A user needs to read a report. Which privilege best fits?",
+          [
+            "Read permission on the required report",
+            "Full administrator access",
+            "All staff passwords"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What does a running process represent?",
+          [
+            "An executing program",
+            "Only a saved file",
+            "A network address"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which is a useful first troubleshooting step?",
+          [
+            "Record the symptom and resource use",
+            "Delete the user account",
+            "Assume malware"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What validates backup recoverability?",
+          [
+            "A controlled restore test",
+            "A green backup icon alone",
+            "File synchronization alone"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Networking and Internet Fundamentals Mastery Examination",
+      "courses": [
+        "Networking and Internet Fundamentals"
+      ],
+      "questions": [
+        [
+          "What is DNS used for?",
+          [
+            "Resolving names to records such as IP addresses",
+            "Encrypting a hard drive",
+            "Assigning file permissions"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which address belongs to 192.168.8.0/24?",
+          [
+            "192.168.8.32",
+            "192.168.9.32",
+            "10.8.0.1"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What commonly forwards traffic between networks?",
+          [
+            "A router or gateway",
+            "An image editor",
+            "A text file"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What does HTTP 404 indicate?",
+          [
+            "An HTTP server responded but did not find the resource",
+            "No packet reached any server",
+            "A password was stolen"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which defense restricts traffic between network zones?",
+          [
+            "Segmentation and firewall policy",
+            "A longer filename",
+            "Disabling backups"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Applied Security Architecture and Threat Modeling Mastery Examination",
+      "courses": [
+        "Applied Security Architecture and Threat Modeling"
+      ],
+      "questions": [
+        [
+          "What starts a threat model?",
+          [
+            "Asset and data-flow mapping",
+            "Assuming an attacker is present",
+            "Changing passwords without scope"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Who must enforce private-record authorization?",
+          [
+            "A trusted API or data policy",
+            "The user's browser CSS",
+            "The home-screen icon"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What is risk prioritization based on?",
+          [
+            "Likely impact, exposure and feasibility",
+            "Tool price alone",
+            "Logo appearance"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which logging choice is safer?",
+          [
+            "Event type and timestamp without secrets",
+            "Plaintext session token",
+            "User password"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What should recovery planning include?",
+          [
+            "Tested restoration and responsible owners",
+            "Public admin credentials",
+            "Disabled access checks"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Practical IT Service Operations Mastery Examination",
+      "courses": [
+        "Practical IT Service Operations"
+      ],
+      "questions": [
+        [
+          "What belongs in a help-desk ticket?",
+          [
+            "Observed symptoms, scope and actions tried",
+            "Unrelated private files",
+            "A guess presented as certainty"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What should a change plan include?",
+          [
+            "Approval, test, and rollback",
+            "Only a new title",
+            "Removing audit logs"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "A device is online but DNS fails. What check is focused?",
+          [
+            "Resolver configuration",
+            "Wallpaper",
+            "Speaker volume"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "When should an issue be escalated?",
+          [
+            "When authority or expertise is exceeded",
+            "Only after deleting records",
+            "Never"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What proves a fix?",
+          [
+            "Repeat the original user workflow successfully",
+            "Close the ticket first",
+            "Assume a restart worked"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Introduction to Defensive Cryptography Mastery Examination",
+      "courses": [
+        "Introduction to Defensive Cryptography"
+      ],
+      "questions": [
+        [
+          "What does encryption chiefly protect?",
+          [
+            "Confidentiality",
+            "Guaranteed uptime",
+            "The physical screen"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which key remains secret in an asymmetric pair?",
+          [
+            "Private key",
+            "Public key",
+            "Public domain name"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What can a trusted cryptographic digest help verify?",
+          [
+            "File integrity",
+            "Whether every file is harmless",
+            "The downloader's identity"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What does a signature generally support?",
+          [
+            "Integrity and signer verification under trusted keys",
+            "Message secrecy alone",
+            "Backup capacity"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What should follow public exposure of a private service key?",
+          [
+            "Revoke or rotate and investigate",
+            "Only rename the variable",
+            "Ignore old commits"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Security Monitoring and Log Analysis Mastery Examination",
+      "courses": [
+        "Security Monitoring and Log Analysis"
+      ],
+      "questions": [
+        [
+          "What does a login_failed event establish?",
+          [
+            "A recorded unsuccessful attempt",
+            "A successful account takeover",
+            "Confirmed data theft"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Why normalize time zones?",
+          [
+            "To correlate events accurately",
+            "To hide evidence",
+            "To change device permissions"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "A high alert count always means better detection?",
+          [
+            "No, noise may hide important events",
+            "Yes, regardless of quality",
+            "Only with red icons"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What makes an escalation useful?",
+          [
+            "Observed evidence and uncertainties",
+            "Unsupported attribution",
+            "Shared passwords"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which metric helps assess monitoring?",
+          [
+            "Actionable alert proportion",
+            "Office paint color",
+            "Number of wallpaper themes"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Safe Authorized Assessment Methodology Mastery Examination",
+      "courses": [
+        "Safe Authorized Assessment Methodology"
+      ],
+      "questions": [
+        [
+          "A production server is outside written scope. What should you do?",
+          [
+            "Do not test without permission",
+            "Test it briefly",
+            "Assume related servers are included"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "Which test hypothesis is sound?",
+          [
+            "A narrow expected behavior with permitted verification",
+            "All systems are insecure",
+            "Collect real user data"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What belongs in a finding?",
+          [
+            "Scope, evidence, impact and fix",
+            "Only a dramatic headline",
+            "Confidential raw records"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What should be done with synthetic evidence?",
+          [
+            "Label it as simulation",
+            "Claim it proves production compromise",
+            "Publish real credentials"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What closes a finding?",
+          [
+            "Authorized retest and documented result",
+            "An unverified claim of a patch",
+            "Renaming a ticket"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Hands-On Network Reasoning Workshop Mastery Examination",
+      "courses": [
+        "Hands-On Network Reasoning Workshop"
+      ],
+      "questions": [
+        [
+          "A gateway responds but a hostname fails. What is a targeted check?",
+          [
+            "DNS resolution",
+            "Keyboard settings",
+            "File permissions"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "How many conventional usable hosts are in a /24 subnet?",
+          [
+            "254",
+            "256",
+            "24"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What is 192.168.12.0/24 broadcast address?",
+          [
+            "192.168.12.255",
+            "192.168.12.1",
+            "192.168.13.255"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What does TCP provide for many apps?",
+          [
+            "Reliable ordered byte stream",
+            "Guaranteed application security",
+            "DNS ownership"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What should a diagnostic memo separate?",
+          [
+            "Facts and hypotheses",
+            "Fonts and icons",
+            "Public and private passwords"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Beginner Python Logic and Defensive Automation Mastery Examination",
+      "courses": [
+        "Beginner Python Logic and Defensive Automation"
+      ],
+      "questions": [
+        [
+          "What is the result after count=2 then count=count+1?",
+          [
+            "3",
+            "2",
+            "21"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What is true about Python 5 == '5'?",
+          [
+            "False, the types differ",
+            "True, all values are text",
+            "A syntax error"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "How many failed entries are in [failed,success,failed]?",
+          [
+            "2",
+            "3",
+            "1"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "What is 3 of 12 as a percentage?",
+          [
+            "25%",
+            "36%",
+            "3%"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ],
+        [
+          "An empty log proves what?",
+          [
+            "No events are recorded in that data",
+            "No events occurred anywhere",
+            "All systems are safe"
+          ],
+          0,
+          "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
     }
