@@ -1,5 +1,5 @@
 {
-  "version": 12,
+  "version": 13,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -84,7 +84,7 @@
       "lessons": [
         [
           "CPU, memory, storage and processes",
-          "A processor executes instructions, RAM holds active working data, and persistent storage keeps information after shutdown. A process is a running program with its own resources. Operating systems schedule processes and control device access. Knowing this model helps explain crashes, performance issues and security boundaries.",
+          "CPU executes instructions; RAM holds active working data; disks retain persistent information. A process is an executing program, while a thread is one stream of execution. Worked example: an editor opens a 5 MB text file. Its disk size is not equal to the memory used by the running editor, because code, buffers, and other data also occupy RAM. For a slow computer, inspect memory pressure, CPU usage, free storage, and application errors separately rather than assuming a virus.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "A computer slows when many applications run simultaneously. What resource may be exhausted?",
           [
             "Available memory",
@@ -96,7 +96,7 @@
         ],
         [
           "Files, directories and permissions",
-          "A file system organizes data into paths and directories. Linux commonly uses a forward slash and an explicit root directory; Windows often uses drive letters. File permissions govern who can read, modify or execute a resource. Access should be tested on a system you control. Do not change real system permissions just to complete a practice exercise.",
+          "A path identifies a location in a file system. Files have owners and access rules, while directories control how files are organized and reached. Linux paths often begin at /; Windows paths commonly use drive roots. Worked example: /home/student/report.txt and /home/admin/report.txt are different files even if their names match. Before making any change, confirm the exact file, its owner, and the intended action.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "A shared report should be readable by a team but not editable by them. Which model fits?",
           [
             "Read-only access for the team",
@@ -108,7 +108,7 @@
         ],
         [
           "Users, groups and privilege",
-          "A user account represents an identity; groups simplify assignment of permissions. Administrative privileges can change system configuration, so routine work should use less powerful accounts. Privilege elevation should be deliberate, logged when appropriate, and limited to authorized tasks. The principle applies to Windows, Linux, cloud services and databases.",
+          "A user account represents an identity and a group collects accounts for permission assignments. Administrative privilege is more powerful than normal access and should not be used for everyday activity without need. Worked example: the finance group can read a monthly report while a designated finance editor can modify it. A trainee should not be granted system administrator simply to view the report. Inspect effective privileges in a synthetic policy before recommending changes.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "Which action best follows least privilege?",
           [
             "Browse normally as an administrator",
@@ -120,7 +120,7 @@
         ],
         [
           "The terminal and command syntax",
-          "A shell accepts structured commands, options and arguments. In a safe teaching environment, pwd displays the current directory, ls lists entries, and cd changes directory. Commands can have side effects, so understand their purpose before running them. This academy begins with a simulated terminal rather than access to your phone or an external machine.",
+          "A command line sends structured text commands to an interpreter. Common components include a command name, options, and arguments. Quoting and spacing matter; unfamiliar commands can have side effects. Worked example: an imaginary `show report` command is read-only while `remove report` would change data. In the academy's terminal simulator, `pwd`, `ls`, and `whoami` display fabricated training output rather than real device information. Read help documentation and understand expected effects before using any command on a real system.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "Which command prints the current directory in a typical Linux shell?",
           [
             "pwd",
@@ -132,7 +132,7 @@
         ],
         [
           "Processes and services",
-          "Services provide ongoing functions such as web hosting, authentication and background jobs. A listening service can expose a network endpoint; this is not automatically a vulnerability. Administrators maintain inventories, restrict access, monitor health, and apply patches. Distinguish ordinary service operation from suspicious behavior by examining context and logs.",
+          "Processes represent running software; services provide continuing background functions. A process may be idle, active, blocked, or terminated, and high resource usage can arise from legitimate scheduled activity. Worked example: a backup service uses CPU at midnight, corresponding to its documented job schedule. Compare the process owner, expected purpose, start time, and error logs before labeling it suspicious. Restarting critical services without approval can interrupt business operations.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "An approved web server listens on HTTPS. Which conclusion is justified?",
           [
             "The server is definitely compromised",
@@ -144,7 +144,7 @@
         ],
         [
           "Backups, updates and recovery",
-          "Patching reduces known weaknesses, but updates require testing and rollback plans. Backups help recover from deletion, ransomware and hardware failure only when they can actually be restored. A useful plan specifies recovery time objective (RTO) and recovery point objective (RPO), tests restores, and protects backup credentials.",
+          "Updates correct defects or add features; backups protect recoverability. A sync folder is not necessarily an independent backup. Worked example: payroll records are copied nightly, but restoration has never been tested. The team needs a controlled restore exercise, documented retention, and clear recovery objectives. Before patching, identify the affected software, maintenance window, test plan, and rollback option; after patching, verify service behavior.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "A backup exists but has never been restored in a test. What is the key uncertainty?",
           [
             "Whether it can actually recover the data",
@@ -161,7 +161,7 @@
       "lessons": [
         [
           "Packets, protocols and layered models",
-          "Networks carry data in packets using agreed protocols. The layered approach separates responsibilities: applications exchange messages, transport protocols manage communication, IP routes across networks, and local link technologies move frames. Layered troubleshooting asks whether the problem is local connectivity, routing, name resolution, transport, or the application.",
+          "Networks deliver units of data using layered protocols. An application may make an HTTP request while TCP or another transport carries data, IP routes packets, and a local link transports frames. Worked example: a browser fails to open a page. Wi-Fi association may succeed even if DNS resolution or the web service fails. Troubleshoot in layers instead of treating every failure as the same problem.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "A website name does not resolve, but direct connectivity to an approved IP works. Which layer should be examined?",
           [
             "DNS/name resolution",
@@ -173,7 +173,7 @@
         ],
         [
           "Addresses, subnets and gateways",
-          "IPv4 addresses identify interfaces, while subnet masks define which addresses are local. A default gateway forwards traffic to other networks. Private address ranges are commonly used internally and do not by themselves identify an internet host. A /24 network contains 256 total IPv4 addresses, usually 254 conventionally usable host addresses.",
+          "An IPv4 address is a numerical identifier used for routing. A subnet prefix distinguishes network bits from host bits. With 192.168.40.0/24, ordinary hosts can use addresses such as 192.168.40.10, and an address such as 192.168.41.10 lies outside that /24. A gateway forwards traffic toward other networks. Worked example: when the gateway is reachable but an external address is not, investigate routing and permitted upstream connectivity before changing DNS settings.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "On a typical 192.168.10.0/24 network, which device is likely on the local subnet?",
           [
             "192.168.10.24",
@@ -185,7 +185,7 @@
         ],
         [
           "DNS and domain names",
-          "DNS maps human-readable names to records such as A, AAAA and MX. Resolvers may cache results to improve performance. A DNS answer alone does not prove that a website is trustworthy; attackers can use look-alike names and misleading links. Verify domains carefully, especially before providing credentials.",
+          "DNS translates domain names into records including IP addresses. A resolver may cache prior answers, and a failure can occur from a typo, missing record, unavailable resolver, or network configuration. Worked example: a training portal is reachable through an approved IP-based check but its name fails to resolve. Compare resolver settings, query errors, and a known-good device. A DNS failure does not, on its own, prove tampering.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "Which DNS record typically maps a hostname to an IPv4 address?",
           [
             "A",
@@ -197,7 +197,7 @@
         ],
         [
           "TCP, UDP and common services",
-          "TCP provides a reliable ordered byte stream, while UDP transports datagrams without guaranteeing delivery or order. Common services include HTTPS, DNS, SSH and email transport. A port number identifies a service endpoint but does not prove which application or security state exists. Firewalls filter traffic using defined policies.",
+          "TCP provides reliable ordered byte streams to many applications; UDP sends datagrams without built-in delivery guarantees. Applications select protocols based on requirements. HTTPS typically operates over TCP or QUIC over UDP depending on connection negotiation. Worked example: a DNS lookup might use UDP, while an ordinary HTTPS connection may use TCP or QUIC. A port number helps identify a service endpoint but is not proof of who operates it or whether it is safe.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "Which transport is used by conventional HTTPS over HTTP/1.1 or HTTP/2?",
           [
             "TCP",
@@ -209,7 +209,7 @@
         ],
         [
           "HTTP, HTTPS and TLS",
-          "HTTP defines web requests and responses; HTTPS protects transport using TLS. TLS helps authenticate the server and encrypt data in transit, but it does not guarantee that a site or its business practices are trustworthy. A web application must still validate input and enforce permissions on the server.",
+          "HTTP defines requests, responses, methods, and status codes. A 404 means the server could not find the requested resource; a 403 usually means the request is forbidden; a 500 signals a server-side error condition. TLS protects transport confidentiality and authenticates the server under certificate-validation rules. Worked example: an HTTPS page that returns 404 has received an HTTP response, so DNS and transport may have worked. A valid certificate does not guarantee the site's business claims are truthful.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "What does the padlock/HTTPS indicator primarily show?",
           [
             "Encrypted transport to the authenticated site",
@@ -221,7 +221,7 @@
         ],
         [
           "Network segmentation and monitoring",
-          "Segmentation separates systems by business need and limits unnecessary movement across a network. Monitoring uses logs, metrics and permitted traffic observations to notice anomalies. Establish an approved baseline before investigating: unusual traffic may be caused by backups, updates or other legitimate work. Avoid capturing other people's data without authorization.",
+          "Segmentation separates systems so that compromise or accidental traffic has less reach. Firewalls and access policies restrict flows, while monitoring records approved observations to detect problems. Worked example: a student training network may access a mock web service but should not reach the fictional payroll database. Draw a network diagram identifying the trusted boundary and specify allowed flows. Any validation must stay within a lab you own or are explicitly authorized to examine.\n\nApply: State the expected behavior, identify the relevant observation in the worked example, explain one alternative cause, and propose a reversible test. Record findings without claiming more than the evidence establishes.",
           "A guest Wi‑Fi network cannot access internal payroll systems. What principle is illustrated?",
           [
             "Segmentation",
