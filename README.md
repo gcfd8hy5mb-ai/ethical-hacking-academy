@@ -23,8 +23,13 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Safe Authorized Assessment Methodology: 6 lessons
 - Hands-On Network Reasoning Workshop: 6 lessons
 - Beginner Python Logic and Defensive Automation: 6 lessons
+- Enterprise Identity and Access Management: 10 introductory lessons
+- Linux System Administration Lab Theory: 10 introductory lessons
+- Web Application Security Fundamentals: 10 introductory lessons
+- Cloud Infrastructure Security: 10 introductory lessons
+- Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **128 authored lessons across twenty courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Eleven guided scenario labs include 42 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Three mastery examinations add 18 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **178 authored lessons across twenty-five courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Eleven guided scenario labs include 42 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Three mastery examinations add 18 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -39,3 +44,7 @@ This material is original and is not a university degree or an official certific
 
 ## Evidence investigations
 Four fictional multi-stage investigations add 20 graded decisions using synthetic authentication logs, network data, access reviews and cloud configuration. Each includes answer explanations and local best-score saving. Open them from Practice Lab. These are simulations, not real-world target tests.
+
+
+## Curriculum depth status
+The 50 lessons in the newest enterprise security batch are introductory instructional modules with a shared evidence-based practice framework. They are not full-length lectures or hands-on examinations. Future development must deepen each topic with unique technical examples, extended practice, and graded assessments before professional-level equivalence can be claimed.
