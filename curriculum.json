@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -315,7 +315,7 @@
       "lessons": [
         [
           "What happens when you open an app",
-          "An application is a program stored on your device. Tapping its icon asks the operating system to load instructions into memory and begin a process. The application may read local files or request data across a network; those are different actions. Your phone manages permissions for features such as camera, photos and location. A useful security habit is noticing which permissions a task actually requires.",
+          "Opening an app: from tap to running process,When you tap an app icon, the operating system checks the app package, loads required code and resources, establishes an execution environment and schedules work on the processor. Memory (RAM) holds active code and data; persistent storage retains files after power off. The app then requests permissions for functions such as cameras or files. A permission prompt is not proof that the app deserves that access. Worked example: a calculator can normally perform arithmetic without reading contacts. If a calculator requests contacts, assess whether the request fits its purpose. Troubleshooting: if an app freezes, first document exactly where it stops, check available space and known updates, and use an approved restart before deleting data.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "You install a calculator that requests access to contacts. What is the best response?",
           [
             "Grant every request automatically",
@@ -327,7 +327,7 @@
         ],
         [
           "Bits, bytes and file sizes",
-          "Computers represent information using binary digits called bits. Eight bits form one byte. Files contain sequences of bytes interpreted according to a format. A text file, a photo and a program may all be stored as bytes but are processed differently. Approximate decimal sizes: 1 kilobyte is 1,000 bytes and 1 megabyte is 1,000,000 bytes; some systems instead use binary units such as KiB and MiB.",
+          "Bits, bytes and storage estimates,A bit is a binary digit, either 0 or 1. Eight bits commonly form one byte. Storage vendors often use decimal units: 1 MB = 1,000,000 bytes; many operating systems also use binary units: 1 MiB = 1,048,576 bytes. Worked example: a 12 MB photo plus an 8 MB file uses about 20 MB in decimal reporting. A 4 GiB RAM figure represents 4 × 1,073,741,824 bytes, but not all of that is free for apps. Security logs and backups also consume storage. If a device reports less available capacity than the box says, consider units, formatting, system partitions and installed software rather than assuming data theft.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "A file contains 8,000 bits. How many bytes does it contain?",
           [
             "1,000 bytes",
@@ -339,7 +339,7 @@
         ],
         [
           "Files, apps and extensions",
-          "A filename extension often hints at intended format: .txt for plain text, .jpg for a common image format, and .pdf for a document. Extensions can be misleading because a filename is only a label. Opening an unknown attachment may invoke an application or script; inspect the source and type before acting. A folder organizes files; an application uses files to store settings and work.",
+          "Files, types and hidden extensions,A file has a name and content; its extension helps the operating system choose a handler but does not guarantee content is harmless. Folders organize files into paths. A document named invoice.pdf.exe on a Windows machine may be an executable, even if a view hides the final extension. Worked example: compare course-notes.pdf, course-notes.txt and course-notes.pdf.exe. Only the first two clearly indicate ordinary document/text handling, and file contents still need appropriate scrutiny. Use built-in file information or safe previews before opening unfamiliar downloads. Do not run a file simply because it came from a message that appears to be from a coworker.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "An email attachment is called report.pdf.exe. What should you notice?",
           [
             "The final extension may indicate an executable",
@@ -351,7 +351,7 @@
         ],
         [
           "Operating systems: iPhone, Windows and Linux",
-          "An operating system manages applications, memory, storage, accounts, devices and access controls. iOS limits app interactions through sandboxing and explicit permissions. Windows and Linux offer different interfaces but perform many of the same underlying jobs. Learning transferable concepts is more important than memorizing one screen layout.",
+          "Different operating systems, shared principles,iOS, Windows and Linux expose different interfaces but perform the same core tasks: manage applications, files, accounts, processes, hardware and network communication. iOS restricts app-to-app access through sandboxing. Windows uses accounts, services, file permissions and management tools. Linux often exposes permissions through users, groups and command-line utilities. Worked example: deleting an app's icon from your Home Screen is not the same as revoking its online account sessions. Learn the distinction between the device interface, operating-system controls and remote account access. Practice by identifying where app permissions and software-update settings live on a device you own.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "Which component normally decides whether an app may access protected files?",
           [
             "The operating system's permission system",
@@ -363,7 +363,7 @@
         ],
         [
           "Local storage versus cloud storage",
-          "Local storage keeps data on your current device. Cloud services store data on remote computers reachable through a network. Synchronization attempts to reconcile changes between locations, while backup preserves a separate recovery copy. A synced deletion may be copied everywhere, so sync is not automatically equivalent to a versioned backup.",
+          "Local files, cloud files and synchronization,Local storage is information saved on your device; cloud storage is information stored by a remote provider and accessed over a network. Syncing copies or mirrors changes across devices and may propagate accidental deletions. A backup is a recoverable copy designed for restoration after failure or loss. Worked example: if a shared folder syncs a deletion to every device, merely having sync enabled does not guarantee a restorable earlier version. Evaluate version history, backup independence, retention and recovery testing. For important school work, export an independent copy using an approved method and periodically verify that you can restore it.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "Your file disappears from every synced device. Which control would most help recovery?",
           [
             "A separate tested versioned backup",
@@ -375,7 +375,7 @@
         ],
         [
           "Practicing safely on your phone",
-          "Your iPhone is enough for reading lessons, quizzes and browser simulations. A web-based command simulator can show what a Linux command does without executing it on a real machine. Later, actual operating-system administration and network labs may require a computer or authorized isolated lab. Never test unfamiliar commands against someone else's device or network.",
+          "A safe iPhone practice routine,An iPhone can support introductory cybersecurity study through browser-only simulations, notes, file organization and authorized network observations. Create a fictional incident note with fields for time, device, symptom, evidence, hypothesis and next check. Worked example: a training website fails to load while other sites work. Record the address and error, verify the device is online, and compare a second permitted network or browser before changing settings. Avoid probing a friend's Wi-Fi, installing unknown device profiles, opening suspicious attachments or copying real passwords into lab notes. Your current academy practice screens simulate results and do not execute system commands.\n\nPractice task: Write three observations, two possible explanations and one safe verification step from the worked example. Compare facts with assumptions before selecting the lesson answer.",
           "A simulated terminal prints example files. What can you conclude?",
           [
             "The simulation demonstrated the command concept",
