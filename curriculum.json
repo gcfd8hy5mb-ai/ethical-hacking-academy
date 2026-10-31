@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -2409,6 +2409,102 @@
           ],
           0,
           "Electrical logic-level changes over time in an authorized circuit."
+        ],
+        [
+          "Hardware lab rules and safe boundaries",
+          "A hardware assessment begins with explicit permission for the particular device, network, radio channel and test method. An owner may approve a spare training badge but not their production access-control system. Build a lab inventory with serial references, owner, reset procedure, physical safety constraints and evidence retention. Worked example: the organization approves a demo RFID badge reader and three synthetic cards; document that the production door controller is out of scope.",
+          "Your lab includes one demo badge reader but a similar production reader is nearby. What is permitted?",
+          [
+            "Only the explicitly approved demo reader",
+            "Both readers because they are the same brand",
+            "The production reader after hours"
+          ],
+          0,
+          "Written scope applies to individual assets and methods."
+        ],
+        [
+          "Radio frequency, power and legal compliance",
+          "Transmitting and receiving radio devices can be subject to different rules depending on frequency, location, power, and service. Never assume a programmable radio can transmit on any setting. Beginner exercises should interpret synthetic spectrum captures and manufacturer documentation before any powered test. An RF observation also does not identify the sender's intent.",
+          "What should a new SDR learner do first?",
+          [
+            "Study legal limits and use instructor-provided traces",
+            "Transmit on an arbitrary frequency",
+            "Intercept private conversations"
+          ],
+          0,
+          "Radio activities require appropriate authorization and compliance."
+        ],
+        [
+          "USB trust boundaries and endpoint controls",
+          "USB peripherals can claim different device classes, including storage, keyboard and network adapters. A computer may trust some peripherals automatically, creating an endpoint-security boundary. Practice by reviewing fabricated operating-system device events and developing an allowlisting policy. Never connect unfamiliar devices to another person's computer without permission.",
+          "A mock log shows an unexpected keyboard-class peripheral. Best response?",
+          [
+            "Review authorized endpoint events and device policy",
+            "Assume the user intentionally installed malware",
+            "Run an unknown script"
+          ],
+          0,
+          "Classify the event and investigate within authorization."
+        ],
+        [
+          "RFID and NFC authentication fundamentals",
+          "An RFID or NFC identifier may be public, while some systems use cryptographic authentication to resist impersonation. Security depends on technology, reader design and key management; not all cards have the same protection. Evaluate an instructor-provided comparison of a simple ID-only reader and a challenge-response reader without experimenting with live access systems.",
+          "Which reader model generally offers stronger authentication?",
+          [
+            "A properly implemented cryptographic challenge-response reader",
+            "Any reader that accepts a visible identifier",
+            "Any reader with a newer plastic case"
+          ],
+          0,
+          "Cryptographic verification improves resistance to simple identifier reuse."
+        ],
+        [
+          "Network appliance setup diagrams",
+          "Network test appliances may connect over a wired interface or a dedicated lab access point. Draw the authorized path from training client to switch to disposable services. Document expected IP assignments, DHCP behavior, egress restrictions and emergency disconnect. For exercises, use prewritten fictitious records instead of sending packets.",
+          "What should be in an approved appliance lab diagram?",
+          [
+            "Network boundary, owners and allowed traffic",
+            "Only tool logos",
+            "Production passwords"
+          ],
+          0,
+          "A scoped topology supports safe and repeatable practice."
+        ],
+        [
+          "Logic analyzer measurements and timing",
+          "A logic analyzer displays digital signal transitions against time. In an instructor-generated trace, identify low and high levels, clock pulses and timing intervals. Two transitions at 2 and 7 microseconds are 5 microseconds apart. Voltage compatibility and common ground must be verified before connecting equipment in a physical lab.",
+          "Transitions occur at 2 μs and 7 μs. What interval separates them?",
+          [
+            "5 μs",
+            "9 μs",
+            "14 μs"
+          ],
+          0,
+          "Subtract the first timestamp from the second."
+        ],
+        [
+          "Microcontroller firmware and supply-chain trust",
+          "Microcontroller training boards run firmware that may come from a manufacturer, developer or independent project. Review provenance, documented features, updates and permissions before installation. Treat arbitrary firmware downloads as untrusted, and use synthetic configuration screens when hardware is unavailable.",
+          "A firmware download link appears in an unverified message. Best action?",
+          [
+            "Verify the trusted project source and integrity information",
+            "Install immediately",
+            "Share privileged lab credentials"
+          ],
+          0,
+          "Supply-chain checks reduce software substitution risks."
+        ],
+        [
+          "Portable hardware case documentation",
+          "A professional hardware lab report states the goal, device and firmware versions, authorized scope, synthetic observations, limitations, safety precautions and proposed defensive improvement. Possessing a device does not establish skill or permission. Use a table with evidence, inference, and uncertainty for every meaningful finding.",
+          "What claim is supported by a browser-only hardware simulation?",
+          [
+            "The learner evaluated the synthetic scenario",
+            "The learner physically operated the actual device",
+            "The learner tested a production system"
+          ],
+          0,
+          "Simulated and hands-on abilities must be distinguished."
         ]
       ]
     }
