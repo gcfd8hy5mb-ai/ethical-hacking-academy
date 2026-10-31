@@ -29,7 +29,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Cloud Infrastructure Security: 10 introductory lessons
 - Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **178 authored lessons across twenty-five courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Nineteen guided scenario labs include 82 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Six mastery examinations add 36 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **190 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Twenty-three guided scenario labs include 98 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Six mastery examinations add 36 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -60,3 +60,9 @@ Eight browser-only exercises (40 decisions) cover subnetting, Linux permissions,
 
 ## Multi-stage case simulations
 Four new synthetic casebooks cover portal outage investigation, identity access review, DNS troubleshooting, and web-grade authorization. Each has four graded decisions with detailed explanations, a 150–250-word writing prompt, self-review criteria and locally saved drafts. These run entirely in the browser; no real target access. Open via Practice Lab → Multi-stage simulations.
+
+
+## Hardware curriculum and graduation policy — implementation status
+The Ethical Hacking Hardware Foundations course contains 12 introductory device lessons covering Flipper Zero, WiFi Pineapple, USB Rubber Ducky, HackRF One, Proxmark3, Bash Bunny, Raspberry Pi, ESP32 Marauder, Shark Jack, O.MG Cable, Alfa Wi-Fi Adapter, and Logic Analyzer. Four browser-only simulated labs supply 16 assessed decisions. These are now accessible within the existing lesson and practice-lab system.
+
+Target five-part hardware mastery model: understand, configure, operate safely, troubleshoot, and independently demonstrate mastery. **Only introductory conceptual instruction and simulated decision assessments are currently implemented.** No physical hardware evaluation, enforced graduation requirement, certification, or device purchase requirement exists in this app. Actual hands-on hardware competence cannot be validated through browser simulations alone.
