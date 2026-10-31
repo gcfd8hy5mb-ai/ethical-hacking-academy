@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "disclaimer": "All scenarios are fictional. No commands run against devices or networks.",
   "labs": [
     {
@@ -1140,6 +1140,570 @@
           ],
           0,
           "Physical proficiency requires actual supervised demonstration."
+        ]
+      ]
+    },
+    {
+      "title": "Flipper Zero IR diagnostics",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving IR control of an approved demo lamp. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "infrared receiver",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on infrared receiver."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Power, alignment and supported protocol",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "WiFi Pineapple network identity",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving mock client joining an access point. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "certificate and trusted network identity",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on certificate and trusted network identity."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Approved SSID, credentials and certificate validation",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "USB Rubber Ducky endpoint policy",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving synthetic keyboard-class device events. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "USB device class",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on USB device class."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Endpoint policy and event logs",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Bash Bunny peripheral classification",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving synthetic USB keyboard and network-class events. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "USB class declaration",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on USB class declaration."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Authorized inventory and device-control logs",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "HackRF One spectrum interpretation",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving offline spectrum chart. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "radio-frequency plot",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on radio-frequency plot."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Source provenance and regulatory boundaries",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Proxmark3 tag authentication",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving fictional static-ID and challenge-response badges. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "RFID authentication design",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on RFID authentication design."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Reader and badge compatibility",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Raspberry Pi secure service setup",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving isolated simulated Linux server. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "service and user permissions",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on service and user permissions."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Approved interfaces and updates",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "ESP32 Marauder radio observation",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving synthetic Bluetooth advertisement records. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "microcontroller radio metadata",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on microcontroller radio metadata."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Firmware provenance and compliance",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Shark Jack link troubleshooting",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving dedicated fictional wired lab switch. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "DHCP and network port",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on DHCP and network port."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Cabling, port authorization and VLAN",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "O.MG Cable physical inspection",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving fictitious USB asset and event inventory. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "peripheral trust",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on peripheral trust."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Device approval and safe handling",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Alfa Wi-Fi Adapter packet metadata",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving fabricated wireless capture statistics. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "wireless interface",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on wireless interface."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Authorized data provenance and channels",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
+        ]
+      ]
+    },
+    {
+      "title": "Logic Analyzer timing calculation",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "A synthetic training case involving supplied 3 µs and 11 µs signal edges. No physical device or network is accessed.",
+      "steps": [
+        [
+          "Which technical subject does this case teach?",
+          [
+            "digital timing trace",
+            "Cloud billing alone",
+            "Office furniture inventory"
+          ],
+          0,
+          "Focus on digital timing trace."
+        ],
+        [
+          "Which preparation check is most relevant?",
+          [
+            "Voltage compatibility and common ground",
+            "Copy unrelated private records",
+            "Use any nearby device without permission"
+          ],
+          0,
+          "Use documented, approved configuration and scope."
+        ],
+        [
+          "A mock output differs from expectations. What should a student do?",
+          [
+            "Compare the supplied evidence with the expected condition",
+            "Claim a confirmed real-world attack",
+            "Ignore the observation"
+          ],
+          0,
+          "Troubleshoot synthetic outputs without inventing conclusions."
+        ],
+        [
+          "What does completing this lab actually establish?",
+          [
+            "Reasoning within a simulated scenario",
+            "Verified physical-device mastery",
+            "Permission to assess third-party systems"
+          ],
+          0,
+          "Hands-on operation requires authorized real-equipment validation."
         ]
       ]
     }
