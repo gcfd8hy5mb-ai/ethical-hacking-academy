@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -562,6 +562,309 @@
           ],
           0,
           "Timely reporting helps the response team assess and contain harm."
+        ]
+      ]
+    },
+    {
+      "title": "Windows Administration and Security",
+      "lessons": [
+        [
+          "Windows accounts and profiles",
+          "Windows distinguishes user accounts from the personal files and preferences held in profiles. A standard user has fewer privileges than an administrator. For daily study, use a standard account; request elevation only for authorized maintenance. Imagine a family PC shared by three people: separate accounts help keep documents and settings distinct.",
+          "A guest needs occasional browser access. Which account type is appropriate?",
+          [
+            "A standard restricted account",
+            "A shared administrator account",
+            "The primary owner's credentials"
+          ],
+          0,
+          "Explanation: A standard restricted account. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Folders, paths and extensions",
+          "Windows paths commonly use drive letters such as C: and backslashes. File Explorer can show extensions, which helps distinguish a document from an executable disguised with a familiar name. A shortcut points to another resource; it is not necessarily the resource itself. Inspect location and source before opening unexpected files.",
+          "Which path most clearly identifies a Windows drive location?",
+          [
+            "C:\\Users\\Student\\Notes",
+            "/home/student/notes",
+            "https://school.example"
+          ],
+          0,
+          "Explanation: C:\\Users\\Student\\Notes. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Windows security updates",
+          "Updates correct bugs and security weaknesses, but may need a restart to finish installation. A reliable update process checks device compatibility, backs up important work, plans a maintenance window and confirms the new version. Delaying every update indefinitely increases exposure, while updating without recovery planning creates operational risk.",
+          "What is a sensible organizational update practice?",
+          [
+            "Test, back up, deploy and verify",
+            "Disable every security update",
+            "Install only after a public breach"
+          ],
+          0,
+          "Explanation: Test, back up, deploy and verify. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Task Manager and services",
+          "Task Manager shows running programs and resource utilization. Services perform background tasks, including printing and system updates. High CPU usage is a symptom, not proof of malicious behavior: first identify the process, expected workload and recent changes. Never end an unfamiliar production service without understanding consequences.",
+          "What should you do when one service consumes a lot of CPU?",
+          [
+            "Inspect its identity and workload",
+            "Immediately call it malware",
+            "Delete its installation folder"
+          ],
+          0,
+          "Explanation: Inspect its identity and workload. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Windows file access controls",
+          "NTFS access controls can grant read, write or modify permissions to identities and groups. Permissions should fit job duties, and inheritance can pass settings from a parent folder to children. In a company file share, review both network sharing permissions and underlying file-system permissions.",
+          "A finance team must edit its own reports while interns may only read them. What fits best?",
+          [
+            "Group-based edit and read-only grants",
+            "Public full control for everyone",
+            "Sharing an administrator password"
+          ],
+          0,
+          "Explanation: Group-based edit and read-only grants. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Defender, firewall and system health",
+          "Built-in antivirus and firewall protections provide layers of defense but cannot guarantee safety. Firewalls permit or block communications under rules. Security alerts require interpretation: a blocked attempt does not automatically mean compromise. Review protection status, backups, device encryption and software versions as a routine checklist.",
+          "A firewall blocks an unknown incoming connection. What does that prove?",
+          [
+            "A rule blocked that traffic",
+            "An attacker fully controlled the PC",
+            "Antivirus is unnecessary"
+          ],
+          0,
+          "Explanation: A rule blocked that traffic. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Event Viewer and evidence",
+          "Event Viewer helps administrators inspect application, security and system events. An event includes context such as time, source and an identifier. For investigations, check timestamps, surrounding events and known maintenance activity. Maintain privacy by sharing only necessary log excerpts with authorized staff.",
+          "One failed login appears in a log. Which inference is justified?",
+          [
+            "A failed attempt occurred; cause needs context",
+            "The user is definitely an intruder",
+            "The operating system is unusable"
+          ],
+          0,
+          "Explanation: A failed attempt occurred; cause needs context. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Windows recovery and hardening",
+          "Recovery planning considers backups, restore points, recovery keys and reinstall options. Hardening removes unnecessary software, applies updates, configures least privilege and protects devices with encryption and MFA where applicable. Document changes so they can be reversed when they disrupt legitimate work.",
+          "What strengthens recovery readiness?",
+          [
+            "Testing a restore and safeguarding recovery keys",
+            "Keeping backups only on the device being protected",
+            "Removing all audit logs"
+          ],
+          0,
+          "Explanation: Testing a restore and safeguarding recovery keys. Review the lesson reasoning and apply it only in authorized environments."
+        ]
+      ]
+    },
+    {
+      "title": "Networking Practice and Troubleshooting",
+      "lessons": [
+        [
+          "Reading network diagrams",
+          "A network diagram identifies devices and the connections between them. A home layout might show a modem, router, Wi-Fi access point, laptop and printer. A business network can have firewalls and isolated server zones. Draw the route a request takes before attempting to diagnose a failure.",
+          "Which device usually forwards traffic between a home network and other networks?",
+          [
+            "The router",
+            "The display",
+            "The keyboard"
+          ],
+          0,
+          "Explanation: The router. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Private and public addresses",
+          "Private IPv4 address ranges include 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. They are typically used inside networks, often with network address translation at the edge. Public addresses are globally routable subject to normal routing policy. Neither address type proves that a device is safe.",
+          "Which is in a private IPv4 range?",
+          [
+            "192.168.1.25",
+            "8.8.8.8",
+            "1.1.1.1"
+          ],
+          0,
+          "Explanation: 192.168.1.25. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Subnet reasoning",
+          "A /24 subnet reserves the first 24 bits for its network prefix. For 192.168.40.0/24, addresses 192.168.40.10 and 192.168.40.20 normally belong to the same subnet, while 192.168.41.10 does not. The first and last addresses have special roles in conventional IPv4 /24 setups.",
+          "Which address shares 192.168.40.0/24?",
+          [
+            "192.168.40.80",
+            "192.168.41.80",
+            "10.0.40.80"
+          ],
+          0,
+          "Explanation: 192.168.40.80. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "What DHCP does",
+          "Dynamic Host Configuration Protocol can provide devices with an IP address, subnet mask, gateway and DNS settings. A lease is time limited and can be renewed. A missing lease can prevent normal connectivity. For an approved machine, inspect the assigned settings before changing anything.",
+          "Which setting is commonly assigned by DHCP?",
+          [
+            "An IP address",
+            "Your email password",
+            "A website certificate private key"
+          ],
+          0,
+          "Explanation: An IP address. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "DNS troubleshooting",
+          "A browser translates a domain name into connection information through DNS. A DNS problem can prevent opening a named site while other network connectivity continues. Distinguish a name-lookup failure from a web application failure. Public DNS query tools should only be used for ordinary lookup, not unauthorized enumeration.",
+          "If DNS resolution fails but the network remains connected, what should you examine?",
+          [
+            "Resolver settings and DNS responses",
+            "Keyboard brightness",
+            "The monitor cable alone"
+          ],
+          0,
+          "Explanation: Resolver settings and DNS responses. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Ports and protocols",
+          "Network services commonly use ports: HTTPS traditionally uses TCP 443, DNS commonly uses UDP 53 with TCP also supported, and SSH commonly uses TCP 22. A port is an endpoint number, not a guarantee of application identity. Only inspect devices and ports within written authorization.",
+          "Which port is conventionally associated with HTTPS?",
+          [
+            "443",
+            "25",
+            "110"
+          ],
+          0,
+          "Explanation: 443. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Safe connectivity diagnostics",
+          "A troubleshooting sequence might check Wi-Fi association, IP assignment, local gateway, DNS and the destination application. A failed ping does not necessarily mean a host is down; many systems block ICMP. Record observations and changes so the next analyst can reproduce the diagnosis.",
+          "A host does not respond to ping. What can you conclude?",
+          [
+            "ICMP replies were not received",
+            "The host is definitely powered off",
+            "The host was compromised"
+          ],
+          0,
+          "Explanation: ICMP replies were not received. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Segmenting a small organization",
+          "Segmentation separates visitor devices from sensitive business systems. A retailer may place guest Wi-Fi, payment terminals and office computers in different network zones with controlled traffic between them. Design should allow legitimate business operations while reducing unnecessary trust.",
+          "Which network design best protects payment systems?",
+          [
+            "Separate restricted payment and guest zones",
+            "Put payment terminals on open guest Wi-Fi",
+            "Give every visitor admin access"
+          ],
+          0,
+          "Explanation: Separate restricted payment and guest zones. Review the lesson reasoning and apply it only in authorized environments."
+        ]
+      ]
+    },
+    {
+      "title": "Programming Logic for Security Beginners",
+      "lessons": [
+        [
+          "What code is",
+          "Source code is instructions written in a programming language. Some languages are interpreted by a runtime; others are compiled into a form the computer can execute. Security practitioners read scripts to automate authorized repetitive tasks and understand application behavior. You do not need to memorize syntax before understanding the logic.",
+          "What is the main purpose of source code?",
+          [
+            "Describe instructions a computer can execute",
+            "Replace all operating-system permissions",
+            "Guarantee a program has no bugs"
+          ],
+          0,
+          "Explanation: Describe instructions a computer can execute. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Variables and values",
+          "A variable gives a name to a value. A beginner might set `failedLogins = 3` to store a count, or `user = 'student'` to store text. Names improve readability, but sensitive values such as passwords should not be embedded directly in code. Ask what a variable represents and how it changes.",
+          "If `count = 2` and then `count = count + 1`, what is count?",
+          [
+            "3",
+            "2",
+            "1"
+          ],
+          0,
+          "Explanation: 3. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Strings, numbers and booleans",
+          "Common data types include numbers, text strings and booleans (true or false). The text '5' and the number 5 can behave differently; adding strings may concatenate, whereas adding numbers performs arithmetic. Type confusion can cause bugs, especially when processing user input.",
+          "Which is a boolean value?",
+          [
+            "true",
+            "'hello'",
+            "42"
+          ],
+          0,
+          "Explanation: true. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Conditions and decisions",
+          "A condition lets a program choose between actions. For example, `if accountLocked` can display a recovery message, while an `else` branch allows normal flow. Security-sensitive authorization must be enforced by a trusted server, not merely hidden in a browser interface.",
+          "Where should a website enforce permission to read protected records?",
+          [
+            "On the trusted server",
+            "Only by hiding a button",
+            "In the page's color theme"
+          ],
+          0,
+          "Explanation: On the trusted server. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Loops and counters",
+          "A loop repeats an action across items or until a condition changes. In a log-analysis exercise, a loop may count how many entries represent failed sign-ins. Define clear stopping conditions so a loop does not run indefinitely. Use sample data, not private logs from someone else's system.",
+          "What is a loop useful for?",
+          [
+            "Processing a list of sample events",
+            "Making an account automatically trustworthy",
+            "Changing the meaning of a password"
+          ],
+          0,
+          "Explanation: Processing a list of sample events. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Functions and reusable work",
+          "A function groups operations behind a name and may accept inputs and return a result. For example, `isStrongPassword(length)` might check a simplified length criterion. A readable function is easier to test than a large block of repeated logic. One check alone never guarantees account security.",
+          "Why use a function for repeated validation logic?",
+          [
+            "It improves reuse and consistency",
+            "It automatically encrypts every file",
+            "It removes all need for testing"
+          ],
+          0,
+          "Explanation: It improves reuse and consistency. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Arrays and records",
+          "An array holds an ordered sequence, such as several sample alert severity values. A record or object groups named fields, such as a timestamp, event type and device label. Real security logs can include personal data, so avoid sharing identifiable records in training exercises.",
+          "Which data structure suits a list of sample event names?",
+          [
+            "An array",
+            "A screen resolution",
+            "A password hint"
+          ],
+          0,
+          "Explanation: An array. Review the lesson reasoning and apply it only in authorized environments."
+        ],
+        [
+          "Reading code defensively",
+          "Input should be treated as untrusted until validated in the appropriate context. Software failures can arise from invalid assumptions, unexpected types or missing permission checks. Secure development includes tests, careful error handling and avoiding secrets in source control. Start by asking what data enters a program, what it changes, and who has authority.",
+          "A user changes a browser-side role value to admin. What should protect the real data?",
+          [
+            "Independent server authorization checks",
+            "A darker page background",
+            "A hidden menu item alone"
+          ],
+          0,
+          "Explanation: Independent server authorization checks. Review the lesson reasoning and apply it only in authorized environments."
         ]
       ]
     }
