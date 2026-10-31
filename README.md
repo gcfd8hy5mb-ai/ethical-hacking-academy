@@ -90,3 +90,7 @@ Revised 28 existing lessons with substantive technical explanations and worked r
 
 ### Windows, networking, web and cloud instructional depth
 Expanded 36 existing lessons with distinct technical explanations and applied reasoning tasks: Windows Administration and Security (8), Networking Practice and Troubleshooting (8), Web Application Security Fundamentals (10), and Cloud Infrastructure Security (10). All existing lesson positions, quizzes and device-local progress keys were preserved. Work is instructional; longer problem sets and independently evaluated practical mastery remain future work.
+
+
+### Applied workshop expansion
+Sixty-six existing lessons across eleven foundation, security, networking and programming courses now include an additional scenario-based workshop prompt. These workshops use a common evidence-analysis structure adapted by course. They are ungraded written practice prompts embedded in lesson text, not full independent technical labs. Total lessons remain 198; completion-hour targets are aspirational and not yet backed by audited authored workloads.
