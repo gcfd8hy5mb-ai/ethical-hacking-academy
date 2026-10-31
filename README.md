@@ -29,7 +29,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Cloud Infrastructure Security: 10 introductory lessons
 - Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Twenty-three guided scenario labs include 98 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Seven mastery examinations add 44 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Thirty-five guided scenario labs include 146 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Seven mastery examinations add 44 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -70,3 +70,7 @@ Target five-part hardware mastery model: understand, configure, operate safely, 
 
 ### Hardware methodology expansion
 Eight topic-specific modules introduce scope planning, radio compliance, USB trust, RFID authentication, network topology, logic trace timing, firmware provenance and reporting. The Hardware Knowledge Examination adds eight scored questions, bringing total exams to seven. This is conceptual simulated instruction, not hands-on device certification or a graduation gate.
+
+
+### Hardware configuration and troubleshooting simulations
+Twelve additional browser-only device-specific labs add 48 scored decisions, covering each of the 12 hardware tools in the Hardware Foundations course. They reinforce interface recognition, safe setup, observations and troubleshooting. They are conceptual simulations, not proof of hands-on operational competence.
