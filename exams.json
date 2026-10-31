@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "passingPercent": 80,
   "exams": [
     {
@@ -1117,6 +1117,404 @@
           ],
           0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
+        ]
+      ]
+    },
+    {
+      "title": "Systems and Networking Comprehensive Final",
+      "courses": [
+        "Computer and Operating-System Essentials",
+        "Networking and Internet Fundamentals",
+        "Windows Administration and Security",
+        "Beginner Linux and Terminal Skills",
+        "Networking Practice and Troubleshooting"
+      ],
+      "questions": [
+        [
+          "A workstation has address 192.168.18.21/24. Which network is correct?",
+          [
+            "192.168.19.0/24",
+            "192.168.18.0/24",
+            "192.168.18.21/32"
+          ],
+          1,
+          "Correct response: 192.168.18.0/24. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which address is the broadcast of a typical 10.2.3.0/24 network?",
+          [
+            "10.2.3.255",
+            "10.2.3.1",
+            "10.2.4.255"
+          ],
+          0,
+          "Correct response: 10.2.3.255. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "An IP address works but a domain fails. What do you inspect?",
+          [
+            "Monitor resolution",
+            "Disk encryption",
+            "DNS resolution"
+          ],
+          2,
+          "Correct response: DNS resolution. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A web server returns HTTP 404. What is confirmed?",
+          [
+            "No DNS lookup ever worked",
+            "An HTTP response was received",
+            "The server was breached"
+          ],
+          1,
+          "Correct response: An HTTP response was received. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which resource is volatile working memory?",
+          [
+            "RAM",
+            "SSD",
+            "Backup tape"
+          ],
+          0,
+          "Correct response: RAM. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A Linux file has mode 640. What can the owning group do?",
+          [
+            "Modify the file",
+            "Execute the file",
+            "Read the file"
+          ],
+          2,
+          "Correct response: Read the file. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A high-CPU process begins during an approved nightly backup. What follows?",
+          [
+            "Delete the process immediately",
+            "Compare schedule and logs before concluding",
+            "Assume confirmed compromise"
+          ],
+          1,
+          "Correct response: Compare schedule and logs before concluding. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What should happen after a patch?",
+          [
+            "Verify installed version and key workflows",
+            "Close the ticket without checks",
+            "Remove all logs"
+          ],
+          0,
+          "Correct response: Verify installed version and key workflows. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which information helps make a help-desk ticket reproducible?",
+          [
+            "Only the word broken",
+            "Unrelated private credentials",
+            "Timestamp, symptoms and tests performed"
+          ],
+          2,
+          "Correct response: Timestamp, symptoms and tests performed. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which is a safe first step in an unfamiliar terminal?",
+          [
+            "Run commands as root without review",
+            "Read command documentation and expected effects",
+            "Erase unknown directories"
+          ],
+          1,
+          "Correct response: Read command documentation and expected effects. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What helps restore a lost file reliably?",
+          [
+            "Tested versioned backup",
+            "A sync-only mirror with no history",
+            "Changing the filename"
+          ],
+          0,
+          "Correct response: Tested versioned backup. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What is a gateway's common purpose?",
+          [
+            "Decrypt every website",
+            "Grant file permissions",
+            "Forward traffic toward another network"
+          ],
+          2,
+          "Correct response: Forward traffic toward another network. The other choices either confuse the technology or assert facts without evidence."
+        ]
+      ]
+    },
+    {
+      "title": "Defensive Security and Incident Response Comprehensive Final",
+      "courses": [
+        "Cybersecurity Foundations",
+        "Security Operations and Incident Response",
+        "Digital Identity and Everyday Security",
+        "Security Monitoring and Log Analysis",
+        "Introduction to Defensive Cryptography",
+        "Applied Security Architecture and Threat Modeling"
+      ],
+      "questions": [
+        [
+          "A sign-in log contains two failures. What is proven?",
+          [
+            "An intruder gained access",
+            "Two failures were recorded",
+            "All accounts are compromised"
+          ],
+          1,
+          "Correct response: Two failures were recorded. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A failed login and later successful login are observed. What should you do?",
+          [
+            "Correlate identity, source and authorized activity",
+            "Assume credential theft",
+            "Publish password records"
+          ],
+          0,
+          "Correct response: Correlate identity, source and authorized activity. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which statement best defines least privilege?",
+          [
+            "Grant every worker administrator access",
+            "Never review permissions",
+            "Grant only access required for the task"
+          ],
+          2,
+          "Correct response: Grant only access required for the task. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A private signing key appears in public source. What's required?",
+          [
+            "Change the code formatting",
+            "Revoke or rotate and investigate",
+            "Ignore the previous commit"
+          ],
+          1,
+          "Correct response: Revoke or rotate and investigate. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What does an authenticated cryptographic digest comparison help check?",
+          [
+            "File integrity",
+            "Guaranteed absence of software flaws",
+            "Employee job title"
+          ],
+          0,
+          "Correct response: File integrity. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What does full-disk encryption chiefly protect?",
+          [
+            "Network uptime",
+            "Physical screen protection",
+            "Confidentiality of stored data"
+          ],
+          2,
+          "Correct response: Confidentiality of stored data. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "An urgent supplier bank-change email is received. What should finance do?",
+          [
+            "Call the number in the message",
+            "Verify using a previously trusted channel",
+            "Approve based on its logo"
+          ],
+          1,
+          "Correct response: Verify using a previously trusted channel. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A risk rating should account for which factors?",
+          [
+            "Exposure, impact and uncertainty",
+            "Only the price of a device",
+            "Only the alert's color"
+          ],
+          0,
+          "Correct response: Exposure, impact and uncertainty. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "An incident report should distinguish what?",
+          [
+            "Officer rank and wallpaper",
+            "Private passwords and tokens",
+            "Confirmed facts and working hypotheses"
+          ],
+          2,
+          "Correct response: Confirmed facts and working hypotheses. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What is a useful detection metric?",
+          [
+            "Number of colorful dashboards",
+            "Share of alerts requiring meaningful action",
+            "Unrelated ticket length"
+          ],
+          1,
+          "Correct response: Share of alerts requiring meaningful action. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A backup job succeeds every day but no restore was tested. What's missing?",
+          [
+            "Controlled restoration evidence",
+            "More optimistic status messages",
+            "Administrative credentials in a public file"
+          ],
+          0,
+          "Correct response: Controlled restoration evidence. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A team's production change precedes a service outage. What is justified?",
+          [
+            "Proof of deliberate attack",
+            "Proof the change is unrelated",
+            "A temporal correlation deserving investigation"
+          ],
+          2,
+          "Correct response: A temporal correlation deserving investigation. The other choices either confuse the technology or assert facts without evidence."
+        ]
+      ]
+    },
+    {
+      "title": "Authorized Assessment and Web Cloud Comprehensive Final",
+      "courses": [
+        "Safe Authorized Assessment Methodology",
+        "Security Assessment and Reporting Workshop",
+        "Web Application Security Fundamentals",
+        "Defensive Web and Cloud Fundamentals",
+        "Cloud Infrastructure Security",
+        "Enterprise Identity and Access Management"
+      ],
+      "questions": [
+        [
+          "A target isn't in written scope. What should the assessor do?",
+          [
+            "Test after office hours",
+            "Request additional permission before testing",
+            "Assume a related brand is permission"
+          ],
+          1,
+          "Correct response: Request additional permission before testing. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A student's browser hides another user's grade link. What enforces privacy?",
+          [
+            "Backend record authorization",
+            "The hidden button",
+            "A distinctive icon"
+          ],
+          0,
+          "Correct response: Backend record authorization. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which design mitigates SQL query manipulation?",
+          [
+            "String concatenation of untrusted input",
+            "Disabled error handling",
+            "Parameterized queries"
+          ],
+          2,
+          "Correct response: Parameterized queries. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A student signs out. What must session design consider?",
+          [
+            "Only changing a profile picture",
+            "Expiry and invalidation of authentication state",
+            "Publishing session tokens"
+          ],
+          1,
+          "Correct response: Expiry and invalidation of authentication state. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A cloud storage bucket contains public images and private grades. Best design?",
+          [
+            "Separate access policies by data classification",
+            "Make all objects public",
+            "Disable auditing"
+          ],
+          0,
+          "Correct response: Separate access policies by data classification. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "An app includes a privileged cloud token in client JavaScript. What is the risk?",
+          [
+            "The token is secret if the filename is obscure",
+            "CSS prevents access",
+            "Public client delivery exposes privileged credentials"
+          ],
+          2,
+          "Correct response: Public client delivery exposes privileged credentials. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A service account needs one report bucket. What is best?",
+          [
+            "Global administrator privileges",
+            "Scoped permission for the required bucket",
+            "Shared employee passwords"
+          ],
+          1,
+          "Correct response: Scoped permission for the required bucket. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What does a four-hour RPO measure?",
+          [
+            "Tolerated loss of recent data",
+            "Guaranteed recovery in four hours",
+            "Encryption strength"
+          ],
+          0,
+          "Correct response: Tolerated loss of recent data. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "Which finding is reproducible?",
+          [
+            "A dramatic claim without details",
+            "A list of guesses",
+            "Scope, observed condition, evidence, effect and retest"
+          ],
+          2,
+          "Correct response: Scope, observed condition, evidence, effect and retest. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "When is a remediation finding ready for closure?",
+          [
+            "Immediately after a fix is proposed",
+            "After approved retest and documented outcome",
+            "After deleting the logs"
+          ],
+          1,
+          "Correct response: After approved retest and documented outcome. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "A public demo application returns an unexpected synthetic record. What may be claimed?",
+          [
+            "Behavior observed only in the authorized demo",
+            "Production data was stolen",
+            "Every endpoint is vulnerable"
+          ],
+          0,
+          "Correct response: Behavior observed only in the authorized demo. The other choices either confuse the technology or assert facts without evidence."
+        ],
+        [
+          "What makes an executive security summary useful?",
+          [
+            "Only raw system events",
+            "Guaranteed elimination of cyber risk",
+            "Risks, evidence, options, limitations and owners"
+          ],
+          2,
+          "Correct response: Risks, evidence, options, limitations and owners. The other choices either confuse the technology or assert facts without evidence."
         ]
       ]
     }
