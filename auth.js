@@ -20,7 +20,13 @@ onAuthStateChanged(auth,async user=>{
  if(!auth.currentUser||!auth.currentUser.emailVerified){document.body.classList.add('auth-locked');form();message('Verify your email address to continue.');return;}
  root.hidden=true;document.body.classList.remove('auth-locked');
  let panel=document.getElementById('academy-auth-account');
- if(!panel){panel=document.createElement('div');panel.id='academy-auth-account';document.body.append(panel);}
+ if(!panel){panel=document.createElement('div');panel.id='academy-auth-account';}
+ const attachAccount=()=>{const header=document.querySelector('#app header.top');if(header&&panel.parentElement!==header)header.append(panel);};
+ if(!window.__academyAccountObserver){
+   window.__academyAccountObserver=new MutationObserver(attachAccount);
+   window.__academyAccountObserver.observe(document.getElementById('app'),{childList:true,subtree:true});
+ }
+ attachAccount();
  panel.replaceChildren();
  const label=document.createElement('span');label.textContent=user.email||'Student';
  const logout=document.createElement('button');logout.textContent='Sign out';logout.onclick=()=>signOut(auth);
