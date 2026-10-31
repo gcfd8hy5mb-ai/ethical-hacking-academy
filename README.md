@@ -126,3 +126,7 @@ Four additional multi-hour written practicums cover Windows endpoint investigati
 
 ### Interactive diagnostic lab prototype
 Three new browser-only diagnostic exercises cover Linux service permissions, Windows sign-in events, and network/DNS troubleshooting. Learners select evidence to reveal, choose diagnoses, recommend a remediation, and receive an objective 7-point score (three critical observations, two points for diagnosis, two for remediation). Best scores are saved locally in a new key; existing progress is unchanged. These are simulations and do not operate a computer or verify real-world skills.
+
+
+### Advanced interactive diagnostic expansion
+Six additional evidence-driven browser exercises bring interactive diagnostic labs to nine. New cases cover Windows service dependencies, Linux inode exhaustion, cloud policy drift, session logout validation, supplier fraud triage, and firewall rule precedence. Each uses five synthetic data sources, requires choosing relevant evidence, and scores a diagnosis and safe remediation. Existing lab indices and saved results remain unchanged. These are simulated technical decisions, not execution on real networks or proof of physical competence.
