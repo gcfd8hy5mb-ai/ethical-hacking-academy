@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "simulations": [
+    {
+      "title": "Investigate a training portal outage",
+      "context": "A fictional course portal becomes unreliable after a change. Examine a synthetic timeline and prepare a reasoned conclusion.",
+      "evidence": [
+        "10:00 portal HTTP errors rise from 1% to 28%",
+        "10:02 deployment release 2.1 completed",
+        "10:04 authentication service healthy; database latency elevated",
+        "10:09 rollback to release 2.0 began",
+        "10:15 errors fall to 2%; full verification pending"
+      ],
+      "steps": [
+        [
+          "Which observation is directly established?",
+          [
+            "The portal's error rate increased",
+            "An attacker breached the database",
+            "The newest release is proven to be the sole cause"
+          ],
+          0,
+          "The error-rate increase is measured. Root cause needs verification."
+        ],
+        [
+          "Which hypothesis deserves investigation?",
+          [
+            "The deployment or its dependencies may affect service health",
+            "Every learner forgot their password",
+            "The website was necessarily attacked"
+          ],
+          0,
+          "A plausible temporal relationship is a hypothesis, not proof."
+        ],
+        [
+          "Which next check is proportionate?",
+          [
+            "Compare deployment changes, dependency metrics and approved tests",
+            "Erase all audit logs",
+            "Disable access controls"
+          ],
+          0,
+          "Use scoped evidence and reversible procedures."
+        ],
+        [
+          "What establishes recovery?",
+          [
+            "Exercise key student workflows and observe stable service health",
+            "A single successful page load",
+            "The rollback command being entered"
+          ],
+          0,
+          "Recovery requires end-to-end verification."
+        ]
+      ],
+      "memoPrompt": "Write a 150–250 word incident note: confirmed facts, competing hypotheses, decision taken, and verification plan.",
+      "rubric": [
+        "Facts distinguished from hypotheses",
+        "Operational impact explained",
+        "Safe investigation and rollback",
+        "Specific recovery criteria"
+      ]
+    },
+    {
+      "title": "Review enterprise access permissions",
+      "context": "A fictional employee transfers from payroll to customer support. Their old payroll-editor group remains assigned.",
+      "evidence": [
+        "Policy: support personnel may read customer cases",
+        "Identity audit: user still in payroll-editors",
+        "Payroll activity audit: no edits confirmed in reviewed period",
+        "HR record: department change approved three weeks ago"
+      ],
+      "steps": [
+        [
+          "Which finding is confirmed?",
+          [
+            "An inappropriate group membership remains",
+            "Payroll records were stolen",
+            "The user deliberately abused access"
+          ],
+          0,
+          "The assignment conflicts with current role requirements."
+        ],
+        [
+          "What additional source strengthens analysis?",
+          [
+            "Effective privileges and review of approved access changes",
+            "A list of private customer passwords",
+            "An employee rumor"
+          ],
+          0,
+          "Actual effective permissions and lifecycle records help quantify risk."
+        ],
+        [
+          "Which remediation fits the facts?",
+          [
+            "Revoke unneeded group membership through approved workflow",
+            "Delete all payroll files",
+            "Disable every employee"
+          ],
+          0,
+          "Least privilege addresses unnecessary entitlement."
+        ],
+        [
+          "How should closure be checked?",
+          [
+            "Verify effective access for permitted and denied actions",
+            "Trust the role name alone",
+            "Assume no risk because no edits were logged"
+          ],
+          0,
+          "Retesting confirms actual access behavior."
+        ]
+      ],
+      "memoPrompt": "Write a 150–250 word access review: policy deviation, evidence, risk, remedy and validation.",
+      "rubric": [
+        "Policy comparison accurate",
+        "No unsupported accusations",
+        "Least-privilege remedy",
+        "Effective access retest"
+      ]
+    },
+    {
+      "title": "Analyze a small network failure",
+      "context": "A fictional office workstation can reach its gateway but cannot access a named training site.",
+      "evidence": [
+        "IPv4 192.168.33.20/24; gateway 192.168.33.1",
+        "Gateway ping: replies received",
+        "Approved remote IP connectivity: works",
+        "DNS lookup for training.example.test: failed",
+        "Other workstation on same network resolves the name"
+      ],
+      "steps": [
+        [
+          "Which subsystem should be checked?",
+          [
+            "DNS resolution on affected device",
+            "The monitor settings",
+            "Laptop speaker output"
+          ],
+          0,
+          "Name resolution is failing while other IP connectivity works."
+        ],
+        [
+          "What hypothesis is consistent with the evidence?",
+          [
+            "Device-specific resolver configuration or cache problem",
+            "The internet is universally offline",
+            "Every router has been compromised"
+          ],
+          0,
+          "Comparison with another workstation narrows the problem."
+        ],
+        [
+          "Which diagnostic step is least disruptive?",
+          [
+            "Inspect assigned resolvers and error responses",
+            "Reset every office network device",
+            "Disable all firewalls"
+          ],
+          0,
+          "Start with reversible tests on authorized devices."
+        ],
+        [
+          "What confirms a fix?",
+          [
+            "The name resolves and the original application workflow succeeds",
+            "Wi-Fi icon appears",
+            "A user guesses it works"
+          ],
+          0,
+          "Validate name resolution and actual functionality."
+        ]
+      ],
+      "memoPrompt": "Write a 150–250 word help-desk escalation including symptoms, observations, hypothesis, next check and success criterion.",
+      "rubric": [
+        "Correct network-layer reasoning",
+        "No false attribution",
+        "Reversible troubleshooting",
+        "Reproducible verification"
+      ]
+    },
+    {
+      "title": "Assess a simulated web privacy boundary",
+      "context": "A fictional learning service serves private grades through a backend API. A test student uses a supplied synthetic record.",
+      "evidence": [
+        "Policy: students may see only their own grades",
+        "UI hides other students' grade links",
+        "Synthetic API test: GET /grades/student-b using student-a token returns 200",
+        "Response is synthetic, with no real data",
+        "Owner: course platform engineering"
+      ],
+      "steps": [
+        [
+          "What is the core issue?",
+          [
+            "Backend authorization may not enforce record ownership",
+            "The icon color is wrong",
+            "Every login is invalid"
+          ],
+          0,
+          "Client visibility does not replace server record checks."
+        ],
+        [
+          "What does the synthetic 200 response demonstrate?",
+          [
+            "A policy mismatch in the scoped lab test",
+            "A real-world data breach",
+            "That all production endpoints behave identically"
+          ],
+          0,
+          "The test establishes only the observed synthetic environment behavior."
+        ],
+        [
+          "Which fix should be considered?",
+          [
+            "Authorize each requested record on the trusted backend",
+            "Add a larger warning button",
+            "Rename the endpoint"
+          ],
+          0,
+          "Enforce the policy on the server or database security layer."
+        ],
+        [
+          "What is required after remediation?",
+          [
+            "Verify both owned-record access and denial of other records",
+            "Assume success after deployment",
+            "Publish real grades"
+          ],
+          0,
+          "Test positive and negative cases with authorized synthetic accounts."
+        ]
+      ],
+      "memoPrompt": "Write a 150–250 word security finding with scope, observation, impact, remediation and retest.",
+      "rubric": [
+        "Trust boundary explained",
+        "Evidence limitations noted",
+        "Correct backend control",
+        "Positive and negative retests"
+      ]
+    }
+  ]
+}
