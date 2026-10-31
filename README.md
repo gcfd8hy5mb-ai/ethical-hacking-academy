@@ -117,4 +117,8 @@ All 26 current courses are now mapped to at least one examination, including nin
 
 
 ### Comprehensive final assessments
-Three additional twelve-question cumulative exams cover systems/networking, defensive operations, and authorized web/cloud assessment. They are appended after existing exams, retaining saved result indices. Three independent final-project portfolios add multi-hour technical writing and diagrams with 100-point self-review rubrics; there are now fifteen assignments. These checks are not proctored exams, automatic practical competency verification, or credentials. Cumulative exam links in course knowledge checkpoints may now create additional requirements for their mapped courses.
+Three additional twelve-question cumulative exams cover systems/networking, defensive operations, and authorized web/cloud assessment. They are appended after existing exams, retaining saved result indices. Three independent final-project portfolios add multi-hour technical writing and diagrams with 100-point self-review rubrics; there are now nineteen assignments. These checks are not proctored exams, automatic practical competency verification, or credentials. Cumulative exam links in course knowledge checkpoints may now create additional requirements for their mapped courses.
+
+
+### Technical weekend practicum expansion
+Four additional multi-hour written practicums cover Windows endpoint investigation, Linux service diagnosis, cloud IAM access review, and software supply-chain integrity. There are now 19 portfolio assignments. Each includes structured deliverables and a 100-point self-review rubric. These are fictional analytical exercises rather than actual host access, operational virtual machines, instructor grading, or hands-on qualification.
