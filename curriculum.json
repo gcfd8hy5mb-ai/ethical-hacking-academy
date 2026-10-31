@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -570,7 +570,7 @@
       "lessons": [
         [
           "Windows accounts and profiles",
-          "Windows distinguishes user accounts from the personal files and preferences held in profiles. A standard user has fewer privileges than an administrator. For daily study, use a standard account; request elevation only for authorized maintenance. Imagine a family PC shared by three people: separate accounts help keep documents and settings distinct.",
+          "Compare local and organizational identities, standard versus administrator accounts, and why shared logins weaken accountability. A Windows profile keeps per-user settings, but a profile name alone is not permission to access company data. Worked check: an intern needs a reporting app; grant only its approved role, not local administrator.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "A guest needs occasional browser access. Which account type is appropriate?",
           [
             "A standard restricted account",
@@ -582,7 +582,7 @@
         ],
         [
           "Folders, paths and extensions",
-          "Windows paths commonly use drive letters such as C: and backslashes. File Explorer can show extensions, which helps distinguish a document from an executable disguised with a familiar name. A shortcut points to another resource; it is not necessarily the resource itself. Inspect location and source before opening unexpected files.",
+          "Explain a Windows path such as C:\\Users\\Student\\Downloads\\invoice.pdf.exe: the final extension can indicate an executable. File Explorer display settings may hide known extensions. Check file origin, signature and approved handling before opening; do not conclude malicious intent from the name alone.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which path most clearly identifies a Windows drive location?",
           [
             "C:\\Users\\Student\\Notes",
@@ -594,7 +594,7 @@
         ],
         [
           "Windows security updates",
-          "Updates correct bugs and security weaknesses, but may need a restart to finish installation. A reliable update process checks device compatibility, backs up important work, plans a maintenance window and confirms the new version. Delaying every update indefinitely increases exposure, while updating without recovery planning creates operational risk.",
+          "Distinguish security updates, driver updates and application dependencies. Before patching a business PC, confirm maintenance authority, backup or restore plan and any app compatibility requirements. Verify installed update status and business functionality afterward, rather than treating a restart as proof of success.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "What is a sensible organizational update practice?",
           [
             "Test, back up, deploy and verify",
@@ -606,7 +606,7 @@
         ],
         [
           "Task Manager and services",
-          "Task Manager shows running programs and resource utilization. Services perform background tasks, including printing and system updates. High CPU usage is a symptom, not proof of malicious behavior: first identify the process, expected workload and recent changes. Never end an unfamiliar production service without understanding consequences.",
+          "Task Manager exposes processes and resource usage; services provide background functionality. High disk usage can come from a legitimate update or backup. Correlate process names, signed publishers, scheduled tasks and event history before drawing conclusions. End a process only if you understand the impact and have permission.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "What should you do when one service consumes a lot of CPU?",
           [
             "Inspect its identity and workload",
@@ -618,7 +618,7 @@
         ],
         [
           "Windows file access controls",
-          "NTFS access controls can grant read, write or modify permissions to identities and groups. Permissions should fit job duties, and inheritance can pass settings from a parent folder to children. In a company file share, review both network sharing permissions and underlying file-system permissions.",
+          "Windows NTFS and shared-folder permissions both affect effective access. A user with a restrictive share grant may be unable to edit despite a permissive filesystem grant. Compare owner-approved rights against actual access using synthetic accounts; do not infer security from a folder label.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "A finance team must edit its own reports while interns may only read them. What fits best?",
           [
             "Group-based edit and read-only grants",
@@ -630,7 +630,7 @@
         ],
         [
           "Defender, firewall and system health",
-          "Built-in antivirus and firewall protections provide layers of defense but cannot guarantee safety. Firewalls permit or block communications under rules. Security alerts require interpretation: a blocked attempt does not automatically mean compromise. Review protection status, backups, device encryption and software versions as a routine checklist.",
+          "Microsoft Defender and Windows Firewall provide overlapping but distinct protections, including malware detection and permitted traffic policy. A blocked connection may reflect intentional policy rather than an attack. Record application, direction, port and business need before requesting a rule change.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "A firewall blocks an unknown incoming connection. What does that prove?",
           [
             "A rule blocked that traffic",
@@ -642,7 +642,7 @@
         ],
         [
           "Event Viewer and evidence",
-          "Event Viewer helps administrators inspect application, security and system events. An event includes context such as time, source and an identifier. For investigations, check timestamps, surrounding events and known maintenance activity. Maintain privacy by sharing only necessary log excerpts with authorized staff.",
+          "Event Viewer collects structured operating-system and application events. Filter by time, source, event identifier and outcome; account for time zones and clock drift. A failed sign-in record confirms a failed attempt, not a compromise. Preserve relevant event fields without collecting passwords.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "One failed login appears in a log. Which inference is justified?",
           [
             "A failed attempt occurred; cause needs context",
@@ -654,7 +654,7 @@
         ],
         [
           "Windows recovery and hardening",
-          "Recovery planning considers backups, restore points, recovery keys and reinstall options. Hardening removes unnecessary software, applies updates, configures least privilege and protects devices with encryption and MFA where applicable. Document changes so they can be reversed when they disrupt legitimate work.",
+          "Compare file backups, restore points, system image recovery and account recovery. Restoring one document differs from rebuilding a device. A recovery runbook should list authorized owner, protected backups, recovery priority, validation tests and communication. Confirm the restored app and access controls actually work.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "What strengthens recovery readiness?",
           [
             "Testing a restore and safeguarding recovery keys",
@@ -671,7 +671,7 @@
       "lessons": [
         [
           "Reading network diagrams",
-          "A network diagram identifies devices and the connections between them. A home layout might show a modem, router, Wi-Fi access point, laptop and printer. A business network can have firewalls and isolated server zones. Draw the route a request takes before attempting to diagnose a failure.",
+          "A network diagram should show devices, links, addresses, trust boundaries and allowed traffic rather than only decorative icons. Annotate a browser-to-API-to-database path and the gateway. Do not assume that two systems being drawn together means all traffic is permitted.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which device usually forwards traffic between a home network and other networks?",
           [
             "The router",
@@ -683,7 +683,7 @@
         ],
         [
           "Private and public addresses",
-          "Private IPv4 address ranges include 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. They are typically used inside networks, often with network address translation at the edge. Public addresses are globally routable subject to normal routing policy. Neither address type proves that a device is safe.",
+          "Private IPv4 address ranges include 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16; address space outside these ranges is not automatically globally reachable. NAT maps addresses at a boundary but does not replace authentication. Document whether an address is local, routed or external.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which is in a private IPv4 range?",
           [
             "192.168.1.25",
@@ -695,7 +695,7 @@
         ],
         [
           "Subnet reasoning",
-          "A /24 subnet reserves the first 24 bits for its network prefix. For 192.168.40.0/24, addresses 192.168.40.10 and 192.168.40.20 normally belong to the same subnet, while 192.168.41.10 does not. The first and last addresses have special roles in conventional IPv4 /24 setups.",
+          "A /24 leaves eight host bits: 2^8 = 256 total addresses, conventionally 254 usable in a typical subnet. 192.168.20.10 and 192.168.20.90 share a /24; 192.168.21.10 does not. For non-/24 masks, convert prefix lengths to binary instead of guessing.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which address shares 192.168.40.0/24?",
           [
             "192.168.40.80",
@@ -707,7 +707,7 @@
         ],
         [
           "What DHCP does",
-          "Dynamic Host Configuration Protocol can provide devices with an IP address, subnet mask, gateway and DNS settings. A lease is time limited and can be renewed. A missing lease can prevent normal connectivity. For an approved machine, inspect the assigned settings before changing anything.",
+          "DHCP can provide an address, network mask, router and DNS servers using a lease process. A missing offer may reflect a disconnected link, VLAN mismatch or unavailable service. Start by checking permitted local interface settings and supplied lab events rather than touching organizational infrastructure.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which setting is commonly assigned by DHCP?",
           [
             "An IP address",
@@ -719,7 +719,7 @@
         ],
         [
           "DNS troubleshooting",
-          "A browser translates a domain name into connection information through DNS. A DNS problem can prevent opening a named site while other network connectivity continues. Distinguish a name-lookup failure from a web application failure. Public DNS query tools should only be used for ordinary lookup, not unauthorized enumeration.",
+          "DNS resolves names; a failure may stem from a missing record, wrong resolver, stale cache or upstream problem. Compare one affected device with a known-good authorized test client. Record exact error, queried name, resolver and time; do not attribute it to malware without corroboration.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "If DNS resolution fails but the network remains connected, what should you examine?",
           [
             "Resolver settings and DNS responses",
@@ -731,7 +731,7 @@
         ],
         [
           "Ports and protocols",
-          "Network services commonly use ports: HTTPS traditionally uses TCP 443, DNS commonly uses UDP 53 with TCP also supported, and SSH commonly uses TCP 22. A port is an endpoint number, not a guarantee of application identity. Only inspect devices and ports within written authorization.",
+          "A port identifies a transport endpoint, not trustworthiness. HTTPS often uses TCP 443, while some HTTPS traffic uses QUIC over UDP 443. A refused connection, filtered traffic and an HTTP 403 describe different layers. State which observation is actually supported.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which port is conventionally associated with HTTPS?",
           [
             "443",
@@ -743,7 +743,7 @@
         ],
         [
           "Safe connectivity diagnostics",
-          "A troubleshooting sequence might check Wi-Fi association, IP assignment, local gateway, DNS and the destination application. A failed ping does not necessarily mean a host is down; many systems block ICMP. Record observations and changes so the next analyst can reproduce the diagnosis.",
+          "Triage in order: link, IP configuration, gateway reachability, DNS, service and application behavior. Check only approved devices and low-impact tests. Keep results and timestamps, change one setting at a time, then repeat the user workflow to validate a fix.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "A host does not respond to ping. What can you conclude?",
           [
             "ICMP replies were not received",
@@ -755,7 +755,7 @@
         ],
         [
           "Segmenting a small organization",
-          "Segmentation separates visitor devices from sensitive business systems. A retailer may place guest Wi-Fi, payment terminals and office computers in different network zones with controlled traffic between them. Design should allow legitimate business operations while reducing unnecessary trust.",
+          "Segmentation limits exposure by separating guest, staff and sensitive services. Draft an allowlist of necessary paths: finance app to database, approved administrators to management, and guests only to internet. Network boundaries complement—not replace—API authorization.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Which network design best protects payment systems?",
           [
             "Separate restricted payment and guest zones",
@@ -1893,7 +1893,7 @@
       "lessons": [
         [
           "Browser and server trust boundaries",
-          "A browser is controlled by its user and its state can be modified. A server must independently authorize requests for private records. Model where grade data moves and which component is trusted to make decisions. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Browser code is controlled by the visitor. A hidden button is not a security boundary; the trusted backend must verify user identity and the requested record. In a synthetic test, student A requests student B's grade; the intended response is denial, even if the UI never offers the link.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: Hiding a teacher-only button cannot replace authorization checks on the grades API. Which approach best supports a responsible evaluation of browser and server trust boundaries?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1905,7 +1905,7 @@
         ],
         [
           "Identity versus authorization",
-          "Authentication confirms who is making a request; authorization decides whether that identity may perform the requested action. Evaluate permissions for the specific operation and resource. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Authentication establishes identity to a level of confidence; authorization grants a specific action on a specific resource. Work through a matrix: learner reads own grade, learner reads another grade, instructor changes assigned course grades. Test positive and negative cases, not simply whether a sign-in succeeded.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A signed-in student asks for another student's private assignment. The API must reject the request unless explicitly permitted. Which approach best supports a responsible evaluation of identity versus authorization?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1917,7 +1917,7 @@
         ],
         [
           "Secure session lifecycle",
-          "Sessions associate requests with a signed-in identity. Protect tokens from exposure, manage expiration and revocation, and invalidate sessions when appropriate at sign-out. Session handling on shared devices deserves special care. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Session cookies or tokens link subsequent requests with authentication state. Secure design considers expiration, token storage, revocation and renewal. Removing a visible profile badge is not equivalent to invalidating sessions. Review expected behavior after sign-out using test accounts.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: Signing out should invalidate access rather than merely hiding the account menu. Which approach best supports a responsible evaluation of secure session lifecycle?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1929,7 +1929,7 @@
         ],
         [
           "User input validation",
-          "Validation checks incoming data's expected type, length, format and business meaning. A numerical grade should not accept arbitrary text, and a report query should reject invalid identifiers before processing. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Validate server-side types, lengths, formats and business constraints, even if the browser form also validates. A course identifier must refer to an allowed course. Reject malformed values safely with consistent error handling; validation is distinct from HTML output encoding.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A grades endpoint accepts a course ID. Check that it is well-formed and that the caller may access that course. Which approach best supports a responsible evaluation of user input validation?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1941,7 +1941,7 @@
         ],
         [
           "Contextual output encoding",
-          "When displaying user-supplied text, encode it for the context where it appears, such as HTML text or attributes. The same escaping routine is not correct for all contexts. Prefer framework-safe rendering APIs. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Rendering user text safely depends on context: HTML text, attribute, URL and JavaScript contexts have different escaping rules. Prefer APIs that treat untrusted strings as text; never insert raw untrusted HTML into a page. Test with harmless synthetic strings that include angle brackets.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A comment containing angle brackets should display as text instead of being treated as page markup. Which approach best supports a responsible evaluation of contextual output encoding?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1953,7 +1953,7 @@
         ],
         [
           "Parameterized database access",
-          "Applications should pass user-provided values as parameters rather than concatenating them into query syntax. Parameterization separates data from executable query structure; authorization and sensible database privileges remain necessary. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A query should treat supplied values as data through parameterized statements. String concatenation into query text can change query structure unexpectedly. Even with parameters, the application must authorize each returned record and use limited database privileges.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A student search field should pass its text as a database parameter, not append it directly into a SQL command. Which approach best supports a responsible evaluation of parameterized database access?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1965,7 +1965,7 @@
         ],
         [
           "Cross-site request protections",
-          "A browser may automatically include certain credentials in requests. Sensitive state-changing operations require defenses suited to the architecture, such as anti-CSRF tokens, origin checks and cookie attributes. Choose controls based on the actual authentication model. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Cookie-authenticated applications may be exposed to cross-origin request forgery if requests carry credentials automatically. Defenses can include anti-CSRF tokens, same-site cookies and verified origins, chosen to match the architecture. Cross-origin policies and authorization serve different purposes.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A web app using ambient session cookies should evaluate cross-origin state-changing requests and appropriate CSRF defenses. Which approach best supports a responsible evaluation of cross-site request protections?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1977,7 +1977,7 @@
         ],
         [
           "Secure file upload design",
-          "Uploaded files are untrusted. Limit size and acceptable types, verify content appropriately, store uploads outside executable paths and enforce access permissions. Scanning and safe preview mechanisms may be needed for higher-risk file types. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A filename and declared MIME type are not enough to trust uploaded content. Define size and type limits, inspect content with suitable services, store outside executable paths, and restrict download access. In class use fabricated test files, not real private submissions.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A course accepts PDF assignments. Store them as data, enforce ownership and avoid executing anything the filename claims. Which approach best supports a responsible evaluation of secure file upload design?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1989,7 +1989,7 @@
         ],
         [
           "API access control checks",
-          "An API must authenticate callers and authorize every relevant record or operation. Rate limiting can reduce abuse but is not a substitute for authorization. Test denial cases in a synthetic environment. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Object identifiers are not permissions. Define owner and staff roles; each operation should enforce server-side resource authorization. Rate limiting may reduce abusive volume but cannot fix access-control errors. Retest with two approved synthetic users.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: Changing /grades/101 to /grades/102 in a mock request must not reveal another student's results. Which approach best supports a responsible evaluation of api access control checks?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2001,7 +2001,7 @@
         ],
         [
           "Security headers and deployment review",
-          "Headers can reduce certain browser risks, but they do not replace application design. Review transport security, content policy, secure cookie settings and release configuration against the app's actual features. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "TLS settings, secure cookies, content-security policy and other headers reduce selected risks, but they do not fix broken record authorization. Review deploy configuration, third-party scripts and rollback plans. A checklist should identify evidence for each control rather than promise complete immunity.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A deployment adds a protective header; the team still needs to test the underlying access rules. Which approach best supports a responsible evaluation of security headers and deployment review?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2018,7 +2018,7 @@
       "lessons": [
         [
           "Cloud service models",
-          "Infrastructure services expose more operating-system responsibility to customers, while managed platforms and software services shift some responsibilities to providers. The precise security boundary depends on the contract and service. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "IaaS, PaaS and SaaS allocate different operational tasks between provider and customer. The exact contract governs responsibility. Even when a provider manages host updates, the customer may still own identity grants, data classification and application logic.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A managed database provider patches its host, but the customer still needs appropriate user permissions. Which approach best supports a responsible evaluation of cloud service models?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2030,7 +2030,7 @@
         ],
         [
           "Shared responsibility maps",
-          "Write down who owns identity, data classification, backups, logging and infrastructure maintenance for each cloud service. Responsibility must be explicit where systems depend on vendors. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Shared responsibility does not mean the provider approves your employee access. Build a table for identity, application code, host patching, key ownership, backups and compliance. Mark contractual unknowns rather than assuming the vendor covers everything.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A vendor encrypts disks, but the application owner still configures who may read payroll records. Which approach best supports a responsible evaluation of shared responsibility maps?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2042,7 +2042,7 @@
         ],
         [
           "Identity policies and resource grants",
-          "Cloud permissions govern which identities can perform actions on resources. Prefer narrow roles and scoped resource policies; periodically review exceptions and emergency grants. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Use resource-scoped cloud grants and short-lived workload identities where possible. A function reading a single bucket should not be full account administrator. Compare policy text with effective permissions and document which owner approved exceptions.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A report generator needs read access to one bucket, not administrator rights across the subscription. Which approach best supports a responsible evaluation of identity policies and resource grants?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2054,7 +2054,7 @@
         ],
         [
           "Storage data classification",
-          "Separate public marketing files from confidential submissions and finance records. Classification guides retention, access policies, encryption and incident response. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Classify information before designing grants and retention. Public static media may be broadly readable while grades and recovery secrets must be protected. Avoid policies that make an entire bucket public when only a few objects need open access.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: Public training images may be readable by anyone, but individual student grades must be private. Which approach best supports a responsible evaluation of storage data classification?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2066,7 +2066,7 @@
         ],
         [
           "Network zone boundaries",
-          "Cloud networks can segment public application interfaces, internal services and databases. Network controls reduce reachability, but application authorization is still required. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Network layers can restrict which components can connect, using virtual networks, security groups and service endpoints. Map expected flows and reject unnecessary public database exposure. Network controls reduce attack paths but never replace per-user application authorization.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A database should generally not be directly exposed publicly merely because a web app needs to query it. Which approach best supports a responsible evaluation of network zone boundaries?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2078,7 +2078,7 @@
         ],
         [
           "Secrets and key services",
-          "Cloud secret managers can control privileged key storage, retrieval and rotation. Avoid publishing private credentials in browser code or logs. A public client identifier is not equivalent to an admin secret. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A privileged credential may remain compromised after deleting the visible file. Revoke or rotate it, inspect relevant authorized audit records and move secrets to protected storage. Browser-shipped code is public to the client; never place admin secrets there.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: An exposed administrator token requires revocation and review, not merely hiding it in a different file. Which approach best supports a responsible evaluation of secrets and key services?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2090,7 +2090,7 @@
         ],
         [
           "Central logging and audit trails",
-          "Consolidated audit logs help correlate administrative changes and access events. Protect logs from modification, limit retention appropriately and avoid leaking secret values. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Audit trails help explain changes, but they need correct retention, protection from alteration and synchronized time. Normalize zones and correlate an identity grant with the resulting API activity. Exclude tokens and passwords from logs and keep access controlled.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: The team can relate a permission change to an outage by comparing timestamps across approved audit streams. Which approach best supports a responsible evaluation of central logging and audit trails?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2102,7 +2102,7 @@
         ],
         [
           "Backup and recovery objectives",
-          "RPO describes acceptable data loss in time; RTO describes desired recovery time. Measure both against tested restoration capability and dependencies. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "RPO is tolerated data loss measured in time; RTO is targeted restoration time. A four-hour RPO does not mean recovery finishes in four hours. Work backward from business impact to backup frequency, redundancy and a testable restoration procedure.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A four-hour RPO can imply potentially losing up to four hours of recent updates in the specified failure scenario. Which approach best supports a responsible evaluation of backup and recovery objectives?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2114,7 +2114,7 @@
         ],
         [
           "Infrastructure change approval",
-          "Cloud configuration updates benefit from peer review, staging, restricted credentials and rollback procedures. Version-controlled infrastructure can improve repeatability but still requires handling sensitive values safely. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "An infrastructure change should state target resources, owner approval, intended behavior, staged validation and rollback. Compare planned versus actual permissions after release. Changes in configuration-as-code still need peer review and secret-handling safeguards.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A network rule change should name affected services, expected behavior and how to reverse it. Which approach best supports a responsible evaluation of infrastructure change approval?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2126,7 +2126,7 @@
         ],
         [
           "Cloud incident communication",
-          "Cloud incidents require clear coordination among the service owner, provider and affected business teams. State confirmed impact, uncertainties, mitigation and next milestones without inventing causes. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "An incident note should summarize confirmed impact, unknown root cause, mitigations, recovery criteria and owner communications. Coordinate provider and customer responsibilities. Restoration requires testing actual user workflows, not merely seeing a green dashboard.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
           "Worked scenario: A storage outage affects course submissions. Leadership receives verified service impact and recovery status, not unsupported attacker claims. Which approach best supports a responsible evaluation of cloud incident communication?",
           [
             "Use the specified observations and verify the relevant control",
