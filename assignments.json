@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "assignments": [
     {
       "title": "Executive Security Risk Register",
@@ -748,6 +748,134 @@
         ]
       ],
       "reference": "A simulated result cannot certify a production system or real-world penetration-test proficiency."
+    },
+    {
+      "title": "Windows Endpoint Investigation Practicum",
+      "course": "Windows Administration and Security",
+      "duration": "5–8 hours over a weekend",
+      "scenario": "A synthetic Windows host shows an unexpected startup entry, two failed sign-ins, and a scheduled software update. The learner has read-only access to fictional evidence.",
+      "tasks": [
+        "Create a timestamped event table with a source and confidence field.",
+        "Compare at least three hypotheses, including ordinary maintenance and misconfiguration.",
+        "Design a read-only validation sequence for startup entries, event logs and update history.",
+        "Write a least-disruptive escalation and recovery plan.",
+        "Produce a 500-word technical report and 200-word nontechnical summary."
+      ],
+      "rubric": [
+        [
+          "Windows evidence classification",
+          30
+        ],
+        [
+          "Evidence-based hypotheses and limitations",
+          25
+        ],
+        [
+          "Safe test and remediation design",
+          25
+        ],
+        [
+          "Professional written deliverables",
+          20
+        ]
+      ],
+      "reference": "Use only the supplied fictional facts; do not claim that any live system was examined. Detailed reports should include scope, methods, observations, uncertainties, recommendations and verification criteria."
+    },
+    {
+      "title": "Linux Service Failure Practicum",
+      "course": "Linux System Administration Lab Theory",
+      "duration": "5–8 hours over a weekend",
+      "scenario": "An isolated virtual Linux training server fails to start its mock reporting service after a package change. All logs and configurations are fabricated.",
+      "tasks": [
+        "Draw the service dependency diagram and expected boot sequence.",
+        "Interpret fictional journal, permissions and disk-capacity observations.",
+        "List four testable hypotheses with corresponding low-risk checks.",
+        "Develop an approved rollback and restore validation plan.",
+        "Produce an evidence-based incident report with acceptance criteria."
+      ],
+      "rubric": [
+        [
+          "Linux service triage",
+          30
+        ],
+        [
+          "Evidence-based hypotheses and limitations",
+          25
+        ],
+        [
+          "Safe test and remediation design",
+          25
+        ],
+        [
+          "Professional written deliverables",
+          20
+        ]
+      ],
+      "reference": "Use only the supplied fictional facts; do not claim that any live system was examined. Detailed reports should include scope, methods, observations, uncertainties, recommendations and verification criteria."
+    },
+    {
+      "title": "Cloud IAM Misconfiguration Practicum",
+      "course": "Cloud Infrastructure Security",
+      "duration": "5–8 hours over a weekend",
+      "scenario": "A fictional cloud identity can read an unrelated payroll storage location because a broad policy was inherited. No real cloud credentials are supplied.",
+      "tasks": [
+        "Build an identity-resource-action permission matrix.",
+        "Identify the specific least-privilege violation and business impact.",
+        "Propose a restricted policy and describe potential application regressions.",
+        "Develop positive and negative synthetic authorization tests.",
+        "Prepare a remediation and audit memo documenting uncertainty."
+      ],
+      "rubric": [
+        [
+          "Cloud access analysis",
+          30
+        ],
+        [
+          "Evidence-based hypotheses and limitations",
+          25
+        ],
+        [
+          "Safe test and remediation design",
+          25
+        ],
+        [
+          "Professional written deliverables",
+          20
+        ]
+      ],
+      "reference": "Use only the supplied fictional facts; do not claim that any live system was examined. Detailed reports should include scope, methods, observations, uncertainties, recommendations and verification criteria."
+    },
+    {
+      "title": "Software Supply-Chain Review Practicum",
+      "course": "Security Analysis and Professional Practice",
+      "duration": "5–8 hours over a weekend",
+      "scenario": "A fictional development team downloads a library from an unverified mirror and records a digest that differs from an authenticated publisher reference.",
+      "tasks": [
+        "State the known provenance and integrity observations.",
+        "Explain what a hash mismatch can and cannot establish.",
+        "Compare safe responses including quarantine, approved retrieval and verification.",
+        "Outline an update and dependency approval workflow.",
+        "Write a professional finding with testable closure requirements."
+      ],
+      "rubric": [
+        [
+          "Software integrity analysis",
+          30
+        ],
+        [
+          "Evidence-based hypotheses and limitations",
+          25
+        ],
+        [
+          "Safe test and remediation design",
+          25
+        ],
+        [
+          "Professional written deliverables",
+          20
+        ]
+      ],
+      "reference": "Use only the supplied fictional facts; do not claim that any live system was examined. Detailed reports should include scope, methods, observations, uncertainties, recommendations and verification criteria."
     }
   ]
 }
