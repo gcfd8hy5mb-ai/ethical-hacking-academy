@@ -15,3 +15,20 @@ test('Desktop script syntax is valid',()=>{for(const f of scripts.filter(s=>s.st
 test('Workspace does not execute shell commands or target external networks',()=>{const code=read('desktop-workspace.js');assert.match(code,/Unknown simulated command/);assert.doesNotMatch(code,/\beval\s*\(|\bfetch\s*\(|XMLHttpRequest|child_process/);});
 test('Mobile first behavior and accessible close action',()=>{const css=read('desktop-workspace.css');assert.match(css,/@media\s*\(max-width:\s*750px\)/);const code=read('desktop-workspace.js');assert.match(code,/aria-modal/);assert.match(code,/Escape/);});
 test('Optional modules are linked with valid scripts',()=>{for(const f of scripts.filter(x=>/desktop-(export|reliability|scenarios|report)\.js/.test(x))){assert.ok(fs.existsSync(path.join(root,f)));assert.doesNotThrow(()=>new vm.Script(read(f),{filename:f}))}});
+
+test('All desktop script references are unique and in dependency order',()=>{
+ const d=scripts.filter(x=>x.startsWith('desktop-'));
+ assert.equal(new Set(d).size,d.length,'duplicate desktop scripts');
+ assert.ok(d.indexOf('desktop-workspace.js')>=0);
+ for(const extra of d.filter(x=>x!=='desktop-workspace.js'))assert.ok(d.indexOf(extra)>d.indexOf('desktop-workspace.js'),extra+' must load after base');
+});
+test('No core curriculum files are replaced by desktop entrypoint',()=>{
+ assert.ok(scripts.some(x=>/^(app\.js|app-v28\.js)$/.test(x)));
+ assert.ok(scripts.includes('desktop-workspace.js'));
+});
+test('Desktop modules avoid dynamic execution and external network calls',()=>{
+ for(const file of scripts.filter(x=>x.startsWith('desktop-')&&x.endsWith('.js'))){
+  const source=read(file);
+  assert.doesNotMatch(source,/\beval\s*\(|new\s+Function\s*\(|XMLHttpRequest|\bfetch\s*\(/,file);
+ }
+});
