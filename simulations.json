@@ -251,44 +251,44 @@
       ],
       "steps": [
         [
-          "Which initial analysis is appropriate?",
+          "What interpretation best fits the available evidence?",
           [
-            "I",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Review USB device classes and approved inventory",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "P"
+          "Peripheral classes and authorized inventories establish the relevant trust boundary."
         ],
         [
-          "What action respects the authorized lab scope?",
+          "What action stays inside the approved lab?",
           [
-            "D",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Compare device identifiers against approved assets",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "C"
+          "An unapproved peripheral should be investigated through policy."
         ],
         [
-          "How should evidence be handled?",
+          "What should the analyst record?",
           [
-            "U",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Preserve minimal synthetic device events without keystroke contents",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "C"
+          "Limit collection to relevant evidence."
         ],
         [
-          "Which validation or recommendation is defensible?",
+          "What is a sound next verification or control?",
           [
-            "M",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Recommend device-control policy and test approved endpoint alerts",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "R"
+          "Verify endpoint controls without executing unknown code."
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -310,44 +310,44 @@
       ],
       "steps": [
         [
-          "Which initial analysis is appropriate?",
+          "What interpretation best fits the available evidence?",
           [
-            "I",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "The strongest trace is -50 dBm at 433.90 MHz",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "-"
+          "Less negative dBm corresponds to stronger observed power."
         ],
         [
-          "What action respects the authorized lab scope?",
+          "What action stays inside the approved lab?",
           [
-            "L",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Analyze only the provided synthetic spectrum data",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "R"
+          "The display does not provide access to real signals."
         ],
         [
-          "How should evidence be handled?",
+          "What should the analyst record?",
           [
-            "T",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Record that the transmitting source is unknown",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "D"
+          "A power spike alone cannot reveal an identity."
         ],
         [
-          "Which validation or recommendation is defensible?",
+          "What is a sound next verification or control?",
           [
-            "S",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Plan a legally compliant approved RF laboratory before real operation",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "R"
+          "Radio activity requires explicit scope and regulatory compliance."
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -369,44 +369,44 @@
       ],
       "steps": [
         [
-          "Which initial analysis is appropriate?",
+          "What interpretation best fits the available evidence?",
           [
-            "C",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Compare static ID-only checks with cryptographic challenge-response",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "C"
+          "The protected challenge-response design can provide stronger authentication."
         ],
         [
-          "What action respects the authorized lab scope?",
+          "What action stays inside the approved lab?",
           [
-            "S",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Review only the synthetic badge designs",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "F"
+          "The production doors are outside the approved scope."
         ],
         [
-          "How should evidence be handled?",
+          "What should the analyst record?",
           [
-            "P",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Report the given reader behavior and its limitations",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "R"
+          "No real-world card data or keys were tested."
         ],
         [
-          "Which validation or recommendation is defensible?",
+          "What is a sound next verification or control?",
           [
-            "N",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Recommend secure key handling and authorized reader validation",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "R"
+          "Cryptographic controls depend on key lifecycle management."
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -428,44 +428,44 @@
       ],
       "steps": [
         [
-          "Which initial analysis is appropriate?",
+          "What interpretation best fits the available evidence?",
           [
-            "I",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Check VLAN configuration and authorized DHCP service availability",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "C"
+          "A DHCP Discover without an Offer has multiple possible configuration explanations."
         ],
         [
-          "What action respects the authorized lab scope?",
+          "What action stays inside the approved lab?",
           [
-            "N",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Keep appliance testing on the assigned lab port",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "D"
+          "Other ports are not authorized."
         ],
         [
-          "How should evidence be handled?",
+          "What should the analyst record?",
           [
-            "S",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Preserve the synthetic timestamped DHCP evidence",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "V"
+          "No malicious behavior is established."
         ],
         [
-          "Which validation or recommendation is defensible?",
+          "What is a sound next verification or control?",
           [
-            "A",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
+            "Validate DHCP lease acquisition and approved service reachability",
+            "Assume a confirmed attack and publish a warning",
+            "Interact with unapproved production targets"
           ],
           0,
-          "D"
+          "Recovery must be tested against expected connectivity."
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
