@@ -1,0 +1,16 @@
+/* Desktop Academy foundation — no changes to mobile or authentication layout. */
+@media (min-width: 900px) {
+ body:not(.auth-locked) .wrap {max-width:1440px;padding:32px clamp(28px,4vw,72px) 120px;}
+ body:not(.auth-locked) .top {padding-bottom:24px;}
+ body:not(.auth-locked) .brand {font-size:24px;}
+ body:not(.auth-locked) .hero {padding:48px 54px;min-height:260px;}
+ body:not(.auth-locked) .hero p {max-width:780px;}
+ body:not(.auth-locked) .grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;}
+ body:not(.auth-locked) .course {padding:24px;}
+ body:not(.auth-locked) .sheet {padding:30px;max-width:1100px;}
+ body:not(.auth-locked) .body {max-width:960px;}
+ body:not(.auth-locked) .lab {max-width:1150px;padding:32px;}
+ body:not(.auth-locked) .terminal {min-height:280px;font-size:15px;}
+ body:not(.auth-locked) .bottom {left:50%;right:auto;transform:translateX(-50%);width:min(100%,1000px);gap:26px;border:1px solid #35484d;border-radius:16px 16px 0 0;}
+ body:not(.auth-locked) .bottom button {max-width:175px;font-size:14px;padding:12px;}
+}
