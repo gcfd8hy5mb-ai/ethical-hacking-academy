@@ -1,0 +1,16 @@
+const escapeHTML=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const key='ethical-hacking-exam-results-v1';
+function saved(){try{return JSON.parse(localStorage.getItem(key)||'{}')}catch{return {}}}
+export async function mountExams(root){
+try{
+ const response=await fetch('./exams.json',{cache:'no-store'});if(!response.ok)throw Error('Exam data not available');const data=await response.json();if(!root.isConnected)return;
+ let selectedExam=0,answers={},submitted=false;
+ function paint(){
+ const exam=data.exams[selectedExam],score=exam.questions.reduce((n,q,i)=>n+(answers[i]===q[2]?1:0),0),percent=Math.round(score/exam.questions.length*100),pass=percent>=data.passingPercent,history=saved();
+ root.innerHTML='<label for="exam-selector">Choose examination</label><select id="exam-selector" style="display:block;width:100%;padding:12px;border-radius:8px;margin:10px 0 20px">'+data.exams.map((x,i)=>'<option value="'+i+'" '+(i===selectedExam?'selected':'')+'>'+escapeHTML(x.title)+'</option>').join('')+'</select><p class="muted">Pass mark: '+data.passingPercent+'%. Select each answer and submit when ready. You may retake an examination. Highest scores are stored on this device.</p>'+exam.questions.map((q,i)=>'<section class="sheet" style="margin:14px 0"><div class="kicker">QUESTION '+(i+1)+' OF '+exam.questions.length+'</div><h3>'+escapeHTML(q[0])+'</h3><div class="answers">'+q[1].map((choice,j)=>'<button class="answer '+(answers[i]===j?'selected':'')+'" data-exam-answer="'+i+':'+j+'" '+(submitted?'disabled':'')+'>'+escapeHTML(choice)+'</button>').join('')+'</div>'+(submitted?'<p class="feedback">'+(answers[i]===q[2]?'Correct. ':'Incorrect. ')+escapeHTML(q[3])+'</p>':'')+'</section>').join('')+(submitted?'<section class="sheet"><h2>Score: '+score+'/'+exam.questions.length+' ('+percent+'%)</h2><p>'+(pass?'Mastery achieved.':'Mastery not achieved. Review explanations and retry.')+'</p><p class="muted">Best score: '+Math.max(Number(history[selectedExam]||0),percent)+'%</p><button id="exam-retry" class="button">Retake examination</button></section>':'<button id="exam-submit" class="button" '+(Object.keys(answers).length!==exam.questions.length?'disabled':'')+'>Grade examination</button>');
+ }
+ root.addEventListener('change',event=>{if(event.target.id==='exam-selector'){selectedExam=Number(event.target.value);answers={};submitted=false;paint()}});
+ root.addEventListener('click',event=>{const b=event.target.closest('button');if(!b)return;if(b.dataset.examAnswer&&!submitted){const [i,j]=b.dataset.examAnswer.split(':').map(Number);answers[i]=j;paint()}else if(b.id==='exam-submit'&&Object.keys(answers).length===data.exams[selectedExam].questions.length){submitted=true;const questions=data.exams[selectedExam].questions,percentage=Math.round(100*questions.reduce((n,q,i)=>n+(answers[i]===q[2]?1:0),0)/questions.length);const history=saved();history[selectedExam]=Math.max(history[selectedExam]||0,percentage);localStorage.setItem(key,JSON.stringify(history));paint()}else if(b.id==='exam-retry'){answers={};submitted=false;paint()}});
+ paint();
+}catch(error){root.textContent='Unable to load examinations. Reload the page and try again.';console.error(error)}
+}
