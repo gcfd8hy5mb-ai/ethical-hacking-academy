@@ -43,8 +43,12 @@ This material is original and is not a university degree or an official certific
 
 
 ## Evidence investigations
-Four fictional multi-stage investigations add 20 graded decisions using synthetic authentication logs, network data, access reviews and cloud configuration. Each includes answer explanations and local best-score saving. Open them from Practice Lab. These are simulations, not real-world target tests.
+Nine fictional multi-stage investigations include 45 graded decisions using synthetic authentication logs, network data, access reviews and cloud configuration. Each includes answer explanations and local best-score saving. Open them from Practice Lab. These are simulations, not real-world target tests.
 
 
 ## Curriculum depth status
 The 50 lessons in the enterprise security batch now include topic-specific explanatory material and worked scenarios. They are not full-length lectures or hands-on examinations. Future development must still add extended practical exercises, multi-question problem sets and independent graded assessments before professional-level equivalence can be claimed.
+
+
+### Latest investigation expansion
+Five new evidence-driven tabletop exercises cover phishing triage, ransomware readiness, exposed cloud credentials, patch prioritization, and executive incident communication. All scenarios are fictional and do not interact with real systems.
