@@ -21,8 +21,10 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Introduction to Defensive Cryptography: 6 lessons
 - Security Monitoring and Log Analysis: 6 lessons
 - Safe Authorized Assessment Methodology: 6 lessons
+- Hands-On Network Reasoning Workshop: 6 lessons
+- Beginner Python Logic and Defensive Automation: 6 lessons
 
-Total: **116 authored lessons across eighteen courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Eleven guided scenario labs include 42 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Three mastery examinations add 18 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **128 authored lessons across twenty courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Eleven guided scenario labs include 42 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Three mastery examinations add 18 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
