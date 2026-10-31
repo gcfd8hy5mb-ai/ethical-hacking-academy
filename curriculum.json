@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 17,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -392,7 +392,7 @@
       "lessons": [
         [
           "Why professionals use terminals",
-          "An interactive shell interprets typed commands, while a graphical desktop offers buttons to access similar system functions. A command's impact depends on user privileges and arguments. Example: `pwd` reports a working directory but does not modify files. On the academy's simulated terminal, output is fictional; it does not show iPhone internals.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "An interactive shell interprets typed commands, while a graphical desktop offers buttons to access similar system functions. A command's impact depends on user privileges and arguments. Example: `pwd` reports a working directory but does not modify files. On the academy's simulated terminal, output is fictional; it does not show iPhone internals.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Practice sequence: distinguish a terminal emulator from a shell and an operating system. Before typing a command, identify your current account, working directory, expected output and whether the command changes files. In a fictional lab, annotate what is observed versus what is only inferred from command output.",
           "In `ls -l`, what is `-l`?",
           [
             "A command option",
@@ -404,7 +404,7 @@
         ],
         [
           "The present working directory",
-          "`pwd` stands for print working directory. Absolute paths begin at the filesystem root, and relative paths are interpreted from the current location. If the current path is /home/student, the relative name notes.txt refers to /home/student/notes.txt. Record a path before assuming where a command would operate.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "`pwd` stands for print working directory. Absolute paths begin at the filesystem root, and relative paths are interpreted from the current location. If the current path is /home/student, the relative name notes.txt refers to /home/student/notes.txt. Record a path before assuming where a command would operate.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Worked example: pwd may report /home/student, but that path is not proof of unrestricted access. Compare an absolute path (/var/log) with a relative path (notes). Predict the output of pwd after moving into a child directory and after returning to the parent.",
           "What does `pwd` normally display?",
           [
             "The current directory",
@@ -416,7 +416,7 @@
         ],
         [
           "Listing files and hidden entries",
-          "`ls` lists directory entries in many Linux shells. Hidden names commonly begin with a dot; they are not automatically malicious or protected. Example: seeing .config in a fictional user's home directory could represent ordinary application settings. A filename alone cannot establish its contents or safety.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "`ls` lists directory entries in many Linux shells. Hidden names commonly begin with a dot; they are not automatically malicious or protected. Example: seeing .config in a fictional user's home directory could represent ordinary application settings. A filename alone cannot establish its contents or safety.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Worked example: ls shows ordinary entries while ls -a includes dot-prefixed entries; neither guarantees you can read an entry. Design a safe evidence inventory with filename, type, owner and expected sensitivity. Explain why hidden does not mean encrypted.",
           "What does `ls -a` add to an ordinary listing?",
           [
             "Dot-prefixed entries",
@@ -428,7 +428,7 @@
         ],
         [
           "Moving through directories",
-          "Changing directory with `cd` affects where relative paths resolve. A path such as ../docs moves to a sibling location from a nested folder, assuming it exists and access is permitted. In a practice worksheet draw /home/student/labs and /home/student/docs, then trace the effect without modifying actual files.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Changing directory with `cd` affects where relative paths resolve. A path such as ../docs moves to a sibling location from a nested folder, assuming it exists and access is permitted. In a practice worksheet draw /home/student/labs and /home/student/docs, then trace the effect without modifying actual files.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Reasoning drill: from /home/student, cd projects enters a child directory and cd .. returns to /home/student. Compare cd /, cd ~ and cd - conceptually. Predict each transition before using any real shell; avoid assuming path existence.",
           "If you are in `/home/student/docs`, where does `cd ..` usually take you?",
           [
             "/home/student",
@@ -440,7 +440,7 @@
         ],
         [
           "Reading without modifying files",
-          "Read-only inspection and modification have different risks. A harmless sample text file can be viewed through approved tools; editing or deleting it changes evidence. In an incident exercise, first copy the relevant evidence following policy and preserve timestamps and provenance where required.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Read-only inspection and modification have different risks. A harmless sample text file can be viewed through approved tools; editing or deleting it changes evidence. In an incident exercise, first copy the relevant evidence following policy and preserve timestamps and provenance where required.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Read-only investigation: cat shows file content but may expose secrets; head and tail can limit output while less enables review. Use only a supplied synthetic log, redact tokens and distinguish observed timestamps from attribution. Describe what not to copy into a report.",
           "Which action is read-only in a normal training directory?",
           [
             "Displaying an authorized sample text file",
@@ -452,7 +452,7 @@
         ],
         [
           "Users, permissions and safe defaults",
-          "Linux permission bits indicate read, write and execute for owner, group and others. File mode 640 allows owner read/write and group read; it grants no permissions to others. Directory permissions behave differently, so treat directory traversal and listing separately. Do not change access to data you do not administer.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Linux permission bits indicate read, write and execute for owner, group and others. File mode 640 allows owner read/write and group read; it grants no permissions to others. Directory permissions behave differently, so treat directory traversal and listing separately. Do not change access to data you do not administer.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Worked permission example: mode 640 means owner read/write, group read, and others no access. A directory additionally needs traversal permission for entry. Assess whether a designated report service should join a narrow group instead of gaining root.",
           "What permission allows modifying an existing file?",
           [
             "Write permission",
@@ -464,7 +464,7 @@
         ],
         [
           "Processes and graceful troubleshooting",
-          "A process is a running instance of software. High CPU usage can reflect a scheduled backup, indexing or failure; process identity and timing matter. If a mock service is slow, compare its expected schedule, resource data and logs before concluding a security incident.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "A process is a running instance of software. High CPU usage can reflect a scheduled backup, indexing or failure; process identity and timing matter. If a mock service is slow, compare its expected schedule, resource data and logs before concluding a security incident.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Troubleshooting plan: compare a process that is running, blocked, stopped or intentionally disabled. Record service status and last change before intervention; a graceful restart can disrupt sessions and needs authorization and rollback. Never terminate an unknown process merely because it uses CPU.",
           "A process uses substantial CPU during an update. What is the appropriate first step?",
           [
             "Identify the process and check context",
@@ -476,7 +476,7 @@
         ],
         [
           "Command mistakes and recovery habits",
-          "Command mistakes may come from wrong directories, quoting, flags or permissions. Stop before trying a command you do not understand, especially one that removes files or changes privileges. In an approved disposable lab, document the command, intended effect, actual output and how to reverse changes.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Command mistakes may come from wrong directories, quoting, flags or permissions. Stop before trying a command you do not understand, especially one that removes files or changes privileges. In an approved disposable lab, document the command, intended effect, actual output and how to reverse changes.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nDetailed practice and worked reasoning: Recovery exercise: after a mistaken change, identify the exact command, scope, timestamp and observed effect before undoing anything. Explain how quoting paths and reviewing wildcard expansion prevent broad deletion. Escalate when rollback depends on unavailable backups or unknown privileges.",
           "A command would modify many files. What should you do before running it?",
           [
             "Verify its scope and maintain a recovery path",
@@ -570,7 +570,7 @@
       "lessons": [
         [
           "Windows accounts and profiles",
-          "Compare local and organizational identities, standard versus administrator accounts, and why shared logins weaken accountability. A Windows profile keeps per-user settings, but a profile name alone is not permission to access company data. Worked check: an intern needs a reporting app; grant only its approved role, not local administrator.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Compare local and organizational identities, standard versus administrator accounts, and why shared logins weaken accountability. A Windows profile keeps per-user settings, but a profile name alone is not permission to access company data. Worked check: an intern needs a reporting app; grant only its approved role, not local administrator.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Case: an employee uses a standard profile and an administrator has a separate elevated account. Build a matrix of who can install software, read shared documents and change security policy. Explain why a local account, Microsoft account and organizational identity are not interchangeable.",
           "A guest needs occasional browser access. Which account type is appropriate?",
           [
             "A standard restricted account",
@@ -582,7 +582,7 @@
         ],
         [
           "Folders, paths and extensions",
-          "Explain a Windows path such as C:\\Users\\Student\\Downloads\\invoice.pdf.exe: the final extension can indicate an executable. File Explorer display settings may hide known extensions. Check file origin, signature and approved handling before opening; do not conclude malicious intent from the name alone.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Explain a Windows path such as C:\\Users\\Student\\Downloads\\invoice.pdf.exe: the final extension can indicate an executable. File Explorer display settings may hide known extensions. Check file origin, signature and approved handling before opening; do not conclude malicious intent from the name alone.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Case: a report appears as report.pdf.exe because extension hiding is enabled. Differentiate a filename, path, extension and actual file type. Use Properties and trusted provenance to evaluate an unfamiliar item without executing it, and document evidence carefully.",
           "Which path most clearly identifies a Windows drive location?",
           [
             "C:\\Users\\Student\\Notes",
@@ -594,7 +594,7 @@
         ],
         [
           "Windows security updates",
-          "Distinguish security updates, driver updates and application dependencies. Before patching a business PC, confirm maintenance authority, backup or restore plan and any app compatibility requirements. Verify installed update status and business functionality afterward, rather than treating a restart as proof of success.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Distinguish security updates, driver updates and application dependencies. Before patching a business PC, confirm maintenance authority, backup or restore plan and any app compatibility requirements. Verify installed update status and business functionality afterward, rather than treating a restart as proof of success.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Patch workflow: identify operating system version, installed updates, required restart window and business-critical apps. Before approving a change, document backup and rollback. Afterwards verify patch status and core tasks; an update-success message alone is insufficient.",
           "What is a sensible organizational update practice?",
           [
             "Test, back up, deploy and verify",
@@ -606,7 +606,7 @@
         ],
         [
           "Task Manager and services",
-          "Task Manager exposes processes and resource usage; services provide background functionality. High disk usage can come from a legitimate update or backup. Correlate process names, signed publishers, scheduled tasks and event history before drawing conclusions. End a process only if you understand the impact and have permission.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Task Manager exposes processes and resource usage; services provide background functionality. High disk usage can come from a legitimate update or backup. Correlate process names, signed publishers, scheduled tasks and event history before drawing conclusions. End a process only if you understand the impact and have permission.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Investigation: Task Manager shows elevated CPU after a scheduled backup. Compare process name, signer, launch time and legitimate workload. Explain why stopping a process without owner approval might corrupt work; classify observations separately from security hypotheses.",
           "What should you do when one service consumes a lot of CPU?",
           [
             "Inspect its identity and workload",
@@ -618,7 +618,7 @@
         ],
         [
           "Windows file access controls",
-          "Windows NTFS and shared-folder permissions both affect effective access. A user with a restrictive share grant may be unable to edit despite a permissive filesystem grant. Compare owner-approved rights against actual access using synthetic accounts; do not infer security from a folder label.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Windows NTFS and shared-folder permissions both affect effective access. A user with a restrictive share grant may be unable to edit despite a permissive filesystem grant. Compare owner-approved rights against actual access using synthetic accounts; do not infer security from a folder label.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Worked access review: NTFS permissions may be inherited or explicit; share permissions and file permissions both influence remote access. Model a user who needs read-only access to a payroll summary, and explain why granting Everyone full control exceeds the requirement.",
           "A finance team must edit its own reports while interns may only read them. What fits best?",
           [
             "Group-based edit and read-only grants",
@@ -630,7 +630,7 @@
         ],
         [
           "Defender, firewall and system health",
-          "Microsoft Defender and Windows Firewall provide overlapping but distinct protections, including malware detection and permitted traffic policy. A blocked connection may reflect intentional policy rather than an attack. Record application, direction, port and business need before requesting a rule change.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Microsoft Defender and Windows Firewall provide overlapping but distinct protections, including malware detection and permitted traffic policy. A blocked connection may reflect intentional policy rather than an attack. Record application, direction, port and business need before requesting a rule change.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Security controls: distinguish Microsoft Defender antivirus, host firewall, SmartScreen and automatic updates by the risks each addresses. Plan a controlled firewall-rule test with an allowed action and a denied action; preserve the existing baseline and avoid disabling controls.",
           "A firewall blocks an unknown incoming connection. What does that prove?",
           [
             "A rule blocked that traffic",
@@ -642,7 +642,7 @@
         ],
         [
           "Event Viewer and evidence",
-          "Event Viewer collects structured operating-system and application events. Filter by time, source, event identifier and outcome; account for time zones and clock drift. A failed sign-in record confirms a failed attempt, not a compromise. Preserve relevant event fields without collecting passwords.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Event Viewer collects structured operating-system and application events. Filter by time, source, event identifier and outcome; account for time zones and clock drift. A failed sign-in record confirms a failed attempt, not a compromise. Preserve relevant event fields without collecting passwords.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Event analysis: logon failures, successes and process events reflect recorded activity, not automatically malicious intent. Build a normalized timestamp table, identify account context and confidence, and request corroborating information with the device owner's permission.",
           "One failed login appears in a log. Which inference is justified?",
           [
             "A failed attempt occurred; cause needs context",
@@ -654,7 +654,7 @@
         ],
         [
           "Windows recovery and hardening",
-          "Compare file backups, restore points, system image recovery and account recovery. Restoring one document differs from rebuilding a device. A recovery runbook should list authorized owner, protected backups, recovery priority, validation tests and communication. Confirm the restored app and access controls actually work.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Compare file backups, restore points, system image recovery and account recovery. Restoring one document differs from rebuilding a device. A recovery runbook should list authorized owner, protected backups, recovery priority, validation tests and communication. Confirm the restored app and access controls actually work.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Recovery and hardening exercise: decide between restoring one file, rolling back an update and resetting a machine. Compare data-loss risk, recovery media, backup tests and business impact; document approval and post-recovery validation for each option.",
           "What strengthens recovery readiness?",
           [
             "Testing a restore and safeguarding recovery keys",
@@ -671,7 +671,7 @@
       "lessons": [
         [
           "Reading network diagrams",
-          "A network diagram should show devices, links, addresses, trust boundaries and allowed traffic rather than only decorative icons. Annotate a browser-to-API-to-database path and the gateway. Do not assume that two systems being drawn together means all traffic is permitted.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "A network diagram should show devices, links, addresses, trust boundaries and allowed traffic rather than only decorative icons. Annotate a browser-to-API-to-database path and the gateway. Do not assume that two systems being drawn together means all traffic is permitted.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Topology drill: draw client, switch, router, DNS resolver and service; label which devices forward packets and which answer application requests. A reachable gateway does not prove a website is healthy. For each hop, predict observable success and failure evidence.",
           "Which device usually forwards traffic between a home network and other networks?",
           [
             "The router",
@@ -683,7 +683,7 @@
         ],
         [
           "Private and public addresses",
-          "Private IPv4 address ranges include 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16; address space outside these ranges is not automatically globally reachable. NAT maps addresses at a boundary but does not replace authentication. Document whether an address is local, routed or external.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Private IPv4 address ranges include 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16; address space outside these ranges is not automatically globally reachable. NAT maps addresses at a boundary but does not replace authentication. Document whether an address is local, routed or external.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Worked example: 192.168.15.24 is a private IPv4 address; its use says little about the trustworthiness of the application. Contrast public routing with private addressing, and explain why NAT is not a substitute for authorization or firewall policy.",
           "Which is in a private IPv4 range?",
           [
             "192.168.1.25",
@@ -695,7 +695,7 @@
         ],
         [
           "Subnet reasoning",
-          "A /24 leaves eight host bits: 2^8 = 256 total addresses, conventionally 254 usable in a typical subnet. 192.168.20.10 and 192.168.20.90 share a /24; 192.168.21.10 does not. For non-/24 masks, convert prefix lengths to binary instead of guessing.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "A /24 leaves eight host bits: 2^8 = 256 total addresses, conventionally 254 usable in a typical subnet. 192.168.20.10 and 192.168.20.90 share a /24; 192.168.21.10 does not. For non-/24 masks, convert prefix lengths to binary instead of guessing.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Subnet worksheet: for 192.168.15.24/24, network=192.168.15.0, broadcast=192.168.15.255, conventional usable host range=.1–.254. For /26, blocks contain 64 addresses; enumerate network boundaries .0, .64, .128 and .192.",
           "Which address shares 192.168.40.0/24?",
           [
             "192.168.40.80",
@@ -707,7 +707,7 @@
         ],
         [
           "What DHCP does",
-          "DHCP can provide an address, network mask, router and DNS servers using a lease process. A missing offer may reflect a disconnected link, VLAN mismatch or unavailable service. Start by checking permitted local interface settings and supplied lab events rather than touching organizational infrastructure.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "DHCP can provide an address, network mask, router and DNS servers using a lease process. A missing offer may reflect a disconnected link, VLAN mismatch or unavailable service. Start by checking permitted local interface settings and supplied lab events rather than touching organizational infrastructure.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: DHCP sequence: discover, offer, request and acknowledgement describe a typical address lease negotiation. In a fictitious case with an incorrect gateway, compare lease settings, approved network configuration and a known-good peer before modifying a DHCP server.",
           "Which setting is commonly assigned by DHCP?",
           [
             "An IP address",
@@ -719,7 +719,7 @@
         ],
         [
           "DNS troubleshooting",
-          "DNS resolves names; a failure may stem from a missing record, wrong resolver, stale cache or upstream problem. Compare one affected device with a known-good authorized test client. Record exact error, queried name, resolver and time; do not attribute it to malware without corroboration.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "DNS resolves names; a failure may stem from a missing record, wrong resolver, stale cache or upstream problem. Compare one affected device with a known-good authorized test client. Record exact error, queried name, resolver and time; do not attribute it to malware without corroboration.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Diagnostic decision tree: first verify the assigned DNS server, then compare direct IP connectivity with name resolution. A lookup timeout differs from NXDOMAIN and from an HTTP 404. Record resolver, query and time without collecting private browsing history.",
           "If DNS resolution fails but the network remains connected, what should you examine?",
           [
             "Resolver settings and DNS responses",
@@ -731,7 +731,7 @@
         ],
         [
           "Ports and protocols",
-          "A port identifies a transport endpoint, not trustworthiness. HTTPS often uses TCP 443, while some HTTPS traffic uses QUIC over UDP 443. A refused connection, filtered traffic and an HTTP 403 describe different layers. State which observation is actually supported.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "A port identifies a transport endpoint, not trustworthiness. HTTPS often uses TCP 443, while some HTTPS traffic uses QUIC over UDP 443. A refused connection, filtered traffic and an HTTP 403 describe different layers. State which observation is actually supported.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Port reasoning: a TCP listening socket does not prove an application is authorized or healthy. Contrast TCP and UDP, service reachability and TLS verification. Explain why an open port is neither proof of vulnerability nor permission to test it.",
           "Which port is conventionally associated with HTTPS?",
           [
             "443",
@@ -743,7 +743,7 @@
         ],
         [
           "Safe connectivity diagnostics",
-          "Triage in order: link, IP configuration, gateway reachability, DNS, service and application behavior. Check only approved devices and low-impact tests. Keep results and timestamps, change one setting at a time, then repeat the user workflow to validate a fix.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Triage in order: link, IP configuration, gateway reachability, DNS, service and application behavior. Check only approved devices and low-impact tests. Keep results and timestamps, change one setting at a time, then repeat the user workflow to validate a fix.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Safe testing ladder: check physical/link state, assigned addresses, gateway, DNS, transport and application response in that order when appropriate. Record commands as pseudocode if no lab device is available. Avoid disruptive scans or probing devices outside agreed scope.",
           "A host does not respond to ping. What can you conclude?",
           [
             "ICMP replies were not received",
@@ -755,7 +755,7 @@
         ],
         [
           "Segmenting a small organization",
-          "Segmentation limits exposure by separating guest, staff and sensitive services. Draft an allowlist of necessary paths: finance app to database, approved administrators to management, and guests only to internet. Network boundaries complement—not replace—API authorization.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Segmentation limits exposure by separating guest, staff and sensitive services. Draft an allowlist of necessary paths: finance app to database, approved administrators to management, and guests only to internet. Network boundaries complement—not replace—API authorization.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nDetailed practice and worked reasoning: Segmentation exercise: guest clients should reach the internet but not an internal finance system. Draft explicit allow/deny outcomes and verify both paths with disposable lab accounts. Explain rule ordering, default deny and how a poorly scoped rule can defeat the design.",
           "Which network design best protects payment systems?",
           [
             "Separate restricted payment and guest zones",
@@ -2143,7 +2143,7 @@
       "lessons": [
         [
           "Defining authorized testing scope",
-          "Document targets, activities, timing, data rules, stopping conditions and contacts before an assessment. A related company domain is not automatically in scope. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Document targets, activities, timing, data rules, stopping conditions and contacts before an assessment. A related company domain is not automatically in scope. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Rules-of-engagement artifact: list the legal owner, authorized testers, precise asset identifiers, time window, allowed techniques, excluded systems, incident contact and stop conditions. A shared brand name does not authorize testing every related domain.",
           "Worked scenario: A contract permits testing a demo host only; do not test the organization's production portal. Which approach best supports a responsible evaluation of defining authorized testing scope?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2155,7 +2155,7 @@
         ],
         [
           "Evidence requirements and limitations",
-          "A finding should identify approved observations, the applicable control, impact, uncertainty and verification method. Never manufacture proof. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A finding should identify approved observations, the applicable control, impact, uncertainty and verification method. Never manufacture proof. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Evidence artifact: for each synthetic finding record observation time, source, exact reproduction steps, expected behavior, actual behavior, uncertainty and redaction decisions. Separate evidence collected in a browser simulation from findings on real infrastructure.",
           "Worked scenario: A simulated authorization denial shows expected behavior within the mock test, not universal security in production. Which approach best supports a responsible evaluation of evidence requirements and limitations?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2167,7 +2167,7 @@
         ],
         [
           "Building a target inventory from supplied diagrams",
-          "Use an authorized diagram to identify assets, owners, data flows and trust boundaries. Confirm unknowns with the owner before intrusive discovery. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Use an authorized diagram to identify assets, owners, data flows and trust boundaries. Confirm unknowns with the owner before intrusive discovery. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Scope inventory: build an asset register from the supplied diagram with host role, sensitivity, owner, trust boundary and whether written authorization covers it. Exclude ambiguous assets by default and document open questions before tests.",
           "Worked scenario: A diagram shows browser → API → database; identify the API boundary before reviewing record access. Which approach best supports a responsible evaluation of building a target inventory from supplied diagrams?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2179,7 +2179,7 @@
         ],
         [
           "Threat model development",
-          "State assets, entry points, threats, existing controls and plausible consequences. Compare alternative failure explanations and avoid attributing motive without evidence. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "State assets, entry points, threats, existing controls and plausible consequences. Compare alternative failure explanations and avoid attributing motive without evidence. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Threat model: identify a valuable asset, an actor's capability, an entry point, a trust-boundary crossing and a mitigation. Distinguish plausible threats from demonstrated weaknesses; prioritize testable hypotheses rather than exhaustive speculation.",
           "Worked scenario: An accessible service is an exposure to assess, not necessarily evidence of compromise. Which approach best supports a responsible evaluation of threat model development?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2191,7 +2191,7 @@
         ],
         [
           "Control validation plans",
-          "Define expected security behavior, safe test data and an explicit pass/fail rule. Include operational checks so protection changes do not break legitimate work. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Define expected security behavior, safe test data and an explicit pass/fail rule. Include operational checks so protection changes do not break legitimate work. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Control validation: define both a positive test (authorized user can read their sample record) and a negative test (a different sample user is denied). Specify synthetic account setup, expected HTTP status and evidence handling before running tests.",
           "Worked scenario: A mock student should be denied other students' grades while retaining access to their own. Which approach best supports a responsible evaluation of control validation plans?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2203,7 +2203,7 @@
         ],
         [
           "Risk ranking in business context",
-          "Compare likelihood, impact, exposure, confidence and available resources. A severity rating alone is not the same as business priority. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Compare likelihood, impact, exposure, confidence and available resources. A severity rating alone is not the same as business priority. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Risk prioritization: assess impact, likelihood, exposure and compensating controls separately. A severe-looking error message is not evidence of data access. Record business consequences and uncertainty rather than selecting severity from a label alone.",
           "Worked scenario: A sensitive exposed database receives greater urgency than an unused offline demo with the same nominal severity. Which approach best supports a responsible evaluation of risk ranking in business context?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2215,7 +2215,7 @@
         ],
         [
           "Writing reproducible findings",
-          "Include affected scope, observed condition, steps permitted under authorization, evidence, business impact and recommended fix. Separate observation from interpretation. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Include affected scope, observed condition, steps permitted under authorization, evidence, business impact and recommended fix. Separate observation from interpretation. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Finding template: state scope, affected asset, prerequisites, observed behavior, expected secure behavior, minimal reproduction, impact and limitations. Redact identifiers and credentials, and avoid presenting a theoretical possibility as an exploited flaw.",
           "Worked scenario: Report a specific excessive role grant and its approved evidence, not simply 'the cloud is hacked'. Which approach best supports a responsible evaluation of writing reproducible findings?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2227,7 +2227,7 @@
         ],
         [
           "Remediation recommendations",
-          "Recommend actions that are testable and proportionate, such as limiting a role, patching a component or segmenting traffic. Name an owner and timeline. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Recommend actions that are testable and proportionate, such as limiting a role, patching a component or segmenting traffic. Name an owner and timeline. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Remediation workshop: choose a correction at the trust boundary instead of merely hiding UI elements. Include accountable owner, implementation constraints, change window, rollback and evidence that permitted features still work.",
           "Worked scenario: For a stale contractor account, specify deactivation, session revocation and access review. Which approach best supports a responsible evaluation of remediation recommendations?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2239,7 +2239,7 @@
         ],
         [
           "Retest and closure criteria",
-          "A remediation retest should verify the originally observed issue and relevant normal functionality. Record results and residual risks. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A remediation retest should verify the originally observed issue and relevant normal functionality. Record results and residual risks. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Retest protocol: reproduce the original authorized case after a fix, test a denied case, preserve dates and version identifiers, and explicitly classify unresolved or untested items. Closing a ticket is administrative, not proof of resolution.",
           "Worked scenario: An updated access policy requires a controlled effective-permissions check before closure. Which approach best supports a responsible evaluation of retest and closure criteria?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2251,7 +2251,7 @@
         ],
         [
           "Executive reporting and presentation",
-          "Decision makers need prioritized exposure, options, cost and operational tradeoffs, not an unexplained dump of logs. Communicate uncertainty clearly. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Decision makers need prioritized exposure, options, cost and operational tradeoffs, not an unexplained dump of logs. Communicate uncertainty clearly. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nDetailed practice and worked reasoning: Executive briefing: lead with confirmed impact, decision required, priority and ownership, then describe controls and uncertainty in plain language. Put raw synthetic technical steps in an appendix so leaders can understand risk without sensitive detail.",
           "Worked scenario: A board memo compares two controls and identifies what evidence would justify the investment. Which approach best supports a responsible evaluation of executive reporting and presentation?",
           [
             "Use the specified observations and verify the relevant control",
