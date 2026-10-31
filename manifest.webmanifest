@@ -1,0 +1,17 @@
+{
+  "name": "Ethical Hacking Academy",
+  "short_name": "Ethical Hacking",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f2e9",
+  "theme_color": "#f7f2e9",
+  "icons": [
+    {
+      "src": "./academy-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
