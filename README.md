@@ -106,3 +106,7 @@ Four weekend-length fictional capstone assignments add practical written work in
 
 ### Course-linked assessment progress
 The Progress screen now reads locally stored best exam scores and links each exam result to its declared course(s). It separately summarizes passed auto-graded examinations (80% threshold), passed investigations (80%) and perfect-score multi-stage decision simulations, alongside lesson completion and self-reviewed portfolio drafts. This is evidence tracking, not a mandatory course graduation gate or verification of hands-on ability. The existing score storage keys were retained and no sign-in or layout design files were changed.
+
+
+### Per-course knowledge checkpoints
+Each course overview now shows lesson completion and any exams mapped to that course. Where assigned, the knowledge checkpoint requires all authored lessons marked complete and every related exam best score at or above the existing 80% passing threshold. Courses with no assigned exam explicitly show pending rather than automatically passed. This is a locally stored knowledge checkpoint only: it does not gate graduation, grade written portfolios, or certify real-world technical capability.
