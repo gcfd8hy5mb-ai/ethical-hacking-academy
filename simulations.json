@@ -258,87 +258,37 @@
             "Test unrelated production devices"
           ],
           0,
-          "d"
+          "P"
         ],
         [
           "What action respects the authorized lab scope?",
-          [
-            "P",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          "How should evidence be handled?",
           [
             "D",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "e"
+          "C"
         ],
         [
-          "Which validation or recommendation is defensible?",
-          [
-            "C",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "h"
-        ],
-        [
-          null,
+          "How should evidence be handled?",
           [
             "U",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "n"
+          "C"
         ],
         [
-          null,
-          [
-            "C",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "o"
-        ],
-        [
-          null,
+          "Which validation or recommendation is defensible?",
           [
             "M",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "i"
-        ],
-        [
-          null,
-          [
-            "R",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
-          [
-            "T",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "h"
+          "R"
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -367,87 +317,37 @@
             "Test unrelated production devices"
           ],
           0,
-          "d"
+          "-"
         ],
         [
           "What action respects the authorized lab scope?",
-          [
-            "-",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "5"
-        ],
-        [
-          "How should evidence be handled?",
           [
             "L",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "e"
+          "R"
         ],
         [
-          "Which validation or recommendation is defensible?",
-          [
-            "R",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
+          "How should evidence be handled?",
           [
             "T",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "h"
+          "D"
         ],
         [
-          null,
-          [
-            "D",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "o"
-        ],
-        [
-          null,
+          "Which validation or recommendation is defensible?",
           [
             "S",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "p"
-        ],
-        [
-          null,
-          [
-            "R",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
-          [
-            "L",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "i"
+          "R"
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -476,87 +376,37 @@
             "Test unrelated production devices"
           ],
           0,
-          "o"
+          "C"
         ],
         [
           "What action respects the authorized lab scope?",
-          [
-            "C",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "h"
-        ],
-        [
-          "How should evidence be handled?",
           [
             "S",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "t"
+          "F"
         ],
         [
-          "Which validation or recommendation is defensible?",
-          [
-            "F",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "o"
-        ],
-        [
-          null,
+          "How should evidence be handled?",
           [
             "P",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "r"
+          "R"
         ],
         [
-          null,
-          [
-            "R",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
+          "Which validation or recommendation is defensible?",
           [
             "N",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "o"
-        ],
-        [
-          null,
-          [
-            "R",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
-          [
-            "A",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "u"
+          "R"
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
@@ -585,87 +435,37 @@
             "Test unrelated production devices"
           ],
           0,
-          "n"
+          "C"
         ],
         [
           "What action respects the authorized lab scope?",
-          [
-            "C",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "h"
-        ],
-        [
-          "How should evidence be handled?",
           [
             "N",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "o"
+          "D"
         ],
         [
-          "Which validation or recommendation is defensible?",
-          [
-            "D",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "o"
-        ],
-        [
-          null,
+          "How should evidence be handled?",
           [
             "S",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          "c"
+          "V"
         ],
         [
-          null,
-          [
-            "V",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "e"
-        ],
-        [
-          null,
+          "Which validation or recommendation is defensible?",
           [
             "A",
             "Declare all connected systems compromised",
             "Test unrelated production devices"
           ],
           0,
-          " "
-        ],
-        [
-          null,
-          [
-            "D",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "o"
-        ],
-        [
-          null,
-          [
-            "T",
-            "Declare all connected systems compromised",
-            "Test unrelated production devices"
-          ],
-          0,
-          "h"
+          "D"
         ]
       ],
       "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
