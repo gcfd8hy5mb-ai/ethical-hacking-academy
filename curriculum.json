@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -7,7 +7,7 @@
       "lessons": [
         [
           "Security goals and the CIA triad",
-          "Cybersecurity protects information, systems, and services from unauthorized disclosure, alteration, and interruption. Confidentiality restricts who can read information; integrity protects its accuracy; availability keeps it accessible when needed. These goals often compete: a strict access rule can strengthen confidentiality while slowing legitimate work. A professional security decision weighs the mission, the threat, the costs, and the people affected.",
+          "Cybersecurity protects information, systems, and services from unauthorized disclosure, alteration, and interruption. Confidentiality restricts who can read information; integrity protects its accuracy; availability keeps it accessible when needed. These goals often compete: a strict access rule can strengthen confidentiality while slowing legitimate work. A professional security decision weighs the mission, the threat, the costs, and the people affected.\n\nApplied workshop — Security goals and the CIA triad. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A hospital encrypts patient files, verifies medication records, and uses redundant servers. Identify the CIA goal primarily served by each measure.",
           [
             "Encryption chiefly protects confidentiality",
@@ -19,7 +19,7 @@
         ],
         [
           "Threats, vulnerabilities, and risk",
-          "A threat is a potential cause of harm; a vulnerability is a weakness that can be exploited; risk combines the likelihood of an adverse event with its impact. An exposed service is not automatically evidence of a breach. Risk assessments document assets, weaknesses, existing controls, potential outcomes, uncertainty, and a treatment decision: reduce, avoid, transfer, or accept.",
+          "A threat is a potential cause of harm; a vulnerability is a weakness that can be exploited; risk combines the likelihood of an adverse event with its impact. An exposed service is not automatically evidence of a breach. Risk assessments document assets, weaknesses, existing controls, potential outcomes, uncertainty, and a treatment decision: reduce, avoid, transfer, or accept.\n\nApplied workshop — Threats, vulnerabilities, and risk. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A company has an outdated server reachable from the internet. Explain the threat, weakness, consequence and one control.",
           [
             "An outdated service is a vulnerability; restricting and patching it reduces risk",
@@ -31,7 +31,7 @@
         ],
         [
           "Assets, identities, and trust boundaries",
-          "Assets include hardware, software, credentials, intellectual property, customer records, and essential business processes. Identities can represent people, services or devices. A trust boundary is where the level of assumed trust changes—for example, between a public browser and a private company database. Apply least privilege: identities should have only the permissions needed for the task.",
+          "Assets include hardware, software, credentials, intellectual property, customer records, and essential business processes. Identities can represent people, services or devices. A trust boundary is where the level of assumed trust changes—for example, between a public browser and a private company database. Apply least privilege: identities should have only the permissions needed for the task.\n\nApplied workshop — Assets, identities, and trust boundaries. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "An analytics employee needs read-only access to monthly revenue reports. Choose an appropriate permission.",
           [
             "Administrator access to every system",
@@ -43,7 +43,7 @@
         ],
         [
           "Security governance and ethics",
-          "Authorized security work starts with written permission, defined scope, protected data, and a clear reporting process. An organization's acceptable-use rules, contracts and laws matter in addition to technical capability. A researcher who notices a possible weakness should avoid accessing real customer data or broadening testing without authorization. A useful finding describes evidence, limitations, risk, and suggested remediation.",
+          "Authorized security work starts with written permission, defined scope, protected data, and a clear reporting process. An organization's acceptable-use rules, contracts and laws matter in addition to technical capability. A researcher who notices a possible weakness should avoid accessing real customer data or broadening testing without authorization. A useful finding describes evidence, limitations, risk, and suggested remediation.\n\nApplied workshop — Security governance and ethics. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A website appears vulnerable but you have no permission to test it. What is the professional response?",
           [
             "Attempt to access private records to prove the issue",
@@ -55,7 +55,7 @@
         ],
         [
           "Defense in depth",
-          "Security controls can prevent, detect, respond to, and recover from incidents. Examples include multifactor authentication, network segmentation, logging, backup restoration tests, and incident playbooks. No single product eliminates every risk. Defense in depth assumes that some controls will eventually fail and creates additional barriers and visibility.",
+          "Security controls can prevent, detect, respond to, and recover from incidents. Examples include multifactor authentication, network segmentation, logging, backup restoration tests, and incident playbooks. No single product eliminates every risk. Defense in depth assumes that some controls will eventually fail and creates additional barriers and visibility.\n\nApplied workshop — Defense in depth. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A stolen password works, but MFA blocks sign-in and alerts the owner. What does this illustrate?",
           [
             "One password is sufficient security",
@@ -67,7 +67,7 @@
         ],
         [
           "Evidence, documentation, and reporting",
-          "Good security documentation states what was observed, when, on which authorized system, and under what conditions. Separate observed facts from hypotheses. Preserve evidence carefully, minimize personal data, and avoid attributing intent without support. An executive report should explain business exposure and remediation priorities, while a technical appendix records reproducible but appropriately scoped details.",
+          "Good security documentation states what was observed, when, on which authorized system, and under what conditions. Separate observed facts from hypotheses. Preserve evidence carefully, minimize personal data, and avoid attributing intent without support. An executive report should explain business exposure and remediation priorities, while a technical appendix records reproducible but appropriately scoped details.\n\nApplied workshop — Evidence, documentation, and reporting. Consider a retail organization deciding how to protect customer records. First, classify confidentiality, integrity and availability impacts; define the authorized owner and a measurable control. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "You see repeated failed sign-ins. What should your report say?",
           [
             "The user is definitely malicious",
@@ -873,7 +873,7 @@
       "lessons": [
         [
           "Security scope and rules of engagement",
-          "An authorized assessment begins with a signed statement of scope that identifies systems, permitted activities, testing windows, contacts, and conditions for stopping. Authorization is specific: access to a school lab does not grant access to nearby networks. Before beginning, record who owns the environment and what evidence may be collected.",
+          "An authorized assessment begins with a signed statement of scope that identifies systems, permitted activities, testing windows, contacts, and conditions for stopping. Authorization is specific: access to a school lab does not grant access to nearby networks. Before beginning, record who owns the environment and what evidence may be collected.\n\nApplied workshop — Security scope and rules of engagement. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A lab permits testing only 192.0.2.0/24. A different host appears interesting. What should you do?",
           [
             "Treat it as in scope",
@@ -885,7 +885,7 @@
         ],
         [
           "From assets to business impact",
-          "An asset inventory identifies information, systems, owners, dependencies and sensitivity. Analysis then connects a credible event to business consequences: interruption, financial loss, privacy harm and safety risks. A valuable assessment distinguishes an actual observation from an assumption about attack likelihood.",
+          "An asset inventory identifies information, systems, owners, dependencies and sensitivity. Analysis then connects a credible event to business consequences: interruption, financial loss, privacy harm and safety risks. A valuable assessment distinguishes an actual observation from an assumption about attack likelihood.\n\nApplied workshop — From assets to business impact. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which finding is best supported? ",
           [
             "The server has a missing patch according to its inventory",
@@ -897,7 +897,7 @@
         ],
         [
           "Documenting evidence ethically",
-          "Evidence should show the observed condition, timestamp, affected authorized system and method used. Minimize personal information, avoid altering production data and store records using approved access controls. Screenshots can capture secrets unintentionally; review them before sharing.",
+          "Evidence should show the observed condition, timestamp, affected authorized system and method used. Minimize personal information, avoid altering production data and store records using approved access controls. Screenshots can capture secrets unintentionally; review them before sharing.\n\nApplied workshop — Documenting evidence ethically. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which evidence practice is appropriate?",
           [
             "Capture unnecessary customer records",
@@ -909,7 +909,7 @@
         ],
         [
           "Writing a professional finding",
-          "A useful security finding has a title, scope, evidence, affected asset, risk explanation, practical fix and verification plan. Prioritization considers exposure and business context rather than severity labels alone. Use plain language for decision-makers and technical detail for authorized engineers.",
+          "A useful security finding has a title, scope, evidence, affected asset, risk explanation, practical fix and verification plan. Prioritization considers exposure and business context rather than severity labels alone. Use plain language for decision-makers and technical detail for authorized engineers.\n\nApplied workshop — Writing a professional finding. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which report is most actionable?",
           [
             "'System insecure'",
@@ -921,7 +921,7 @@
         ],
         [
           "Risk prioritization tradeoffs",
-          "When resources are limited, compare weaknesses by credible exposure, potential consequences, confidence and cost of remediation. High-impact internet-facing issues may warrant attention before isolated lab systems. A risk register should name an owner, treatment, deadline and verification step.",
+          "When resources are limited, compare weaknesses by credible exposure, potential consequences, confidence and cost of remediation. High-impact internet-facing issues may warrant attention before isolated lab systems. A risk register should name an owner, treatment, deadline and verification step.\n\nApplied workshop — Risk prioritization tradeoffs. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Two issues have the same severity score. What should break the tie?",
           [
             "Exposure, affected asset and business impact",
@@ -933,7 +933,7 @@
         ],
         [
           "Remediation verification and closure",
-          "A finding is not closed simply because someone says the patch is installed. Verify that the vulnerable condition was addressed, necessary functionality remains intact, and compensating controls are documented. If testing is restricted, record the limitation instead of declaring certainty.",
+          "A finding is not closed simply because someone says the patch is installed. Verify that the vulnerable condition was addressed, necessary functionality remains intact, and compensating controls are documented. If testing is restricted, record the limitation instead of declaring certainty.\n\nApplied workshop — Remediation verification and closure. Consider a security analyst reviewing a fictional enterprise assessment. First, separate approved scope, observed evidence, business impact and recommendations. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What validates a resolved finding?",
           [
             "Authorized retesting and evidence",
@@ -950,7 +950,7 @@
       "lessons": [
         [
           "Browser versus server responsibilities",
-          "A browser displays pages and runs client-side code; a server processes requests and controls protected resources. Anything sent to a browser can generally be inspected or modified by its user. Permission checks on buttons are not sufficient; the server must verify each protected request.",
+          "A browser displays pages and runs client-side code; a server processes requests and controls protected resources. Anything sent to a browser can generally be inspected or modified by its user. Permission checks on buttons are not sufficient; the server must verify each protected request.\n\nApplied workshop — Browser versus server responsibilities. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A user hides a paywall button in their browser. What still protects private data?",
           [
             "Server-side authorization",
@@ -962,7 +962,7 @@
         ],
         [
           "Input validation and encoding",
-          "Applications accept data from forms, URLs and APIs. Validation checks whether data is structurally and semantically appropriate, while output encoding helps display untrusted text safely in a specific context. The correct defense depends on where the value is used. Never assume all special characters are inherently malicious.",
+          "Applications accept data from forms, URLs and APIs. Validation checks whether data is structurally and semantically appropriate, while output encoding helps display untrusted text safely in a specific context. The correct defense depends on where the value is used. Never assume all special characters are inherently malicious.\n\nApplied workshop — Input validation and encoding. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A comment includes HTML-like characters. What helps display it as text?",
           [
             "Context-appropriate output encoding",
@@ -974,7 +974,7 @@
         ],
         [
           "Session cookies and authentication",
-          "After signing in, an application often uses a session or token to associate requests with an account. A session identifier is sensitive and should be protected with appropriate transport and storage controls. Sessions should expire, support revocation and be managed carefully on shared devices.",
+          "After signing in, an application often uses a session or token to associate requests with an account. A session identifier is sensitive and should be protected with appropriate transport and storage controls. Sessions should expire, support revocation and be managed carefully on shared devices.\n\nApplied workshop — Session cookies and authentication. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Someone signs out of a shared computer. What should the app do?",
           [
             "Invalidate the session where possible",
@@ -986,7 +986,7 @@
         ],
         [
           "APIs and least privilege",
-          "An API is a structured way for software to exchange requests and responses. Each sensitive endpoint must validate identity, permissions and input. Avoid embedding privileged service credentials in publicly downloaded browser files; public web configuration is distinct from a private administrator secret.",
+          "An API is a structured way for software to exchange requests and responses. Each sensitive endpoint must validate identity, permissions and input. Avoid embedding privileged service credentials in publicly downloaded browser files; public web configuration is distinct from a private administrator secret.\n\nApplied workshop — APIs and least privilege. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What should protect an API that returns payroll data?",
           [
             "Server-side access checks per request",
@@ -998,7 +998,7 @@
         ],
         [
           "Cloud responsibility boundaries",
-          "Cloud providers protect parts of the infrastructure while customers configure identities, application access, data handling and many service settings. The precise split depends on whether the service is infrastructure, a managed platform or software. A provider's compliance does not automatically make every customer deployment secure.",
+          "Cloud providers protect parts of the infrastructure while customers configure identities, application access, data handling and many service settings. The precise split depends on whether the service is infrastructure, a managed platform or software. A provider's compliance does not automatically make every customer deployment secure.\n\nApplied workshop — Cloud responsibility boundaries. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Who typically must configure their application's user permissions?",
           [
             "The application owner",
@@ -1010,7 +1010,7 @@
         ],
         [
           "Secrets and configuration hygiene",
-          "A secret such as an administrative API key or private signing key must not be put into public repository files. Use approved secret storage, restrict permissions, rotate exposed secrets and monitor usage. Not every public-looking identifier is a secret; evaluate what privilege a value actually grants.",
+          "A secret such as an administrative API key or private signing key must not be put into public repository files. Use approved secret storage, restrict permissions, rotate exposed secrets and monitor usage. Not every public-looking identifier is a secret; evaluate what privilege a value actually grants.\n\nApplied workshop — Secrets and configuration hygiene. Consider a school portal using an identity provider and private cloud records. First, trace browser, API and database trust boundaries; verify per-record authorization. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What belongs in restricted secret storage?",
           [
             "A privileged service account private key",
@@ -1027,7 +1027,7 @@
       "lessons": [
         [
           "Case: suspicious supplier invoice",
-          "A fictional manufacturer receives an urgent payment-change email claiming to be from a supplier. The sender's display name matches previous contacts, but the domain differs. Before paying, the finance team should use an established independent channel, preserve the message and follow its verification policy.",
+          "A fictional manufacturer receives an urgent payment-change email claiming to be from a supplier. The sender's display name matches previous contacts, but the domain differs. Before paying, the finance team should use an established independent channel, preserve the message and follow its verification policy.\n\nApplied workshop — Case: suspicious supplier invoice. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What is the best first control?",
           [
             "Confirm the change via a known supplier contact",
@@ -1039,7 +1039,7 @@
         ],
         [
           "Case: ransomware and recovery",
-          "A fictional retailer discovers inaccessible files on one workstation. Evidence is incomplete: it might be a storage fault, malware or something else. The response team should use an approved incident plan to determine scope, protect evidence, contain confirmed risks and assess clean backups.",
+          "A fictional retailer discovers inaccessible files on one workstation. Evidence is incomplete: it might be a storage fault, malware or something else. The response team should use an approved incident plan to determine scope, protect evidence, contain confirmed risks and assess clean backups.\n\nApplied workshop — Case: ransomware and recovery. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What should an analyst avoid?",
           [
             "Immediately declaring every system compromised",
@@ -1051,7 +1051,7 @@
         ],
         [
           "Case: cloud storage exposure",
-          "A fictional company learns that a document bucket may be publicly readable. The team must confirm its approved configuration and data sensitivity, restrict unintended access, assess exposure and document response. Do not download customers' private files just to demonstrate the mistake.",
+          "A fictional company learns that a document bucket may be publicly readable. The team must confirm its approved configuration and data sensitivity, restrict unintended access, assess exposure and document response. Do not download customers' private files just to demonstrate the mistake.\n\nApplied workshop — Case: cloud storage exposure. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which action is defensible?",
           [
             "Review configuration using authorized administrative tools",
@@ -1063,7 +1063,7 @@
         ],
         [
           "Case: hospital system availability",
-          "A hospital's scheduling service experiences outages during peak usage. Security and operations must consider patient care, data integrity and recovery priorities. An availability problem is not automatically an attack; analyze capacity, dependencies, change history and incident indicators.",
+          "A hospital's scheduling service experiences outages during peak usage. Security and operations must consider patient care, data integrity and recovery priorities. An availability problem is not automatically an attack; analyze capacity, dependencies, change history and incident indicators.\n\nApplied workshop — Case: hospital system availability. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What should leadership prioritize?",
           [
             "Safety and evidence-based continuity plans",
@@ -1075,7 +1075,7 @@
         ],
         [
           "Case: former employee access",
-          "An internal audit finds that a departed employee's account still has access to shared documents. The organization should verify account ownership, revoke access through established procedures, review relevant activity and improve offboarding controls.",
+          "An internal audit finds that a departed employee's account still has access to shared documents. The organization should verify account ownership, revoke access through established procedures, review relevant activity and improve offboarding controls.\n\nApplied workshop — Case: former employee access. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What preventive process helps most?",
           [
             "Automated access removal tied to offboarding",
@@ -1087,7 +1087,7 @@
         ],
         [
           "Case: board security briefing",
-          "A board asks whether a proposed security investment is worthwhile. A persuasive answer connects observed exposure and business impact to options, tradeoffs, costs and success metrics. Report uncertainty, and avoid presenting compliance checkboxes as proof that all risks are eliminated.",
+          "A board asks whether a proposed security investment is worthwhile. A persuasive answer connects observed exposure and business impact to options, tradeoffs, costs and success metrics. Report uncertainty, and avoid presenting compliance checkboxes as proof that all risks are eliminated.\n\nApplied workshop — Case: board security briefing. Consider a finance manager receiving an urgent suspicious supplier request. First, compare verified events with competing explanations; choose a documented decision owner. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which briefing is best?",
           [
             "Evidence, alternatives, expected risk reduction and limitations",
@@ -1104,7 +1104,7 @@
       "lessons": [
         [
           "Map an application before securing it",
-          "A typical academy application contains a browser, identity provider, server APIs, database, and external integrations. Begin with a data-flow diagram: show each component, the information it sends, and the boundary where trust changes. The same page can have public content and private learner records, but those records need separate authorization controls. Identify who owns each component and how availability failures affect learning.",
+          "A typical academy application contains a browser, identity provider, server APIs, database, and external integrations. Begin with a data-flow diagram: show each component, the information it sends, and the boundary where trust changes. The same page can have public content and private learner records, but those records need separate authorization controls. Identify who owns each component and how availability failures affect learning.\n\nApplied workshop — Map an application before securing it. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A web page sends student grades to an API. Where is the most important authorization boundary?",
           [
             "The browser's button color",
@@ -1116,7 +1116,7 @@
         ],
         [
           "Build a simple threat model",
-          "Threat modeling asks what the system is meant to do, what could go wrong, and what controls would reduce harm. Identify assets, legitimate users, entry points, trust boundaries, potential misuse, existing safeguards and residual uncertainty. A threat model is not an accusation that someone attacked the system.",
+          "Threat modeling asks what the system is meant to do, what could go wrong, and what controls would reduce harm. Identify assets, legitimate users, entry points, trust boundaries, potential misuse, existing safeguards and residual uncertainty. A threat model is not an accusation that someone attacked the system.\n\nApplied workshop — Build a simple threat model. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What is the first reasonable output of a threat-modeling meeting?",
           [
             "An inventory of assets and data flows",
@@ -1128,7 +1128,7 @@
         ],
         [
           "Protect authentication and session state",
-          "An identity system should establish who is signing in and help limit impersonation. Multifactor authentication, safe recovery, session expiration, and revocation provide different forms of protection. Authentication proves an identity to some confidence level; authorization decides which particular resources that identity may access.",
+          "An identity system should establish who is signing in and help limit impersonation. Multifactor authentication, safe recovery, session expiration, and revocation provide different forms of protection. Authentication proves an identity to some confidence level; authorization decides which particular resources that identity may access.\n\nApplied workshop — Protect authentication and session state. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A legitimate user signs in successfully. What must still happen before returning another student's grades?",
           [
             "Nothing else",
@@ -1140,7 +1140,7 @@
         ],
         [
           "Security logging without oversharing",
-          "Logs can help teams reconstruct events, but excessive logging can expose passwords, session tokens, or sensitive personal information. Log decision-relevant events with useful timestamps, stable event codes and approved retention. Restrict access and verify time synchronization.",
+          "Logs can help teams reconstruct events, but excessive logging can expose passwords, session tokens, or sensitive personal information. Log decision-relevant events with useful timestamps, stable event codes and approved retention. Restrict access and verify time synchronization.\n\nApplied workshop — Security logging without oversharing. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which is the better authentication log entry?",
           [
             "A timestamp, user ID and login outcome",
@@ -1152,7 +1152,7 @@
         ],
         [
           "Design for failure and recovery",
-          "Secure systems must also remain available. Consider a dependency outage, an accidental deletion and an incorrectly configured access rule. Recovery design defines responsibilities, backup frequency, tested restoration procedures and fallback communication. Not all continuity problems are cyberattacks.",
+          "Secure systems must also remain available. Consider a dependency outage, an accidental deletion and an incorrectly configured access rule. Recovery design defines responsibilities, backup frequency, tested restoration procedures and fallback communication. Not all continuity problems are cyberattacks.\n\nApplied workshop — Design for failure and recovery. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "An identity provider is temporarily unavailable. What belongs in the continuity plan?",
           [
             "An approved communication and recovery procedure",
@@ -1164,7 +1164,7 @@
         ],
         [
           "Prioritize controls with a budget",
-          "Good architecture is not a shopping list of tools. Compare risks and choose controls by likely consequence, implementation feasibility, operational cost, and how success can be measured. A small firm may first benefit from MFA, reliable backups, patching and account lifecycle processes rather than specialized products.",
+          "Good architecture is not a shopping list of tools. Compare risks and choose controls by likely consequence, implementation feasibility, operational cost, and how success can be measured. A small firm may first benefit from MFA, reliable backups, patching and account lifecycle processes rather than specialized products.\n\nApplied workshop — Prioritize controls with a budget. Consider a company mapping public web services and internal employee systems. First, draw assets and data flows, identify trust boundaries and prioritize controls. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which investment proposal is best justified?",
           [
             "One linking an observed risk to measurable reduction",
@@ -1181,7 +1181,7 @@
       "lessons": [
         [
           "Create an equipment inventory",
-          "An equipment inventory records the device, owner, business purpose, operating system, software status and support plan. The goal is not to collect needless personal data. Inventories make patching, incident response, warranty decisions and retirement safer.",
+          "An equipment inventory records the device, owner, business purpose, operating system, software status and support plan. The goal is not to collect needless personal data. Inventories make patching, incident response, warranty decisions and retirement safer.\n\nApplied workshop — Create an equipment inventory. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What makes a device inventory useful?",
           [
             "Owner and software lifecycle details",
@@ -1193,7 +1193,7 @@
         ],
         [
           "Handle an IT support request",
-          "A support ticket should describe symptoms, start time, affected users, environment, steps already tried and business impact. Begin with reversible checks. Record changes and communicate what was actually verified rather than promising a fix before testing.",
+          "A support ticket should describe symptoms, start time, affected users, environment, steps already tried and business impact. Begin with reversible checks. Record changes and communicate what was actually verified rather than promising a fix before testing.\n\nApplied workshop — Handle an IT support request. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A laptop loses internet access. What is a good first action?",
           [
             "Record symptoms and check basic connectivity",
@@ -1205,7 +1205,7 @@
         ],
         [
           "Plan a maintenance change",
-          "Configuration changes can accidentally interrupt work. A change plan identifies the reason, scope, approvals, time window, expected effect, test procedure and rollback conditions. Small changes still deserve a clear record when they affect critical operations.",
+          "Configuration changes can accidentally interrupt work. A change plan identifies the reason, scope, approvals, time window, expected effect, test procedure and rollback conditions. Small changes still deserve a clear record when they affect critical operations.\n\nApplied workshop — Plan a maintenance change. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What should be included before an approved firewall rule change?",
           [
             "Test plan and rollback procedure",
@@ -1217,7 +1217,7 @@
         ],
         [
           "Learn command-line documentation",
-          "Professional administrators read documentation rather than copy unfamiliar commands blindly. On suitable training machines, help and manual pages explain options, required privileges and side effects. In a browser simulation, interpret outputs without assuming they reflect a real computer.",
+          "Professional administrators read documentation rather than copy unfamiliar commands blindly. On suitable training machines, help and manual pages explain options, required privileges and side effects. In a browser simulation, interpret outputs without assuming they reflect a real computer.\n\nApplied workshop — Learn command-line documentation. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What should you do before running an unfamiliar command?",
           [
             "Read its documentation and verify its effects",
@@ -1229,7 +1229,7 @@
         ],
         [
           "Interpret logs and timestamps",
-          "A log is a sequence of observations, often generated by software. Investigators compare event times, clocks, sources and expected maintenance. A single error message may have several causes. Keep evidence intact while making notes about competing explanations.",
+          "A log is a sequence of observations, often generated by software. Investigators compare event times, clocks, sources and expected maintenance. A single error message may have several causes. Keep evidence intact while making notes about competing explanations.\n\nApplied workshop — Interpret logs and timestamps. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "An error happens right after a scheduled update. What should you do?",
           [
             "Investigate change history alongside logs",
@@ -1241,7 +1241,7 @@
         ],
         [
           "Escalation and professional communication",
-          "An IT technician should recognize when an issue exceeds their authority or experience. Escalation includes symptoms, evidence, attempted actions, business impact and urgency. Protect sensitive data; don't attach entire customer datasets to tickets without a need.",
+          "An IT technician should recognize when an issue exceeds their authority or experience. Escalation includes symptoms, evidence, attempted actions, business impact and urgency. Protect sensitive data; don't attach entire customer datasets to tickets without a need.\n\nApplied workshop — Escalation and professional communication. Consider a support technician diagnosing an intermittent company application. First, record symptoms, compare known-good behavior and plan low-impact verification. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What makes a useful escalation?",
           [
             "Concise observed facts and actions taken",
@@ -1258,7 +1258,7 @@
       "lessons": [
         [
           "Why encryption exists",
-          "Encryption converts readable information into a form that requires a key to recover. It protects confidentiality when a device is lost or data passes through an untrusted network. Encryption does not automatically establish who created a message, whether data was modified, or whether an application is safe. Begin by classifying what needs protection and who is authorized to read it.",
+          "Encryption converts readable information into a form that requires a key to recover. It protects confidentiality when a device is lost or data passes through an untrusted network. Encryption does not automatically establish who created a message, whether data was modified, or whether an application is safe. Begin by classifying what needs protection and who is authorized to read it.\n\nApplied workshop — Why encryption exists. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A stolen encrypted laptop is recovered by a stranger. What most directly protects the stored data?",
           [
             "Strong full-disk encryption with a protected key",
@@ -1270,7 +1270,7 @@
         ],
         [
           "Symmetric and asymmetric keys",
-          "Symmetric cryptography uses a shared secret key for encryption and decryption. Asymmetric cryptography uses a mathematically related public and private key pair. Public-key techniques help establish keys, verify signatures and support authenticated connections. Neither should be implemented from scratch for a real product: use established, reviewed libraries.",
+          "Symmetric cryptography uses a shared secret key for encryption and decryption. Asymmetric cryptography uses a mathematically related public and private key pair. Public-key techniques help establish keys, verify signatures and support authenticated connections. Neither should be implemented from scratch for a real product: use established, reviewed libraries.\n\nApplied workshop — Symmetric and asymmetric keys. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which key must remain private in an asymmetric key pair?",
           [
             "The private key",
@@ -1282,7 +1282,7 @@
         ],
         [
           "Hashes and integrity",
-          "A cryptographic hash produces a fixed-length digest of input. Hashes can help detect accidental or unauthorized alteration when compared against a trusted reference. They are not encryption: the original data cannot simply be decrypted from a hash. Passwords need special slow password-hashing methods with appropriate salts, not a generic fast hash alone.",
+          "A cryptographic hash produces a fixed-length digest of input. Hashes can help detect accidental or unauthorized alteration when compared against a trusted reference. They are not encryption: the original data cannot simply be decrypted from a hash. Passwords need special slow password-hashing methods with appropriate salts, not a generic fast hash alone.\n\nApplied workshop — Hashes and integrity. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What is a hash useful for?",
           [
             "Comparing a downloaded file with a trusted digest",
@@ -1294,7 +1294,7 @@
         ],
         [
           "Digital signatures",
-          "A digital signature allows verification that content was signed using a particular private key and was not altered afterward. Confidence in the signer's identity still depends on a trustworthy process for associating keys with identities. A signature does not hide the message contents.",
+          "A digital signature allows verification that content was signed using a particular private key and was not altered afterward. Confidence in the signer's identity still depends on a trustworthy process for associating keys with identities. A signature does not hide the message contents.\n\nApplied workshop — Digital signatures. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which property does a valid digital signature chiefly support?",
           [
             "Integrity and signer authentication within a trusted key system",
@@ -1306,7 +1306,7 @@
         ],
         [
           "TLS certificates and trust",
-          "HTTPS ordinarily uses TLS to protect communications to a server. Certificates link a public key to a domain identity under certificate-validation rules. Browser warnings about invalid certificates should not be casually bypassed, especially when submitting credentials. HTTPS does not certify that every claim on the site is honest.",
+          "HTTPS ordinarily uses TLS to protect communications to a server. Certificates link a public key to a domain identity under certificate-validation rules. Browser warnings about invalid certificates should not be casually bypassed, especially when submitting credentials. HTTPS does not certify that every claim on the site is honest.\n\nApplied workshop — TLS certificates and trust. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A browser warns that a login site's certificate is invalid. Best next action?",
           [
             "Stop and verify the site through a trusted route",
@@ -1318,7 +1318,7 @@
         ],
         [
           "Secrets rotation and recovery",
-          "Keys and credentials have lifecycles: generation, controlled use, storage, rotation and eventual revocation. A leaked credential needs coordinated containment and replacement, not merely deletion from a Git history view. Recovery planning must protect backup keys from loss and unauthorized use.",
+          "Keys and credentials have lifecycles: generation, controlled use, storage, rotation and eventual revocation. A leaked credential needs coordinated containment and replacement, not merely deletion from a Git history view. Recovery planning must protect backup keys from loss and unauthorized use.\n\nApplied workshop — Secrets rotation and recovery. Consider a developer protecting confidential training submissions. First, distinguish encryption, hashing and digital signatures; address key lifecycle. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A private service key is accidentally committed to a public repository. What should happen?",
           [
             "Revoke or rotate the key and investigate possible use",
@@ -1335,7 +1335,7 @@
       "lessons": [
         [
           "Understand event records",
-          "A useful event record states when something happened, which system reported it, what category it belongs to and whether the action succeeded. Some fields can be missing or inconsistent. Analysts must avoid inventing certainty where logs lack evidence. In a fictional log, 'login failed' does not imply that access was obtained.",
+          "A useful event record states when something happened, which system reported it, what category it belongs to and whether the action succeeded. Some fields can be missing or inconsistent. Analysts must avoid inventing certainty where logs lack evidence. In a fictional log, 'login failed' does not imply that access was obtained.\n\nApplied workshop — Understand event records. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What is justified by a record labeled login_failed?",
           [
             "An unsuccessful attempt was recorded",
@@ -1347,7 +1347,7 @@
         ],
         [
           "Time windows and correlation",
-          "Correlating events means comparing timestamps and related identifiers across sources. Clocks may use different time zones or drift, so normalize time before building a timeline. A burst of errors after a deployment may be operational rather than malicious. Preserve the source and note uncertainties.",
+          "Correlating events means comparing timestamps and related identifiers across sources. Clocks may use different time zones or drift, so normalize time before building a timeline. A burst of errors after a deployment may be operational rather than malicious. Preserve the source and note uncertainties.\n\nApplied workshop — Time windows and correlation. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Two log sources disagree by an hour. What should you check first?",
           [
             "Time zones and clock synchronization",
@@ -1359,7 +1359,7 @@
         ],
         [
           "Build a basic alert rule",
-          "An alert rule identifies events worth investigating, such as unusually frequent failed sign-ins. Thresholds need baselines and may produce false positives. A rule should define the triggering event, time window, expected response and ways to tune noisy behavior. An alert is a prompt to investigate, not proof of compromise.",
+          "An alert rule identifies events worth investigating, such as unusually frequent failed sign-ins. Thresholds need baselines and may produce false positives. A rule should define the triggering event, time window, expected response and ways to tune noisy behavior. An alert is a prompt to investigate, not proof of compromise.\n\nApplied workshop — Build a basic alert rule. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "An alert fires after five failures. Does it prove malicious activity?",
           [
             "No, it requires context",
@@ -1371,7 +1371,7 @@
         ],
         [
           "Detection versus prevention",
-          "Preventive controls try to stop unwanted actions; detective controls help discover them. MFA can block some unauthorized logins, while authentication logs and alerting help identify attempts. Response and recovery complete the defensive lifecycle. Layering these functions provides stronger resilience.",
+          "Preventive controls try to stop unwanted actions; detective controls help discover them. MFA can block some unauthorized logins, while authentication logs and alerting help identify attempts. Response and recovery complete the defensive lifecycle. Layering these functions provides stronger resilience.\n\nApplied workshop — Detection versus prevention. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which is primarily a detective control?",
           [
             "Reviewing authentication alerts",
@@ -1383,7 +1383,7 @@
         ],
         [
           "Triage and escalation",
-          "An analyst verifies an alert, gathers scoped evidence, checks asset importance and considers competing explanations. Escalation should clearly state what is confirmed, what remains unknown and which decisions require an authorized owner. Avoid intrusive investigation beyond the assigned role.",
+          "An analyst verifies an alert, gathers scoped evidence, checks asset importance and considers competing explanations. Escalation should clearly state what is confirmed, what remains unknown and which decisions require an authorized owner. Avoid intrusive investigation beyond the assigned role.\n\nApplied workshop — Triage and escalation. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which escalation message is best?",
           [
             "Observed six failed attempts from one source; no successful login found in reviewed window",
@@ -1395,7 +1395,7 @@
         ],
         [
           "Measure detection quality",
-          "Useful monitoring metrics include time to triage, proportion of meaningful alerts, response completeness and gaps in log coverage. More alerts are not always better; excessive noise can hide important incidents. Evaluation should account for missed detections and unnecessary disruptions.",
+          "Useful monitoring metrics include time to triage, proportion of meaningful alerts, response completeness and gaps in log coverage. More alerts are not always better; excessive noise can hide important incidents. Evaluation should account for missed detections and unnecessary disruptions.\n\nApplied workshop — Measure detection quality. Consider an analyst reviewing time-stamped synthetic sign-in records. First, normalize times, identify alert conditions and document uncertainty. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What is a warning sign in a monitoring system?",
           [
             "High alert volume with little actionable information",
@@ -1412,7 +1412,7 @@
       "lessons": [
         [
           "Permission before testing",
-          "A security assessment is authorized only within the owner's approved scope. Written rules should define permitted targets, methods, timing, escalation contacts, data handling and stop conditions. Passive observation of public information does not grant permission for intrusive testing. The professional habit is to stop and clarify before expanding work.",
+          "A security assessment is authorized only within the owner's approved scope. Written rules should define permitted targets, methods, timing, escalation contacts, data handling and stop conditions. Passive observation of public information does not grant permission for intrusive testing. The professional habit is to stop and clarify before expanding work.\n\nApplied workshop — Permission before testing. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Your lab scope names one test application. You find a related production site. What now?",
           [
             "Request authorization before testing the other site",
@@ -1424,7 +1424,7 @@
         ],
         [
           "Inventory an approved target",
-          "Before testing, document an authorized lab's purpose, components, software versions and owners. Prefer provided inventory data over uncontrolled probing. Identify which systems are disposable training resources versus business-critical ones. Record uncertainty in the inventory rather than guessing.",
+          "Before testing, document an authorized lab's purpose, components, software versions and owners. Prefer provided inventory data over uncontrolled probing. Identify which systems are disposable training resources versus business-critical ones. Record uncertainty in the inventory rather than guessing.\n\nApplied workshop — Inventory an approved target. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which source is safest for a first inventory?",
           [
             "A lab-provided system diagram",
@@ -1436,7 +1436,7 @@
         ],
         [
           "Form a test hypothesis",
-          "A useful hypothesis is narrow and falsifiable: for example, 'this role should not access another user's record.' Define the expected correct behavior, the evidence needed and the permitted test method. Avoid collecting other people's real records to make a demonstration.",
+          "A useful hypothesis is narrow and falsifiable: for example, 'this role should not access another user's record.' Define the expected correct behavior, the evidence needed and the permitted test method. Avoid collecting other people's real records to make a demonstration.\n\nApplied workshop — Form a test hypothesis. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What makes a good authorization test hypothesis?",
           [
             "A precise expected access rule",
@@ -1448,7 +1448,7 @@
         ],
         [
           "Use isolated and simulated labs",
-          "An isolated lab may contain synthetic accounts, fabricated files and resettable services. The isolation protects third parties and makes repeated learning safer. A browser simulation can teach reasoning without executing commands on the phone or sending traffic to targets. Label simulated evidence honestly.",
+          "An isolated lab may contain synthetic accounts, fabricated files and resettable services. The isolation protects third parties and makes repeated learning safer. A browser simulation can teach reasoning without executing commands on the phone or sending traffic to targets. Label simulated evidence honestly.\n\nApplied workshop — Use isolated and simulated labs. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A browser lab prints a mock network response. What can you claim?",
           [
             "The simulator displayed a modeled outcome",
@@ -1460,7 +1460,7 @@
         ],
         [
           "Handle findings responsibly",
-          "If testing reveals a real issue in scope, preserve the minimum evidence needed, report through the agreed channel and avoid public disclosure without coordination. Severity depends on exposure and impact, not dramatic wording. Protect user data throughout the process.",
+          "If testing reveals a real issue in scope, preserve the minimum evidence needed, report through the agreed channel and avoid public disclosure without coordination. Severity depends on exposure and impact, not dramatic wording. Protect user data throughout the process.\n\nApplied workshop — Handle findings responsibly. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A scoped test reveals a possible data-access weakness. Next?",
           [
             "Stop intrusive activity and report the minimal evidence",
@@ -1472,7 +1472,7 @@
         ],
         [
           "Write a validation plan",
-          "After remediation, validate only the agreed condition, test expected functionality and note residual uncertainty. A change can reduce one weakness while introducing another operational issue. Record who approved the verification, what was observed and whether further work is required.",
+          "After remediation, validate only the agreed condition, test expected functionality and note residual uncertainty. A change can reduce one weakness while introducing another operational issue. Record who approved the verification, what was observed and whether further work is required.\n\nApplied workshop — Write a validation plan. Consider a consultant assessing an isolated classroom application. First, document written permission, permitted test methods and stop conditions. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "When is a finding best considered closed?",
           [
             "After authorized verification with documented results",
@@ -1489,7 +1489,7 @@
       "lessons": [
         [
           "Trace a website request end to end",
-          "Imagine an iPhone connected to a home Wi-Fi router. When you type a website name, the browser may look up a DNS address, establish a network connection and negotiate HTTPS before requesting a page. Each phase can fail independently. Worked example: Wi-Fi connected and IP traffic works, but the name lookup fails. First inspect DNS rather than resetting every device. Record observations before changing settings.",
+          "Imagine an iPhone connected to a home Wi-Fi router. When you type a website name, the browser may look up a DNS address, establish a network connection and negotiate HTTPS before requesting a page. Each phase can fail independently. Worked example: Wi-Fi connected and IP traffic works, but the name lookup fails. First inspect DNS rather than resetting every device. Record observations before changing settings.\n\nApplied workshop — Trace a website request end to end. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A browser reaches a known IP but cannot resolve the site name. Which check comes first?",
           [
             "DNS settings and resolver response",
@@ -1501,7 +1501,7 @@
         ],
         [
           "Subnets with a pencil",
-          "An IPv4 /24 prefix leaves 8 address bits for host values. In 192.168.12.0/24, the usual network address is .0 and broadcast address .255; conventional host values are .1 through .254. Worked example: 192.168.12.48 and 192.168.12.90 share the first 24 bits; 192.168.13.90 does not. Special point-to-point and other prefix rules differ.",
+          "An IPv4 /24 prefix leaves 8 address bits for host values. In 192.168.12.0/24, the usual network address is .0 and broadcast address .255; conventional host values are .1 through .254. Worked example: 192.168.12.48 and 192.168.12.90 share the first 24 bits; 192.168.13.90 does not. Special point-to-point and other prefix rules differ.\n\nApplied workshop — Subnets with a pencil. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which address is in 192.168.12.0/24?",
           [
             "192.168.12.230",
@@ -1513,7 +1513,7 @@
         ],
         [
           "Model a packet journey",
-          "A local device chooses a destination address and uses its routing table to determine whether traffic is local or must pass a gateway. TCP handles reliable ordered delivery for many applications, while DNS is a naming service, not an IP transport replacement. Worked example: a packet destined for an outside public address is ordinarily forwarded to the configured gateway. A failed route is not proof of malicious activity.",
+          "A local device chooses a destination address and uses its routing table to determine whether traffic is local or must pass a gateway. TCP handles reliable ordered delivery for many applications, while DNS is a naming service, not an IP transport replacement. Worked example: a packet destined for an outside public address is ordinarily forwarded to the configured gateway. A failed route is not proof of malicious activity.\n\nApplied workshop — Model a packet journey. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What commonly forwards traffic to another network?",
           [
             "Default gateway",
@@ -1525,7 +1525,7 @@
         ],
         [
           "Compare DNS, TCP and HTTP errors",
-          "Error messages help isolate the layer. A DNS lookup error means a name could not be resolved; a TCP connection refusal suggests the endpoint rejected a connection; an HTTP 404 means a web server responded but did not find the requested resource. Worked example: receiving HTTP 404 implies at least some connection and HTTP exchange succeeded.",
+          "Error messages help isolate the layer. A DNS lookup error means a name could not be resolved; a TCP connection refusal suggests the endpoint rejected a connection; an HTTP 404 means a web server responded but did not find the requested resource. Worked example: receiving HTTP 404 implies at least some connection and HTTP exchange succeeded.\n\nApplied workshop — Compare DNS, TCP and HTTP errors. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which observation establishes that an HTTP server answered?",
           [
             "HTTP 404 response",
@@ -1537,7 +1537,7 @@
         ],
         [
           "Plan safe network troubleshooting",
-          "Start by defining the user's symptom, expected behavior and the assets you are authorized to inspect. Compare one change at a time: Wi-Fi, assigned IP, local gateway, DNS and destination service. Avoid indiscriminate resets and unauthorized scans. A troubleshooting ticket should say which observations were collected and how a proposed fix will be verified.",
+          "Start by defining the user's symptom, expected behavior and the assets you are authorized to inspect. Compare one change at a time: Wi-Fi, assigned IP, local gateway, DNS and destination service. Avoid indiscriminate resets and unauthorized scans. A troubleshooting ticket should say which observations were collected and how a proposed fix will be verified.\n\nApplied workshop — Plan safe network troubleshooting. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "A user's website fails but other office machines work. What is a reasonable first approach?",
           [
             "Check the affected device systematically",
@@ -1549,7 +1549,7 @@
         ],
         [
           "Write a network diagnosis memo",
-          "A clear memo contains the symptom, timestamp, tests performed, observed result, plausible explanations, uncertainty, and recovery criteria. Worked example: valid DHCP address plus local gateway reachability plus failed DNS resolution supports investigating resolver configuration, but not claiming an intrusion. An executive summary should remain comprehensible to nontechnical staff.",
+          "A clear memo contains the symptom, timestamp, tests performed, observed result, plausible explanations, uncertainty, and recovery criteria. Worked example: valid DHCP address plus local gateway reachability plus failed DNS resolution supports investigating resolver configuration, but not claiming an intrusion. An executive summary should remain comprehensible to nontechnical staff.\n\nApplied workshop — Write a network diagnosis memo. Consider a technician troubleshooting a fictional /24 training network. First, identify addressing, routing and DNS observations before making changes. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What belongs in a diagnosis memo?",
           [
             "Evidence and a verification plan",
@@ -1566,7 +1566,7 @@
       "lessons": [
         [
           "Read a simple Python script",
-          "Python is a general-purpose programming language used for automation, analysis and many other tasks. In `count = 0`, the name count refers to an integer value. `print(count)` displays the value. A program executes statements in an order; a beginner should trace each assignment and output on paper before introducing real code execution.",
+          "Python is a general-purpose programming language used for automation, analysis and many other tasks. In `count = 0`, the name count refers to an integer value. `print(count)` displays the value. A program executes statements in an order; a beginner should trace each assignment and output on paper before introducing real code execution.\n\nApplied workshop — Read a simple Python script. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "What does print(count) output after count = 4?",
           [
             "4",
@@ -1578,7 +1578,7 @@
         ],
         [
           "Work with a mock event list",
-          "Consider synthetic outcomes: success, failed, failed, success. A list stores these values in order. A loop can inspect each entry and count failures. Pseudocode: start failures at zero; for each entry, if it equals failed, add one. Worked result: two failures. Never use this toy counter as definitive evidence of compromise.",
+          "Consider synthetic outcomes: success, failed, failed, success. A list stores these values in order. A loop can inspect each entry and count failures. Pseudocode: start failures at zero; for each entry, if it equals failed, add one. Worked result: two failures. Never use this toy counter as definitive evidence of compromise.\n\nApplied workshop — Work with a mock event list. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "How many failed entries occur in [success, failed, failed, success]?",
           [
             "2",
@@ -1590,7 +1590,7 @@
         ],
         [
           "Use decisions without mixing types",
-          "A comparison returns a boolean such as True or False. In Python, `5 == 5` is True while `5 == '5'` is False because the string differs from the integer. Indentation groups code that runs within a condition. Security software should validate input types before relying on comparisons.",
+          "A comparison returns a boolean such as True or False. In Python, `5 == 5` is True while `5 == '5'` is False because the string differs from the integer. Indentation groups code that runs within a condition. Security software should validate input types before relying on comparisons.\n\nApplied workshop — Use decisions without mixing types. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which expression is True in Python?",
           [
             "5 == 5",
@@ -1602,7 +1602,7 @@
         ],
         [
           "Make a reusable function",
-          "A function defines a named calculation. For example, `def percent(part, total): return 100 * part / total` calculates a percentage for nonzero total. A robust program must handle total equal to zero and reject invalid data. Worked example: 3 of 12 events is 25%, not 3%.",
+          "A function defines a named calculation. For example, `def percent(part, total): return 100 * part / total` calculates a percentage for nonzero total. A robust program must handle total equal to zero and reject invalid data. Worked example: 3 of 12 events is 25%, not 3%.\n\nApplied workshop — Make a reusable function. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Three events out of twelve represent what percentage?",
           [
             "25%",
@@ -1614,7 +1614,7 @@
         ],
         [
           "Recognize data sensitivity",
-          "A script can be technically correct while still violating privacy. Before analyzing real logs, verify authorization, retention rules and data minimization. Practice with invented records such as user A and user B. Avoid printing tokens, passwords or personal identifiers into console output.",
+          "A script can be technically correct while still violating privacy. Before analyzing real logs, verify authorization, retention rules and data minimization. Practice with invented records such as user A and user B. Avoid printing tokens, passwords or personal identifiers into console output.\n\nApplied workshop — Recognize data sensitivity. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "Which dataset is best for an introductory lab?",
           [
             "Invented login results without real identities",
@@ -1626,7 +1626,7 @@
         ],
         [
           "Validate results and limitations",
-          "A small program should be tested against ordinary inputs, boundary cases and malformed values. A counter of failed sign-ins does not identify motives or establish an incident. Worked example: an empty event list returns zero observed failures, but does not prove there were zero failures anywhere in the organization.",
+          "A small program should be tested against ordinary inputs, boundary cases and malformed values. A counter of failed sign-ins does not identify motives or establish an incident. Worked example: an empty event list returns zero observed failures, but does not prove there were zero failures anywhere in the organization.\n\nApplied workshop — Validate results and limitations. Consider a beginner reviewing a Python script that counts synthetic events. First, trace variables, input types, branches and outcomes, including empty data. Worked process: identify the expected legitimate behavior, write down a concrete observation from the supplied fictional scenario, name a plausible alternative explanation, and choose a control that can be verified without unapproved access. In your notes, separate facts, assumptions and follow-up questions. Explain the impact to a nontechnical stakeholder and state what evidence would change your recommendation. Self-check: can another student reproduce your reasoning from the documented scenario without obtaining private information?",
           "An empty log file proves which conclusion?",
           [
             "No failures were recorded in that file",
