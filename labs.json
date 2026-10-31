@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "disclaimer": "All scenarios are fictional. No commands run against devices or networks.",
   "labs": [
     {
@@ -496,6 +496,462 @@
           ],
           0,
           "Closure should be based on verification."
+        ]
+      ]
+    },
+    {
+      "title": "Subnet and DNS Reasoning",
+      "course": "Hands-On Network Reasoning Workshop",
+      "context": "An isolated classroom network uses 192.168.50.0/24. One fictional learner cannot open the training portal.",
+      "steps": [
+        [
+          "Which address shares the classroom /24?",
+          [
+            "192.168.50.71",
+            "192.168.51.71",
+            "10.0.50.71"
+          ],
+          0,
+          "The 24-bit prefix identifies 192.168.50 as the first three octets."
+        ],
+        [
+          "How many conventional usable hosts are in a /24?",
+          [
+            "254",
+            "256",
+            "24"
+          ],
+          0,
+          "256 total minus network and broadcast addresses in an ordinary /24."
+        ],
+        [
+          "The learner can reach the gateway but domain lookup fails. What should be checked?",
+          [
+            "Resolver configuration",
+            "Screen resolution",
+            "Local document formatting"
+          ],
+          0,
+          "Name resolution is a separate diagnostic layer."
+        ],
+        [
+          "An HTTP 404 is returned after navigating to a URL. What has happened?",
+          [
+            "An HTTP endpoint responded",
+            "DNS definitely failed",
+            "No connection was possible"
+          ],
+          0,
+          "404 is an HTTP response status."
+        ],
+        [
+          "Which evidence belongs in the support ticket?",
+          [
+            "Exact observed failures, IP settings and time",
+            "A coworker's password",
+            "A claim of an attack without indicators"
+          ],
+          0,
+          "Reproducible observations aid diagnosis."
+        ]
+      ]
+    },
+    {
+      "title": "Linux Files and Permissions",
+      "course": "Linux System Administration Lab Theory",
+      "context": "A synthetic Linux directory contains a financial report owned by a designated service account.",
+      "steps": [
+        [
+          "What does /home typically contain?",
+          [
+            "User home directories",
+            "Every internet router",
+            "TLS certificate authorities only"
+          ],
+          0,
+          "Common Linux conventions place user data under /home."
+        ],
+        [
+          "A file has mode 640. Which group permission is represented?",
+          [
+            "Read only",
+            "Write and execute",
+            "No permissions"
+          ],
+          0,
+          "The group digit 4 means read."
+        ],
+        [
+          "What is a prerequisite for examining real private files?",
+          [
+            "Authorization and a legitimate need",
+            "Knowledge of their filenames",
+            "A friend's suggestion"
+          ],
+          0,
+          "Access depends on permissions and scope."
+        ],
+        [
+          "A service has high CPU during backups. What is a reasonable first move?",
+          [
+            "Check timing and logs",
+            "Declare infection",
+            "Delete its configuration"
+          ],
+          0,
+          "Resource utilization alone is not malicious evidence."
+        ],
+        [
+          "How can a team demonstrate backups are recoverable?",
+          [
+            "Perform a controlled restore test",
+            "Trust the backup job success message only",
+            "Store all copies on one disk"
+          ],
+          0,
+          "Tested restoration verifies more than successful job execution."
+        ]
+      ]
+    },
+    {
+      "title": "Identity and Session Audit",
+      "course": "Enterprise Identity and Access Management",
+      "context": "A fictional enterprise connects the academy portal and payroll application to one identity provider.",
+      "steps": [
+        [
+          "What does successful authentication establish?",
+          [
+            "The caller proved identity to the provider",
+            "Access to every record",
+            "An administrator role in all systems"
+          ],
+          0,
+          "Authorization remains application specific."
+        ],
+        [
+          "A former contractor retains active sessions. What is the control gap?",
+          [
+            "Session and access revocation",
+            "Typography",
+            "Email display name"
+          ],
+          0,
+          "Deprovisioning includes active access."
+        ],
+        [
+          "A reporting service needs only one bucket. Appropriate permission?",
+          [
+            "Read that bucket only",
+            "Administrator of all cloud resources",
+            "Every employee password"
+          ],
+          0,
+          "Service identities should follow least privilege."
+        ],
+        [
+          "Which factor deserves additional protection during account recovery?",
+          [
+            "Recovery method and identity verification",
+            "Button placement",
+            "Course title"
+          ],
+          0,
+          "Recovery paths can bypass otherwise strong authentication."
+        ],
+        [
+          "What demonstrates a successful privilege review?",
+          [
+            "Documented effective permissions and owner approval",
+            "A role name alone",
+            "A screenshot of the login page"
+          ],
+          0,
+          "The actual access granted matters more than labels."
+        ]
+      ]
+    },
+    {
+      "title": "Web Authorization Decision Lab",
+      "course": "Web Application Security Fundamentals",
+      "context": "A synthetic learning API exposes /grades/learner-id and requires a signed-in student.",
+      "steps": [
+        [
+          "A student changes the displayed learner ID. Who protects the resource?",
+          [
+            "Trusted server authorization",
+            "CSS visibility",
+            "The browser's back button"
+          ],
+          0,
+          "Per-record checks belong on a trusted service."
+        ],
+        [
+          "Why use parameterized queries?",
+          [
+            "Separate data from query structure",
+            "Automatically grant permissions",
+            "Avoid backups"
+          ],
+          0,
+          "Parameters reduce injection risk."
+        ],
+        [
+          "A session ends in the browser. What else should happen when possible?",
+          [
+            "Invalidate the underlying session",
+            "Keep its token active forever",
+            "Publish the token"
+          ],
+          0,
+          "Effective sign-out includes revocation or expiration."
+        ],
+        [
+          "What should be logged about an access denial?",
+          [
+            "Time, account reference and denied operation",
+            "Password and secret token",
+            "Private grade contents"
+          ],
+          0,
+          "Keep useful audit metadata without leaking secrets."
+        ],
+        [
+          "After changing permissions, what constitutes validation?",
+          [
+            "Authorized tests of allowed and denied requests",
+            "Assuming the UI looks correct",
+            "A new button color"
+          ],
+          0,
+          "Test both access directions."
+        ]
+      ]
+    },
+    {
+      "title": "Cloud Recovery and Change Control",
+      "course": "Cloud Infrastructure Security",
+      "context": "A mock organization proposes an approved storage policy change before a quarter-end deadline.",
+      "steps": [
+        [
+          "A four-hour RPO expresses what?",
+          [
+            "Tolerable data loss measured in time",
+            "Recovery cost exactly $4",
+            "An encryption key length"
+          ],
+          0,
+          "RPO bounds acceptable loss of recent changes."
+        ],
+        [
+          "A one-hour RTO describes what?",
+          [
+            "Target recovery duration",
+            "The date of the last patch",
+            "An alert threshold"
+          ],
+          0,
+          "RTO concerns how quickly a service should be restored."
+        ],
+        [
+          "What should happen before a sensitive access policy change?",
+          [
+            "Scope, approval, testing and rollback preparation",
+            "Post administrator credentials",
+            "Remove monitoring"
+          ],
+          0,
+          "Controlled changes prevent unintended outages."
+        ],
+        [
+          "Who configures permissions on the customer's database?",
+          [
+            "The application/cloud account owner",
+            "Nobody",
+            "The browser's CSS engine"
+          ],
+          0,
+          "Shared responsibility includes customer identity and data controls."
+        ],
+        [
+          "Which review helps verify a fix?",
+          [
+            "Read effective policy and test access with synthetic accounts",
+            "Assume that a save button guarantees safety",
+            "Disable logging"
+          ],
+          0,
+          "Configuration and behavior must both be evaluated."
+        ]
+      ]
+    },
+    {
+      "title": "Incident Response Timeline",
+      "course": "Security Operations and Incident Response",
+      "context": "Mock data: 10:00 portal errors increase; 10:03 deployment completes; 10:08 rollback begins; 10:12 errors decrease. The root cause is unconfirmed.",
+      "steps": [
+        [
+          "What pattern is directly observable?",
+          [
+            "Errors increased before a rollback and decreased afterward",
+            "An attacker entered at 10:03",
+            "Customer data was stolen"
+          ],
+          0,
+          "Temporal association does not establish attribution."
+        ],
+        [
+          "What additional evidence is needed?",
+          [
+            "Change records and service diagnostics",
+            "A logo",
+            "Employee birthdays"
+          ],
+          0,
+          "Correlation should be tested against technical context."
+        ],
+        [
+          "What should a status update communicate?",
+          [
+            "Impact, actions, and remaining uncertainty",
+            "An unverified attacker identity",
+            "Only internal acronyms"
+          ],
+          0,
+          "Stakeholders need accurate operational information."
+        ],
+        [
+          "Which event belongs in the incident timeline?",
+          [
+            "10:08 rollback began",
+            "A hypothetical event with no timestamp",
+            "An unrelated office celebration"
+          ],
+          0,
+          "Time-anchored events make the timeline auditable."
+        ],
+        [
+          "What validates restoration?",
+          [
+            "Service checks and user-path verification",
+            "Assuming fewer errors guarantees every feature works",
+            "Deleting the logs"
+          ],
+          0,
+          "Recovery requires explicit functionality checks."
+        ]
+      ]
+    },
+    {
+      "title": "Defensive Cryptography Reasoning",
+      "course": "Introduction to Defensive Cryptography",
+      "context": "A fictional software vendor distributes a signed application and publishes an authenticated file digest.",
+      "steps": [
+        [
+          "What does a trusted digest comparison help assess?",
+          [
+            "File integrity",
+            "Whether software is harmless in all contexts",
+            "Whether an account is an administrator"
+          ],
+          0,
+          "A matching digest helps detect changes relative to a trusted reference."
+        ],
+        [
+          "What does a digital signature primarily support?",
+          [
+            "Origin and integrity under trusted key assumptions",
+            "Confidentiality by itself",
+            "Unlimited availability"
+          ],
+          0,
+          "Signatures authenticate signing keys and detect alteration."
+        ],
+        [
+          "Which key should not be disclosed?",
+          [
+            "Private signing key",
+            "Public verification key",
+            "Public certificate name"
+          ],
+          0,
+          "Private keys must be protected from unauthorized use."
+        ],
+        [
+          "A TLS certificate warning appears at a login page. Best action?",
+          [
+            "Stop and independently verify the site",
+            "Ignore the warning",
+            "Send your password to support"
+          ],
+          0,
+          "Server authentication may be unreliable when validation fails."
+        ],
+        [
+          "A private service key is found in public source. First?",
+          [
+            "Revoke or rotate it and investigate access",
+            "Only remove one visible copy",
+            "Change its variable name"
+          ],
+          0,
+          "Public exposure may persist after deleting a file."
+        ]
+      ]
+    },
+    {
+      "title": "Risk Register Decision Workshop",
+      "course": "Security Assessment and Reporting Workshop",
+      "context": "A fictional retailer has one internet-exposed critical service and a separate, offline training device. Both need patching.",
+      "steps": [
+        [
+          "Which typically deserves first risk review?",
+          [
+            "Critical exposed service",
+            "Offline disposable lab",
+            "Whichever has the longer name"
+          ],
+          0,
+          "Exposure and business impact matter."
+        ],
+        [
+          "What is a risk register entry's useful minimum?",
+          [
+            "Asset, concern, owner, treatment and review date",
+            "Unrelated personal data",
+            "A dramatic label alone"
+          ],
+          0,
+          "Ownership and treatment allow follow-through."
+        ],
+        [
+          "What counts as evidence of remediation?",
+          [
+            "An authorized retest and recorded observation",
+            "A closed ticket without verification",
+            "A new logo"
+          ],
+          0,
+          "Verification demonstrates the control's effect."
+        ],
+        [
+          "A test target is outside written scope. Action?",
+          [
+            "Do not test without updated permission",
+            "Test quietly",
+            "Ask a stranger to test"
+          ],
+          0,
+          "Authorization is explicit."
+        ],
+        [
+          "Which report is board-ready?",
+          [
+            "Impact, priorities, options, uncertainty and recommended actions",
+            "Raw technical data alone",
+            "Claims of guaranteed safety"
+          ],
+          0,
+          "Decisions require summarized tradeoffs and factual boundaries."
         ]
       ]
     }
