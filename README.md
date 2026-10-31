@@ -97,4 +97,8 @@ Sixty-six existing lessons across eleven foundation, security, networking and pr
 
 
 ### Windows, Linux and networking independent practice
-Four new written portfolio workbooks (Windows baseline, Windows event logs, small-network troubleshooting and Linux permissions) provide 90–150 minute study tasks, evidence-based deliverables and 100-point self-review rubrics. There are now eight written assignments. A new eight-question integrated mastery exam brings total examinations to eight and exam questions to 52. Workbook drafts are saved locally on the browser, and written submissions are not automatically graded; hands-on computer access is not required for these synthetic cases.
+Four new written portfolio workbooks (Windows baseline, Windows event logs, small-network troubleshooting and Linux permissions) provide 90–150 minute study tasks, evidence-based deliverables and 100-point self-review rubrics. There are now twelve written assignments. A new eight-question integrated mastery exam brings total examinations to eight and exam questions to 52. Workbook drafts are saved locally on the browser, and written submissions are not automatically graded; hands-on computer access is not required for these synthetic cases.
+
+
+### Weekend capstones and separate portfolio progress
+Four weekend-length fictional capstone assignments add practical written work in security operations, Windows/Linux access governance, web/cloud boundaries, and authorized engagement planning. Total portfolio assignments: 12. Students can now mark a saved draft as self-reviewed against its rubric, and the Progress screen separately counts nonempty drafts and self-reviews. These states are device-local, not independently graded or part of an enforced graduation requirement. Existing draft keys and lesson progress keys are unchanged.
