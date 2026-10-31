@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -1643,123 +1643,123 @@
       "lessons": [
         [
           "Identity lifecycle and onboarding",
-          "Identity lifecycle and onboarding is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to identity lifecycle and onboarding. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate identity lifecycle and onboarding. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "An employee joins the finance department. HR establishes employment status, an identity administrator provisions a unique account, and the finance owner approves access to only the appropriate reporting tools. Record each approval and review it at role changes. Account creation and permission approval are separate controls. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A new finance analyst needs read-only quarterly reports. The owner approves that role, not administrator rights. Which approach best supports a responsible evaluation of identity lifecycle and onboarding?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For identity lifecycle and onboarding, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A new finance analyst needs read-only quarterly reports. The owner approves that role, not administrator rights. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Provisioning least-privilege roles",
-          "Provisioning least-privilege roles is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to provisioning least-privilege roles. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate provisioning least-privilege roles. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A role is a collection of permissions aligned to a real task. Compare an inventory clerk who may update stock counts with a finance manager who approves reimbursements. Combining both permissions without need increases exposure and may undermine separation of duties. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A staff member needs to enter invoices but must not approve their own payments. Create separate entry and approval permissions. Which approach best supports a responsible evaluation of provisioning least-privilege roles?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For provisioning least-privilege roles, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A staff member needs to enter invoices but must not approve their own payments. Create separate entry and approval permissions. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "MFA deployment and recovery",
-          "MFA deployment and recovery is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to mfa deployment and recovery. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate mfa deployment and recovery. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "MFA asks for another independent factor beyond a password. Phishing-resistant options such as passkeys or hardware security keys are preferable for sensitive accounts where feasible. Recovery is also a security boundary: protect backup codes and require careful identity verification. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A user loses a phone. The support team verifies identity through an approved recovery workflow rather than disabling MFA based on an unsolicited email. Which approach best supports a responsible evaluation of mfa deployment and recovery?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For mfa deployment and recovery, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A user loses a phone. The support team verifies identity through an approved recovery workflow rather than disabling MFA based on an unsolicited email. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Privileged access reviews",
-          "Privileged access reviews is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to privileged access reviews. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate privileged access reviews. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Privileged accounts can change access, settings and sensitive data. Document their owners and purpose, use individual identities, review privileges periodically, and keep emergency privileges time-limited. An audit asks whether each grant still serves a business task. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An administrator changes teams but keeps database-wide privileges. The new owner must review and remove unneeded grants. Which approach best supports a responsible evaluation of privileged access reviews?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For privileged access reviews, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An administrator changes teams but keeps database-wide privileges. The new owner must review and remove unneeded grants. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Service identities and secrets",
-          "Service identities and secrets is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to service identities and secrets. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate service identities and secrets. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Software workloads also use identities. A backup process may need permission to write only to a dedicated storage location, not to administer the entire cloud account. Keep private keys out of code repositories, restrict secret readers and rotate exposed credentials. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A public web page contains a privileged service key. Revoke or rotate the key and redesign the request through a trusted backend. Which approach best supports a responsible evaluation of service identities and secrets?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For service identities and secrets, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A public web page contains a privileged service key. Revoke or rotate the key and redesign the request through a trusted backend. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Federation and single sign-on",
-          "Federation and single sign-on is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to federation and single sign-on. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate federation and single sign-on. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Single sign-on lets multiple applications rely on a common identity provider. Authentication is centralized, but each application must still determine which records a user may access. Federation establishes trust across systems using defined protocols and configuration. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Signing into two academies through one identity provider should not grant access to every other student's grades. Which approach best supports a responsible evaluation of federation and single sign-on?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For federation and single sign-on, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Signing into two academies through one identity provider should not grant access to every other student's grades. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Identity audit evidence",
-          "Identity audit evidence is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to identity audit evidence. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate identity audit evidence. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "An audit record should establish who requested access, who approved it, the granted role, when it changed and whether reviews occurred. Logs should avoid passwords and session secrets. Review the effective permissions, not just a role's friendly name. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An approval ticket says 'read only,' but the assigned group allows editing. The actual group permission is the important finding. Which approach best supports a responsible evaluation of identity audit evidence?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For identity audit evidence, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An approval ticket says 'read only,' but the assigned group allows editing. The actual group permission is the important finding. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Departures and access revocation",
-          "Departures and access revocation is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to departures and access revocation. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate departures and access revocation. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Offboarding coordinates HR, managers and system owners to disable logins, revoke active sessions, recover devices and transfer business data appropriately. Shared secrets may need rotation if a departing employee knew them. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A departed contractor's active token remains usable despite a disabled password. Include session and token revocation in the response. Which approach best supports a responsible evaluation of departures and access revocation?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For departures and access revocation, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A departed contractor's active token remains usable despite a disabled password. Include session and token revocation in the response. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Role-based versus attribute-based rules",
-          "Role-based versus attribute-based rules is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to role-based versus attribute-based rules. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate role-based versus attribute-based rules. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "RBAC grants access through roles such as analyst or manager. ABAC evaluates attributes such as department, resource classification and context. Both require server-side enforcement and testing of denied requests. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A hospital rule permits clinicians to see only patients within an approved care relationship, not every patient by job title alone. Which approach best supports a responsible evaluation of role-based versus attribute-based rules?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For role-based versus attribute-based rules, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A hospital rule permits clinicians to see only patients within an approved care relationship, not every patient by job title alone. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Emergency access governance",
-          "Emergency access governance is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to emergency access governance. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate emergency access governance. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Break-glass accounts are exceptional recovery mechanisms, not shortcuts for daily work. Protect them separately, record activation, notify owners and review use afterward. Ensure recovery remains possible without leaving broad permissions permanently active. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: After an outage, review emergency access logs and revoke elevated grants rather than leaving them open. Which approach best supports a responsible evaluation of emergency access governance?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For emergency access governance, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: After an outage, review emergency access logs and revoke elevated grants rather than leaving them open. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ]
       ]
     },
@@ -1768,123 +1768,123 @@
       "lessons": [
         [
           "Linux directory hierarchy",
-          "Linux directory hierarchy is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to linux directory hierarchy. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate linux directory hierarchy. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Linux organizes files under a root path /. /home commonly contains user data, /etc configuration and /var changing service data. Exact conventions vary by system. Distinguish paths and ownership before reading or changing files. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A service configuration is expected under /etc while a student's notes belong under /home/student. Which approach best supports a responsible evaluation of linux directory hierarchy?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For linux directory hierarchy, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A service configuration is expected under /etc while a student's notes belong under /home/student. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Users and groups review",
-          "Users and groups review is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to users and groups review. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate users and groups review. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Linux accounts identify users and services; groups make it easier to assign related file privileges. A group membership grant may unintentionally expand access. Review the owner, group and requested task using a simulated file listing. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A trainee belongs to a report-editors group but should only read reports. The group assignment needs adjustment. Which approach best supports a responsible evaluation of users and groups review?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For users and groups review, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A trainee belongs to a report-editors group but should only read reports. The group assignment needs adjustment. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Permission bits in context",
-          "Permission bits in context is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to permission bits in context. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate permission bits in context. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Read, write and execute permissions have different meanings for files and directories. On a directory, execute generally permits traversal; write can allow changes to its entries subject to other controls. Example: mode 640 grants owner read/write, group read, others none. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: For a confidential report that finance may read but not edit, a suitable example grants group read without group write. Which approach best supports a responsible evaluation of permission bits in context?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For permission bits in context, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: For a confidential report that finance may read but not edit, a suitable example grants group read without group write. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Processes and system resource health",
-          "Processes and system resource health is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to processes and system resource health. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate processes and system resource health. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A process is a running program. CPU, memory and disk activity can indicate performance pressure but are not proof of malware. Correlate process identity, expected maintenance and logs before choosing a response. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A backup service briefly uses high CPU every night. Compare this with its approved schedule before escalating. Which approach best supports a responsible evaluation of processes and system resource health?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For processes and system resource health, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A backup service briefly uses high CPU every night. Compare this with its approved schedule before escalating. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Services and startup behavior",
-          "Services and startup behavior is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to services and startup behavior. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate services and startup behavior. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Background services may begin at boot and restart after failures. Administrators document service dependencies, health checks and restart authority. Disabling an unfamiliar service can disrupt production applications. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A web service depends on a database service. Check the database's health before repeatedly restarting the web process. Which approach best supports a responsible evaluation of services and startup behavior?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For services and startup behavior, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A web service depends on a database service. Check the database's health before repeatedly restarting the web process. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Package updates and patch planning",
-          "Package updates and patch planning is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to package updates and patch planning. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate package updates and patch planning. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A package manager tracks installed software and updates. Before an authorized upgrade, identify dependency impact, available backups, a test environment and rollback conditions. Verify installed versions after the change. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A security update fixes a known issue but may affect an essential app. Test in staging and confirm service health after deployment. Which approach best supports a responsible evaluation of package updates and patch planning?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For package updates and patch planning, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A security update fixes a known issue but may affect an essential app. Test in staging and confirm service health after deployment. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "System logs and journal concepts",
-          "System logs and journal concepts is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to system logs and journal concepts. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate system logs and journal concepts. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Linux services can generate structured logs that record events and errors. Systemd-based systems commonly provide journal tooling; other systems use different logging methods. Time zone normalization and proper permissions matter when viewing records. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An authentication event at 14:00 UTC and another at 09:00 CDT may describe the same instant depending on date and offset. Which approach best supports a responsible evaluation of system logs and journal concepts?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For system logs and journal concepts, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An authentication event at 14:00 UTC and another at 09:00 CDT may describe the same instant depending on date and offset. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Storage and backup verification",
-          "Storage and backup verification is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to storage and backup verification. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate storage and backup verification. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Disk space and inode exhaustion can both disrupt services. Backup policies define what is captured, retention, access and restore testing. A copy on the same failing disk is not sufficient protection. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A server has regular backup jobs marked success, but no restore test. Schedule a controlled restore to verify recoverability. Which approach best supports a responsible evaluation of storage and backup verification?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For storage and backup verification, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A server has regular backup jobs marked success, but no restore test. Schedule a controlled restore to verify recoverability. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Scheduled tasks and automation safety",
-          "Scheduled tasks and automation safety is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to scheduled tasks and automation safety. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate scheduled tasks and automation safety. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cron and other schedulers run jobs unattended. A script executing with broad privileges poses risk if its inputs or file permissions are unsafe. Review task ownership, schedule, logs and scope before changes. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A maintenance job needs to clean a temporary lab directory. It should not run as administrator without a demonstrated need. Which approach best supports a responsible evaluation of scheduled tasks and automation safety?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For scheduled tasks and automation safety, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A maintenance job needs to clean a temporary lab directory. It should not run as administrator without a demonstrated need. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Hardening and configuration baselines",
-          "Hardening and configuration baselines is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to hardening and configuration baselines. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate hardening and configuration baselines. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A baseline describes approved packages, services, accounts and settings. Hardening reduces unnecessary exposure while preserving operational requirements. After any change, compare the system to its baseline and test required functionality. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Disabling an unused service helps reduce exposure, but disabling a required database service may cause an outage. Which approach best supports a responsible evaluation of hardening and configuration baselines?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For hardening and configuration baselines, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Disabling an unused service helps reduce exposure, but disabling a required database service may cause an outage. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ]
       ]
     },
@@ -1893,123 +1893,123 @@
       "lessons": [
         [
           "Browser and server trust boundaries",
-          "Browser and server trust boundaries is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to browser and server trust boundaries. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate browser and server trust boundaries. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A browser is controlled by its user and its state can be modified. A server must independently authorize requests for private records. Model where grade data moves and which component is trusted to make decisions. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Hiding a teacher-only button cannot replace authorization checks on the grades API. Which approach best supports a responsible evaluation of browser and server trust boundaries?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For browser and server trust boundaries, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Hiding a teacher-only button cannot replace authorization checks on the grades API. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Identity versus authorization",
-          "Identity versus authorization is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to identity versus authorization. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate identity versus authorization. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Authentication confirms who is making a request; authorization decides whether that identity may perform the requested action. Evaluate permissions for the specific operation and resource. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A signed-in student asks for another student's private assignment. The API must reject the request unless explicitly permitted. Which approach best supports a responsible evaluation of identity versus authorization?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For identity versus authorization, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A signed-in student asks for another student's private assignment. The API must reject the request unless explicitly permitted. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Secure session lifecycle",
-          "Secure session lifecycle is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to secure session lifecycle. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate secure session lifecycle. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Sessions associate requests with a signed-in identity. Protect tokens from exposure, manage expiration and revocation, and invalidate sessions when appropriate at sign-out. Session handling on shared devices deserves special care. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Signing out should invalidate access rather than merely hiding the account menu. Which approach best supports a responsible evaluation of secure session lifecycle?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For secure session lifecycle, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Signing out should invalidate access rather than merely hiding the account menu. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "User input validation",
-          "User input validation is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to user input validation. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate user input validation. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Validation checks incoming data's expected type, length, format and business meaning. A numerical grade should not accept arbitrary text, and a report query should reject invalid identifiers before processing. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A grades endpoint accepts a course ID. Check that it is well-formed and that the caller may access that course. Which approach best supports a responsible evaluation of user input validation?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For user input validation, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A grades endpoint accepts a course ID. Check that it is well-formed and that the caller may access that course. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Contextual output encoding",
-          "Contextual output encoding is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to contextual output encoding. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate contextual output encoding. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "When displaying user-supplied text, encode it for the context where it appears, such as HTML text or attributes. The same escaping routine is not correct for all contexts. Prefer framework-safe rendering APIs. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A comment containing angle brackets should display as text instead of being treated as page markup. Which approach best supports a responsible evaluation of contextual output encoding?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For contextual output encoding, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A comment containing angle brackets should display as text instead of being treated as page markup. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Parameterized database access",
-          "Parameterized database access is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to parameterized database access. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate parameterized database access. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Applications should pass user-provided values as parameters rather than concatenating them into query syntax. Parameterization separates data from executable query structure; authorization and sensible database privileges remain necessary. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A student search field should pass its text as a database parameter, not append it directly into a SQL command. Which approach best supports a responsible evaluation of parameterized database access?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For parameterized database access, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A student search field should pass its text as a database parameter, not append it directly into a SQL command. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Cross-site request protections",
-          "Cross-site request protections is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to cross-site request protections. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate cross-site request protections. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A browser may automatically include certain credentials in requests. Sensitive state-changing operations require defenses suited to the architecture, such as anti-CSRF tokens, origin checks and cookie attributes. Choose controls based on the actual authentication model. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A web app using ambient session cookies should evaluate cross-origin state-changing requests and appropriate CSRF defenses. Which approach best supports a responsible evaluation of cross-site request protections?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For cross-site request protections, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A web app using ambient session cookies should evaluate cross-origin state-changing requests and appropriate CSRF defenses. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Secure file upload design",
-          "Secure file upload design is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to secure file upload design. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate secure file upload design. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Uploaded files are untrusted. Limit size and acceptable types, verify content appropriately, store uploads outside executable paths and enforce access permissions. Scanning and safe preview mechanisms may be needed for higher-risk file types. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A course accepts PDF assignments. Store them as data, enforce ownership and avoid executing anything the filename claims. Which approach best supports a responsible evaluation of secure file upload design?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For secure file upload design, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A course accepts PDF assignments. Store them as data, enforce ownership and avoid executing anything the filename claims. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "API access control checks",
-          "API access control checks is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to api access control checks. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate api access control checks. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "An API must authenticate callers and authorize every relevant record or operation. Rate limiting can reduce abuse but is not a substitute for authorization. Test denial cases in a synthetic environment. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Changing /grades/101 to /grades/102 in a mock request must not reveal another student's results. Which approach best supports a responsible evaluation of api access control checks?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For api access control checks, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Changing /grades/101 to /grades/102 in a mock request must not reveal another student's results. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Security headers and deployment review",
-          "Security headers and deployment review is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to security headers and deployment review. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate security headers and deployment review. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Headers can reduce certain browser risks, but they do not replace application design. Review transport security, content policy, secure cookie settings and release configuration against the app's actual features. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A deployment adds a protective header; the team still needs to test the underlying access rules. Which approach best supports a responsible evaluation of security headers and deployment review?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For security headers and deployment review, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A deployment adds a protective header; the team still needs to test the underlying access rules. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ]
       ]
     },
@@ -2018,123 +2018,123 @@
       "lessons": [
         [
           "Cloud service models",
-          "Cloud service models is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to cloud service models. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate cloud service models. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Infrastructure services expose more operating-system responsibility to customers, while managed platforms and software services shift some responsibilities to providers. The precise security boundary depends on the contract and service. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A managed database provider patches its host, but the customer still needs appropriate user permissions. Which approach best supports a responsible evaluation of cloud service models?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For cloud service models, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A managed database provider patches its host, but the customer still needs appropriate user permissions. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Shared responsibility maps",
-          "Shared responsibility maps is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to shared responsibility maps. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate shared responsibility maps. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Write down who owns identity, data classification, backups, logging and infrastructure maintenance for each cloud service. Responsibility must be explicit where systems depend on vendors. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A vendor encrypts disks, but the application owner still configures who may read payroll records. Which approach best supports a responsible evaluation of shared responsibility maps?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For shared responsibility maps, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A vendor encrypts disks, but the application owner still configures who may read payroll records. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Identity policies and resource grants",
-          "Identity policies and resource grants is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to identity policies and resource grants. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate identity policies and resource grants. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cloud permissions govern which identities can perform actions on resources. Prefer narrow roles and scoped resource policies; periodically review exceptions and emergency grants. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A report generator needs read access to one bucket, not administrator rights across the subscription. Which approach best supports a responsible evaluation of identity policies and resource grants?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For identity policies and resource grants, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A report generator needs read access to one bucket, not administrator rights across the subscription. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Storage data classification",
-          "Storage data classification is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to storage data classification. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate storage data classification. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Separate public marketing files from confidential submissions and finance records. Classification guides retention, access policies, encryption and incident response. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Public training images may be readable by anyone, but individual student grades must be private. Which approach best supports a responsible evaluation of storage data classification?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For storage data classification, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Public training images may be readable by anyone, but individual student grades must be private. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Network zone boundaries",
-          "Network zone boundaries is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to network zone boundaries. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate network zone boundaries. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cloud networks can segment public application interfaces, internal services and databases. Network controls reduce reachability, but application authorization is still required. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A database should generally not be directly exposed publicly merely because a web app needs to query it. Which approach best supports a responsible evaluation of network zone boundaries?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For network zone boundaries, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A database should generally not be directly exposed publicly merely because a web app needs to query it. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Secrets and key services",
-          "Secrets and key services is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to secrets and key services. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate secrets and key services. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cloud secret managers can control privileged key storage, retrieval and rotation. Avoid publishing private credentials in browser code or logs. A public client identifier is not equivalent to an admin secret. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An exposed administrator token requires revocation and review, not merely hiding it in a different file. Which approach best supports a responsible evaluation of secrets and key services?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For secrets and key services, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An exposed administrator token requires revocation and review, not merely hiding it in a different file. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Central logging and audit trails",
-          "Central logging and audit trails is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to central logging and audit trails. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate central logging and audit trails. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Consolidated audit logs help correlate administrative changes and access events. Protect logs from modification, limit retention appropriately and avoid leaking secret values. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: The team can relate a permission change to an outage by comparing timestamps across approved audit streams. Which approach best supports a responsible evaluation of central logging and audit trails?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For central logging and audit trails, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: The team can relate a permission change to an outage by comparing timestamps across approved audit streams. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Backup and recovery objectives",
-          "Backup and recovery objectives is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to backup and recovery objectives. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate backup and recovery objectives. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "RPO describes acceptable data loss in time; RTO describes desired recovery time. Measure both against tested restoration capability and dependencies. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A four-hour RPO can imply potentially losing up to four hours of recent updates in the specified failure scenario. Which approach best supports a responsible evaluation of backup and recovery objectives?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For backup and recovery objectives, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A four-hour RPO can imply potentially losing up to four hours of recent updates in the specified failure scenario. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Infrastructure change approval",
-          "Infrastructure change approval is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to infrastructure change approval. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate infrastructure change approval. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cloud configuration updates benefit from peer review, staging, restricted credentials and rollback procedures. Version-controlled infrastructure can improve repeatability but still requires handling sensitive values safely. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A network rule change should name affected services, expected behavior and how to reverse it. Which approach best supports a responsible evaluation of infrastructure change approval?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For infrastructure change approval, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A network rule change should name affected services, expected behavior and how to reverse it. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Cloud incident communication",
-          "Cloud incident communication is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to cloud incident communication. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate cloud incident communication. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Cloud incidents require clear coordination among the service owner, provider and affected business teams. State confirmed impact, uncertainties, mitigation and next milestones without inventing causes. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A storage outage affects course submissions. Leadership receives verified service impact and recovery status, not unsupported attacker claims. Which approach best supports a responsible evaluation of cloud incident communication?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For cloud incident communication, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A storage outage affects course submissions. Leadership receives verified service impact and recovery status, not unsupported attacker claims. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ]
       ]
     },
@@ -2143,123 +2143,123 @@
       "lessons": [
         [
           "Defining authorized testing scope",
-          "Defining authorized testing scope is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to defining authorized testing scope. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate defining authorized testing scope. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Document targets, activities, timing, data rules, stopping conditions and contacts before an assessment. A related company domain is not automatically in scope. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A contract permits testing a demo host only; do not test the organization's production portal. Which approach best supports a responsible evaluation of defining authorized testing scope?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For defining authorized testing scope, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A contract permits testing a demo host only; do not test the organization's production portal. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Evidence requirements and limitations",
-          "Evidence requirements and limitations is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to evidence requirements and limitations. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate evidence requirements and limitations. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A finding should identify approved observations, the applicable control, impact, uncertainty and verification method. Never manufacture proof. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A simulated authorization denial shows expected behavior within the mock test, not universal security in production. Which approach best supports a responsible evaluation of evidence requirements and limitations?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For evidence requirements and limitations, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A simulated authorization denial shows expected behavior within the mock test, not universal security in production. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Building a target inventory from supplied diagrams",
-          "Building a target inventory from supplied diagrams is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to building a target inventory from supplied diagrams. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate building a target inventory from supplied diagrams. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Use an authorized diagram to identify assets, owners, data flows and trust boundaries. Confirm unknowns with the owner before intrusive discovery. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A diagram shows browser → API → database; identify the API boundary before reviewing record access. Which approach best supports a responsible evaluation of building a target inventory from supplied diagrams?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For building a target inventory from supplied diagrams, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A diagram shows browser → API → database; identify the API boundary before reviewing record access. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Threat model development",
-          "Threat model development is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to threat model development. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate threat model development. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "State assets, entry points, threats, existing controls and plausible consequences. Compare alternative failure explanations and avoid attributing motive without evidence. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An accessible service is an exposure to assess, not necessarily evidence of compromise. Which approach best supports a responsible evaluation of threat model development?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For threat model development, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An accessible service is an exposure to assess, not necessarily evidence of compromise. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Control validation plans",
-          "Control validation plans is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to control validation plans. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate control validation plans. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Define expected security behavior, safe test data and an explicit pass/fail rule. Include operational checks so protection changes do not break legitimate work. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A mock student should be denied other students' grades while retaining access to their own. Which approach best supports a responsible evaluation of control validation plans?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For control validation plans, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A mock student should be denied other students' grades while retaining access to their own. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Risk ranking in business context",
-          "Risk ranking in business context is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to risk ranking in business context. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate risk ranking in business context. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Compare likelihood, impact, exposure, confidence and available resources. A severity rating alone is not the same as business priority. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A sensitive exposed database receives greater urgency than an unused offline demo with the same nominal severity. Which approach best supports a responsible evaluation of risk ranking in business context?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For risk ranking in business context, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A sensitive exposed database receives greater urgency than an unused offline demo with the same nominal severity. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Writing reproducible findings",
-          "Writing reproducible findings is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to writing reproducible findings. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate writing reproducible findings. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Include affected scope, observed condition, steps permitted under authorization, evidence, business impact and recommended fix. Separate observation from interpretation. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: Report a specific excessive role grant and its approved evidence, not simply 'the cloud is hacked'. Which approach best supports a responsible evaluation of writing reproducible findings?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For writing reproducible findings, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: Report a specific excessive role grant and its approved evidence, not simply 'the cloud is hacked'. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Remediation recommendations",
-          "Remediation recommendations is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to remediation recommendations. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate remediation recommendations. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Recommend actions that are testable and proportionate, such as limiting a role, patching a component or segmenting traffic. Name an owner and timeline. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: For a stale contractor account, specify deactivation, session revocation and access review. Which approach best supports a responsible evaluation of remediation recommendations?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For remediation recommendations, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: For a stale contractor account, specify deactivation, session revocation and access review. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Retest and closure criteria",
-          "Retest and closure criteria is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to retest and closure criteria. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate retest and closure criteria. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "A remediation retest should verify the originally observed issue and relevant normal functionality. Record results and residual risks. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: An updated access policy requires a controlled effective-permissions check before closure. Which approach best supports a responsible evaluation of retest and closure criteria?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For retest and closure criteria, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: An updated access policy requires a controlled effective-permissions check before closure. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ],
         [
           "Executive reporting and presentation",
-          "Executive reporting and presentation is a foundational professional cybersecurity task. Begin by identifying the business asset, legitimate users, approved responsibilities and information that must remain protected. In a fictional company, the analyst first documents the current configuration or workflow, then compares it with an explicitly approved requirement. A deviation is evidence of a potential weakness, not automatic evidence of an intrusion. Worked approach: (1) state the requirement; (2) identify the observation or supplied lab record; (3) explain which confidentiality, integrity or availability objective is affected; (4) propose a proportionate control; (5) specify how an authorized reviewer could verify the result. For this lesson, apply the method specifically to executive reporting and presentation. Avoid collecting real credentials, probing public systems or changing production settings. When facts are missing, record the uncertainty and escalate to an authorized owner.",
-          "A fictional multinational firm asks you to evaluate executive reporting and presentation. The training packet has only a policy statement and a short configuration summary. Which first step demonstrates sound security practice?",
+          "Decision makers need prioritized exposure, options, cost and operational tradeoffs, not an unexplained dump of logs. Communicate uncertainty clearly. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Worked scenario: A board memo compares two controls and identifies what evidence would justify the investment. Which approach best supports a responsible evaluation of executive reporting and presentation?",
           [
-            "Document the approved objective, supplied evidence and missing facts",
-            "Declare a successful cyberattack without additional evidence",
-            "Change unrelated production settings immediately"
+            "Use the specified observations and verify the relevant control",
+            "Assume an unauthorized intrusion occurred without evidence",
+            "Change unrelated production systems without approval"
           ],
           0,
-          "Start with authorization and evidence. For executive reporting and presentation, distinguish observed facts from assumptions, then propose a testable control."
+          "Correct approach: A board memo compares two controls and identifies what evidence would justify the investment. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
         ]
       ]
     }
