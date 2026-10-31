@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "simulations": [
     {
       "title": "Investigate a training portal outage",
@@ -238,6 +238,442 @@
         "Evidence limitations noted",
         "Correct backend control",
         "Positive and negative retests"
+      ]
+    },
+    {
+      "title": "USB Peripheral Investigation",
+      "context": "A synthetic workstation audit shows two newly attached USB classes during a training session.",
+      "evidence": [
+        "14:02 USB 1209:0001 class=HID keyboard",
+        "14:03 USB 1209:0002 class=network adapter",
+        "14:04 user reports unexpected typing; no payload contents captured",
+        "Policy requires approved USB inventory; device owner unknown"
+      ],
+      "steps": [
+        [
+          "Which initial analysis is appropriate?",
+          [
+            "I",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "d"
+        ],
+        [
+          "What action respects the authorized lab scope?",
+          [
+            "P",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          "How should evidence be handled?",
+          [
+            "D",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          "Which validation or recommendation is defensible?",
+          [
+            "C",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ],
+        [
+          null,
+          [
+            "U",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "n"
+        ],
+        [
+          null,
+          [
+            "C",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "M",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "i"
+        ],
+        [
+          null,
+          [
+            "R",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "T",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ]
+      ],
+      "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
+      "rubric": [
+        "Accurate technical interpretation",
+        "Explicit authorization boundaries",
+        "Clear separation of evidence and hypothesis",
+        "Testable remediation or verification plan"
+      ]
+    },
+    {
+      "title": "RF Spectrum Analysis Tabletop",
+      "context": "A fictional SDR training display has instructor-generated frequencies and power readings. No radio hardware is operated.",
+      "evidence": [
+        "Synthetic trace A: 433.85 MHz -75 dBm",
+        "Synthetic trace B: 433.90 MHz -50 dBm",
+        "Synthetic trace C: 433.95 MHz -77 dBm",
+        "Transmit capability disabled in simulation"
+      ],
+      "steps": [
+        [
+          "Which initial analysis is appropriate?",
+          [
+            "I",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "d"
+        ],
+        [
+          "What action respects the authorized lab scope?",
+          [
+            "-",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "5"
+        ],
+        [
+          "How should evidence be handled?",
+          [
+            "L",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          "Which validation or recommendation is defensible?",
+          [
+            "R",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "T",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ],
+        [
+          null,
+          [
+            "D",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "S",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "p"
+        ],
+        [
+          null,
+          [
+            "R",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "L",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "i"
+        ]
+      ],
+      "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
+      "rubric": [
+        "Accurate technical interpretation",
+        "Explicit authorization boundaries",
+        "Clear separation of evidence and hypothesis",
+        "Testable remediation or verification plan"
+      ]
+    },
+    {
+      "title": "RFID Reader Design Review",
+      "context": "Two invented badge designs are described for an isolated access-control evaluation.",
+      "evidence": [
+        "Design A checks a static printed card ID",
+        "Design B verifies a cryptographic challenge-response",
+        "No real card data or keys provided",
+        "Scope explicitly excludes production doors"
+      ],
+      "steps": [
+        [
+          "Which initial analysis is appropriate?",
+          [
+            "C",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          "What action respects the authorized lab scope?",
+          [
+            "C",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ],
+        [
+          "How should evidence be handled?",
+          [
+            "S",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "t"
+        ],
+        [
+          "Which validation or recommendation is defensible?",
+          [
+            "F",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "P",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "r"
+        ],
+        [
+          null,
+          [
+            "R",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "N",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "R",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "A",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "u"
+        ]
+      ],
+      "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
+      "rubric": [
+        "Accurate technical interpretation",
+        "Explicit authorization boundaries",
+        "Clear separation of evidence and hypothesis",
+        "Testable remediation or verification plan"
+      ]
+    },
+    {
+      "title": "Wired Appliance Connection Failure",
+      "context": "A synthetic Shark Jack-style network lab shows a connection problem on a disposable training port.",
+      "evidence": [
+        "port=lab-switch-3 status=up",
+        "DHCP DISCOVER recorded at 09:10",
+        "No DHCP OFFER recorded in supplied window",
+        "Training VLAN expected: VLAN 30"
+      ],
+      "steps": [
+        [
+          "Which initial analysis is appropriate?",
+          [
+            "I",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "n"
+        ],
+        [
+          "What action respects the authorized lab scope?",
+          [
+            "C",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ],
+        [
+          "How should evidence be handled?",
+          [
+            "N",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          "Which validation or recommendation is defensible?",
+          [
+            "D",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "S",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "c"
+        ],
+        [
+          null,
+          [
+            "V",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "e"
+        ],
+        [
+          null,
+          [
+            "A",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          " "
+        ],
+        [
+          null,
+          [
+            "D",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "o"
+        ],
+        [
+          null,
+          [
+            "T",
+            "Declare all connected systems compromised",
+            "Test unrelated production devices"
+          ],
+          0,
+          "h"
+        ]
+      ],
+      "memoPrompt": "Write a 200–300 word technical report: scope, observed evidence, likely explanations, uncertainties, safety requirements, and a controlled verification plan.",
+      "rubric": [
+        "Accurate technical interpretation",
+        "Explicit authorization boundaries",
+        "Clear separation of evidence and hypothesis",
+        "Testable remediation or verification plan"
       ]
     }
   ]
