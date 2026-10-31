@@ -82,3 +82,7 @@ Four additional synthetic multi-stage simulations cover USB device event review,
 
 ### Foundational lesson depth expansion
 Eighteen existing introductory lessons were rewritten with topic-specific explanations, worked examples and evidence-based practice prompts: six in Getting Comfortable With Computers, six in Computer and Operating-System Essentials, and six in Networking and Internet Fundamentals. The 198-lesson count and lesson order stay unchanged to preserve existing device-local progress identifiers. These remain short-to-medium browser lessons; extended graded problem sets and independent hands-on technical assessment still need development.
+
+
+### Foundational coursework expansion — latest batch
+Revised 28 existing lessons with substantive technical explanations and worked reasoning prompts: eight Beginner Linux and Terminal Skills, eight Programming Logic for Security Beginners, six Digital Identity and Everyday Security, and six Security Operations and Incident Response. Original lesson positions and identifiers were retained so previously recorded device-local progress remains associated with the same lessons. These are educational readings, not physical lab competency validations.
