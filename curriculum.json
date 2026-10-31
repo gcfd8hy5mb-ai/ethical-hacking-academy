@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -2260,6 +2260,155 @@
           ],
           0,
           "Correct approach: A board memo compares two controls and identifies what evidence would justify the investment. A defensible response documents what is known, avoids invented conclusions and verifies the intended access or operational outcome."
+        ]
+      ]
+    },
+    {
+      "title": "Ethical Hacking Hardware Foundations",
+      "lessons": [
+        [
+          "Flipper Zero: recognition and safe use",
+          "Device focus: Flipper Zero. Learn RFID, NFC, infrared and supported radio interfaces. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Use instructor-supplied synthetic device logs to distinguish identification, replay, and access-control design limitations. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "A demonstration badge responds to a simulated scan. What is established?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Only the simulated badge behavior, not permission to test real cards."
+        ],
+        [
+          "WiFi Pineapple: recognition and safe use",
+          "Device focus: WiFi Pineapple. Learn wireless network assessment concepts and client security. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Compare synthetic SSID, certificate-warning and network-connection records to identify risks of untrusted access points. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "A mock laptop joins a similarly named wireless network. What should be checked?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Verify the approved network identity and secure connection settings."
+        ],
+        [
+          "USB Rubber Ducky: recognition and safe use",
+          "Device focus: USB Rubber Ducky. Learn USB automation and defensive endpoint controls. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Review harmless prewritten keyboard-automation pseudocode on a simulated workstation; focus on authorization and endpoint protection. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "Why does an unexpected automated keyboard action warrant investigation?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Physical USB access can trigger actions under an active user session."
+        ],
+        [
+          "HackRF One: recognition and safe use",
+          "Device focus: HackRF One. Learn software-defined radio fundamentals and spectrum analysis. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Interpret instructor-provided waveform images and frequency charts, without transmitting or intercepting communications. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "What is safe for a beginner before using radio equipment?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Learn radio laws, lab boundaries and receive-only synthetic examples."
+        ],
+        [
+          "Proxmark3: recognition and safe use",
+          "Device focus: Proxmark3. Learn RFID and NFC protocols and credential-security design. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Examine fictitious tag types and authentication workflows; distinguish identity labels from cryptographically protected credentials. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "Does reading a public tag identifier establish authorization?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "No. Identification and authenticated permission are distinct."
+        ],
+        [
+          "Bash Bunny: recognition and safe use",
+          "Device focus: Bash Bunny. Learn USB device emulation concepts and endpoint detection. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Use mock endpoint event logs to identify unexpected peripheral classifications and design approved device-control policy. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "Which response is appropriate to an unknown peripheral?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Follow authorized device policy and preserve relevant event information."
+        ],
+        [
+          "Raspberry Pi: recognition and safe use",
+          "Device focus: Raspberry Pi. Learn Linux, networks, and small computer security laboratories. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Draw a Pi lab diagram using isolated virtual machines, approved services, updates, user accounts and access permissions. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "What should be done before hosting a practice service?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Isolate the lab, document exposed interfaces and apply updates."
+        ],
+        [
+          "ESP32 Marauder: recognition and safe use",
+          "Device focus: ESP32 Marauder. Learn microcontroller-based Wi-Fi and Bluetooth learning. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Classify synthetic Wi-Fi and Bluetooth advertisements and compare legitimate monitoring with prohibited interference. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "What is a necessary condition for active wireless testing?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Explicit permission, appropriate equipment limits and applicable legal compliance."
+        ],
+        [
+          "Shark Jack: recognition and safe use",
+          "Device focus: Shark Jack. Learn wired network testing concepts and interface diagnostics. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Analyze fictional DHCP, ARP and switch-port records without plugging anything into an unapproved network. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "Where may a learner connect a testing appliance?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Only to explicitly approved lab network interfaces."
+        ],
+        [
+          "O.MG Cable: recognition and safe use",
+          "Device focus: O.MG Cable. Learn malicious peripheral detection and physical security. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Evaluate a mock USB inventory and physical-access incident; develop device inspection and trust procedures. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "Why can an ordinary-looking cable present a security concern?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Appearance does not establish device behavior or trustworthiness."
+        ],
+        [
+          "Alfa Wi-Fi Adapter: recognition and safe use",
+          "Device focus: Alfa Wi-Fi Adapter. Learn wireless packet analysis and radio-interface capabilities. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Interpret fabricated packet metadata and channel occupancy summaries without capturing others' communications. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "What protects privacy in packet-analysis education?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Use synthetic data or expressly authorized capture environments."
+        ],
+        [
+          "Logic Analyzer: recognition and safe use",
+          "Device focus: Logic Analyzer. Learn digital signal measurement and electronics fundamentals. Understand typical professional use cases, basic components, setup assumptions, safe handling and limitations. Worked classroom exercise: Read a sample digital timing diagram: identify edges, pulse widths and clocked data using instructor-provided traces. This is a conceptual simulated activity, not actual hardware operation. The learner should explain the device's purpose, required authorizations, potential defensive findings, limitations and responsible reporting. No purchase is required; physical competency would need supervised hands-on equipment later.",
+          "What does a logic analyzer principally observe?",
+          [
+            "Apply the approved synthetic lab and document what it proves",
+            "Test a stranger's equipment without permission",
+            "Assume tool possession proves professional competence"
+          ],
+          0,
+          "Electrical logic-level changes over time in an authorized circuit."
         ]
       ]
     }
