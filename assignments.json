@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "assignments": [
     {
       "title": "Executive Security Risk Register",
@@ -128,6 +128,402 @@
         ]
       ],
       "reference": "Verify through a previously established contact method, not a phone number supplied by the suspicious email."
+    },
+    {
+      "title": "Windows Host Security Baseline",
+      "course": "Windows Administration and Security",
+      "duration": "90–150 minutes",
+      "scenario": "A fictional Windows 11 shared computer has standard accounts for two residents, a separate administrator account, automatic updates enabled, and an unidentified startup application. No real computer should be modified.",
+      "tasks": [
+        [
+          "Windows Host Security Baseline",
+          "Windows Administration and Security",
+          "A fictional Windows 11 shared computer has standard accounts for two residents, a separate administrator account, automatic updates enabled, and an unidentified startup application. No real computer should be modified.",
+          [
+            "Create a baseline table for accounts, updates, antivirus, firewall, backups and startup programs.",
+            "Explain what a standard account can and cannot administer.",
+            "Describe how you would inspect the startup app's publisher and installation history without running it.",
+            "Write a safe, permission-based troubleshooting plan including rollback.",
+            "Draft a 300-word report stating findings versus unknowns."
+          ],
+          [
+            "Baseline completeness",
+            "Technical accuracy",
+            "Safety and permissions",
+            "Report quality"
+          ]
+        ],
+        [
+          "Windows Event Log Analysis",
+          "Windows Administration and Security",
+          "Synthetic records: 13:00 failed sign-in for learner; 13:01 failed sign-in; 13:04 successful sign-in with MFA; 13:06 normal application launch; system clock is UTC and ticket time is CDT.",
+          [
+            "Convert all times to one time zone, explaining daylight-saving assumptions.",
+            "Build a chronological event table and classify each event as observation or inference.",
+            "List at least three benign and concerning hypotheses without asserting compromise.",
+            "Identify what permitted data would corroborate the hypotheses.",
+            "Draft a concise escalation note and a privacy-preserving collection plan."
+          ],
+          [
+            "Timeline quality",
+            "Evidence reasoning",
+            "Investigative design",
+            "Communication"
+          ]
+        ],
+        [
+          "Small-Network Diagnostic Workbook",
+          "Networking Practice and Troubleshooting",
+          "A fictional home lab has client 192.168.40.25/24, gateway 192.168.40.1, valid Wi-Fi association, reachable gateway and a DNS failure for a synthetic training hostname.",
+          [
+            "Calculate the /24 network address, broadcast address and conventional host range.",
+            "Draw the path from client through gateway and name resolution to the application.",
+            "Differentiate a DNS error, TCP connection refusal and HTTP 404.",
+            "Build a sequence of five reversible diagnostics suitable for an approved lab.",
+            "Define two tests that would establish the original user problem is fixed."
+          ],
+          [
+            "Network arithmetic",
+            "Layer reasoning",
+            "Diagnostic order",
+            "Verification plan"
+          ]
+        ],
+        [
+          "Linux Access-Control Workbook",
+          "Beginner Linux and Terminal Skills",
+          "A synthetic file `/home/student/report.txt` has mode 640 and owner student, group analysts. A service account needs read access to a different report but should not be administrator.",
+          [
+            "Explain owner, group and other permissions for mode 640.",
+            "Distinguish directory traversal rights from file read rights.",
+            "Propose a least-privilege way to let an authorized service read only its approved report.",
+            "Describe how you would document a permission change and reverse it.",
+            "Explain why examining the academy's simulated terminal does not prove real Linux proficiency."
+          ],
+          [
+            "Permission reasoning",
+            "Least privilege",
+            "Safe change management",
+            "Evidence limits"
+          ]
+        ]
+      ],
+      "rubric": [
+        [
+          "Baseline completeness",
+          25
+        ],
+        [
+          "Technical accuracy",
+          25
+        ],
+        [
+          "Safety and permissions",
+          25
+        ],
+        [
+          "Report quality",
+          25
+        ]
+      ],
+      "reference": "Use the fictional evidence only. A strong response shows calculations or observations, separates hypotheses from facts, specifies what is authorized, and defines a reproducible verification step."
+    },
+    {
+      "title": "Windows Event Log Analysis",
+      "course": "Windows Administration and Security",
+      "duration": "90–150 minutes",
+      "scenario": "Synthetic records: 13:00 failed sign-in for learner; 13:01 failed sign-in; 13:04 successful sign-in with MFA; 13:06 normal application launch; system clock is UTC and ticket time is CDT.",
+      "tasks": [
+        [
+          "Windows Host Security Baseline",
+          "Windows Administration and Security",
+          "A fictional Windows 11 shared computer has standard accounts for two residents, a separate administrator account, automatic updates enabled, and an unidentified startup application. No real computer should be modified.",
+          [
+            "Create a baseline table for accounts, updates, antivirus, firewall, backups and startup programs.",
+            "Explain what a standard account can and cannot administer.",
+            "Describe how you would inspect the startup app's publisher and installation history without running it.",
+            "Write a safe, permission-based troubleshooting plan including rollback.",
+            "Draft a 300-word report stating findings versus unknowns."
+          ],
+          [
+            "Baseline completeness",
+            "Technical accuracy",
+            "Safety and permissions",
+            "Report quality"
+          ]
+        ],
+        [
+          "Windows Event Log Analysis",
+          "Windows Administration and Security",
+          "Synthetic records: 13:00 failed sign-in for learner; 13:01 failed sign-in; 13:04 successful sign-in with MFA; 13:06 normal application launch; system clock is UTC and ticket time is CDT.",
+          [
+            "Convert all times to one time zone, explaining daylight-saving assumptions.",
+            "Build a chronological event table and classify each event as observation or inference.",
+            "List at least three benign and concerning hypotheses without asserting compromise.",
+            "Identify what permitted data would corroborate the hypotheses.",
+            "Draft a concise escalation note and a privacy-preserving collection plan."
+          ],
+          [
+            "Timeline quality",
+            "Evidence reasoning",
+            "Investigative design",
+            "Communication"
+          ]
+        ],
+        [
+          "Small-Network Diagnostic Workbook",
+          "Networking Practice and Troubleshooting",
+          "A fictional home lab has client 192.168.40.25/24, gateway 192.168.40.1, valid Wi-Fi association, reachable gateway and a DNS failure for a synthetic training hostname.",
+          [
+            "Calculate the /24 network address, broadcast address and conventional host range.",
+            "Draw the path from client through gateway and name resolution to the application.",
+            "Differentiate a DNS error, TCP connection refusal and HTTP 404.",
+            "Build a sequence of five reversible diagnostics suitable for an approved lab.",
+            "Define two tests that would establish the original user problem is fixed."
+          ],
+          [
+            "Network arithmetic",
+            "Layer reasoning",
+            "Diagnostic order",
+            "Verification plan"
+          ]
+        ],
+        [
+          "Linux Access-Control Workbook",
+          "Beginner Linux and Terminal Skills",
+          "A synthetic file `/home/student/report.txt` has mode 640 and owner student, group analysts. A service account needs read access to a different report but should not be administrator.",
+          [
+            "Explain owner, group and other permissions for mode 640.",
+            "Distinguish directory traversal rights from file read rights.",
+            "Propose a least-privilege way to let an authorized service read only its approved report.",
+            "Describe how you would document a permission change and reverse it.",
+            "Explain why examining the academy's simulated terminal does not prove real Linux proficiency."
+          ],
+          [
+            "Permission reasoning",
+            "Least privilege",
+            "Safe change management",
+            "Evidence limits"
+          ]
+        ]
+      ],
+      "rubric": [
+        [
+          "Timeline quality",
+          25
+        ],
+        [
+          "Evidence reasoning",
+          25
+        ],
+        [
+          "Investigative design",
+          25
+        ],
+        [
+          "Communication",
+          25
+        ]
+      ],
+      "reference": "Use the fictional evidence only. A strong response shows calculations or observations, separates hypotheses from facts, specifies what is authorized, and defines a reproducible verification step."
+    },
+    {
+      "title": "Small-Network Diagnostic Workbook",
+      "course": "Networking Practice and Troubleshooting",
+      "duration": "90–150 minutes",
+      "scenario": "A fictional home lab has client 192.168.40.25/24, gateway 192.168.40.1, valid Wi-Fi association, reachable gateway and a DNS failure for a synthetic training hostname.",
+      "tasks": [
+        [
+          "Windows Host Security Baseline",
+          "Windows Administration and Security",
+          "A fictional Windows 11 shared computer has standard accounts for two residents, a separate administrator account, automatic updates enabled, and an unidentified startup application. No real computer should be modified.",
+          [
+            "Create a baseline table for accounts, updates, antivirus, firewall, backups and startup programs.",
+            "Explain what a standard account can and cannot administer.",
+            "Describe how you would inspect the startup app's publisher and installation history without running it.",
+            "Write a safe, permission-based troubleshooting plan including rollback.",
+            "Draft a 300-word report stating findings versus unknowns."
+          ],
+          [
+            "Baseline completeness",
+            "Technical accuracy",
+            "Safety and permissions",
+            "Report quality"
+          ]
+        ],
+        [
+          "Windows Event Log Analysis",
+          "Windows Administration and Security",
+          "Synthetic records: 13:00 failed sign-in for learner; 13:01 failed sign-in; 13:04 successful sign-in with MFA; 13:06 normal application launch; system clock is UTC and ticket time is CDT.",
+          [
+            "Convert all times to one time zone, explaining daylight-saving assumptions.",
+            "Build a chronological event table and classify each event as observation or inference.",
+            "List at least three benign and concerning hypotheses without asserting compromise.",
+            "Identify what permitted data would corroborate the hypotheses.",
+            "Draft a concise escalation note and a privacy-preserving collection plan."
+          ],
+          [
+            "Timeline quality",
+            "Evidence reasoning",
+            "Investigative design",
+            "Communication"
+          ]
+        ],
+        [
+          "Small-Network Diagnostic Workbook",
+          "Networking Practice and Troubleshooting",
+          "A fictional home lab has client 192.168.40.25/24, gateway 192.168.40.1, valid Wi-Fi association, reachable gateway and a DNS failure for a synthetic training hostname.",
+          [
+            "Calculate the /24 network address, broadcast address and conventional host range.",
+            "Draw the path from client through gateway and name resolution to the application.",
+            "Differentiate a DNS error, TCP connection refusal and HTTP 404.",
+            "Build a sequence of five reversible diagnostics suitable for an approved lab.",
+            "Define two tests that would establish the original user problem is fixed."
+          ],
+          [
+            "Network arithmetic",
+            "Layer reasoning",
+            "Diagnostic order",
+            "Verification plan"
+          ]
+        ],
+        [
+          "Linux Access-Control Workbook",
+          "Beginner Linux and Terminal Skills",
+          "A synthetic file `/home/student/report.txt` has mode 640 and owner student, group analysts. A service account needs read access to a different report but should not be administrator.",
+          [
+            "Explain owner, group and other permissions for mode 640.",
+            "Distinguish directory traversal rights from file read rights.",
+            "Propose a least-privilege way to let an authorized service read only its approved report.",
+            "Describe how you would document a permission change and reverse it.",
+            "Explain why examining the academy's simulated terminal does not prove real Linux proficiency."
+          ],
+          [
+            "Permission reasoning",
+            "Least privilege",
+            "Safe change management",
+            "Evidence limits"
+          ]
+        ]
+      ],
+      "rubric": [
+        [
+          "Network arithmetic",
+          25
+        ],
+        [
+          "Layer reasoning",
+          25
+        ],
+        [
+          "Diagnostic order",
+          25
+        ],
+        [
+          "Verification plan",
+          25
+        ]
+      ],
+      "reference": "Use the fictional evidence only. A strong response shows calculations or observations, separates hypotheses from facts, specifies what is authorized, and defines a reproducible verification step."
+    },
+    {
+      "title": "Linux Access-Control Workbook",
+      "course": "Beginner Linux and Terminal Skills",
+      "duration": "90–150 minutes",
+      "scenario": "A synthetic file `/home/student/report.txt` has mode 640 and owner student, group analysts. A service account needs read access to a different report but should not be administrator.",
+      "tasks": [
+        [
+          "Windows Host Security Baseline",
+          "Windows Administration and Security",
+          "A fictional Windows 11 shared computer has standard accounts for two residents, a separate administrator account, automatic updates enabled, and an unidentified startup application. No real computer should be modified.",
+          [
+            "Create a baseline table for accounts, updates, antivirus, firewall, backups and startup programs.",
+            "Explain what a standard account can and cannot administer.",
+            "Describe how you would inspect the startup app's publisher and installation history without running it.",
+            "Write a safe, permission-based troubleshooting plan including rollback.",
+            "Draft a 300-word report stating findings versus unknowns."
+          ],
+          [
+            "Baseline completeness",
+            "Technical accuracy",
+            "Safety and permissions",
+            "Report quality"
+          ]
+        ],
+        [
+          "Windows Event Log Analysis",
+          "Windows Administration and Security",
+          "Synthetic records: 13:00 failed sign-in for learner; 13:01 failed sign-in; 13:04 successful sign-in with MFA; 13:06 normal application launch; system clock is UTC and ticket time is CDT.",
+          [
+            "Convert all times to one time zone, explaining daylight-saving assumptions.",
+            "Build a chronological event table and classify each event as observation or inference.",
+            "List at least three benign and concerning hypotheses without asserting compromise.",
+            "Identify what permitted data would corroborate the hypotheses.",
+            "Draft a concise escalation note and a privacy-preserving collection plan."
+          ],
+          [
+            "Timeline quality",
+            "Evidence reasoning",
+            "Investigative design",
+            "Communication"
+          ]
+        ],
+        [
+          "Small-Network Diagnostic Workbook",
+          "Networking Practice and Troubleshooting",
+          "A fictional home lab has client 192.168.40.25/24, gateway 192.168.40.1, valid Wi-Fi association, reachable gateway and a DNS failure for a synthetic training hostname.",
+          [
+            "Calculate the /24 network address, broadcast address and conventional host range.",
+            "Draw the path from client through gateway and name resolution to the application.",
+            "Differentiate a DNS error, TCP connection refusal and HTTP 404.",
+            "Build a sequence of five reversible diagnostics suitable for an approved lab.",
+            "Define two tests that would establish the original user problem is fixed."
+          ],
+          [
+            "Network arithmetic",
+            "Layer reasoning",
+            "Diagnostic order",
+            "Verification plan"
+          ]
+        ],
+        [
+          "Linux Access-Control Workbook",
+          "Beginner Linux and Terminal Skills",
+          "A synthetic file `/home/student/report.txt` has mode 640 and owner student, group analysts. A service account needs read access to a different report but should not be administrator.",
+          [
+            "Explain owner, group and other permissions for mode 640.",
+            "Distinguish directory traversal rights from file read rights.",
+            "Propose a least-privilege way to let an authorized service read only its approved report.",
+            "Describe how you would document a permission change and reverse it.",
+            "Explain why examining the academy's simulated terminal does not prove real Linux proficiency."
+          ],
+          [
+            "Permission reasoning",
+            "Least privilege",
+            "Safe change management",
+            "Evidence limits"
+          ]
+        ]
+      ],
+      "rubric": [
+        [
+          "Permission reasoning",
+          25
+        ],
+        [
+          "Least privilege",
+          25
+        ],
+        [
+          "Safe change management",
+          25
+        ],
+        [
+          "Evidence limits",
+          25
+        ]
+      ],
+      "reference": "Use the fictional evidence only. A strong response shows calculations or observations, separates hypotheses from facts, specifies what is authorized, and defines a reproducible verification step."
     }
   ]
 }
