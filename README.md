@@ -7,8 +7,11 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Computer and Operating-System Essentials: 6 complete lessons
 - Networking and Internet Fundamentals: 6 complete lessons
 - Security Operations and Incident Response: 6 complete lessons
+- Getting Comfortable With Computers: 6 beginner lessons
+- Beginner Linux and Terminal Skills: 8 guided lessons
+- Digital Identity and Everyday Security: 6 lessons
 
-Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **44 authored lessons across seven courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
