@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -238,7 +238,7 @@
       "lessons": [
         [
           "Logging and alert triage",
-          "Logs record events such as successful and failed authentication, configuration changes and service errors. Analysts first verify the alert context, time synchronization and affected assets. A single event seldom proves a breach. Prioritize based on asset value, plausible impact and corroborating evidence.",
+          "Security monitoring uses events and alerts to prioritize investigation. A burst of failed sign-ins is evidence of failed attempts, not a confirmed account takeover. Correlate source, time, authentication outcome, MFA status and normal user behavior. Preserve a minimal record of why an alert was escalated.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "You see one unsuccessful sign-in. What is the best first step?",
           [
             "Declare a confirmed intrusion",
@@ -250,7 +250,7 @@
         ],
         [
           "Incident response lifecycle",
-          "A practical lifecycle includes preparation, detection and analysis, containment, eradication, recovery, and post-incident learning. Containment options have business impacts and should follow agreed authority. Preserve relevant evidence and record decisions. Communication should be accurate and proportionate to verified facts.",
+          "Incident response commonly includes preparation, detection and analysis, containment, eradication, recovery and lessons learned; exact frameworks may combine stages differently. Choose actions proportionate to evidence and business impact. An unverified outage does not justify deleting data or disabling every account.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "An organization confirms malware on an isolated training laptop. What should happen first?",
           [
             "Follow its approved containment and evidence plan",
@@ -262,7 +262,7 @@
         ],
         [
           "Phishing and social engineering",
-          "Social engineering manipulates people through urgency, authority, fear or curiosity. Defenses include independent verification, MFA, secure reporting channels, and least privilege. Training should not blame victims; systems should make safe choices easy. Evaluate suspicious messages using sender context, links, requests and business process.",
+          "Phishing relies on deceptive communication to obtain information or induce actions. A fictional urgent payment request from a lookalike domain should be independently verified using previously trusted contact details. Preserve message headers and report it; avoid accusing a legitimate supplier without confirmation.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A message demands immediate gift-card purchases from an executive. What is safest?",
           [
             "Verify independently through a known channel",
@@ -274,7 +274,7 @@
         ],
         [
           "Vulnerability management",
-          "A vulnerability program maintains an asset inventory, learns about new issues, assesses exposure, prioritizes fixes, tests patches and validates closure. Severity scores are inputs, not complete business risk assessments. Consider whether the vulnerable component is present, reachable and mission-critical.",
+          "Vulnerability management inventories assets, identifies applicable weaknesses, assesses exposure and criticality, coordinates fixes and verifies results. A public critical service may deserve higher priority than a disposable offline lab with a similar software flaw. Severity ratings inform but do not replace business risk assessment.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Two equally severe issues exist. Which should generally be prioritized?",
           [
             "A confirmed exposed issue on a critical service",
@@ -286,7 +286,7 @@
         ],
         [
           "Access reviews and audit trails",
-          "Organizations periodically review whether access remains necessary as employees change roles. Audit trails make sensitive actions attributable. Shared admin accounts weaken accountability; individual credentials, MFA, and documented emergency access improve control. Retention and privacy requirements matter when collecting records.",
+          "An access review compares actual permissions with approved roles, especially after team changes and employee departures. Logs can show who changed a grant and when, but a missing audit event does not guarantee no access. Use effective-permission checks and document the owner's approval.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "An employee changes departments. What should happen to old permissions?",
           [
             "Review and remove access that is no longer needed",
@@ -298,7 +298,7 @@
         ],
         [
           "Security communication and recovery",
-          "Security leaders must translate technical observations into decisions for staff, legal teams and executives. A good update distinguishes confirmed facts, actions taken, remaining uncertainty, customer impact and next checkpoints. Recovery involves validating system integrity, restoring operations and monitoring for recurrence.",
+          "During an incident, leadership needs confirmed operational impact, current mitigation, uncertainty and next decisions. Recovery requires testing the affected workflow, not merely issuing a restart command. A post-incident review records timeline, causal evidence and improvements without inventing attacker attribution.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What belongs in an executive incident update?",
           [
             "Confirmed facts, impact, response and uncertainty",
@@ -392,7 +392,7 @@
       "lessons": [
         [
           "Why professionals use terminals",
-          "A graphical interface presents buttons and menus; a terminal accepts text commands. Both are ways to control a computer. Administrators use terminals for repeatable tasks, troubleshooting and remote management. Commands have a name, optional flags and arguments. In this academy, examples are informational until you enter an authorized lab.",
+          "An interactive shell interprets typed commands, while a graphical desktop offers buttons to access similar system functions. A command's impact depends on user privileges and arguments. Example: `pwd` reports a working directory but does not modify files. On the academy's simulated terminal, output is fictional; it does not show iPhone internals.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "In `ls -l`, what is `-l`?",
           [
             "A command option",
@@ -404,7 +404,7 @@
         ],
         [
           "The present working directory",
-          "A working directory is the location a process uses to resolve relative paths. On Linux, the command `pwd` prints it. A path starting with `/` is absolute; a path without it is usually interpreted relative to the current directory. Imagine you are in `/home/student`: `notes.txt` refers to a file there unless another path is supplied.",
+          "`pwd` stands for print working directory. Absolute paths begin at the filesystem root, and relative paths are interpreted from the current location. If the current path is /home/student, the relative name notes.txt refers to /home/student/notes.txt. Record a path before assuming where a command would operate.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What does `pwd` normally display?",
           [
             "The current directory",
@@ -416,7 +416,7 @@
         ],
         [
           "Listing files and hidden entries",
-          "The Linux command `ls` lists directory entries. `ls -a` also displays dot-prefixed entries, commonly used for configuration. A dot-prefixed file is not encrypted or secure merely because it is hidden from default listings. Never assume a filename alone proves safe contents.",
+          "`ls` lists directory entries in many Linux shells. Hidden names commonly begin with a dot; they are not automatically malicious or protected. Example: seeing .config in a fictional user's home directory could represent ordinary application settings. A filename alone cannot establish its contents or safety.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What does `ls -a` add to an ordinary listing?",
           [
             "Dot-prefixed entries",
@@ -428,7 +428,7 @@
         ],
         [
           "Moving through directories",
-          "The `cd` command changes the working directory. `cd ..` usually moves to its parent; `cd /home/student` specifies an absolute location. An error such as 'No such file or directory' means the target was not found at the given path. Think about where you are before resolving relative names.",
+          "Changing directory with `cd` affects where relative paths resolve. A path such as ../docs moves to a sibling location from a nested folder, assuming it exists and access is permitted. In a practice worksheet draw /home/student/labs and /home/student/docs, then trace the effect without modifying actual files.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "If you are in `/home/student/docs`, where does `cd ..` usually take you?",
           [
             "/home/student",
@@ -440,7 +440,7 @@
         ],
         [
           "Reading without modifying files",
-          "Commands such as `cat` can print a text file, and `head` can display its first lines. Reading files is safer than modifying or deleting them, but even read access can expose confidential information; permission matters. Never inspect a private file outside an approved assignment.",
+          "Read-only inspection and modification have different risks. A harmless sample text file can be viewed through approved tools; editing or deleting it changes evidence. In an incident exercise, first copy the relevant evidence following policy and preserve timestamps and provenance where required.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Which action is read-only in a normal training directory?",
           [
             "Displaying an authorized sample text file",
@@ -452,7 +452,7 @@
         ],
         [
           "Users, permissions and safe defaults",
-          "Linux commonly distinguishes owner, group and others, each with read, write and execute permission bits. `r` permits reading, `w` writing and `x` execution or directory traversal. Changing permissions should be done only when authorized and necessary. A cautious administrator grants the smallest set of permissions that allows a task.",
+          "Linux permission bits indicate read, write and execute for owner, group and others. File mode 640 allows owner read/write and group read; it grants no permissions to others. Directory permissions behave differently, so treat directory traversal and listing separately. Do not change access to data you do not administer.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What permission allows modifying an existing file?",
           [
             "Write permission",
@@ -464,7 +464,7 @@
         ],
         [
           "Processes and graceful troubleshooting",
-          "A process is a running instance of a program. A computer can run many processes concurrently. Tools like `ps` show process information; administrators should understand the target and potential effects before stopping anything. Unexpected CPU use might be caused by a legitimate update, not necessarily malware.",
+          "A process is a running instance of software. High CPU usage can reflect a scheduled backup, indexing or failure; process identity and timing matter. If a mock service is slow, compare its expected schedule, resource data and logs before concluding a security incident.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A process uses substantial CPU during an update. What is the appropriate first step?",
           [
             "Identify the process and check context",
@@ -476,7 +476,7 @@
         ],
         [
           "Command mistakes and recovery habits",
-          "A terminal may execute commands immediately. Paths, quoting and wildcards can change which files a command affects. Before actions that modify data, check the working directory, confirm the target, and create recoverable backups when appropriate. A safe learner starts with observation commands and a disposable practice environment.",
+          "Command mistakes may come from wrong directories, quoting, flags or permissions. Stop before trying a command you do not understand, especially one that removes files or changes privileges. In an approved disposable lab, document the command, intended effect, actual output and how to reverse changes.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A command would modify many files. What should you do before running it?",
           [
             "Verify its scope and maintain a recovery path",
@@ -493,7 +493,7 @@
       "lessons": [
         [
           "Passwords and password managers",
-          "A password should be unique to each important service so a breach at one provider does not compromise every account. A reputable password manager can generate and store strong random passwords. Length and uniqueness matter more than predictable substitutions. Avoid putting credentials in notes, screenshots or sample coursework.",
+          "Strong, unique passwords help prevent one account breach from affecting others. A password manager can generate and store distinct credentials, but the manager itself needs secure access and recovery. Never reuse a workplace password for a learning website. Password length and unpredictability matter more than decorative character substitutions.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Which account setup is most protective?",
           [
             "One unique generated password for each service",
@@ -505,7 +505,7 @@
         ],
         [
           "Multifactor authentication",
-          "Multifactor authentication adds proof beyond a password. Examples include an authenticator app, a hardware security key or device-based passkey. Some methods resist phishing better than others. Backup recovery methods must also be protected; losing access to every factor can lock you out.",
+          "Multifactor authentication combines independent evidence such as something you know and something you possess. A one-time code may still be phished in real time; phishing-resistant passkeys and security keys are useful where supported. A support worker must never request your MFA code through an unsolicited message.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Why is MFA useful after a password is stolen?",
           [
             "An additional proof may block the attacker",
@@ -517,7 +517,7 @@
         ],
         [
           "Passkeys and account recovery",
-          "Passkeys use public-key cryptography so a service can verify a device-held credential without receiving a reusable password. The private key stays with the user's authenticator. Devices and synced credential providers may offer recovery, but each setup has tradeoffs. Record recovery options and remove access from lost devices when applicable.",
+          "Passkeys generally use public-key authentication rather than a reusable password entered on each site. Device loss requires careful recovery design, including verified trusted recovery methods. An attacker can target recovery even when the primary sign-in is strong, so treat recovery settings as sensitive.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What is a core benefit of passkeys?",
           [
             "They can reduce password-based phishing",
@@ -529,7 +529,7 @@
         ],
         [
           "Recognizing fraudulent login pages",
-          "Phishing pages often imitate real services and use urgency or misleading domain names. A convincing logo does not prove authenticity. Instead of following unexpected links, navigate using a known bookmark or official application and verify the actual domain. Report suspicious messages through approved channels.",
+          "A familiar logo does not prove a login page is legitimate. Inspect the exact destination and navigate independently through a known official route. Example: a domain differing by one character is suspicious, but this observation alone does not establish who sent the message. Report rather than supply credentials.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A text links to a nearly identical banking domain. What should you do?",
           [
             "Open your bank through its known app or bookmark",
@@ -541,7 +541,7 @@
         ],
         [
           "App permissions and personal information",
-          "Apps may request access to contacts, microphone, location or files. Permission should match the feature and be periodically reviewed. Companies should collect only information needed for legitimate purposes and protect it appropriately. A request for unrelated sensitive access merits scrutiny.",
+          "Apps should request access only to resources required for their purpose. Review camera, contacts, location and file permissions in device settings, and consider whether access is necessary while using the app or at all. A photo editor may need photos but not perpetual access to unrelated accounts.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A note-taking app requests continuous location access without explanation. What is sensible?",
           [
             "Deny it unless you understand a legitimate need",
@@ -553,7 +553,7 @@
         ],
         [
           "Security incident reporting at work",
-          "When an employee suspects a security incident, the right process is to report promptly through designated channels, preserve relevant evidence, and follow instructions. Avoid independent forensic activity that could destroy logs or expose more data. Record what actually happened without exaggeration.",
+          "A useful workplace security report describes what occurred, the time, affected account or device and actions already taken without broadcasting secrets. Preserve suspicious emails through an approved reporting method. Distinguish confirmed observations from speculation and contact designated support.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "You clicked a suspicious link at work. What should you do?",
           [
             "Report it through the approved security process promptly",
@@ -772,7 +772,7 @@
       "lessons": [
         [
           "What code is",
-          "Source code is instructions written in a programming language. Some languages are interpreted by a runtime; others are compiled into a form the computer can execute. Security practitioners read scripts to automate authorized repetitive tasks and understand application behavior. You do not need to memorize syntax before understanding the logic.",
+          "A program is a sequence of instructions expressed in a language. Source code can describe input, decisions, transformations and output. Pseudocode is useful for planning without executing anything. Example: read a list of synthetic events, count failures and display the count.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What is the main purpose of source code?",
           [
             "Describe instructions a computer can execute",
@@ -784,7 +784,7 @@
         ],
         [
           "Variables and values",
-          "A variable gives a name to a value. A beginner might set `failedLogins = 3` to store a count, or `user = 'student'` to store text. Names improve readability, but sensitive values such as passwords should not be embedded directly in code. Ask what a variable represents and how it changes.",
+          "A variable names a stored value. In Python, `attempts = 2` followed by `attempts = attempts + 1` results in 3. Trace each assignment from top to bottom. An assignment uses `=`, while `==` compares values.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "If `count = 2` and then `count = count + 1`, what is count?",
           [
             "3",
@@ -796,7 +796,7 @@
         ],
         [
           "Strings, numbers and booleans",
-          "Common data types include numbers, text strings and booleans (true or false). The text '5' and the number 5 can behave differently; adding strings may concatenate, whereas adding numbers performs arithmetic. Type confusion can cause bugs, especially when processing user input.",
+          "Strings contain text, numbers represent quantities, and booleans represent True or False. The string '12' is not the integer 12. When parsing a mock event count, validation should check the type before arithmetic. Concatenating strings is different from adding integers.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Which is a boolean value?",
           [
             "true",
@@ -808,7 +808,7 @@
         ],
         [
           "Conditions and decisions",
-          "A condition lets a program choose between actions. For example, `if accountLocked` can display a recovery message, while an `else` branch allows normal flow. Security-sensitive authorization must be enforced by a trusted server, not merely hidden in a browser interface.",
+          "Conditional statements choose an action when a condition holds. Example: `if failures > 3:` defines a threshold branch; the number alone does not prove hostile intent. Check what the condition measures and how an alert will be reviewed by a human.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Where should a website enforce permission to read protected records?",
           [
             "On the trusted server",
@@ -820,7 +820,7 @@
         ],
         [
           "Loops and counters",
-          "A loop repeats an action across items or until a condition changes. In a log-analysis exercise, a loop may count how many entries represent failed sign-ins. Define clear stopping conditions so a loop does not run indefinitely. Use sample data, not private logs from someone else's system.",
+          "A loop processes multiple items. Given mock events [failed, success, failed, failed], a counter incremented once per failed entry ends at 3. For each iteration, identify the current item and the counter value. Prevent infinite loops by defining a termination condition.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "What is a loop useful for?",
           [
             "Processing a list of sample events",
@@ -832,7 +832,7 @@
         ],
         [
           "Functions and reusable work",
-          "A function groups operations behind a name and may accept inputs and return a result. For example, `isStrongPassword(length)` might check a simplified length criterion. A readable function is easier to test than a large block of repeated logic. One check alone never guarantees account security.",
+          "Functions bundle reusable logic. A function taking part and total can calculate `100 * part / total`, but needs a safe answer for total zero. Example: 3 of 12 attempts is 25%. Document the accepted input types and expected output.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Why use a function for repeated validation logic?",
           [
             "It improves reuse and consistency",
@@ -844,7 +844,7 @@
         ],
         [
           "Arrays and records",
-          "An array holds an ordered sequence, such as several sample alert severity values. A record or object groups named fields, such as a timestamp, event type and device label. Real security logs can include personal data, so avoid sharing identifiable records in training exercises.",
+          "Arrays or lists store ordered values; records or dictionaries associate named fields with values. A fictional event `{user: 'A', outcome: 'failed'}` separates attributes. Use consistent keys and avoid storing real passwords or access tokens in sample datasets.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "Which data structure suits a list of sample event names?",
           [
             "An array",
@@ -856,7 +856,7 @@
         ],
         [
           "Reading code defensively",
-          "Input should be treated as untrusted until validated in the appropriate context. Software failures can arise from invalid assumptions, unexpected types or missing permission checks. Secure development includes tests, careful error handling and avoiding secrets in source control. Start by asking what data enters a program, what it changes, and who has authority.",
+          "Reading code defensively means evaluating what data enters, how it changes, whether errors are handled and which side effects occur. A program that prints private tokens is unsafe even if its count calculation is correct. In a code review, identify inputs, outputs, privileges, assumptions and test cases.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
           "A user changes a browser-side role value to admin. What should protect the real data?",
           [
             "Independent server authorization checks",
