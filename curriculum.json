@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
+  "courses": [
+    {
+      "title": "Cybersecurity Foundations",
+      "lessons": [
+        [
+          "Security goals and the CIA triad",
+          "Cybersecurity protects information, systems, and services from unauthorized disclosure, alteration, and interruption. Confidentiality restricts who can read information; integrity protects its accuracy; availability keeps it accessible when needed. These goals often compete: a strict access rule can strengthen confidentiality while slowing legitimate work. A professional security decision weighs the mission, the threat, the costs, and the people affected.",
+          "A hospital encrypts patient files, verifies medication records, and uses redundant servers. Identify the CIA goal primarily served by each measure.",
+          [
+            "Encryption chiefly protects confidentiality",
+            "Redundancy primarily protects confidentiality",
+            "Integrity means keeping systems online"
+          ],
+          0,
+          "Encryption controls disclosure; record validation supports integrity; redundancy supports availability."
+        ],
+        [
+          "Threats, vulnerabilities, and risk",
+          "A threat is a potential cause of harm; a vulnerability is a weakness that can be exploited; risk combines the likelihood of an adverse event with its impact. An exposed service is not automatically evidence of a breach. Risk assessments document assets, weaknesses, existing controls, potential outcomes, uncertainty, and a treatment decision: reduce, avoid, transfer, or accept.",
+          "A company has an outdated server reachable from the internet. Explain the threat, weakness, consequence and one control.",
+          [
+            "An outdated service is a vulnerability; restricting and patching it reduces risk",
+            "A threat and an asset are exactly the same thing",
+            "Risk can be calculated perfectly without uncertainty"
+          ],
+          0,
+          "Separate the weakness from an actor or event and from the business impact."
+        ],
+        [
+          "Assets, identities, and trust boundaries",
+          "Assets include hardware, software, credentials, intellectual property, customer records, and essential business processes. Identities can represent people, services or devices. A trust boundary is where the level of assumed trust changes—for example, between a public browser and a private company database. Apply least privilege: identities should have only the permissions needed for the task.",
+          "An analytics employee needs read-only access to monthly revenue reports. Choose an appropriate permission.",
+          [
+            "Administrator access to every system",
+            "Read-only access to the approved reports",
+            "Share the CEO's credentials"
+          ],
+          1,
+          "Least privilege reduces damage from mistakes and credential compromise."
+        ],
+        [
+          "Security governance and ethics",
+          "Authorized security work starts with written permission, defined scope, protected data, and a clear reporting process. An organization's acceptable-use rules, contracts and laws matter in addition to technical capability. A researcher who notices a possible weakness should avoid accessing real customer data or broadening testing without authorization. A useful finding describes evidence, limitations, risk, and suggested remediation.",
+          "A website appears vulnerable but you have no permission to test it. What is the professional response?",
+          [
+            "Attempt to access private records to prove the issue",
+            "Follow an approved disclosure process without intrusive testing",
+            "Try the same technique against more sites"
+          ],
+          1,
+          "Permission and scope distinguish professional testing from unauthorized activity."
+        ],
+        [
+          "Defense in depth",
+          "Security controls can prevent, detect, respond to, and recover from incidents. Examples include multifactor authentication, network segmentation, logging, backup restoration tests, and incident playbooks. No single product eliminates every risk. Defense in depth assumes that some controls will eventually fail and creates additional barriers and visibility.",
+          "A stolen password works, but MFA blocks sign-in and alerts the owner. What does this illustrate?",
+          [
+            "One password is sufficient security",
+            "Layered controls can limit a single failure",
+            "Backups replace access controls"
+          ],
+          1,
+          "MFA and alerts provide independent protection and detection."
+        ],
+        [
+          "Evidence, documentation, and reporting",
+          "Good security documentation states what was observed, when, on which authorized system, and under what conditions. Separate observed facts from hypotheses. Preserve evidence carefully, minimize personal data, and avoid attributing intent without support. An executive report should explain business exposure and remediation priorities, while a technical appendix records reproducible but appropriately scoped details.",
+          "You see repeated failed sign-ins. What should your report say?",
+          [
+            "The user is definitely malicious",
+            "Repeated failures were observed; cause remains unconfirmed",
+            "Delete the logs because they might contain usernames"
+          ],
+          1,
+          "Reports should not make unsupported claims about attackers or motive."
+        ]
+      ]
+    },
+    {
+      "title": "Computer and Operating-System Essentials",
+      "lessons": [
+        [
+          "CPU, memory, storage and processes",
+          "A processor executes instructions, RAM holds active working data, and persistent storage keeps information after shutdown. A process is a running program with its own resources. Operating systems schedule processes and control device access. Knowing this model helps explain crashes, performance issues and security boundaries.",
+          "A computer slows when many applications run simultaneously. What resource may be exhausted?",
+          [
+            "Available memory",
+            "File extension length",
+            "Screen brightness"
+          ],
+          0,
+          "Memory pressure can force costly swapping to storage."
+        ],
+        [
+          "Files, directories and permissions",
+          "A file system organizes data into paths and directories. Linux commonly uses a forward slash and an explicit root directory; Windows often uses drive letters. File permissions govern who can read, modify or execute a resource. Access should be tested on a system you control. Do not change real system permissions just to complete a practice exercise.",
+          "A shared report should be readable by a team but not editable by them. Which model fits?",
+          [
+            "Read-only access for the team",
+            "Full administrator privileges for everyone",
+            "Anonymous public write access"
+          ],
+          0,
+          "Read access without write access supports the stated need."
+        ],
+        [
+          "Users, groups and privilege",
+          "A user account represents an identity; groups simplify assignment of permissions. Administrative privileges can change system configuration, so routine work should use less powerful accounts. Privilege elevation should be deliberate, logged when appropriate, and limited to authorized tasks. The principle applies to Windows, Linux, cloud services and databases.",
+          "Which action best follows least privilege?",
+          [
+            "Browse normally as an administrator",
+            "Use a standard account and elevate only when needed",
+            "Share the root password among students"
+          ],
+          1,
+          "Limit privileged operations to approved tasks."
+        ],
+        [
+          "The terminal and command syntax",
+          "A shell accepts structured commands, options and arguments. In a safe teaching environment, pwd displays the current directory, ls lists entries, and cd changes directory. Commands can have side effects, so understand their purpose before running them. This academy begins with a simulated terminal rather than access to your phone or an external machine.",
+          "Which command prints the current directory in a typical Linux shell?",
+          [
+            "pwd",
+            "cd",
+            "rm"
+          ],
+          0,
+          "pwd means print working directory."
+        ],
+        [
+          "Processes and services",
+          "Services provide ongoing functions such as web hosting, authentication and background jobs. A listening service can expose a network endpoint; this is not automatically a vulnerability. Administrators maintain inventories, restrict access, monitor health, and apply patches. Distinguish ordinary service operation from suspicious behavior by examining context and logs.",
+          "An approved web server listens on HTTPS. Which conclusion is justified?",
+          [
+            "The server is definitely compromised",
+            "The service is available; further context is needed to assess risk",
+            "Every open port must be removed immediately"
+          ],
+          1,
+          "Exposure must be evaluated in context."
+        ],
+        [
+          "Backups, updates and recovery",
+          "Patching reduces known weaknesses, but updates require testing and rollback plans. Backups help recover from deletion, ransomware and hardware failure only when they can actually be restored. A useful plan specifies recovery time objective (RTO) and recovery point objective (RPO), tests restores, and protects backup credentials.",
+          "A backup exists but has never been restored in a test. What is the key uncertainty?",
+          [
+            "Whether it can actually recover the data",
+            "Whether the filename ends in .zip",
+            "Whether backups are always unnecessary"
+          ],
+          0,
+          "A tested recovery is stronger evidence than merely having backup files."
+        ]
+      ]
+    },
+    {
+      "title": "Networking and Internet Fundamentals",
+      "lessons": [
+        [
+          "Packets, protocols and layered models",
+          "Networks carry data in packets using agreed protocols. The layered approach separates responsibilities: applications exchange messages, transport protocols manage communication, IP routes across networks, and local link technologies move frames. Layered troubleshooting asks whether the problem is local connectivity, routing, name resolution, transport, or the application.",
+          "A website name does not resolve, but direct connectivity to an approved IP works. Which layer should be examined?",
+          [
+            "DNS/name resolution",
+            "Monitor brightness",
+            "Keyboard layout"
+          ],
+          0,
+          "Name resolution is separate from basic IP reachability."
+        ],
+        [
+          "Addresses, subnets and gateways",
+          "IPv4 addresses identify interfaces, while subnet masks define which addresses are local. A default gateway forwards traffic to other networks. Private address ranges are commonly used internally and do not by themselves identify an internet host. A /24 network contains 256 total IPv4 addresses, usually 254 conventionally usable host addresses.",
+          "On a typical 192.168.10.0/24 network, which device is likely on the local subnet?",
+          [
+            "192.168.10.24",
+            "192.168.11.24",
+            "8.8.8.8"
+          ],
+          0,
+          "The first 24 network bits match for 192.168.10.24."
+        ],
+        [
+          "DNS and domain names",
+          "DNS maps human-readable names to records such as A, AAAA and MX. Resolvers may cache results to improve performance. A DNS answer alone does not prove that a website is trustworthy; attackers can use look-alike names and misleading links. Verify domains carefully, especially before providing credentials.",
+          "Which DNS record typically maps a hostname to an IPv4 address?",
+          [
+            "A",
+            "MX",
+            "TXT"
+          ],
+          0,
+          "An A record points to an IPv4 address."
+        ],
+        [
+          "TCP, UDP and common services",
+          "TCP provides a reliable ordered byte stream, while UDP transports datagrams without guaranteeing delivery or order. Common services include HTTPS, DNS, SSH and email transport. A port number identifies a service endpoint but does not prove which application or security state exists. Firewalls filter traffic using defined policies.",
+          "Which transport is used by conventional HTTPS over HTTP/1.1 or HTTP/2?",
+          [
+            "TCP",
+            "ICMP",
+            "ARP"
+          ],
+          0,
+          "Standard HTTPS uses TLS over TCP; HTTP/3 uses QUIC over UDP."
+        ],
+        [
+          "HTTP, HTTPS and TLS",
+          "HTTP defines web requests and responses; HTTPS protects transport using TLS. TLS helps authenticate the server and encrypt data in transit, but it does not guarantee that a site or its business practices are trustworthy. A web application must still validate input and enforce permissions on the server.",
+          "What does the padlock/HTTPS indicator primarily show?",
+          [
+            "Encrypted transport to the authenticated site",
+            "That every statement on the site is true",
+            "That a website cannot contain malware"
+          ],
+          0,
+          "TLS protects the connection, not all content or application logic."
+        ],
+        [
+          "Network segmentation and monitoring",
+          "Segmentation separates systems by business need and limits unnecessary movement across a network. Monitoring uses logs, metrics and permitted traffic observations to notice anomalies. Establish an approved baseline before investigating: unusual traffic may be caused by backups, updates or other legitimate work. Avoid capturing other people's data without authorization.",
+          "A guest Wi‑Fi network cannot access internal payroll systems. What principle is illustrated?",
+          [
+            "Segmentation",
+            "Unrestricted trust",
+            "Password reuse"
+          ],
+          0,
+          "Separate zones constrain access between networks."
+        ]
+      ]
+    },
+    {
+      "title": "Security Operations and Incident Response",
+      "lessons": [
+        [
+          "Logging and alert triage",
+          "Logs record events such as successful and failed authentication, configuration changes and service errors. Analysts first verify the alert context, time synchronization and affected assets. A single event seldom proves a breach. Prioritize based on asset value, plausible impact and corroborating evidence.",
+          "You see one unsuccessful sign-in. What is the best first step?",
+          [
+            "Declare a confirmed intrusion",
+            "Validate the event and look for additional context",
+            "Delete the account"
+          ],
+          1,
+          "Triage begins with verification and context."
+        ],
+        [
+          "Incident response lifecycle",
+          "A practical lifecycle includes preparation, detection and analysis, containment, eradication, recovery, and post-incident learning. Containment options have business impacts and should follow agreed authority. Preserve relevant evidence and record decisions. Communication should be accurate and proportionate to verified facts.",
+          "An organization confirms malware on an isolated training laptop. What should happen first?",
+          [
+            "Follow its approved containment and evidence plan",
+            "Publicly accuse an employee",
+            "Wipe every production server"
+          ],
+          0,
+          "Follow established incident procedures and scope."
+        ],
+        [
+          "Phishing and social engineering",
+          "Social engineering manipulates people through urgency, authority, fear or curiosity. Defenses include independent verification, MFA, secure reporting channels, and least privilege. Training should not blame victims; systems should make safe choices easy. Evaluate suspicious messages using sender context, links, requests and business process.",
+          "A message demands immediate gift-card purchases from an executive. What is safest?",
+          [
+            "Verify independently through a known channel",
+            "Reply with the requested codes",
+            "Forward to all customers"
+          ],
+          0,
+          "Independent confirmation helps resist impersonation."
+        ],
+        [
+          "Vulnerability management",
+          "A vulnerability program maintains an asset inventory, learns about new issues, assesses exposure, prioritizes fixes, tests patches and validates closure. Severity scores are inputs, not complete business risk assessments. Consider whether the vulnerable component is present, reachable and mission-critical.",
+          "Two equally severe issues exist. Which should generally be prioritized?",
+          [
+            "A confirmed exposed issue on a critical service",
+            "An unused package in an offline lab",
+            "The issue with the longest product name"
+          ],
+          0,
+          "Exposure and impact change practical risk."
+        ],
+        [
+          "Access reviews and audit trails",
+          "Organizations periodically review whether access remains necessary as employees change roles. Audit trails make sensitive actions attributable. Shared admin accounts weaken accountability; individual credentials, MFA, and documented emergency access improve control. Retention and privacy requirements matter when collecting records.",
+          "An employee changes departments. What should happen to old permissions?",
+          [
+            "Review and remove access that is no longer needed",
+            "Keep all historical permissions forever",
+            "Give the employee an admin account"
+          ],
+          0,
+          "Access should follow current job duties."
+        ],
+        [
+          "Security communication and recovery",
+          "Security leaders must translate technical observations into decisions for staff, legal teams and executives. A good update distinguishes confirmed facts, actions taken, remaining uncertainty, customer impact and next checkpoints. Recovery involves validating system integrity, restoring operations and monitoring for recurrence.",
+          "What belongs in an executive incident update?",
+          [
+            "Confirmed facts, impact, response and uncertainty",
+            "Unsupported claims about blame",
+            "Only raw log files"
+          ],
+          0,
+          "Decision makers need reliable, clearly scoped information."
+        ]
+      ]
+    }
+  ]
+}
