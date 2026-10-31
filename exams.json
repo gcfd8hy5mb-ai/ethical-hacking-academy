@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "passingPercent": 80,
   "exams": [
     {
@@ -211,6 +211,212 @@
           ],
           0,
           "Closure requires evidence and acknowledgement of limits."
+        ]
+      ]
+    },
+    {
+      "title": "Enterprise Identity and Linux Administration Exam",
+      "courses": [
+        "Enterprise Identity and Access Management",
+        "Linux System Administration Lab Theory"
+      ],
+      "questions": [
+        [
+          "A service account backs up one project. What permission is most appropriate?",
+          [
+            "Write to the required backup destination only",
+            "Administrator of all cloud resources",
+            "All employee account passwords"
+          ],
+          0,
+          "Service identities should have narrowly scoped privileges."
+        ],
+        [
+          "An employee leaves but active sessions remain. What is required?",
+          [
+            "Revoke applicable sessions and access",
+            "Only change the display name",
+            "Leave shared credentials unchanged"
+          ],
+          0,
+          "Offboarding includes active session and credential lifecycle."
+        ],
+        [
+          "On a typical Linux file, what does mode 640 allow its group?",
+          [
+            "Read but not write",
+            "Full execution and modification",
+            "No access"
+          ],
+          0,
+          "The middle digit 4 represents group read permission."
+        ],
+        [
+          "What is a sensible pre-update control?",
+          [
+            "Backup and test with rollback plan",
+            "Disable every security alert",
+            "Apply changes to production without review"
+          ],
+          0,
+          "Maintenance requires validation and recovery planning."
+        ],
+        [
+          "A service consumes high CPU at its scheduled backup time. Best inference?",
+          [
+            "Investigate context before diagnosing compromise",
+            "It is definitely malware",
+            "Immediately delete the service"
+          ],
+          0,
+          "Resource use alone does not establish intent or infection."
+        ],
+        [
+          "What is a useful access audit record?",
+          [
+            "Grant, approver, purpose, and review date",
+            "Plaintext password",
+            "Unrelated personal documents"
+          ],
+          0,
+          "Audit evidence should explain who authorized access without collecting secrets."
+        ]
+      ]
+    },
+    {
+      "title": "Web Application and Cloud Security Exam",
+      "courses": [
+        "Web Application Security Fundamentals",
+        "Cloud Infrastructure Security"
+      ],
+      "questions": [
+        [
+          "Who must decide whether a student can read another student's grades?",
+          [
+            "Trusted API or database rules",
+            "A hidden browser button",
+            "CSS styling"
+          ],
+          0,
+          "Authorization must be enforced outside user-controlled interfaces."
+        ],
+        [
+          "What reduces database query injection risks?",
+          [
+            "Parameterized queries",
+            "Building SQL by string concatenation",
+            "Disabling every log"
+          ],
+          0,
+          "Data parameters remain separate from query structure."
+        ],
+        [
+          "A browser uses automatically sent session cookies for modifying requests. What threat deserves consideration?",
+          [
+            "Cross-site request forgery",
+            "Keyboard wear",
+            "Monitor refresh rate"
+          ],
+          0,
+          "Ambient credentials require suitable CSRF defenses."
+        ],
+        [
+          "Where should privileged service credentials reside?",
+          [
+            "Restricted server-side secret storage",
+            "Public JavaScript bundle",
+            "Website favicon"
+          ],
+          0,
+          "Client-delivered files cannot safely conceal privileged credentials."
+        ],
+        [
+          "What does RPO describe?",
+          [
+            "Acceptable data loss measured in time",
+            "Maximum CPU frequency",
+            "Identity provider name"
+          ],
+          0,
+          "Recovery point objectives bound tolerated loss of recent updates."
+        ],
+        [
+          "Why separate public materials from private submissions?",
+          [
+            "Different data classes require different access controls",
+            "To change typography",
+            "So everyone can administer the database"
+          ],
+          0,
+          "Classification guides effective grants."
+        ]
+      ]
+    },
+    {
+      "title": "Security Assessment and Executive Reporting Exam",
+      "courses": [
+        "Security Assessment and Reporting Workshop"
+      ],
+      "questions": [
+        [
+          "A production endpoint is not in the authorized assessment scope. What next?",
+          [
+            "Request scope approval and refrain from testing",
+            "Test discreetly",
+            "Assume same brand implies permission"
+          ],
+          0,
+          "Written authorization controls target boundaries."
+        ],
+        [
+          "An analyst has a synthetic screenshot of a denied grade request. What is established?",
+          [
+            "The simulated request was denied",
+            "Every production record is secure",
+            "No software bugs exist"
+          ],
+          0,
+          "Evidence applies only to the observed conditions."
+        ],
+        [
+          "Which finding is most reproducible?",
+          [
+            "Named asset, observed condition, method, impact, and retest",
+            "System insecure",
+            "All users malicious"
+          ],
+          0,
+          "Traceable evidence makes a finding actionable."
+        ],
+        [
+          "A patch was installed. What is necessary for closure?",
+          [
+            "Authorized verification of the original issue and functionality",
+            "Delete the ticket",
+            "Assume all risks vanished"
+          ],
+          0,
+          "Retesting checks the outcome and regressions."
+        ],
+        [
+          "Two findings share a severity score. How should they be prioritized?",
+          [
+            "Exposure and business impact",
+            "Alphabetical order",
+            "Length of vulnerability name"
+          ],
+          0,
+          "Operational risk is contextual."
+        ],
+        [
+          "What does a board-level report need?",
+          [
+            "Options, evidenced impact, tradeoffs, and uncertainty",
+            "Only raw logs",
+            "Guarantee of zero future incidents"
+          ],
+          0,
+          "Executives need decision-ready information."
         ]
       ]
     }
