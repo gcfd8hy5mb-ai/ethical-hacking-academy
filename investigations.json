@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "passingPercent": 80,
+  "investigations": [
+    {
+      "title": "Authentication Alert Investigation",
+      "duration": "45–60 min",
+      "evidence": [
+        "09:00:11 user=maya event=login_failed ip=192.0.2.18",
+        "09:00:48 user=maya event=login_failed ip=192.0.2.18",
+        "09:01:20 user=maya event=login_success ip=192.0.2.18 mfa=passed",
+        "09:04:02 user=maya event=download_report result=allowed",
+        "09:05:15 maintenance_window=started"
+      ],
+      "questions": [
+        [
+          "Which statement is established by the records?",
+          [
+            "One successful login with MFA passed",
+            "The attacker stole a password",
+            "A data breach occurred"
+          ],
+          0,
+          "The log records success with MFA; it cannot identify the person's intent."
+        ],
+        [
+          "What detail needs validation before escalation?",
+          [
+            "Whether the source and report access were expected for Maya",
+            "The page's button styling",
+            "The office's wallpaper"
+          ],
+          0,
+          "Compare with authorized account ownership and expected activity."
+        ],
+        [
+          "Why is the download event not sufficient proof of exfiltration?",
+          [
+            "It records an allowed action, not unauthorized motive or destination",
+            "Every download is harmless",
+            "The MFA record erases all risk"
+          ],
+          0,
+          "Outcome and context determine whether an action is suspicious."
+        ],
+        [
+          "What should the written finding distinguish?",
+          [
+            "Verified events, unknowns and recommended checks",
+            "Assumptions presented as facts",
+            "Private credentials"
+          ],
+          0,
+          "Evidence-based reporting preserves uncertainty."
+        ],
+        [
+          "What is the best immediate action with no other indicators?",
+          [
+            "Continue scoped verification and record the timeline",
+            "Disable all organizational accounts",
+            "Publish the user's records"
+          ],
+          0,
+          "Proportionate investigation avoids needless disruption."
+        ]
+      ]
+    },
+    {
+      "title": "DNS and Connectivity Triage",
+      "duration": "45–60 min",
+      "evidence": [
+        "Device: 192.168.20.44/24, gateway 192.168.20.1",
+        "Wi-Fi association: connected; DHCP lease: valid",
+        "Local gateway: reachable",
+        "training.example.test DNS: lookup failed",
+        "Other approved site by IP: reachable"
+      ],
+      "questions": [
+        [
+          "Which component best matches the failure?",
+          [
+            "Name resolution",
+            "Local Wi-Fi association",
+            "Device display"
+          ],
+          0,
+          "A working local gateway and IP reachability make DNS a sensible next check."
+        ],
+        [
+          "Does the evidence prove an attacker changed DNS?",
+          [
+            "No",
+            "Yes",
+            "Only if the laptop is old"
+          ],
+          0,
+          "A DNS failure has multiple potential causes."
+        ],
+        [
+          "What is a low-impact next action?",
+          [
+            "Check approved resolver configuration and compare with another controlled device",
+            "Reset every router",
+            "Disable all firewalls"
+          ],
+          0,
+          "Start with reversible checks."
+        ],
+        [
+          "What would be useful in an escalation ticket?",
+          [
+            "Address settings, error, timeline, tests and scope",
+            "Unrelated passwords",
+            "Only the word broken"
+          ],
+          0,
+          "Clear observed evidence enables repeatable diagnosis."
+        ],
+        [
+          "What verifies a DNS fix?",
+          [
+            "Expected hostname resolves and the application works again",
+            "The screen color changes",
+            "A user guesses it is fixed"
+          ],
+          0,
+          "Verify both name resolution and the original task."
+        ]
+      ]
+    },
+    {
+      "title": "Shared Folder Access Review",
+      "duration": "45–60 min",
+      "evidence": [
+        "Folder: /Finance/Quarterly",
+        "Policy: finance editors may modify; interns may view approved reports only",
+        "Observed: intern account assigned finance-editors group",
+        "Recent audit: no file changes confirmed",
+        "Owner: finance operations"
+      ],
+      "questions": [
+        [
+          "Which issue is confirmed?",
+          [
+            "An intern has excessive group membership",
+            "Files were stolen",
+            "Every intern altered reports"
+          ],
+          0,
+          "The membership violates the described role policy."
+        ],
+        [
+          "What would be unsupported?",
+          [
+            "Claiming proven data theft",
+            "Reporting the access mismatch",
+            "Requesting review by the owner"
+          ],
+          0,
+          "No file changes are confirmed and read events are not fully described."
+        ],
+        [
+          "What is the least-disruptive corrective direction?",
+          [
+            "Review and remove unnecessary edit membership with approval",
+            "Delete finance reports",
+            "Share the admin password"
+          ],
+          0,
+          "Align permissions to approved duties."
+        ],
+        [
+          "What evidence should be preserved?",
+          [
+            "Membership and policy details with minimal identifying data",
+            "All payroll records",
+            "Every employee password"
+          ],
+          0,
+          "Document configuration without collecting unrelated data."
+        ],
+        [
+          "How is closure verified?",
+          [
+            "Review resulting effective access with an authorized test account",
+            "Assume a ticket closure is enough",
+            "Wait indefinitely"
+          ],
+          0,
+          "Check actual permissions after the change."
+        ]
+      ]
+    },
+    {
+      "title": "Cloud Storage Exposure Review",
+      "duration": "45–60 min",
+      "evidence": [
+        "Synthetic cloud bucket: course-materials-demo",
+        "Declared intent: public examples; private student submissions",
+        "Policy review: broad read grant on bucket root",
+        "No real files are present in this simulation",
+        "Change owner: training platform team"
+      ],
+      "questions": [
+        [
+          "What risk should be escalated?",
+          [
+            "Private submissions may inherit broad read access",
+            "The cloud provider has definitely been breached",
+            "Public examples must never exist"
+          ],
+          0,
+          "The policy may conflict with the privacy classification."
+        ],
+        [
+          "What should be checked before concluding exposure occurred?",
+          [
+            "Effective permissions and object placement in the authorized lab",
+            "An unrelated website",
+            "The app's icon"
+          ],
+          0,
+          "Configuration implications require scoped verification."
+        ],
+        [
+          "What is an appropriate design change?",
+          [
+            "Separate public content from private records and enforce least privilege",
+            "Expose all files for convenience",
+            "Remove audit logging"
+          ],
+          0,
+          "Distinct data classes benefit from separate permission boundaries."
+        ],
+        [
+          "How should evidence be collected?",
+          [
+            "Use synthetic objects and authorized configuration views",
+            "Download real student submissions",
+            "Publicly publish private names"
+          ],
+          0,
+          "Synthetic proof avoids unnecessary data access."
+        ],
+        [
+          "What is a reasonable final report?",
+          [
+            "Observed grant, potential impact, tested controls and limitations",
+            "A guaranteed claim of criminal access",
+            "No remediation plan"
+          ],
+          0,
+          "A defensible report explains both evidence and uncertainty."
+        ]
+      ]
+    }
+  ]
+}
