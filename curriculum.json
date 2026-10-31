@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -1096,6 +1096,160 @@
           ],
           0,
           "Boards need decision-oriented, qualified analysis."
+        ]
+      ]
+    },
+    {
+      "title": "Applied Security Architecture and Threat Modeling",
+      "lessons": [
+        [
+          "Map an application before securing it",
+          "A typical academy application contains a browser, identity provider, server APIs, database, and external integrations. Begin with a data-flow diagram: show each component, the information it sends, and the boundary where trust changes. The same page can have public content and private learner records, but those records need separate authorization controls. Identify who owns each component and how availability failures affect learning.",
+          "A web page sends student grades to an API. Where is the most important authorization boundary?",
+          [
+            "The browser's button color",
+            "The API before accessing grades",
+            "The icon displayed beside the course"
+          ],
+          1,
+          "The server must verify the student's identity and rights before returning records."
+        ],
+        [
+          "Build a simple threat model",
+          "Threat modeling asks what the system is meant to do, what could go wrong, and what controls would reduce harm. Identify assets, legitimate users, entry points, trust boundaries, potential misuse, existing safeguards and residual uncertainty. A threat model is not an accusation that someone attacked the system.",
+          "What is the first reasonable output of a threat-modeling meeting?",
+          [
+            "An inventory of assets and data flows",
+            "A list of people to blame",
+            "A guarantee of zero risk"
+          ],
+          0,
+          "Threat modeling starts with understanding the system."
+        ],
+        [
+          "Protect authentication and session state",
+          "An identity system should establish who is signing in and help limit impersonation. Multifactor authentication, safe recovery, session expiration, and revocation provide different forms of protection. Authentication proves an identity to some confidence level; authorization decides which particular resources that identity may access.",
+          "A legitimate user signs in successfully. What must still happen before returning another student's grades?",
+          [
+            "Nothing else",
+            "A per-resource authorization check",
+            "An animation"
+          ],
+          1,
+          "Being authenticated does not permit access to every resource."
+        ],
+        [
+          "Security logging without oversharing",
+          "Logs can help teams reconstruct events, but excessive logging can expose passwords, session tokens, or sensitive personal information. Log decision-relevant events with useful timestamps, stable event codes and approved retention. Restrict access and verify time synchronization.",
+          "Which is the better authentication log entry?",
+          [
+            "A timestamp, user ID and login outcome",
+            "The user's plaintext password",
+            "A full copy of every session token"
+          ],
+          0,
+          "Security logs should provide useful metadata without collecting secrets."
+        ],
+        [
+          "Design for failure and recovery",
+          "Secure systems must also remain available. Consider a dependency outage, an accidental deletion and an incorrectly configured access rule. Recovery design defines responsibilities, backup frequency, tested restoration procedures and fallback communication. Not all continuity problems are cyberattacks.",
+          "An identity provider is temporarily unavailable. What belongs in the continuity plan?",
+          [
+            "An approved communication and recovery procedure",
+            "Publicly posting administrator credentials",
+            "Removing authorization checks"
+          ],
+          0,
+          "Availability planning must not sacrifice basic access security."
+        ],
+        [
+          "Prioritize controls with a budget",
+          "Good architecture is not a shopping list of tools. Compare risks and choose controls by likely consequence, implementation feasibility, operational cost, and how success can be measured. A small firm may first benefit from MFA, reliable backups, patching and account lifecycle processes rather than specialized products.",
+          "Which investment proposal is best justified?",
+          [
+            "One linking an observed risk to measurable reduction",
+            "The most expensive product automatically",
+            "A promise that incidents cannot happen"
+          ],
+          0,
+          "Controls should address credible risk and have measurable outcomes."
+        ]
+      ]
+    },
+    {
+      "title": "Practical IT Service Operations",
+      "lessons": [
+        [
+          "Create an equipment inventory",
+          "An equipment inventory records the device, owner, business purpose, operating system, software status and support plan. The goal is not to collect needless personal data. Inventories make patching, incident response, warranty decisions and retirement safer.",
+          "What makes a device inventory useful?",
+          [
+            "Owner and software lifecycle details",
+            "Only a decorative name",
+            "The owner's personal passwords"
+          ],
+          0,
+          "Ownership and lifecycle information support maintenance."
+        ],
+        [
+          "Handle an IT support request",
+          "A support ticket should describe symptoms, start time, affected users, environment, steps already tried and business impact. Begin with reversible checks. Record changes and communicate what was actually verified rather than promising a fix before testing.",
+          "A laptop loses internet access. What is a good first action?",
+          [
+            "Record symptoms and check basic connectivity",
+            "Reset every organization router",
+            "Delete the user's files"
+          ],
+          0,
+          "Start with scoped observations and reversible steps."
+        ],
+        [
+          "Plan a maintenance change",
+          "Configuration changes can accidentally interrupt work. A change plan identifies the reason, scope, approvals, time window, expected effect, test procedure and rollback conditions. Small changes still deserve a clear record when they affect critical operations.",
+          "What should be included before an approved firewall rule change?",
+          [
+            "Test plan and rollback procedure",
+            "Only a verbal guess",
+            "Credentials published in a ticket"
+          ],
+          0,
+          "A change is safer when its effect can be verified and reversed."
+        ],
+        [
+          "Learn command-line documentation",
+          "Professional administrators read documentation rather than copy unfamiliar commands blindly. On suitable training machines, help and manual pages explain options, required privileges and side effects. In a browser simulation, interpret outputs without assuming they reflect a real computer.",
+          "What should you do before running an unfamiliar command?",
+          [
+            "Read its documentation and verify its effects",
+            "Run it on a critical server",
+            "Ignore warnings"
+          ],
+          0,
+          "Understand command behavior before execution."
+        ],
+        [
+          "Interpret logs and timestamps",
+          "A log is a sequence of observations, often generated by software. Investigators compare event times, clocks, sources and expected maintenance. A single error message may have several causes. Keep evidence intact while making notes about competing explanations.",
+          "An error happens right after a scheduled update. What should you do?",
+          [
+            "Investigate change history alongside logs",
+            "Conclude an attacker caused it",
+            "Erase the error"
+          ],
+          0,
+          "Correlating events helps distinguish normal operations from incidents."
+        ],
+        [
+          "Escalation and professional communication",
+          "An IT technician should recognize when an issue exceeds their authority or experience. Escalation includes symptoms, evidence, attempted actions, business impact and urgency. Protect sensitive data; don't attach entire customer datasets to tickets without a need.",
+          "What makes a useful escalation?",
+          [
+            "Concise observed facts and actions taken",
+            "A claim that everything is broken",
+            "Unrelated private records"
+          ],
+          0,
+          "Accurate context helps another responder continue the work."
         ]
       ]
     }
