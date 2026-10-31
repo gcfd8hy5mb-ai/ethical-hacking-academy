@@ -29,7 +29,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Cloud Infrastructure Security: 10 introductory lessons
 - Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Thirty-five guided scenario labs include 146 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Eight mastery examinations add 52 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Thirty-five guided scenario labs include 146 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Seventeen mastery examinations include 97 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -110,3 +110,7 @@ The Progress screen now reads locally stored best exam scores and links each exa
 
 ### Per-course knowledge checkpoints
 Each course overview now shows lesson completion and any exams mapped to that course. Where assigned, the knowledge checkpoint requires all authored lessons marked complete and every related exam best score at or above the existing 80% passing threshold. Courses with no assigned exam explicitly show pending rather than automatically passed. This is a locally stored knowledge checkpoint only: it does not gate graduation, grade written portfolios, or certify real-world technical capability.
+
+
+### Nine additional course examinations
+All 26 current courses are now mapped to at least one examination, including nine newly written five-question assessments (45 questions). Existing examination positions and saved score indexes were preserved by appending only. These are short automated knowledge checks with an 80% threshold, not robust proctored final examinations or independent practical qualification.
