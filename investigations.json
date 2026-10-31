@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "passingPercent": 80,
   "investigations": [
     {
@@ -251,6 +251,321 @@
           ],
           0,
           "A defensible report explains both evidence and uncertainty."
+        ]
+      ]
+    },
+    {
+      "title": "Phishing Email Triage",
+      "duration": "45–75 min",
+      "evidence": [
+        "Mock message: From 'Support' <helpdesk@exa-mple.test>",
+        "Subject: URGENT: verify account in 10 minutes",
+        "Link text: Secure Login | destination: https://login.exa-mple.test",
+        "Known company domain in policy: example.test",
+        "No user has opened the message"
+      ],
+      "questions": [
+        [
+          "What is directly observable?",
+          [
+            "A mismatch between the message domain and approved domain",
+            "A confirmed account takeover",
+            "The sender's real-world identity"
+          ],
+          0,
+          "The domain and urgent wording are observable, while compromise is unconfirmed."
+        ],
+        [
+          "What should staff do first?",
+          [
+            "Report and independently access the known company portal",
+            "Submit their password to the link",
+            "Forward login codes"
+          ],
+          0,
+          "Independent navigation avoids reliance on suspicious links."
+        ],
+        [
+          "What is appropriate evidence?",
+          [
+            "Sender address, destination and timestamp",
+            "A coworker's actual password",
+            "A fabricated attacker name"
+          ],
+          0,
+          "Preserve relevant metadata and avoid secrets."
+        ],
+        [
+          "What cannot yet be concluded?",
+          [
+            "That credentials were stolen",
+            "That the message exists",
+            "That the link differs"
+          ],
+          0,
+          "No interaction or subsequent activity is confirmed."
+        ],
+        [
+          "What process improvement helps?",
+          [
+            "Phishing reporting guidance and MFA",
+            "Remove all verification",
+            "Publish employees' contact lists"
+          ],
+          0,
+          "Layered safeguards support prevention and response."
+        ]
+      ]
+    },
+    {
+      "title": "Ransomware Readiness Tabletop",
+      "duration": "45–75 min",
+      "evidence": [
+        "Mock report: Files unavailable on workstation W-04",
+        "Backups: last job successful, restore never tested",
+        "Security monitoring: no confirmed malware indicators",
+        "Operations: payroll deadline in four hours",
+        "Response lead: internal IT incident coordinator"
+      ],
+      "questions": [
+        [
+          "Which diagnosis is justified?",
+          [
+            "Availability issue with unknown cause",
+            "Confirmed ransomware",
+            "Confirmed hardware failure"
+          ],
+          0,
+          "Unavailable files do not identify the root cause."
+        ],
+        [
+          "What immediate response is appropriate?",
+          [
+            "Follow scoped incident triage and protect evidence",
+            "Delete all company backups",
+            "Accuse an employee"
+          ],
+          0,
+          "The incident plan guides proportionate action."
+        ],
+        [
+          "Which recovery uncertainty matters?",
+          [
+            "Whether backups can be restored successfully",
+            "Keyboard model",
+            "Desktop wallpaper"
+          ],
+          0,
+          "Backup-job success is not proof of restorable data."
+        ],
+        [
+          "How should payroll impact be handled?",
+          [
+            "Coordinate continuity priorities with business owners",
+            "Ignore deadlines",
+            "Disable all access policies"
+          ],
+          0,
+          "Impact and recovery decisions require business involvement."
+        ],
+        [
+          "What belongs in the incident update?",
+          [
+            "Confirmed outage, hypotheses, actions and unresolved facts",
+            "Invented attacker attribution",
+            "An unconditional recovery guarantee"
+          ],
+          0,
+          "Decision-makers need verified facts and limits."
+        ]
+      ]
+    },
+    {
+      "title": "Cloud Credential Exposure",
+      "duration": "45–75 min",
+      "evidence": [
+        "Synthetic repository change includes a string labeled SERVICE_ADMIN_PRIVATE_KEY",
+        "Repository is public in this fictional case",
+        "The secret was removed in the next commit",
+        "No key revocation record is present",
+        "Owner: application security team"
+      ],
+      "questions": [
+        [
+          "What is the primary concern?",
+          [
+            "The key may remain usable despite file removal",
+            "The repository color scheme",
+            "The label guarantees harmlessness"
+          ],
+          0,
+          "A public commit can remain accessible after later edits."
+        ],
+        [
+          "Which action is urgent?",
+          [
+            "Revoke or rotate the potentially exposed key",
+            "Only rename the file",
+            "Turn off all monitoring"
+          ],
+          0,
+          "Invalidation is needed to address credential exposure."
+        ],
+        [
+          "What should investigators check?",
+          [
+            "Authorized key use logs and effective permissions",
+            "Every stranger's private files",
+            "Unrelated student grades"
+          ],
+          0,
+          "Scope the impact of a potentially compromised identity."
+        ],
+        [
+          "What is a preventative measure?",
+          [
+            "Server-side secret storage and scanning in development",
+            "Hard-code privileged tokens in browser JavaScript",
+            "Share admin keys with students"
+          ],
+          0,
+          "Protect privileged credentials outside public source."
+        ],
+        [
+          "What finding language is accurate?",
+          [
+            "Public exposure observed; unauthorized use not established",
+            "Definite attacker access proven",
+            "No risk because the file was deleted"
+          ],
+          0,
+          "Separate exposure from demonstrated misuse."
+        ]
+      ]
+    },
+    {
+      "title": "Patch Priority Board Exercise",
+      "duration": "45–75 min",
+      "evidence": [
+        "Asset A: internet-facing customer portal, known vulnerable component, owner confirmed",
+        "Asset B: offline disposable training machine, same weakness",
+        "Asset C: payroll workstation, update pending and compensating controls active",
+        "Resources: one maintenance window available",
+        "No exploit attempts are confirmed"
+      ],
+      "questions": [
+        [
+          "Which asset merits early attention?",
+          [
+            "Internet-facing customer portal",
+            "Offline disposable training machine",
+            "Decorative office display"
+          ],
+          0,
+          "Exposure and business criticality affect priority."
+        ],
+        [
+          "What other input is needed?",
+          [
+            "Service impact and tested change plan",
+            "Only alphabetical hostname order",
+            "Employee favorite colors"
+          ],
+          0,
+          "Operations and recovery must be considered."
+        ],
+        [
+          "What should a change record include?",
+          [
+            "Owner, window, rollback and verification",
+            "Passwords in plain text",
+            "A promise of no incidents"
+          ],
+          0,
+          "Accountability and verification support safe patching."
+        ],
+        [
+          "What does no observed exploit activity imply?",
+          [
+            "No activity was confirmed in reviewed evidence",
+            "No attack is possible",
+            "All vulnerabilities are fixed"
+          ],
+          0,
+          "Absence of evidence is not proof of safety."
+        ],
+        [
+          "When is the patch issue closed?",
+          [
+            "After version and functionality verification",
+            "When someone says the job started",
+            "When the ticket changes title"
+          ],
+          0,
+          "Verify both security condition and service health."
+        ]
+      ]
+    },
+    {
+      "title": "Incident Communication and Board Brief",
+      "duration": "45–75 min",
+      "evidence": [
+        "A fictional company's customer portal has experienced 50 minutes of intermittent errors",
+        "Monitoring confirms elevated error rate",
+        "Root cause remains unknown",
+        "A temporary traffic-routing change improved availability",
+        "No data loss has been confirmed"
+      ],
+      "questions": [
+        [
+          "What should executives hear first?",
+          [
+            "Confirmed impact and actions with stated uncertainty",
+            "An unsupported attack attribution",
+            "Every raw system log"
+          ],
+          0,
+          "Lead with verified operational consequences."
+        ],
+        [
+          "How should the cause be described?",
+          [
+            "Not yet determined",
+            "Definitely malicious",
+            "Definitely user error"
+          ],
+          0,
+          "Avoid unsupported conclusions."
+        ],
+        [
+          "What is the proper next checkpoint?",
+          [
+            "Validate service stability and investigate root cause",
+            "Delete incident notes",
+            "Promise perfect availability"
+          ],
+          0,
+          "Recovery requires ongoing verification."
+        ],
+        [
+          "Which statement about data is supported?",
+          [
+            "No data loss has been confirmed",
+            "Data loss is impossible",
+            "Every customer record was stolen"
+          ],
+          0,
+          "The evidence only establishes the current confirmation status."
+        ],
+        [
+          "What should the final report include?",
+          [
+            "Timeline, impact, decisions, evidence and improvement actions",
+            "Only blame",
+            "Unrelated credentials"
+          ],
+          0,
+          "A learning review should support future resilience."
         ]
       ]
     }
