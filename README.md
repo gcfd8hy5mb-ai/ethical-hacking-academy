@@ -29,7 +29,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Cloud Infrastructure Security: 10 introductory lessons
 - Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Thirty-five guided scenario labs include 146 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Seven mastery examinations add 44 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **198 authored lessons across twenty-six courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Thirty-five guided scenario labs include 146 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Eight mastery examinations add 52 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -94,3 +94,7 @@ Expanded 36 existing lessons with distinct technical explanations and applied re
 
 ### Applied workshop expansion
 Sixty-six existing lessons across eleven foundation, security, networking and programming courses now include an additional scenario-based workshop prompt. These workshops use a common evidence-analysis structure adapted by course. They are ungraded written practice prompts embedded in lesson text, not full independent technical labs. Total lessons remain 198; completion-hour targets are aspirational and not yet backed by audited authored workloads.
+
+
+### Windows, Linux and networking independent practice
+Four new written portfolio workbooks (Windows baseline, Windows event logs, small-network troubleshooting and Linux permissions) provide 90–150 minute study tasks, evidence-based deliverables and 100-point self-review rubrics. There are now eight written assignments. A new eight-question integrated mastery exam brings total examinations to eight and exam questions to 52. Workbook drafts are saved locally on the browser, and written submissions are not automatically graded; hands-on computer access is not required for these synthetic cases.
