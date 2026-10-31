@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "assignments": [
     {
       "title": "Executive Security Risk Register",
@@ -524,6 +524,134 @@
         ]
       ],
       "reference": "Use the fictional evidence only. A strong response shows calculations or observations, separates hypotheses from facts, specifies what is authorized, and defines a reproducible verification step."
+    },
+    {
+      "title": "Weekend Security Operations Capstone",
+      "course": "Security Operations and Incident Response",
+      "duration": "4–6 hours across a weekend",
+      "scenario": "An invented organization reports elevated login failures, a scheduled application deployment, and customer portal errors. You are assigned to review only the supplied synthetic logs.",
+      "tasks": [
+        "Prepare a consolidated timeline and label every event by source and time zone.",
+        "Separate confirmed events from hypotheses and identify at least four missing facts.",
+        "Draft a triage decision tree with escalation thresholds and stop conditions.",
+        "Propose a minimal evidence-collection plan and privacy protections.",
+        "Write a 400–600-word executive incident update plus a technical appendix."
+      ],
+      "rubric": [
+        [
+          "Evidence chronology",
+          25
+        ],
+        [
+          "Investigative reasoning",
+          25
+        ],
+        [
+          "Authorized response plan",
+          25
+        ],
+        [
+          "Executive and technical writing",
+          25
+        ]
+      ],
+      "reference": "The exercise is based only on fictional evidence. Clearly distinguish observations from assumptions, do not claim to have tested external systems, and describe the specific verification evidence needed before closing a finding."
+    },
+    {
+      "title": "Windows and Linux Access Governance Capstone",
+      "course": "Enterprise Identity and Access Management",
+      "duration": "4–6 hours across a weekend",
+      "scenario": "A fictional retailer operates Windows workstations and a Linux reporting service. Three employees changed departments and a contractor left, but the simulated access inventory has not been reviewed.",
+      "tasks": [
+        "Build a role-to-resource matrix including standard, elevated and service accounts.",
+        "Identify four conflicts between actual access and approved business duties.",
+        "Define an offboarding and session-revocation checklist.",
+        "Write a safe change and rollback plan for correcting excessive permissions.",
+        "Prepare a formal audit memo with verification criteria and residual risk."
+      ],
+      "rubric": [
+        [
+          "Permission accuracy",
+          25
+        ],
+        [
+          "Lifecycle and governance",
+          25
+        ],
+        [
+          "Change safety",
+          25
+        ],
+        [
+          "Audit documentation",
+          25
+        ]
+      ],
+      "reference": "The exercise is based only on fictional evidence. Clearly distinguish observations from assumptions, do not claim to have tested external systems, and describe the specific verification evidence needed before closing a finding."
+    },
+    {
+      "title": "Web and Cloud Trust Boundary Capstone",
+      "course": "Web Application Security Fundamentals",
+      "duration": "4–6 hours across a weekend",
+      "scenario": "A fictional learning application serves public course pages and private grades from a cloud API. Synthetic tests show a student can request another student's grade using an altered identifier.",
+      "tasks": [
+        "Draw a data-flow diagram identifying the browser, identity provider, API and database.",
+        "Describe exactly where authentication and per-object authorization checks belong.",
+        "Propose test cases for allowed and denied access with synthetic accounts.",
+        "Design privacy-aware event records and a remediation verification process.",
+        "Write a 500-word finding and a short product-owner recommendation."
+      ],
+      "rubric": [
+        [
+          "Architecture and boundaries",
+          25
+        ],
+        [
+          "Correct authorization",
+          25
+        ],
+        [
+          "Controlled testing and logging",
+          25
+        ],
+        [
+          "Professional reporting",
+          25
+        ]
+      ],
+      "reference": "The exercise is based only on fictional evidence. Clearly distinguish observations from assumptions, do not claim to have tested external systems, and describe the specific verification evidence needed before closing a finding."
+    },
+    {
+      "title": "Ethical Hacking Lab Engagement Capstone",
+      "course": "Safe Authorized Assessment Methodology",
+      "duration": "4–6 hours across a weekend",
+      "scenario": "A training company authorizes a review of one isolated mock application and one disposable Linux virtual machine. Its production website and all neighboring networks are excluded.",
+      "tasks": [
+        "Write a rules-of-engagement document naming scope, constraints and stop conditions.",
+        "Create an asset and data classification inventory from the supplied scenario.",
+        "Define three narrow, falsifiable security test hypotheses.",
+        "Develop an evidence log template and severity triage criteria.",
+        "Submit a final 400–600-word assessment report with remediation and retest plans."
+      ],
+      "rubric": [
+        [
+          "Scope and ethics",
+          25
+        ],
+        [
+          "Hypothesis quality",
+          25
+        ],
+        [
+          "Evidence and prioritization",
+          25
+        ],
+        [
+          "Remediation and retest",
+          25
+        ]
+      ],
+      "reference": "The exercise is based only on fictional evidence. Clearly distinguish observations from assumptions, do not claim to have tested external systems, and describe the specific verification evidence needed before closing a finding."
     }
   ]
 }
