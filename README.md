@@ -47,4 +47,4 @@ Four fictional multi-stage investigations add 20 graded decisions using syntheti
 
 
 ## Curriculum depth status
-The 50 lessons in the newest enterprise security batch are introductory instructional modules with a shared evidence-based practice framework. They are not full-length lectures or hands-on examinations. Future development must deepen each topic with unique technical examples, extended practice, and graded assessments before professional-level equivalence can be claimed.
+The 50 lessons in the enterprise security batch now include topic-specific explanatory material and worked scenarios. They are not full-length lectures or hands-on examinations. Future development must still add extended practical exercises, multi-question problem sets and independent graded assessments before professional-level equivalence can be claimed.
