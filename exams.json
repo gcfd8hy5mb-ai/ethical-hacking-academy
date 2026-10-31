@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "passingPercent": 80,
   "exams": [
     {
@@ -417,6 +417,94 @@
           ],
           0,
           "Executives need decision-ready information."
+        ]
+      ]
+    },
+    {
+      "title": "Ethical Hacking Hardware Knowledge Examination",
+      "courses": [
+        "Ethical Hacking Hardware Foundations"
+      ],
+      "questions": [
+        [
+          "A hardware tool is capable of radio transmission. What determines whether a specific use is permissible?",
+          [
+            "Applicable law, authorized scope and operating constraints",
+            "Its retail price",
+            "Whether it fits in a pocket"
+          ],
+          0,
+          "Capabilities do not override legal or authorization limits."
+        ],
+        [
+          "Which statement best describes a browser-only hardware exercise?",
+          [
+            "Conceptual simulation, not proof of physical operation",
+            "Validated device calibration",
+            "Completed real-world penetration test"
+          ],
+          0,
+          "Physical skill requires actual supervised equipment work."
+        ],
+        [
+          "A fictional RFID reader accepts any matching card identifier. What's the concern?",
+          [
+            "Identifier-only checks may not prove possession of a protected credential",
+            "Every NFC system works identically",
+            "A public identifier is always secret"
+          ],
+          0,
+          "Cryptographic authentication differs from reading a static ID."
+        ],
+        [
+          "A USB device appears as a new keyboard. Which defensive idea is relevant?",
+          [
+            "Device-control policies and endpoint event review",
+            "Cloud RPO calculations only",
+            "DNS MX records"
+          ],
+          0,
+          "Unexpected peripheral classes are a physical endpoint trust concern."
+        ],
+        [
+          "A sample digital trace changes at 12 μs and 20 μs. What is the interval?",
+          [
+            "8 μs",
+            "32 μs",
+            "240 μs"
+          ],
+          0,
+          "20 minus 12 equals eight microseconds."
+        ],
+        [
+          "An SDR student's antenna is connected but transmission parameters are unknown. What is safest?",
+          [
+            "Use offline synthetic data and verify compliance before live RF tests",
+            "Transmit at maximum power",
+            "Scan unrelated private communications"
+          ],
+          0,
+          "Begin with isolated data and authorized regulatory-compliant procedures."
+        ],
+        [
+          "A firmware package comes from an unverified link. What should the learner do?",
+          [
+            "Verify publisher, provenance and integrity",
+            "Assume a device driver cannot be harmful",
+            "Disable all system protection"
+          ],
+          0,
+          "Firmware is software and may affect device trust."
+        ],
+        [
+          "An approved wired appliance lab connects to a switch. What should be documented?",
+          [
+            "Ports, topology, boundaries, expected traffic and shutdown procedure",
+            "Nearby private passwords",
+            "Unrelated employee profiles"
+          ],
+          0,
+          "A controlled lab needs clear scope and safety controls."
         ]
       ]
     }
