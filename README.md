@@ -86,3 +86,7 @@ Eighteen existing introductory lessons were rewritten with topic-specific explan
 
 ### Foundational coursework expansion — latest batch
 Revised 28 existing lessons with substantive technical explanations and worked reasoning prompts: eight Beginner Linux and Terminal Skills, eight Programming Logic for Security Beginners, six Digital Identity and Everyday Security, and six Security Operations and Incident Response. Original lesson positions and identifiers were retained so previously recorded device-local progress remains associated with the same lessons. These are educational readings, not physical lab competency validations.
+
+
+### Windows, networking, web and cloud instructional depth
+Expanded 36 existing lessons with distinct technical explanations and applied reasoning tasks: Windows Administration and Security (8), Networking Practice and Troubleshooting (8), Web Application Security Fundamentals (10), and Cloud Infrastructure Security (10). All existing lesson positions, quizzes and device-local progress keys were preserved. Work is instructional; longer problem sets and independently evaluated practical mastery remain future work.
