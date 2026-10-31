@@ -122,3 +122,7 @@ Three additional twelve-question cumulative exams cover systems/networking, defe
 
 ### Technical weekend practicum expansion
 Four additional multi-hour written practicums cover Windows endpoint investigation, Linux service diagnosis, cloud IAM access review, and software supply-chain integrity. There are now 19 portfolio assignments. Each includes structured deliverables and a 100-point self-review rubric. These are fictional analytical exercises rather than actual host access, operational virtual machines, instructor grading, or hands-on qualification.
+
+
+### Interactive diagnostic lab prototype
+Three new browser-only diagnostic exercises cover Linux service permissions, Windows sign-in events, and network/DNS troubleshooting. Learners select evidence to reveal, choose diagnoses, recommend a remediation, and receive an objective 7-point score (three critical observations, two points for diagnosis, two for remediation). Best scores are saved locally in a new key; existing progress is unchanged. These are simulations and do not operate a computer or verify real-world skills.
