@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "title": "Linux service outage",
+      "course": "Linux System Administration Lab Theory",
+      "brief": "A simulated report service stopped after a scheduled update. Identify the evidence and choose a safe recovery recommendation.",
+      "commands": [
+        [
+          "status",
+          "reporting.service: failed; exit=1; since 10:04 UTC"
+        ],
+        [
+          "journal",
+          "10:04 reporting: cannot open /var/reports/output: Permission denied"
+        ],
+        [
+          "permissions",
+          "/var/reports/output owner=root group=reports mode=750; service account=reporter; groups=reporter"
+        ],
+        [
+          "disk",
+          "Filesystem 36% used; free space available"
+        ],
+        [
+          "changes",
+          "10:01 package update; 10:03 directory owner changed from reporter to root"
+        ]
+      ],
+      "required": [
+        "status",
+        "journal",
+        "permissions"
+      ],
+      "diagnosis": "permissions",
+      "diagnoses": [
+        [
+          "permissions",
+          "Service lacks required directory access"
+        ],
+        [
+          "disk",
+          "Storage is full"
+        ],
+        [
+          "network",
+          "The internet is offline"
+        ]
+      ],
+      "remediation": [
+        "Restore the approved service access using a reviewed permission change, then retest",
+        "Disable access controls globally",
+        "Delete reporting data"
+      ],
+      "correctRemediation": 0,
+      "explanation": "The mock journal and directory permissions support a permission mismatch. Confirm approved ownership/privileges and verify service plus normal access after a controlled correction."
+    },
+    {
+      "title": "Windows login alert",
+      "course": "Windows Administration and Security",
+      "brief": "A fictional shared Windows PC reports failed authentication. Determine what the evidence supports.",
+      "commands": [
+        [
+          "events",
+          "13:00 login_failed user=student; 13:01 login_failed user=student; 13:06 login_success user=student"
+        ],
+        [
+          "mfa",
+          "13:06 MFA=passed; recovery events=none"
+        ],
+        [
+          "updates",
+          "12:55 Defender signatures updated; no malware alert"
+        ],
+        [
+          "accounts",
+          "student: standard user, enabled; admin: separate account"
+        ],
+        [
+          "network",
+          "Host reachable; no unusual egress recorded in supplied window"
+        ]
+      ],
+      "required": [
+        "events",
+        "mfa",
+        "accounts"
+      ],
+      "diagnosis": "insufficient",
+      "diagnoses": [
+        [
+          "breach",
+          "Account takeover is confirmed"
+        ],
+        [
+          "insufficient",
+          "Only login attempts and success are established; intent unknown"
+        ],
+        [
+          "malware",
+          "A malware infection is confirmed"
+        ]
+      ],
+      "remediation": [
+        "Publish the user's credentials",
+        "Review activity with the account owner and preserve relevant event records",
+        "Disable all Windows accounts"
+      ],
+      "correctRemediation": 1,
+      "explanation": "Authentication records do not establish who performed the action. Scoped review with the owner is proportionate; avoid claiming a breach."
+    },
+    {
+      "title": "DNS and gateway failure",
+      "course": "Networking Practice and Troubleshooting",
+      "brief": "A synthetic training client connects to Wi-Fi, but a course portal hostname does not work.",
+      "commands": [
+        [
+          "ip",
+          "Client 192.168.50.27/24, gateway 192.168.50.1, DNS 192.168.50.53"
+        ],
+        [
+          "gateway",
+          "192.168.50.1 reachable; no packet loss in mock test"
+        ],
+        [
+          "dns",
+          "Lookup training.example.test timed out from 192.168.50.53"
+        ],
+        [
+          "ip-connect",
+          "Approved public test IP reachable"
+        ],
+        [
+          "comparison",
+          "Second approved lab client uses DNS 192.168.50.54 and resolves correctly"
+        ]
+      ],
+      "required": [
+        "ip",
+        "dns",
+        "comparison"
+      ],
+      "diagnosis": "dns",
+      "diagnoses": [
+        [
+          "wifi",
+          "Wi-Fi association is absent"
+        ],
+        [
+          "dns",
+          "Configured DNS resolver is the likely failure point"
+        ],
+        [
+          "http",
+          "The website returned an HTTP 404"
+        ]
+      ],
+      "remediation": [
+        "Verify and correct the authorized resolver setting, then retest DNS and site access",
+        "Reinstall the operating system",
+        "Turn off the organization's firewall"
+      ],
+      "correctRemediation": 0,
+      "explanation": "A valid IP, working gateway and alternate working resolver support a scoped DNS configuration hypothesis."
+    }
+  ]
+}
