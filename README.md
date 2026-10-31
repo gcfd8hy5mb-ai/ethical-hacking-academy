@@ -29,7 +29,7 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Cloud Infrastructure Security: 10 introductory lessons
 - Security Assessment and Reporting Workshop: 10 introductory lessons
 
-Total: **178 authored lessons across twenty-five courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Eleven guided scenario labs include 42 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Six mastery examinations add 36 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **178 authored lessons across twenty-five courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Nineteen guided scenario labs include 82 interactive decision steps, immediate explanations, and device-based completion tracking. Four written portfolio assignments with 100-point evaluation rubrics and saved local drafts have been added. Six mastery examinations add 36 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
@@ -52,3 +52,7 @@ The 50 lessons in the enterprise security batch now include topic-specific expla
 
 ### Latest investigation expansion
 Five new evidence-driven tabletop exercises cover phishing triage, ransomware readiness, exposed cloud credentials, patch prioritization, and executive incident communication. All scenarios are fictional and do not interact with real systems.
+
+
+### New large lab batch
+Eight browser-only exercises (40 decisions) cover subnetting, Linux permissions, enterprise identity, web authorization, cloud recovery, incident timelines, cryptography and risk registers. They use fictional data and do not access live targets.
