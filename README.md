@@ -13,8 +13,11 @@ Original beginner-friendly, ethics-first cybersecurity curriculum and iPhone-com
 - Windows Administration and Security: 8 lessons
 - Networking Practice and Troubleshooting: 8 lessons
 - Programming Logic for Security Beginners: 8 lessons
+- Security Analysis and Professional Practice: 6 lessons
+- Defensive Web and Cloud Fundamentals: 6 lessons
+- Cybersecurity Case Studies and Decision-Making: 6 lessons
 
-Total: **68 authored lessons across ten courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Six additional guided scenario labs include 22 interactive decision steps, immediate explanations, and device-based completion tracking. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
+Total: **86 authored lessons across thirteen courses**. Begin with **Getting Comfortable With Computers** if you have no IT background. Each authored lesson contains core instruction, applied scenario, a graded knowledge check, and an explanation. A simulated terminal offers safe basic command practice. Six additional guided scenario labs include 22 interactive decision steps, immediate explanations, and device-based completion tracking. Three mastery examinations add 18 questions with a passing threshold of 80%, explanations, retakes and saved best scores. Progress currently persists to device localStorage; **Firebase authentication/cloud sync has not been connected for this app yet**.
 
 ## Use
 Open `index.html` from a static host such as GitHub Pages. No API keys, backend, paid AI services, or real target access are required for the initial learning build.
