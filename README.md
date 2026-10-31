@@ -102,3 +102,7 @@ Four new written portfolio workbooks (Windows baseline, Windows event logs, smal
 
 ### Weekend capstones and separate portfolio progress
 Four weekend-length fictional capstone assignments add practical written work in security operations, Windows/Linux access governance, web/cloud boundaries, and authorized engagement planning. Total portfolio assignments: 12. Students can now mark a saved draft as self-reviewed against its rubric, and the Progress screen separately counts nonempty drafts and self-reviews. These states are device-local, not independently graded or part of an enforced graduation requirement. Existing draft keys and lesson progress keys are unchanged.
+
+
+### Course-linked assessment progress
+The Progress screen now reads locally stored best exam scores and links each exam result to its declared course(s). It separately summarizes passed auto-graded examinations (80% threshold), passed investigations (80%) and perfect-score multi-stage decision simulations, alongside lesson completion and self-reviewed portfolio drafts. This is evidence tracking, not a mandatory course graduation gate or verification of hands-on ability. The existing score storage keys were retained and no sign-in or layout design files were changed.
