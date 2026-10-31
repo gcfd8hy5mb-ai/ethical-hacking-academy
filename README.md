@@ -74,3 +74,7 @@ Eight topic-specific modules introduce scope planning, radio compliance, USB tru
 
 ### Hardware configuration and troubleshooting simulations
 Twelve additional browser-only device-specific labs add 48 scored decisions, covering each of the 12 hardware tools in the Hardware Foundations course. They reinforce interface recognition, safe setup, observations and troubleshooting. They are conceptual simulations, not proof of hands-on operational competence.
+
+
+### Device troubleshooting casebooks
+Four additional synthetic multi-stage simulations cover USB device event review, SDR spectrum analysis, RFID authentication design and wired DHCP troubleshooting. Each includes four graded decisions plus a 200–300-word technical report with self-review criteria. There are now eight simulation casebooks with 32 graded decisions in total. Drafts and best scores remain device-local, and written work is not automatically graded. Physical device competence is not certified.
