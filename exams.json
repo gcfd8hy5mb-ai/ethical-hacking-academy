@@ -607,11 +607,11 @@
         [
           "Which memory generally loses contents when power is removed?",
           [
-            "RAM",
             "SSD",
+            "RAM",
             "USB flash storage"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -627,21 +627,21 @@
         [
           "What does a running process represent?",
           [
-            "An executing program",
             "Only a saved file",
-            "A network address"
+            "A network address",
+            "An executing program"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which is a useful first troubleshooting step?",
           [
-            "Record the symptom and resource use",
             "Delete the user account",
+            "Record the symptom and resource use",
             "Assume malware"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -665,11 +665,11 @@
         [
           "What is DNS used for?",
           [
-            "Resolving names to records such as IP addresses",
             "Encrypting a hard drive",
+            "Resolving names to records such as IP addresses",
             "Assigning file permissions"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -685,21 +685,21 @@
         [
           "What commonly forwards traffic between networks?",
           [
-            "A router or gateway",
             "An image editor",
-            "A text file"
+            "A text file",
+            "A router or gateway"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What does HTTP 404 indicate?",
           [
-            "An HTTP server responded but did not find the resource",
             "No packet reached any server",
+            "An HTTP server responded but did not find the resource",
             "A password was stolen"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -723,11 +723,11 @@
         [
           "What starts a threat model?",
           [
-            "Asset and data-flow mapping",
             "Assuming an attacker is present",
+            "Asset and data-flow mapping",
             "Changing passwords without scope"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -743,21 +743,21 @@
         [
           "What is risk prioritization based on?",
           [
-            "Likely impact, exposure and feasibility",
             "Tool price alone",
-            "Logo appearance"
+            "Logo appearance",
+            "Likely impact, exposure and feasibility"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which logging choice is safer?",
           [
-            "Event type and timestamp without secrets",
             "Plaintext session token",
+            "Event type and timestamp without secrets",
             "User password"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -781,11 +781,11 @@
         [
           "What belongs in a help-desk ticket?",
           [
-            "Observed symptoms, scope and actions tried",
             "Unrelated private files",
+            "Observed symptoms, scope and actions tried",
             "A guess presented as certainty"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -801,21 +801,21 @@
         [
           "A device is online but DNS fails. What check is focused?",
           [
-            "Resolver configuration",
             "Wallpaper",
-            "Speaker volume"
+            "Speaker volume",
+            "Resolver configuration"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "When should an issue be escalated?",
           [
-            "When authority or expertise is exceeded",
             "Only after deleting records",
+            "When authority or expertise is exceeded",
             "Never"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -839,11 +839,11 @@
         [
           "What does encryption chiefly protect?",
           [
-            "Confidentiality",
             "Guaranteed uptime",
+            "Confidentiality",
             "The physical screen"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -859,21 +859,21 @@
         [
           "What can a trusted cryptographic digest help verify?",
           [
-            "File integrity",
             "Whether every file is harmless",
-            "The downloader's identity"
+            "The downloader's identity",
+            "File integrity"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What does a signature generally support?",
           [
-            "Integrity and signer verification under trusted keys",
             "Message secrecy alone",
+            "Integrity and signer verification under trusted keys",
             "Backup capacity"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -897,11 +897,11 @@
         [
           "What does a login_failed event establish?",
           [
-            "A recorded unsuccessful attempt",
             "A successful account takeover",
+            "A recorded unsuccessful attempt",
             "Confirmed data theft"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -917,21 +917,21 @@
         [
           "A high alert count always means better detection?",
           [
-            "No, noise may hide important events",
             "Yes, regardless of quality",
-            "Only with red icons"
+            "Only with red icons",
+            "No, noise may hide important events"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What makes an escalation useful?",
           [
-            "Observed evidence and uncertainties",
             "Unsupported attribution",
+            "Observed evidence and uncertainties",
             "Shared passwords"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -955,11 +955,11 @@
         [
           "A production server is outside written scope. What should you do?",
           [
-            "Do not test without permission",
             "Test it briefly",
+            "Do not test without permission",
             "Assume related servers are included"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -975,21 +975,21 @@
         [
           "What belongs in a finding?",
           [
-            "Scope, evidence, impact and fix",
             "Only a dramatic headline",
-            "Confidential raw records"
+            "Confidential raw records",
+            "Scope, evidence, impact and fix"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What should be done with synthetic evidence?",
           [
-            "Label it as simulation",
             "Claim it proves production compromise",
+            "Label it as simulation",
             "Publish real credentials"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1013,11 +1013,11 @@
         [
           "A gateway responds but a hostname fails. What is a targeted check?",
           [
-            "DNS resolution",
             "Keyboard settings",
+            "DNS resolution",
             "File permissions"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1033,21 +1033,21 @@
         [
           "What is 192.168.12.0/24 broadcast address?",
           [
-            "192.168.12.255",
             "192.168.12.1",
-            "192.168.13.255"
+            "192.168.13.255",
+            "192.168.12.255"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What does TCP provide for many apps?",
           [
-            "Reliable ordered byte stream",
             "Guaranteed application security",
+            "Reliable ordered byte stream",
             "DNS ownership"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1071,11 +1071,11 @@
         [
           "What is the result after count=2 then count=count+1?",
           [
-            "3",
             "2",
+            "3",
             "21"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1091,21 +1091,21 @@
         [
           "How many failed entries are in [failed,success,failed]?",
           [
-            "2",
             "3",
-            "1"
+            "1",
+            "2"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What is 3 of 12 as a percentage?",
           [
-            "25%",
             "36%",
+            "25%",
             "3%"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
