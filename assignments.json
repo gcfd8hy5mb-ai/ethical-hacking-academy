@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "assignments": [
     {
       "title": "Executive Security Risk Register",
@@ -652,6 +652,102 @@
         ]
       ],
       "reference": "The exercise is based only on fictional evidence. Clearly distinguish observations from assumptions, do not claim to have tested external systems, and describe the specific verification evidence needed before closing a finding."
+    },
+    {
+      "title": "Systems and Networks Final Project",
+      "course": "Networking Practice and Troubleshooting",
+      "duration": "6–8 hours across a weekend",
+      "scenario": "A fictional company has 192.168.30.0/24 for general staff, 192.168.40.0/24 for finance, and a course portal whose hostname intermittently fails. Only synthetic configuration and error records are available.",
+      "tasks": [
+        "Create a labeled topology diagram with authorized traffic flows and trust boundaries.",
+        "Compute network and broadcast addresses for both /24 networks and distinguish conventional usable ranges.",
+        "Produce a fault tree for gateway, DNS, transport and application-level failures.",
+        "Prioritize five non-disruptive tests and state expected positive/negative results.",
+        "Write a technical incident report and a 300-word executive summary, including uncertainties and retest criteria."
+      ],
+      "rubric": [
+        [
+          "Addressing and network architecture",
+          25
+        ],
+        [
+          "Diagnostic logic",
+          30
+        ],
+        [
+          "Authorized testing controls",
+          20
+        ],
+        [
+          "Technical and executive reporting",
+          25
+        ]
+      ],
+      "reference": "A strong submission identifies independent network layers and does not infer compromise from DNS failures alone."
+    },
+    {
+      "title": "Security Incident Analysis Final Project",
+      "course": "Security Operations and Incident Response",
+      "duration": "6–8 hours across a weekend",
+      "scenario": "Synthetic incidents include three failed sign-ins, one authorized password reset, elevated web errors after a software release, and an untested backup procedure. No evidence confirms malicious access.",
+      "tasks": [
+        "Build a chronologically normalized evidence table with confidence labels.",
+        "Document at least three competing hypotheses and the specific evidence needed to check each.",
+        "Write a proportional detection, escalation and containment decision plan.",
+        "Define recovery verification tests, including a safely controlled backup restoration.",
+        "Prepare a 500–750-word incident briefing with risks, owners and unresolved questions."
+      ],
+      "rubric": [
+        [
+          "Timeline and evidence fidelity",
+          25
+        ],
+        [
+          "Hypothesis quality",
+          25
+        ],
+        [
+          "Response and recovery planning",
+          30
+        ],
+        [
+          "Professional communication",
+          20
+        ]
+      ],
+      "reference": "Do not claim an attacker, a breach, or successful recovery without corroborated evidence."
+    },
+    {
+      "title": "Authorized Security Assessment Final Project",
+      "course": "Safe Authorized Assessment Methodology",
+      "duration": "8–10 hours across a weekend",
+      "scenario": "An owner authorizes review only of a fabricated browser training app and disposable virtual laboratory. Its public production environment and all other devices are out of scope.",
+      "tasks": [
+        "Write the formal scope, authorization, stop conditions and contact procedures.",
+        "Create a data-flow diagram showing authentication, resource authorization and logging.",
+        "Identify four synthetic test hypotheses, including intended success and denial cases.",
+        "Build a findings register with affected asset, observed evidence, likelihood/impact rationale, owner and safe remediation.",
+        "Deliver a 600–900-word professional assessment report and a specific verification/closure plan."
+      ],
+      "rubric": [
+        [
+          "Rules of engagement and ethics",
+          25
+        ],
+        [
+          "Technical architecture and test design",
+          25
+        ],
+        [
+          "Evidence and risk interpretation",
+          25
+        ],
+        [
+          "Quality of report and remediation",
+          25
+        ]
+      ],
+      "reference": "A simulated result cannot certify a production system or real-world penetration-test proficiency."
     }
   ]
 }
