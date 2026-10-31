@@ -16,3 +16,10 @@ jobs:
           node-version: '22'
       - name: Verify desktop integration
         run: node --test tests/desktop-integration.test.cjs
+
+      - name: Install browser testing dependencies
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify desktop browser interactions
+        run: node tests/desktop-browser.cjs
