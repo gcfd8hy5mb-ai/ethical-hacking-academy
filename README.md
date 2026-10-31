@@ -33,3 +33,7 @@ Identity/access architecture; Linux and Windows administration; scripting; web a
 Only test systems you own or are explicitly authorized to assess. All terminal outputs in this first version are simulated and do not execute operating-system commands.
 
 This material is original and is not a university degree or an official certification program.
+
+
+## Evidence investigations
+Four fictional multi-stage investigations add 20 graded decisions using synthetic authentication logs, network data, access reviews and cloud configuration. Each includes answer explanations and local best-score saving. Open them from Practice Lab. These are simulations, not real-world target tests.
