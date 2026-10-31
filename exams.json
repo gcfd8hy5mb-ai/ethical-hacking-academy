@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "passingPercent": 80,
+  "exams": [
+    {
+      "title": "Foundations Mastery Examination",
+      "courses": [
+        "Getting Comfortable With Computers",
+        "Beginner Linux and Terminal Skills",
+        "Digital Identity and Everyday Security"
+      ],
+      "questions": [
+        [
+          "A backup is synced to the same folder and deletes everywhere. What is missing?",
+          [
+            "A versioned independent backup",
+            "A new wallpaper",
+            "An admin password"
+          ],
+          0,
+          "Sync is not necessarily a recoverable backup."
+        ],
+        [
+          "A filename ends in .pdf.exe. What is the most defensible interpretation?",
+          [
+            "Possible executable masquerading as document",
+            "Definitely a PDF",
+            "Already proven malicious"
+          ],
+          0,
+          "Extension alone is not proof of contents, but the final executable extension warrants caution."
+        ],
+        [
+          "What does a simulated terminal's pwd output establish?",
+          [
+            "The simulator's working directory",
+            "The iPhone's actual Linux account",
+            "A discovered router"
+          ],
+          0,
+          "The demo runs in isolated browser logic."
+        ],
+        [
+          "Which is an example of least privilege?",
+          [
+            "Read-only access to needed reports",
+            "Admin rights for every trainee",
+            "Shared root credentials"
+          ],
+          0,
+          "Match permissions to tasks."
+        ],
+        [
+          "Why do unique passwords matter?",
+          [
+            "Breach reuse is contained",
+            "They remove all phishing risk",
+            "They require no recovery plan"
+          ],
+          0,
+          "Credential reuse can spread a compromise."
+        ],
+        [
+          "A message requests a login code urgently. What should you do?",
+          [
+            "Verify independently; do not disclose the code",
+            "Send the code to test the request",
+            "Disable MFA permanently"
+          ],
+          0,
+          "Never treat unsolicited code requests as trustworthy."
+        ]
+      ]
+    },
+    {
+      "title": "Systems and Networks Examination",
+      "courses": [
+        "Windows Administration and Security",
+        "Networking Practice and Troubleshooting",
+        "Programming Logic for Security Beginners"
+      ],
+      "questions": [
+        [
+          "Two machines are 192.168.40.10 and 192.168.40.20 on /24. Are they generally on the same subnet?",
+          [
+            "Yes",
+            "No",
+            "Impossible to know without their passwords"
+          ],
+          0,
+          "Their first 24 IPv4 address bits match."
+        ],
+        [
+          "A name fails to resolve while approved IP connectivity succeeds. Investigate?",
+          [
+            "DNS",
+            "Monitor brightness",
+            "Local printer toner"
+          ],
+          0,
+          "DNS resolves names to connection information."
+        ],
+        [
+          "A process uses high CPU after an update. What next?",
+          [
+            "Identify the process and workload",
+            "Declare confirmed malware",
+            "Erase all files"
+          ],
+          0,
+          "A performance symptom is not proof of compromise."
+        ],
+        [
+          "What is the effect of count = count + 1 when count begins at 3?",
+          [
+            "4",
+            "3",
+            "2"
+          ],
+          0,
+          "Increment the stored value by one."
+        ],
+        [
+          "A web client changes its user role display. Who must verify data access?",
+          [
+            "The trusted server",
+            "Only the page CSS",
+            "Only the browser menu"
+          ],
+          0,
+          "Client controls can be modified and do not establish authorization."
+        ],
+        [
+          "What is a consequence of granting shared administrator credentials?",
+          [
+            "Poor accountability and excess privilege",
+            "Guaranteed security",
+            "Automatic network encryption"
+          ],
+          0,
+          "Individual least-privileged accounts are safer."
+        ]
+      ]
+    },
+    {
+      "title": "Security Operations and Reporting Examination",
+      "courses": [
+        "Cybersecurity Foundations",
+        "Security Operations and Incident Response",
+        "Security Analysis and Professional Practice",
+        "Defensive Web and Cloud Fundamentals",
+        "Cybersecurity Case Studies and Decision-Making"
+      ],
+      "questions": [
+        [
+          "A test host is outside a written scope. What is appropriate?",
+          [
+            "Do not test it without authorization",
+            "Test it silently",
+            "Ask another student to test it"
+          ],
+          0,
+          "Scope defines legitimate activity."
+        ],
+        [
+          "You find one unsuccessful authentication event. What is established?",
+          [
+            "One failure was recorded; cause remains uncertain",
+            "A successful breach",
+            "The user's intent"
+          ],
+          0,
+          "Separate evidence from inference."
+        ],
+        [
+          "What should a professional finding include?",
+          [
+            "Reproducible authorized evidence, impact and remediation",
+            "Unsupported blame",
+            "A public dump of private data"
+          ],
+          0,
+          "Reports should enable safe verification and remediation."
+        ],
+        [
+          "Who typically configures application access in a cloud deployment?",
+          [
+            "The application owner",
+            "Nobody",
+            "Only the chip manufacturer"
+          ],
+          0,
+          "Customer configuration remains part of shared responsibility."
+        ],
+        [
+          "A purported supplier changes banking details via email. What is the safest response?",
+          [
+            "Verify over a known independent channel",
+            "Send payment immediately",
+            "Reply with credentials"
+          ],
+          0,
+          "Out-of-band validation reduces impersonation fraud."
+        ],
+        [
+          "What does a remediation verification establish?",
+          [
+            "Whether the affected condition was actually resolved",
+            "That no future incident is possible",
+            "That no testing is needed"
+          ],
+          0,
+          "Closure requires evidence and acknowledgement of limits."
+        ]
+      ]
+    }
+  ]
+}
