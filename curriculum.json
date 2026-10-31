@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -1250,6 +1250,237 @@
           ],
           0,
           "Accurate context helps another responder continue the work."
+        ]
+      ]
+    },
+    {
+      "title": "Introduction to Defensive Cryptography",
+      "lessons": [
+        [
+          "Why encryption exists",
+          "Encryption converts readable information into a form that requires a key to recover. It protects confidentiality when a device is lost or data passes through an untrusted network. Encryption does not automatically establish who created a message, whether data was modified, or whether an application is safe. Begin by classifying what needs protection and who is authorized to read it.",
+          "A stolen encrypted laptop is recovered by a stranger. What most directly protects the stored data?",
+          [
+            "Strong full-disk encryption with a protected key",
+            "Changing wallpaper",
+            "Renaming folders"
+          ],
+          0,
+          "Encryption helps protect confidentiality when the device is offline."
+        ],
+        [
+          "Symmetric and asymmetric keys",
+          "Symmetric cryptography uses a shared secret key for encryption and decryption. Asymmetric cryptography uses a mathematically related public and private key pair. Public-key techniques help establish keys, verify signatures and support authenticated connections. Neither should be implemented from scratch for a real product: use established, reviewed libraries.",
+          "Which key must remain private in an asymmetric key pair?",
+          [
+            "The private key",
+            "The public key",
+            "A public certificate subject name"
+          ],
+          0,
+          "A private key must remain under the authorized holder's control."
+        ],
+        [
+          "Hashes and integrity",
+          "A cryptographic hash produces a fixed-length digest of input. Hashes can help detect accidental or unauthorized alteration when compared against a trusted reference. They are not encryption: the original data cannot simply be decrypted from a hash. Passwords need special slow password-hashing methods with appropriate salts, not a generic fast hash alone.",
+          "What is a hash useful for?",
+          [
+            "Comparing a downloaded file with a trusted digest",
+            "Decrypting stored files",
+            "Proving every message is authentic without a trusted reference"
+          ],
+          0,
+          "A trusted reference digest helps detect changes."
+        ],
+        [
+          "Digital signatures",
+          "A digital signature allows verification that content was signed using a particular private key and was not altered afterward. Confidence in the signer's identity still depends on a trustworthy process for associating keys with identities. A signature does not hide the message contents.",
+          "Which property does a valid digital signature chiefly support?",
+          [
+            "Integrity and signer authentication within a trusted key system",
+            "Confidentiality by itself",
+            "Unlimited system availability"
+          ],
+          0,
+          "Signatures verify origin and integrity when key trust is established."
+        ],
+        [
+          "TLS certificates and trust",
+          "HTTPS ordinarily uses TLS to protect communications to a server. Certificates link a public key to a domain identity under certificate-validation rules. Browser warnings about invalid certificates should not be casually bypassed, especially when submitting credentials. HTTPS does not certify that every claim on the site is honest.",
+          "A browser warns that a login site's certificate is invalid. Best next action?",
+          [
+            "Stop and verify the site through a trusted route",
+            "Enter a password anyway",
+            "Share the warning with no context"
+          ],
+          0,
+          "Certificate errors can undermine server authentication."
+        ],
+        [
+          "Secrets rotation and recovery",
+          "Keys and credentials have lifecycles: generation, controlled use, storage, rotation and eventual revocation. A leaked credential needs coordinated containment and replacement, not merely deletion from a Git history view. Recovery planning must protect backup keys from loss and unauthorized use.",
+          "A private service key is accidentally committed to a public repository. What should happen?",
+          [
+            "Revoke or rotate the key and investigate possible use",
+            "Only rename the repository",
+            "Leave the key active"
+          ],
+          0,
+          "Removing visible text does not invalidate an exposed credential."
+        ]
+      ]
+    },
+    {
+      "title": "Security Monitoring and Log Analysis",
+      "lessons": [
+        [
+          "Understand event records",
+          "A useful event record states when something happened, which system reported it, what category it belongs to and whether the action succeeded. Some fields can be missing or inconsistent. Analysts must avoid inventing certainty where logs lack evidence. In a fictional log, 'login failed' does not imply that access was obtained.",
+          "What is justified by a record labeled login_failed?",
+          [
+            "An unsuccessful attempt was recorded",
+            "An attacker gained access",
+            "The password database was stolen"
+          ],
+          0,
+          "The event outcome is narrower than assumptions about the actor."
+        ],
+        [
+          "Time windows and correlation",
+          "Correlating events means comparing timestamps and related identifiers across sources. Clocks may use different time zones or drift, so normalize time before building a timeline. A burst of errors after a deployment may be operational rather than malicious. Preserve the source and note uncertainties.",
+          "Two log sources disagree by an hour. What should you check first?",
+          [
+            "Time zones and clock synchronization",
+            "Monitor color",
+            "Employee birthdays"
+          ],
+          0,
+          "Time normalization prevents false timelines."
+        ],
+        [
+          "Build a basic alert rule",
+          "An alert rule identifies events worth investigating, such as unusually frequent failed sign-ins. Thresholds need baselines and may produce false positives. A rule should define the triggering event, time window, expected response and ways to tune noisy behavior. An alert is a prompt to investigate, not proof of compromise.",
+          "An alert fires after five failures. Does it prove malicious activity?",
+          [
+            "No, it requires context",
+            "Yes, every time",
+            "Yes, if the alert is red"
+          ],
+          0,
+          "Thresholds detect patterns but not intent."
+        ],
+        [
+          "Detection versus prevention",
+          "Preventive controls try to stop unwanted actions; detective controls help discover them. MFA can block some unauthorized logins, while authentication logs and alerting help identify attempts. Response and recovery complete the defensive lifecycle. Layering these functions provides stronger resilience.",
+          "Which is primarily a detective control?",
+          [
+            "Reviewing authentication alerts",
+            "A locked server room",
+            "A backup restoration"
+          ],
+          0,
+          "Alert review detects events rather than preventing them."
+        ],
+        [
+          "Triage and escalation",
+          "An analyst verifies an alert, gathers scoped evidence, checks asset importance and considers competing explanations. Escalation should clearly state what is confirmed, what remains unknown and which decisions require an authorized owner. Avoid intrusive investigation beyond the assigned role.",
+          "Which escalation message is best?",
+          [
+            "Observed six failed attempts from one source; no successful login found in reviewed window",
+            "The company is definitely breached",
+            "Everyone must reset every password immediately"
+          ],
+          0,
+          "The first report distinguishes evidence from speculation."
+        ],
+        [
+          "Measure detection quality",
+          "Useful monitoring metrics include time to triage, proportion of meaningful alerts, response completeness and gaps in log coverage. More alerts are not always better; excessive noise can hide important incidents. Evaluation should account for missed detections and unnecessary disruptions.",
+          "What is a warning sign in a monitoring system?",
+          [
+            "High alert volume with little actionable information",
+            "Clear escalation ownership",
+            "Verified time synchronization"
+          ],
+          0,
+          "Noise reduces attention to important events."
+        ]
+      ]
+    },
+    {
+      "title": "Safe Authorized Assessment Methodology",
+      "lessons": [
+        [
+          "Permission before testing",
+          "A security assessment is authorized only within the owner's approved scope. Written rules should define permitted targets, methods, timing, escalation contacts, data handling and stop conditions. Passive observation of public information does not grant permission for intrusive testing. The professional habit is to stop and clarify before expanding work.",
+          "Your lab scope names one test application. You find a related production site. What now?",
+          [
+            "Request authorization before testing the other site",
+            "Assume it is included",
+            "Test outside business hours"
+          ],
+          0,
+          "Scope is explicit and does not automatically extend to related assets."
+        ],
+        [
+          "Inventory an approved target",
+          "Before testing, document an authorized lab's purpose, components, software versions and owners. Prefer provided inventory data over uncontrolled probing. Identify which systems are disposable training resources versus business-critical ones. Record uncertainty in the inventory rather than guessing.",
+          "Which source is safest for a first inventory?",
+          [
+            "A lab-provided system diagram",
+            "Unapproved broad internet scanning",
+            "A guess about neighboring devices"
+          ],
+          0,
+          "Start with approved documentation."
+        ],
+        [
+          "Form a test hypothesis",
+          "A useful hypothesis is narrow and falsifiable: for example, 'this role should not access another user's record.' Define the expected correct behavior, the evidence needed and the permitted test method. Avoid collecting other people's real records to make a demonstration.",
+          "What makes a good authorization test hypothesis?",
+          [
+            "A precise expected access rule",
+            "An assumption that all servers are insecure",
+            "An attempt to retrieve private records"
+          ],
+          0,
+          "Define expected behavior before testing."
+        ],
+        [
+          "Use isolated and simulated labs",
+          "An isolated lab may contain synthetic accounts, fabricated files and resettable services. The isolation protects third parties and makes repeated learning safer. A browser simulation can teach reasoning without executing commands on the phone or sending traffic to targets. Label simulated evidence honestly.",
+          "A browser lab prints a mock network response. What can you claim?",
+          [
+            "The simulator displayed a modeled outcome",
+            "A real external server responded",
+            "A production system was compromised"
+          ],
+          0,
+          "Simulation outputs cannot establish real-world findings."
+        ],
+        [
+          "Handle findings responsibly",
+          "If testing reveals a real issue in scope, preserve the minimum evidence needed, report through the agreed channel and avoid public disclosure without coordination. Severity depends on exposure and impact, not dramatic wording. Protect user data throughout the process.",
+          "A scoped test reveals a possible data-access weakness. Next?",
+          [
+            "Stop intrusive activity and report the minimal evidence",
+            "Download all customer records",
+            "Publish the data online"
+          ],
+          0,
+          "Authorized reporting minimizes unnecessary harm."
+        ],
+        [
+          "Write a validation plan",
+          "After remediation, validate only the agreed condition, test expected functionality and note residual uncertainty. A change can reduce one weakness while introducing another operational issue. Record who approved the verification, what was observed and whether further work is required.",
+          "When is a finding best considered closed?",
+          [
+            "After authorized verification with documented results",
+            "When a developer says 'probably fixed'",
+            "Immediately after editing a report"
+          ],
+          0,
+          "Closure requires evidence, not assumption."
         ]
       ]
     }
