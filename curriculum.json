@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -307,6 +307,261 @@
           ],
           0,
           "Decision makers need reliable, clearly scoped information."
+        ]
+      ]
+    },
+    {
+      "title": "Getting Comfortable With Computers",
+      "lessons": [
+        [
+          "What happens when you open an app",
+          "An application is a program stored on your device. Tapping its icon asks the operating system to load instructions into memory and begin a process. The application may read local files or request data across a network; those are different actions. Your phone manages permissions for features such as camera, photos and location. A useful security habit is noticing which permissions a task actually requires.",
+          "You install a calculator that requests access to contacts. What is the best response?",
+          [
+            "Grant every request automatically",
+            "Question whether contacts are necessary and deny unnecessary access",
+            "Assume every permission is harmless"
+          ],
+          1,
+          "A calculator typically does not require your contact list. Limit permission to a justified need."
+        ],
+        [
+          "Bits, bytes and file sizes",
+          "Computers represent information using binary digits called bits. Eight bits form one byte. Files contain sequences of bytes interpreted according to a format. A text file, a photo and a program may all be stored as bytes but are processed differently. Approximate decimal sizes: 1 kilobyte is 1,000 bytes and 1 megabyte is 1,000,000 bytes; some systems instead use binary units such as KiB and MiB.",
+          "A file contains 8,000 bits. How many bytes does it contain?",
+          [
+            "1,000 bytes",
+            "8,000 bytes",
+            "64,000 bytes"
+          ],
+          0,
+          "Divide bits by eight: 8,000 / 8 = 1,000 bytes."
+        ],
+        [
+          "Files, apps and extensions",
+          "A filename extension often hints at intended format: .txt for plain text, .jpg for a common image format, and .pdf for a document. Extensions can be misleading because a filename is only a label. Opening an unknown attachment may invoke an application or script; inspect the source and type before acting. A folder organizes files; an application uses files to store settings and work.",
+          "An email attachment is called report.pdf.exe. What should you notice?",
+          [
+            "The final extension may indicate an executable",
+            "It must be a harmless PDF",
+            "Renaming makes it trustworthy"
+          ],
+          0,
+          "The final extension can reveal an executable disguised with a document-like name."
+        ],
+        [
+          "Operating systems: iPhone, Windows and Linux",
+          "An operating system manages applications, memory, storage, accounts, devices and access controls. iOS limits app interactions through sandboxing and explicit permissions. Windows and Linux offer different interfaces but perform many of the same underlying jobs. Learning transferable concepts is more important than memorizing one screen layout.",
+          "Which component normally decides whether an app may access protected files?",
+          [
+            "The operating system's permission system",
+            "The screen wallpaper",
+            "The keyboard manufacturer"
+          ],
+          0,
+          "Operating-system access controls enforce application and account permissions."
+        ],
+        [
+          "Local storage versus cloud storage",
+          "Local storage keeps data on your current device. Cloud services store data on remote computers reachable through a network. Synchronization attempts to reconcile changes between locations, while backup preserves a separate recovery copy. A synced deletion may be copied everywhere, so sync is not automatically equivalent to a versioned backup.",
+          "Your file disappears from every synced device. Which control would most help recovery?",
+          [
+            "A separate tested versioned backup",
+            "A brighter display",
+            "More browser tabs"
+          ],
+          0,
+          "Backups with historical versions protect against propagated deletion."
+        ],
+        [
+          "Practicing safely on your phone",
+          "Your iPhone is enough for reading lessons, quizzes and browser simulations. A web-based command simulator can show what a Linux command does without executing it on a real machine. Later, actual operating-system administration and network labs may require a computer or authorized isolated lab. Never test unfamiliar commands against someone else's device or network.",
+          "A simulated terminal prints example files. What can you conclude?",
+          [
+            "The simulation demonstrated the command concept",
+            "Your iPhone ran a real Linux shell",
+            "The simulation discovered devices on your network"
+          ],
+          0,
+          "A simulation illustrates behavior without performing real system operations."
+        ]
+      ]
+    },
+    {
+      "title": "Beginner Linux and Terminal Skills",
+      "lessons": [
+        [
+          "Why professionals use terminals",
+          "A graphical interface presents buttons and menus; a terminal accepts text commands. Both are ways to control a computer. Administrators use terminals for repeatable tasks, troubleshooting and remote management. Commands have a name, optional flags and arguments. In this academy, examples are informational until you enter an authorized lab.",
+          "In `ls -l`, what is `-l`?",
+          [
+            "A command option",
+            "A password",
+            "A website"
+          ],
+          0,
+          "The option changes how the ls command displays directory entries."
+        ],
+        [
+          "The present working directory",
+          "A working directory is the location a process uses to resolve relative paths. On Linux, the command `pwd` prints it. A path starting with `/` is absolute; a path without it is usually interpreted relative to the current directory. Imagine you are in `/home/student`: `notes.txt` refers to a file there unless another path is supplied.",
+          "What does `pwd` normally display?",
+          [
+            "The current directory",
+            "The network password",
+            "Installed antivirus software"
+          ],
+          0,
+          "pwd is short for print working directory."
+        ],
+        [
+          "Listing files and hidden entries",
+          "The Linux command `ls` lists directory entries. `ls -a` also displays dot-prefixed entries, commonly used for configuration. A dot-prefixed file is not encrypted or secure merely because it is hidden from default listings. Never assume a filename alone proves safe contents.",
+          "What does `ls -a` add to an ordinary listing?",
+          [
+            "Dot-prefixed entries",
+            "Administrator rights",
+            "Automatic deletion"
+          ],
+          0,
+          "The -a option includes entries normally omitted by default."
+        ],
+        [
+          "Moving through directories",
+          "The `cd` command changes the working directory. `cd ..` usually moves to its parent; `cd /home/student` specifies an absolute location. An error such as 'No such file or directory' means the target was not found at the given path. Think about where you are before resolving relative names.",
+          "If you are in `/home/student/docs`, where does `cd ..` usually take you?",
+          [
+            "/home/student",
+            "/",
+            "/home/student/docs/docs"
+          ],
+          0,
+          "Two dots refer to the parent directory."
+        ],
+        [
+          "Reading without modifying files",
+          "Commands such as `cat` can print a text file, and `head` can display its first lines. Reading files is safer than modifying or deleting them, but even read access can expose confidential information; permission matters. Never inspect a private file outside an approved assignment.",
+          "Which action is read-only in a normal training directory?",
+          [
+            "Displaying an authorized sample text file",
+            "Deleting a directory",
+            "Changing system accounts"
+          ],
+          0,
+          "Reading an approved file avoids modification but still requires authorization."
+        ],
+        [
+          "Users, permissions and safe defaults",
+          "Linux commonly distinguishes owner, group and others, each with read, write and execute permission bits. `r` permits reading, `w` writing and `x` execution or directory traversal. Changing permissions should be done only when authorized and necessary. A cautious administrator grants the smallest set of permissions that allows a task.",
+          "What permission allows modifying an existing file?",
+          [
+            "Write permission",
+            "Read permission only",
+            "A filename extension"
+          ],
+          0,
+          "Write controls modification; other directory permissions can also affect some operations."
+        ],
+        [
+          "Processes and graceful troubleshooting",
+          "A process is a running instance of a program. A computer can run many processes concurrently. Tools like `ps` show process information; administrators should understand the target and potential effects before stopping anything. Unexpected CPU use might be caused by a legitimate update, not necessarily malware.",
+          "A process uses substantial CPU during an update. What is the appropriate first step?",
+          [
+            "Identify the process and check context",
+            "Immediately shut down every service",
+            "Assume a confirmed attack"
+          ],
+          0,
+          "Context matters before intervention."
+        ],
+        [
+          "Command mistakes and recovery habits",
+          "A terminal may execute commands immediately. Paths, quoting and wildcards can change which files a command affects. Before actions that modify data, check the working directory, confirm the target, and create recoverable backups when appropriate. A safe learner starts with observation commands and a disposable practice environment.",
+          "A command would modify many files. What should you do before running it?",
+          [
+            "Verify its scope and maintain a recovery path",
+            "Run it on a production server to learn faster",
+            "Ignore the working directory"
+          ],
+          0,
+          "Preview consequences and use an isolated lab for risky practice."
+        ]
+      ]
+    },
+    {
+      "title": "Digital Identity and Everyday Security",
+      "lessons": [
+        [
+          "Passwords and password managers",
+          "A password should be unique to each important service so a breach at one provider does not compromise every account. A reputable password manager can generate and store strong random passwords. Length and uniqueness matter more than predictable substitutions. Avoid putting credentials in notes, screenshots or sample coursework.",
+          "Which account setup is most protective?",
+          [
+            "One unique generated password for each service",
+            "The same password with a different final digit",
+            "A shared password for the whole team"
+          ],
+          0,
+          "Uniqueness limits credential reuse after a breach."
+        ],
+        [
+          "Multifactor authentication",
+          "Multifactor authentication adds proof beyond a password. Examples include an authenticator app, a hardware security key or device-based passkey. Some methods resist phishing better than others. Backup recovery methods must also be protected; losing access to every factor can lock you out.",
+          "Why is MFA useful after a password is stolen?",
+          [
+            "An additional proof may block the attacker",
+            "It guarantees no security incident can occur",
+            "It replaces all need for software updates"
+          ],
+          0,
+          "An independent factor reduces the chance a password alone grants access."
+        ],
+        [
+          "Passkeys and account recovery",
+          "Passkeys use public-key cryptography so a service can verify a device-held credential without receiving a reusable password. The private key stays with the user's authenticator. Devices and synced credential providers may offer recovery, but each setup has tradeoffs. Record recovery options and remove access from lost devices when applicable.",
+          "What is a core benefit of passkeys?",
+          [
+            "They can reduce password-based phishing",
+            "They require sharing a private key with websites",
+            "They make device loss impossible"
+          ],
+          0,
+          "The verifier receives proof, not a reusable secret password."
+        ],
+        [
+          "Recognizing fraudulent login pages",
+          "Phishing pages often imitate real services and use urgency or misleading domain names. A convincing logo does not prove authenticity. Instead of following unexpected links, navigate using a known bookmark or official application and verify the actual domain. Report suspicious messages through approved channels.",
+          "A text links to a nearly identical banking domain. What should you do?",
+          [
+            "Open your bank through its known app or bookmark",
+            "Enter your password to test the site",
+            "Forward your login code to the sender"
+          ],
+          0,
+          "Navigate independently and verify the domain before authentication."
+        ],
+        [
+          "App permissions and personal information",
+          "Apps may request access to contacts, microphone, location or files. Permission should match the feature and be periodically reviewed. Companies should collect only information needed for legitimate purposes and protect it appropriately. A request for unrelated sensitive access merits scrutiny.",
+          "A note-taking app requests continuous location access without explanation. What is sensible?",
+          [
+            "Deny it unless you understand a legitimate need",
+            "Grant it because all permissions are required",
+            "Share your account password too"
+          ],
+          0,
+          "Data minimization begins with limiting unnecessary collection."
+        ],
+        [
+          "Security incident reporting at work",
+          "When an employee suspects a security incident, the right process is to report promptly through designated channels, preserve relevant evidence, and follow instructions. Avoid independent forensic activity that could destroy logs or expose more data. Record what actually happened without exaggeration.",
+          "You clicked a suspicious link at work. What should you do?",
+          [
+            "Report it through the approved security process promptly",
+            "Hide it and hope nobody notices",
+            "Delete all company logs"
+          ],
+          0,
+          "Timely reporting helps the response team assess and contain harm."
         ]
       ]
     }
