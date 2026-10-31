@@ -1,0 +1,23 @@
+/* Accessible desktop workspace overlay, scoped to independently loaded script. */
+#academy-desktop-toggle{position:fixed;right:22px;bottom:88px;z-index:900;border:1px solid var(--desktop-accent,#c6a36d);background:#192228;color:#f7eddc;border-radius:12px;padding:12px 17px;box-shadow:0 10px 36px #0007;cursor:pointer;font:600 14px system-ui,sans-serif}
+body.auth-locked #academy-desktop-toggle{display:none!important}
+#academy-desktop-workspace[hidden]{display:none!important}
+#academy-desktop-workspace{position:fixed;inset:0;z-index:901;background:#0b1118f2;color:#f3ede3;overflow:auto;padding:32px;box-sizing:border-box;font-family:system-ui,sans-serif}
+#academy-desktop-workspace *{box-sizing:border-box}
+#academy-desktop-workspace .desk-head{display:flex;justify-content:space-between;align-items:start;gap:16px;max-width:1200px;margin:0 auto 20px}
+#academy-desktop-workspace h2{font:normal 32px Georgia,serif;margin:4px 0 8px;color:#efd19b}
+#academy-desktop-workspace p{line-height:1.55;color:#c5c8c8}
+#academy-desktop-workspace .desk-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,0.85fr);gap:20px;max-width:1200px;margin:auto}
+#academy-desktop-workspace .desk-panel{background:#18242b;border:1px solid #53605c;border-radius:16px;padding:22px;min-width:0}
+#academy-desktop-workspace .desk-panel h3{margin:0 0 16px;color:#e7d5b7}
+#academy-desktop-workspace label{display:block;margin:14px 0 6px;font-weight:600}
+#academy-desktop-workspace input,#academy-desktop-workspace textarea{display:block;width:100%;padding:12px;border:1px solid #687472;border-radius:9px;background:#0b171d;color:#fff;font:15px system-ui,sans-serif}
+#academy-desktop-workspace textarea{min-height:125px;resize:vertical}
+#academy-desktop-workspace button{padding:10px 14px;border:1px solid #a88d63;border-radius:9px;background:#333c40;color:#f7e9cf;cursor:pointer;font:600 14px system-ui,sans-serif}
+#academy-desktop-workspace button:focus-visible,#academy-desktop-toggle:focus-visible{outline:3px solid #ffda8d;outline-offset:3px}
+#academy-desktop-workspace .desk-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+#academy-desktop-workspace .desk-result{white-space:pre-wrap;line-height:1.65;background:#0b171d;padding:18px;border-radius:9px;min-height:85px;overflow-wrap:anywhere}
+#academy-desktop-workspace .desk-terminal{font:14px/1.75 ui-monospace,monospace;color:#b8f2c5;min-height:230px}
+#academy-desktop-workspace .desk-commands{display:flex;gap:8px;flex-wrap:wrap}
+#academy-desktop-workspace .desk-status{min-height:20px;font-size:12px}
+@media(max-width:750px){#academy-desktop-toggle{bottom:80px;right:12px;font-size:12px}#academy-desktop-workspace{padding:18px 12px}#academy-desktop-workspace .desk-main{grid-template-columns:1fr}#academy-desktop-workspace h2{font-size:25px}}
