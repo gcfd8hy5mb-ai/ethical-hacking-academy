@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "disclaimer": "All scenarios are fictional. No commands run against devices or networks.",
   "labs": [
     {
@@ -952,6 +952,194 @@
           ],
           0,
           "Decisions require summarized tradeoffs and factual boundaries."
+        ]
+      ]
+    },
+    {
+      "title": "Portable access and RFID hardware",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "Synthetic training covering Flipper Zero, Proxmark3 and O.MG Cable. No physical device interaction or real traffic.",
+      "steps": [
+        [
+          "A fictional RFID tag displays a public identifier. Does that prove authorization?",
+          [
+            "No, identity and permission differ",
+            "Yes, always",
+            "Only if a tool is expensive"
+          ],
+          0,
+          "Tag identity alone is not authentication."
+        ],
+        [
+          "A mock badge test is documented. What is its evidence boundary?",
+          [
+            "Only the authorized synthetic scenario",
+            "Every real badge system",
+            "Any nearby organization"
+          ],
+          0,
+          "Simulation does not establish production findings."
+        ],
+        [
+          "A cable looks ordinary but is unapproved. Appropriate response?",
+          [
+            "Follow the organization's device policy",
+            "Plug it into a privileged workstation",
+            "Assume it is harmless"
+          ],
+          0,
+          "Physical appearance does not establish trust."
+        ],
+        [
+          "What demonstrates responsible mastery?",
+          [
+            "Accurate limitations, safe setup and reporting",
+            "Unapproved access",
+            "Owning a device"
+          ],
+          0,
+          "A device does not confer authorization."
+        ]
+      ]
+    },
+    {
+      "title": "Wireless security hardware",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "Synthetic training covering WiFi Pineapple, HackRF One and Alfa Wi-Fi Adapter. No physical device interaction or real traffic.",
+      "steps": [
+        [
+          "A mock client connects to a similarly named access point. Priority?",
+          [
+            "Validate network identity and authentication",
+            "Assume every Wi-Fi network is malicious",
+            "Disable all radios globally"
+          ],
+          0,
+          "Verification helps avoid untrusted connections."
+        ],
+        [
+          "What should an introductory radio lab use?",
+          [
+            "Supplied synthetic spectrum traces",
+            "Unauthorized radio transmissions",
+            "Intercepted private communications"
+          ],
+          0,
+          "Safe training preserves spectrum rules and privacy."
+        ],
+        [
+          "What is packet analysis primarily based on?",
+          [
+            "Observed metadata and authorized traffic evidence",
+            "Speculation about a stranger's intent",
+            "Device branding"
+          ],
+          0,
+          "Packet records require careful contextual interpretation."
+        ],
+        [
+          "What is required for any real active wireless assessment?",
+          [
+            "Explicit scope and legal compliance",
+            "Simply owning an adapter",
+            "A nearby open network"
+          ],
+          0,
+          "Permission and regulations apply."
+        ]
+      ]
+    },
+    {
+      "title": "USB and network appliances",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "Synthetic training covering USB Rubber Ducky, Bash Bunny and Shark Jack. No physical device interaction or real traffic.",
+      "steps": [
+        [
+          "An unexpected USB keyboard event appears. Next action?",
+          [
+            "Document and review endpoint telemetry",
+            "Publish personal files",
+            "Assume all automation is malware"
+          ],
+          0,
+          "Investigate scoped observations."
+        ],
+        [
+          "What is the safest training replacement for an automated USB demonstration?",
+          [
+            "Instructor-written harmless pseudocode",
+            "Unapproved device execution",
+            "Borrowing someone else's laptop without asking"
+          ],
+          0,
+          "Simulation teaches concepts without unintended actions."
+        ],
+        [
+          "Where should a wired testing appliance be attached?",
+          [
+            "Only an explicitly approved lab interface",
+            "Any unprotected port",
+            "Any public wall jack"
+          ],
+          0,
+          "Physical connection does not grant consent."
+        ],
+        [
+          "Which result demonstrates sound analysis?",
+          [
+            "Explain event evidence and unresolved uncertainty",
+            "Claim all network traffic is compromised",
+            "Erase records before reporting"
+          ],
+          0,
+          "Evidence and reporting support defensible conclusions."
+        ]
+      ]
+    },
+    {
+      "title": "Microcontrollers and electronic instruments",
+      "course": "Ethical Hacking Hardware Foundations",
+      "context": "Synthetic training covering Raspberry Pi, ESP32 Marauder and Logic Analyzer. No physical device interaction or real traffic.",
+      "steps": [
+        [
+          "What makes a beginner Raspberry Pi network lab appropriate?",
+          [
+            "Isolated systems and permitted services",
+            "Exposed default credentials",
+            "Unrestricted scanning"
+          ],
+          0,
+          "Lab isolation and secure defaults reduce risk."
+        ],
+        [
+          "A microcontroller displays synthetic Bluetooth metadata. What may be concluded?",
+          [
+            "Only the metadata shown in the exercise",
+            "A real device was compromised",
+            "The owner approved testing"
+          ],
+          0,
+          "Synthetic observations do not confer authorization."
+        ],
+        [
+          "What does a logic analyzer measure?",
+          [
+            "Digital signal levels over time",
+            "Employee passwords",
+            "Cloud access roles"
+          ],
+          0,
+          "It records logic-level changes."
+        ],
+        [
+          "What is the correct graduation evidence for physical hardware operation?",
+          [
+            "Observed authorized hands-on competency",
+            "Multiple-choice answers alone",
+            "A purchase receipt"
+          ],
+          0,
+          "Physical proficiency requires actual supervised demonstration."
         ]
       ]
     }
