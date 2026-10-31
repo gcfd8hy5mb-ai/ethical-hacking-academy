@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "disclaimer": "All scenarios are fictional. No commands run against devices or networks.",
   "labs": [
     {
@@ -261,6 +261,241 @@
           ],
           0,
           "Authorization belongs on the server."
+        ]
+      ]
+    },
+    {
+      "title": "Analyze a fictional sign-in timeline",
+      "course": "Security Monitoring and Log Analysis",
+      "context": "Mock records: 09:00 login_failed user A; 09:01 login_failed user A; 09:02 login_success user B; 09:05 software deployment began. No real accounts are involved.",
+      "steps": [
+        [
+          "Which event shows confirmed successful authentication?",
+          [
+            "09:02 login_success user B",
+            "09:00 login_failed user A",
+            "09:05 deployment began"
+          ],
+          0,
+          "Only the success event confirms the recorded authentication outcome; it does not prove broader compromise."
+        ],
+        [
+          "What is justified about user A?",
+          [
+            "Two failed sign-ins were recorded",
+            "Their account was breached",
+            "They attacked the system"
+          ],
+          0,
+          "Failures alone do not establish intent or account compromise."
+        ],
+        [
+          "What helps interpret later errors?",
+          [
+            "Compare timestamps with the deployment change record",
+            "Assume malicious activity",
+            "Delete failed login records"
+          ],
+          0,
+          "Correlating approved operational change information avoids premature conclusions."
+        ],
+        [
+          "Best analyst summary?",
+          [
+            "Two failures for A, one success for B, and a later deployment; root cause unknown",
+            "A confirmed coordinated attack",
+            "Every account was compromised"
+          ],
+          0,
+          "Communicate verified observations and uncertainty."
+        ]
+      ]
+    },
+    {
+      "title": "Make a cloud access decision",
+      "course": "Applied Security Architecture and Threat Modeling",
+      "context": "A fictional training portal stores private grades in a cloud database. A browser requests a grade record using a student ID.",
+      "steps": [
+        [
+          "Where must the access decision occur?",
+          [
+            "At the trusted API or database security layer",
+            "Only in the browser menu",
+            "Only in stylesheet rules"
+          ],
+          0,
+          "Client-side controls can be changed by users."
+        ],
+        [
+          "A student asks for another student's record. What should happen?",
+          [
+            "Reject unless explicitly authorized",
+            "Return it because the caller logged in",
+            "Use the identifier as proof of permission"
+          ],
+          0,
+          "Authentication alone is not resource authorization."
+        ],
+        [
+          "What is safe to include in an access-denied log?",
+          [
+            "Time, anonymized account ID, outcome, resource category",
+            "Session token and password",
+            "Entire private grade record"
+          ],
+          0,
+          "Log enough to investigate without exposing secrets."
+        ],
+        [
+          "The service goes offline. What should the team use?",
+          [
+            "An approved recovery and communication plan",
+            "Public administrator passwords",
+            "Disabled permissions"
+          ],
+          0,
+          "Continuity must preserve security controls."
+        ]
+      ]
+    },
+    {
+      "title": "Defensive cryptography decisions",
+      "course": "Introduction to Defensive Cryptography",
+      "context": "A fictional organization needs confidential file storage, verified software downloads, and trusted internal messaging.",
+      "steps": [
+        [
+          "What primarily protects a lost laptop's stored records?",
+          [
+            "Full-disk encryption with protected keys",
+            "Changing filename extensions",
+            "A bright warning screen"
+          ],
+          0,
+          "Encryption protects confidentiality of stored data."
+        ],
+        [
+          "A publisher provides a trusted file digest. What can it help check?",
+          [
+            "Integrity of a downloaded file",
+            "Identity of all downloaders",
+            "Whether the file is free of every bug"
+          ],
+          0,
+          "Compare against an authentic, trusted hash reference."
+        ],
+        [
+          "Which property does a digital signature add?",
+          [
+            "Verification of origin and integrity under trusted keys",
+            "Guaranteed confidentiality",
+            "Unlimited backup capacity"
+          ],
+          0,
+          "Signatures verify authenticity and integrity but do not themselves encrypt content."
+        ],
+        [
+          "A private key is exposed publicly. What is the priority?",
+          [
+            "Revoke or rotate it and investigate exposure",
+            "Change CSS colors",
+            "Leave it active"
+          ],
+          0,
+          "Compromised credentials must be invalidated."
+        ]
+      ]
+    },
+    {
+      "title": "Respond to a simulated supplier fraud alert",
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "context": "Mock invoice email requests a bank change for a $45,000 payment. The sender display name is familiar, but the domain has one extra character.",
+      "steps": [
+        [
+          "What observation matters most?",
+          [
+            "The sender domain differs from the established one",
+            "The email has a logo",
+            "The payment amount has a comma"
+          ],
+          0,
+          "Domain differences can indicate impersonation."
+        ],
+        [
+          "How should finance verify the request?",
+          [
+            "Use an existing trusted contact method",
+            "Call the number in the suspicious message",
+            "Reply with an MFA code"
+          ],
+          0,
+          "Independent channels resist impersonation."
+        ],
+        [
+          "Which action preserves evidence appropriately?",
+          [
+            "Report through approved channels and retain relevant message details",
+            "Publicly post the invoice",
+            "Erase all copies immediately"
+          ],
+          0,
+          "Authorized evidence handling supports investigation."
+        ],
+        [
+          "What should a leadership memo include?",
+          [
+            "Evidence, payment delay tradeoff, verification control and decision owner",
+            "A certain accusation of the supplier",
+            "No uncertainty"
+          ],
+          0,
+          "A professional memo communicates grounded tradeoffs and actions."
+        ]
+      ]
+    },
+    {
+      "title": "Scope an ethical testing engagement",
+      "course": "Safe Authorized Assessment Methodology",
+      "context": "An organization grants written permission to review a synthetic application in an isolated classroom environment only.",
+      "steps": [
+        [
+          "A production server shares the same brand. Is it in scope?",
+          [
+            "No, permission must explicitly include it",
+            "Yes, any related domain is allowed",
+            "Yes, after normal work hours"
+          ],
+          0,
+          "Scope is defined by the authorization."
+        ],
+        [
+          "What makes a useful test hypothesis?",
+          [
+            "A specific expected access rule and a permitted way to check it",
+            "A plan to copy private data",
+            "A claim that every endpoint is vulnerable"
+          ],
+          0,
+          "Hypotheses should be narrow and falsifiable."
+        ],
+        [
+          "A mock lab result suggests improper access. What next?",
+          [
+            "Record the minimum allowed evidence and report it",
+            "Collect unrelated user data",
+            "Publish the data"
+          ],
+          0,
+          "Data minimization and approved reporting protect others."
+        ],
+        [
+          "When can the finding be closed?",
+          [
+            "After approved remediation verification",
+            "When the patch is merely proposed",
+            "When the report title changes"
+          ],
+          0,
+          "Closure should be based on verification."
         ]
       ]
     }
