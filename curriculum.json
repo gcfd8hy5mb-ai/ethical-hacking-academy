@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -865,6 +865,237 @@
           ],
           0,
           "Explanation: Independent server authorization checks. Review the lesson reasoning and apply it only in authorized environments."
+        ]
+      ]
+    },
+    {
+      "title": "Security Analysis and Professional Practice",
+      "lessons": [
+        [
+          "Security scope and rules of engagement",
+          "An authorized assessment begins with a signed statement of scope that identifies systems, permitted activities, testing windows, contacts, and conditions for stopping. Authorization is specific: access to a school lab does not grant access to nearby networks. Before beginning, record who owns the environment and what evidence may be collected.",
+          "A lab permits testing only 192.0.2.0/24. A different host appears interesting. What should you do?",
+          [
+            "Treat it as in scope",
+            "Avoid it and ask for written scope changes",
+            "Test quietly"
+          ],
+          1,
+          "Scope cannot be expanded by curiosity. 192.0.2.0/24 is a documentation-only sample range."
+        ],
+        [
+          "From assets to business impact",
+          "An asset inventory identifies information, systems, owners, dependencies and sensitivity. Analysis then connects a credible event to business consequences: interruption, financial loss, privacy harm and safety risks. A valuable assessment distinguishes an actual observation from an assumption about attack likelihood.",
+          "Which finding is best supported? ",
+          [
+            "The server has a missing patch according to its inventory",
+            "A breach has definitely occurred",
+            "The company will certainly lose $1M"
+          ],
+          0,
+          "A verifiable patch record is evidence; breach claims and exact losses need additional support."
+        ],
+        [
+          "Documenting evidence ethically",
+          "Evidence should show the observed condition, timestamp, affected authorized system and method used. Minimize personal information, avoid altering production data and store records using approved access controls. Screenshots can capture secrets unintentionally; review them before sharing.",
+          "Which evidence practice is appropriate?",
+          [
+            "Capture unnecessary customer records",
+            "Collect only the minimum authorized technical evidence",
+            "Post screenshots publicly"
+          ],
+          1,
+          "Data minimization and controlled sharing protect privacy."
+        ],
+        [
+          "Writing a professional finding",
+          "A useful security finding has a title, scope, evidence, affected asset, risk explanation, practical fix and verification plan. Prioritization considers exposure and business context rather than severity labels alone. Use plain language for decision-makers and technical detail for authorized engineers.",
+          "Which report is most actionable?",
+          [
+            "'System insecure'",
+            "'Observed outdated component X on approved server Y; verify version, patch, retest'",
+            "'Everything is compromised'"
+          ],
+          1,
+          "Specific evidence, impact and remediation support action."
+        ],
+        [
+          "Risk prioritization tradeoffs",
+          "When resources are limited, compare weaknesses by credible exposure, potential consequences, confidence and cost of remediation. High-impact internet-facing issues may warrant attention before isolated lab systems. A risk register should name an owner, treatment, deadline and verification step.",
+          "Two issues have the same severity score. What should break the tie?",
+          [
+            "Exposure, affected asset and business impact",
+            "Alphabetical order only",
+            "Which issue has the longest title"
+          ],
+          0,
+          "Severity is only one input to risk decisions."
+        ],
+        [
+          "Remediation verification and closure",
+          "A finding is not closed simply because someone says the patch is installed. Verify that the vulnerable condition was addressed, necessary functionality remains intact, and compensating controls are documented. If testing is restricted, record the limitation instead of declaring certainty.",
+          "What validates a resolved finding?",
+          [
+            "Authorized retesting and evidence",
+            "A verbal promise alone",
+            "Deleting the original ticket"
+          ],
+          0,
+          "Verification confirms the actual security state."
+        ]
+      ]
+    },
+    {
+      "title": "Defensive Web and Cloud Fundamentals",
+      "lessons": [
+        [
+          "Browser versus server responsibilities",
+          "A browser displays pages and runs client-side code; a server processes requests and controls protected resources. Anything sent to a browser can generally be inspected or modified by its user. Permission checks on buttons are not sufficient; the server must verify each protected request.",
+          "A user hides a paywall button in their browser. What still protects private data?",
+          [
+            "Server-side authorization",
+            "The button color",
+            "A warning message alone"
+          ],
+          0,
+          "Only the trusted backend can reliably enforce access rules."
+        ],
+        [
+          "Input validation and encoding",
+          "Applications accept data from forms, URLs and APIs. Validation checks whether data is structurally and semantically appropriate, while output encoding helps display untrusted text safely in a specific context. The correct defense depends on where the value is used. Never assume all special characters are inherently malicious.",
+          "A comment includes HTML-like characters. What helps display it as text?",
+          [
+            "Context-appropriate output encoding",
+            "Granting admin privileges",
+            "Disabling backups"
+          ],
+          0,
+          "Encoding prevents untrusted text from being interpreted as markup in relevant contexts."
+        ],
+        [
+          "Session cookies and authentication",
+          "After signing in, an application often uses a session or token to associate requests with an account. A session identifier is sensitive and should be protected with appropriate transport and storage controls. Sessions should expire, support revocation and be managed carefully on shared devices.",
+          "Someone signs out of a shared computer. What should the app do?",
+          [
+            "Invalidate the session where possible",
+            "Keep all access active",
+            "Publish the token in the page"
+          ],
+          0,
+          "Revocation limits reuse of an authenticated session."
+        ],
+        [
+          "APIs and least privilege",
+          "An API is a structured way for software to exchange requests and responses. Each sensitive endpoint must validate identity, permissions and input. Avoid embedding privileged service credentials in publicly downloaded browser files; public web configuration is distinct from a private administrator secret.",
+          "What should protect an API that returns payroll data?",
+          [
+            "Server-side access checks per request",
+            "A hidden JavaScript button",
+            "An obscure URL alone"
+          ],
+          0,
+          "A URL or interface control is not authorization."
+        ],
+        [
+          "Cloud responsibility boundaries",
+          "Cloud providers protect parts of the infrastructure while customers configure identities, application access, data handling and many service settings. The precise split depends on whether the service is infrastructure, a managed platform or software. A provider's compliance does not automatically make every customer deployment secure.",
+          "Who typically must configure their application's user permissions?",
+          [
+            "The application owner",
+            "Nobody",
+            "Only the end user's phone manufacturer"
+          ],
+          0,
+          "Shared responsibility leaves many configuration duties with the customer."
+        ],
+        [
+          "Secrets and configuration hygiene",
+          "A secret such as an administrative API key or private signing key must not be put into public repository files. Use approved secret storage, restrict permissions, rotate exposed secrets and monitor usage. Not every public-looking identifier is a secret; evaluate what privilege a value actually grants.",
+          "What belongs in restricted secret storage?",
+          [
+            "A privileged service account private key",
+            "A public web-app display name",
+            "A CSS color code"
+          ],
+          0,
+          "Private credentials grant authority and must be protected."
+        ]
+      ]
+    },
+    {
+      "title": "Cybersecurity Case Studies and Decision-Making",
+      "lessons": [
+        [
+          "Case: suspicious supplier invoice",
+          "A fictional manufacturer receives an urgent payment-change email claiming to be from a supplier. The sender's display name matches previous contacts, but the domain differs. Before paying, the finance team should use an established independent channel, preserve the message and follow its verification policy.",
+          "What is the best first control?",
+          [
+            "Confirm the change via a known supplier contact",
+            "Reply with bank information",
+            "Pay first and investigate later"
+          ],
+          0,
+          "Out-of-band verification addresses impersonation risk."
+        ],
+        [
+          "Case: ransomware and recovery",
+          "A fictional retailer discovers inaccessible files on one workstation. Evidence is incomplete: it might be a storage fault, malware or something else. The response team should use an approved incident plan to determine scope, protect evidence, contain confirmed risks and assess clean backups.",
+          "What should an analyst avoid?",
+          [
+            "Immediately declaring every system compromised",
+            "Following authorized triage",
+            "Preserving evidence"
+          ],
+          0,
+          "Avoid unsupported assumptions and damaging evidence."
+        ],
+        [
+          "Case: cloud storage exposure",
+          "A fictional company learns that a document bucket may be publicly readable. The team must confirm its approved configuration and data sensitivity, restrict unintended access, assess exposure and document response. Do not download customers' private files just to demonstrate the mistake.",
+          "Which action is defensible?",
+          [
+            "Review configuration using authorized administrative tools",
+            "Bulk-download personal records",
+            "Publish sample customer documents"
+          ],
+          0,
+          "Configuration review can establish risk without unnecessary exposure."
+        ],
+        [
+          "Case: hospital system availability",
+          "A hospital's scheduling service experiences outages during peak usage. Security and operations must consider patient care, data integrity and recovery priorities. An availability problem is not automatically an attack; analyze capacity, dependencies, change history and incident indicators.",
+          "What should leadership prioritize?",
+          [
+            "Safety and evidence-based continuity plans",
+            "Speculation about attackers",
+            "Disabling all recovery measures"
+          ],
+          0,
+          "Operational continuity and accurate diagnosis take priority."
+        ],
+        [
+          "Case: former employee access",
+          "An internal audit finds that a departed employee's account still has access to shared documents. The organization should verify account ownership, revoke access through established procedures, review relevant activity and improve offboarding controls.",
+          "What preventive process helps most?",
+          [
+            "Automated access removal tied to offboarding",
+            "Indefinite account retention",
+            "Shared administrator passwords"
+          ],
+          0,
+          "Timely identity lifecycle management reduces lingering access."
+        ],
+        [
+          "Case: board security briefing",
+          "A board asks whether a proposed security investment is worthwhile. A persuasive answer connects observed exposure and business impact to options, tradeoffs, costs and success metrics. Report uncertainty, and avoid presenting compliance checkboxes as proof that all risks are eliminated.",
+          "Which briefing is best?",
+          [
+            "Evidence, alternatives, expected risk reduction and limitations",
+            "A list of unexplained acronyms",
+            "A guarantee of zero risk"
+          ],
+          0,
+          "Boards need decision-oriented, qualified analysis."
         ]
       ]
     }
