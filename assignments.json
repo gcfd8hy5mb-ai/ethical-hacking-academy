@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "assignments": [
+    {
+      "title": "Executive Security Risk Register",
+      "course": "Applied Security Architecture and Threat Modeling",
+      "duration": "60–90 minutes",
+      "scenario": "A fictional 80-person retailer uses a cloud inventory system, payroll, guest Wi-Fi and a shared file drive. The finance manager reports former employees with lingering access; the store manager reports unreliable backups. You have authorization to assess only the fictional descriptions.",
+      "tasks": [
+        "List four business assets and an owner for each.",
+        "Describe three credible risks with threat, weakness and consequence separately.",
+        "Rank risks using likelihood and impact on a qualitative low/medium/high scale, explaining uncertainty.",
+        "Recommend two near-term controls and how management would verify completion.",
+        "Write a 200–350 word executive summary identifying tradeoffs."
+      ],
+      "rubric": [
+        [
+          "Asset and dependency accuracy",
+          20
+        ],
+        [
+          "Risk reasoning and prioritization",
+          30
+        ],
+        [
+          "Control feasibility and verification",
+          30
+        ],
+        [
+          "Communication and ethics",
+          20
+        ]
+      ],
+      "reference": "A good response distinguishes account lifecycle, recoverability and network segmentation; it does not invent evidence of a breach."
+    },
+    {
+      "title": "Help Desk Incident Triage Portfolio",
+      "course": "Practical IT Service Operations",
+      "duration": "60–90 minutes",
+      "scenario": "Fictional employee reports that a company laptop cannot reach the company learning portal. Wi-Fi is connected, other staff can browse normally, and the problem began following a scheduled update. No real network access is provided.",
+      "tasks": [
+        "Write five clarifying questions that avoid collecting passwords.",
+        "Draw or describe a troubleshooting decision tree from device connectivity through DNS and application response.",
+        "Identify three harmless observations and two potentially disruptive changes requiring approval.",
+        "Prepare a concise escalation ticket including facts, unknowns and business impact.",
+        "Design a verification step and rollback decision."
+      ],
+      "rubric": [
+        [
+          "Diagnostic sequence",
+          30
+        ],
+        [
+          "Scope and permission awareness",
+          25
+        ],
+        [
+          "Evidence quality",
+          20
+        ],
+        [
+          "Escalation and verification",
+          25
+        ]
+      ],
+      "reference": "Good answers avoid equating a failed ping with an offline host or blaming the update without confirmation."
+    },
+    {
+      "title": "Web Application Trust Boundary Review",
+      "course": "Defensive Web and Cloud Fundamentals",
+      "duration": "75–120 minutes",
+      "scenario": "A fictional course app sends browser requests to an API for grades. Identity is handled by a third-party authentication provider; course materials are public but individual grades are private.",
+      "tasks": [
+        "Describe a browser-to-API-to-database data-flow diagram.",
+        "Identify authentication versus authorization responsibilities.",
+        "Explain why hiding a button does not protect a grade endpoint.",
+        "Propose an event log that records failures without passwords or session tokens.",
+        "Write a 250-word security review for the product owner."
+      ],
+      "rubric": [
+        [
+          "Architecture and data flow",
+          25
+        ],
+        [
+          "Authorization correctness",
+          35
+        ],
+        [
+          "Privacy-aware logging",
+          20
+        ],
+        [
+          "Professional communication",
+          20
+        ]
+      ],
+      "reference": "The API must evaluate rights to each requested student's record, regardless of browser state."
+    },
+    {
+      "title": "Supplier Fraud Decision Memo",
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "duration": "60–90 minutes",
+      "scenario": "A fictional finance department receives a plausible email asking to change a supplier's bank account before an urgent $45,000 payment. Sender display name matches a known vendor but the domain differs by one character.",
+      "tasks": [
+        "Identify observable evidence versus assumptions.",
+        "Recommend an independent verification process and responsible roles.",
+        "Document how to preserve the message appropriately.",
+        "Create a decision memo comparing payment delay against fraud risk.",
+        "Suggest one process improvement and a metric for effectiveness."
+      ],
+      "rubric": [
+        [
+          "Evidence-based reasoning",
+          25
+        ],
+        [
+          "Fraud safeguards",
+          30
+        ],
+        [
+          "Operational tradeoffs",
+          25
+        ],
+        [
+          "Reporting and recommendations",
+          20
+        ]
+      ],
+      "reference": "Verify through a previously established contact method, not a phone number supplied by the suspicious email."
+    }
+  ]
+}
