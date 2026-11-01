@@ -154,3 +154,7 @@ Expanded 24 existing lessons across beginner Linux, Windows administration and n
 
 ### Practical instruction standardization, batch 25 (November 2026)
 Forty existing lessons in six courses were expanded with topic-specific worked procedures and interpretations: computer basics (6), security analysis and professional practice (6), defensive web/cloud fundamentals (6), safe authorized assessment (6), network reasoning (6), and security reporting (10). The course and lesson order and answer indices were preserved. A structural check confirmed 198 valid lessons and examination mapping for all 26 courses. This remains a first-pass instructional expansion rather than textbook-depth completion, externally reviewed content, or demonstrated hands-on competence; independent browser testing remains outstanding.
+
+
+### Second-pass technical case studies — November 1, 2026
+Added 24 individually authored worked case sections to existing beginner Linux (8), Windows administration (8), and networking troubleshooting (8) lessons, with precise example command behavior, illustrative outputs, uncertainty analysis, independent exercises and an ungraded written evaluation rubric. Course and lesson order stayed fixed so progress keys remain compatible. Structural checks found 0 malformed lesson answers; 26 of 26 courses are mapped to exams. These cases are not live computer exercises, and no browser end-to-end test has been run.
