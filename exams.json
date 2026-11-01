@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "passingPercent": 80,
   "exams": [
     {
@@ -1515,6 +1515,267 @@
           ],
           2,
           "Correct response: Risks, evidence, options, limitations and owners. The other choices either confuse the technology or assert facts without evidence."
+        ]
+      ]
+    },
+    {
+      "title": "Evidence Interpretation and Decision-Making Final",
+      "courses": [
+        "Security Operations and Incident Response",
+        "Security Monitoring and Log Analysis",
+        "Cybersecurity Case Studies and Decision-Making"
+      ],
+      "questions": [
+        [
+          "Synthetic log: 09:00 failed, 09:01 failed, 09:04 success. Which conclusion is justified?",
+          [
+            "Successful compromise has been proven",
+            "Three authentication outcomes were recorded; account intent remains unknown",
+            "No further context is useful"
+          ],
+          1,
+          "Supported answer: Three authentication outcomes were recorded; account intent remains unknown. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "The user reports a lost security key. Which first response respects procedure?",
+          [
+            "Disable all organizational security logging",
+            "Ask for their password in chat",
+            "Verify identity via an approved recovery process"
+          ],
+          2,
+          "Supported answer: Verify identity via an approved recovery process. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A monitoring dashboard's alerts doubled after a rule change. What should be compared?",
+          [
+            "Rule changes, actual events and false-positive rates",
+            "Only the dashboard theme",
+            "The number of employee birthdays"
+          ],
+          0,
+          "Supported answer: Rule changes, actual events and false-positive rates. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A suspected incident and a known software update share a timestamp. What should the analyst write?",
+          [
+            "The update certainly caused a breach",
+            "Temporal association; cause not yet established",
+            "The alert is certainly harmless"
+          ],
+          1,
+          "Supported answer: Temporal association; cause not yet established. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "Which report statement is evidence bounded?",
+          [
+            "All company records have leaked",
+            "No vulnerabilities can exist",
+            "Supplied records show denied requests from a synthetic test account"
+          ],
+          2,
+          "Supported answer: Supplied records show denied requests from a synthetic test account. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A firewall change makes a payroll app unavailable. Which evidence matters before rollback?",
+          [
+            "Approved change record, observed effect and rollback criteria",
+            "The color of the office router",
+            "Personal messages from unrelated users"
+          ],
+          0,
+          "Supported answer: Approved change record, observed effect and rollback criteria. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "Which classification fits an event recorded but not corroborated?",
+          [
+            "Confirmed attacker attribution",
+            "Observation with unresolved interpretation",
+            "Proven customer data loss"
+          ],
+          1,
+          "Supported answer: Observation with unresolved interpretation. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A mock host shows inode use 100% but blocks 40%. What is the best diagnosis?",
+          [
+            "Storage blocks are full",
+            "The keyboard cannot type",
+            "Metadata entry exhaustion may block new files"
+          ],
+          2,
+          "Supported answer: Metadata entry exhaustion may block new files. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A user receives a payment change request from a lookalike domain. What is the appropriate action?",
+          [
+            "Independently verify with a previously known supplier contact",
+            "Send credentials to the sender",
+            "Approve because the subject says urgent"
+          ],
+          0,
+          "Supported answer: Independently verify with a previously known supplier contact. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A log collection has a gap. What follows?",
+          [
+            "Nothing happened during the gap",
+            "The gap limits confidence in conclusions",
+            "An attacker surely deleted logs"
+          ],
+          1,
+          "Supported answer: The gap limits confidence in conclusions. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A report contains a screenshot with a session token. What should be done?",
+          [
+            "Publish the token for transparency",
+            "Email the token widely",
+            "Redact and restrict evidence; consider token handling procedures"
+          ],
+          2,
+          "Supported answer: Redact and restrict evidence; consider token handling procedures. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "What is a meaningful recovery acceptance test?",
+          [
+            "Re-run the original business transaction and validate controls",
+            "Only confirm a reboot occurred",
+            "Close every investigation immediately"
+          ],
+          0,
+          "Supported answer: Re-run the original business transaction and validate controls. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ]
+      ]
+    },
+    {
+      "title": "Cloud Identity and Software Assurance Final",
+      "courses": [
+        "Enterprise Identity and Access Management",
+        "Cloud Infrastructure Security",
+        "Practical IT Service Operations",
+        "Beginner Python Logic and Defensive Automation"
+      ],
+      "questions": [
+        [
+          "A student can read another student's private grade through an API. Where is the primary fix?",
+          [
+            "Hide the profile icon",
+            "Trusted backend per-record authorization",
+            "Rename the grade field"
+          ],
+          1,
+          "Supported answer: Trusted backend per-record authorization. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A read-only reporting service has global administrator rights. What is the risk?",
+          [
+            "Read-only work always requires admin",
+            "Access scope has no effect",
+            "Its permissions exceed the required task"
+          ],
+          2,
+          "Supported answer: Its permissions exceed the required task. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A former contractor still has an active session. What should be verified?",
+          [
+            "Account disablement and actual session revocation across systems",
+            "Only their desktop wallpaper",
+            "Whether their badge photo is updated"
+          ],
+          0,
+          "Supported answer: Account disablement and actual session revocation across systems. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A cloud bucket policy allows all users to read every path. What is the proper review?",
+          [
+            "Keep wildcard grants for simplicity",
+            "Restrict grants to required public objects and verify denied private reads",
+            "Use unpredictable filenames instead of access checks"
+          ],
+          1,
+          "Supported answer: Restrict grants to required public objects and verify denied private reads. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A build's digest mismatches an authenticated expected digest. What is supported?",
+          [
+            "The file is confirmed malware",
+            "All other dependencies are safe",
+            "The obtained content differs from the authenticated reference"
+          ],
+          2,
+          "Supported answer: The obtained content differs from the authenticated reference. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A service token was accidentally placed in client-side code. What should happen?",
+          [
+            "Revoke or rotate exposed credential and move privilege to trusted service",
+            "Only minify the JavaScript",
+            "Assume nobody can read web assets"
+          ],
+          0,
+          "Supported answer: Revoke or rotate exposed credential and move privilege to trusted service. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A recovery plan states RPO 4 hours. What does this describe?",
+          [
+            "Time allowed to reboot the router",
+            "Maximum tolerable recent data loss",
+            "Length of a password"
+          ],
+          1,
+          "Supported answer: Maximum tolerable recent data loss. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A cloud log omits an application trace ID. What improvement helps investigations?",
+          [
+            "Log every password",
+            "Disable retention controls",
+            "Correlatable request identifiers with minimal sensitive content"
+          ],
+          2,
+          "Supported answer: Correlatable request identifiers with minimal sensitive content. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A scripted event count receives an unknown status. What's safest?",
+          [
+            "Record invalid input separately",
+            "Silently treat as success",
+            "Invent a new confirmed attack"
+          ],
+          0,
+          "Supported answer: Record invalid input separately. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A Python counter receives failed, success, failed, unknown. How many valid failed events?",
+          [
+            "Three",
+            "Two",
+            "Four"
+          ],
+          1,
+          "Supported answer: Two. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "An access control change works for administrators. What additional test matters?",
+          [
+            "Whether the login page has a logo",
+            "Whether all users can get admin",
+            "Approved standard user access and denied unauthorized access"
+          ],
+          2,
+          "Supported answer: Approved standard user access and denied unauthorized access. This conclusion follows from the supplied evidence and avoids unsupported certainty."
+        ],
+        [
+          "A production configuration differs from approved code. What should be done?",
+          [
+            "Investigate and document drift before applying a reviewed correction",
+            "Overwrite without backup or approval",
+            "Ignore if the app loads"
+          ],
+          0,
+          "Supported answer: Investigate and document drift before applying a reviewed correction. This conclusion follows from the supplied evidence and avoids unsupported certainty."
         ]
       ]
     }
