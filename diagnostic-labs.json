@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "cases": [
     {
       "title": "Linux service outage",
@@ -486,6 +486,168 @@
       ],
       "correctRemediation": 0,
       "explanation": "Compare the three relevant diagnostic outputs with the stated policy or expected service behavior. The resulting diagnosis is supported only for the synthetic case. Use a scoped change, preserve evidence and verify the original workflow."
+    },
+    {
+      "title": "Intermittent portal availability",
+      "course": "Advanced troubleshooting practicum",
+      "brief": "An isolated mock course portal fails for some users after a configuration change. You have a budget of three evidence requests. Select sources, infer the best-supported cause and choose a safe action.",
+      "commands": [
+        [
+          "client",
+          "Client A gets HTTP 503; client B gets HTTP 200 via the same hostname"
+        ],
+        [
+          "proxy",
+          "Load balancer backend A unhealthy; backend B healthy"
+        ],
+        [
+          "backend",
+          "Backend A reports connection pool exhausted after a deploy"
+        ],
+        [
+          "dns",
+          "Both clients resolve the intended training address"
+        ],
+        [
+          "storage",
+          "Database disk 27% full; no capacity alarm"
+        ]
+      ],
+      "required": [
+        "client",
+        "proxy",
+        "backend"
+      ],
+      "diagnosis": "pool",
+      "diagnoses": [
+        [
+          "dns",
+          "A global DNS outage explains the split results"
+        ],
+        [
+          "pool",
+          "A backend-specific connection pool issue is the likely cause"
+        ],
+        [
+          "disk",
+          "The database disk is exhausted"
+        ]
+      ],
+      "remediation": [
+        "Disable audit logs and wait",
+        "Review deployment and backend pool settings, restore approved baseline, then test both backends",
+        "Make all services public"
+      ],
+      "correctRemediation": 1,
+      "explanation": "The differing backend states and the pool error support a backend-specific fault. DNS is functioning; controlled rollback and verification are appropriate."
+    },
+    {
+      "title": "Unusual backup failure",
+      "course": "Advanced troubleshooting practicum",
+      "brief": "A fictional backup reports success but recovery verification fails. Choose three informative sources and decide whether recovery can be trusted.",
+      "commands": [
+        [
+          "job",
+          "Scheduled snapshot task completed successfully at 02:00"
+        ],
+        [
+          "restore",
+          "Disposable restore test failed: encryption key version unavailable"
+        ],
+        [
+          "keys",
+          "Backup key rotated yesterday; prior key version disabled"
+        ],
+        [
+          "network",
+          "Backup storage connection healthy"
+        ],
+        [
+          "capacity",
+          "Backup destination 61% used"
+        ]
+      ],
+      "required": [
+        "job",
+        "restore",
+        "keys"
+      ],
+      "diagnosis": "key",
+      "diagnoses": [
+        [
+          "key",
+          "Recovery is blocked by unavailable key material despite a completed backup"
+        ],
+        [
+          "storage",
+          "Storage is definitely full"
+        ],
+        [
+          "outage",
+          "Backup storage network is offline"
+        ]
+      ],
+      "remediation": [
+        "Declare recovery verified because snapshot succeeded",
+        "Delete old encrypted archives",
+        "Restore authorized key access under approved recovery controls, then repeat a disposable restore"
+      ],
+      "correctRemediation": 2,
+      "explanation": "A successful backup job does not prove restorability. The failed test and disabled key identify a recovery dependency."
+    },
+    {
+      "title": "Competing sign-in hypotheses",
+      "course": "Advanced troubleshooting practicum",
+      "brief": "A synthetic identity alert looks suspicious, but maintenance and user activity may explain it. Collect three targeted observations and avoid claiming an unproven breach.",
+      "commands": [
+        [
+          "alerts",
+          "Seven failed sign-ins for trainee between 09:00 and 09:03"
+        ],
+        [
+          "owner",
+          "Trainee confirms testing a newly issued password after a scheduled reset"
+        ],
+        [
+          "identity",
+          "09:04 successful sign-in with phishing-resistant MFA from enrolled device"
+        ],
+        [
+          "malware",
+          "No endpoint detection in the supplied inspection window"
+        ],
+        [
+          "network",
+          "No additional IP metadata in available records"
+        ]
+      ],
+      "required": [
+        "alerts",
+        "owner",
+        "identity"
+      ],
+      "diagnosis": "uncertain",
+      "diagnoses": [
+        [
+          "breach",
+          "These logs conclusively prove an attacker compromised the account"
+        ],
+        [
+          "uncertain",
+          "The observed pattern is consistent with authorized reset activity; malicious intent remains unproven"
+        ],
+        [
+          "malware",
+          "Endpoint malware is definitely responsible"
+        ]
+      ],
+      "remediation": [
+        "Record the corroboration, maintain reasonable monitoring and escalate only with new evidence",
+        "Disable the entire company identity system",
+        "Publish the employee's login details"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Owner corroboration and successful MFA suggest a benign explanation; no provided evidence proves a breach. Keep proportionate monitoring and preserve privacy."
     }
   ]
 }
