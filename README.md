@@ -162,3 +162,7 @@ Added 24 individually authored worked case sections to existing beginner Linux (
 
 ### Practical Command Fieldbook (November 2026)
 Added `practical-command-fieldbook.html`, linked from Practice Lab. Six detailed units with 22 read-only command examples cover Linux evidence, network/DNS troubleshooting, Windows event review, Python log parsing, localhost HTTP interpretation and incident evidence. Each includes specific outputs, interpretation limitations, an independent exercise and locally saved notes (`ethical-hacking-fieldbook-notes-v1`). The fieldbook does not run shell commands or certify practical proficiency; existing curriculum lesson and examination IDs remain unchanged.
+
+
+### Version 31 — practical instruction embedded in existing coursework
+Expanded 38 lessons without changing course positions, lesson indices, answer options or examination mappings: Beginner Linux and Terminal Skills (8), Windows Administration and Security (8), Networking Practice and Troubleshooting (8), Programming Logic for Security Beginners (8), Beginner Python Logic and Defensive Automation (6). Each expanded lesson includes one exact example, expected illustrative outcome, explanation, interpretation limitations, non-destructive practice, and independent evidence check. These are instructional exercises, not evaluated real-machine proficiency. Existing student progress identifiers remain unchanged.
