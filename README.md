@@ -174,3 +174,7 @@ Expanded thirty lessons across Security Analysis and Professional Practice, Defe
 
 ### Version 33 — nine-part mastery instructional expansion
 Forty existing lessons in Enterprise Identity and Access Management, Linux System Administration Lab Theory, Web Application Security Fundamentals and Cloud Infrastructure Security (10 each) now include nine-part learning workshops. Each contains purpose, vocabulary, mechanism, scenario-specific worked example, interpretation, failure modes, troubleshooting sequence, written independent practice and mastery challenge. The added workshops are not automatically graded or practical real-machine examinations. Existing 26 courses, 198 lesson positions and quiz answer structures remain intact.
+
+
+### Advanced diagnostic capstone batch — November 2026
+Four appended evidence-limited diagnostic capstones bring the total to 16 (previous 12 remain at original indices). New topics: departed employee's unrevoked token, Linux service boot enablement, cross-tenant API authorization, and public cloud storage policy drift. Each includes five fictional evidence sources, three critical observations, multiple diagnosis/action options, and explanations. The existing seven-point automated selection scoring and minimum-length written rationale remain unchanged; rationale quality is not automatically evaluated. Best scores continue using existing device-local storage keys, so no score migration is required. These are browser simulations rather than real-device practical assessments.
