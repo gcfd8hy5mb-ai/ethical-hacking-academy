@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "title": "Linux permissions terminal challenge",
+      "brief": "An isolated fictional Linux reporting service cannot read its report. Enter read-only diagnostic commands, then state the root cause.",
+      "commands": {
+        "pwd": "/home/student",
+        "id": "uid=1000(student) groups=student",
+        "systemctl status reporting": "reporting.service: failed to read /srv/reports/monthly.csv",
+        "journalctl -u reporting": "reporting: Permission denied: /srv/reports/monthly.csv",
+        "ls -l /srv/reports/monthly.csv": "-rw------- 1 root root 420 monthly.csv",
+        "df -h": "/dev/mock 38% used"
+      },
+      "required": [
+        "systemctl status reporting",
+        "journalctl -u reporting",
+        "ls -l /srv/reports/monthly.csv"
+      ],
+      "answer": "The report is readable only by root while the service uses a different identity.",
+      "keywords": [
+        "root",
+        "permission",
+        "service"
+      ],
+      "remediation": "Grant the reporting service a narrowly scoped approved read permission, then verify access."
+    },
+    {
+      "title": "Network DNS terminal challenge",
+      "brief": "A simulated training laptop reaches its gateway, but the course portal cannot resolve.",
+      "commands": {
+        "ipconfig": "IPv4 192.168.70.20/24; gateway 192.168.70.1; DNS 192.168.70.53",
+        "ping 192.168.70.1": "4 replies received",
+        "nslookup portal.training.test": "DNS request to 192.168.70.53 timed out",
+        "nslookup portal.training.test 192.168.70.54": "portal.training.test = 192.168.70.80",
+        "tracert 192.168.70.1": "Reached gateway in 1 hop",
+        "ping 192.168.70.80": "4 replies received"
+      },
+      "required": [
+        "ipconfig",
+        "nslookup portal.training.test",
+        "nslookup portal.training.test 192.168.70.54"
+      ],
+      "answer": "The configured DNS resolver 192.168.70.53 is failing; the alternate resolver works.",
+      "keywords": [
+        "dns",
+        "resolver",
+        "53"
+      ],
+      "remediation": "Review the approved DNS resolver configuration and retest name resolution."
+    },
+    {
+      "title": "Windows event analysis terminal challenge",
+      "brief": "Investigate synthetic login records without claiming compromise without evidence.",
+      "commands": {
+        "whoami": "training\\student",
+        "eventlog auth": "09:00 failed student; 09:01 failed student; 09:05 success student",
+        "eventlog mfa": "09:05 MFA approved from enrolled device",
+        "eventlog changes": "08:58 authorized password reset for student",
+        "eventlog defender": "No detection in supplied time window",
+        "hostname": "ACADEMY-WIN-LAB"
+      },
+      "required": [
+        "eventlog auth",
+        "eventlog mfa",
+        "eventlog changes"
+      ],
+      "answer": "The log pattern is consistent with an authorized reset; account takeover is not established.",
+      "keywords": [
+        "reset",
+        "authorized",
+        "not"
+      ],
+      "remediation": "Confirm account-owner activity and retain only relevant authorized evidence."
+    }
+  ]
+}
