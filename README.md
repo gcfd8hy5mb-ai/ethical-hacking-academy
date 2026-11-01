@@ -146,3 +146,7 @@ Three existing browser-only terminal cases now support typing explicitly support
 
 ### Stateful terminal simulations — November 2026
 The existing three terminal challenges now include a third simulated phase after evidence and diagnosis: execute a listed controlled corrective action, inspect changed synthetic output, and run a dedicated verification command before finishing. The new nine-point score awards up to 3 for evidence, 2 for diagnosis, 2 for remediation choice and 2 for successful post-change verification. No real shell, Windows host, or network is changed. Results use the new `ethical-hacking-terminal-challenges-v3` local key so prior v1/v2 results remain untouched. An incorrect diagnosis or remedy can be restarted. Syntax and data-link checks were performed, but full Safari browser tests remain pending.
+
+
+### Detailed practical instruction (November 2026)
+Expanded 24 existing lessons across beginner Linux, Windows administration and networking with explicit command/tool purpose, illustrative outputs, interpretation of errors and limitations, safe practice instructions and independent exercises. Existing course and lesson indices are preserved. Examples are hypothetical, not commands executed on student devices. Structural audit found no malformed lesson answer indices, and all 26 courses remain mapped to exams. These workshops are foundational demonstrations, not a substitute for longer supervised labs and independent technical evaluation.
