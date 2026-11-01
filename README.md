@@ -158,3 +158,7 @@ Forty existing lessons in six courses were expanded with topic-specific worked p
 
 ### Second-pass technical case studies — November 1, 2026
 Added 24 individually authored worked case sections to existing beginner Linux (8), Windows administration (8), and networking troubleshooting (8) lessons, with precise example command behavior, illustrative outputs, uncertainty analysis, independent exercises and an ungraded written evaluation rubric. Course and lesson order stayed fixed so progress keys remain compatible. Structural checks found 0 malformed lesson answers; 26 of 26 courses are mapped to exams. These cases are not live computer exercises, and no browser end-to-end test has been run.
+
+
+### Practical Command Fieldbook (November 2026)
+Added `practical-command-fieldbook.html`, linked from Practice Lab. Six detailed units with 22 read-only command examples cover Linux evidence, network/DNS troubleshooting, Windows event review, Python log parsing, localhost HTTP interpretation and incident evidence. Each includes specific outputs, interpretation limitations, an independent exercise and locally saved notes (`ethical-hacking-fieldbook-notes-v1`). The fieldbook does not run shell commands or certify practical proficiency; existing curriculum lesson and examination IDs remain unchanged.
