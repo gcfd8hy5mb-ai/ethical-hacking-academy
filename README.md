@@ -170,3 +170,7 @@ Expanded 38 lessons without changing course positions, lesson indices, answer op
 
 ### Version 32 — security evidence labs inside existing lessons
 Expanded thirty lessons across Security Analysis and Professional Practice, Defensive Web and Cloud Fundamentals, Introduction to Defensive Cryptography, Security Monitoring and Log Analysis, and Safe Authorized Assessment Methodology (six each). Added lesson-specific mock/authorized lab procedures, baseline and counterexample cases, evidence interpretation, reporting fields and 120–200 word ungraded decision memos. Existing 198 lesson identifiers, answer structure, examinations and course order were preserved. These are written/simulated practical plans, not real system execution or independently graded competence.
+
+
+### Version 33 — nine-part mastery instructional expansion
+Forty existing lessons in Enterprise Identity and Access Management, Linux System Administration Lab Theory, Web Application Security Fundamentals and Cloud Infrastructure Security (10 each) now include nine-part learning workshops. Each contains purpose, vocabulary, mechanism, scenario-specific worked example, interpretation, failure modes, troubleshooting sequence, written independent practice and mastery challenge. The added workshops are not automatically graded or practical real-machine examinations. Existing 26 courses, 198 lesson positions and quiz answer structures remain intact.
