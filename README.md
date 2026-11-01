@@ -166,3 +166,7 @@ Added `practical-command-fieldbook.html`, linked from Practice Lab. Six detailed
 
 ### Version 31 — practical instruction embedded in existing coursework
 Expanded 38 lessons without changing course positions, lesson indices, answer options or examination mappings: Beginner Linux and Terminal Skills (8), Windows Administration and Security (8), Networking Practice and Troubleshooting (8), Programming Logic for Security Beginners (8), Beginner Python Logic and Defensive Automation (6). Each expanded lesson includes one exact example, expected illustrative outcome, explanation, interpretation limitations, non-destructive practice, and independent evidence check. These are instructional exercises, not evaluated real-machine proficiency. Existing student progress identifiers remain unchanged.
+
+
+### Version 32 — security evidence labs inside existing lessons
+Expanded thirty lessons across Security Analysis and Professional Practice, Defensive Web and Cloud Fundamentals, Introduction to Defensive Cryptography, Security Monitoring and Log Analysis, and Safe Authorized Assessment Methodology (six each). Added lesson-specific mock/authorized lab procedures, baseline and counterexample cases, evidence interpretation, reporting fields and 120–200 word ungraded decision memos. Existing 198 lesson identifiers, answer structure, examinations and course order were preserved. These are written/simulated practical plans, not real system execution or independently graded competence.
