@@ -134,3 +134,7 @@ Six additional evidence-driven browser exercises bring interactive diagnostic la
 
 ### November 2026 assessment expansion and audit
 Appended two twelve-question evidence-based cumulative exams (Evidence Interpretation and Decision-Making; Cloud Identity and Software Assurance), raising the inventory to 22 exams and 157 questions. Existing exam indices and stored scores were preserved. Data validation checked answer indices, explanation fields, course mappings and coverage of all 26 courses; zero structural issues were found in these checks. These are browser-based knowledge checks, not independent practical examinations or verified real-device mastery.
+
+
+### Advanced diagnostic capstones (November 2026)
+Three new diagnostic scenarios bring the interactive total to 12: intermittent portal availability, failed backup restoration, and competing sign-in hypotheses. Unlike the nine introductory diagnostics, these capstones permit only **three** evidence requests out of five sources, require an 80-character written rationale, and assess key evidence/diagnosis/safe action out of seven points. Written rationale is **not automatically evaluated for quality**, only checked for minimum length. Advanced best scores use a separate `ethical-hacking-diagnostic-capstones-v1` browser key, preserving prior `ethical-hacking-diagnostic-labs-v1` scores and original lab order. This is a browser-only simulated exercise, not actual shell access or independently verified technical mastery.
