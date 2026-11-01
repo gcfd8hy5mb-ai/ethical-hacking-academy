@@ -130,3 +130,7 @@ Three new browser-only diagnostic exercises cover Linux service permissions, Win
 
 ### Advanced interactive diagnostic expansion
 Six additional evidence-driven browser exercises bring interactive diagnostic labs to nine. New cases cover Windows service dependencies, Linux inode exhaustion, cloud policy drift, session logout validation, supplier fraud triage, and firewall rule precedence. Each uses five synthetic data sources, requires choosing relevant evidence, and scores a diagnosis and safe remediation. Existing lab indices and saved results remain unchanged. These are simulated technical decisions, not execution on real networks or proof of physical competence.
+
+
+### November 2026 assessment expansion and audit
+Appended two twelve-question evidence-based cumulative exams (Evidence Interpretation and Decision-Making; Cloud Identity and Software Assurance), raising the inventory to 22 exams and 157 questions. Existing exam indices and stored scores were preserved. Data validation checked answer indices, explanation fields, course mappings and coverage of all 26 courses; zero structural issues were found in these checks. These are browser-based knowledge checks, not independent practical examinations or verified real-device mastery.
