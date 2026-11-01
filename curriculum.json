@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "courseworkNotice": "Original educational material; not affiliated with any university or certifying organization.",
   "courses": [
     {
@@ -772,7 +772,7 @@
       "lessons": [
         [
           "What code is",
-          "A program is a sequence of instructions expressed in a language. Source code can describe input, decisions, transformations and output. Pseudocode is useful for planning without executing anything. Example: read a list of synthetic events, count failures and display the count.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "A program is a sequence of instructions expressed in a language. Source code can describe input, decisions, transformations and output. Pseudocode is useful for planning without executing anything. Example: read a list of synthetic events, count failures and display the count.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Worked model: a variable stores a value, while its name is only a reference. In a synthetic incident counter, failures starts at 0, then increments only when event.status equals 'failed'. Trace the value after failed, success, failed: 1, 1, 2. A programmer should specify whether missing status values are skipped or counted as invalid data; otherwise metrics silently become misleading.",
           "What is the main purpose of source code?",
           [
             "Describe instructions a computer can execute",
@@ -784,7 +784,7 @@
         ],
         [
           "Variables and values",
-          "A variable names a stored value. In Python, `attempts = 2` followed by `attempts = attempts + 1` results in 3. Trace each assignment from top to bottom. An assignment uses `=`, while `==` compares values.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "A variable names a stored value. In Python, `attempts = 2` followed by `attempts = attempts + 1` results in 3. Trace each assignment from top to bottom. An assignment uses `=`, while `==` compares values.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Decision drill: evaluate comparisons separately from assignment. For an event severity of 4, severity >= 3 is true, while severity == '4' may be false because one value is numeric and one is text. Write a truth table for severity 1, 3 and 5, then describe why explicit type conversion and validation are preferable to guessing.",
           "If `count = 2` and then `count = count + 1`, what is count?",
           [
             "3",
@@ -796,7 +796,7 @@
         ],
         [
           "Strings, numbers and booleans",
-          "Strings contain text, numbers represent quantities, and booleans represent True or False. The string '12' is not the integer 12. When parsing a mock event count, validation should check the type before arithmetic. Concatenating strings is different from adding integers.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Strings contain text, numbers represent quantities, and booleans represent True or False. The string '12' is not the integer 12. When parsing a mock event count, validation should check the type before arithmetic. Concatenating strings is different from adding integers.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Control flow: a conditional processes one choice; a loop processes a collection. In pseudocode, inspect each synthetic event and count failures, but limit the number of iterations and handle empty collections. A loop over zero events should return a count of zero rather than inventing an alert. Explain how to avoid a loop that never changes its exit condition.",
           "Which is a boolean value?",
           [
             "true",
@@ -808,7 +808,7 @@
         ],
         [
           "Conditions and decisions",
-          "Conditional statements choose an action when a condition holds. Example: `if failures > 3:` defines a threshold branch; the number alone does not prove hostile intent. Check what the condition measures and how an alert will be reviewed by a human.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Conditional statements choose an action when a condition holds. Example: `if failures > 3:` defines a threshold branch; the number alone does not prove hostile intent. Check what the condition measures and how an alert will be reviewed by a human.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Functions: define summarize(events) to accept a list and return counts rather than reading arbitrary external files. Identify input contract, return type and expected errors. Test with zero events, a single failed event and mixed records. Separating computation from I/O makes security analysis easier to verify and limits accidental access to personal information.",
           "Where should a website enforce permission to read protected records?",
           [
             "On the trusted server",
@@ -820,7 +820,7 @@
         ],
         [
           "Loops and counters",
-          "A loop processes multiple items. Given mock events [failed, success, failed, failed], a counter incremented once per failed entry ends at 3. For each iteration, identify the current item and the counter value. Prevent infinite loops by defining a termination condition.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "A loop processes multiple items. Given mock events [failed, success, failed, failed], a counter incremented once per failed entry ends at 3. For each iteration, identify the current item and the counter value. Prevent infinite loops by defining a termination condition.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Collections: a list maintains ordered events; a dictionary maps keys such as user_id to counts. Use anonymized IDs in the example rather than names. For [A failed, B passed, A failed], the count map is {A:2} for failures. Explain why using untrusted user IDs directly in output logs can disclose sensitive identities.",
           "What is a loop useful for?",
           [
             "Processing a list of sample events",
@@ -832,7 +832,7 @@
         ],
         [
           "Functions and reusable work",
-          "Functions bundle reusable logic. A function taking part and total can calculate `100 * part / total`, but needs a safe answer for total zero. Example: 3 of 12 attempts is 25%. Document the accepted input types and expected output.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Functions bundle reusable logic. A function taking part and total can calculate `100 * part / total`, but needs a safe answer for total zero. Example: 3 of 12 attempts is 25%. Document the accepted input types and expected output.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Input validation: data from a log, form or API may be missing, unexpectedly typed or maliciously formatted. Define allowed event statuses and reject unknown values with an explicit error count. Demonstrate how treating all unknown statuses as 'success' biases a security metric and hides data-quality issues.",
           "Why use a function for repeated validation logic?",
           [
             "It improves reuse and consistency",
@@ -844,7 +844,7 @@
         ],
         [
           "Arrays and records",
-          "Arrays or lists store ordered values; records or dictionaries associate named fields with values. A fictional event `{user: 'A', outcome: 'failed'}` separates attributes. Use consistent keys and avoid storing real passwords or access tokens in sample datasets.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Arrays or lists store ordered values; records or dictionaries associate named fields with values. A fictional event `{user: 'A', outcome: 'failed'}` separates attributes. Use consistent keys and avoid storing real passwords or access tokens in sample datasets.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: File-handling design: choose a synthetic CSV and parse it using a standard parser instead of splitting rows blindly on commas. Validate the header and field count, use a read-only path, and avoid logging credentials. For a large file, process rows incrementally and record a summary rather than loading and publishing the full dataset.",
           "Which data structure suits a list of sample event names?",
           [
             "An array",
@@ -856,7 +856,7 @@
         ],
         [
           "Reading code defensively",
-          "Reading code defensively means evaluating what data enters, how it changes, whether errors are handled and which side effects occur. A program that prints private tokens is unsafe even if its count calculation is correct. In a code review, identify inputs, outputs, privileges, assumptions and test cases.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.",
+          "Reading code defensively means evaluating what data enters, how it changes, whether errors are handled and which side effects occur. A program that prints private tokens is unsafe even if its count calculation is correct. In a code review, identify inputs, outputs, privileges, assumptions and test cases.\n\nWorked practice: Write the expected behavior, a direct observation, one alternative explanation, and a safe way to check your conclusion. Explain what the evidence cannot establish. Use only the academy's fictional examples or expressly authorized systems.\n\nExtended technical instruction: Independent challenge: given six fictional events (failed, failed, success, unknown, failed, success), calculate failure count=3, success count=2, invalid count=1, and failure rate among valid events=3/5=60%. Write pseudocode, identify assumptions, and design four tests including an empty set and invalid input.",
           "A user changes a browser-side role value to admin. What should protect the real data?",
           [
             "Independent server authorization checks",
@@ -1768,7 +1768,7 @@
       "lessons": [
         [
           "Linux directory hierarchy",
-          "Linux organizes files under a root path /. /home commonly contains user data, /etc configuration and /var changing service data. Exact conventions vary by system. Distinguish paths and ownership before reading or changing files. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Linux organizes files under a root path /. /home commonly contains user data, /etc configuration and /var changing service data. Exact conventions vary by system. Distinguish paths and ownership before reading or changing files. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Explore the filesystem as a hierarchy of roles, not as a list of memorized commands. /etc usually holds configuration, /var holds variable data and logs, /home holds user content, and /tmp is temporary storage. In a fictional service incident, identify where you would expect configuration, journal evidence and backups. Do not assume every distribution uses identical locations.",
           "Worked scenario: A service configuration is expected under /etc while a student's notes belong under /home/student. Which approach best supports a responsible evaluation of linux directory hierarchy?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1780,7 +1780,7 @@
         ],
         [
           "Users and groups review",
-          "Linux accounts identify users and services; groups make it easier to assign related file privileges. A group membership grant may unintentionally expand access. Review the owner, group and requested task using a simulated file listing. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Linux accounts identify users and services; groups make it easier to assign related file privileges. A group membership grant may unintentionally expand access. Review the owner, group and requested task using a simulated file listing. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Access model: the effective identity, supplementary groups and access control lists may all affect permissions. Given owner=reporter, group=analysts and mode=640, explain why a member of analysts can read but not edit. Directory traversal permissions also matter: read permission on a file does not bypass a blocked parent directory.",
           "Worked scenario: A trainee belongs to a report-editors group but should only read reports. The group assignment needs adjustment. Which approach best supports a responsible evaluation of users and groups review?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1792,7 +1792,7 @@
         ],
         [
           "Permission bits in context",
-          "Read, write and execute permissions have different meanings for files and directories. On a directory, execute generally permits traversal; write can allow changes to its entries subject to other controls. Example: mode 640 grants owner read/write, group read, others none. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Read, write and execute permissions have different meanings for files and directories. On a directory, execute generally permits traversal; write can allow changes to its entries subject to other controls. Example: mode 640 grants owner read/write, group read, others none. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Permission exercise: mode 750 grants owner rwx, group r-x and others no access. On a directory, execute allows traversal while read allows listing names. Explain how recursively changing permissions can accidentally expose secrets or break applications, and design an approved, narrow adjustment with a rollback record.",
           "Worked scenario: For a confidential report that finance may read but not edit, a suitable example grants group read without group write. Which approach best supports a responsible evaluation of permission bits in context?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1804,7 +1804,7 @@
         ],
         [
           "Processes and system resource health",
-          "A process is a running program. CPU, memory and disk activity can indicate performance pressure but are not proof of malware. Correlate process identity, expected maintenance and logs before choosing a response. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A process is a running program. CPU, memory and disk activity can indicate performance pressure but are not proof of malware. Correlate process identity, expected maintenance and logs before choosing a response. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Process triage: CPU saturation, memory pressure, an uninterruptible wait and an application crash are different failure modes. Record the process owner, start time, resource usage and related logs before changing anything. Form competing explanations such as scheduled work, resource contention or software regression; prioritize evidence over process names.",
           "Worked scenario: A backup service briefly uses high CPU every night. Compare this with its approved schedule before escalating. Which approach best supports a responsible evaluation of processes and system resource health?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1816,7 +1816,7 @@
         ],
         [
           "Services and startup behavior",
-          "Background services may begin at boot and restart after failures. Administrators document service dependencies, health checks and restart authority. Disabling an unfamiliar service can disrupt production applications. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Background services may begin at boot and restart after failures. Administrators document service dependencies, health checks and restart authority. Disabling an unfamiliar service can disrupt production applications. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Service dependencies: a failed unit can be caused by its executable, configuration, directory access, missing dependencies or resource limits. A fictional service reports 'permission denied' opening its data directory. Compare account identity and directory chain, then propose a minimal authorized correction followed by a start test and negative permission test.",
           "Worked scenario: A web service depends on a database service. Check the database's health before repeatedly restarting the web process. Which approach best supports a responsible evaluation of services and startup behavior?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1828,7 +1828,7 @@
         ],
         [
           "Package updates and patch planning",
-          "A package manager tracks installed software and updates. Before an authorized upgrade, identify dependency impact, available backups, a test environment and rollback conditions. Verify installed versions after the change. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A package manager tracks installed software and updates. Before an authorized upgrade, identify dependency impact, available backups, a test environment and rollback conditions. Verify installed versions after the change. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Patch management: distinguish update availability, download, installation, restart and business validation. An approved service window should include tested backups, dependency review and rollback criteria. After a package change, compare actual service behavior to the prior baseline; simply reporting 'updated' is not evidence of success.",
           "Worked scenario: A security update fixes a known issue but may affect an essential app. Test in staging and confirm service health after deployment. Which approach best supports a responsible evaluation of package updates and patch planning?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1840,7 +1840,7 @@
         ],
         [
           "System logs and journal concepts",
-          "Linux services can generate structured logs that record events and errors. Systemd-based systems commonly provide journal tooling; other systems use different logging methods. Time zone normalization and proper permissions matter when viewing records. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Linux services can generate structured logs that record events and errors. Systemd-based systems commonly provide journal tooling; other systems use different logging methods. Time zone normalization and proper permissions matter when viewing records. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Log interpretation: timestamps, source units, severity and message context must be normalized. A message stating 'connection refused' does not automatically identify an attacker. Build a five-row fictional timeline, correlate with change tickets, and state which conclusions require an additional independent log or owner interview.",
           "Worked scenario: An authentication event at 14:00 UTC and another at 09:00 CDT may describe the same instant depending on date and offset. Which approach best supports a responsible evaluation of system logs and journal concepts?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1852,7 +1852,7 @@
         ],
         [
           "Storage and backup verification",
-          "Disk space and inode exhaustion can both disrupt services. Backup policies define what is captured, retention, access and restore testing. A copy on the same failing disk is not sufficient protection. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Disk space and inode exhaustion can both disrupt services. Backup policies define what is captured, retention, access and restore testing. A copy on the same failing disk is not sufficient protection. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Storage investigation: file data blocks and filesystem inodes are different finite resources. An example filesystem at 40% block use can still refuse new files when inodes reach 100%. Compare capacity, inode count, file ownership and retention policy before proposing deletion. Never remove unfamiliar files to make space.",
           "Worked scenario: A server has regular backup jobs marked success, but no restore test. Schedule a controlled restore to verify recoverability. Which approach best supports a responsible evaluation of storage and backup verification?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1864,7 +1864,7 @@
         ],
         [
           "Scheduled tasks and automation safety",
-          "Cron and other schedulers run jobs unattended. A script executing with broad privileges poses risk if its inputs or file permissions are unsafe. Review task ownership, schedule, logs and scope before changes. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "Cron and other schedulers run jobs unattended. A script executing with broad privileges poses risk if its inputs or file permissions are unsafe. Review task ownership, schedule, logs and scope before changes. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Automation governance: a cron entry or systemd timer is a scheduled instruction with an execution identity and environment. Describe time-zone assumptions, least privileges, logging and duplicate-run prevention. Test an automation on sample data and define failure alerts, rather than placing destructive cleanup in an unreviewed schedule.",
           "Worked scenario: A maintenance job needs to clean a temporary lab directory. It should not run as administrator without a demonstrated need. Which approach best supports a responsible evaluation of scheduled tasks and automation safety?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1876,7 +1876,7 @@
         ],
         [
           "Hardening and configuration baselines",
-          "A baseline describes approved packages, services, accounts and settings. Hardening reduces unnecessary exposure while preserving operational requirements. After any change, compare the system to its baseline and test required functionality. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.",
+          "A baseline describes approved packages, services, accounts and settings. Hardening reduces unnecessary exposure while preserving operational requirements. After any change, compare the system to its baseline and test required functionality. To practice, write a three-column table: observed condition, supported inference, and information still missing. Then identify one suitable security control and a safe verification step. Always keep exercises within the fictional scenario or an environment you own or are expressly permitted to test.\n\nExtended technical instruction: Hardening baseline: start from business function, required listening services, patch expectations, account controls and backup requirements. Separate a configuration recommendation from evidence of its deployment. For a mock reporting host, write a five-control baseline with an owner, desired state, verification method and exception process.",
           "Worked scenario: Disabling an unused service helps reduce exposure, but disabling a required database service may cause an outage. Which approach best supports a responsible evaluation of hardening and configuration baselines?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1893,7 +1893,7 @@
       "lessons": [
         [
           "Browser and server trust boundaries",
-          "Browser code is controlled by the visitor. A hidden button is not a security boundary; the trusted backend must verify user identity and the requested record. In a synthetic test, student A requests student B's grade; the intended response is denial, even if the UI never offers the link.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Browser code is controlled by the visitor. A hidden button is not a security boundary; the trusted backend must verify user identity and the requested record. In a synthetic test, student A requests student B's grade; the intended response is denial, even if the UI never offers the link.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Trust boundary: browsers and request payloads are untrusted even when interface controls appear disabled. A sample student API must authenticate the caller and authorize each record on the server. Draw browser -> API -> database, and identify why hiding a grade button does not protect another student's record.",
           "Worked scenario: Hiding a teacher-only button cannot replace authorization checks on the grades API. Which approach best supports a responsible evaluation of browser and server trust boundaries?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1905,7 +1905,7 @@
         ],
         [
           "Identity versus authorization",
-          "Authentication establishes identity to a level of confidence; authorization grants a specific action on a specific resource. Work through a matrix: learner reads own grade, learner reads another grade, instructor changes assigned course grades. Test positive and negative cases, not simply whether a sign-in succeeded.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Authentication establishes identity to a level of confidence; authorization grants a specific action on a specific resource. Work through a matrix: learner reads own grade, learner reads another grade, instructor changes assigned course grades. Test positive and negative cases, not simply whether a sign-in succeeded.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Authentication vs authorization: login proves a claimed identity under some assurance; it does not grant access to every resource. With student A and student B, specify two positive and two negative tests: A may read A, B may read B, and cross-account reads must be denied without exposing data.",
           "Worked scenario: A signed-in student asks for another student's private assignment. The API must reject the request unless explicitly permitted. Which approach best supports a responsible evaluation of identity versus authorization?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1917,7 +1917,7 @@
         ],
         [
           "Secure session lifecycle",
-          "Session cookies or tokens link subsequent requests with authentication state. Secure design considers expiration, token storage, revocation and renewal. Removing a visible profile badge is not equivalent to invalidating sessions. Review expected behavior after sign-out using test accounts.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Session cookies or tokens link subsequent requests with authentication state. Secure design considers expiration, token storage, revocation and renewal. Removing a visible profile badge is not equivalent to invalidating sessions. Review expected behavior after sign-out using test accounts.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Session management: signed cookies, server sessions, expiry and logout each have distinct responsibilities. A browser UI hiding the profile does not revoke a server-side session. In a synthetic lab, compare an API response before logout and with the same old session after logout; explain the expected denial.",
           "Worked scenario: Signing out should invalidate access rather than merely hiding the account menu. Which approach best supports a responsible evaluation of secure session lifecycle?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1929,7 +1929,7 @@
         ],
         [
           "User input validation",
-          "Validate server-side types, lengths, formats and business constraints, even if the browser form also validates. A course identifier must refer to an allowed course. Reject malformed values safely with consistent error handling; validation is distinct from HTML output encoding.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Validate server-side types, lengths, formats and business constraints, even if the browser form also validates. A course identifier must refer to an allowed course. Reject malformed values safely with consistent error handling; validation is distinct from HTML output encoding.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Input and output: validation enforces data contracts, parameterized queries protect query structure, and context-appropriate output encoding prevents a browser from interpreting data as executable markup. For a user-supplied note containing angle brackets, explain why stored text should display literally without executing code.",
           "Worked scenario: A grades endpoint accepts a course ID. Check that it is well-formed and that the caller may access that course. Which approach best supports a responsible evaluation of user input validation?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1941,7 +1941,7 @@
         ],
         [
           "Contextual output encoding",
-          "Rendering user text safely depends on context: HTML text, attribute, URL and JavaScript contexts have different escaping rules. Prefer APIs that treat untrusted strings as text; never insert raw untrusted HTML into a page. Test with harmless synthetic strings that include angle brackets.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Rendering user text safely depends on context: HTML text, attribute, URL and JavaScript contexts have different escaping rules. Prefer APIs that treat untrusted strings as text; never insert raw untrusted HTML into a page. Test with harmless synthetic strings that include angle brackets.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Cross-site request risks: a browser can send cookies automatically, which may allow unwanted authenticated actions if server-side defenses are absent. Explain the roles of SameSite cookies, anti-CSRF tokens, request origin checks and robust authorization. The expected test uses synthetic accounts and a controlled demo, not real users.",
           "Worked scenario: A comment containing angle brackets should display as text instead of being treated as page markup. Which approach best supports a responsible evaluation of contextual output encoding?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1953,7 +1953,7 @@
         ],
         [
           "Parameterized database access",
-          "A query should treat supplied values as data through parameterized statements. String concatenation into query text can change query structure unexpectedly. Even with parameters, the application must authorize each returned record and use limited database privileges.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "A query should treat supplied values as data through parameterized statements. String concatenation into query text can change query structure unexpectedly. Even with parameters, the application must authorize each returned record and use limited database privileges.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: HTTPS protects transport against many observers, but does not automatically make a server trustworthy or its authorization correct. Distinguish TLS certificate validation, endpoint authentication, session security and server access rules. A padlock is not evidence that application data is correctly segregated.",
           "Worked scenario: A student search field should pass its text as a database parameter, not append it directly into a SQL command. Which approach best supports a responsible evaluation of parameterized database access?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1965,7 +1965,7 @@
         ],
         [
           "Cross-site request protections",
-          "Cookie-authenticated applications may be exposed to cross-origin request forgery if requests carry credentials automatically. Defenses can include anti-CSRF tokens, same-site cookies and verified origins, chosen to match the architecture. Cross-origin policies and authorization serve different purposes.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Cookie-authenticated applications may be exposed to cross-origin request forgery if requests carry credentials automatically. Defenses can include anti-CSRF tokens, same-site cookies and verified origins, chosen to match the architecture. Cross-origin policies and authorization serve different purposes.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: API design: document resource IDs, permitted methods, roles, error handling and rate limits. An endpoint returning 200 to an unauthorized request is a stronger observation than a missing button. Construct a test matrix of expected 200, 401/403 and 404 outcomes without assuming one code fits all designs.",
           "Worked scenario: A web app using ambient session cookies should evaluate cross-origin state-changing requests and appropriate CSRF defenses. Which approach best supports a responsible evaluation of cross-site request protections?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1977,7 +1977,7 @@
         ],
         [
           "Secure file upload design",
-          "A filename and declared MIME type are not enough to trust uploaded content. Define size and type limits, inspect content with suitable services, store outside executable paths, and restrict download access. In class use fabricated test files, not real private submissions.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "A filename and declared MIME type are not enough to trust uploaded content. Define size and type limits, inspect content with suitable services, store outside executable paths, and restrict download access. In class use fabricated test files, not real private submissions.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Secrets and configuration: any value shipped to the browser is accessible to the browser user. Explain why privileged cloud API keys belong in a trusted service or controlled secret store and how rotation, least privilege and access monitoring respond to an accidental client-side exposure.",
           "Worked scenario: A course accepts PDF assignments. Store them as data, enforce ownership and avoid executing anything the filename claims. Which approach best supports a responsible evaluation of secure file upload design?",
           [
             "Use the specified observations and verify the relevant control",
@@ -1989,7 +1989,7 @@
         ],
         [
           "API access control checks",
-          "Object identifiers are not permissions. Define owner and staff roles; each operation should enforce server-side resource authorization. Rate limiting may reduce abusive volume but cannot fix access-control errors. Retest with two approved synthetic users.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "Object identifiers are not permissions. Define owner and staff roles; each operation should enforce server-side resource authorization. Rate limiting may reduce abusive volume but cannot fix access-control errors. Retest with two approved synthetic users.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Logging and privacy: capture event type, resource category, outcome, timestamp and pseudonymous actor context. Avoid access tokens, raw passwords and unnecessary personal payloads. Distinguish a useful denial log from evidence of a successful attack; repeated denies may also be expected testing or user mistakes.",
           "Worked scenario: Changing /grades/101 to /grades/102 in a mock request must not reveal another student's results. Which approach best supports a responsible evaluation of api access control checks?",
           [
             "Use the specified observations and verify the relevant control",
@@ -2001,7 +2001,7 @@
         ],
         [
           "Security headers and deployment review",
-          "TLS settings, secure cookies, content-security policy and other headers reduce selected risks, but they do not fix broken record authorization. Review deploy configuration, third-party scripts and rollback plans. A checklist should identify evidence for each control rather than promise complete immunity.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.",
+          "TLS settings, secure cookies, content-security policy and other headers reduce selected risks, but they do not fix broken record authorization. Review deploy configuration, third-party scripts and rollback plans. A checklist should identify evidence for each control rather than promise complete immunity.\n\nApplied exercise: Use the worked scenario to write (1) an observed fact, (2) one competing explanation, (3) a proportionate control and (4) an authorized way to verify the result. Distinguish what the fictional evidence actually demonstrates from what remains unknown.\n\nExtended technical instruction: Secure release workflow: establish a reproducible test application, defined authorization cases, dependency review and rollback. After remediation, run both a legitimate student workflow and an attempted cross-account read. Record app version, test account identities and expected outputs before classifying the defect resolved.",
           "Worked scenario: A deployment adds a protective header; the team still needs to test the underlying access rules. Which approach best supports a responsible evaluation of security headers and deployment review?",
           [
             "Use the specified observations and verify the relevant control",
