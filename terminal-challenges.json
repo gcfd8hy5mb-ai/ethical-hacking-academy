@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "cases": [
     {
       "title": "Linux permissions terminal challenge",
@@ -36,7 +36,15 @@
         "Delete the reports folder"
       ],
       "correctAction": 0,
-      "verification": "Recheck file access as the service identity and confirm the reporting workflow succeeds"
+      "verification": "Recheck file access as the service identity and confirm the reporting workflow succeeds",
+      "stateful": {
+        "fixCommand": "simulate fix reporting-access",
+        "fixOutput": "Simulated approved least-privilege permission change applied to training report.",
+        "checkCommand": "systemctl status reporting",
+        "checkOutput": "reporting.service: active (running); report read successful",
+        "verifyCommand": "verify reporting",
+        "verifyOutput": "PASS: training service can read its report; unrelated accounts remain denied."
+      }
     },
     {
       "title": "Network DNS terminal challenge",
@@ -73,7 +81,15 @@
         "Reinstall the laptop"
       ],
       "correctAction": 0,
-      "verification": "Resolve the portal using the configured resolver and verify portal access"
+      "verification": "Resolve the portal using the configured resolver and verify portal access",
+      "stateful": {
+        "fixCommand": "simulate fix dns-config",
+        "fixOutput": "Simulated approved resolver configuration changed to known-working 192.168.70.54.",
+        "checkCommand": "nslookup portal.training.test",
+        "checkOutput": "Server: 192.168.70.54; portal.training.test = 192.168.70.80",
+        "verifyCommand": "verify portal",
+        "verifyOutput": "PASS: synthetic hostname resolves and mock portal workflow succeeds."
+      }
     },
     {
       "title": "Windows event analysis terminal challenge",
@@ -110,7 +126,15 @@
         "Disable all enterprise accounts"
       ],
       "correctAction": 0,
-      "verification": "Confirm the expected owner activity and monitor for additional anomalous authentication"
+      "verification": "Confirm the expected owner activity and monitor for additional anomalous authentication",
+      "stateful": {
+        "fixCommand": "simulate confirm owner",
+        "fixOutput": "Simulated authorized owner corroboration saved; no machine settings changed.",
+        "checkCommand": "eventlog auth",
+        "checkOutput": "09:00 failed; 09:01 failed; 09:05 MFA success; owner review documented",
+        "verifyCommand": "verify account",
+        "verifyOutput": "PASS: review documented; no breach asserted from incomplete evidence."
+      }
     }
   ]
 }
