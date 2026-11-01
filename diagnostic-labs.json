@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "cases": [
     {
       "title": "Linux service outage",
@@ -648,6 +648,222 @@
       ],
       "correctRemediation": 0,
       "explanation": "Owner corroboration and successful MFA suggest a benign explanation; no provided evidence proves a breach. Keep proportionate monitoring and preserve privacy."
+    },
+    {
+      "title": "Enterprise identity: departed employee session",
+      "course": "Enterprise Identity and Access Management",
+      "brief": "A fictional former employee's account is disabled, but a test session can still read a training resource. Choose only three evidence requests.",
+      "commands": [
+        [
+          "directory",
+          "Account disabled at 10:00 UTC; no new interactive logins permitted"
+        ],
+        [
+          "sessions",
+          "Session issued 09:40; token expires 11:40; revocation event absent"
+        ],
+        [
+          "access",
+          "10:15 API read accepted for existing bearer token"
+        ],
+        [
+          "payroll",
+          "Employment ended at 09:55; manager notification received"
+        ],
+        [
+          "vpn",
+          "VPN gateway is online; zero service alerts"
+        ]
+      ],
+      "required": [
+        "directory",
+        "sessions",
+        "access"
+      ],
+      "diagnosis": "session",
+      "diagnoses": [
+        [
+          "password",
+          "Password complexity is too low"
+        ],
+        [
+          "session",
+          "Existing issued session remains valid despite account disablement"
+        ],
+        [
+          "outage",
+          "The API is down"
+        ]
+      ],
+      "remediation": [
+        "Disable application logging",
+        "Revoke active sessions and tokens using approved identity procedures, then verify denied access",
+        "Delete all employee records"
+      ],
+      "correctRemediation": 1,
+      "explanation": "Directory disablement blocks some future authentication but does not necessarily revoke already issued application tokens. Correlate session lifetime and API result, revoke through the approved system, then verify with a scoped authorized test."
+    },
+    {
+      "title": "Linux administration: service unavailable after reboot",
+      "course": "Linux System Administration Lab Theory",
+      "brief": "A fictional service works when manually started but is not running after a lab virtual-machine reboot.",
+      "commands": [
+        [
+          "service",
+          "systemctl status lab-api: inactive (dead) after boot"
+        ],
+        [
+          "enablement",
+          "systemctl is-enabled lab-api: disabled"
+        ],
+        [
+          "journal",
+          "Previous manual start succeeded and returned status 200"
+        ],
+        [
+          "disk",
+          "Disk 29% full; inode usage 11%"
+        ],
+        [
+          "network",
+          "Gateway and DNS functioning normally"
+        ]
+      ],
+      "required": [
+        "service",
+        "enablement",
+        "journal"
+      ],
+      "diagnosis": "boot",
+      "diagnoses": [
+        [
+          "boot",
+          "Service startup enablement is missing"
+        ],
+        [
+          "disk",
+          "Disk is completely full"
+        ],
+        [
+          "dns",
+          "Resolver is unreachable"
+        ]
+      ],
+      "remediation": [
+        "Change ownership of every system file",
+        "Stop collecting system logs",
+        "Review expected startup policy, approve enabling the service, and verify boot behavior in the lab"
+      ],
+      "correctRemediation": 2,
+      "explanation": "A disabled systemd unit does not automatically start at boot, even if a prior manual run worked. Verify the approved configuration and only change it under lab authorization."
+    },
+    {
+      "title": "Web API: cross-tenant data permission",
+      "course": "Web Application Security Fundamentals",
+      "brief": "A fabricated multi-tenant app identifies both users but appears to return another tenant's invoice. Select the most discriminating evidence.",
+      "commands": [
+        [
+          "identity",
+          "Requester authenticated: tenant=A; user=A-17"
+        ],
+        [
+          "object",
+          "Invoice INV-B42 recorded owner tenant=B"
+        ],
+        [
+          "response",
+          "Approved synthetic GET /api/invoices/INV-B42 by A-17 returned 200 with invoice body"
+        ],
+        [
+          "ui",
+          "The app's navigation hides B42 from tenant A"
+        ],
+        [
+          "latency",
+          "API response time 65 ms"
+        ]
+      ],
+      "required": [
+        "identity",
+        "object",
+        "response"
+      ],
+      "diagnosis": "object",
+      "diagnoses": [
+        [
+          "css",
+          "A styling bug is the primary security issue"
+        ],
+        [
+          "object",
+          "Server-side object authorization is not enforced for this resource"
+        ],
+        [
+          "mfa",
+          "The user's MFA device is expired"
+        ]
+      ],
+      "remediation": [
+        "Require server-side tenant/object authorization for each request and regression-test allow and deny cases",
+        "Hide invoice links in the browser only",
+        "Share the affected invoice publicly for easier debugging"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Authentication and a hidden UI link are insufficient. The resource owner and observed synthetic cross-tenant response support an object-level authorization weakness, requiring server-side enforcement."
+    },
+    {
+      "title": "Cloud security: public storage policy regression",
+      "course": "Cloud Infrastructure Security",
+      "brief": "After a fictional infrastructure update, an intended-private reports object is accessible anonymously in a simulated policy test.",
+      "commands": [
+        [
+          "policy",
+          "Bucket policy: principal=* action=GetObject resource=reports/*"
+        ],
+        [
+          "classification",
+          "reports/customer-q4.csv classification=internal-only"
+        ],
+        [
+          "test",
+          "Synthetic unauthenticated read: HTTP 200 for reports/customer-q4.csv"
+        ],
+        [
+          "billing",
+          "Monthly cloud expense remained within budget"
+        ],
+        [
+          "region",
+          "The bucket is hosted in expected region"
+        ]
+      ],
+      "required": [
+        "policy",
+        "classification",
+        "test"
+      ],
+      "diagnosis": "public",
+      "diagnoses": [
+        [
+          "public",
+          "Access policy allows anonymous reads of classified internal data"
+        ],
+        [
+          "billing",
+          "Cloud cost overruns caused the data exposure"
+        ],
+        [
+          "region",
+          "Region selection prevented all reads"
+        ]
+      ],
+      "remediation": [
+        "Approve a narrowly scoped policy correction and rerun anonymous-deny plus authorized-allow validation",
+        "Delete all reports without preservation",
+        "Disable all audit logs"
+      ],
+      "correctRemediation": 0,
+      "explanation": "Broad principal grants plus internal classification and a synthetic anonymous success support a policy-scope defect. Restrict access through change control and test both denied and approved users."
     }
   ]
 }
