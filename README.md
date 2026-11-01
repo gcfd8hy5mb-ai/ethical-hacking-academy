@@ -142,3 +142,7 @@ Three new diagnostic scenarios bring the interactive total to 12: intermittent p
 
 ### Typed terminal challenge upgrade (November 2026)
 Three existing browser-only terminal cases now support typing explicitly supported mock diagnostic commands instead of using command buttons. Stage 1 captures read-only synthetic outputs and awards up to three evidence points; Stage 2 evaluates the chosen diagnosis (two points) and safe remediation (two points), followed by explicit validation guidance. Scores use `ethical-hacking-terminal-challenges-v2`, preserving older v1 score records. The restricted terminal does not evaluate arbitrary shell commands or access real devices; this is simulated decision testing, not practical command proficiency certification.
+
+
+### Stateful terminal simulations — November 2026
+The existing three terminal challenges now include a third simulated phase after evidence and diagnosis: execute a listed controlled corrective action, inspect changed synthetic output, and run a dedicated verification command before finishing. The new nine-point score awards up to 3 for evidence, 2 for diagnosis, 2 for remediation choice and 2 for successful post-change verification. No real shell, Windows host, or network is changed. Results use the new `ethical-hacking-terminal-challenges-v3` local key so prior v1/v2 results remain untouched. An incorrect diagnosis or remedy can be restarted. Syntax and data-link checks were performed, but full Safari browser tests remain pending.
