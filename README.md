@@ -150,3 +150,7 @@ The existing three terminal challenges now include a third simulated phase after
 
 ### Detailed practical instruction (November 2026)
 Expanded 24 existing lessons across beginner Linux, Windows administration and networking with explicit command/tool purpose, illustrative outputs, interpretation of errors and limitations, safe practice instructions and independent exercises. Existing course and lesson indices are preserved. Examples are hypothetical, not commands executed on student devices. Structural audit found no malformed lesson answer indices, and all 26 courses remain mapped to exams. These workshops are foundational demonstrations, not a substitute for longer supervised labs and independent technical evaluation.
+
+
+### Practical instruction standardization, batch 25 (November 2026)
+Forty existing lessons in six courses were expanded with topic-specific worked procedures and interpretations: computer basics (6), security analysis and professional practice (6), defensive web/cloud fundamentals (6), safe authorized assessment (6), network reasoning (6), and security reporting (10). The course and lesson order and answer indices were preserved. A structural check confirmed 198 valid lessons and examination mapping for all 26 courses. This remains a first-pass instructional expansion rather than textbook-depth completion, externally reviewed content, or demonstrated hands-on competence; independent browser testing remains outstanding.
