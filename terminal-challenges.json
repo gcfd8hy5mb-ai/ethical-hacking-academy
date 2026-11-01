@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "cases": [
     {
       "title": "Linux permissions terminal challenge",
@@ -23,7 +23,20 @@
         "permission",
         "service"
       ],
-      "remediation": "Grant the reporting service a narrowly scoped approved read permission, then verify access."
+      "remediation": "Grant the reporting service a narrowly scoped approved read permission, then verify access.",
+      "diagnoses": [
+        "Service identity cannot read the root-owned report file",
+        "The disk is full",
+        "The DNS server is unreachable"
+      ],
+      "correctDiagnosis": 0,
+      "actions": [
+        "Grant a narrowly scoped approved read permission and verify the service",
+        "Disable Linux access controls for everyone",
+        "Delete the reports folder"
+      ],
+      "correctAction": 0,
+      "verification": "Recheck file access as the service identity and confirm the reporting workflow succeeds"
     },
     {
       "title": "Network DNS terminal challenge",
@@ -47,7 +60,20 @@
         "resolver",
         "53"
       ],
-      "remediation": "Review the approved DNS resolver configuration and retest name resolution."
+      "remediation": "Review the approved DNS resolver configuration and retest name resolution.",
+      "diagnoses": [
+        "The configured DNS resolver fails while an alternative works",
+        "The gateway has no IP connectivity",
+        "The portal returned an HTTP 404"
+      ],
+      "correctDiagnosis": 0,
+      "actions": [
+        "Review the approved resolver setting, then repeat name-resolution and portal checks",
+        "Disable all host firewall protections",
+        "Reinstall the laptop"
+      ],
+      "correctAction": 0,
+      "verification": "Resolve the portal using the configured resolver and verify portal access"
     },
     {
       "title": "Windows event analysis terminal challenge",
@@ -71,7 +97,20 @@
         "authorized",
         "not"
       ],
-      "remediation": "Confirm account-owner activity and retain only relevant authorized evidence."
+      "remediation": "Confirm account-owner activity and retain only relevant authorized evidence.",
+      "diagnoses": [
+        "These records support an authorized reset explanation; takeover is not established",
+        "The events prove a successful attacker takeover",
+        "A malware infection is confirmed"
+      ],
+      "correctDiagnosis": 0,
+      "actions": [
+        "Corroborate the reset with the account owner and continue proportionate monitoring",
+        "Publish the employee sign-in details",
+        "Disable all enterprise accounts"
+      ],
+      "correctAction": 0,
+      "verification": "Confirm the expected owner activity and monitor for additional anomalous authentication"
     }
   ]
 }
