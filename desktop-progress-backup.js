@@ -1,0 +1,10 @@
+/* Read-only migration readiness and explicit user-controlled backup. Never sends data to a server. */
+(()=>{'use strict';
+const academy="ethical-hacking-academy",keys=["ethical-hacking-academy-progress-v1"];
+function collect(){return keys.map(key=>{const value=localStorage.getItem(key);return {key,present:value!==null,value};});}
+function init(){const host=document.getElementById('academy-desktop-workspace');if(!host||host.querySelector('#academy-progress-backup'))return;
+ const section=document.createElement('section');section.className='desk-panel';section.style.maxWidth='1200px';section.style.margin='20px auto';section.innerHTML='<h3>Student progress backup</h3><p>Cloud sync is not active. Save a private backup before transferring devices. This tool never uploads student data.</p><button type="button" id="academy-progress-backup">Download progress backup</button><p id="academy-backup-status" role="status"></p>';host.append(section);
+ section.querySelector('button').addEventListener('click',()=>{try{const records=collect();const backup={format:'academy-progress-backup',schema:1,academy,createdAt:new Date().toISOString(),records};const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=academy+'-progress-backup.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);section.querySelector('#academy-backup-status').textContent='Backup requested. '+records.filter(r=>r.present).length+' of '+keys.length+' known records found. Store this file privately.';}catch(e){section.querySelector('#academy-backup-status').textContent='Backup failed. Browser storage may be unavailable.'}});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
