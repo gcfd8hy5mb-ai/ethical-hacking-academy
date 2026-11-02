@@ -254,3 +254,7 @@ Expanded `worked-answer-keys.json` from 10 to 25 topic-specific model-answer exe
 
 ### Lesson-linked worked answers and independent draft gate — November 2026
 The Academy lesson reader now loads `worked-answer-keys.json` and displays a link only when a worked example matches that course and lesson title. The worked-answer viewer accepts `?course=<index>&lesson=<index>`, locates the corresponding reference answer, and requires at least 120 characters of original writing before the example solution can be revealed. Drafts save locally under `ethical-hacking-worked-answer-drafts-v1` and are not automatically evaluated for accuracy; the length gate is a practice prompt, not a secure examination. All prior lesson completion and exam keys remain unchanged. JavaScript parse checks passed; live Safari testing remains outstanding.
+
+
+### Worked Answer Bank Version 3 — November 2026
+Expanded reference examples from 25 to 51 with 26 additional topic-specific exercises. Each new example includes a synthetic challenge, a concrete reasoned answer, expected evidence, and a common error. The existing lesson-linked practice viewer automatically loads this JSON and continues to require an original 120-character draft before revealing answers. Existing curriculum, lesson completion and exam records remain unchanged. The 51 references do not amount to 51 independently assessed technical competencies; technical editorial review and actual-machine lab verification remain outstanding.
