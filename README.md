@@ -258,3 +258,7 @@ The Academy lesson reader now loads `worked-answer-keys.json` and displays a lin
 
 ### Worked Answer Bank Version 3 — November 2026
 Expanded reference examples from 25 to 51 with 26 additional topic-specific exercises. Each new example includes a synthetic challenge, a concrete reasoned answer, expected evidence, and a common error. The existing lesson-linked practice viewer automatically loads this JSON and continues to require an original 120-character draft before revealing answers. Existing curriculum, lesson completion and exam records remain unchanged. The 51 references do not amount to 51 independently assessed technical competencies; technical editorial review and actual-machine lab verification remain outstanding.
+
+
+### Worked answer bank v4 — November 2026
+Expanded the lesson-linked worked-answer reference bank from 51 to 77 distinct course/lesson exercises. Each added exercise contains a fictional problem, technical reasoning, expected evidence and common interpretive pitfall. The existing lesson-linked draft-first practice view consumes the updated JSON automatically, with score/progress keys unchanged. Structural validation found 77 unique course/lesson pairs and all entries populated. Actual teaching accuracy requires independent editorial review and live browser testing is still pending.
