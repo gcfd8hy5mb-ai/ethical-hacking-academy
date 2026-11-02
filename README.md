@@ -214,3 +214,7 @@ Added `virtual-linux-workstation.html` and linked it from Practice Lab and Progr
 
 ### Virtual Windows Workstation — November 2026
 Added `virtual-windows-workstation.html`, linked from Practice Lab and Progress. The browser-only mock PowerShell workstation models an InventoryApp configuration-path regression after maintenance. Learners inspect identity, service, event log, approved change record and current path; perform an allowlisted simulated configuration correction; start the mock service; verify an authorized transaction; and grade using a 10-point rubric (six evidence points, two configuration points, two verification points). Best score is isolated in `ethical-hacking-virtual-windows-v1`; resetting the fictional environment retains the best score. No actual Windows/PowerShell commands are executed and this is not independently verified hands-on proficiency. JavaScript syntax was checked; deployed browser testing is pending.
+
+
+### Virtual Network Workstation (November 2026)
+Created `virtual-network-workstation.html`: a stateful browser-only training lab for DNS and default-gateway troubleshooting, with typed allowlisted inspection and simulated configuration commands, changing synthetic results, a verification step and objective 10-point scoring (four evidence, four settings, two verification). Its score is kept under `ethical-hacking-virtual-network-v1` without changing existing progress keys. Linked from Practice Lab and Progress. No network traffic or OS commands are executed. JavaScript syntax checked; live browser testing outstanding.
