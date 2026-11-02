@@ -262,3 +262,7 @@ Expanded reference examples from 25 to 51 with 26 additional topic-specific exer
 
 ### Worked answer bank v4 — November 2026
 Expanded the lesson-linked worked-answer reference bank from 51 to 77 distinct course/lesson exercises. Each added exercise contains a fictional problem, technical reasoning, expected evidence and common interpretive pitfall. The existing lesson-linked draft-first practice view consumes the updated JSON automatically, with score/progress keys unchanged. Structural validation found 77 unique course/lesson pairs and all entries populated. Actual teaching accuracy requires independent editorial review and live browser testing is still pending.
+
+
+### Worked answer bank v5 — November 2026
+Expanded from 77 to 103 unique lesson-linked technical reference exercises. This batch adds 26 scenario-specific explanations spanning security governance, operating systems, networking, incident response, Linux, Windows, programming, encryption, identity, web/cloud security, authorized assessments and hardware fundamentals. Each exercise contains a fictional question, worked conclusion, required evidence and misconception. The existing lesson-linked practice view loads these automatically and uses the existing draft-before-reveal flow. Existing student completion and assessment records were not changed. Independent expert review and real-device verification remain outstanding.
