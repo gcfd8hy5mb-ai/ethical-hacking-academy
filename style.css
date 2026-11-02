@@ -5,3 +5,13 @@
 @media(max-width:480px){.mastery-actions{grid-template-columns:minmax(0,1fr);gap:12px}.mastery-actions .button{font-size:15px}}
 
 .lesson-section{margin:18px 0;padding:14px 16px;border-left:3px solid #b39059;background:#f9f3e9;border-radius:0 9px 9px 0;overflow-wrap:anywhere}.lesson-section p{margin:8px 0;line-height:1.75}.lesson-section strong{color:#594425}.body{overflow-wrap:anywhere}
+
+/* Practice Lab: stable stacked links on small iPhone screens. */
+.practice-section{margin:24px 0;min-width:0}
+.practice-section h2{margin:0 0 12px}
+.practice-links{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-items:stretch;min-width:0}
+.practice-links>.button{display:flex;box-sizing:border-box;align-items:center;justify-content:space-between;min-width:0;width:100%;min-height:54px;padding:14px 16px;margin:0;border:0;border-radius:11px;text-align:left;text-decoration:none;white-space:normal;overflow-wrap:anywhere;word-break:normal;line-height:1.4;font-size:15px}
+.practice-links button.button{appearance:none;cursor:pointer}
+.practice-links>.button:focus-visible{outline:3px solid #b39059;outline-offset:2px}
+@media(min-width:760px){.practice-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:400px){.practice-links>.button{font-size:14px;padding:13px}}
