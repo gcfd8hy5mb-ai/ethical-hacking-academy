@@ -274,3 +274,7 @@ Expanded 103 to 129 unique lesson-linked reference solutions with 26 additional 
 
 ### Worked answer supplements v8
 The original 129-answer file remains unchanged. A separate `worked-answer-supplement-v8.json` adds ten topic-specific exercises, giving 139 unique course/lesson references combined. Both the lesson reader and the draft-first Worked Answer Review page now load the base and supplemental banks; the direct lesson links continue to match exact course and lesson titles. The supplemental structure and viewer syntax were checked, but live browser testing and independent technical approval are pending. No existing student progress keys changed.
+
+
+### Complete worked-answer inventory — v9, November 2026
+Added 59 lesson-specific worked solutions in three incremental files (`worked-answer-supplement-v9a.json`, `worked-answer-supplement-v9b.json`, `worked-answer-supplement-v9c.json`). The lesson reader and draft-first worked-answer viewer now load these alongside the 129-answer base bank and 10-answer v8 supplement. Structural verification: 198 combined entries, 198 unique exact course/lesson pairs, all required fields populated, and app/viewer JavaScript syntax valid. Existing course IDs, completion records and exam scores were untouched. This completes reference-answer *inventory coverage* of the 198 known lesson titles; it does not establish educational rigor, independently verified correctness, accurate authored study hours or actual hands-on competency. Live end-to-end browser testing and independent editorial review remain necessary.
