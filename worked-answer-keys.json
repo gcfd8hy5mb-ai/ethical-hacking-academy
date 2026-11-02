@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
   "rubric": [
     {
@@ -843,6 +843,214 @@
       "answer": "Identify the device's general interface capabilities and document ownership; test only owned/authorized training media under applicable RF rules.",
       "evidence": "Provide benign inventory, permitted lab and safety record.",
       "pitfall": "Owning hardware does not grant rights to third-party systems or credentials."
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Defense in depth",
+      "case": "A fictional employee laptop is stolen while its disk is encrypted.",
+      "answer": "Disk encryption reduces offline data exposure, but account tokens, remote sessions, device inventory and monitoring are separate layers. Revoke sessions where appropriate and investigate confirmed access.",
+      "evidence": "Record encryption status, device access reports, token invalidation and incident owner.",
+      "pitfall": "One safeguard does not remove all risks."
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "The terminal and command syntax",
+      "case": "A student enters a shell command with a path containing spaces and gets 'file not found'.",
+      "answer": "Shell tokenization treats spaces as argument separators unless the path is quoted or escaped. Inspect help and use a harmless read-only command with an explicitly quoted path.",
+      "evidence": "Show tokens, intended path and corrected read-only invocation.",
+      "pitfall": "Don't assume an error proves the file is missing."
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Packets, protocols and layered models",
+      "case": "A browser resolves the portal but a TCP handshake fails.",
+      "answer": "DNS resolution is at the naming layer; transport establishment is a separate step. Check destination, route and permitted transport path before diagnosing HTTP.",
+      "evidence": "Annotate DNS response, destination port and handshake outcome.",
+      "pitfall": "Successful DNS does not prove an HTTPS service is reachable."
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Access reviews and audit trails",
+      "case": "An administrator still has a sensitive group membership after changing jobs.",
+      "answer": "Reconcile the current business role and approved entitlements; request authorized removal and verify effective access and audit records.",
+      "evidence": "Compare prior/current role and an approval ticket.",
+      "pitfall": "A directory group name does not prove access is appropriate."
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Operating systems: iPhone, Windows and Linux",
+      "case": "A mobile PWA can read a mock terminal but cannot execute systemctl.",
+      "answer": "Browsers are sandboxed: a simulated terminal is JavaScript state, not a real operating-system shell. Real service commands require an authorized OS environment.",
+      "evidence": "Identify browser permissions, simulated outputs and required real lab host.",
+      "pitfall": "A PWA depiction is not evidence of system-level execution."
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Moving through directories",
+      "case": "A trainee is at /home/student and must inspect /var/log without modifying files.",
+      "answer": "Use pwd, cd /var/log and ls in an authorized lab; explain absolute versus relative navigation and directory traversal.",
+      "evidence": "Show before/after working directory and expected listing.",
+      "pitfall": "Changing directory does not grant read permission."
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "App permissions and personal information",
+      "case": "A flashlight app requests contacts and microphone permissions.",
+      "answer": "Those permissions are unnecessary for the stated function absent clear justification; deny and review the developer privacy policy and system permission settings.",
+      "evidence": "Map requested data types to documented app purpose.",
+      "pitfall": "An app's permission prompt alone does not establish appropriate use."
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Folders, paths and extensions",
+      "case": "A Windows file named statement.pdf.exe displays a PDF-looking icon.",
+      "answer": "The effective executable extension may be hidden; inspect properties and verify the source without opening suspicious content.",
+      "evidence": "Compare full filename, type metadata and trusted source.",
+      "pitfall": "Icons are not reliable proof of file safety."
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Ports and protocols",
+      "case": "A training server responds to ICMP but HTTPS requests fail.",
+      "answer": "ICMP reachability does not prove TCP 443 is reachable or TLS/HTTP functionality works. Narrow checks by layer.",
+      "evidence": "Record controlled ping, connection test and HTTP/TLS response.",
+      "pitfall": "A successful ping cannot prove web service health."
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Variables and values",
+      "case": "A program assigns alert_count=2 then increments it twice.",
+      "answer": "The final value is 4 when each increment adds one; explain initialization and mutation in execution order.",
+      "evidence": "Show a line-by-line variable trace for 2, 3 and 4.",
+      "pitfall": "A variable name is not itself a constant."
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "From assets to business impact",
+      "case": "A test payroll server is unavailable for two hours.",
+      "answer": "Identify delayed salary processing, payroll deadlines, dependency owners and recovery targets rather than equating downtime with data theft.",
+      "evidence": "Record validated business effects and unconfirmed scenarios separately.",
+      "pitfall": "Availability incidents do not necessarily imply confidentiality compromise."
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Browser versus server responsibilities",
+      "case": "A browser UI disables the delete button for a regular user.",
+      "answer": "Client controls are cosmetic to authorization; the server must deny an unauthorized delete request regardless of button state.",
+      "evidence": "Compare authorized and unauthorized synthetic API outcomes.",
+      "pitfall": "Hidden or disabled buttons cannot enforce server access policy."
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: hospital system availability",
+      "case": "A simulated hospital scheduling tool goes offline during high demand.",
+      "answer": "Activate safety-focused downtime procedures, establish incident ownership, prioritize critical flows and validate recovery without bypassing privacy.",
+      "evidence": "Document continuity plan, observed impact and functional test.",
+      "pitfall": "Rushing service restoration without safety checks can cause harm."
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Design for failure and recovery",
+      "case": "An app has two replicas but both depend on one database instance.",
+      "answer": "The database remains a single point of failure. Model dependencies and test a safe recovery scenario against RTO/RPO targets.",
+      "evidence": "Show shared dependency and tested failover path.",
+      "pitfall": "More replicas do not automatically provide end-to-end resilience."
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Learn command-line documentation",
+      "case": "An analyst sees an unfamiliar command option in a support runbook.",
+      "answer": "Use vendor docs or the tool's help to establish what the option does and whether it mutates data; test only in approved safe environment.",
+      "evidence": "Record exact option, documented effect and expected output.",
+      "pitfall": "Do not run unreviewed privileged commands on production."
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Why encryption exists",
+      "case": "A confidential report is stored encrypted but shared with a broadly authorized group.",
+      "answer": "Encryption protects data under specified key conditions; overly broad access grants can still disclose plaintext to authorized decryptors.",
+      "evidence": "Identify data key holders, access policies and legitimate-reader controls.",
+      "pitfall": "Encrypted storage does not compensate for unsafe authorization."
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Detection versus prevention",
+      "case": "A firewall blocks unapproved inbound traffic while a SIEM alerts on repeated login failures.",
+      "answer": "The firewall is a preventive control for defined network paths, while monitoring detects observable patterns; both have coverage gaps.",
+      "evidence": "Map one prohibited action to preventive and detective evidence.",
+      "pitfall": "An alert does not automatically block an attack."
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Use isolated and simulated labs",
+      "case": "A training VM has a bridged adapter to a shared office LAN.",
+      "answer": "Use host-only or explicitly isolated topology as appropriate and verify external reachability is absent before experiments.",
+      "evidence": "Document virtual NIC mode and a harmless connectivity boundary check.",
+      "pitfall": "A VM is not isolated simply because it is virtual."
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Plan safe network troubleshooting",
+      "case": "A staff network has intermittent latency but no scheduled maintenance.",
+      "answer": "Begin with authorized read-only checks, timestamps and baseline comparison; coordinate any disruptive test under change control.",
+      "evidence": "Provide a least-disruptive sequence and rollback owner.",
+      "pitfall": "Do not launch broad scans to diagnose a shared production network."
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Read a simple Python script",
+      "case": "A script loops over mock events and prints only those with status='failed'.",
+      "answer": "Trace the list, each condition and produced output; treat missing keys explicitly with get or validation.",
+      "evidence": "Show three input records and which are printed.",
+      "pitfall": "Untrusted records may lack expected fields."
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Identity lifecycle and onboarding",
+      "case": "A new contractor needs access to one time-limited training project.",
+      "answer": "Verify sponsorship, employment/contractor status, minimal role, expiry and approval before provisioning; test and log the grant.",
+      "evidence": "Document owner, authorization, expiry and removal plan.",
+      "pitfall": "A manager request is not a permanent blanket privilege grant."
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Linux directory hierarchy",
+      "case": "A service writes changing data into /etc rather than its designated state directory.",
+      "answer": "/etc is typically configuration, while mutable operational state commonly belongs in appropriate /var paths; verify application guidance and permissions.",
+      "evidence": "Identify data type, intended hierarchy and migration control.",
+      "pitfall": "Do not move service files without checking dependencies."
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Browser and server trust boundaries",
+      "case": "A web form's client-side validation rejects invalid input, but the API accepts it.",
+      "answer": "The server must validate independently; demonstrate an authorized negative request and compare rejection behavior with legitimate input.",
+      "evidence": "State input rule and expected/observed server response.",
+      "pitfall": "Client-side validation cannot be trusted as the enforcement boundary."
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Identity policies and resource grants",
+      "case": "A cloud service identity has wildcard read privileges across all projects.",
+      "answer": "Restrict grants to necessary resources and actions; test legitimate workflow and denied access to unrelated resources.",
+      "evidence": "Compare resource/action matrix and effective policy.",
+      "pitfall": "A service account's intended purpose is not enforced automatically."
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Building a target inventory from supplied diagrams",
+      "case": "An architecture diagram includes a shared gateway serving other customers.",
+      "answer": "Inventory only explicitly approved logical resources and note shared boundaries; obtain owner confirmation before tests.",
+      "evidence": "Record supplied source, scope approval and excluded tenants.",
+      "pitfall": "A reachable shared gateway is not automatically in scope."
+    },
+    {
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "WiFi Pineapple: recognition and safe use",
+      "case": "A trainee wants to assess wireless configurations in a shared residential building.",
+      "answer": "Limit demonstrations to a controlled network you own or have explicit authorization to test, with isolated clients and minimal power/interference.",
+      "evidence": "Show written owner permission and disconnected training topology.",
+      "pitfall": "Being nearby or knowing a password does not grant permission to test other networks."
     }
   ]
 }
