@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
   "rubric": [
     {
@@ -219,6 +219,214 @@
       "answer": "Confirm shared ground, supported voltage, safe electrical connection and sample rate before reading transitions. Interpret timing relative to documented protocol.",
       "evidence": "Record voltage levels, sample interval, expected versus observed transitions.",
       "pitfall": "Do not attach unknown signals or mains voltage to low-voltage logic inputs."
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Threats, vulnerabilities, and risk",
+      "case": "A fictional supplier account is phished; identify threat, vulnerability and risk.",
+      "answer": "Threat: misuse by an attacker; vulnerability: inadequate phishing-resistant authentication or verification; risk: probable harm to business processes if exploited. Qualify likelihood and consequence separately.",
+      "evidence": "Map asset, threat actor, weakness, exposure, potential impact and uncertainty.",
+      "pitfall": "A threat is not necessarily an exploited vulnerability."
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Backups, updates and recovery",
+      "case": "A backup succeeded yesterday but restoring the accounting database fails.",
+      "answer": "Verify backup content, dependencies, encryption keys and isolated restore; compare achievable RPO/RTO to requirements.",
+      "evidence": "Show job log, manifest, integrity check and tested recovery result.",
+      "pitfall": "Backup job completion alone does not establish recoverability."
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "DNS and domain names",
+      "case": "A synthetic host resolves to an outdated documentation address after migration.",
+      "answer": "Check authoritative record, resolver cache and TTL; distinguish stale answers from connection failure.",
+      "evidence": "Compare trusted baseline and query responses with times.",
+      "pitfall": "DNS resolution doesn't guarantee application availability."
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Logging and alert triage",
+      "case": "An alert flags five failed logins from a shared office IP.",
+      "answer": "Correlate timestamps, user identities, success events, expected changes and multiple sources; determine whether action is justified.",
+      "evidence": "Document observed events versus hypotheses and confidence.",
+      "pitfall": "A shared IP address alone does not identify a perpetrator."
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Bits, bytes and file sizes",
+      "case": "A fictional dataset has 1,048,576 bytes; express in MiB.",
+      "answer": "1 MiB equals 1,048,576 bytes, so the dataset is 1 MiB; it is approximately 1.049 MB in decimal units.",
+      "evidence": "State conversion factors and distinguish decimal from binary units.",
+      "pitfall": "MB and MiB are not interchangeable."
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Reading without modifying files",
+      "case": "A system log must be inspected without changing its content.",
+      "answer": "Prefer read-only inspection such as head, tail or less with authorized access; preserve original timestamps and record source.",
+      "evidence": "Provide file path, access authorization and read-only command rationale.",
+      "pitfall": "Avoid redirecting output into the original file."
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passkeys and account recovery",
+      "case": "A user loses the only device containing a device-bound passkey.",
+      "answer": "Use pre-enrolled recovery options and verified account recovery; distinguish device-bound credentials from securely synced passkeys.",
+      "evidence": "Document available recovery factors and evidence of account ownership.",
+      "pitfall": "Never bypass identity checks or assume recovery is always possible."
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows file access controls",
+      "case": "A user belongs to a group with read access but tries to edit a protected document.",
+      "answer": "Evaluate effective NTFS permissions and inheritance; read permission does not imply modify permission.",
+      "evidence": "Explain explicit/ inherited entries and test with a nonprivileged account.",
+      "pitfall": "Do not grant Everyone full control as a shortcut."
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "What DHCP does",
+      "case": "A lab client has no assigned address after reconnecting.",
+      "answer": "Inspect link, DHCP discovery and offer process, relay reachability and lease state; compare with known-good client.",
+      "evidence": "Use synthetic Discover, Offer, Request, Acknowledge timeline.",
+      "pitfall": "Do not assume every missing address is a DNS issue."
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Conditions and decisions",
+      "case": "A log parser labels severity high if score >= 8; what happens for score 8?",
+      "answer": "The >= operator includes the boundary; score 8 evaluates true. Check how missing or nonnumeric values are handled.",
+      "evidence": "Show input, boolean expression and output for 7, 8 and 9.",
+      "pitfall": "Off-by-one conditions can misclassify boundary events."
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Writing a professional finding",
+      "case": "An authorized simulation reveals a role that can view another team's record.",
+      "answer": "Report preconditions, expected authorization, observed synthetic response, impact, evidence limits, owner and remediation verification.",
+      "evidence": "Provide reproducible safe request summary and redacted record identifiers.",
+      "pitfall": "Do not report a hypothetical exploit as confirmed."
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Secrets and configuration hygiene",
+      "case": "A test access token is accidentally committed to a private training repository.",
+      "answer": "Treat exposure as potentially compromised, revoke and rotate using approved workflow, review logs and replace storage practices.",
+      "evidence": "Include token lifetime, repository access, revocation confirmation and dependent app health.",
+      "pitfall": "Removing a commit alone cannot guarantee secret invalidation."
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: cloud storage exposure",
+      "case": "An internal synthetic report bucket becomes anonymously readable.",
+      "answer": "Confirm effective access in approved test, preserve policy evidence, restrict according to data classification, validate legitimate and anonymous paths.",
+      "evidence": "Store policy before/after and dual positive/negative test outcomes.",
+      "pitfall": "Encryption at rest does not substitute for correct access policy."
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Security logging without oversharing",
+      "case": "A payment service logs full authentication headers to aid debugging.",
+      "answer": "Replace sensitive fields with bounded metadata, minimize retention and restrict log access while preserving audit usefulness.",
+      "evidence": "Specify sampled log schema and data classification.",
+      "pitfall": "Sensitive secrets should not be copied into debugging logs."
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Interpret logs and timestamps",
+      "case": "A UTC log at 14:00 and local change ticket at 09:02 CDT appear related.",
+      "answer": "Convert 09:02 CDT to 14:02 UTC; events are two minutes apart, not proof of causation.",
+      "evidence": "Show timezone offset, original timestamp source and corroborating evidence.",
+      "pitfall": "Chronological proximity is not causal proof."
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "TLS certificates and trust",
+      "case": "A mock HTTPS site presents a certificate valid for a different hostname.",
+      "answer": "The client should reject the name mismatch unless a trusted, explicitly authorized exception applies; verify hostname and certificate chain.",
+      "evidence": "Record requested hostname, SAN entries, chain and system clock.",
+      "pitfall": "A trusted issuer does not excuse a wrong hostname."
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Time windows and correlation",
+      "case": "Two log systems have a three-minute clock difference.",
+      "answer": "Normalize timestamps, measure clock drift and correlate stable request IDs where available.",
+      "evidence": "Show raw and normalized times and clock uncertainty.",
+      "pitfall": "Treating unsynchronized timestamps as exact can reverse incident order."
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Handle findings responsibly",
+      "case": "An authorized lab test exposes a sample record containing a real email address.",
+      "answer": "Stop unnecessary collection, redact personal data and notify the agreed owner through approved channels.",
+      "evidence": "Capture minimal reproducible evidence with access controls.",
+      "pitfall": "Do not paste private data into public reports."
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Compare DNS, TCP and HTTP errors",
+      "case": "The portal resolves but reports HTTP 503.",
+      "answer": "DNS resolution and network transport may work; HTTP 503 indicates the application or upstream service is unavailable. Investigate server health and dependency state.",
+      "evidence": "Include DNS answer, TLS/HTTP response and corroborating service logs.",
+      "pitfall": "Do not label an HTTP 503 as a DNS failure."
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Make a reusable function",
+      "case": "Several mock events need the same severity classifier.",
+      "answer": "Use a pure function with explicit inputs and return output; write tests for boundaries, missing fields and invalid types.",
+      "evidence": "Show function signature and three expected outputs.",
+      "pitfall": "Hidden global state makes results hard to reproduce."
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "MFA deployment and recovery",
+      "case": "A contractor loses their MFA device during an urgent project.",
+      "answer": "Use vetted recovery identity proofing, temporary least-privilege access when approved, time limits and complete audit.",
+      "evidence": "Record approver, expiration, enrollment reset and end-of-access check.",
+      "pitfall": "Urgency alone does not justify bypassing recovery controls."
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Services and startup behavior",
+      "case": "A test service reports failed after a scheduled configuration move.",
+      "answer": "Review systemctl status and journalctl, compare configured path and dependency checks, correct approved config and validate actual function.",
+      "evidence": "Provide service unit, relevant log and successful functional test.",
+      "pitfall": "Restarting repeatedly without diagnosis can obscure evidence."
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Parameterized database access",
+      "case": "A mock web app builds SQL by concatenating a user-supplied search term.",
+      "answer": "Use parameter binding for values with least-privilege database accounts and verify expected query behavior.",
+      "evidence": "Describe query template versus parameter value and permitted results.",
+      "pitfall": "Escaping strings alone is not a substitute for parameterization."
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Backup and recovery objectives",
+      "case": "A cloud backup completes daily but the business requires less than one hour of data loss.",
+      "answer": "Daily backups alone do not establish an RPO under one hour; design appropriately frequent protected copies and verify restore feasibility.",
+      "evidence": "Compare target RPO, observed backup cadence and tested restore points.",
+      "pitfall": "Do not confuse RPO with RTO."
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Evidence requirements and limitations",
+      "case": "A report includes an undated screenshot of an alleged misconfiguration.",
+      "answer": "Capture provenance, date, environment, scope, reproducibility and independent corroboration before drawing conclusions.",
+      "evidence": "Include source identifier, timestamp and expected/actual behavior.",
+      "pitfall": "An image without context is weak technical evidence."
+    },
+    {
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "USB trust boundaries and endpoint controls",
+      "case": "A workstation detects an unexpected USB HID device in a training lab.",
+      "answer": "Identify device class and approved inventory, document event, and apply endpoint authorization without interacting with unknown payloads.",
+      "evidence": "Record device class, connection context and policy decision.",
+      "pitfall": "Do not run arbitrary keystroke-injection demonstrations on shared devices."
     }
   ]
 }
