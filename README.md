@@ -250,3 +250,7 @@ Added `curriculum-quality-review.html`, a responsive reviewer worksheet that loa
 
 ### Worked answer bank Version 2 — November 2026
 Expanded `worked-answer-keys.json` from 10 to 25 topic-specific model-answer exemplars spanning foundational IT, networking, Linux, Windows, identity, incident response, programming, web/cloud, assessment methodology, and hardware safety. Each has its own fictional scenario, reasoned answer, expected evidence, and misconception to avoid. The worked answer review page links to the Academy course reader. These exemplars are not linked to individual lessons automatically, do not grade original student writing, and have not received independent academic sign-off. Prior completion and examination scores remain unchanged.
+
+
+### Lesson-linked worked answers and independent draft gate — November 2026
+The Academy lesson reader now loads `worked-answer-keys.json` and displays a link only when a worked example matches that course and lesson title. The worked-answer viewer accepts `?course=<index>&lesson=<index>`, locates the corresponding reference answer, and requires at least 120 characters of original writing before the example solution can be revealed. Drafts save locally under `ethical-hacking-worked-answer-drafts-v1` and are not automatically evaluated for accuracy; the length gate is a practice prompt, not a secure examination. All prior lesson completion and exam keys remain unchanged. JavaScript parse checks passed; live Safari testing remains outstanding.
