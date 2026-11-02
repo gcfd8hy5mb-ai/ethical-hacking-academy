@@ -194,3 +194,7 @@ Six existing courses now display separately mapped Technical Assessment Studio r
 
 ### Practical qualification simulation (November 2026)
 New `practical-qualification-exam.html`, linked from Practice Lab and Progress. Four fictional independent investigations require selecting two evidence sources, diagnosis, corrective action, verification and a 100-character explanation. Objective scoring: ten points per investigation, forty total; pass requires >=32 overall and >=6 in each investigation. Best total and any pass recorded in separate `ethical-hacking-qualification-exam-v1` local browser storage. Retakes available. Free-text content is checked only for length; no real computer commands run and no externally certified practical qualification is awarded. JavaScript parse and scenario count were checked, but live deployed/browser assessment was not yet tested.
+
+
+### Advanced qualification Part II
+Three additional independent synthetic cases on Windows change-event correlation, DNS resolver troubleshooting and incident evidence preservation. Opens at `advanced-qualification-exam.html` from Practice Lab and Progress. Each case scores evidence selection (4), diagnosis (2), action (2) and validation (2). A pass requires 24/30 and a minimum 6/10 in each case. Uses independent local score key `ethical-hacking-qualification-exam-part2-v1` to preserve existing Part I records. Written rationale has only a length check; no external proctoring or hands-on execution. JavaScript syntax inspected, browser deployment not independently tested.
