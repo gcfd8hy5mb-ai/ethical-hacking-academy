@@ -218,3 +218,7 @@ Added `virtual-windows-workstation.html`, linked from Practice Lab and Progress.
 
 ### Virtual Network Workstation (November 2026)
 Created `virtual-network-workstation.html`: a stateful browser-only training lab for DNS and default-gateway troubleshooting, with typed allowlisted inspection and simulated configuration commands, changing synthetic results, a verification step and objective 10-point scoring (four evidence, four settings, two verification). Its score is kept under `ethical-hacking-virtual-network-v1` without changing existing progress keys. Linked from Practice Lab and Progress. No network traffic or OS commands are executed. JavaScript syntax checked; live browser testing outstanding.
+
+
+### Blind troubleshooting workstation — November 2026
+Added `blind-troubleshooting-lab.html` with four stateful, hidden-fault browser scenarios (DNS, route, service, firewall). Students inspect synthetic conditions, apply allowlisted changes, verify synthetic portal access, and receive up to ten objective points; the full score requires two observations, successful verification and one precisely targeted correction. `ethical-hacking-blind-network-lab-v1` stores best scores per scenario, separate from all existing records. A link and progress summary were added. This is not a real OS or network lab; JavaScript syntax checked but deployed browser interaction remains unverified.
