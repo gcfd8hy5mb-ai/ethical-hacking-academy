@@ -270,3 +270,7 @@ Expanded from 77 to 103 unique lesson-linked technical reference exercises. This
 
 ### Worked answer bank v6 — November 2026
 Expanded 103 to 129 unique lesson-linked reference solutions with 26 additional topic-specific cases. Each example includes a safe synthetic scenario, a worked conclusion, expected evidence and a misconception. Existing lesson-linked drafts and exam scores are unaffected. The expanded bank has been structurally checked for duplicates and required fields; independent technical editorial sign-off and live browser testing remain outstanding.
+
+
+### Worked answer supplements v8
+The original 129-answer file remains unchanged. A separate `worked-answer-supplement-v8.json` adds ten topic-specific exercises, giving 139 unique course/lesson references combined. Both the lesson reader and the draft-first Worked Answer Review page now load the base and supplemental banks; the direct lesson links continue to match exact course and lesson titles. The supplemental structure and viewer syntax were checked, but live browser testing and independent technical approval are pending. No existing student progress keys changed.
