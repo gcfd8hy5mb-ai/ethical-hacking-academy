@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
   "rubric": [
     {
@@ -99,6 +99,126 @@
       "answer": "Closure is not justified. Successful remediation must prevent the unauthorized action and preserve intended functionality within approved acceptance criteria. Escalate regression and coordinate rollback or correction.",
       "evidence": "Document original unauthorized test, authorized business transaction and change history.",
       "pitfall": "Treating denial of all access as a successful security fix ignores availability and business impact."
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security goals and the CIA triad",
+      "case": "A fictional hospital must preserve patient confidentiality while maintaining emergency access.",
+      "answer": "Identify confidentiality as restricted records, integrity as accurate clinical entries, and availability as timely access. Use role-based controls, audit trails and rehearsed emergency access.",
+      "evidence": "Map each objective to one operational control and one validation test.",
+      "pitfall": "Do not sacrifice patient access by interpreting confidentiality as unconditional denial."
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Processes and services",
+      "case": "A reports daemon is stopped but the host responds to pings.",
+      "answer": "Ping establishes limited network reachability, not application health. Inspect service state, journal entries and dependencies. Restart only after verifying the cause and approved recovery steps.",
+      "evidence": "Correlate process/service state with a specific log event and a successful business transaction.",
+      "pitfall": "Do not interpret a reachable host as proof that its application is operating."
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Incident response lifecycle",
+      "case": "An employee reports a suspicious login alert after receiving a phishing email.",
+      "answer": "Record evidence and timestamps, validate account activity, triage the incident, perform approved containment, preserve evidence, and plan recovery and follow-up.",
+      "evidence": "Show an incident timeline and clearly distinguish suspected from confirmed impact.",
+      "pitfall": "Do not wipe devices or delete logs before authorized evidence preservation."
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Local storage versus cloud storage",
+      "case": "A phone user deletes a document locally but still sees it on a second synced device.",
+      "answer": "Local deletion and cloud synchronization can have different semantics and retention. Identify the account, sync state and provider retention before assuming data is deleted everywhere.",
+      "evidence": "Draw phone, sync service and second device with separate state and ownership.",
+      "pitfall": "Do not claim cloud copies automatically disappear after local deletion."
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Multifactor authentication",
+      "case": "A user has SMS MFA but receives a convincing fake login prompt.",
+      "answer": "MFA raises the cost of compromise, but phishing resistance differs by factor. Explain origin-bound security keys/passkeys versus transferable codes and use a trusted login route.",
+      "evidence": "Show expected sign-in origin, factor type, recovery path and safe verification.",
+      "pitfall": "Do not ask users to share one-time codes or approve unrecognized prompts."
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "DNS troubleshooting",
+      "case": "The resolver times out but the authorized portal responds by its documentation IP.",
+      "answer": "A resolver timeout points to DNS service or reachability; direct-address success suggests an independent functioning path. Validate configured resolver, route and hostname endpoint after correction.",
+      "evidence": "Record both lookup commands, responses and end-to-end hostname test.",
+      "pitfall": "A working IP endpoint does not prove TLS hostname validation or all services succeed."
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "APIs and least privilege",
+      "case": "A read-only API token can retrieve another tenant's synthetic record.",
+      "answer": "Read-only is not synonymous with tenant-restricted. Enforce server-side object ownership and scope; test both an unauthorized tenant request and a permitted owner request.",
+      "evidence": "Document principal, tenant, resource identifier, expected denial and allowed control.",
+      "pitfall": "Do not rely on hidden buttons or user-selected tenant identifiers for security."
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: former employee access",
+      "case": "An offboarded employee's cached session still accesses fictional reports.",
+      "answer": "Review effective application session lifetime separately from account status, revoke active sessions under approved policy and verify negative access after revocation.",
+      "evidence": "Include a before/after access test, session audit and preserved timestamps.",
+      "pitfall": "A disabled directory account does not guarantee immediate token expiration."
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Build a simple threat model",
+      "case": "A payroll service shares a database with a public-facing portal.",
+      "answer": "Map data sensitivity and trust boundaries; identify potential authorization failures, access paths, mitigations and owners. Validate hypotheses rather than assuming compromise.",
+      "evidence": "Show a diagram, threat actor capabilities, affected asset and one measurable control.",
+      "pitfall": "Do not confuse a hypothetical abuse path with an observed exploitable vulnerability."
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Plan a maintenance change",
+      "case": "A scheduled patch could affect the only payroll database replica.",
+      "answer": "Record dependency, downtime impact, backup/restore status, approval, test plan, communications and rollback criteria.",
+      "evidence": "Provide a time-ordered change record and positive business verification.",
+      "pitfall": "Do not infer successful rollback from the existence of a backup alone."
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Subnets with a pencil",
+      "case": "A workstation uses 192.0.2.77/26. Identify the network and usable range.",
+      "answer": "A /26 covers blocks of 64: .77 is in 192.0.2.64–127. Network .64, broadcast .127, conventional hosts .65–.126.",
+      "evidence": "Show mask 255.255.255.192 and block size 64 before assigning range.",
+      "pitfall": "Do not treat the network or broadcast address as ordinary host addresses in conventional IPv4 subnetting."
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Validate results and limitations",
+      "case": "A mock Python parser skips malformed time fields and reports zero failures.",
+      "answer": "Zero observed failures may reflect omitted data. Count parsing errors, preserve inputs, test empty/malformed examples and state data-quality limitations.",
+      "evidence": "Supply three synthetic sample records, expected output and an exception counter.",
+      "pitfall": "Do not silently discard malformed security records and report false certainty."
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Permission before testing",
+      "case": "A user is told they can test one internal server but sees an attached vendor service.",
+      "answer": "Authorization must name systems, owners, methods, and permitted window. A vendor endpoint is out of scope unless explicitly authorized by its owner.",
+      "evidence": "Provide a written scope table with allowed and excluded assets and escalation contact.",
+      "pitfall": "Network visibility is not permission to test."
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Storage and backup verification",
+      "case": "A Linux backup job shows success but a required file is missing after a restore.",
+      "answer": "Job completion is not proof of recoverability. Check backup manifest, scope, retention, integrity and an isolated test restore against recovery objectives.",
+      "evidence": "Show restore log, checksum and sample file comparison with RPO/RTO assumptions.",
+      "pitfall": "Do not restore over production files without a controlled recovery plan."
+    },
+    {
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Logic Analyzer: recognition and safe use",
+      "case": "A student measures a low-voltage microcontroller output with a logic analyzer.",
+      "answer": "Confirm shared ground, supported voltage, safe electrical connection and sample rate before reading transitions. Interpret timing relative to documented protocol.",
+      "evidence": "Record voltage levels, sample interval, expected versus observed transitions.",
+      "pitfall": "Do not attach unknown signals or mains voltage to low-voltage logic inputs."
     }
   ]
 }
