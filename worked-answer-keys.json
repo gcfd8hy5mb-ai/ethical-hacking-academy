@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
   "rubric": [
     {
@@ -635,6 +635,214 @@
       "answer": "Use an offline or clearly segregated lab, approved capture scope, secure images and power, and redact collected metadata.",
       "evidence": "Diagram test nodes and boundaries, image provenance and shutdown process.",
       "pitfall": "Do not bridge an experimental sensor into a shared network without authorization."
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security governance and ethics",
+      "case": "A manager asks a trainee to test a partner's web server without written permission.",
+      "answer": "Decline the test until asset ownership, explicit permission, methods, time window and emergency stop are confirmed; offer a synthetic lab assessment instead.",
+      "evidence": "Record authorization, owner and exclusions.",
+      "pitfall": "Managerial authority over employees is not permission over third-party assets."
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Users, groups and privilege",
+      "case": "A scheduled backup runs under an administrator account although it only reads one folder.",
+      "answer": "Create an approved limited service identity with read and required backup permissions, then verify backup and denial outside scope.",
+      "evidence": "Compare role permissions before and after.",
+      "pitfall": "A job succeeding with administrator rights is not evidence least privilege is satisfied."
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "HTTP, HTTPS and TLS",
+      "case": "A portal resolves its hostname but a browser warns of an expired certificate.",
+      "answer": "The DNS step may work while TLS identity validation fails. Check certificate validity dates, hostname, trusted chain and clock; renew through approved processes.",
+      "evidence": "Capture synthetic certificate fields and before/after TLS handshake outcomes.",
+      "pitfall": "A padlock or HTTP response alone is not evidence of correct certificate identity."
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Phishing and social engineering",
+      "case": "A finance user receives an urgent payment-change text citing their CEO.",
+      "answer": "Pause the payment and verify through an independently trusted route; preserve evidence and report the attempt.",
+      "evidence": "Compare verified payment workflow and claimed sender identity.",
+      "pitfall": "A caller name or apparent executive tone does not authenticate a request."
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "What happens when you open an app",
+      "case": "A mobile app opens but cannot display synced project information.",
+      "answer": "Separate successful app launch from network authorization and sync state. Inspect safe status indicators, connectivity and account context.",
+      "evidence": "Describe launch, permissions, network request and user-facing error layers.",
+      "pitfall": "A visible app screen is not proof its backend requests succeeded."
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Listing files and hidden entries",
+      "case": "A trainee sees no configuration file with basic ls, but a dot-prefixed file exists.",
+      "answer": "Run an authorized read-only listing that includes dotfiles, such as ls -la, and verify path and owner before interpretation.",
+      "evidence": "Explain dotfile convention and ls -la columns.",
+      "pitfall": "Hidden files are not inherently malicious or secret."
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Recognizing fraudulent login pages",
+      "case": "A sign-in prompt uses a near-match domain and requests a one-time code.",
+      "answer": "Stop interaction, compare the exact origin against a trusted bookmarked route and report safely; never submit credentials or codes.",
+      "evidence": "Record origin hostname and independent trusted source.",
+      "pitfall": "A familiar logo or HTTPS certificate does not prove the intended organization's identity."
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows security updates",
+      "case": "A new Windows patch causes a synthetic inventory app to fail after reboot.",
+      "answer": "Correlate installation time with error evidence, isolate the dependency, use approved rollback or mitigation and verify patch/security state afterwards.",
+      "evidence": "Capture patch identifier, event records, reproduction and approved recovery test.",
+      "pitfall": "Temporal correlation alone does not prove patch causation."
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Safe connectivity diagnostics",
+      "case": "A fictional portal returns TLS failure after name resolution and a successful TCP connection.",
+      "answer": "Classify the failure at TLS, inspect certificate hostname, chain and date, and avoid unnecessary DNS or firewall changes.",
+      "evidence": "Provide staged DNS, TCP and TLS observations.",
+      "pitfall": "A completed TCP connection is not proof the TLS handshake will succeed."
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Functions and reusable work",
+      "case": "A classifier function prints a result but does not return it.",
+      "answer": "Separate return values from printing side effects. Return a severity label and test the output for low and high synthetic inputs.",
+      "evidence": "Show expected return type and two assertion examples.",
+      "pitfall": "Printed output cannot be reliably used as a function's return value."
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Security scope and rules of engagement",
+      "case": "A test plan includes two owned hosts and one outside vendor endpoint.",
+      "answer": "Document permitted hosts and exclude the vendor endpoint absent direct permission; specify hours, methods and stop conditions.",
+      "evidence": "Present approved and excluded scope table.",
+      "pitfall": "Discovery or reachability is not authorization."
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Input validation and encoding",
+      "case": "A portal displays a user-supplied comment containing angle brackets.",
+      "answer": "Validate according to business rules and apply output encoding appropriate to HTML text; avoid interpreting untrusted content as markup.",
+      "evidence": "Explain input rules and expected safely rendered text.",
+      "pitfall": "Input validation and output encoding serve different purposes."
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: ransomware and recovery",
+      "case": "A mock server is restored from backup but the original malicious entry route remains exposed.",
+      "answer": "Preserve response evidence, contain authorized affected systems, remove the cause, test clean restore and monitor for recurrence.",
+      "evidence": "Show restore validation plus containment and follow-up tests.",
+      "pitfall": "A successful restore alone does not establish the incident is over."
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Map an application before securing it",
+      "case": "A service diagram omits a third-party identity provider used at login.",
+      "answer": "Add the provider, claims exchange, trust boundaries and failure implications before evaluating controls.",
+      "evidence": "Draw browser, application, identity provider and data store with labeled flows.",
+      "pitfall": "An incomplete asset diagram leads to invalid risk assumptions."
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Handle an IT support request",
+      "case": "One user cannot authenticate after a device change, while coworkers can.",
+      "answer": "Capture timestamp, affected identity, error, approved recovery method and recent changes; avoid resetting broad group access.",
+      "evidence": "Compare one-user observations with a known-good baseline.",
+      "pitfall": "One user failure does not prove a companywide identity outage."
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Symmetric and asymmetric keys",
+      "case": "A system encrypts a large archive with a symmetric key and sends the key to another team.",
+      "answer": "Protect the symmetric key using an approved key exchange or key-management service; distinguish fast bulk encryption from key distribution.",
+      "evidence": "Map data key, recipients, key-encryption process and trust boundary.",
+      "pitfall": "An encrypted file is unsafe if its decryption key is distributed carelessly."
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Understand event records",
+      "case": "A mock sign-in entry has timestamp, account, source and success status.",
+      "answer": "Interpret each field within its source context, normalize time and confirm event provenance; separate account ID from proof of human identity.",
+      "evidence": "Show original source fields and reliability caveats.",
+      "pitfall": "An account label is not proof of who physically performed an action."
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Inventory an approved target",
+      "case": "A supplied asset list names a host but not its current owner.",
+      "answer": "Mark ownership unverified, request approval evidence and exclude it from active testing until resolved.",
+      "evidence": "Include owner, environment, approved time window and inventory source.",
+      "pitfall": "A listed hostname alone is not proof of testing permission."
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Model a packet journey",
+      "case": "A packet from 192.0.2.10/24 goes to a different documentation network.",
+      "answer": "Compare route table longest-prefix match, local interface, configured gateway, next-hop access and return route.",
+      "evidence": "Annotate packet source/destination and chosen route.",
+      "pitfall": "Ping failure along a path does not necessarily prove traffic loss."
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Use decisions without mixing types",
+      "case": "An event's risk value is the text '9', but code compares it to integer 8.",
+      "answer": "Validate type then safely convert numeric text when allowed, handle errors and compare the resulting integer.",
+      "evidence": "Test '9', 'bad' and missing value.",
+      "pitfall": "Python does not order strings and integers as interchangeable numeric values."
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Provisioning least-privilege roles",
+      "case": "An HR analyst role can export every department's confidential records.",
+      "answer": "Scope permissions by documented department and purpose, test positive own-scope and negative other-scope access.",
+      "evidence": "Produce role-resource-operation matrix and approved test results.",
+      "pitfall": "A read-only export may still disclose sensitive data."
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "System logs and journal concepts",
+      "case": "The service journal shows a failure at 03:00 UTC while a ticket says 22:00 local the previous day.",
+      "answer": "Normalize source timezones and account for daylight saving before linking records; corroborate dependencies.",
+      "evidence": "Record timezone offset, source system, log type and event details.",
+      "pitfall": "Raw timestamps from different zones cannot be compared naively."
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Secure session lifecycle",
+      "case": "A user changes password but an older session remains active.",
+      "answer": "Evaluate defined session invalidation, server-side revocation, expiry and rotation behavior; enforce intended security policy and verify access denial.",
+      "evidence": "Test old-session request and current authorized session request.",
+      "pitfall": "Password changes do not universally revoke already-issued sessions automatically."
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Cloud service models",
+      "case": "A team migrates a self-managed VM app to a managed platform.",
+      "answer": "Reassign patch, runtime, identity, application and data duties based on actual provider contract and architecture.",
+      "evidence": "Prepare a service-specific responsibility matrix.",
+      "pitfall": "A managed service does not mean the provider owns all application security."
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Defining authorized testing scope",
+      "case": "An assessment team has written scope but an emergency stop contact is absent.",
+      "answer": "Complete rules of engagement before starting, specifying incident contacts, stop triggers, data handling and allowed techniques.",
+      "evidence": "Use signed approval, owner and stop-condition checklist.",
+      "pitfall": "Broad permission without operational limits is inadequate for safe tests."
+    },
+    {
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Flipper Zero: recognition and safe use",
+      "case": "An employee finds a portable radio/NFC test device in a shared office.",
+      "answer": "Identify the device's general interface capabilities and document ownership; test only owned/authorized training media under applicable RF rules.",
+      "evidence": "Provide benign inventory, permitted lab and safety record.",
+      "pitfall": "Owning hardware does not grant rights to third-party systems or credentials."
     }
   ]
 }
