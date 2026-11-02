@@ -222,3 +222,7 @@ Created `virtual-network-workstation.html`: a stateful browser-only training lab
 
 ### Blind troubleshooting workstation — November 2026
 Added `blind-troubleshooting-lab.html` with four stateful, hidden-fault browser scenarios (DNS, route, service, firewall). Students inspect synthetic conditions, apply allowlisted changes, verify synthetic portal access, and receive up to ten objective points; the full score requires two observations, successful verification and one precisely targeted correction. `ethical-hacking-blind-network-lab-v1` stores best scores per scenario, separate from all existing records. A link and progress summary were added. This is not a real OS or network lab; JavaScript syntax checked but deployed browser interaction remains unverified.
+
+
+### Multi-Fault Troubleshooting Lab (November 2026)
+Added `multi-fault-troubleshooting-lab.html` with four browser-only stateful, hidden dual-fault cases: DNS plus service, route plus firewall, DNS plus route, and service plus firewall. Learners use allowlisted mock diagnostics, apply controlled simulated changes, verify synthetic HTTPS, and receive up to ten points; perfect scoring requires three observation categories, both underlying issues resolved, successful synthetic verification, and exactly two targeted changes. Score data uses separate `ethical-hacking-multifault-network-v1` localStorage key. Practice Lab and Progress links were integrated without modifying existing lesson IDs or other scores. Browser-live testing remains outstanding.
