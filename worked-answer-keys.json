@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
+  "rubric": [
+    {
+      "name": "Technical conclusion",
+      "points": 3
+    },
+    {
+      "name": "Mechanism and reproducible reasoning",
+      "points": 3
+    },
+    {
+      "name": "Evidence and uncertainty",
+      "points": 2
+    },
+    {
+      "name": "Safe verification and professional boundaries",
+      "points": 2
+    }
+  ],
+  "items": [
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Addresses, subnets and gateways",
+      "case": "A host is 192.0.2.17/27. Identify its network, broadcast, usable range and next-hop decision for 192.0.2.40.",
+      "answer": "/27 has 32 addresses per block. 192.0.2.17 falls in 192.0.2.0–31: network .0, broadcast .31, typical usable .1–.30. 192.0.2.40 is outside the local /27 and needs routing through a configured next hop.",
+      "evidence": "Show bitmask 255.255.255.224; 256−224=32; check destination against prefix.",
+      "pitfall": "Do not confuse the host's network address with the gateway, and do not claim traffic is allowed merely because a route exists."
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Users, permissions and safe defaults",
+      "case": "A folder is mode 750, owner root, group reports. An account reporter is in the reports group. Can it create new files there?",
+      "answer": "No. Group 5 grants read and execute but not write. For a directory, file creation normally requires write and execute. An authorized narrow permission adjustment and subsequent positive and negative tests would be needed.",
+      "evidence": "Decode 7=rwx for owner, 5=r-x for group, 0=--- for others; verify group membership and ACLs.",
+      "pitfall": "Do not suggest chmod 777 or assert complete access without checking ACLs and parent-directory traversal."
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Event Viewer and evidence",
+      "case": "Event ID 7000 appears after a known configuration-path migration and an app service fails. What is justified?",
+      "answer": "The log and change record support a stale dependency-path hypothesis, but don't prove it alone. Confirm the path actually used by the service, compare it with the approved change, correct under change control and verify a real app transaction.",
+      "evidence": "Preserve event timestamp/source, service configuration, change record and controlled recovery outcome.",
+      "pitfall": "Do not equate correlated timestamps with proven causation or delete logs during troubleshooting."
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Strings, numbers and booleans",
+      "case": "A log parser compares the string '0' against the integer 0. Explain the risk and safe conversion.",
+      "answer": "In Python, '0' == 0 is False because they have different types. Explicitly validate and convert to int only when the field is expected to be numeric, handling missing or malformed values.",
+      "evidence": "Show values, types, comparison result and a guarded conversion example.",
+      "pitfall": "Do not assume automatic coercion or silently convert untrusted input without validation."
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Hashes and integrity",
+      "case": "Two downloaded files have the same SHA-256 hash as a digest posted next to the file on a compromised website. What can you infer?",
+      "answer": "The files match the supplied digest with extremely high confidence, but a digest from the same compromised source is not independent authenticity evidence. Use an independently trusted signed manifest or signature where available.",
+      "evidence": "Distinguish integrity relative to a reference from authenticity of the reference's publisher.",
+      "pitfall": "A matching hash alone does not prove who published the file."
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Measure detection quality",
+      "case": "A synthetic alert fired 10 times: 8 true positives and 2 false positives. Compute precision.",
+      "answer": "Precision = TP/(TP+FP) = 8/(8+2) = 0.8, or 80%. Recall cannot be computed without false negatives.",
+      "evidence": "Write numerator, denominator and interpretation of a positive alert.",
+      "pitfall": "Do not equate precision with overall accuracy or detection coverage."
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Departures and access revocation",
+      "case": "A former worker's directory account is disabled, but an existing application token still works.",
+      "answer": "Directory disabling and already-issued token revocation can be separate controls. Investigate token expiry, session invalidation, service-side authorization and audit evidence. Apply approved revocation and verify access denial while preserving legitimate sessions.",
+      "evidence": "Use synthetic issued-at and expiry timestamps, token validation events and a negative access test.",
+      "pitfall": "Do not assume disabling the identity provider account instantly invalidates all relying-party sessions."
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Identity versus authorization",
+      "case": "A user signs into a training API successfully, then attempts to read a different tenant's fictional record.",
+      "answer": "Authentication proves account identity, not ownership of the requested object. The API must enforce server-side tenant and object authorization; an authorized negative test should return denial, while a legitimate owner request should succeed.",
+      "evidence": "Describe identity, resource tenant, request, expected denial and allowed control request.",
+      "pitfall": "UI hiding or a valid session alone is not authorization."
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Storage data classification",
+      "case": "A fictional backup object is confidential but has a policy allowing anonymous reads.",
+      "answer": "Its effective access violates the intended classification. Review policy inheritance and public access controls, preserve evidence, apply narrowly approved restriction, and validate anonymous denial plus authorized backup access.",
+      "evidence": "Policy snapshot, classification, synthetic anonymous test and positive service test.",
+      "pitfall": "Do not assert encryption at rest prevents authorized or policy-granted anonymous reads."
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Retest and closure criteria",
+      "case": "A vulnerability remediation passes its original negative test but stops legitimate customers from completing their workflow.",
+      "answer": "Closure is not justified. Successful remediation must prevent the unauthorized action and preserve intended functionality within approved acceptance criteria. Escalate regression and coordinate rollback or correction.",
+      "evidence": "Document original unauthorized test, authorized business transaction and change history.",
+      "pitfall": "Treating denial of all access as a successful security fix ignores availability and business impact."
+    }
+  ]
+}
