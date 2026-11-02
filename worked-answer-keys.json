@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "purpose": "Worked teaching exemplars for editorial evaluation, not student auto-grading or professional sign-off",
   "rubric": [
     {
@@ -427,6 +427,214 @@
       "answer": "Identify device class and approved inventory, document event, and apply endpoint authorization without interacting with unknown payloads.",
       "evidence": "Record device class, connection context and policy decision.",
       "pitfall": "Do not run arbitrary keystroke-injection demonstrations on shared devices."
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Assets, identities, and trust boundaries",
+      "case": "A portal API accepts a payroll record ID supplied by an authenticated user.",
+      "answer": "The record ID is input, not proof of ownership. Enforce the user's authorization on the server at the boundary between API and payroll records.",
+      "evidence": "Describe authenticated principal, requested object owner, policy and an allowed/denied pair of synthetic tests.",
+      "pitfall": "Authentication alone does not authorize arbitrary object access."
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Files, directories and permissions",
+      "case": "A group may read a file but cannot enter its parent directory.",
+      "answer": "Directory execute/search permission is needed to traverse the path, so effective access can fail despite file read permission.",
+      "evidence": "Show parent and file permissions and a least-privilege test.",
+      "pitfall": "File permissions alone do not determine successful access."
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "TCP, UDP and common services",
+      "case": "A client can resolve a host but TCP connections time out while a UDP query succeeds.",
+      "answer": "Different transports, routes and policies can behave differently; inspect the chosen destination port and allowed protocol without assuming application compromise.",
+      "evidence": "Compare source, destination, transport and controlled response.",
+      "pitfall": "UDP success does not prove TCP reachability."
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Vulnerability management",
+      "case": "Two assets share a severe patch issue, but only one is internet-exposed.",
+      "answer": "Prioritize using exposure, exploitability, business criticality and compensating controls, then track remediation and residual risk.",
+      "evidence": "Record asset owner, exposure and patch-validation criteria.",
+      "pitfall": "Severity labels alone should not determine remediation order."
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Files, apps and extensions",
+      "case": "A downloaded 'invoice.pdf.exe' arrives from an unfamiliar sender.",
+      "answer": "The actual extension indicates an executable on systems that use it; don't launch it. Verify source through an independent trusted channel.",
+      "evidence": "Record name, file metadata and source provenance without executing.",
+      "pitfall": "A familiar-looking icon does not make a file safe."
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "The present working directory",
+      "case": "A command expects ./report.txt but the terminal is in /home/student.",
+      "answer": "Relative paths resolve against the current directory; use pwd and a read-only ls check before interpreting a missing-file error.",
+      "evidence": "Show current directory, target path and expected lookup.",
+      "pitfall": "Missing relative files do not prove the file was deleted."
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passwords and password managers",
+      "case": "An employee reused the same password on work and a public forum.",
+      "answer": "A compromise on one site can threaten reused accounts; use unique generated passwords, an approved manager and appropriately protected recovery.",
+      "evidence": "Show distinct account credentials conceptually and a recovery procedure without exposing secrets.",
+      "pitfall": "Password complexity cannot compensate for reuse across compromised services."
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Task Manager and services",
+      "case": "CPU use is low, yet a Windows service is stopped.",
+      "answer": "Resource usage is not service health. Check service status and relevant event records, then validate the app's expected transaction.",
+      "evidence": "Correlate service status, event time and functional test.",
+      "pitfall": "Low CPU usage does not prove a service is available."
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Subnet reasoning",
+      "case": "A host 192.0.2.130/28 needs its conventional usable range.",
+      "answer": "A /28 block has 16 addresses; .130 lies in .128–.143, with network .128, broadcast .143 and conventional usable .129–.142.",
+      "evidence": "Show mask 255.255.255.240 and block arithmetic.",
+      "pitfall": "Don't treat the broadcast address as a normal host address."
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Loops and counters",
+      "case": "A parser processes four synthetic alerts with a counter starting at zero.",
+      "answer": "Increment once per processed alert, not per failed validation; decide explicitly whether rejected records count.",
+      "evidence": "Trace counter state after each of four records.",
+      "pitfall": "An off-by-one error can misstate alert totals."
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Risk prioritization tradeoffs",
+      "case": "Two issues have the same CVSS category but differ in exposure and business impact.",
+      "answer": "Use a documented decision matrix for reachability, exploit prerequisites, criticality, compensating controls and recovery cost.",
+      "evidence": "Record assumptions, scores, owners and remaining uncertainty.",
+      "pitfall": "A numeric prioritization score is not an observed probability."
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Session cookies and authentication",
+      "case": "A test web session cookie lacks Secure while the portal uses HTTPS.",
+      "answer": "Secure instructs browsers not to send the cookie over plaintext HTTP; also assess HttpOnly, SameSite, expiry and server-side session controls.",
+      "evidence": "Inspect synthetic Set-Cookie attributes and corresponding transport tests.",
+      "pitfall": "Secure cookies alone do not prevent every session attack."
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: suspicious supplier invoice",
+      "case": "A vendor asks for a new payment account in a reply to a legitimate old email chain.",
+      "answer": "Treat a bank-account change as high risk, pause payment and verify using a previously trusted contact channel; preserve correspondence.",
+      "evidence": "Compare approved vendor master record, purchase order and independently verified contact.",
+      "pitfall": "A familiar email thread cannot independently authenticate a payment change."
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Protect authentication and session state",
+      "case": "A session remains valid after a privileged role is removed.",
+      "answer": "Consider role-change propagation, session lifetime and server-side current authorization; revoke or recheck permissions at protected operations.",
+      "evidence": "Show pre/post role change requests and expected denial.",
+      "pitfall": "Token validity and current permission may be different."
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Create an equipment inventory",
+      "case": "Three laptops lack confirmed assigned owners despite having serial numbers.",
+      "answer": "Record the inventory as unverified, reconcile approved ownership records and assign accountable custodians.",
+      "evidence": "Separate observed serial/device data from owner assertion and last verification date.",
+      "pitfall": "An inventory field being populated does not prove its accuracy."
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Digital signatures",
+      "case": "A signed configuration file changes one byte after signing.",
+      "answer": "Signature verification should fail against the altered content with a correctly trusted signer key; identify signer and verified digest.",
+      "evidence": "Show original/modified digest and verification result.",
+      "pitfall": "An unsigned checksum does not establish signer identity."
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Build a basic alert rule",
+      "case": "A synthetic account has five failures in ten minutes but no successful login.",
+      "answer": "A bounded threshold rule can flag suspicious patterns for review; use source context and suppress duplicates while documenting limitations.",
+      "evidence": "Define event filter, aggregation key, time window and expected matches.",
+      "pitfall": "Failed sign-ins alone do not establish malicious intent."
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Form a test hypothesis",
+      "case": "A lab user suspects an API lets them read another tenant's record.",
+      "answer": "State expected denial, approved test identities and fictional objects; a single safe read authorization test can falsify the claim.",
+      "evidence": "Report exact expected/observed response and permitted scope.",
+      "pitfall": "Don't test real third-party records."
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Trace a website request end to end",
+      "case": "A fictional page returns HTTP 401 after successful DNS and TLS.",
+      "answer": "DNS, routing and TLS may be functioning; HTTP 401 indicates authentication is required or invalid, not necessarily an outage.",
+      "evidence": "Separate DNS answer, TLS validation and HTTP response.",
+      "pitfall": "Avoid calling an authentication denial a DNS failure."
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Work with a mock event list",
+      "case": "One of five event dictionaries lacks the 'status' key.",
+      "answer": "Use a documented missing-field default or explicit rejection, preserving an error count and source context.",
+      "evidence": "Show accepted, missing-key and malformed-record outcomes.",
+      "pitfall": "Silently dropping malformed data can bias detection results."
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Federation and single sign-on",
+      "case": "An IdP authenticates an employee but a connected app still denies access.",
+      "answer": "Federation establishes identity claims; app-side provisioning, roles and resource authorization still determine access.",
+      "evidence": "Map IdP assertion, SP trust, user mapping and relevant role state.",
+      "pitfall": "A successful SSO login does not guarantee application permission."
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Permission bits in context",
+      "case": "A reports service account belongs to a shared group but cannot create a file in mode 750 directory.",
+      "answer": "Group permissions r-x lack write. Check ownership, supplemental groups, ACLs and path traversal; make a scoped approved correction and retest.",
+      "evidence": "Show effective mode and a positive reporter test plus negative unrelated-user test.",
+      "pitfall": "Do not blindly make a directory world-writable."
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "User input validation",
+      "case": "A form accepts age=-50 while storing an integer.",
+      "answer": "Type validation alone is insufficient; server rules must enforce business range constraints and handle malformed input.",
+      "evidence": "Show type, range, boundary values and expected rejection.",
+      "pitfall": "Client-side validation is not a security boundary."
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Shared responsibility maps",
+      "case": "A cloud tenant assumes the provider will patch its self-managed virtual machine application.",
+      "answer": "For IaaS, the tenant typically manages guest OS, application and data controls while provider manages underlying infrastructure; verify exact service terms.",
+      "evidence": "Produce a control ownership table and evidence of patch operations.",
+      "pitfall": "Cloud hosting does not transfer all customer security responsibilities."
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Writing reproducible findings",
+      "case": "A report says 'access is broken' but supplies no role, endpoint or expected behavior.",
+      "answer": "A useful finding identifies approved scope, prerequisites, synthetic request, expected vs observed result, impact, evidence and verification.",
+      "evidence": "Supply a redacted reproducible case and owner.",
+      "pitfall": "Vague claims cannot be reliably retested."
+    },
+    {
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Raspberry Pi: recognition and safe use",
+      "case": "A Pi sensor should monitor only an isolated training network.",
+      "answer": "Use an offline or clearly segregated lab, approved capture scope, secure images and power, and redact collected metadata.",
+      "evidence": "Diagram test nodes and boundaries, image provenance and shutdown process.",
+      "pitfall": "Do not bridge an experimental sensor into a shared network without authorization."
     }
   ]
 }
