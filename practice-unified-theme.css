@@ -58,3 +58,31 @@ main header .academy-return-link{margin:0 0 12px!important}
 main header{flex-wrap:wrap!important}
 main :focus-visible{outline:3px solid #af874d!important;outline-offset:2px}
 @media(max-width:520px){main{padding-left:16px!important;padding-right:16px!important}main button,main a{overflow-wrap:anywhere}}
+
+/* Contrast corrections for PC anatomy diagrams and assessment controls. */
+main .diagram,main .diagram .motherboard{
+ background:#172b36!important;border-color:#82947a!important;color:#f5f2e8!important
+}
+main .diagram .part,main .diagram .motherboard .part,main .diagram>.part{
+ background:#294452!important;border:1px solid #8daeb7!important;
+ color:#ffffff!important;font-weight:750!important;text-shadow:none!important
+}
+main .diagram .part small,main .diagram .part span,main .diagram .part strong,
+main .diagram .motherboard .part small,main .diagram .motherboard .part span{
+ color:#e4f0f2!important;opacity:1!important;font-weight:500!important
+}
+main .diagram .flowarrow{color:#f6d79b!important}
+main button.choice,main .choices button.choice,main .choices button,
+main .answers button{
+ background:#fffaf2!important;color:#202c32!important;border:1px solid #b4a17e!important;
+ -webkit-text-fill-color:currentColor!important;opacity:1!important
+}
+main button.choice.active,main button.choice.selected,main .choices button.active,
+main .choices button.selected,main .answers button.active,main .answers button.selected{
+ background:#19252b!important;color:#fffaf2!important;border-color:#b38a4e!important;
+ -webkit-text-fill-color:#fffaf2!important
+}
+main .note{background:#f0e5d1!important;color:#252b2b!important;border-left-color:#af874d!important}
+main .note *,main .callout *{color:inherit!important}
+main .callout{background:#f0e5d1!important;color:#252b2b!important}
+main .eyebrow{color:#805d2d!important;font-weight:800!important}
