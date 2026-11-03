@@ -8,8 +8,14 @@ if(!firebaseApp)throw Error('Existing academy sign-in must initialize first');
 const auth=getAuth(firebaseApp),db=getFirestore(firebaseApp);
 const prefix='ethical-hacking-',docName='progress-v1';
 const panel=document.createElement('section');panel.id='ethical-cloud-panel';
-panel.style.cssText='position:fixed;z-index:1000;right:10px;bottom:10px;width:min(330px,calc(100vw - 20px));max-height:50vh;overflow:auto;border-radius:12px;border:1px solid #b69c65;background:#222b30;color:#f3eee2;padding:10px;font:13px system-ui;box-shadow:0 8px 28px #0009';
-document.body.append(panel);
+panel.style.cssText='position:relative;width:100%;max-width:100%;max-height:none;overflow:visible;border-radius:14px;border:1px solid #b69c65;background:#222b30;color:#f3eee2;padding:16px;font:15px system-ui;box-shadow:none;box-sizing:border-box';
+function mountInSettings(){
+ const slot=document.getElementById('ethical-cloud-settings-slot');
+ if(slot){if(panel.parentElement!==slot)slot.appendChild(panel)}
+ else if(panel.parentElement)panel.remove();
+}
+document.addEventListener('ethical-academy-rendered',mountInSettings);
+mountInSettings();
 let user=null,enabled=false,rev=0,last='',running=false,delay=null,activeRef=null,sessionGeneration=0;
 const records=()=>{
  const out={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix))out[k]=localStorage.getItem(k)}
