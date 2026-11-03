@@ -57,3 +57,10 @@ No original curriculum or lesson index was removed, moved, or overwritten. No ex
 - `learning-pathway.json`: Explicitly maps original Hardware Foundations to Level 2.
 - `exams.json`: Appends two previously missing assessment mappings, retaining earlier exam order.
 - Earlier audit fixes: valid lesson-count display, final qualification readiness, and accurate explanation of Firebase limitations.
+
+## Practical-depth expansion and proposed hour allocation (2026-11-03 continuation)
+The eight-level 440-hour **planning target** is now broken down into **73 guided-instruction hours, 271 practical-work hours, 64 exam/reporting hours and 32 remediation hours**. The allocations are estimates to guide curriculum editing, not measurements of authored content or guarantees of completion time. They are inclusive of the existing study budget; no additional 440 hours were created.
+
+An integrated **Enterprise Case Portfolio** was authored and linked to Levels 5–8 and the Practice Lab. It includes three cross-system, fictional and authorized scenarios (identity change with web outage; cloud IAM/network drift with backup recovery; professional assessment closure), five evidence interpretation decisions per scenario (15 questions total), and free-form executive/technical reports. The 80% threshold is attainable with four correct answers out of five; these are **separate case decision checks**, not additions to the 24 normal examinations or the 273 lesson count. Proposed 4–7-hour workload per case includes analysis and report work and must be observed/verified before inclusion in any externally evaluated study-hour total. The portfolio uses a new browser-local record key; its results do not yet cloud-sync or substitute for human assessment.
+
+The primary remaining risk remains **validating depth**, particularly whether 271 planned lab hours correspond to substantive guided and independent technical exercises. Before academic sign-off, run live iPhone and desktop acceptance tests, real isolated-lab exercises, graded report reviews, and cross-device cloud-save verification.
