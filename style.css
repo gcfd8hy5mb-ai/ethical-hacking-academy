@@ -35,3 +35,18 @@
 #app .sheet .action-list{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;max-width:100%!important}
 #app .sheet .action-list>a.button{margin:0!important}
 \n/* Keep Settings discoverable on narrow iPhone screens, including standalone PWA mode. */\n.bottom{gap:4px!important;padding-left:max(5px,env(safe-area-inset-left))!important;padding-right:max(5px,env(safe-area-inset-right))!important}\n.bottom button{min-width:0!important;max-width:none!important;flex:1 1 0!important;padding:8px 2px!important;font-size:clamp(10px,2.65vw,12px)!important;line-height:1.25!important;white-space:normal!important}\n.bottom button[data-screen="settings"]{color:#e9c58b!important;font-weight:700!important}\n.top button[data-screen="settings"]{flex-shrink:0;background:transparent;color:#8a6635;white-space:nowrap;font:700 12px system-ui!important;letter-spacing:0!important;text-transform:none!important}\n@media(max-width:390px){.top .brand{font-size:14px!important;letter-spacing:0!important}.top button[data-screen="settings"]{padding:8px!important;font-size:11px!important}}\n
+/* Unified Academy assessments and explicit return navigation */
+#app .academy-practice-back{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ min-height:44px!important;padding:11px 16px!important;margin:16px 0 3px!important;
+ background:#19252b!important;color:#fff3d7!important;border:1px solid #b18a52!important;
+ border-radius:10px!important;text-decoration:none!important;font:650 14px system-ui,sans-serif!important
+}
+#app .answers .answer,#app .sheet .answers .answer,#app .assessment .answer{
+ color:#252b2b!important;background:#fffaf2!important;border:1px solid #d8cab4!important;
+ -webkit-appearance:none!important;appearance:none!important
+}
+#app .answers .answer.selected,#app .assessment .answer.selected{background:#f0e3cd!important;border-color:#ae884e!important}
+#app .answers .answer.correct{background:#e3f0e8!important;border-color:#55806d!important}
+#app .answers .answer.incorrect{background:#f6e3e0!important;border-color:#ae6458!important}
+#app .practice-section .practice-links button,#app .practice-section .practice-links a.button{background:#19252b!important;color:#fff3d7!important;border-color:#b18a52!important}
