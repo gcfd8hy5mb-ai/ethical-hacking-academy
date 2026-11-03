@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Practice Evidence Transfer · Ethical Hacking Academy</title><style>
+*{box-sizing:border-box}body{background:#f5efe6;color:#26343c;font:16px/1.5 system-ui;margin:0}main{max-width:860px;margin:auto;padding:18px 16px 70px}h1,h2{font-family:Georgia,serif;font-weight:400}h1{font-size:clamp(29px,6vw,42px)}section{background:#fffaf3;border:1px solid #d5c5ae;border-radius:14px;padding:17px;margin:15px 0}a{color:#70552f}button,input{font:inherit}button{border:1px solid #9d896c;background:#f1e5d1;color:#25343b;border-radius:9px;padding:10px 14px;min-height:44px;cursor:pointer;margin:4px 4px 4px 0}button.primary{background:#1b2e35;color:#fff1d9}button:disabled{opacity:.5}input[type=file]{max-width:100%}.notice{background:#eee1cc;padding:12px;border-left:4px solid #b28b4e;border-radius:8px}.row{border-top:1px solid #dfd2bc;padding:10px 0}label{display:block;margin:9px 0}.muted{color:#626b6b}.good{border-left-color:#59846c}.warn{border-left-color:#b66a57}.small{font-size:13px}.mono{font-family:ui-monospace,Consolas,monospace}button:focus-visible,input:focus-visible{outline:3px solid #b88e4d;outline-offset:2px}</style></head><body><main><p><a href="./index.html#practice-lab">← Academy Practice Lab</a></p><h1>Practice Evidence Transfer</h1><p class="muted">Portable backup and conflict-aware import for hands-on notebooks, simulated assessments, and assessor review records. This page never imports lesson completion, normal examination scores, passwords, or authentication data.</p><div class="notice"><strong>Cloud-saving note:</strong> The main Academy Firebase service already includes saved keys beginning with <span class="mono">ethical-hacking-</span>. Synchronization requires an authorized cloud connection and may stop if devices differ. This local export/import tool is a separate safety measure, not proof that Firebase syncing succeeded.</div><section><h2>1. Back up practice evidence</h2><p id="localSummary"></p><button class="primary" id="export">Download practice evidence backup (.json)</button><p class="muted small">Keep the JSON file private; reports can contain personal or internal information you entered. Do not share it publicly.</p></section><section><h2>2. Preview evidence from another device</h2><label for="file">Choose an Academy practice evidence JSON backup</label><input id="file" type="file" accept=".json,application/json"><div id="preview" class="notice" aria-live="polite">No import file selected. Existing records will not be changed.</div><div id="choices"></div></section><section><h2>3. Apply only selected changes</h2><p>By default, importing adds missing case records while preserving every existing case record. Select a conflicting entry only when you deliberately want the imported version to replace its local counterpart.</p><label><input id="backupCheck" type="checkbox"> I downloaded and verified a backup of this device's current practice evidence before importing.</label><button id="apply" class="primary" disabled>Import selected evidence</button><p id="result" class="notice" aria-live="polite">Nothing imported.</p><p class="small muted">After any import, reopen the Academy Settings screen to review and synchronize your Firebase account. Never force an overwrite of a different cloud copy without checking and backing up both versions.</p></section><footer class="small muted">Transfer operates only on the browser origin where this page opens. The imported data are local until independently confirmed in cloud saving. No external services are contacted by this page.</footer></main><script>
+"use strict";
+const KEYS={
+"ethical-hacking-hands-on-competency-review-v1":"Hands-on competency notebooks",
+"ethical-hacking-competency-assessor-records-v1":"Assessor review records",
+"ethical-hacking-real-lab-fieldbook-v1":"Real-system field notebooks",
+"ethical-hacking-practical-mastery-v1":"Stateful practical mastery",
+"ethical-hacking-enterprise-case-portfolio-v1":"Enterprise case portfolio",
+"ethical-hacking-independent-diagnostics-v1":"Independent diagnostic variants"
+};
+const el=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&quot;"}[x]));
+const validObject=x=>x!==null&&typeof x==="object"&&!Array.isArray(x);
+function read(k){try{const x=JSON.parse(localStorage.getItem(k)||"{}");return validObject(x)?x:{}}catch{return {}}}
+function device(){const out={};for(const k of Object.keys(KEYS))out[k]=read(k);return out}
+function download(name,obj){const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2500)}
+function exportEvidence(){return {format:"ethical-hacking-practice-evidence",version:1,exportedAt:new Date().toISOString(),records:device()}}
+function updateSummary(){const existing=device();el("localSummary").textContent=Object.values(existing).reduce((n,x)=>n+Object.keys(x).length,0)+" case or review entries stored in this browser across "+Object.keys(KEYS).length+" practice collections."}
+let incoming=null,choiceIds=[];
+el("export").addEventListener("click",()=>download("ethical-hacking-practice-evidence.json",exportEvidence()));
+function clearPreview(message){incoming=null;choiceIds=[];el("choices").innerHTML="";el("preview").className="notice warn";el("preview").textContent=message;el("apply").disabled=true}
+el("file").addEventListener("change",async()=>{
+ clearPreview("Inspecting file; nothing changed.");
+ const file=el("file").files?.[0];
+ if(!file)return;
+ if(file.size>2*1024*1024){clearPreview("File too large. This transfer supports practice evidence backups up to 2 MB.");return}
+ try{
+  const data=JSON.parse(await file.text());
+  if(data?.format!=="ethical-hacking-practice-evidence"||data.version!==1||!validObject(data.records))throw Error("Not an Academy practice evidence backup.");
+  const entries=Object.entries(data.records);
+  if(entries.some(([k,v])=>!Object.hasOwn(KEYS,k)||!validObject(v)))throw Error("Backup contains unsupported or malformed record collections.");
+  for(const [,collection] of entries){if(Object.values(collection).some(v=>!validObject(v)))throw Error("A case record has an invalid shape.")}
+  incoming=data.records;
+  const current=device(),container=el("choices");let missing=0,conflicting=0,matching=0;
+  for(const [key,objects] of entries){
+   const block=document.createElement("div");block.className="row";const title=document.createElement("strong");title.textContent=KEYS[key];block.append(title);
+   const desc=document.createElement("p");const details=[];
+   for(const [id,value] of Object.entries(objects)){
+    const local=current[key][id],same=local!==undefined&&JSON.stringify(local)===JSON.stringify(value);
+    if(local===undefined){missing++;details.push("New: "+id)}
+    else if(same){matching++}
+    else{conflicting++;details.push("Conflict: "+id);const label=document.createElement("label");const checkbox=document.createElement("input");checkbox.type="checkbox";checkbox.dataset.key=key;checkbox.dataset.id=id;label.append(checkbox,document.createTextNode(" Replace local record: "+id));block.append(label)}
+   }
+   desc.textContent=Object.keys(objects).length+" incoming entries. "+(details.slice(0,6).join(" · ")||"Already matches this device")+(details.length>6?" · …":"");
+   block.append(desc);container.append(block);
+  }
+  el("preview").className="notice";
+  el("preview").textContent=missing+" missing entries will be added; "+conflicting+" conflicting entries will be preserved unless individually selected; "+matching+" entries already match. No data have been written.";
+  el("apply").disabled=missing+conflicting===0;
+ }catch(err){clearPreview("Import refused: "+(err?.message||"invalid JSON"))}
+});
+el("apply").addEventListener("click",()=>{
+ if(!incoming)return;
+ if(!el("backupCheck").checked){el("result").textContent="Import not started: first save and confirm this device's backup.";return}
+ const overwrite=[...document.querySelectorAll("#choices input[type=checkbox]:checked")].map(x=>({key:x.dataset.key,id:x.dataset.id}));
+ if(!confirm("Import practice evidence into this device? Existing entries are preserved except the conflicts you explicitly selected."))return;
+ const before=device(),merged=structuredClone(before);let added=0,replaced=0;
+ for(const [key,collection] of Object.entries(incoming)){
+  for(const [id,record] of Object.entries(collection)){
+   if(merged[key][id]===undefined){merged[key][id]=record;added++}
+   else if(overwrite.some(x=>x.key===key&&x.id===id)){merged[key][id]=record;replaced++}
+  }
+ }
+ const changes=Object.keys(KEYS).filter(k=>JSON.stringify(before[k])!==JSON.stringify(merged[k]));
+ const saved=[];
+ try{
+  for(const k of changes){localStorage.setItem(k,JSON.stringify(merged[k]));saved.push(k)}
+  el("result").className="notice good";
+  el("result").textContent="Import saved locally: "+added+" added; "+replaced+" explicitly replaced. Reopen the main Academy Settings to inspect cloud state.";
+  incoming=null;el("apply").disabled=true;el("file").value="";el("choices").innerHTML="";updateSummary();
+ }catch(err){
+  for(const k of saved){try{localStorage.setItem(k,JSON.stringify(before[k]))}catch{}}
+  el("result").className="notice warn";
+  el("result").textContent="Import failed; restoration of earlier records was attempted. Check remaining storage and your downloaded backup before retrying.";
+ }
+});
+updateSummary();
+</script></body></html>
