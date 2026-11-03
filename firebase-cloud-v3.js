@@ -122,6 +122,7 @@ async function connect(){
     }
    }));
    panel.append(btn('Keep iPhone version in Firebase',async()=>{
+    if(!backupsRequested){state('Download both backups before choosing to replace Firebase.');return}
     if(!confirm('Only continue after verifying the backup is saved to Files. Replace the FIREBASE copy with this iPhone copy?'))return;
     if(!confirm('Confirm again: overwrite existing Firebase progress with this iPhone copy?'))return;
     try{
