@@ -41,8 +41,8 @@ function pathwayLevels(){if(!learningPath?.levels?.length)return [];const used=n
 function levelStats(level){const lessons=level.courseIds.reduce((n,i)=>n+catalog.courses[i].lessons.length,0);const done=level.courseIds.reduce((n,i)=>n+catalog.courses[i].lessons.filter((_,j)=>isDone(i,j)).length,0);return {lessons,done,finished:lessons>0&&done===lessons};}
 function nextLesson(level){for(const i of level.courseIds){const j=catalog.courses[i].lessons.findIndex((_,j)=>!isDone(i,j));if(j>=0)return {course:i,lesson:j};}return null;}
 function allEarlierFinished(levels,target){for(let i=0;i<target;i++){if(!levelStats(levels[i]).finished)return false;}return true;}
-const LEVEL_CHECKPOINTS={2:['linux','windows'],5:['network'],6:['backup'],7:['linux','windows','network','backup']};
-const CHECKPOINT_LABELS={linux:'Linux service outage',windows:'Windows domain discovery',network:'Lab network isolation',backup:'Backup recovery readiness'};
+const LEVEL_CHECKPOINTS={0:['fundamentals'],1:['hardware'],2:['linux','windows'],3:['monitoring'],4:['web'],5:['network'],6:['backup'],7:['fundamentals','hardware','linux','windows','monitoring','web','network','backup']};
+const CHECKPOINT_LABELS={fundamentals:'Computer and network basics',hardware:'PC hardware and POST',linux:'Linux service outage',windows:'Windows domain discovery',monitoring:'Security alert investigation',web:'Web application access control',network:'Lab network isolation',backup:'Backup recovery readiness'};
 function masteryReadiness(level){
  const lesson=levelStats(level);
  let examScores={};try{const v=JSON.parse(localStorage.getItem('ethical-hacking-exam-results-v1')||'{}');if(v&&typeof v==='object')examScores=v}catch{}
