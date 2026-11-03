@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "title": "Eight-level pathway foundation coursework expansion",
+  "courses": [
+    {
+      "course": "Getting Comfortable With Computers",
+      "lessons": [
+        [
+          "Files, folders, paths, and evidence preservation",
+          "PURPOSE: An absolute path begins at a drive or root directory; a relative path starts at the current working directory. File extensions are naming conventions, not reliable proof of contents. Ownership, timestamps, size and permissions are evidence context. Copy original logs to a controlled working area rather than rewriting them.\n\nPRACTICAL WORKSHOP: In a disposable folder on your own system, use PowerShell Get-Location, Get-ChildItem and Get-Item or Linux pwd, ls -la and stat. Write what each field means. Compare paths, owners, size and modification times. Do not access another user's private files.\n\nMASTERY EVIDENCE: Produce a table with the original filename, copied filename, absolute path, timestamp, size, collection method and a brief explanation of why source preservation matters.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which practice best preserves original technical evidence?",
+          [
+            "Edit original logs for readability",
+            "Copy records to a controlled evidence location and document their origin",
+            "Delete redundant source files"
+          ],
+          1,
+          "Preserve source material and provenance for repeatable examination."
+        ],
+        [
+          "Processes, services, and performance clues",
+          "PURPOSE: A process is a running program with a process identifier and resource demand; a service provides background functionality. A spike in CPU use can reflect legitimate work, performance issues or malicious behavior, but is not proof by itself. Memory pressure, I/O latency and service dependency failures each produce different symptoms.\n\nPRACTICAL WORKSHOP: Inspect your own computer using Task Manager or Get-Process, or ps aux and top in a dedicated Linux VM. Identify process name, PID, memory and CPU usage. Explain why you should not kill a process before confirming its purpose and impact.\n\nMASTERY EVIDENCE: Prepare two competing hypotheses for a slow service and identify the measurements that would falsify each.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What does 90% CPU usage establish on its own?",
+          [
+            "The process is malware",
+            "The process used significant CPU during the observation",
+            "The disk is permanently damaged"
+          ],
+          1,
+          "Utilization indicates work, not intent or root cause."
+        ],
+        [
+          "A repeatable troubleshooting notebook",
+          "PURPOSE: A reliable workflow defines the observed symptom, establishes a baseline, forms a testable hypothesis, changes one variable, verifies an expected result and documents rollback. Record system identity and timestamps. Separate direct observations from assumptions and explicitly note uncertainties.\n\nPRACTICAL WORKSHOP: Use a fictional internal website outage. List possible DNS, routing, service and browser causes. For each, choose a safe observation that would support or disprove it. Draft a one-change repair plan with an acceptance test.\n\nMASTERY EVIDENCE: Write a technician ticket with symptoms, permission scope, command evidence, hypothesis, change, rollback, retest and unanswered questions.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What should come before changing multiple system settings?",
+          [
+            "Document the symptom and baseline",
+            "Disable the firewall permanently",
+            "Assume DNS must be responsible"
+          ],
+          0,
+          "Baseline evidence makes later tests meaningful."
+        ]
+      ]
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lessons": [
+        [
+          "ATX power, EPS connectors, and wiring safety",
+          "PURPOSE: Motherboard 24-pin ATX and CPU EPS cables serve different electrical functions. GPU PCIe leads can resemble EPS connectors but are not interchangeable. Modular power-supply cables can differ between PSU models even when plugs appear similar. Exact motherboard and PSU documentation is authoritative. Never open a PSU casing.\n\nPRACTICAL WORKSHOP: With all power removed, inspect manufacturer's diagrams and identify ATX, EPS, fan and front-panel connectors on a fictional build. Check standoffs and header labels visually. Explain cable keying and why forcing connectors or reusing unknown modular PSU cables is hazardous.\n\nMASTERY EVIDENCE: Draw a power connection diagram identifying each connector, source, destination and verification step.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which modular PSU cable is acceptable?",
+          [
+            "Any cable that physically fits",
+            "A cable approved for the exact PSU model",
+            "Any CPU EPS lead plugged into a GPU socket"
+          ],
+          1,
+          "Cable compatibility must be verified by exact model documentation."
+        ],
+        [
+          "RAM channels, DIMM seating, and POST indicators",
+          "PURPOSE: RAM must match the motherboard's DDR generation and supported capacity. Memory channels and recommended DIMM slots are defined by the manual. During POST, memory training can take time; a DRAM status light points to initialization trouble but does not prove the module itself is defective. Other causes include slot choice, firmware or memory controller issues.\n\nPRACTICAL WORKSHOP: In a hypothetical four-slot motherboard manual, identify recommended slots for two DIMMs. Design a power-isolated troubleshooting sequence: verify compatibility, reseat, test one module in the approved slot, retest and document LED changes. Do not force memory into an incompatible socket.\n\nMASTERY EVIDENCE: Produce a DRAM LED decision tree with observable outcomes and one safe change per test.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What does an illuminated DRAM POST indicator prove?",
+          [
+            "That a RAM stick is definitely broken",
+            "The memory initialization stage needs investigation",
+            "That PSU internals should be opened"
+          ],
+          1,
+          "An indicator narrows diagnosis but does not establish a unique component fault."
+        ],
+        [
+          "NVMe, SATA, storage sharing and backups",
+          "PURPOSE: M.2 denotes a connector/form factor while NVMe is a protocol commonly used over PCIe. Some M.2 sockets support SATA, PCIe, or both; motherboard lane-sharing can disable certain SATA ports. A snapshot is not the same as independent backup, and RAID alone does not establish recoverability.\n\nPRACTICAL WORKSHOP: Review a fictional motherboard manual showing shared M.2 and SATA resources. Plan separate operating-system and VM storage volumes plus an external backup target. Calculate rough storage headroom and write a restore test before making real changes.\n\nMASTERY EVIDENCE: Diagram the boot disk, virtual-machine datastore, backup location, and conditions that would trigger a restore.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What validates a recovery plan?",
+          [
+            "A storage mirror alone",
+            "A recent snapshot in the same disk",
+            "A separately stored backup successfully restored in a test"
+          ],
+          2,
+          "Restores, not merely backup labels, establish usable recovery."
+        ]
+      ]
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lessons": [
+        [
+          "No-display POST troubleshooting",
+          "PURPOSE: Black-screen startup can reflect video input, power delivery, incompatible RAM, firmware, GPU connection or failed hardware. Debug LEDs and beep codes are vendor-specific. A useful diagnosis keeps a minimum hardware configuration and changes one variable per test after isolating electrical power.\n\nPRACTICAL WORKSHOP: Simulate a first boot with spinning fans and a DRAM status LED. Start with the motherboard manual, CPU and RAM compatibility, power connectors and correct DIMM slots. Design a one-module-at-a-time test and capture the indicator result after each change.\n\nMASTERY EVIDENCE: Write a sequential fault tree and a stop-condition for unsafe or inconclusive testing.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which is a defensible approach to a no-POST problem?",
+          [
+            "Change PSU, RAM and CPU at once",
+            "Change one controlled variable and document POST results",
+            "Open the PSU cover for inspection"
+          ],
+          1,
+          "Controlled changes allow meaningful comparisons without unsafe electrical work."
+        ],
+        [
+          "Cooling failure and thermal shutdown",
+          "PURPOSE: CPU heat transfer depends on correct heatsink mounting, thermal interface, airflow, fan operation and manufacturer-approved power limits. Thermal throttling differs from an emergency shutdown. Loading an overheating system harder can cause unnecessary damage; read temperature and fan diagnostics before stress testing.\n\nPRACTICAL WORKSHOP: Fictional evidence: UEFI temperature climbs rapidly and CPU_FAN shows 0 RPM. Stop and isolate power. Check mounting instructions, the fan connector and obstructions. After repair, plan a monitored workload test with CPU-model-specific temperature guidance.\n\nMASTERY EVIDENCE: Record baseline temperature, fan RPM, corrective action, monitored load temperature and expected pass/fail thresholds.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What is appropriate when first-boot CPU temperature rapidly rises?",
+          [
+            "Disable thermal protection",
+            "Power down and investigate the cooler safely",
+            "Increase the workload"
+          ],
+          1,
+          "Address thermal safety before further operation."
+        ],
+        [
+          "Ethical computer repair for friends and family",
+          "PURPOSE: Good repair practice starts with device ownership, explicit consent, work scope, privacy expectations, backups and a written plan. A technician should not browse personal files without need and permission. Gather observed symptoms, record changes, check warranty constraints and verify the owner's original complaint is resolved.\n\nPRACTICAL WORKSHOP: Draft an intake form for a slow Windows PC: owner authorization, symptoms, start time, recent changes, available storage, temperatures, startup tasks, backup confirmation, cost authorization and exit test. Choose non-destructive observations before repairs.\n\nMASTERY EVIDENCE: Create an anonymized repair ticket with consent, diagnosis, proposed action, rollback, completion evidence and owner handover.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Before working on another person's computer you need:",
+          [
+            "Explicit permission and defined boundaries",
+            "Access to their personal messages",
+            "Permission only after modifying files"
+          ],
+          0,
+          "Consent and scope precede all diagnostics and changes."
+        ]
+      ]
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lessons": [
+        [
+          "Linux diagnostic commands and flags",
+          "PURPOSE: The shell passes arguments to programs; flags change how a program behaves. pwd shows the working directory, id shows identity, ls -la lists hidden entries and metadata, ps aux lists processes and ss -ltnp displays listening TCP sockets with processes when permitted. Read-only output is evidence, not a diagnosis by itself.\n\nPRACTICAL WORKSHOP: In your own Linux VM run pwd, id, ls -la, ps aux and ss -ltn. Describe at least two output fields for each. Identify a normal listening service and explain why its presence does not imply compromise.\n\nMASTERY EVIDENCE: Maintain a command journal explaining purpose, flags, expected output, interpretation limits and when administrator permission may be needed.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What does ss -ltn primarily report?",
+          [
+            "Listening TCP sockets in numeric form",
+            "Stored user passwords",
+            "Known malicious processes"
+          ],
+          0,
+          "The -l, -t and -n flags select listeners, TCP and numeric display."
+        ],
+        [
+          "Systemd service failure and port conflicts",
+          "PURPOSE: systemctl status reports service state; journalctl -u retrieves unit logs; ss -ltnp shows ports and listener processes. A bind failure on a port often indicates another process has claimed the same address and port. Disabling random processes is unsafe because their roles and dependencies may be unknown.\n\nPRACTICAL WORKSHOP: Use the Academy's stateful Linux simulation. Collect status, logs, listeners, and HTTP response before changing any state. Stop only the identified fictional conflicting service, start nginx and repeat checks. Explain why HTTP 200 from the wrong service is not proof of success.\n\nMASTERY EVIDENCE: Submit a before/after evidence table with command, observation, hypothesis, permitted change, verification and rollback.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which observation confirms a suspected local port conflict?",
+          [
+            "Another process listening on the intended socket",
+            "A low disk brightness setting",
+            "A correctly installed GPU driver"
+          ],
+          0,
+          "The same socket is already occupied, explaining the bind error."
+        ],
+        [
+          "Linux permissions and least privilege",
+          "PURPOSE: Linux access is influenced by owner, group, other mode bits, directory traversal, ACLs and effective group membership. A directory mode of 0777 can permit unexpected writes; a file mode of 0640 grants owner read/write and group read but none to others. Security changes must preserve necessary authorized use.\n\nPRACTICAL WORKSHOP: Inspect only disposable files you own with stat and ls -l. Explain why chmod 640 differs from chmod 600, then draw a service-account access matrix. Test the intended account's permitted access while confirming a regular user is denied.\n\nMASTERY EVIDENCE: Describe a hypothetical correction to an overly permissive application folder, with expected access tests and rollback.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What mode grants owner read/write, group read, other none?",
+          [
+            "0777",
+            "0640",
+            "0444"
+          ],
+          1,
+          "Permission bits 6-4-0 match the stated access."
+        ]
+      ]
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lessons": [
+        [
+          "CIDR and subnet planning",
+          "PURPOSE: A /24 IPv4 prefix fixes 24 network bits, typically placing 10.77.10.20 and 10.77.10.30 in one subnet while 10.77.20.10 is another. Routers and firewalls mediate traffic between subnets. Private address ranges do not automatically provide isolation; access policies and effective routes determine reachability.\n\nPRACTICAL WORKSHOP: Plan fictional domain, application and assessment segments: 10.77.10.0/24, 10.77.20.0/24 and 10.77.30.0/24. Label gateway, DNS and allowed intersegment traffic. Explain which traffic must remain blocked from household networks.\n\nMASTERY EVIDENCE: Draw a network topology with expected interface, gateway, route and firewall observations.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which host shares 10.77.10.0/24 with 10.77.10.20?",
+          [
+            "10.77.20.20",
+            "10.77.10.30",
+            "192.168.1.20"
+          ],
+          1,
+          "The network portion of a /24 address is the first 24 bits."
+        ],
+        [
+          "DNS, Active Directory SRV records and reachability",
+          "PURPOSE: DNS name resolution is separate from network reachability and web-service health. An A record maps a name to IPv4; an SRV record helps clients locate services such as domain controllers. A Windows domain client using public DNS for a private domain may fail domain discovery even though ping to a server succeeds.\n\nPRACTICAL WORKSHOP: Compare simulated ipconfig /all, nslookup -type=SRV and nltest /dsgetdc results. Diagnose the difference between wrong DNS server, missing record, unavailable LDAP service, and firewall block. Make proposed changes only to fictional lab settings.\n\nMASTERY EVIDENCE: Record one expected observation for each diagnosis and a retest sequence after correcting internal DNS.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Successful ping plus failed domain SRV lookup suggests:",
+          [
+            "Basic IP reachability, but domain discovery failure remains",
+            "A proven credential breach",
+            "A broken graphics card"
+          ],
+          0,
+          "ICMP does not establish DNS, Kerberos or LDAP service health."
+        ],
+        [
+          "Test isolated lab networks without crossing boundaries",
+          "PURPOSE: Internal virtual switches and host-only networks can be used to confine deliberately vulnerable machines. Bridged modes can attach a guest to household networks, while NAT may introduce unwanted routes. A valid isolation test confirms both allowed lab-to-lab communications and blocked paths, with actual behavior checked against hypervisor configurations.\n\nPRACTICAL WORKSHOP: In the simulator, disconnect a fictional bridged training guest, select internal networking, reconnect and inspect routes, firewall rules and isolation results. Never scan roommates' equipment or internet hosts as a substitute for an authorized test.\n\nMASTERY EVIDENCE: Write a positive/negative connectivity checklist including allowed service, denied route, source/destination, expected response and logging evidence.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Which validates intended lab segmentation?",
+          [
+            "Only naming a switch 'isolated'",
+            "Confirming approved internal connectivity and blocked unintended traffic",
+            "Putting vulnerable training servers on public IPs"
+          ],
+          1,
+          "Isolation must be demonstrated through effective paths, not interface labels."
+        ]
+      ]
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lessons": [
+        [
+          "Confidentiality, integrity and availability in operations",
+          "PURPOSE: Confidentiality prevents unauthorized disclosure, integrity protects against unapproved changes, and availability preserves access to needed services. A single incident may threaten multiple objectives. A publicly exposed report is primarily a confidentiality concern, changed inventory totals implicate integrity, and a server outage affects availability.\n\nPRACTICAL WORKSHOP: For three fictional incidents, identify the affected asset, business impact, evidence needed, possible control and what would distinguish accidental failure from malicious activity.\n\nMASTERY EVIDENCE: Prepare a concise risk register: asset, event, observed weakness, security objective, uncertainty, mitigation and test.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Unauthorized inventory edits most directly threaten:",
+          [
+            "Integrity",
+            "Monitor brightness",
+            "Only availability"
+          ],
+          0,
+          "Integrity protects accuracy and authorized change."
+        ],
+        [
+          "Privileged identities and audit reasoning",
+          "PURPOSE: Accounts should receive the least access necessary for approved tasks and privileges should be reviewed during role changes. A help desk account in Domain Admins may represent excessive privilege, but membership alone does not establish credential theft. Security events can support a change timeline without proving intent.\n\nPRACTICAL WORKSHOP: Compare a fictional approved help desk role with actual group membership and a Windows group-add audit event. Outline confirmation, change control, remediation, log review and post-change validation. Distinguish observed facts from inferred risk.\n\nMASTERY EVIDENCE: Draft a finding with evidence reference, scope, impact, uncertainty, remediation and verification.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "What does unapproved Domain Admins membership directly indicate?",
+          [
+            "Excessive privilege versus the approved role",
+            "Confirmed theft of every password",
+            "A broken network router"
+          ],
+          0,
+          "Privilege overassignment is supported without implying a specific compromise."
+        ],
+        [
+          "Write security findings without overclaiming",
+          "PURPOSE: Security findings should describe exact observed evidence, significance, affected scope, plausible impact, limitations and a realistic corrective action. A missing header or a few failed logins does not automatically demonstrate exploitation. Confidence should reflect the quality of source records and reproducibility.\n\nPRACTICAL WORKSHOP: Review fictional failed-login, web-header and patch records. Classify direct evidence, benign events, hypotheses requiring additional tests and demonstrably unsupported accusations. Prepare both a one-paragraph executive summary and a technician evidence appendix.\n\nMASTERY EVIDENCE: Document observation, artifact ID, reproduction conditions, impact, severity rationale, uncertainty and remediation verification.\n\nINTERPRETATION: Explain why the observations support the conclusion and what they do not prove. Work only on owned or explicitly authorized systems, preserve original evidence and document a safe rollback.",
+          "Why must a professional report include limitations?",
+          [
+            "To clarify uncertainty and avoid unsupported conclusions",
+            "To hide mistakes",
+            "To promise universal security"
+          ],
+          0,
+          "Clear boundaries distinguish evidence from speculation."
+        ]
+      ]
+    }
+  ]
+}
