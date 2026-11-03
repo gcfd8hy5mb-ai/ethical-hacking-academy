@@ -20,6 +20,10 @@
         [
           "Command & Troubleshooting Field Lab",
           "command-troubleshooting-field-lab.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 35
@@ -45,6 +49,10 @@
         [
           "Virtual PC Assembly Simulator",
           "virtual-pc-build-simulator.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 45
@@ -105,6 +113,10 @@
         [
           "Technical Assessment Studio",
           "technical-assessment-studio.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 55
@@ -128,6 +140,10 @@
         [
           "Independent Red Team Engagements",
           "independent-redteam-engagements.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 75
