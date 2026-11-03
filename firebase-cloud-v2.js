@@ -10,7 +10,7 @@ const prefix='ethical-hacking-',docName='progress-v1';
 const panel=document.createElement('section');panel.id='ethical-cloud-panel';
 panel.style.cssText='position:fixed;z-index:1000;right:10px;bottom:10px;width:min(330px,calc(100vw - 20px));max-height:50vh;overflow:auto;border-radius:12px;border:1px solid #b69c65;background:#222b30;color:#f3eee2;padding:10px;font:13px system-ui;box-shadow:0 8px 28px #0009';
 document.body.append(panel);
-let user=null,enabled=false,rev=0,last='',running=false,delay=null,activeRef=null;
+let user=null,enabled=false,rev=0,last='',running=false,delay=null,activeRef=null,sessionGeneration=0;
 const records=()=>{
  const out={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix))out[k]=localStorage.getItem(k)}
  return out;
@@ -34,6 +34,22 @@ function render(){
  else{panel.append(btn('Sync now',sync),btn('Back up progress',backup))}
 }
 const location=()=>doc(db,'users',user.uid,'academies','ethical-hacking','snapshots',docName);
+const linkKey=uid=>'ethical-cloud-link-'+uid;
+async function resume(u,generation){
+ if(!u?.emailVerified||!localStorage.getItem(linkKey(u.uid)))return;
+ try{
+  const ref=doc(db,'users',u.uid,'academies','ethical-hacking','snapshots',docName),d=await getDoc(ref);
+  if(generation!==sessionGeneration||auth.currentUser?.uid!==u.uid)return;
+  if(!d.exists()){state('Cloud copy missing. Your device data remains intact.');return}
+  let remote;try{remote=JSON.parse(d.data().raw)}catch{}
+  if(!valid(remote)){state('Unrecognized cloud data. No local changes made.');return}
+  if(JSON.stringify(remote)!==snapshot()){state('Device and cloud versions differ. Auto-sync paused; inspect Connect safely.');return}
+  const cloudRevision=Number(d.data().revision);
+  if(!Number.isSafeInteger(cloudRevision)||cloudRevision<1){state('Cloud revision invalid. No work was overwritten.');return}
+  rev=cloudRevision;last=snapshot();activeRef=ref;enabled=true;render();state('Connected · cloud and device match');
+ }catch(e){if(generation===sessionGeneration)state('Cloud reconnect error: '+(e.code||e.message))}
+}
+
 async function inspect(){
  try{const d=await getDoc(location());state(d.exists()?'Cloud record exists. Connect to compare it with this device.':'No cloud coursework snapshot found for this account.')}catch(e){state('Firestore check failed: '+(e.code||e.message))}
 }
@@ -54,12 +70,16 @@ async function connect(){
    if(!confirm('Back up your progress before first upload. Continue saving Ethical Hacking coursework to this Firebase account?')){state('Cloud link canceled. Device progress preserved.');return}
    rev=0;
   }
-  enabled=true;last=snapshot();render();await sync();
+  enabled=true;last=snapshot();
+  const ok=await sync();
+  if(!ok){enabled=false;activeRef=null;render();state('Upload failed. Device progress is intact; check Firebase rules and retry.');return}
+  localStorage.setItem(linkKey(user.uid),String(rev));
+  render();state('Saved to Firebase cloud');
  }catch(e){state('Unable to connect: '+(e.code||e.message))}
  finally{running=false}
 }
 async function sync(){
- if(!enabled||!user?.emailVerified||!activeRef)return;
+ if(!enabled||!user?.emailVerified||!activeRef)return false;
  const uid=user.uid,copy=snapshot(),previous=rev;
  try{
   state('Synchronizing progress…');
@@ -71,10 +91,10 @@ async function sync(){
    tx.set(activeRef,{academy:'ethical-hacking',schemaVersion:1,revision:current+1,raw:copy,updatedAt:serverTimestamp()});
    return current+1;
   });
-  if(auth.currentUser?.uid!==uid)return;
-  rev=next;last=copy;state('Saved to Firebase cloud');
- }catch(e){state('Saved only on this device: '+(e.message||e.code))}
+  if(auth.currentUser?.uid!==uid)return false;
+  rev=next;last=copy;localStorage.setItem(linkKey(uid),String(rev));state('Saved to Firebase cloud');return true;
+ }catch(e){state('Saved only on this device: '+(e.message||e.code));return false}
 }
-onAuthStateChanged(auth,u=>{user=u;enabled=false;activeRef=null;rev=0;last=snapshot();clearTimeout(delay);render()});
+onAuthStateChanged(auth,async u=>{sessionGeneration++;const generation=sessionGeneration;user=u;enabled=false;activeRef=null;rev=0;last=snapshot();clearTimeout(delay);render();if(u?.emailVerified){state('Checking existing cloud link…');await resume(u,generation);if(!enabled&&generation===sessionGeneration&&!localStorage.getItem(linkKey(u.uid)))state('Device progress preserved. Select Connect safely for the first cloud upload.')}});
 setInterval(()=>{if(!enabled||running||!user?.emailVerified)return;const s=snapshot();if(s!==last){clearTimeout(delay);delay=setTimeout(async()=>{if(running)return;running=true;try{await sync()}finally{running=false}},1600)}},3500);
 window.addEventListener('online',()=>{if(enabled)sync()});
