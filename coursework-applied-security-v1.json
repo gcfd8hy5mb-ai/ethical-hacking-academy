@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "title": "Applied defensive and Red Team coursework batch, Levels 3–7",
+  "courses": [
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lessons": [
+        [
+          "Map identity, authentication, authorization, and auditing",
+          "CONCEPTS AND REASONING: Authentication establishes which principal is presenting credentials; authorization decides what that principal may do. Directory groups simplify permission assignment but nested and inherited membership can expand effective access. Multifactor authentication reduces reliance on one credential factor, while privileged access requires stronger controls, separate administrative identities and explicit change approval. Audit events are observations of actions and may not establish intent.\n\nPRACTICAL WORK: In a fictional corporation with employee, help-desk, administrator and service identities, create a role-to-resource matrix for a domain controller, finance share and web service. Compare a help-desk account's approved role against a synthetic Domain Admins membership report. Explain why viewing a membership record is not equivalent to proving credential theft.\n\nREQUIRED SUBMISSION: Submit an access matrix, two excessive-permission findings, an approval workflow, and a verification test showing a regular help-desk account cannot perform unrestricted domain administration.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Which observation directly supports a least-privilege issue?",
+          [
+            "An account has an administrative group inconsistent with its approved job role",
+            "A laptop has eight CPU cores",
+            "A user has logged in during normal business hours"
+          ],
+          0,
+          "Compare effective privileges with approved duties, rather than inferring an attack from normal activity."
+        ],
+        [
+          "Service accounts, secrets, and machine identities",
+          "CONCEPTS AND REASONING: Applications and scheduled jobs may use dedicated service identities with only the permissions they require. Hardcoded passwords, shared administrator credentials and unmanaged long-lived secrets expand compromise impact. Managed identities, least-privilege scoped credentials, rotation planning and audited changes reduce risk. Moving secrets out of source code also requires securing the destination and controlling who can retrieve them.\n\nPRACTICAL WORK: Inspect a fictional deployment manifest containing a non-sensitive placeholder secret. Identify where credentials would be exposed, distinguish deployment-time access from runtime privileges, and propose a secret store with restricted readers and rotation. Do not collect real passwords, private keys or tokens from any account.\n\nREQUIRED SUBMISSION: Draw a lifecycle diagram for issuing, using, rotating, revoking and auditing one application credential. Define an emergency rollback and test that the service still functions with a new synthetic credential.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "What is the soundest treatment of a long-lived shared service password?",
+          [
+            "Keep it hardcoded in a public repository",
+            "Use a restricted secret-management workflow with least privilege and rotation",
+            "Email it to every system administrator"
+          ],
+          1,
+          "Secret management and reduced privileges constrain exposure and improve accountability."
+        ],
+        [
+          "Domain group changes: timeline and confidence",
+          "CONCEPTS AND REASONING: A Windows group-add event can provide useful timestamps, actor and target identifiers, but local logs may be incomplete, delayed or subject to retention. A change ticket, effective group membership, multiple trusted log sources and authentication context help establish whether the change was approved. Investigation should be read-only until the responsible operator authorizes a fix.\n\nPRACTICAL WORK: A fictional alert shows Event 4728 and a help-desk account added to a privileged group. Correlate exact timestamp, account identifiers, approval record and effective permissions. Produce a timeline with observed facts, two alternate explanations, and one tightly scoped recommendation. Do not try privilege escalation as a verification method.\n\nREQUIRED SUBMISSION: Write a report distinguishing excessive access confirmed by membership from unproven credential compromise. Include owner approval, removal plan, retest and preserved evidence references.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "An event showing a group addition by itself proves:",
+          [
+            "A confirmed attacker identity and intent",
+            "That a group-membership action was recorded, requiring corroboration for authorization and motive",
+            "That all logon activity was malicious"
+          ],
+          1,
+          "Events document recorded actions; attribution and intent require other evidence."
+        ]
+      ]
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lessons": [
+        [
+          "Normalize logs into a usable timeline",
+          "CONCEPTS AND REASONING: Security logs from endpoints, identity services, firewalls and applications have different formats and timestamps. Normalize fields such as source, event time, host, user, outcome, process and relevant network endpoint before comparing them. Convert times to one reference zone, account for clock skew and distinguish an event's occurrence from the time it was ingested. Duplicate records should not inflate apparent incident counts.\n\nPRACTICAL WORK: Compare six fictional records from Windows Security, Linux journal, a firewall and a web server. Build a normalized table with time in UTC, asset, category, actor, action, result and source record ID. Identify two records that refer to the same maintenance event and one event whose clock is offset five minutes.\n\nREQUIRED SUBMISSION: Submit a chronological timeline that includes collection limitations, duplicate handling, uncertainty and a follow-up test that could disprove your first hypothesis.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Why should clocks and time zones be normalized before correlation?",
+          [
+            "To make unrelated event sequences comparable without inventing an order",
+            "Because all events are attacks",
+            "To erase log source identifiers"
+          ],
+          0,
+          "Without consistent times, correlations can imply the wrong sequence."
+        ],
+        [
+          "Detection signals, baselines, and false positives",
+          "CONCEPTS AND REASONING: An alert is a prompt for examination rather than a verdict. Rule thresholds, normal workload, approved maintenance and log quality determine false-positive risk. Detection engineering asks which specific behavior is suspicious, what evidence is observable, how the rule could be evaded, and what legitimate activity might look similar. Precision and recall trade off; indiscriminately lowering thresholds can overwhelm analysts.\n\nPRACTICAL WORK: Given synthetic logins from an employee traveling and a scripted maintenance account, design a rule to flag repeated failures while allowing verified maintenance exceptions. Define a time window, account grouping, corroborating signals, false-positive review and escalation condition. Compare your alerts against the provided benign records.\n\nREQUIRED SUBMISSION: Draft a detection specification with input fields, trigger, exclusions, severity, response owner, validation examples and a measured false-positive limitation.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "A single failed logon normally establishes:",
+          [
+            "That the account was compromised",
+            "An authentication failure that needs context before classification",
+            "That malicious lateral movement occurred"
+          ],
+          1,
+          "One failure is common and not proof of hostile activity."
+        ],
+        [
+          "Containment and evidence preservation during triage",
+          "CONCEPTS AND REASONING: Response actions can affect availability and the integrity of evidence. In a credible incident, analysts should follow an approved playbook, preserve relevant source records, determine asset criticality, contact authorized responders and choose proportionate containment. Disabling an essential server or wiping logs without coordination can make an incident worse. Keep investigative hypotheses separate from confirmed observations.\n\nPRACTICAL WORK: For a fictional workstation showing an unusual authentication event, produce a sequence: verify alert source, document initial state, collect limited relevant records, assess scope, seek authorization for containment, and validate service recovery. Discuss how the response differs for a production domain controller versus an isolated disposable lab VM.\n\nREQUIRED SUBMISSION: Create an incident ticket with initial facts, confidence, impact, containment decision authority, communication plan, evidence handling, recovery checkpoints and a post-incident improvement.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Which response is defensible when an alert's meaning is uncertain?",
+          [
+            "Erase the security logs",
+            "Preserve relevant evidence and follow approved triage before disruptive action",
+            "Immediately shut down every system"
+          ],
+          1,
+          "Proportionate evidence-based response limits unnecessary disruption."
+        ]
+      ]
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lessons": [
+        [
+          "Map HTTP requests, sessions, and trust boundaries",
+          "CONCEPTS AND REASONING: A browser sends requests with methods, paths, headers and bodies; a server returns status codes, headers and application data. Cookies may hold session identifiers and should have appropriate Secure, HttpOnly and SameSite attributes where applicable. Trust boundaries exist between unauthenticated users, authenticated sessions, web application logic, databases and administrative functions. A 200 response does not establish that security controls work.\n\nPRACTICAL WORK: In a disposable local training app or the Academy's fictional web lab, compare authorized GET and POST requests using browser developer tools or a provided transcript. Identify the request method, endpoint, response code, cookie attributes and data that must not be trusted. Avoid submitting real credentials to third-party targets.\n\nREQUIRED SUBMISSION: Produce an HTTP request/response annotation, a trust-boundary diagram and a checklist of session flags and authorization expectations with no sensitive tokens copied into your report.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "What does a successful HTTP 200 response show by itself?",
+          [
+            "The server responded successfully to that request, not that authorization is correct",
+            "The web app has no vulnerabilities",
+            "The user's account is an administrator"
+          ],
+          0,
+          "A response status reports request outcome rather than proving access controls."
+        ],
+        [
+          "Separate authentication from object-level authorization",
+          "CONCEPTS AND REASONING: A valid session proves a user has authenticated, but every requested object and action still needs server-side authorization. Insecure direct object references and broken object-level authorization can occur when an app trusts client-submitted identifiers without checking ownership. Changing identifiers in requests on systems you do not own is unauthorized; training should remain in fabricated and isolated environments.\n\nPRACTICAL WORK: Using a synthetic API transcript with two fictional accounts and records, write the expected server decisions for owner-read, non-owner-read, administrator-review and anonymous-access cases. Define the deny-by-default policy and log fields needed to verify access without exposing private data.\n\nREQUIRED SUBMISSION: Deliver a six-row access-control test matrix with user role, target object ownership, action, expected result, authorization basis and synthetic evidence reference.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Why is checking that a user is logged in insufficient to protect a private object?",
+          [
+            "Authentication and authorization are separate controls",
+            "Cookies always grant full access",
+            "Object ownership is irrelevant"
+          ],
+          0,
+          "Server-side authorization must constrain each object and action."
+        ],
+        [
+          "Security headers and safe reporting of configuration gaps",
+          "CONCEPTS AND REASONING: A Content-Security-Policy can restrict script execution and framing; X-Frame-Options or the CSP frame-ancestors directive can constrain embedding. HSTS influences future HTTPS use, and cookie settings affect session exposure. Missing headers may reduce defense in depth but do not automatically demonstrate exploitability. Set policies based on actual application resources and validate compatibility.\n\nPRACTICAL WORK: Review synthetic HTTP response headers for a training portal. Identify which protections are present, absent or ineffective for the fictional requirements. Recommend a phased CSP deployment with monitoring and functional retesting. Explain why copying an excessively restrictive policy without testing may break legitimate scripts.\n\nREQUIRED SUBMISSION: Submit a finding with exact header evidence, a realistic severity rationale, proposed secure policy, rollout plan, potential breakage, and recheck; explicitly avoid claiming remote code execution.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Missing security headers alone prove:",
+          [
+            "A verified total compromise",
+            "A configuration observation whose actual impact requires context",
+            "That all credentials are stolen"
+          ],
+          1,
+          "Headers provide layered protections, but missing ones do not establish successful exploitation."
+        ]
+      ]
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lessons": [
+        [
+          "Cloud identity versus network reachability",
+          "CONCEPTS AND REASONING: Cloud accounts, roles and resource permissions define who can call APIs and access data; network controls govern which endpoints can communicate. A private subnet does not replace identity authorization and a restrictive role does not make public exposure safe. Temporary credentials, scoped roles, audit logs and clear environment boundaries help reduce blast radius. Permission inheritance and service-to-service access must be reviewed together.\n\nPRACTICAL WORK: Design a fictional cloud-hosted lab with an app server, object storage, managed secrets and audit logging. Draw separate identity and network graphs. Identify who may read secrets, who may update content, which ports are exposed and how the test environment stays separate from unrelated accounts.\n\nREQUIRED SUBMISSION: Produce a least-privilege role matrix and network rule table with a specific test for permitted reads, blocked writes and denied inbound public access.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Which security controls are needed for a private application bucket?",
+          [
+            "Identity permission checks and appropriately scoped network exposure",
+            "Only a memorable bucket name",
+            "Only a firewall with no access policy"
+          ],
+          0,
+          "Data protection requires both authorization and appropriate connectivity controls."
+        ],
+        [
+          "Infrastructure configuration drift and reversible changes",
+          "CONCEPTS AND REASONING: Infrastructure-as-code and configuration inventories help teams compare intended settings with deployed reality. Drift can arise from manual changes, incomplete rollbacks or provider defaults. An assessment should identify the resource, its approved baseline, the observed deviation, risk and a minimally disruptive remediation. Change planning should include preview, approvals, post-change validation and a rollback path.\n\nPRACTICAL WORK: Examine a fictional drift report: a security group permits an unexpected public management port and storage access policy is broader than approved. Classify issues by business exposure, propose a reviewed corrective change and specify validation evidence without connecting to a real cloud tenant.\n\nREQUIRED SUBMISSION: Write a change ticket with before/after rule examples, approval role, deployment order, potential availability effects, tests and rollback trigger.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "What is configuration drift?",
+          [
+            "A difference between approved intended configuration and the observed deployed state",
+            "A normal log timestamp offset only",
+            "A required feature of encryption"
+          ],
+          0,
+          "Drift is a deviation that should be investigated against a known baseline."
+        ],
+        [
+          "Cloud backup and disaster-recovery validation",
+          "CONCEPTS AND REASONING: Recovery objectives measure tolerated data loss (RPO) and recovery time (RTO). A completed backup task does not prove that credentials, dependencies, application configuration and data can be restored together. Backups must be protected from unauthorized deletion and tested in an isolated recovery environment. Storage copies in one account or region can share failure modes.\n\nPRACTICAL WORK: For a fictional web application, define RPO of four hours and RTO of eight hours. Plan independent copies of application data and essential configuration, identify restore permissions, and script a tabletop restoration sequence including application health and access-control checks.\n\nREQUIRED SUBMISSION: Deliver a restore checklist with assumed dependency order, timing measurements, recovery acceptance criteria and a remediation action if a test misses RTO/RPO.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "What best demonstrates disaster-recovery readiness?",
+          [
+            "A successful end-to-end restore exercise meeting defined recovery objectives",
+            "A daily email saying the backup ran",
+            "A snapshot on the original failed disk"
+          ],
+          0,
+          "A verified restore tests both data and operational dependencies."
+        ]
+      ]
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lessons": [
+        [
+          "Triangulate evidence across enterprise systems",
+          "CONCEPTS AND REASONING: Complex security investigations require combining identity changes, network records, host state and approved business workflows. No single tool establishes the whole story. Analysts should rank hypotheses based on corroborating facts, data completeness and plausible benign alternatives, and record where confidence falls short. The same log pattern can result from maintenance, user error or misconduct.\n\nPRACTICAL WORK: In a fictional corporate engagement, review an elevated group membership record, a change ticket and an application log showing a routine outage. Build two timelines: one supported and one hypothetical. Show which inference each record can and cannot support, and identify the one additional authorized read-only record with greatest explanatory value.\n\nREQUIRED SUBMISSION: Submit a concise evidence matrix with claim, source, confidence, alternate explanation and verification plan, plus a decision to report, monitor or seek more data.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "What makes a high-confidence finding?",
+          [
+            "Multiple relevant corroborating observations within defined scope",
+            "A dramatic alert title",
+            "The absence of any logs"
+          ],
+          0,
+          "Confidence depends on consistent, reliable evidence."
+        ],
+        [
+          "Translate technical findings into business priorities",
+          "CONCEPTS AND REASONING: Risk prioritization considers exposure, likelihood, affected data, service criticality, ability to detect harm and compensating controls. A high-severity technical weakness on an isolated disposable lab may be less urgent than an ordinary but business-critical backup failure. Reporters should not force every issue into the maximum severity and should distinguish urgent containment from planned improvements.\n\nPRACTICAL WORK: Rank four fictional findings: unapproved privileged membership, an exposed training service, missing response headers and a neglected restore test. State assumptions, likely impact, recommended owner, urgency and the evidence required before deciding that a vulnerability was exploited.\n\nREQUIRED SUBMISSION: Produce an executive risk register with evidence confidence, potential loss, remediation cost/complexity, owner, priority and validation method.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "Which ranking approach is defensible?",
+          [
+            "Use business context and evidence strength rather than severity labels alone",
+            "Mark every finding Critical",
+            "Sort only by the length of command output"
+          ],
+          0,
+          "Business impact and evidence quality shape remediation priorities."
+        ],
+        [
+          "Independent remediation review and retest",
+          "CONCEPTS AND REASONING: An effective retest confirms that a specific control now works under the original failure condition and does not introduce unacceptable collateral effects. A changed configuration screenshot is not sufficient by itself: evaluate effective permissions, actual service behavior, logging, rollback and residual risk. Independent reviewers should be able to reproduce the evidence without accessing unrelated systems.\n\nPRACTICAL WORK: Take three fictional remediations: privileged group removed, cloud management port closed, and backup restore procedure updated. For each, define one positive acceptance test and one negative test. Preserve initial evidence references and write a final report distinguishing passed checks from untested assertions.\n\nREQUIRED SUBMISSION: Deliver a retest table mapping original finding, approved change, test method, observed outcome, residual risk, and sign-off responsibility. State explicitly that synthetic tests do not establish real-system mastery.\n\nCHECK YOUR UNDERSTANDING: Before proceeding, state which command or record supports your conclusion, the limitations of the data, the authorization boundary, and how a reversible correction would be verified.",
+          "When can a finding reasonably be marked remediated?",
+          [
+            "After its intended behavior is independently verified and residual risks documented",
+            "Immediately after proposing a fix",
+            "When its alert is hidden"
+          ],
+          0,
+          "Verification, not a claimed change, determines whether the risk is corrected."
+        ]
+      ]
+    }
+  ]
+}
