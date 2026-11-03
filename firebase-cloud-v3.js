@@ -94,7 +94,33 @@ async function connect(){
     activeRef=ref;rev=remoteRevision;last=snapshot();enabled=true;localStorage.setItem(linkKey(uid),String(rev));render();state('Cloud connected · device progress matches Firebase');return;
    }
    render();displayDifferences(device,cloud);
-   panel.append(btn('Download both backups',()=>{downloadBundle('ethical-hacking-both-versions.json',{iphone:device,cloud,cloudRevision:remoteRevision});state('Backup requested. Save it to Files and verify it before selecting a version.')}));
+   let backupsRequested=false;
+   panel.append(btn('Download both backups',()=>{downloadBundle('ethical-hacking-both-versions.json',{iphone:device,cloud,cloudRevision:remoteRevision});backupsRequested=true;state('Backup requested. Save it to Files and verify its contents before restoring either version.')}));
+   panel.append(btn('Restore Firebase copy on this device',async()=>{
+    if(!backupsRequested){state('Download both backups before selecting a restore option.');return}
+    if(!confirm('Have you saved and inspected the downloaded backup in Files? This will replace device records with the existing FIREBASE version. Local-only records are preserved in your backup, not in the restored device copy.'))return;
+    if(!confirm('Final confirmation: restore the existing Firebase snapshot to THIS DEVICE? Firebase itself will not be modified.'))return;
+    if(generation!==sessionGeneration||auth.currentUser?.uid!==uid){state('Account changed. Restore cancelled.');return}
+    if(JSON.stringify(records())!==JSON.stringify(device)){state('Device work changed since comparison. Restore cancelled; compare again.');return}
+    const original=records(),changedKeys=[];
+    try{
+     const check=await getDoc(ref);
+     if(generation!==sessionGeneration||auth.currentUser?.uid!==uid)throw Error('Account changed during restore.');
+     if(!check.exists()||Number(check.data().revision)!==remoteRevision||check.data().raw!==d.data().raw)throw Error('Cloud copy changed since comparison. Compare again.');
+     for(const key of new Set([...Object.keys(original),...Object.keys(cloud)])){
+      if(Object.hasOwn(cloud,key))localStorage.setItem(key,cloud[key]);
+      else localStorage.removeItem(key);
+      changedKeys.push(key);
+     }
+     if(JSON.stringify(records())!==JSON.stringify(cloud))throw Error('Device copy did not match cloud after restore.');
+     localStorage.setItem(linkKey(uid),String(remoteRevision));
+     state('Firebase version restored on this device. Reloading coursework with the restored progress.');
+     window.location.reload();
+    }catch(error){
+     for(const key of changedKeys){try{if(Object.hasOwn(original,key))localStorage.setItem(key,original[key]);else localStorage.removeItem(key)}catch{}}
+     state('Cloud restore stopped; device rollback attempted. '+(error.code||error.message||'Review your saved backup before retrying.'));
+    }
+   }));
    panel.append(btn('Keep iPhone version in Firebase',async()=>{
     if(!confirm('Only continue after verifying the backup is saved to Files. Replace the FIREBASE copy with this iPhone copy?'))return;
     if(!confirm('Confirm again: overwrite existing Firebase progress with this iPhone copy?'))return;
