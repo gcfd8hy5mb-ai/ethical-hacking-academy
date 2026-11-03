@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "title": "Focused systems and Red Team coursework, 440-hour path",
+  "courses": [
+    {
+      "course": "Windows Administration and Security",
+      "lessons": [
+        [
+          "PowerShell inspection: processes, services, and safe triage",
+          "OBJECTIVE AND EXPLANATION: Windows administrative diagnosis begins with scope, permissions and an observation baseline. Get-Process returns running process identities and resource properties. Get-Service lists service status; Get-CimInstance Win32_OperatingSystem describes OS build and memory. PowerShell commands operate on actual systems outside the browser simulator, so distinguish observation from modification and never run untrusted copied scripts. A stopped service may reflect a dependency, policy or maintenance, not malicious activity.\n\nGUIDED PRACTICAL WORKSHOP: On your own Windows machine or isolated Windows VM: (1) record host name using hostname; (2) run Get-Service | Where-Object Status -eq 'Stopped' and note why stopped does not imply broken; (3) use Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 to list process CPU time; (4) inspect one approved service using Get-Service -Name <service>. Do not change any service state. Explain CPU time versus instantaneous utilization.\n\nREQUIRED MASTERY EVIDENCE: Produce a before-action evidence sheet listing commands, representative fields, baseline state, privacy boundary, and the exact additional observation needed before proposing a fix.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "A service shown as Stopped proves that:",
+          [
+            "It is not currently running, but its expected state needs verification",
+            "It is malicious and must be removed",
+            "The Windows firewall is disabled"
+          ],
+          0,
+          "A service may be intentionally stopped or trigger-started. Compare with expected configuration before intervention."
+        ],
+        [
+          "Event Viewer: build a reliable troubleshooting timeline",
+          "OBJECTIVE AND EXPLANATION: Windows logs capture application, system and security events. Event IDs have meaning only when paired with provider, channel, host, time and event text. Get-WinEvent -FilterHashtable can restrict a query to a channel and event ID. A missing or sparse event record cannot alone prove that an action did not occur. Time zones, retention policies and clock skew affect comparisons.\n\nGUIDED PRACTICAL WORKSHOP: In an owned VM or synthetic Academy environment, run Get-WinEvent -LogName System -MaxEvents 10 and describe TimeCreated, ProviderName, Id and Message. Then plan a narrow query to correlate a service failure with a software change. Explain why a 4728 group-add event requires security-group context and authorization history.\n\nREQUIRED MASTERY EVIDENCE: Write a fictional outage timeline with deployment time, observed event, service condition, owner-approved rollback and validation. Label direct evidence versus inference.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "A Windows event ID by itself is sufficient to establish:",
+          [
+            "The identity and motive of an attacker",
+            "Only a partial clue requiring provider, time, message and authorization context",
+            "That all logged accounts are compromised"
+          ],
+          1,
+          "Events must be interpreted within host, channel, timing and change-control context."
+        ],
+        [
+          "Domain clients: DNS, time, accounts, and trust boundaries",
+          "OBJECTIVE AND EXPLANATION: Active Directory clients locate domain controllers using DNS SRV records and rely on reachable services and synchronized time. ipconfig /all shows adapter and DNS configuration; nslookup -type=SRV checks service discovery; nltest /dsgetdc:domain requests domain controller location. Successful ping proves limited ICMP reachability, not successful Kerberos, LDAP or interactive login.\n\nGUIDED PRACTICAL WORKSHOP: In the Academy's stateful workstation, use ipconfig /all, nslookup -type=SRV _ldap._tcp.dc._msdcs.alder.lab, and nltest /dsgetdc:alder.lab. Identify the incorrect resolver, apply the simulator's set dns 10.66.10.10, and repeat both tests. Describe why a household-router DNS change is inappropriate.\n\nREQUIRED MASTERY EVIDENCE: Submit diagnostic evidence before and after the change, the least disruptive correction, expected acceptance result and a rollback instruction.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "The next appropriate check after successful ping but failed domain logon is:",
+          [
+            "Disable authentication permanently",
+            "Inspect internal DNS discovery and time synchronization",
+            "Give the user Domain Admins membership"
+          ],
+          1,
+          "Domain discovery and time synchronization are common prerequisites; ping alone does not test them."
+        ]
+      ]
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lessons": [
+        [
+          "Linux services, ports, and dependency reasoning",
+          "OBJECTIVE AND EXPLANATION: On Linux, systemctl status gives a unit's state while journalctl -u retrieves its journal. ss -ltnp shows TCP listening sockets and associated processes where permission permits. A service might fail because another process binds its port, a configuration parse fails, a dependency is missing or storage is exhausted. Diagnose each cause from independent observations before taking action.\n\nGUIDED PRACTICAL WORKSHOP: Use the Academy's stateful Linux troubleshooting lab. Record systemctl status nginx, journalctl -u nginx -n 20, ss -ltnp and curl -I http://10.66.20.10. Explain why HTTP 200 from training-http does not prove nginx is running. Stop the named conflicting service only inside the simulator, start nginx and verify process identity and response.\n\nREQUIRED MASTERY EVIDENCE: Build a five-column service incident report: command, output, what it establishes, uncertainty, next authorized safe test. Include a rollback step and preserve the initial log.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "Which combination supports a TCP port conflict?",
+          [
+            "Bind failure in service logs plus another listener on the intended port",
+            "High CPU usage alone",
+            "A successful file download from another host"
+          ],
+          0,
+          "The log and socket table corroborate competing use of the same socket."
+        ],
+        [
+          "Linux permissions, identities and safe changes",
+          "OBJECTIVE AND EXPLANATION: Unix permission bits define read, write and execute for owner, group and other; effective access can also depend on ACLs and directory traversal. chmod 640 gives owner read/write, group read, other none; 755 commonly grants a directory owner full access and others read/traverse. A world-writable directory can be risky, but changing permissions without understanding service ownership can break production workloads.\n\nGUIDED PRACTICAL WORKSHOP: On files created in a disposable directory, inspect id, ls -ld, stat and getfacl if available. Create a small hypothetical access matrix for analyst, app service account and other users. Write a proposed correction for a world-writable app data folder, then list tests for allowed writes and disallowed writes. Do not alter system directories.\n\nREQUIRED MASTERY EVIDENCE: Prepare a least-privilege change ticket with current state, required principals, proposed mode/ACL, expected failures, authorized approval and rollback. Explain difference between file execute and directory traversal.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "What is a likely risk of mode 0777 on sensitive application data?",
+          [
+            "Unintended modifications by accounts that can access the directory",
+            "Automatic encryption of all files",
+            "Proof that the server was exploited"
+          ],
+          0,
+          "Broad write permission expands modification possibilities; it does not prove exploitation."
+        ],
+        [
+          "Backups, logs and Linux capacity diagnostics",
+          "OBJECTIVE AND EXPLANATION: A full filesystem can interrupt services, corrupt application state or prevent logs from being written. df -h summarizes filesystem capacity, du -sh reports disk use of a directory tree, and journalctl --disk-usage shows journal storage. Never delete unknown files from production or discard logs before understanding evidence retention. Backups, snapshots and redundancy serve different purposes; restore tests validate recoverability.\n\nGUIDED PRACTICAL WORKSHOP: In an isolated Linux VM, use df -h and du -sh on a disposable directory. Given synthetic /var at 97% full and rapidly growing logs, propose an evidence-preserving plan: record consumption, inspect retention configuration, safely rotate logs through approved tooling, restore headroom and alert on trends. Describe how to test an independent backup restore.\n\nREQUIRED MASTERY EVIDENCE: Write a storage incident runbook covering early warning, investigation, approved remediation, rollback, backup verification and post-change monitoring.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "The strongest evidence that backups can restore service is:",
+          [
+            "A green backup job status with no restore test",
+            "A recent, successfully verified restoration in an isolated test",
+            "An old snapshot on the same full disk"
+          ],
+          1,
+          "Recovery requires verifying a usable restore, not merely successful file creation."
+        ]
+      ]
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lessons": [
+        [
+          "Layered connectivity diagnosis: interface to application",
+          "OBJECTIVE AND EXPLANATION: A reliable network check proceeds from local interface configuration through link, route, DNS, transport and application. ip addr or ipconfig /all establishes addresses; ip route or route print shows forwarding choices; ping tests ICMP when permitted; ss lists socket listeners; curl or a browser tests HTTP. A failure at one layer should not be labeled as failure at another without evidence.\n\nGUIDED PRACTICAL WORKSHOP: For a fictional web VM with HTTP unavailable, assemble a six-test diagnostic table. Include the expected observation for wrong subnet, missing default route, DNS misconfiguration, stopped application service, firewall denial and an incorrect browser URL. Use only internal lab addresses. Explain why ICMP success does not prove HTTPS availability.\n\nREQUIRED MASTERY EVIDENCE: Create a fault-isolation flowchart with one observation and one falsifiable hypothesis at each branch, an approval boundary and a final application-level validation.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "A successful ping means:",
+          [
+            "The target's web application is fully working",
+            "An ICMP exchange succeeded, without proving the application port or service",
+            "All network firewall policies are correct"
+          ],
+          1,
+          "Ping is only an ICMP path signal and cannot validate an application."
+        ],
+        [
+          "Subnetting and firewall decisions in an isolated lab",
+          "OBJECTIVE AND EXPLANATION: In IPv4, 10.77.10.0/24 and 10.77.20.0/24 are separate networks; 10.77.10.10 and 10.77.10.20 share the former. Inter-subnet access depends on routing and firewall rules. An explicit allow-list narrows exposure; a default deny model should be accompanied by logs and narrowly scoped exceptions. A private address is not a guarantee of isolation.\n\nGUIDED PRACTICAL WORKSHOP: Diagram three fictional networks for a domain controller, Linux training service and Kali assessor. Allow only lab DNS and HTTP flows needed for exercises, deny routing to household and WAN networks, and document a route table for each guest. Predict a permitted request and a blocked request before consulting simulated evidence.\n\nREQUIRED MASTERY EVIDENCE: Produce a network rule matrix showing source, destination, protocol/port, purpose, expected outcome and verification method, with evidence from at least one positive and one negative test.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "What is necessary to confirm segmentation?",
+          [
+            "A virtual switch named 'isolated'",
+            "Verified allowed lab connections and denied unintended paths",
+            "Only assigning RFC1918 addresses"
+          ],
+          1,
+          "Effective routing, firewall enforcement and observed tests establish the boundary."
+        ],
+        [
+          "DNS and domain discovery: distinguish name, service and policy",
+          "OBJECTIVE AND EXPLANATION: DNS A records return IPv4 addresses for hostnames; SRV records advertise services such as domain controllers. A resolver can return a correct host address even if the remote application is stopped; an ICMP path can exist even when internal domain SRV lookup fails. Domain clients should use approved internal DNS services, and troubleshooting should distinguish missing records from blocked DNS queries.\n\nGUIDED PRACTICAL WORKSHOP: Use synthetic Windows outputs for ipconfig /all, nslookup SRV, nltest, and ping. Classify the evidence as wrong resolver, missing authoritative record, transport block or domain service fault. Plan a scoped client-only change and a repeatable sign-in acceptance test. Do not change a household DNS server to repair the isolated lab.\n\nREQUIRED MASTERY EVIDENCE: Document commands, expected outputs, observed outputs, diagnosis, uncertainty, fixed configuration and validation. Include a note about clock synchronization.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "A client configured to public DNS for a private Active Directory domain will often:",
+          [
+            "Fail internal service discovery despite a reachable controller",
+            "Automatically gain administrative access",
+            "Disable all network encryption"
+          ],
+          0,
+          "Public DNS normally does not host private AD SRV records."
+        ]
+      ]
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lessons": [
+        [
+          "Plan a scoped assessment before using tools",
+          "OBJECTIVE AND EXPLANATION: Ethical security work starts with written authorization, owned or specifically identified assets, allowed methods, contact and stop conditions, data handling and reporting requirements. A strong rules-of-engagement document prevents accidental tests of adjacent networks. Evidence collection should minimize exposure of personal data and distinguish information gathering from disruptive probing.\n\nGUIDED PRACTICAL WORKSHOP: Write a fictional rules-of-engagement document for an isolated company lab with a Windows domain controller, a Linux web application and a Kali assessor. State target addresses, test window, prohibited actions, emergency contact, logging expectations and permitted evidence handling. Map each intended test to a business question and a safe verification action.\n\nREQUIRED MASTERY EVIDENCE: Deliver a one-page scope and authorization sheet. Include three explicit out-of-scope examples and the condition that ends the engagement.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "Which is required before an ethical assessment?",
+          [
+            "Target owner authorization and explicit scope",
+            "Discovering any reachable IP address",
+            "Turning off monitoring to avoid logs"
+          ],
+          0,
+          "Permission and defined boundaries are essential prerequisites."
+        ],
+        [
+          "Evidence-based findings and measured severity",
+          "OBJECTIVE AND EXPLANATION: An actionable security finding links a precise observation, affected asset, plausible impact, severity rationale, reproduction evidence, limitations and remediation. Severity is context-dependent: misconfigured privileged groups may be high risk, whereas a missing header may be a lower-severity defense-in-depth concern. A configuration issue is not automatically evidence of successful exploitation.\n\nGUIDED PRACTICAL WORKSHOP: In the Academy's Independent Red Team Engagements, review a synthetic role-membership record, a Windows event and a benign patch event. Draft two findings: one supported and one claim you reject for lack of evidence. Explain severity and avoid asserting credential theft without proof.\n\nREQUIRED MASTERY EVIDENCE: Produce a report finding with reproducible record references, clear technical impact, one proposed remediation, one retest and an uncertainty statement.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "Which statement is professionally defensible?",
+          [
+            "A privileged account in an unapproved group creates an access risk; further evidence is needed to establish compromise",
+            "The entire network was hacked because an alert exists",
+            "Any missing header proves remote code execution"
+          ],
+          0,
+          "Professional conclusions must not exceed the supplied evidence."
+        ],
+        [
+          "Executive reporting, retesting and handoff",
+          "OBJECTIVE AND EXPLANATION: A technical report must work for both leadership and administrators. Executive summaries describe business context and priorities without unnecessary command noise; technical appendices preserve exact steps, artifacts and limitations. Findings should have owners, acceptance criteria, proposed change controls, residual risk and a method to retest. Completing a browser simulation does not prove real-system competency.\n\nGUIDED PRACTICAL WORKSHOP: Prepare a fictional final report using a domain permission issue and a failed backup restore. Write a 120-word executive summary, a technical evidence section, a prioritized action plan and a retest checklist. Identify who must approve changes, how to preserve service availability and what still requires hands-on validation.\n\nREQUIRED MASTERY EVIDENCE: Submit a report with scope, evidence, two risk-ranked findings, affected business process, remediation owner, due date rationale, verification and limitations.\n\nDECISION RATIONALE: Record what each observed output supports, what remains uncertain, and how to verify a reversible correction. Work only with owned or explicitly authorized systems; start in the browser simulations before real labs.",
+          "What belongs in a final remediation handoff?",
+          [
+            "A list of unsupported claims",
+            "Owners, accepted risks, verification steps and unresolved limitations",
+            "An instruction to erase audit logs"
+          ],
+          1,
+          "Professional handoff makes corrective work accountable and testable."
+        ]
+      ]
+    }
+  ]
+}
