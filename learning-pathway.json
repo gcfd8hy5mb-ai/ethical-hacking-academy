@@ -85,7 +85,6 @@
         "Cybersecurity Foundations",
         "Digital Identity and Everyday Security",
         "Security Operations and Incident Response",
-        "Security Analysis and Professional Practice",
         "Defensive Web and Cloud Fundamentals",
         "Applied Security Architecture and Threat Modeling",
         "Introduction to Defensive Cryptography",
@@ -111,8 +110,7 @@
         "Safe Authorized Assessment Methodology",
         "Hands-On Network Reasoning Workshop",
         "Beginner Python Logic and Defensive Automation",
-        "Web Application Security Fundamentals",
-        "Security Assessment and Reporting Workshop"
+        "Web Application Security Fundamentals"
       ],
       "labs": [
         [
@@ -153,7 +151,8 @@
       "subtitle": "Advanced",
       "goal": "Apply enterprise assessment methodology, identity-risk analysis and multi-stage independent investigations.",
       "courses": [
-        "Enterprise Identity and Access Management"
+        "Security Analysis and Professional Practice",
+        "Security Assessment and Reporting Workshop"
       ],
       "labs": [
         [
