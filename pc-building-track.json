@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "track": "PC Building, Repair & Red Team Home Lab",
+  "courses": [
+    {
+      "title": "PC Building & Computer Hardware",
+      "lessons": [
+        [
+          "How a computer works",
+          "PURPOSE: Trace the path from input to CPU instructions, RAM, storage and output. The motherboard connects these components through buses and interfaces. A CPU executes instructions, RAM holds working data, and an SSD preserves data when power is off.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A computer slows down while multiple VMs run. Which resource should you inspect first?",
+          [
+            "Monitor memory use and swapping",
+            "Replace the monitor",
+            "Increase screen brightness",
+            "Disable backups"
+          ],
+          0,
+          "Multiple VMs compete for RAM. Check memory and swapping before replacing parts."
+        ],
+        [
+          "Motherboard anatomy and form factors",
+          "PURPOSE: Identify CPU socket, DIMM slots, PCIe slots, M.2 sockets, chipset, front-panel header, power connectors and rear I/O. ATX, micro-ATX and mini-ITX affect expansion and case compatibility. Consult the board manual before connecting components.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A micro-ATX board is chosen for a new build. What must you verify?",
+          [
+            "RGB lighting color",
+            "Case supports micro-ATX and the required slots",
+            "Brand of mouse",
+            "Desktop wallpaper"
+          ],
+          1,
+          "Physical dimensions, standoffs, slot access and available connectors determine compatibility."
+        ],
+        [
+          "CPU selection and virtualization",
+          "PURPOSE: Compare core count, thread count, sustained performance, cooling and power limits. Check CPU socket compatibility with motherboard firmware. For labs, hardware virtualization support (Intel VT-x or AMD-V) and enough RAM are essential; higher core count helps concurrent VMs.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A workstation will run four VMs at once. What CPU-related feature matters?",
+          [
+            "Hardware virtualization and adequate cores",
+            "Keyboard backlighting",
+            "Integrated speakers",
+            "A high refresh-rate screen"
+          ],
+          0,
+          "Virtualization extensions and sufficient processing capacity support concurrent guests."
+        ],
+        [
+          "RAM selection and upgrade planning",
+          "PURPOSE: Understand DDR generation, DIMM versus SODIMM, memory channels, capacity, speed and motherboard limits. DDR4 and DDR5 slots are not interchangeable. Some laptops use soldered RAM; verify service documentation before purchasing. Shut down, unplug, and follow ESD precautions.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A board only supports DDR4. Which upgrade is appropriate?",
+          [
+            "Install DDR5 modules",
+            "Install compatible DDR4 modules within the capacity limit",
+            "Mix laptop SODIMM with desktop DIMM",
+            "Force incompatible RAM into a slot"
+          ],
+          1,
+          "Memory generation and form factor must match the supported motherboard specification."
+        ],
+        [
+          "Storage, SSDs and backup strategy",
+          "PURPOSE: Distinguish SATA from NVMe, M.2 form factor from protocol, and total capacity from usable free space. A 1 TB SSD is a practical starting point for VM images. Back up important data separately and test restoration; RAID is not itself a backup.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A VM host has a mirrored drive pair but no separate copies. What is missing?",
+          [
+            "More RGB fans",
+            "A separate tested backup",
+            "A second mouse",
+            "A faster monitor"
+          ],
+          1,
+          "Mirroring helps availability but cannot reliably recover deleted or corrupted files."
+        ],
+        [
+          "Power supplies and electrical safety",
+          "PURPOSE: Estimate power draw with headroom for future components, confirm PSU connectors, and choose a reputable unit with appropriate protections. Never open a power-supply casing: capacitors may retain dangerous charge even unplugged. Use a grounded outlet and protect work with backups.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A PC requires a 24-pin board cable and CPU power cable. What should you do?",
+          [
+            "Verify PSU has both required connectors",
+            "Open the PSU and rewire it",
+            "Ignore the CPU power connector",
+            "Use random adapters without checking ratings"
+          ],
+          0,
+          "Correct rated connectors and safe components matter. Do not disassemble a PSU."
+        ],
+        [
+          "GPU needs for cybersecurity",
+          "PURPOSE: An integrated GPU is enough for many Nmap, Wireshark, Linux and virtualization tasks. Dedicated GPUs matter for graphics workloads and some authorized GPU compute tasks. Laptop GPUs are typically not replaceable; desktop PCIe cards are much easier to upgrade.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A learner mainly runs Linux and Windows VMs. What should they prioritize?",
+          [
+            "32–64 GB RAM and reliable CPU before gaming GPU",
+            "Most expensive GPU first",
+            "RGB accessories",
+            "External speakers"
+          ],
+          0,
+          "Memory, CPU, storage and virtualization support usually determine VM lab performance."
+        ],
+        [
+          "Cooling, airflow and thermals",
+          "PURPOSE: Learn heatsinks, air coolers, radiator placement, thermal interface material, case airflow and dust management. Review temperature and throttling under load. Ensure the cooler fits CPU socket and case clearance, and disconnect power before touching internals.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A build shuts down during long workloads. What is a reasonable first check?",
+          [
+            "Temperatures, fan operation and cooler mounting",
+            "Change desktop wallpaper",
+            "Remove all fans",
+            "Disable temperature safeguards"
+          ],
+          0,
+          "Overheating can cause throttling and shutdown; diagnose cooling safely."
+        ],
+        [
+          "Compatibility and purchasing exercise",
+          "PURPOSE: Create a parts list with motherboard socket, CPU, supported RAM, cooler, case fit, PSU capacity, SSD interface and ports. Record estimated cost, warranty and upgrade path. Validate each part against manufacturer specifications rather than relying on marketing labels.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Two parts are labeled 'gaming compatible' but use different CPU sockets. What should you do?",
+          [
+            "Purchase both anyway",
+            "Choose a matching CPU and motherboard combination",
+            "Use more thermal paste",
+            "Change the keyboard"
+          ],
+          1,
+          "Socket compatibility is a hard requirement even if product descriptions appear similar."
+        ],
+        [
+          "Hardware inspection and tool safety",
+          "PURPOSE: Use the service manual, precision screwdriver and ESD-safe handling. Photograph cable placement before disassembly, sort screws, disconnect battery when service guidance requires it, and never probe energized high-voltage internals. Prepare a recovery plan before changing storage.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Before opening a laptop, what is the safest first step?",
+          [
+            "Follow model-specific service instructions and power isolation",
+            "Remove the screen while powered on",
+            "Short contacts to test them",
+            "Work on carpet without preparation"
+          ],
+          0,
+          "Manufacturer instructions, disconnecting power and controlled handling reduce risk."
+        ]
+      ]
+    },
+    {
+      "title": "PC Assembly, Repair & Troubleshooting",
+      "lessons": [
+        [
+          "Build planning and compatibility worksheet",
+          "PURPOSE: Plan case, board, CPU, cooler, memory, storage, PSU, networking and operating system. Check supported RAM capacity, firmware revision, CPU thermal requirements and future expansion before buying anything. Document a complete bill of materials.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A motherboard requires a newer BIOS for the selected CPU. What should be checked?",
+          [
+            "BIOS update path and supported CPU list",
+            "Chair height",
+            "Speaker brand",
+            "Wallpaper settings"
+          ],
+          0,
+          "CPU support can depend on firmware version; plan a safe supported update route."
+        ],
+        [
+          "Safe physical assembly sequence",
+          "PURPOSE: Use a clean workspace, service manuals and power-isolated components. Install CPU and cooler according to vendor procedure, seat RAM, mount the motherboard on correct standoffs, attach storage and PSU cables, then inspect connections before first power-on.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Why are motherboard standoffs important?",
+          [
+            "They keep board contacts from shorting against the case",
+            "They improve Wi-Fi speed",
+            "They increase RAM speed",
+            "They replace ground wires"
+          ],
+          0,
+          "Correct standoff placement prevents contact with the chassis and possible shorts."
+        ],
+        [
+          "First boot and UEFI checks",
+          "PURPOSE: Connect monitor, keyboard and power; observe POST indicators and manufacturer diagnostics. In UEFI verify CPU/RAM recognition, storage, temperatures, boot order, virtualization support and secure boot settings appropriate to the intended OS. Record initial settings.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A new PC powers on but sees only half its RAM. What is the best next action?",
+          [
+            "Power down and verify DIMM seating and supported slot order",
+            "Install a game",
+            "Overclock immediately",
+            "Ignore the issue"
+          ],
+          0,
+          "DIMM seating, population order and compatibility should be verified before proceeding."
+        ],
+        [
+          "Windows installation and drivers",
+          "PURPOSE: Create installation media from official sources, back up target data, verify drive selection and install a supported OS. Install manufacturer chipset/network drivers, patch security updates, enable encryption where appropriate, and create a recovery drive.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "What is the safest source for chipset drivers?",
+          [
+            "Official motherboard or hardware vendor",
+            "Random driver pop-up",
+            "Unverified download mirror",
+            "Social-media attachment"
+          ],
+          0,
+          "Vendor sources reduce the risk of incompatible or malicious driver packages."
+        ],
+        [
+          "Linux installation and dual boot",
+          "PURPOSE: Understand UEFI partitions, boot loaders, live USB environments, disk encryption, and safe dual-boot decisions. Prefer a Linux VM for early coursework to reduce risk of damaging Windows partitions. Keep tested backups before changing partition layouts.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A beginner wants Kali alongside Windows without risking partitions. Best first option?",
+          [
+            "Run Kali in a virtual machine",
+            "Delete Windows immediately",
+            "Disable backups",
+            "Resize partitions without planning"
+          ],
+          0,
+          "A VM provides separation and is easier to restore or remove."
+        ],
+        [
+          "Diagnosing no-POST and no-display faults",
+          "PURPOSE: Distinguish no power, no POST, no video and boot-device failure. Check power cables, monitor input, board status LEDs/beep codes, single-DIMM tests and manufacturer troubleshooting steps. Do not swap energized components.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A machine has fans but no video and the board RAM LED is lit. What next?",
+          [
+            "Power off and inspect RAM configuration",
+            "Replace the SSD without diagnosis",
+            "Turn up sound",
+            "Reinstall browser"
+          ],
+          0,
+          "A memory diagnostic light points to the memory initialization path."
+        ],
+        [
+          "Diagnosing crashes and performance",
+          "PURPOSE: Investigate event logs, storage health, temperatures, memory errors and driver changes. Make one reversible change at a time, document symptoms, and test whether the issue recurs. Avoid assuming every crash means defective hardware.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Random crashes began after a RAM upgrade. Which test is most useful?",
+          [
+            "Return to stable settings and test memory compatibility",
+            "Add RGB strips",
+            "Clear browser history only",
+            "Increase fan speed blindly"
+          ],
+          0,
+          "New memory and settings are plausible contributors; isolate the change and test."
+        ],
+        [
+          "Privacy and ethics in repairing others' PCs",
+          "PURPOSE: Obtain permission, define the work, protect passwords, avoid browsing private files, record condition, back up with consent, and verify repairs without exposing data. If a drive is encrypted, do not bypass controls or demand passwords unnecessarily.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A friend's PC contains private documents. What is appropriate?",
+          [
+            "Only access files needed for authorized diagnosis",
+            "Browse everything for curiosity",
+            "Copy personal files for later",
+            "Share files to prove repair"
+          ],
+          0,
+          "Repair permission is limited to agreed work; confidentiality remains essential."
+        ],
+        [
+          "Laptop vs desktop upgrades",
+          "PURPOSE: Evaluate soldered memory, removable SODIMM slots, storage bay limitations and manufacturer service guidance. Desktop GPUs and power supplies are generally replaceable; laptop GPUs/CPUs usually are not. Weigh repair costs against replacement.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A laptop GPU is soldered to the board. What is the realistic plan?",
+          [
+            "Choose an appropriately equipped replacement for GPU-intensive needs",
+            "Install a desktop GPU in its SODIMM slot",
+            "Replace GPU like a desktop PCIe card",
+            "Disable cooling"
+          ],
+          0,
+          "Soldered laptop graphics generally cannot be upgraded as a normal user-serviceable part."
+        ],
+        [
+          "Repair capstone: diagnose and document",
+          "PURPOSE: Work through a fictional PC that fails POST after a memory upgrade and has intermittent storage errors. Produce a hypothesis table, safe test order, evidence log, replacement recommendation and acceptance checklist. Distinguish observed facts from assumptions.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "What makes a good repair report?",
+          [
+            "Symptoms, evidence, changes, tests and verified outcome",
+            "Only the final part purchased",
+            "An unexplained guess",
+            "A screenshot without context"
+          ],
+          0,
+          "A reproducible record shows why a diagnosis is credible."
+        ]
+      ]
+    },
+    {
+      "title": "Red Team Workstation & Home Lab Engineering",
+      "lessons": [
+        [
+          "Threat model and lab authorization",
+          "PURPOSE: Define an isolated lab boundary, a list of owned or expressly authorized targets, and prohibited systems. Separate lab networks from household and guest devices. Keep written rules of engagement and a rollback plan for every exercise.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Which target belongs in a beginner practice engagement?",
+          [
+            "An intentionally vulnerable VM on an isolated lab network",
+            "A neighbor's router",
+            "An unknown public IP",
+            "An employer system without written authorization"
+          ],
+          0,
+          "Practice is limited to owned or explicitly authorized targets under clear scope."
+        ],
+        [
+          "Virtualization architecture",
+          "PURPOSE: Compare host OS, guest OS, hypervisors, snapshots, virtual disks, CPU/RAM allocations, and network modes. Begin with one Kali VM and one deliberately vulnerable lab VM. More guests require more RAM and SSD space.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Why take a VM snapshot before a lab?",
+          [
+            "To return to a known safe state after changes",
+            "To increase the CPU core count",
+            "To replace backups permanently",
+            "To expose the VM to the internet"
+          ],
+          0,
+          "Snapshots help reversible experiments but do not replace independent backups."
+        ],
+        [
+          "Safely isolated virtual networks",
+          "PURPOSE: Understand NAT, bridged, host-only and internal network modes. Use host-only or internal isolated segments for deliberately vulnerable systems, and confirm they cannot reach normal household devices. Test routing and firewall rules before security exercises.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Which network is best for intentionally vulnerable practice VMs?",
+          [
+            "An isolated internal or host-only network",
+            "A bridged network with unrestricted home LAN access",
+            "A neighbor's SSID",
+            "Any public cloud subnet"
+          ],
+          0,
+          "Isolation prevents accidental exposure of vulnerable systems to real networks."
+        ],
+        [
+          "Kali Linux workstation fundamentals",
+          "PURPOSE: Install Kali from an official image, verify download integrity, allocate VM resources, update packages, and take a clean snapshot. Learn terminal, shell history, filesystem paths, logs and package management before using specialized tools.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Where should Kali installation media come from?",
+          [
+            "The official distribution with integrity checks",
+            "An anonymous file-sharing link",
+            "An email attachment",
+            "An unverified archive"
+          ],
+          0,
+          "Official trusted images and hash verification reduce supply-chain risk."
+        ],
+        [
+          "Windows domain simulation",
+          "PURPOSE: Learn domain controllers, DNS, organizational units, accounts, security groups, group policies and authentication. Build a fictional Windows domain with a server and client in a private virtual segment. Record all credentials in a protected lab-only vault.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "A client cannot join the fictional domain. What should be checked first?",
+          [
+            "DNS settings, connectivity and domain controller health",
+            "Monitor brightness",
+            "GPU RGB settings",
+            "Browser bookmarks"
+          ],
+          0,
+          "Active Directory depends on reachable domain services and correct DNS resolution."
+        ],
+        [
+          "Linux and web practice targets",
+          "PURPOSE: Create a test Linux server and a purpose-built vulnerable web application in a private network. Log versions, service ports and restoration steps. Use synthetic credentials and data; never import real customer information into vulnerable targets.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "Why use synthetic data in deliberately vulnerable apps?",
+          [
+            "To avoid exposing real private information",
+            "To boost GPU speed",
+            "To remove the need for network isolation",
+            "To make exploits automatically legal"
+          ],
+          0,
+          "Fictional records reduce consequences if an isolated training service is compromised."
+        ],
+        [
+          "Managed switches and VLANs",
+          "PURPOSE: Learn switch ports, VLAN tagging, trunk versus access ports, and routing through a firewall. Begin with virtual VLAN simulations; add physical hardware only when you can explain the topology and isolation requirements.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "What does separating a lab VLAN accomplish?",
+          [
+            "Limits unnecessary connectivity between lab and home devices",
+            "Makes all attacks legal",
+            "Eliminates need for firewalls",
+            "Guarantees malware cannot escape"
+          ],
+          0,
+          "Segmentation limits network paths but still requires correct rules and validation."
+        ],
+        [
+          "Storage, backups, and recovery",
+          "PURPOSE: Estimate VM disk sizes, snapshots and evidence storage. Use separate backup destinations, avoid storing secrets in reports, document rebuild procedures, and periodically test restore. Plan for power failures and SSD wear.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "An important VM cannot be restored from an untested backup. What was missing?",
+          [
+            "Routine restore testing",
+            "Additional case fans only",
+            "More HDMI cables",
+            "A gaming mouse"
+          ],
+          0,
+          "A backup plan is only reliable when recovery has been verified."
+        ],
+        [
+          "Red Team lab exercise workflow",
+          "PURPOSE: Follow a documented scope: inventory isolated hosts, identify services, validate lab vulnerabilities, collect minimal evidence, restore systems, and write remediation advice. Report exploitable conditions without claiming access to anything outside the authorized environment.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "What belongs in a professional lab report?",
+          [
+            "Scope, methods, evidence, impact, mitigation and cleanup",
+            "Only a tool screenshot",
+            "Unverified claims",
+            "Secrets copied from unrelated systems"
+          ],
+          0,
+          "A scoped, reproducible report connects technical evidence to risk and mitigation."
+        ],
+        [
+          "Infrastructure capstone blueprint",
+          "PURPOSE: Design a staged 64 GB-capable workstation and optional future server with named VMs, memory budgets, storage estimates, isolation diagram, firewall rules, rollback methods and costed parts list. A rack is optional; one desktop can host the first labs.\n\nPRACTICAL WORKSHOP: Record the relevant specifications or draw the topology on paper before changing equipment. Explain your reasoning and how you would verify the outcome. Use manufacturer documentation, safely powered-off components where applicable, and only systems you own or are expressly authorized to test.\n\nEVIDENCE TO KEEP: Your parts list, observations, screenshots where appropriate, a concise troubleshooting log and a rollback or recovery plan.\n\nMASTERY STANDARD: You should be able to explain the choice, perform or safely simulate it, identify likely failure conditions, and verify the result without relying on guesswork.",
+          "What is the best purchase strategy for the first home lab?",
+          [
+            "Start with a capable upgradeable desktop, then expand when workloads justify it",
+            "Buy a rack before designing anything",
+            "Expose vulnerable VMs publicly",
+            "Ignore power, cooling and backups"
+          ],
+          0,
+          "Incremental, measured expansion is cheaper and safer than buying a large rack first."
+        ]
+      ]
+    }
+  ]
+}
