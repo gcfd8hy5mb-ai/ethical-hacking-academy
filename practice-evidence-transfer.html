@@ -30,7 +30,7 @@ el("file").addEventListener("change",async()=>{
   if(data?.format!=="ethical-hacking-practice-evidence"||data.version!==1||!validObject(data.records))throw Error("Not an Academy practice evidence backup.");
   const entries=Object.entries(data.records);
   if(entries.some(([k,v])=>!Object.hasOwn(KEYS,k)||!validObject(v)))throw Error("Backup contains unsupported or malformed record collections.");
-  for(const [,collection] of entries){if(Object.values(collection).some(v=>!validObject(v)))throw Error("A case record has an invalid shape.")}
+  for(const [,collection] of entries){if(Object.keys(collection).length>300||Object.entries(collection).some(([id,v])=>["__proto__","constructor","prototype"].includes(id)||id.length>120||!validObject(v)))throw Error("A case record has an invalid shape or unsupported identifier.")}
   incoming=data.records;
   const current=device(),container=el("choices");let missing=0,conflicting=0,matching=0;
   for(const [key,objects] of entries){
