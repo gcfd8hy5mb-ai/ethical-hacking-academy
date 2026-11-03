@@ -81,3 +81,20 @@ Added `competency-evidence-review.html`, a browser-local assessor workflow readi
 The inspected `firebase-cloud-v3.js` collector serializes all `localStorage` records whose names start with `ethical-hacking-`, including recent practice portfolios and review keys, into an opt-in Firebase coursework snapshot. This means the keys are *eligible* for inclusion in the broad snapshot, but actual cross-device preservation requires a connected account, matching revisions and live verification; the conflict safeguard pauses rather than auto-merging different copies.
 
 Added `practice-evidence-transfer.html` with an export/import bundle containing six explicitly whitelisted practice and competency record collections. Normal lesson completion, exam results and cloud authentication keys are never included. JSON imports are validated, capped at 2 MB, previewed by collection and case, and **add missing case records by default**. Conflicting existing case records are preserved unless the user explicitly checks their replacement option. Import requires acknowledgement of an independently downloaded backup, and import changes are limited to these whitelisted local keys; there is no direct Firestore write. The page is linked from the main Practice Lab and Levels 3, 6, 7 and 8. The relevant scripts passed syntax checks; live cross-device behavior, file-picker compatibility and Firebase reconciliation still need hands-on acceptance tests. The 29-course/273-lesson catalog, 24 normal exams and 440-hour planning allocation are unchanged.
+
+## Firebase device-restore acceptance tests (2026-11-03 continuation)
+The existing `firebase-cloud-v3.js` was inspected end-to-end. It already supports opt-in Firestore snapshots, mismatch comparison, manual device-to-cloud replacement, revision-guarded transactions, and a downloaded two-version backup. Its original compare flow lacked an explicit Firebase-to-device recovery path: a new device with different or empty records could not select an existing cloud copy.
+
+A new **Restore Firebase copy on this device** action was added only when a cloud/device difference exists. It requires the user to request both-device/cloud backups and twice confirm the specific local replacement. Before touching records it rechecks the active authenticated account, local snapshot stability, cloud record revision, and cloud raw contents. It then restores the cloud's matching `ethical-hacking-` storage namespace, removes local-only keys in that namespace (the downloaded backup holds the prior device copy), records the cloud-link revision, and reloads the coursework to refresh in-memory lesson progress. Any storage failure attempts to roll back changed local keys. The original device-to-cloud overwrite action now also requires the download step. Firestore is not written by the device restore.
+
+**Isolated script-based test results (not a live Firebase test):**
+- Browser module syntax: passed after import declarations were excluded for parsing.
+- Restore blocked before backup download: passed.
+- Cloud-to-device record replacement and requested page reload after both confirmations: passed.
+- Restore transaction writes to Firebase: none.
+- Cloud revision changed after comparison: abort without changing progress, passed.
+- Local practice record changed after comparison: abort without replacing progress, passed.
+
+The test harness used fake browser storage, Firebase API responses and a simulated account. **Outstanding acceptance:** real iPhone Safari and saved Home Screen flow, signed-in same-account desktop retrieval, download verification in iOS Files, real Firestore race and permission validation, account-switch tests, large-document quota/storage failures, and checking imported practice records on the second device. Do not infer cross-device acceptance or full practical-evidence sync from these isolated tests.
+
+`index.html` now cache-busts the changed Firebase module with `restore-safe-v6-20261103`. Student lesson/exam IDs, course content, and 440-hour planning workload were not altered.
