@@ -33,6 +33,7 @@
       "subtitle": "Beginner → intermediate",
       "goal": "Identify components, select compatible hardware, assemble a PC, troubleshoot and document repair.",
       "courses": [
+        "Ethical Hacking Hardware Foundations",
         "PC Building & Computer Hardware",
         "PC Assembly, Repair & Troubleshooting",
         "Practical IT Service Operations"
