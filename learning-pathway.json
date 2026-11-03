@@ -177,6 +177,10 @@
         [
           "Integrated Enterprise Case Portfolio",
           "enterprise-case-portfolio.html"
+        ],
+        [
+          "Independent Diagnostic Challenge",
+          "independent-diagnostic-challenge.html"
         ]
       ],
       "targetHours": 75,
@@ -261,6 +265,10 @@
         [
           "Real-System Lab Field Guide",
           "real-system-lab-field-guide.html"
+        ],
+        [
+          "Independent Diagnostic Challenge",
+          "independent-diagnostic-challenge.html"
         ]
       ],
       "targetHours": 75,
@@ -300,6 +308,10 @@
         [
           "Integrated Enterprise Case Portfolio",
           "enterprise-case-portfolio.html"
+        ],
+        [
+          "Independent Diagnostic Challenge",
+          "independent-diagnostic-challenge.html"
         ]
       ],
       "targetHours": 35,
