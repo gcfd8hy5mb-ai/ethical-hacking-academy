@@ -99,4 +99,22 @@ try{
   }
  }else console.warn('Systems/Red Team supplement unavailable:',res.status);
 }catch(error){console.warn('Systems/Red Team supplement failed:',error)}
+try{
+ const response=await fetch('./coursework-applied-security-v1.json',{cache:'no-store'});
+ if(response.ok){
+  const addition=await response.json();
+  if(Array.isArray(addition.courses)){
+   for(const section of addition.courses){
+    const course=catalog.courses.find(c=>c.title===section.course);
+    if(!course||!Array.isArray(section.lessons))continue;
+    const existing=new Set(course.lessons.map(l=>l[0]));
+    for(const lesson of section.lessons){
+     if(Array.isArray(lesson)&&lesson.length===6&&typeof lesson[0]==='string'&&!existing.has(lesson[0])){
+      course.lessons.push(lesson);existing.add(lesson[0]);
+     }
+    }
+   }
+  }
+ }else console.warn('Applied security curriculum unavailable:',response.status);
+}catch(error){console.warn('Applied security curriculum failed:',error)}
 try{const pathRes=await fetch('./learning-pathway.json',{cache:'no-store'});if(pathRes.ok)learningPath=await pathRes.json();else console.warn('Learning path unavailable:',pathRes.status)}catch(pathErr){console.warn('Learning path could not load:',pathErr)}try{const examsResponse=await fetch('./exams.json',{cache:'no-store'});if(examsResponse.ok)examCatalog=await examsResponse.json()}catch{}try{const workedResponse=await fetch('./worked-answer-keys.json',{cache:'no-store'});if(workedResponse.ok){const data=await workedResponse.json();workedKeys=Array.isArray(data.items)?data.items:[];try{const supplementResponse=await fetch('./worked-answer-supplement-v8.json',{cache:'no-store'});if(supplementResponse.ok){const supplement=await supplementResponse.json();if(Array.isArray(supplement.items))workedKeys=workedKeys.concat(supplement.items);for(const path of ['./worked-answer-supplement-v9a.json','./worked-answer-supplement-v9b.json','./worked-answer-supplement-v9c.json']){try{const res=await fetch(path,{cache:'no-store'});if(res.ok){const json=await res.json();if(Array.isArray(json.items))workedKeys=workedKeys.concat(json.items)}}catch{}}}}catch{}}}catch{}if(location.hash==='#practice-lab')screen='lab';render()}catch(error){root.innerHTML='<p class="loading">Unable to load coursework. Please reload this page.</p>';console.error(error)}
