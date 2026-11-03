@@ -76,6 +76,10 @@
         [
           "Virtual Linux Workstation",
           "virtual-linux-workstation.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 75
@@ -148,6 +152,10 @@
         [
           "Virtual PC Assembly Simulator",
           "virtual-pc-build-simulator.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 45
@@ -172,6 +180,10 @@
         [
           "Stateful Troubleshooting Workstation",
           "stateful-troubleshooting-workstation.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 75
@@ -197,6 +209,10 @@
         [
           "Independent Competency Assessment",
           "independent-competency-assessment.html"
+        ],
+        [
+          "Practical Mastery Checkpoint",
+          "practical-mastery-checkpoint.html"
         ]
       ],
       "targetHours": 35
