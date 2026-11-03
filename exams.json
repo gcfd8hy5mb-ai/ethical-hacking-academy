@@ -1778,6 +1778,203 @@
           "Supported answer: Investigate and document drift before applying a reviewed correction. This conclusion follows from the supplied evidence and avoids unsupported certainty."
         ]
       ]
+    },
+    {
+      "title": "PC Build, Repair and Diagnostic Decisions Examination",
+      "courses": [
+        "PC Building & Computer Hardware",
+        "PC Assembly, Repair & Troubleshooting"
+      ],
+      "questions": [
+        [
+          "An assembled desktop powers on but reports a DRAM error LED. What is the safest initial sequence?",
+          [
+            "Replace the power supply while powered",
+            "Disconnect power, verify DIMM seating and compatibility, then retest POST",
+            "Reset firmware while the power is live"
+          ],
+          1,
+          "Disconnect power before touching internal components. Verify module seating, compatibility and controlled POST results."
+        ],
+        [
+          "A motherboard requires both ATX 24-pin and EPS CPU power. Which connection is essential?",
+          [
+            "The dedicated CPU EPS connector in addition to motherboard power",
+            "Only the graphics card PCIe lead",
+            "A SATA data cable"
+          ],
+          0,
+          "Modern systems commonly require separate ATX board and CPU EPS power."
+        ],
+        [
+          "A computer shuts off under high CPU load after a cooler change. Which evidence is most useful?",
+          [
+            "A desktop wallpaper screenshot",
+            "How often the mouse is clicked",
+            "CPU temperatures, cooler mounting, fan operation and thermal logs"
+          ],
+          2,
+          "Collect temperatures and cooling observations rather than presuming software fault."
+        ],
+        [
+          "A new NVMe drive is not detected. What should be checked before declaring it defective?",
+          [
+            "Only the display cable",
+            "M.2 slot protocol, firmware detection and lane-sharing restrictions",
+            "The keyboard language"
+          ],
+          1,
+          "Some M.2 slots accept different protocols or share lanes with other ports."
+        ],
+        [
+          "What is the strongest evidence that a RAM-related repair succeeded?",
+          [
+            "POST passes, correct capacity is detected and repeatable memory checks succeed",
+            "A successful screen photo",
+            "The power LED glows"
+          ],
+          0,
+          "Power LEDs alone do not establish memory initialization or stability."
+        ],
+        [
+          "Which action should be avoided during beginner PC servicing?",
+          [
+            "Documenting cable placement",
+            "Checking the motherboard manual",
+            "Opening a sealed power supply enclosure"
+          ],
+          2,
+          "Power supply components can retain hazardous energy; leave internal PSU repair to qualified personnel."
+        ],
+        [
+          "Two RAM modules on a dual-channel board should be installed according to:",
+          [
+            "The case color scheme",
+            "The motherboard manual's recommended slot pairing",
+            "Any two adjacent connectors"
+          ],
+          1,
+          "Correct dual-channel slot population varies by motherboard."
+        ],
+        [
+          "An upgrade seems slower after the system is repaired. What is the most defensible next step?",
+          [
+            "Compare baseline and current measurements under the same workload",
+            "Assume the SSD is counterfeit",
+            "Disable operating-system updates permanently"
+          ],
+          0,
+          "Comparable measurements help isolate performance changes."
+        ],
+        [
+          "A repair for a friend's PC is authorized. What must be addressed before inspecting private files?",
+          [
+            "Nothing; ownership grants unlimited access",
+            "An automatic cloud backup to your account",
+            "Permission scope, privacy boundaries, backup responsibility and reversible changes"
+          ],
+          2,
+          "Consent to repair does not imply permission to access unrelated private data."
+        ]
+      ]
+    },
+    {
+      "title": "Workstation, Virtualization and Home Lab Readiness Examination",
+      "courses": [
+        "Red Team Workstation & Home Lab Engineering"
+      ],
+      "questions": [
+        [
+          "A deliberately vulnerable practice VM is on the same bridged network as household devices. What should be done first?",
+          [
+            "Scan all nearby devices",
+            "Disconnect the guest and move it to an isolated virtual segment before testing",
+            "Turn off the home firewall"
+          ],
+          1,
+          "Contain the training VM before any exercise; avoid bridging vulnerable environments to household devices."
+        ],
+        [
+          "A host has only 4 GB RAM and limited SSD storage. Which approach is most responsible?",
+          [
+            "Run four large VMs regardless of memory",
+            "Disable all memory safeguards",
+            "Use lightweight browser simulations until hardware and memory allow isolated VMs"
+          ],
+          2,
+          "Overcommitting RAM and storage harms lab reliability and may put the host at risk."
+        ],
+        [
+          "What makes a VM snapshot different from a verified backup?",
+          [
+            "A snapshot always survives disk loss",
+            "A snapshot is a point-in-time VM state and may share the host's failure domain",
+            "A snapshot guarantees safe network segmentation"
+          ],
+          1,
+          "An independent and tested backup addresses risks a local snapshot does not."
+        ],
+        [
+          "What establishes that a virtual lab is isolated from household and public networks?",
+          [
+            "Positive and negative connectivity checks confirming route and firewall boundaries",
+            "Private IP addresses alone",
+            "A descriptive VM name"
+          ],
+          0,
+          "Isolation must be validated by effective reachability tests."
+        ],
+        [
+          "Before running a new training tool, which combination best reduces risk?",
+          [
+            "Use administrator privileges everywhere",
+            "Copy the command from a random video",
+            "Check its purpose and provenance, confirm authorization and use a disposable isolated environment"
+          ],
+          2,
+          "Review tool provenance and scope before execution."
+        ],
+        [
+          "A Kali Linux VM can ping a training server but HTTP fails. Which step best isolates the cause?",
+          [
+            "Reinstall the entire operating system",
+            "Inspect service listener, firewall rules and application HTTP response",
+            "Treat the server as compromised"
+          ],
+          1,
+          "ICMP reachability does not confirm an HTTP listener or permitted TCP path."
+        ],
+        [
+          "A lab guest was saved using a snapshot. What verifies that a later exercise can be repeated?",
+          [
+            "Restore the snapshot and retest required service, credentials and network conditions",
+            "Assume the snapshot is self-validating",
+            "Reuse unknown credentials from another machine"
+          ],
+          0,
+          "Restoration testing validates repeatability and expected environment state."
+        ],
+        [
+          "When building a Windows/Linux lab, how should privileged lab accounts be managed?",
+          [
+            "Reuse personal account passwords",
+            "Publish them in GitHub for convenience",
+            "Separate fictional lab accounts, least-privilege roles and protected credentials"
+          ],
+          2,
+          "Keep live personal and corporate credentials outside training environments."
+        ],
+        [
+          "What evidence belongs in a home-lab change log?",
+          [
+            "Only the student's score",
+            "Initial state, command or change, observed results, validation and rollback",
+            "The Wi-Fi passwords of nearby devices"
+          ],
+          1,
+          "Reproducible change records document what was altered and why."
+        ]
+      ]
     }
   ]
 }
