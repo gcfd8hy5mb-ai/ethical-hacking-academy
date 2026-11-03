@@ -1,32 +1,59 @@
-# Ethical Hacking Academy — Curriculum and Student Journey Audit (2026-11-03)
+# Ethical Hacking Academy — Curriculum Inventory and Learning-Journey Audit
+**Audit date:** 2026-11-03  
+**Scope:** GitHub repository, original `curriculum.json` blob (fully retrieved), hardware track, all three lesson supplements, learning pathway, examination catalog, and stateful practical checkpoint.
 
-## Audit scope and limitations
-Reviewed the GitHub main-branch Academy source, learning pathway, examination catalog, 3 supplemental coursework files, separate hardware track, and practical checkpoint. No real iPhone browser session, Firebase account, full live deployment acceptance test, external academic review, or real computer exercise was performed. The large primary `curriculum.json` could not be reliably retrieved through the available repository reader, so **the total authored lesson count and total verified study hours remain unknown**. Do not imply that a 440-hour program is fully authored or externally approved.
+## Verified full inventory
+The original `curriculum.json` (version 36) was recovered by its Git blob SHA after the ordinary repository file reader returned an empty body. This resolves the earlier incomplete-inventory limitation.
 
-## Verified structure
-- 8 learning levels, with a combined **440-hour planning budget**, including instruction, labs, exams, revision and remediation. Level budgets: 35, 45, 75, 55, 75, 45, 75, 35 hours. These are targets, not measured reading or study durations.
-- 22 examinations in `exams.json`, with an 80% pass threshold in the existing examination engine.
-- 30 lessons across 3 separately appended PC-building courses.
-- 18 foundation supplement lessons, 12 system-and-reporting supplement lessons, and 15 applied-security supplement lessons: **75 confirmed supplemental/hardware lessons** across these four inspected files, in addition to the original primary curriculum. No exact duplicate titles within the same course were detected among these four files. The loader also guards against exact-title duplicates when appending to an existing course.
-- 8 synthetic stateful mastery checkpoint scenarios; **not** actual operating-system or hardware proficiency.
-- Existing source-level lesson-progress keys, exam-result keys, and separate practical checkpoint records remain unchanged.
+| Authored source | Course count | Lessons |
+| --- | ---: | ---: |
+| Original curriculum | 26 | 198 |
+| PC building and home lab track | 3 added courses | 30 |
+| Foundation supplements | Appended to existing courses | 18 |
+| Systems and reporting supplement | Appended to existing courses | 12 |
+| Applied security supplement | Appended to existing courses | 15 |
+| **Combined actual loaded lessons** | **29** | **273** |
 
-## Learning journey and assessments
-1. Home > eight-level pathway: Levels link to their original courses and exercises. Verify live navigation on an iPhone and desktop.
-2. Lesson completion: original numerical course/lesson indexes preserved by appending new lessons only. The progress total now counts only valid existing lesson references, not stale unknown saved IDs.
-3. Examination pass: relevant per-course exams are reused across levels. This can result in multiple exams being displayed under a single level; avoid presenting the same exam as new study hours more than once. No exam questions or pass records were changed during this audit.
-4. Practical mastery: synthetic cases remain linked to all eight levels. Students can type diagnostic commands, implement a fictional fix, verify state, and write reports. Existing achievements have not been invalidated by optional report self-review.
-5. Level 8: no ordinary course/lesson IDs are assigned. Final readiness now recognizes the existing Part I and Part II qualification simulations, plus the eight practical checkpoint reports, instead of permanently waiting for an unmapped standard exam. These remain only simulated evidence requiring independent human evaluation.
-6. Firebase: the app has cloud-save integration for lesson progress. Separate standalone practical checkpoint records are not confirmed to sync, so test and back them up before changing devices; do not claim that all practice progress is protected.
+The app's loader adds new hardware courses and appends 45 supplemental lessons by exact title, leaving existing course and lesson indexes in place. The audit found no exact duplicate lessons within the same course among these authored inputs. All 273 stored lesson records have six expected fields, valid 3-or-more-answer options, and valid correct-answer indexes. These structural checks do **not** constitute a legal, academic or technical accuracy certification.
 
-## Outstanding work, in priority order
-- **P0 deployment validation:** On iPhone Safari and saved Home Screen app, confirm all eight level pages, course > lesson > exam navigation, Back buttons, Cloud Saving under Settings, and no stale CSS/JS caching. Repeat on desktop.
-- **P0 cloud save reconciliation:** Verify cross-device lesson progress for the same authorized account; identify which standalone lab data is not included in cloud snapshots. Preserve conflict/rollback behavior.
-- **P1 comprehensive course inventory:** Retrieve or locally clone `curriculum.json` through a tool that supports its full size, enumerate all courses and lesson hours, reconcile original indexes against the learning path, list unmatched courses. Current repo reader did not return the file contents; percentages based on complete authored hours must remain **unverified** until then.
-- **P1 lesson-quality review:** Review each lesson for prerequisites, originality, real command syntax, environment-specific caveats, accessible explanations and assessment alignment; check conceptual overlap across the primary curriculum and supplements rather than deleting by title alone.
-- **P1 reliability tests:** Create repeatable automated regression checks covering all eight practical cases (diagnosis before correction, observed successful state change, verification after repair, preserved saved data and long-form reports).
-- **P1 independent practical validation:** Human-review written explanations, test permitted actions in owned isolated virtual machines, and determine whether skills transfer beyond scripted fictional outputs.
-- **P2 efficiency:** Allocate the verified authored workload within the level study budgets; consolidate redundant explanations carefully without changing original lesson IDs or invalidating user progress. Prioritize exercises that teach interpretation and troubleshooting over additional repetitive quizzes.
+## Eight-level plan, after remapping Hardware Foundations
+| Level | Planned study hours | Courses | Loaded lessons |
+| --- | ---: | ---: | ---: |
+| 1: Computer & IT Fundamentals | 35 | 4 | 32 |
+| 2: PC Building, Hardware & Repair | 45 | 4 | 52 |
+| 3: System & Network Administration | 75 | 5 | 59 |
+| 4: Cybersecurity Foundations | 55 | 7 | 48 |
+| 5: Ethical Hacking Fundamentals | 75 | 5 | 37 |
+| 6: Home Labs, Servers & Virtualization | 45 | 2 | 23 |
+| 7: Advanced Red Team Operations | 75 | 2 | 22 |
+| 8: Capstone & Mastery | 35 | 0 standalone lesson courses | 0 (practice, portfolio and qualifications) |
+| **Total** | **440** | **29** | **273** |
 
-## Acceptance boundaries
-Do not renumber original courses or lessons; do not remove saved student records, reset Firebase, or modify existing exam result keys; do not imply external accreditation, academic sign-off, professional certification, or real-system mastery from synthetic simulations. Perform live tests before saying the deployed iPhone app has passed end-to-end acceptance.
+The exact-original 20-lesson course `Ethical Hacking Hardware Foundations` was previously unmatched and silently assigned to Level 4 by the app fallback logic. It is now explicitly positioned first in Level 2. This corrects the learning sequence **without changing source course indices or recorded lesson progress IDs**.
+
+## Assessment coverage
+- Existing exam catalog initially held 22 exams (157 questions). Two exams (18 new questions total) were appended to the end of `exams.json`: `PC Build, Repair and Diagnostic Decisions Examination` and `Workstation, Virtualization and Home Lab Readiness Examination`.
+- The updated catalog contains **24 authored examinations with 175 questions** and an 80% pass threshold. Exam indexes 0–21 are unchanged, preserving stored historical best-score keys.
+- Every loaded course now appears in at least one `exams.json` exam's course mapping.
+- Four Level 3–7 system/reporting supplemental courses, lab simulations and final qualifying exercises remain separate from ordinary course exams.
+- Eight synthetic troubleshooting/practical checkpoint scenarios are shared across levels. Level 8 reuses all eight as cumulative review; this is **not eight brand-new capstone scenarios**.
+- Readiness after the preceding audit recognizes Level 8's actual Part I and Part II simulated qualification exams. It does not represent externally certified competence.
+
+## Study-time realism and remaining work
+All 273 lessons contain approximately **140,629 words of main lesson reading** in the loaded records, with a median reading length around **484 words** (the briefest around 116 words). This excludes lab instructions kept in separate HTML files and assessment explanations. **The 440 hours remain a planning allocation, not objectively measured required study time.** Reading alone would not plausibly account for those hours; the program needs sufficiently substantive lab, practice, investigation, project, assessment and remediation workloads. Some lessons, particularly brief supplemental and PC hardware entries, need depth or practical-work validation without merely expanding reading volume.
+
+Highest-priority next steps:
+1. Record estimated guided reading, active lab, written work, assessment and remediation time per course and level using reproducible criteria; do not manufacture study-hour equivalency.
+2. Detect meaningful conceptual overlaps across 273 lessons, beyond exact title duplicates; prefer linking/reviewing existing lessons instead of deleting lesson IDs or adding repetitive study hours.
+3. Validate course-to-exam alignment and scenario diversity in live browser sessions; question-count and schema audits do not prove examination quality.
+4. Run actual iPhone Safari and Home Screen tests plus desktop tests for navigation, completion, exam result retention, lab state, and Back buttons.
+5. Verify Firebase cross-device save for lesson progress; standalone checkpoint state is still browser-local and is **not proven** cloud-synced.
+6. Assess proficiency in isolated, authorized real systems and obtain independent technical review of reports and exercises before claiming any professional equivalence.
+
+## Safety and acceptance constraints
+No original curriculum or lesson index was removed, moved, or overwritten. No existing Firebase progress documents or scores were reset. All practical test environments must remain owned or explicitly authorized and isolated. These changes do not grant academic accreditation, professional certification, legal permission to test unknown targets or a guarantee of operational Red Team proficiency.
+
+## Changes verified in this audit
+- `learning-pathway.json`: Explicitly maps original Hardware Foundations to Level 2.
+- `exams.json`: Appends two previously missing assessment mappings, retaining earlier exam order.
+- Earlier audit fixes: valid lesson-count display, final qualification readiness, and accurate explanation of Firebase limitations.
