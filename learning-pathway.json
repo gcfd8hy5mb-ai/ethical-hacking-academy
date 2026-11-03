@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "policy": "Course identities and original indexes remain unchanged. Levels organize existing learning rather than rewrite student records. Earlier levels are prerequisites for recommended progression; existing courses remain accessible for review.",
+  "levels": [
+    {
+      "title": "Computer & IT Fundamentals",
+      "subtitle": "Start here · beginner",
+      "goal": "Understand computers, operating systems, networking, safe command-line fundamentals and basic programming.",
+      "courses": [
+        "Getting Comfortable With Computers",
+        "Computer and Operating-System Essentials",
+        "Networking and Internet Fundamentals",
+        "Programming Logic for Security Beginners"
+      ],
+      "labs": [
+        [
+          "Basic command terminal",
+          "index.html#lab"
+        ],
+        [
+          "Command & Troubleshooting Field Lab",
+          "command-troubleshooting-field-lab.html"
+        ]
+      ]
+    },
+    {
+      "title": "PC Building, Hardware & Repair",
+      "subtitle": "Beginner → intermediate",
+      "goal": "Identify components, select compatible hardware, assemble a PC, troubleshoot and document repair.",
+      "courses": [
+        "PC Building & Computer Hardware",
+        "PC Assembly, Repair & Troubleshooting",
+        "Practical IT Service Operations"
+      ],
+      "labs": [
+        [
+          "PC Building Practice Studio",
+          "pc-building-practice-studio.html"
+        ],
+        [
+          "Hardware Engineering & Diagnostics",
+          "pc-hardware-diagnostics.html"
+        ],
+        [
+          "Virtual PC Assembly Simulator",
+          "virtual-pc-build-simulator.html"
+        ]
+      ]
+    },
+    {
+      "title": "System & Network Administration",
+      "subtitle": "Intermediate",
+      "goal": "Administer Linux and Windows, understand DNS, routers, accounts and enterprise system operation.",
+      "courses": [
+        "Beginner Linux and Terminal Skills",
+        "Windows Administration and Security",
+        "Networking Practice and Troubleshooting",
+        "Linux System Administration Lab Theory",
+        "Enterprise Identity and Access Management"
+      ],
+      "labs": [
+        [
+          "Command & Troubleshooting Field Lab",
+          "command-troubleshooting-field-lab.html"
+        ],
+        [
+          "Stateful Troubleshooting Workstation",
+          "stateful-troubleshooting-workstation.html"
+        ],
+        [
+          "Virtual Windows Workstation",
+          "virtual-windows-workstation.html"
+        ],
+        [
+          "Virtual Linux Workstation",
+          "virtual-linux-workstation.html"
+        ]
+      ]
+    },
+    {
+      "title": "Cybersecurity Foundations",
+      "subtitle": "Intermediate",
+      "goal": "Develop foundational security judgment, architecture, identity, monitoring, cryptography and response skills.",
+      "courses": [
+        "Cybersecurity Foundations",
+        "Digital Identity and Everyday Security",
+        "Security Operations and Incident Response",
+        "Security Analysis and Professional Practice",
+        "Defensive Web and Cloud Fundamentals",
+        "Applied Security Architecture and Threat Modeling",
+        "Introduction to Defensive Cryptography",
+        "Security Monitoring and Log Analysis"
+      ],
+      "labs": [
+        [
+          "Evidence Investigations",
+          "index.html#lab"
+        ],
+        [
+          "Technical Assessment Studio",
+          "technical-assessment-studio.html"
+        ]
+      ]
+    },
+    {
+      "title": "Ethical Hacking & Red Team Fundamentals",
+      "subtitle": "Intermediate → advanced",
+      "goal": "Learn scoped assessment methods, web weaknesses, technical evidence and professional reporting.",
+      "courses": [
+        "Cybersecurity Case Studies and Decision-Making",
+        "Safe Authorized Assessment Methodology",
+        "Hands-On Network Reasoning Workshop",
+        "Beginner Python Logic and Defensive Automation",
+        "Web Application Security Fundamentals",
+        "Security Assessment and Reporting Workshop"
+      ],
+      "labs": [
+        [
+          "Red Team Practical Assessment",
+          "red-team-practical-assessment.html"
+        ],
+        [
+          "Independent Red Team Engagements",
+          "independent-redteam-engagements.html"
+        ]
+      ]
+    },
+    {
+      "title": "Home Labs, Servers & Virtualization",
+      "subtitle": "Advanced",
+      "goal": "Design isolated lab infrastructure, build virtual enterprise systems, plan capacity and test recovery.",
+      "courses": [
+        "Red Team Workstation & Home Lab Engineering",
+        "Cloud Infrastructure Security"
+      ],
+      "labs": [
+        [
+          "Red Team Server Lab Builder",
+          "red-team-server-lab-builder.html"
+        ],
+        [
+          "Virtual Corporate Red Team Network",
+          "virtual-corporate-redteam-network.html"
+        ],
+        [
+          "Virtual PC Assembly Simulator",
+          "virtual-pc-build-simulator.html"
+        ]
+      ]
+    },
+    {
+      "title": "Advanced Red Team Operations",
+      "subtitle": "Advanced",
+      "goal": "Apply enterprise assessment methodology, identity-risk analysis and multi-stage independent investigations.",
+      "courses": [
+        "Enterprise Identity and Access Management"
+      ],
+      "labs": [
+        [
+          "Independent Red Team Engagements",
+          "independent-redteam-engagements.html"
+        ],
+        [
+          "Red Team Practical Assessment",
+          "red-team-practical-assessment.html"
+        ],
+        [
+          "Stateful Troubleshooting Workstation",
+          "stateful-troubleshooting-workstation.html"
+        ]
+      ]
+    },
+    {
+      "title": "Professional Capstone & Mastery",
+      "subtitle": "Final",
+      "goal": "Integrate hardware planning, virtual enterprise infrastructure, evidence analysis and professional reporting. Hands-on physical mastery requires separate real-system evaluation.",
+      "courses": [],
+      "labs": [
+        [
+          "Integrated Red Team Infrastructure Capstone",
+          "redteam-infrastructure-capstone.html"
+        ],
+        [
+          "Practical Qualification Exam",
+          "practical-qualification-exam.html"
+        ],
+        [
+          "Advanced Qualification Exam",
+          "advanced-qualification-exam.html"
+        ],
+        [
+          "Independent Competency Assessment",
+          "independent-competency-assessment.html"
+        ]
+      ]
+    }
+  ]
+}
