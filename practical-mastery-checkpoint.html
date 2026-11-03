@@ -17,7 +17,7 @@ const normalize=x=>String(x).trim().replace(/\s+/g," ").toLowerCase();
 const successful=(c,s)=>c.id==="linux"?s.nginx&&!s.legacy:c.id==="windows"?s.dns==="10.77.10.10":c.id==="network"?s.mode==="internal"&&s.connected:c.id==="backup"?s.tested:c.id==="fundamentals"?s.dns==="10.77.1.53":c.id==="hardware"?s.ram==="seated"&&s.power==="on":c.id==="monitoring"?s.reviewed:c.id==="web"?s.auth==="fixed":false;
 function response(c,cmd,s){
  if(cmd==="help")return "Supported commands:\n"+c.commands.join("\n")+"\nNo command executes on your device.";
- if(cmd==="status")return c.id==="linux"?"Nginx: "+(s.nginx?"running":"failed")+" | legacy-http: "+(s.legacy?"running":"stopped"):c.id==="windows"?"WS-01 resolver: "+s.dns:c.id==="network"?"Adapter: "+s.mode+" | link: "+(s.connected?"up":"down"):"Backup jobs: successful | isolated restore tested: "+(s.tested?"yes":"no");
+ if(cmd==="status")return c.id==="linux"?"Nginx: "+(s.nginx?"running":"failed")+" | legacy-http: "+(s.legacy?"running":"stopped"):c.id==="windows"?"WS-01 resolver: "+s.dns:c.id==="network"?"Adapter: "+s.mode+" | link: "+(s.connected?"up":"down"):c.id==="backup"?"Backup jobs: successful | isolated restore tested: "+(s.tested?"yes":"no"):c.id==="fundamentals"?"Academy portal DNS: "+s.dns:c.id==="hardware"?"Training PC: "+s.power+" | DIMM: "+s.ram:c.id==="monitoring"?"Alert triage: "+(s.reviewed?"correlated":"pending"):c.id==="web"?"Object authorization: "+s.auth:"Unknown training case";
  if(!c.commands.includes(cmd))return "Unknown practice command. Use help for permitted simulated commands.";
  if(c.id==="linux"){
  if(cmd==="systemctl status nginx")return s.nginx?"Active: active (running)":"Active: failed (port binding error)";
