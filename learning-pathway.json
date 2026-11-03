@@ -26,7 +26,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 35
+      "targetHours": 35,
+      "plannedHoursBreakdown": {
+        "instruction": 9,
+        "practical": 17,
+        "assessment": 6,
+        "remediation": 3
+      }
     },
     {
       "title": "PC Building, Hardware & Repair",
@@ -56,7 +62,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 45
+      "targetHours": 45,
+      "plannedHoursBreakdown": {
+        "instruction": 9,
+        "practical": 27,
+        "assessment": 6,
+        "remediation": 3
+      }
     },
     {
       "title": "System & Network Administration",
@@ -91,7 +103,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 75
+      "targetHours": 75,
+      "plannedHoursBreakdown": {
+        "instruction": 12,
+        "practical": 47,
+        "assessment": 10,
+        "remediation": 6
+      }
     },
     {
       "title": "Cybersecurity Foundations",
@@ -120,7 +138,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 55
+      "targetHours": 55,
+      "plannedHoursBreakdown": {
+        "instruction": 12,
+        "practical": 29,
+        "assessment": 9,
+        "remediation": 5
+      }
     },
     {
       "title": "Ethical Hacking & Red Team Fundamentals",
@@ -147,7 +171,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 75
+      "targetHours": 75,
+      "plannedHoursBreakdown": {
+        "instruction": 11,
+        "practical": 50,
+        "assessment": 9,
+        "remediation": 5
+      }
     },
     {
       "title": "Home Labs, Servers & Virtualization",
@@ -175,7 +205,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 45
+      "targetHours": 45,
+      "plannedHoursBreakdown": {
+        "instruction": 7,
+        "practical": 30,
+        "assessment": 5,
+        "remediation": 3
+      }
     },
     {
       "title": "Advanced Red Team Operations",
@@ -203,7 +239,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 75
+      "targetHours": 75,
+      "plannedHoursBreakdown": {
+        "instruction": 10,
+        "practical": 51,
+        "assessment": 9,
+        "remediation": 5
+      }
     },
     {
       "title": "Professional Capstone & Mastery",
@@ -232,7 +274,13 @@
           "practical-mastery-checkpoint.html"
         ]
       ],
-      "targetHours": 35
+      "targetHours": 35,
+      "plannedHoursBreakdown": {
+        "instruction": 3,
+        "practical": 20,
+        "assessment": 10,
+        "remediation": 2
+      }
     }
   ],
   "targetTotalHours": 440,
@@ -244,5 +292,6 @@
       20
     ]
   },
-  "hourAllocationIncludes": "Lessons, exercises, lab practice, remediation, exams and capstone work; do not add these budgets onto authored workload as extra content."
+  "hourAllocationIncludes": "Lessons, exercises, lab practice, remediation, exams and capstone work; do not add these budgets onto authored workload as extra content.",
+  "workloadAllocationPolicy": "Planning estimate only: instructional hours include guided demonstrations and review; practical hours include approved lab execution, documentation and retesting. No measured course workload or study-time guarantee. Allocations are targets, not additional mandatory content."
 }
