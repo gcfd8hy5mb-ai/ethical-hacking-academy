@@ -21,7 +21,8 @@
           "Command & Troubleshooting Field Lab",
           "command-troubleshooting-field-lab.html"
         ]
-      ]
+      ],
+      "targetHours": 35
     },
     {
       "title": "PC Building, Hardware & Repair",
@@ -45,7 +46,8 @@
           "Virtual PC Assembly Simulator",
           "virtual-pc-build-simulator.html"
         ]
-      ]
+      ],
+      "targetHours": 45
     },
     {
       "title": "System & Network Administration",
@@ -75,7 +77,8 @@
           "Virtual Linux Workstation",
           "virtual-linux-workstation.html"
         ]
-      ]
+      ],
+      "targetHours": 75
     },
     {
       "title": "Cybersecurity Foundations",
@@ -99,7 +102,8 @@
           "Technical Assessment Studio",
           "technical-assessment-studio.html"
         ]
-      ]
+      ],
+      "targetHours": 55
     },
     {
       "title": "Ethical Hacking & Red Team Fundamentals",
@@ -121,7 +125,8 @@
           "Independent Red Team Engagements",
           "independent-redteam-engagements.html"
         ]
-      ]
+      ],
+      "targetHours": 75
     },
     {
       "title": "Home Labs, Servers & Virtualization",
@@ -144,7 +149,8 @@
           "Virtual PC Assembly Simulator",
           "virtual-pc-build-simulator.html"
         ]
-      ]
+      ],
+      "targetHours": 45
     },
     {
       "title": "Advanced Red Team Operations",
@@ -167,7 +173,8 @@
           "Stateful Troubleshooting Workstation",
           "stateful-troubleshooting-workstation.html"
         ]
-      ]
+      ],
+      "targetHours": 75
     },
     {
       "title": "Professional Capstone & Mastery",
@@ -191,7 +198,18 @@
           "Independent Competency Assessment",
           "independent-competency-assessment.html"
         ]
-      ]
+      ],
+      "targetHours": 35
     }
-  ]
+  ],
+  "targetTotalHours": 440,
+  "targetType": "Planning target, not verified authored course hours or completed student time",
+  "weeklyStudyHours": {
+    "recommended": 15,
+    "range": [
+      12,
+      20
+    ]
+  },
+  "hourAllocationIncludes": "Lessons, exercises, lab practice, remediation, exams and capstone work; do not add these budgets onto authored workload as extra content."
 }
