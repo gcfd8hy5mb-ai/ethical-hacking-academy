@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "title": "Guided level 6 and 7 lab expansion",
+  "scope": "Eight instructional exercises for owned/authorized practice or labeled simulation only",
+  "grading": "Portfolio support only; no existing grade, completion or mastery records modified",
+  "totalExpectedMinutes": 700,
+  "labs": [
+    {
+      "level": 6,
+      "title": "Virtual networking: isolated does not mean proven isolated",
+      "time": 90,
+      "environment": "Owned VM network or Academy virtual-network simulator",
+      "objective": "Demonstrate that a vulnerable training guest cannot reach household resources while allowing an explicitly approved peer test.",
+      "pre": "Two fictional lab VMs: student 10.77.4.10/24 and service 10.77.4.20/24 on an internal switch. Household 192.168.1.0/24 is out of scope.",
+      "steps": [
+        [
+          "Diagram connections",
+          "Record hypervisor adapter modes for each guest, each IP/subnet, the host's physical adapter and the intended boundary. Internal/host-only differs from bridged mode."
+        ],
+        [
+          "Observe guest IP and routes",
+          "On an owned Linux guest use ip -brief address and ip route; on Windows use ipconfig /all and route print. Identify active interfaces and default routes. Read-only first."
+        ],
+        [
+          "Validate approved path",
+          "Run ping -c 2 10.77.4.20 (Linux) or ping -n 2 10.77.4.20 (Windows) only after confirming this is your lab guest. A successful ping establishes limited ICMP reachability, not application health."
+        ],
+        [
+          "Validate isolation without probing private devices",
+          "Inspect adapter configuration, route tables and firewall policies; test a fictional denied route using the Academy simulation or a dedicated owned test endpoint. Do not send traffic to unapproved household devices."
+        ],
+        [
+          "Explain counterevidence",
+          "A private 10.x address alone does not prove isolation. NAT, forwarding or bridged interfaces can still allow paths; note any routes you could not independently test."
+        ]
+      ],
+      "evidence": "Annotated network diagram, redacted adapter/route output, permitted connectivity results, denied-path evidence or simulation label, uncertainty and safe rollback.",
+      "failure": "Testing other people's devices, leaving a vulnerable guest bridged, or claiming isolation solely from a private IP."
+    },
+    {
+      "level": 6,
+      "title": "Service failure: distinguish listener, firewall and dependency",
+      "time": 90,
+      "environment": "Disposable owned Linux VM or labeled Academy service simulation",
+      "objective": "Identify whether an owned practice web service is down, bound to loopback or filtered.",
+      "pre": "Fictional web service on owned guest 10.77.4.20:8000; client guest 10.77.4.10. Do not alter household infrastructure.",
+      "steps": [
+        [
+          "Check service expectation",
+          "Record which service should run, its approved port, and what a successful response means before issuing commands."
+        ],
+        [
+          "Inspect read-only service state",
+          "Use systemctl status --no-pager <approved-service> and journalctl -u <approved-service> -n 20 --no-pager. If training without a real VM, interpret supplied sample logs."
+        ],
+        [
+          "Read listener binding",
+          "Use ss -ltn to distinguish 127.0.0.1:8000 from 0.0.0.0:8000 and 10.77.4.20:8000. A process can be running without accepting remote requests."
+        ],
+        [
+          "Test local and owned peer endpoints",
+          "Use curl -I http://127.0.0.1:8000 on the service guest and curl -I http://10.77.4.20:8000 on the approved peer. Compare refused, timeout, 200 and 404 outcomes."
+        ],
+        [
+          "Propose reversible correction",
+          "Describe whether an application bind, dependency or firewall policy is supported by evidence. Reconfigure only a disposable owned service with an approved rollback and rerun both tests."
+        ]
+      ],
+      "evidence": "Baseline, two independent observations, hypothesis table, approved corrective change, positive/negative retest, rollback record.",
+      "failure": "Changing an unrelated service, interpreting HTTP 404 as no network connectivity, or asserting intrusion from one failed request."
+    },
+    {
+      "level": 6,
+      "title": "Snapshot recovery is not a backup",
+      "time": 75,
+      "environment": "Owned disposable VM or simulation with a written recovery rehearsal",
+      "objective": "Verify repeatability and explain the shared failure domain of host-local snapshots.",
+      "pre": "Harmless test.txt with sample content and a named disposable VM checkpoint.",
+      "steps": [
+        [
+          "Set baseline",
+          "Record VM identity, storage location, network mode, harmless service and sample file digest. Note secrets must not be embedded in exported evidence."
+        ],
+        [
+          "Create recovery point",
+          "Follow hypervisor documentation to capture a snapshot on an owned disposable guest; do not suspend or alter any production machine."
+        ],
+        [
+          "Introduce controlled change",
+          "Edit only the harmless test file or a temporary approved service setting, recording the original state."
+        ],
+        [
+          "Restore and verify",
+          "Restore the snapshot, repeat the file and service checks, confirm guest network isolation remains as expected, and log time required."
+        ],
+        [
+          "Identify failure modes",
+          "State what would be lost if the host SSD failed, and propose a separate controlled backup and restore test rather than claiming the snapshot is sufficient."
+        ]
+      ],
+      "evidence": "Before/after checks, digest comparison, simulated or actual restore elapsed time, storage failure-domain diagram and restore limitations.",
+      "failure": "Calling snapshot presence a verified backup, skipping restored-system checks or using a non-disposable machine."
+    },
+    {
+      "level": 6,
+      "title": "Capacity planning for a low-cost workstation",
+      "time": 60,
+      "environment": "Paper planning exercise using hypothetical Windows host hardware",
+      "objective": "Choose an achievable lab plan based on CPU virtualization, RAM, storage and upgrade limits.",
+      "pre": "Host scenarios: 4 GB RAM/64 GB storage and 16 GB RAM/512 GB SSD; requirements must be estimates, not vendor-certified measurements.",
+      "steps": [
+        [
+          "Build resource ledger",
+          "Allocate memory and disk to the host OS before any guest; include realistic working reserves and storage expansion."
+        ],
+        [
+          "Choose lab mode",
+          "Explain why 4 GB hosts should use a browser simulator or one very small guest rather than several heavy desktop VMs."
+        ],
+        [
+          "Verify features",
+          "List BIOS virtualization support, RAM slot access, SSD expansion and supported hypervisors as items requiring exact model verification."
+        ],
+        [
+          "Model risk",
+          "Estimate concurrent VM memory demand and space for snapshots; mark uncertain inputs and avoid promising performance based only on core count."
+        ],
+        [
+          "Define pilot",
+          "Write a small initial test: one disposable guest, memory pressure observation, restore check and stop criteria if the host becomes unstable."
+        ]
+      ],
+      "evidence": "Two-host comparison, explicit assumptions, resource spreadsheet, staged upgrade decision, risk and stop conditions.",
+      "failure": "Overcommitting guest RAM, assuming every desktop supports VT-x/AMD-V or assigning unverified performance claims."
+    },
+    {
+      "level": 7,
+      "title": "Rules of engagement and authorization boundary",
+      "time": 90,
+      "environment": "Synthetic corporate exercise, no external scanning",
+      "objective": "Create a reviewable engagement plan that prevents scope drift.",
+      "pre": "Fictional Orion Group owns lab assets 10.77.4.10/24 and 10.77.4.20/24; the production 203.0.113.0/24 documentation range is explicitly excluded.",
+      "steps": [
+        [
+          "Document owner and scope",
+          "Name a fictional owner, target inventory, permitted techniques, dates, data restrictions, emergency stop contact and approval evidence."
+        ],
+        [
+          "Test the boundary on paper",
+          "For five fictional targets, decide proceed / exclude / request new permission and explain each decision."
+        ],
+        [
+          "Choose observational methods",
+          "Prefer supplied synthetic system records and read-only owned VM checks. Avoid credential testing, third-party devices or exploitation outside the scenario."
+        ],
+        [
+          "Escalation drill",
+          "A simulated service outage occurs during a planned activity. Write a stop, preserve, report and rollback sequence."
+        ],
+        [
+          "Peer review",
+          "Have a reviewer challenge ambiguous terms like 'all company servers' and replace them with concrete identifiers and conditions."
+        ]
+      ],
+      "evidence": "Rules-of-engagement document, target stop/go table, escalation sequence and explicit approval assumptions.",
+      "failure": "Treating related organizations or unlisted hosts as implicitly authorized."
+    },
+    {
+      "level": 7,
+      "title": "Detection hypotheses from messy evidence",
+      "time": 100,
+      "environment": "Provided fictional authentication and reverse-proxy records",
+      "objective": "Distinguish raw events, duplicates and interpretive claims.",
+      "pre": "Synthetic logs: 09:02Z auth failure user-a src X; 09:02Z duplicate proxy 401 user-a src X; 09:05Z auth success user-a src X; 09:07Z service refresh user-b src Y. All identities fictional.",
+      "steps": [
+        [
+          "Normalize",
+          "Create columns source, original timestamp, UTC, principal, event, outcome, record ID and confidence."
+        ],
+        [
+          "Correlate cautiously",
+          "Propose whether the first two records refer to one attempted action. Identify the fields that support or undermine correlation."
+        ],
+        [
+          "Form alternatives",
+          "Write two hypotheses for the 09:05 success: authorized user retry and possible misuse. Do not promote either to fact without more evidence."
+        ],
+        [
+          "Design safe test",
+          "Specify approved read-only identity/session and device-context records that could discriminate alternatives; never request passwords or tokens."
+        ],
+        [
+          "Write findings",
+          "Include a bounded conclusion, event gap/clock-skew limitations, severity rationale and one reviewer challenge."
+        ]
+      ],
+      "evidence": "Normalized timeline, deduplication reasoning, alternate hypotheses, evidence limits and review-ready escalation note.",
+      "failure": "Declaring compromise from a failed-then-success pattern alone or copying actual credentials into reports."
+    },
+    {
+      "level": 7,
+      "title": "Remediation verification and regressions",
+      "time": 90,
+      "environment": "Fictional private-record API or isolated owned demo",
+      "objective": "Construct a positive-and-negative authorization test plan and validate a remediation.",
+      "pre": "Synthetic API users student-a and student-b, record A owned by student-a; initial simulation wrongly allows student-b to read A.",
+      "steps": [
+        [
+          "Capture baseline",
+          "Document exact authorization failure in the supplied synthetic trace, actor, affected object and expected access policy."
+        ],
+        [
+          "Define correction",
+          "State the trusted API check: authenticated principal must be authorized for the requested record and operation, not merely a hidden menu link."
+        ],
+        [
+          "Positive test",
+          "Expect student-a to access A after the change, using demo accounts and non-sensitive records."
+        ],
+        [
+          "Negative test",
+          "Expect student-b to be denied access to A and permitted to access only their own record."
+        ],
+        [
+          "Regression and rollback",
+          "Check normal application workflow, audit logging and safe restoration steps. Describe how a production report must distinguish simulation results from verified observations."
+        ]
+      ],
+      "evidence": "Test matrix with expected and observed outcomes, API policy rationale, regression checks, scope and uncertainty.",
+      "failure": "Relying on CSS to enforce authorization or presenting demo test outcomes as production proof."
+    },
+    {
+      "level": 7,
+      "title": "Board-level security decision and evidence defense",
+      "time": 105,
+      "environment": "Fictional enterprise case report",
+      "objective": "Translate technical evidence into prioritized decisions with costs, ownership and uncertainty.",
+      "pre": "Synthetic corporate case: noisy authentication alerts, overly broad report-reader service identity and no tested recovery procedure.",
+      "steps": [
+        [
+          "Separate issues",
+          "Create distinct findings for alert quality, access privilege and restore readiness. Do not merge all records into one 'breach' conclusion."
+        ],
+        [
+          "Rank risk",
+          "Assess exposure, plausible impact, confidence, affected workflow and time-to-fix; do not rely only on scanner score."
+        ],
+        [
+          "Offer choices",
+          "For each finding compare leave/monitor, scoped mitigation and broader redesign, including operational tradeoffs and residual risk."
+        ],
+        [
+          "Specify assurance",
+          "Set acceptance criteria: measured useful-alert rate, positive/negative least-privilege tests and a controlled restore transaction."
+        ],
+        [
+          "Defend",
+          "Write a two-minute executive brief plus a technical appendix. Identify two ways new evidence could change your recommendation."
+        ]
+      ],
+      "evidence": "Executive summary, decision matrix, technical appendix, explicit assumptions and testable action owners.",
+      "failure": "Claiming zero residual risk, concealing evidence gaps or asserting a browser simulation proves operational deployment."
+    }
+  ]
+}
