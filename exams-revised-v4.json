@@ -1,0 +1,871 @@
+{
+  "version": 4,
+  "sourceVersion": 7,
+  "passingPercent": 80,
+  "description": "Optional revised comprehensive and hardware finals. Legacy exams and scores remain unchanged.",
+  "exams": [
+    {
+      "title": "Systems and Networking Comprehensive Final — Revised V4",
+      "courses": [
+        "Computer and Operating-System Essentials",
+        "Networking and Internet Fundamentals",
+        "Windows Administration and Security",
+        "Beginner Linux and Terminal Skills",
+        "Networking Practice and Troubleshooting"
+      ],
+      "questions": [
+        [
+          "A workstation has address 192.168.18.21/24. Which network is correct?",
+          [
+            "192.168.19.0/24",
+            "192.168.18.0/24",
+            "192.168.18.21/32"
+          ],
+          1,
+          "192.168.18.21 with a 24-bit network prefix is in 192.168.18.0/24. The .21 is its host portion; /32 describes only that host, not its subnet."
+        ],
+        [
+          "Which address is the broadcast of a typical 10.2.3.0/24 network?",
+          [
+            "10.2.3.255",
+            "10.2.3.1",
+            "10.2.4.255"
+          ],
+          0,
+          "For 10.2.3.0/24, all eight host bits set to one yield broadcast 10.2.3.255. The .1 host address and 10.2.4.255 lie elsewhere."
+        ],
+        [
+          "An IP address works but a domain fails. What do you inspect?",
+          [
+            "Verify IP gateway forwarding before checking the configured DNS resolver",
+            "Inspect file permissions on the client rather than query the hostname",
+            "DNS resolution"
+          ],
+          2,
+          "An IP address working while a name fails narrows investigation toward DNS resolver settings, records or lookup behavior. It does not prove that every route or service works."
+        ],
+        [
+          "A web server returns HTTP 404. What is confirmed?",
+          [
+            "No DNS lookup ever worked",
+            "An HTTP response was received",
+            "The server was breached"
+          ],
+          1,
+          "A received HTTP 404 confirms an HTTP server produced a response, ordinarily that the requested resource was unavailable. It does not establish a breach or explain all preceding DNS traffic."
+        ],
+        [
+          "Which resource is volatile working memory?",
+          [
+            "RAM",
+            "SSD",
+            "Backup tape"
+          ],
+          0,
+          "RAM is ordinarily volatile working memory. SSDs and magnetic or other backup media retain content without power, subject to their own reliability limitations."
+        ],
+        [
+          "A Linux file has mode 640. What can the owning group do?",
+          [
+            "Modify the file",
+            "Execute the file",
+            "Read the file"
+          ],
+          2,
+          "In ordinary Unix mode 640, the middle digit 4 gives group read without write or execute. ACLs and contextual enforcement can further affect effective access."
+        ],
+        [
+          "A high-CPU process begins during an approved nightly backup. What follows?",
+          [
+            "Assume the schedule proves the process is safe and need not be checked",
+            "Compare schedule and logs before concluding",
+            "Stop the backup job immediately before gathering relevant logs"
+          ],
+          1,
+          "High CPU aligned with scheduled backups is a correlation, not conclusive evidence of safety or intrusion. Review the job, service identity and relevant logs before intervention."
+        ],
+        [
+          "What should happen after a patch?",
+          [
+            "Verify installed version and key workflows",
+            "Close the ticket without checks",
+            "Remove all logs"
+          ],
+          0,
+          "Patch installation alone does not confirm closure. Verify installed version, the originally broken condition, essential user workflows and any regressions using approved tests."
+        ],
+        [
+          "Which information helps make a help-desk ticket reproducible?",
+          [
+            "The latest ticket status without a user-impact description",
+            "A generic device model without a symptom or time reference",
+            "Timestamp, symptoms and tests performed"
+          ],
+          2,
+          "A reproducible ticket needs observed symptoms, timestamps, scope and exact diagnostic steps. Ambiguous labels and unnecessary private data undermine safe troubleshooting."
+        ],
+        [
+          "Which is a safe first step in an unfamiliar terminal?",
+          [
+            "Run commands as root without review",
+            "Read command documentation and expected effects",
+            "Erase unknown directories"
+          ],
+          1,
+          "Unknown commands should be reviewed for effects, privilege requirements and scope before execution. A terminal is not inherently safe just because it is used for learning."
+        ],
+        [
+          "What helps restore a lost file reliably?",
+          [
+            "Tested versioned backup",
+            "A sync-only mirror with no history",
+            "Changing the filename"
+          ],
+          0,
+          "A versioned backup tested by restoring representative data provides better recovery evidence than a live mirror without history or a renamed file."
+        ],
+        [
+          "What is a gateway's common purpose?",
+          [
+            "Decrypt every website",
+            "Grant file permissions",
+            "Forward traffic toward another network"
+          ],
+          2,
+          "A gateway commonly forwards traffic between networks using routing information. It does not independently grant file permissions or decrypt all application content."
+        ]
+      ],
+      "originalExamIndex": 17
+    },
+    {
+      "title": "Defensive Security and Incident Response Comprehensive Final — Revised V4",
+      "courses": [
+        "Cybersecurity Foundations",
+        "Security Operations and Incident Response",
+        "Digital Identity and Everyday Security",
+        "Security Monitoring and Log Analysis",
+        "Introduction to Defensive Cryptography",
+        "Applied Security Architecture and Threat Modeling"
+      ],
+      "questions": [
+        [
+          "A sign-in log contains two failures. What is proven?",
+          [
+            "Two failed password entries establish a successful intrusion",
+            "Two failures were recorded",
+            "Every account on the server is now compromised"
+          ],
+          1,
+          "Two failed sign-ins establish two recorded failures under the logging conditions. They do not prove a successful attacker login or compromise of unrelated accounts."
+        ],
+        [
+          "A failed login and later successful login are observed. What should you do?",
+          [
+            "Correlate identity, source and authorized activity",
+            "Assume credential theft",
+            "Publish password records"
+          ],
+          0,
+          "A failure followed by success may reflect a legitimate typo or abuse. Correlate subject, source, device, time and approved behavior before attributing cause."
+        ],
+        [
+          "Which statement best defines least privilege?",
+          [
+            "Grant every worker administrator access",
+            "Never review permissions",
+            "Grant only access required for the task"
+          ],
+          2,
+          "Least privilege limits each identity to actions and resources justified by its task. Overly broad administrator grants increase impact and make access reviews difficult."
+        ],
+        [
+          "A private signing key appears in public source. What's required?",
+          [
+            "Change the code formatting",
+            "Revoke or rotate and investigate",
+            "Ignore the previous commit"
+          ],
+          1,
+          "Public exposure of a signing private key threatens the assurance of signatures made with it. Revoke or rotate as applicable and review past signing activity and trust."
+        ],
+        [
+          "What does an authenticated cryptographic digest comparison help check?",
+          [
+            "File integrity",
+            "Guaranteed absence of software flaws",
+            "Employee job title"
+          ],
+          0,
+          "Comparing a file digest with an authenticated expected value can detect changed bytes. It does not guarantee the absence of vulnerabilities or identify a person's job."
+        ],
+        [
+          "What does full-disk encryption chiefly protect?",
+          [
+            "Network uptime",
+            "Physical screen protection",
+            "Confidentiality of stored data"
+          ],
+          2,
+          "Full-disk encryption chiefly protects data at rest when devices are lost or offline. It does not guarantee network availability or prevent every misuse after sign-in."
+        ],
+        [
+          "An urgent supplier bank-change email is received. What should finance do?",
+          [
+            "Call the number in the message",
+            "Verify using a previously trusted channel",
+            "Approve based on its logo"
+          ],
+          1,
+          "Payment detail changes must be verified using contact information established before the suspicious message. Calling numbers supplied in the message repeats the same trust boundary."
+        ],
+        [
+          "A risk rating should account for which factors?",
+          [
+            "Exposure, impact and uncertainty",
+            "The scanner's highest score without considering attack exposure",
+            "The most recent warning regardless of asset importance"
+          ],
+          0,
+          "Exposure, business impact, likelihood and unknowns inform operational risk. Device price or an interface color does not establish technical severity."
+        ],
+        [
+          "An incident report should distinguish what?",
+          [
+            "Officer rank and wallpaper",
+            "Private passwords and tokens",
+            "Confirmed facts and working hypotheses"
+          ],
+          2,
+          "Incident reports separate confirmed observations from hypotheses, evidence limits and untested claims. Without that distinction, readers may mistake correlation for attribution."
+        ],
+        [
+          "What is a useful detection metric?",
+          [
+            "Total number of alerts regardless of usefulness",
+            "Share of alerts requiring meaningful action",
+            "Number of dashboards configured without outcome measurement"
+          ],
+          1,
+          "The share of useful alerts helps assess signal quality. Large dashboard counts can reflect duplication or noisy rules without improving detection."
+        ],
+        [
+          "A backup job succeeds every day but no restore was tested. What's missing?",
+          [
+            "Controlled restoration evidence",
+            "More optimistic status messages",
+            "Administrative credentials in a public file"
+          ],
+          0,
+          "Backup job completion measures a process outcome, not application recoverability. An isolated restore must validate data, dependencies and elapsed recovery time."
+        ],
+        [
+          "A team's production change precedes a service outage. What is justified?",
+          [
+            "Proof of deliberate attack",
+            "Proof the change is unrelated",
+            "A temporal correlation deserving investigation"
+          ],
+          2,
+          "A change preceding an outage deserves investigation but temporal proximity alone does not prove intent or causality. Reconstruct the timeline and compare alternate causes."
+        ]
+      ],
+      "originalExamIndex": 18
+    },
+    {
+      "title": "Authorized Assessment and Web Cloud Comprehensive Final — Revised V4",
+      "courses": [
+        "Safe Authorized Assessment Methodology",
+        "Security Assessment and Reporting Workshop",
+        "Web Application Security Fundamentals",
+        "Defensive Web and Cloud Fundamentals",
+        "Cloud Infrastructure Security",
+        "Enterprise Identity and Access Management"
+      ],
+      "questions": [
+        [
+          "A target isn't in written scope. What should the assessor do?",
+          [
+            "Test after office hours",
+            "Request additional permission before testing",
+            "Assume a related brand is permission"
+          ],
+          1,
+          "Written authorization defines targets and techniques. A related brand or after-hours timing does not make an excluded endpoint permissible to test."
+        ],
+        [
+          "A student's browser hides another user's grade link. What enforces privacy?",
+          [
+            "Backend record authorization",
+            "A browser-side role flag that hides unauthorized buttons",
+            "A UI route guard without a backend object check"
+          ],
+          0,
+          "Hiding a link in a browser cannot enforce private-record access. A trusted backend must check identity and object-level authorization on each request."
+        ],
+        [
+          "Which design mitigates SQL query manipulation?",
+          [
+            "String concatenation of untrusted input",
+            "Disabled error handling",
+            "Parameterized queries"
+          ],
+          2,
+          "Parameterized SQL queries keep untrusted values separate from SQL syntax. Raw concatenation is unsafe; hiding error output is not an injection prevention mechanism."
+        ],
+        [
+          "A student signs out. What must session design consider?",
+          [
+            "Replacing the profile photo after pressing logout",
+            "Expiry and invalidation of authentication state",
+            "Clearing the login text box without invalidating tokens"
+          ],
+          1,
+          "Sign-out design must invalidate or expire applicable session tokens, especially for privileged access. Cosmetic profile changes do not revoke active authorization."
+        ],
+        [
+          "A cloud storage bucket contains public images and private grades. Best design?",
+          [
+            "Separate access policies by data classification",
+            "Make all objects public",
+            "Disable auditing"
+          ],
+          0,
+          "Public assets and private student grades need different resource grants. Enforce classification in server rules or object policies, with negative access tests."
+        ],
+        [
+          "An app includes a privileged cloud token in client JavaScript. What is the risk?",
+          [
+            "The token is secret if the filename is obscure",
+            "CSS prevents access",
+            "Public client delivery exposes privileged credentials"
+          ],
+          2,
+          "A privileged token in delivered browser code is exposed to anyone who can inspect public assets. Obscure filenames or CSS cannot protect it."
+        ],
+        [
+          "A service account needs one report bucket. What is best?",
+          [
+            "Global administrator privileges",
+            "Scoped permission for the required bucket",
+            "Shared employee passwords"
+          ],
+          1,
+          "A service identity needing one report bucket should have only the relevant actions on that bucket. Shared passwords or global admin grants expand privilege unnecessarily."
+        ],
+        [
+          "What does a four-hour RPO measure?",
+          [
+            "Tolerated loss of recent data",
+            "Guaranteed recovery in four hours",
+            "Encryption strength"
+          ],
+          0,
+          "A four-hour RPO means up to four hours of recent changes may be lost at recovery, not that service is restored in four hours. Recovery time is RTO."
+        ],
+        [
+          "Which finding is reproducible?",
+          [
+            "A high severity label with no reproduction method",
+            "A vendor summary without observed conditions on the tested asset",
+            "Scope, observed condition, evidence, effect and retest"
+          ],
+          2,
+          "Reproducible findings include authorized scope, exact observations, impact, relevant controls and measurable retest. Dramatic labels do not substitute for evidence."
+        ],
+        [
+          "When is a remediation finding ready for closure?",
+          [
+            "Immediately after a fix is proposed",
+            "After approved retest and documented outcome",
+            "After deleting the logs"
+          ],
+          1,
+          "Close a finding only after approved retests demonstrate the original weakness is corrected and required functions still operate. Proposed patches are not evidence of deployment."
+        ],
+        [
+          "A public demo application returns an unexpected synthetic record. What may be claimed?",
+          [
+            "Behavior observed only in the authorized demo",
+            "Production data was stolen",
+            "Every endpoint is vulnerable"
+          ],
+          0,
+          "Unexpected synthetic data may indicate a flaw in the controlled demo; it does not establish exploitation or data exposure in production."
+        ],
+        [
+          "What makes an executive security summary useful?",
+          [
+            "Only raw system events",
+            "Guaranteed elimination of cyber risk",
+            "Risks, evidence, options, limitations and owners"
+          ],
+          2,
+          "Executives need evidenced risk, decision options, tradeoffs, owners and limitations. Raw logs alone or impossible guarantees are not a decision-ready summary."
+        ]
+      ],
+      "originalExamIndex": 19
+    },
+    {
+      "title": "Evidence Interpretation and Decision-Making Final — Revised V4",
+      "courses": [
+        "Security Operations and Incident Response",
+        "Security Monitoring and Log Analysis",
+        "Cybersecurity Case Studies and Decision-Making"
+      ],
+      "questions": [
+        [
+          "Synthetic log: 09:00 failed, 09:01 failed, 09:04 success. Which conclusion is justified?",
+          [
+            "Successful compromise has been proven",
+            "Three authentication outcomes were recorded; account intent remains unknown",
+            "No further context is useful"
+          ],
+          1,
+          "The synthetic sequence shows two failures then one success. Without source, actor and authorization context, the records alone do not establish compromise intent."
+        ],
+        [
+          "The user reports a lost security key. Which first response respects procedure?",
+          [
+            "Disable all organizational security logging",
+            "Ask for their password in chat",
+            "Verify identity via an approved recovery process"
+          ],
+          2,
+          "Lost security-key recovery should follow a verified identity and account-recovery process. Requesting passwords or disabling logs introduces additional risk."
+        ],
+        [
+          "A monitoring dashboard's alerts doubled after a rule change. What should be compared?",
+          [
+            "Rule changes, actual events and false-positive rates",
+            "Only the updated rule's name and dashboard appearance",
+            "The raw count alone without examining false-positive rates"
+          ],
+          0,
+          "More alerts after a rule update can reflect increased coverage or noise. Compare change configuration, underlying events, precision and analyst workload."
+        ],
+        [
+          "A suspected incident and a known software update share a timestamp. What should the analyst write?",
+          [
+            "The update certainly caused a breach",
+            "Temporal association; cause not yet established",
+            "The alert is certainly harmless"
+          ],
+          1,
+          "Two events sharing a timestamp may be related or coincidental. Correlation should be documented while alternative causes and evidence gaps remain open."
+        ],
+        [
+          "Which report statement is evidence bounded?",
+          [
+            "All company records have leaked",
+            "No vulnerabilities can exist",
+            "Supplied records show denied requests from a synthetic test account"
+          ],
+          2,
+          "A denied synthetic request supports only that observed denial in the supplied setting. It cannot prove every record secure or every production system breached."
+        ],
+        [
+          "A firewall change makes a payroll app unavailable. Which evidence matters before rollback?",
+          [
+            "Approved change record, observed effect and rollback criteria",
+            "Only the affected device's router hostname",
+            "A guessed policy change unsupported by the actual change record"
+          ],
+          0,
+          "An access-control change disrupting payroll requires reference to the approved change, actual impact, rollback criteria and affected service owners before action."
+        ],
+        [
+          "Which classification fits an event recorded but not corroborated?",
+          [
+            "Confirmed attacker attribution",
+            "Observation with unresolved interpretation",
+            "Proven customer data loss"
+          ],
+          1,
+          "An uncorroborated record is an observation whose meaning is uncertain. Attribution and claims of customer loss require independent supporting evidence."
+        ],
+        [
+          "A mock host shows inode use 100% but blocks 40%. What is the best diagnosis?",
+          [
+            "Data-block exhaustion despite only 40% block consumption",
+            "A DNS lookup failure that necessarily prevents file creation",
+            "Metadata entry exhaustion may block new files"
+          ],
+          2,
+          "With inodes at 100% but storage blocks only 40% used, the file system can fail to create new directory entries despite free bytes. Inspect inode allocation safely."
+        ],
+        [
+          "A user receives a payment change request from a lookalike domain. What is the appropriate action?",
+          [
+            "Independently verify with a previously known supplier contact",
+            "Send credentials to the sender",
+            "Approve because the subject says urgent"
+          ],
+          0,
+          "Lookalike domains and urgent supplier payment requests warrant independent verification via a previously trusted number. Replying in the same message channel is insufficient."
+        ],
+        [
+          "A log collection has a gap. What follows?",
+          [
+            "The missing interval can be treated as confirmed no activity",
+            "The gap limits confidence in conclusions",
+            "A gap necessarily proves deliberate log tampering"
+          ],
+          1,
+          "Missing log periods limit conclusions about events in the gap. The absence of records neither establishes a clean interval nor proves an attacker removed logs."
+        ],
+        [
+          "A report contains a screenshot with a session token. What should be done?",
+          [
+            "Publish the token for transparency",
+            "Email the token widely",
+            "Redact and restrict evidence; consider token handling procedures"
+          ],
+          2,
+          "Session tokens in evidence should be redacted, access restricted and exposure assessed for revocation. Broad publication can turn a diagnostic artifact into a credential leak."
+        ],
+        [
+          "What is a meaningful recovery acceptance test?",
+          [
+            "Re-run the original business transaction and validate controls",
+            "Only confirm a reboot occurred",
+            "Close every investigation immediately"
+          ],
+          0,
+          "Recovery requires demonstrating original business transactions and relevant security controls after restoration. A reboot status is not evidence that business operations function."
+        ]
+      ],
+      "originalExamIndex": 20
+    },
+    {
+      "title": "Cloud Identity and Software Assurance Final — Revised V4",
+      "courses": [
+        "Enterprise Identity and Access Management",
+        "Cloud Infrastructure Security",
+        "Practical IT Service Operations",
+        "Beginner Python Logic and Defensive Automation"
+      ],
+      "questions": [
+        [
+          "A student can read another student's private grade through an API. Where is the primary fix?",
+          [
+            "Hide the profile icon",
+            "Trusted backend per-record authorization",
+            "Rename the grade field"
+          ],
+          1,
+          "A trusted API must check per-record authorization for every grade request. Hiding navigation elements cannot prevent someone from constructing direct API requests."
+        ],
+        [
+          "A read-only reporting service has global administrator rights. What is the risk?",
+          [
+            "Read-only work always requires admin",
+            "Access scope has no effect",
+            "Its permissions exceed the required task"
+          ],
+          2,
+          "Global administrator rights exceed the need for read-only reporting; narrow permissions to the exact data and operations, then validate positive and denied access."
+        ],
+        [
+          "A former contractor still has an active session. What should be verified?",
+          [
+            "Account disablement and actual session revocation across systems",
+            "Disabling the contractor's normal password but leaving sessions usable",
+            "Verifying only badge return without testing digital access"
+          ],
+          0,
+          "Contractor offboarding involves effective account disablement and revoking persistent sessions and delegated tokens across relevant services. A physical badge update alone is insufficient."
+        ],
+        [
+          "A cloud bucket policy allows all users to read every path. What is the proper review?",
+          [
+            "Keep wildcard grants for simplicity",
+            "Restrict grants to required public objects and verify denied private reads",
+            "Use unpredictable filenames instead of access checks"
+          ],
+          1,
+          "Wildcard cloud reads expose private resources regardless of obscure filenames. Limit policies to intended public objects, then verify private reads fail."
+        ],
+        [
+          "A build's digest mismatches an authenticated expected digest. What is supported?",
+          [
+            "The file is confirmed malware",
+            "All other dependencies are safe",
+            "The obtained content differs from the authenticated reference"
+          ],
+          2,
+          "A mismatch against an authenticated expected digest proves the fetched bytes differ from that trusted reference. It does not identify malware or certify every dependency."
+        ],
+        [
+          "A service token was accidentally placed in client-side code. What should happen?",
+          [
+            "Revoke or rotate exposed credential and move privilege to trusted service",
+            "Only minify the JavaScript",
+            "Assume nobody can read web assets"
+          ],
+          0,
+          "Exposed client-side tokens should be revoked or rotated and privileged operations moved server-side. Minifying JavaScript does not undo credential disclosure."
+        ],
+        [
+          "A recovery plan states RPO 4 hours. What does this describe?",
+          [
+            "The maximum time before service restoration must finish",
+            "Maximum tolerable recent data loss",
+            "The required frequency for rotating account passwords"
+          ],
+          1,
+          "RPO is tolerable recent data loss, measured by time from the incident to the latest acceptable recoverable point. Router reboot time concerns different availability objectives."
+        ],
+        [
+          "A cloud log omits an application trace ID. What improvement helps investigations?",
+          [
+            "A user email address stored alongside every secret token",
+            "A human-readable dashboard title instead of stable correlation IDs",
+            "Correlatable request identifiers with minimal sensitive content"
+          ],
+          2,
+          "Correlatable identifiers and minimized sensitive fields help trace cloud events across services. Logging all passwords undermines security and privacy."
+        ],
+        [
+          "A scripted event count receives an unknown status. What's safest?",
+          [
+            "Record invalid input separately",
+            "Silently treat as success",
+            "Invent a new confirmed attack"
+          ],
+          0,
+          "Unexpected event values should be recorded as invalid or unknown for review. Treating them as successes or inventing attacks corrupts monitoring results."
+        ],
+        [
+          "A Python counter receives failed, success, failed, unknown. How many valid failed events?",
+          [
+            "Three",
+            "Two",
+            "Four"
+          ],
+          1,
+          "Two entries in the supplied sequence are labeled failed. Unknown status is not a valid failure unless the documented classification rules say so."
+        ],
+        [
+          "An access control change works for administrators. What additional test matters?",
+          [
+            "Whether the login page has a logo",
+            "Whether all users can get admin",
+            "Approved standard user access and denied unauthorized access"
+          ],
+          2,
+          "After access-control changes, verify intended privileged and standard roles still work and unauthorized roles are denied. A logo or broad admin access is not evidence."
+        ],
+        [
+          "A production configuration differs from approved code. What should be done?",
+          [
+            "Investigate and document drift before applying a reviewed correction",
+            "Overwrite without backup or approval",
+            "Ignore if the app loads"
+          ],
+          0,
+          "Configuration drift should be compared with approved baseline and change records before scoped remediation. Blind overwrite can disrupt systems or destroy rollback evidence."
+        ]
+      ],
+      "originalExamIndex": 21
+    },
+    {
+      "title": "PC Build, Repair and Diagnostic Decisions Examination — Revised V4",
+      "courses": [
+        "PC Building & Computer Hardware",
+        "PC Assembly, Repair & Troubleshooting"
+      ],
+      "questions": [
+        [
+          "An assembled desktop powers on but reports a DRAM error LED. What is the safest initial sequence?",
+          [
+            "Re-seat powered memory while the computer is running",
+            "Disconnect power, verify DIMM seating and compatibility, then retest POST",
+            "Replace the power supply before checking memory compatibility"
+          ],
+          1,
+          "A DRAM light after assembly narrows attention to memory initialization, not necessarily a failed module. Disconnect power, verify seating/compatibility and retest POST."
+        ],
+        [
+          "A motherboard requires both ATX 24-pin and EPS CPU power. Which connection is essential?",
+          [
+            "The dedicated CPU EPS connector in addition to motherboard power",
+            "Only the graphics card PCIe lead",
+            "A SATA data cable"
+          ],
+          0,
+          "Motherboards commonly need separate 24-pin ATX and EPS CPU power leads. Similar-looking PCIe connectors must not be substituted for the CPU EPS cable."
+        ],
+        [
+          "A computer shuts off under high CPU load after a cooler change. Which evidence is most useful?",
+          [
+            "The number of desktop icons while the system is idle",
+            "Only the power LED without any thermal measurement",
+            "CPU temperatures, cooler mounting, fan operation and thermal logs"
+          ],
+          2,
+          "Thermal shutdown after a cooler change calls for temperature trend, cooler installation, fan/pump behavior and logs. An unrelated desktop screenshot provides no evidence."
+        ],
+        [
+          "A new NVMe drive is not detected. What should be checked before declaring it defective?",
+          [
+            "The operating-system wallpaper and monitor refresh rate",
+            "M.2 slot protocol, firmware detection and lane-sharing restrictions",
+            "The file browser display language and default keyboard layout"
+          ],
+          1,
+          "NVMe recognition depends on slot protocol, firmware settings and possible shared lanes. Diagnose detection before declaring a drive defective or formatting anything."
+        ],
+        [
+          "What is the strongest evidence that a RAM-related repair succeeded?",
+          [
+            "POST passes, correct capacity is detected and repeatable memory checks succeed",
+            "A boot screen without memory capacity verification",
+            "A lit motherboard indicator without a repeatable test"
+          ],
+          0,
+          "Successful memory repair is evidenced by repeatable POST, expected capacity and controlled tests. Indicator lights and photographs cannot demonstrate sustained correctness."
+        ],
+        [
+          "Which action should be avoided during beginner PC servicing?",
+          [
+            "Documenting cable placement",
+            "Checking the motherboard manual",
+            "Opening a sealed power supply enclosure"
+          ],
+          2,
+          "Sealed power supplies can retain hazardous electrical charge even after unplugging. Never open one as a beginner; external documentation and safe cable checks are appropriate."
+        ],
+        [
+          "Two RAM modules on a dual-channel board should be installed according to:",
+          [
+            "The two closest-looking sockets regardless of the manual",
+            "The motherboard manual's recommended slot pairing",
+            "Whichever slots leave the most physical distance from the CPU"
+          ],
+          1,
+          "Dual-channel slot placement depends on motherboard wiring and manual guidance; visually adjacent slots may not be the recommended pair."
+        ],
+        [
+          "An upgrade seems slower after the system is repaired. What is the most defensible next step?",
+          [
+            "Compare baseline and current measurements under the same workload",
+            "Assume the SSD is counterfeit",
+            "Disable operating-system updates permanently"
+          ],
+          0,
+          "Use comparable baseline and current measurements with the same workload to assess upgrade performance. Unsupported counterfeiting claims or disabling updates are inappropriate."
+        ],
+        [
+          "A repair for a friend's PC is authorized. What must be addressed before inspecting private files?",
+          [
+            "Nothing; ownership grants unlimited access",
+            "An automatic cloud backup to your account",
+            "Permission scope, privacy boundaries, backup responsibility and reversible changes"
+          ],
+          2,
+          "Owner approval must cover privacy boundaries, data handling, backup responsibility and reversible changes. Permission to repair is not permission to inspect private accounts."
+        ]
+      ],
+      "originalExamIndex": 22
+    },
+    {
+      "title": "Workstation, Virtualization and Home Lab Readiness Examination — Revised V4",
+      "courses": [
+        "Red Team Workstation & Home Lab Engineering"
+      ],
+      "questions": [
+        [
+          "A deliberately vulnerable practice VM is on the same bridged network as household devices. What should be done first?",
+          [
+            "Keep the bridged network but avoid opening a browser",
+            "Disconnect the guest and move it to an isolated virtual segment before testing",
+            "Permit access by relying only on the guest's private IP"
+          ],
+          1,
+          "Intentionally vulnerable guests should not be bridged onto household segments. Disconnect and place them in a controlled isolated virtual switch before practice."
+        ],
+        [
+          "A host has only 4 GB RAM and limited SSD storage. Which approach is most responsible?",
+          [
+            "Disable host memory safeguards and run multiple full guests",
+            "Allocate more total guest RAM than the host can provide",
+            "Use lightweight browser simulations until hardware and memory allow isolated VMs"
+          ],
+          2,
+          "A host constrained by 4 GB RAM and limited disk cannot safely run several large guests. Lightweight simulations are more practical until enough resources are available."
+        ],
+        [
+          "What makes a VM snapshot different from a verified backup?",
+          [
+            "A snapshot copied nowhere else is guaranteed to survive host failure",
+            "A snapshot is a point-in-time VM state and may share the host's failure domain",
+            "A snapshot intrinsically enforces network isolation"
+          ],
+          1,
+          "A VM snapshot is a point-in-time state often sharing host storage and failure risk. A separately stored and restore-tested backup provides different protection."
+        ],
+        [
+          "What establishes that a virtual lab is isolated from household and public networks?",
+          [
+            "Positive and negative connectivity checks confirming route and firewall boundaries",
+            "Private IPv4 addresses alone mean no household access exists",
+            "A virtual machine labeled isolated must have no external routes"
+          ],
+          0,
+          "Virtual-network isolation requires inspecting adapters, routing/firewall policies and controlled allowed/denied tests. Private addresses and guest names alone prove little."
+        ],
+        [
+          "Before running a new training tool, which combination best reduces risk?",
+          [
+            "Use administrator privileges everywhere",
+            "Copy the command from a random video",
+            "Check its purpose and provenance, confirm authorization and use a disposable isolated environment"
+          ],
+          2,
+          "Check a training tool's function, provenance and required permissions; use a disposable owned VM and documented rollback before running unfamiliar software."
+        ],
+        [
+          "A Kali Linux VM can ping a training server but HTTP fails. Which step best isolates the cause?",
+          [
+            "Reinstall the operating system without inspecting service status",
+            "Inspect service listener, firewall rules and application HTTP response",
+            "Conclude the server is compromised from the HTTP failure"
+          ],
+          1,
+          "If ping reaches an owned server but HTTP fails, inspect the application listener, port and filtering within authorized lab boundaries. IP reachability is not application health."
+        ],
+        [
+          "A lab guest was saved using a snapshot. What verifies that a later exercise can be repeated?",
+          [
+            "Restore the snapshot and retest required service, credentials and network conditions",
+            "A snapshot description that names the operating system",
+            "A saved guest file without verifying startup and connectivity"
+          ],
+          0,
+          "Snapshot restore should be tested by reproducing the service, account and networking baseline. The mere presence of a snapshot file does not prove repeatability."
+        ],
+        [
+          "When building a Windows/Linux lab, how should privileged lab accounts be managed?",
+          [
+            "Reuse personal account passwords",
+            "Publish them in GitHub for convenience",
+            "Separate fictional lab accounts, least-privilege roles and protected credentials"
+          ],
+          2,
+          "Separate fictional privileged lab identities prevent personal credentials from spreading to practice environments. Least privilege and protected storage apply inside labs too."
+        ],
+        [
+          "What evidence belongs in a home-lab change log?",
+          [
+            "The final exam score without documenting the system state",
+            "Initial state, command or change, observed results, validation and rollback",
+            "A Wi-Fi password from a device outside the training scope"
+          ],
+          1,
+          "Record original state, changes, observed effects, validation and rollback in the lab log. This supports repeatability without collecting unrelated Wi-Fi credentials."
+        ]
+      ],
+      "originalExamIndex": 23
+    }
+  ]
+}
