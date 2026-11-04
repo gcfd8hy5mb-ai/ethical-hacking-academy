@@ -1,0 +1,539 @@
+{
+  "version": 3,
+  "sourceVersion": 7,
+  "passingPercent": 80,
+  "description": "Optional versioned V3 revisions of exams 9–17. These do not change the 24 original legacy examinations.",
+  "exams": [
+    {
+      "title": "Computer and Operating-System Essentials Mastery Examination — Revised V3",
+      "courses": [
+        "Computer and Operating-System Essentials"
+      ],
+      "questions": [
+        [
+          "Which memory generally loses contents when power is removed?",
+          [
+            "SSD",
+            "RAM",
+            "USB flash storage"
+          ],
+          1,
+          "RAM is volatile working memory; common SSD and flash storage retain data after power loss. An SSD and USB flash use nonvolatile storage, unlike ordinary RAM."
+        ],
+        [
+          "A user needs to read a report. Which privilege best fits?",
+          [
+            "Read permission on the required report",
+            "Read permission to the entire departmental shared drive",
+            "Permission to edit the required report even when no modification is needed"
+          ],
+          0,
+          "Read-only access to the required report meets the task without granting unrelated administrator powers. Global admin rights and other people's passwords exceed the approved purpose."
+        ],
+        [
+          "What does a running process represent?",
+          [
+            "A program installed but not presently executing",
+            "A saved program file that has not been launched",
+            "An executing program"
+          ],
+          2,
+          "A process is a running program instance with an execution context, unlike an inert file or network address. Process identification and runtime behavior are distinct from storage and addressing."
+        ],
+        [
+          "Which is a useful first troubleshooting step?",
+          [
+            "Restart the process without preserving an initial observation",
+            "Record the symptom and resource use",
+            "Apply a recent patch before confirming which symptom it affects"
+          ],
+          1,
+          "Start with timestamped symptoms and resource observations before altering the device. Deleting accounts or assuming malware would skip evidence and risk disrupting legitimate service."
+        ],
+        [
+          "What validates backup recoverability?",
+          [
+            "A controlled restore test",
+            "A completed backup job with no restoration evidence",
+            "A second synchronized copy in the same failure domain"
+          ],
+          0,
+          "Recoverability is demonstrated by restoring the data and verifying its integrity and usability. A green indicator or a synchronized mirror may still contain damaged or deleted data."
+        ]
+      ],
+      "originalExamIndex": 8
+    },
+    {
+      "title": "Networking and Internet Fundamentals Mastery Examination — Revised V3",
+      "courses": [
+        "Networking and Internet Fundamentals"
+      ],
+      "questions": [
+        [
+          "What is DNS used for?",
+          [
+            "Assigning IP addresses automatically using DHCP",
+            "Resolving names to records such as IP addresses",
+            "Determining whether a user's login is authorized"
+          ],
+          1,
+          "DNS maps queried names to records such as A, AAAA and SRV; it does not encrypt disks or set file permissions. A successful DNS lookup alone does not guarantee service reachability."
+        ],
+        [
+          "Which address belongs to 192.168.8.0/24?",
+          [
+            "192.168.8.32",
+            "192.168.9.32",
+            "10.8.0.1"
+          ],
+          0,
+          "With a /24 prefix the first three octets specify network 192.168.8.0; address .32 falls within it. 192.168.9.32 and 10.8.0.1 belong to different /24 networks."
+        ],
+        [
+          "What commonly forwards traffic between networks?",
+          [
+            "A layer-two switch forwarding frames within one subnet",
+            "A DNS resolver answering names with resource records",
+            "A router or gateway"
+          ],
+          2,
+          "A router forwards packets between IP networks using a routing table and appropriate next hop. An ordinary editor or text document has no packet-forwarding role."
+        ],
+        [
+          "What does HTTP 404 indicate?",
+          [
+            "An unresponsive network connection with no HTTP reply",
+            "An HTTP server responded but did not find the resource",
+            "An HTTP 401 response where the server denies authentication"
+          ],
+          1,
+          "HTTP 404 is an application response indicating the requested resource wasn't found in that context. Receiving an HTTP status proves some server response occurred, not that data theft or zero network connectivity occurred."
+        ],
+        [
+          "Which defense restricts traffic between network zones?",
+          [
+            "Segmentation and firewall policy",
+            "An access-control check inside one application's page layout",
+            "Encrypting data stored on devices within both zones"
+          ],
+          0,
+          "Segmentation and firewall policy constrain traffic based on network boundaries and rules. A filename or backup setting cannot enforce zone-to-zone network reachability."
+        ]
+      ],
+      "originalExamIndex": 9
+    },
+    {
+      "title": "Applied Security Architecture and Threat Modeling Mastery Examination — Revised V3",
+      "courses": [
+        "Applied Security Architecture and Threat Modeling"
+      ],
+      "questions": [
+        [
+          "What starts a threat model?",
+          [
+            "Assuming an attacker is present",
+            "Asset and data-flow mapping",
+            "Changing passwords without scope"
+          ],
+          1,
+          "Threat modeling begins by understanding assets, entry points, trust boundaries and data flows. Assuming a specific attacker or rotating passwords before mapping the system misses the basis for analyzing threats."
+        ],
+        [
+          "Who must enforce private-record authorization?",
+          [
+            "A trusted API or data policy",
+            "An application screen that hides a link to unauthorized records",
+            "A user's locally saved role value checked before calling the API"
+          ],
+          0,
+          "The trusted API or data layer must verify whether the authenticated subject may access each object. CSS and launcher icons belong to the user-controlled display and cannot enforce record security."
+        ],
+        [
+          "What is risk prioritization based on?",
+          [
+            "An asset's scanner score without verifying exposure",
+            "The cost of security tools regardless of business impact",
+            "Likely impact, exposure and feasibility"
+          ],
+          2,
+          "Prioritize risk by credible impact, exposure, prerequisites and controls, not the tool's price. Severity needs an organizational context and explicit uncertainty."
+        ],
+        [
+          "Which logging choice is safer?",
+          [
+            "Include complete session cookies to simplify event correlation",
+            "Event type and timestamp without secrets",
+            "Record credentials only for administrator logins"
+          ],
+          1,
+          "Keep event type, identifiers and timestamps needed for investigation while avoiding credentials and unnecessary sensitive data. Plaintext tokens and passwords create avoidable secondary security exposure in logs."
+        ],
+        [
+          "What should recovery planning include?",
+          [
+            "Tested restoration and responsible owners",
+            "Public admin credentials",
+            "Disabled access checks"
+          ],
+          0,
+          "Recovery must name decision owners, dependencies, restoration procedures and measurable tests. An untested plan or disabled access controls cannot establish operational recovery."
+        ]
+      ],
+      "originalExamIndex": 10
+    },
+    {
+      "title": "Practical IT Service Operations Mastery Examination — Revised V3",
+      "courses": [
+        "Practical IT Service Operations"
+      ],
+      "questions": [
+        [
+          "What belongs in a help-desk ticket?",
+          [
+            "A likely cause labeled confirmed without supporting tests",
+            "Observed symptoms, scope and actions tried",
+            "A copied private customer file unrelated to diagnosis"
+          ],
+          1,
+          "A useful ticket captures the observed problem, affected scope, time, environment and attempted tests. Private unrelated documents and unsupported diagnoses obscure the facts and can breach confidentiality."
+        ],
+        [
+          "What should a change plan include?",
+          [
+            "Approval, test, and rollback",
+            "A configuration description without approval or validation",
+            "An implementation date without a rollback owner"
+          ],
+          0,
+          "Approved changes specify expected effect, tests, a rollback point and accountable people. Changing production state without verification or deleting logs prevents reliable recovery."
+        ],
+        [
+          "A device is online but DNS fails. What check is focused?",
+          [
+            "Inspect the route table without testing configured DNS servers",
+            "Restart the local browser before confirming name lookup results",
+            "Resolver configuration"
+          ],
+          2,
+          "When direct IP access exists but name resolution fails, inspect the configured resolver and actual lookup result. Display and audio preferences are unrelated to resolving network names."
+        ],
+        [
+          "When should an issue be escalated?",
+          [
+            "Only when every available change has already been attempted",
+            "When authority or expertise is exceeded",
+            "Only after the original reporter stops responding"
+          ],
+          1,
+          "Escalate when permission, expertise or business risk exceeds the assignee's authority. Waiting for irreversible damage or refusing to escalate increases incident impact."
+        ],
+        [
+          "What proves a fix?",
+          [
+            "Repeat the original user workflow successfully",
+            "A successful restart without repeating the user workflow",
+            "An updated incident ticket marked resolved by the owner"
+          ],
+          0,
+          "Retest the originally failing workflow under comparable conditions to verify the fix. Closing a ticket or merely restarting a device does not establish corrected behavior."
+        ]
+      ],
+      "originalExamIndex": 11
+    },
+    {
+      "title": "Introduction to Defensive Cryptography Mastery Examination — Revised V3",
+      "courses": [
+        "Introduction to Defensive Cryptography"
+      ],
+      "questions": [
+        [
+          "What does encryption chiefly protect?",
+          [
+            "Integrity verification, without necessarily hiding content",
+            "Confidentiality",
+            "Proof that the encrypted service is available at all times"
+          ],
+          1,
+          "Encryption primarily conceals plaintext from parties without the key; it does not guarantee service availability. Physical screen protection and uptime require other controls."
+        ],
+        [
+          "Which key remains secret in an asymmetric pair?",
+          [
+            "Private key",
+            "A shared symmetric key used by both endpoints",
+            "The public certificate used to verify signatures"
+          ],
+          0,
+          "In an asymmetric key pair the private key is kept confidential while the public key can be distributed. Exposing the private key can undermine signature or decryption trust."
+        ],
+        [
+          "What can a trusted cryptographic digest help verify?",
+          [
+            "The presence of any checksum without trusted provenance",
+            "A matching filename and file size alone",
+            "File integrity"
+          ],
+          2,
+          "A digest compared with an authenticated expected value can detect unexpected changes to file bytes. A hash does not prove a file harmless or identify a downloader by itself."
+        ],
+        [
+          "What does a signature generally support?",
+          [
+            "Confidentiality of plaintext without encrypting it",
+            "Integrity and signer verification under trusted keys",
+            "Proof the document was authorized by every stakeholder"
+          ],
+          1,
+          "A digital signature checked with the right trusted public key provides evidence of integrity and signer-key possession. Signature verification does not automatically encrypt the content or measure backup capacity."
+        ],
+        [
+          "What should follow public exposure of a private service key?",
+          [
+            "Revoke or rotate and investigate",
+            "Only rename the variable",
+            "Ignore old commits"
+          ],
+          0,
+          "An exposed private key should be revoked or rotated and the scope of its use investigated. Renaming a variable or ignoring old commits leaves the credential potentially usable."
+        ]
+      ],
+      "originalExamIndex": 12
+    },
+    {
+      "title": "Security Monitoring and Log Analysis Mastery Examination — Revised V3",
+      "courses": [
+        "Security Monitoring and Log Analysis"
+      ],
+      "questions": [
+        [
+          "What does a login_failed event establish?",
+          [
+            "A successful account takeover",
+            "A recorded unsuccessful attempt",
+            "Confirmed data theft"
+          ],
+          1,
+          "A login_failed event records an unsuccessful authentication attempt, not a successful takeover. Account intent and broader compromise require corroborating logs and context."
+        ],
+        [
+          "Why normalize time zones?",
+          [
+            "To correlate events accurately",
+            "To hide evidence",
+            "To change device permissions"
+          ],
+          0,
+          "Normalize logs to a common time reference such as UTC before correlating events across machines. Time normalization changes representation, not the underlying event or file permissions."
+        ],
+        [
+          "A high alert count always means better detection?",
+          [
+            "Yes, if all alerts use the same detection rule",
+            "Yes, if the number increases after a sensor update",
+            "No, noise may hide important events"
+          ],
+          2,
+          "Higher volume may reflect noisy or duplicate alerts, overwhelming meaningful signals. Quality is measured by useful detections, not the raw count or color of alerts."
+        ],
+        [
+          "What makes an escalation useful?",
+          [
+            "Unsupported attribution",
+            "Observed evidence and uncertainties",
+            "Shared passwords"
+          ],
+          1,
+          "Escalations should include observable evidence, timestamps, impact, hypotheses and uncertainty. Unsupported attribution or sharing passwords is unsafe and prevents reproducible assessment."
+        ],
+        [
+          "Which metric helps assess monitoring?",
+          [
+            "Actionable alert proportion",
+            "Total number of alerts regardless of relevance",
+            "Average dashboard refresh time without alert outcomes"
+          ],
+          0,
+          "The proportion of alerts requiring meaningful triage or action helps measure detector usefulness. Office decoration and dashboard aesthetics are not detection-performance indicators."
+        ]
+      ],
+      "originalExamIndex": 13
+    },
+    {
+      "title": "Safe Authorized Assessment Methodology Mastery Examination — Revised V3",
+      "courses": [
+        "Safe Authorized Assessment Methodology"
+      ],
+      "questions": [
+        [
+          "A production server is outside written scope. What should you do?",
+          [
+            "Test it briefly",
+            "Do not test without permission",
+            "Assume related servers are included"
+          ],
+          1,
+          "Written authorization defines which targets and techniques are in scope; out-of-scope production systems require new permission. A brief or related-system test is still unauthorized if the scope excludes it."
+        ],
+        [
+          "Which test hypothesis is sound?",
+          [
+            "A narrow expected behavior with permitted verification",
+            "A broad expectation that every host has some weakness",
+            "A test that changes several controls at once without a baseline"
+          ],
+          0,
+          "A falsifiable hypothesis states a narrowly defined expected behavior and a permitted method to test it. Unbounded claims or collecting real user data violate sound assessment practice."
+        ],
+        [
+          "What belongs in a finding?",
+          [
+            "Scanner severity without reproducible supporting evidence",
+            "A list of potential attacks without validated asset impact",
+            "Scope, evidence, impact and fix"
+          ],
+          2,
+          "A finding should identify authorized scope, reproducible observations, impact and remediation. Dramatic wording alone has little value; raw confidential evidence should be protected and minimized."
+        ],
+        [
+          "What should be done with synthetic evidence?",
+          [
+            "Treat sample outputs as production evidence when they look realistic",
+            "Label it as simulation",
+            "Blend simulation and observed data in one unlabeled table"
+          ],
+          1,
+          "Synthetic evidence must be labeled so readers cannot mistake a simulation for real machine observations. Neither simulated success nor a screenshot proves production compromise."
+        ],
+        [
+          "What closes a finding?",
+          [
+            "Authorized retest and documented result",
+            "An unverified claim of a patch",
+            "Renaming a ticket"
+          ],
+          0,
+          "After an approved fix, repeat safe positive and negative tests and record observed results. Patch claims and ticket renaming are administrative actions, not verification."
+        ]
+      ],
+      "originalExamIndex": 14
+    },
+    {
+      "title": "Hands-On Network Reasoning Workshop Mastery Examination — Revised V3",
+      "courses": [
+        "Hands-On Network Reasoning Workshop"
+      ],
+      "questions": [
+        [
+          "A gateway responds but a hostname fails. What is a targeted check?",
+          [
+            "Investigate DNS only after replacing the router",
+            "DNS resolution",
+            "Change the user's browser start page before testing resolution"
+          ],
+          1,
+          "If an approved gateway responds but hostnames do not, test configured DNS resolvers and record responses. Keyboard or filesystem permissions do not normally explain DNS name-resolution failure."
+        ],
+        [
+          "How many conventional usable hosts are in a /24 subnet?",
+          [
+            "254",
+            "256",
+            "24"
+          ],
+          0,
+          "A conventional /24 IPv4 subnet contains 256 addresses, with network and broadcast positions leaving 254 usable hosts. Cloud or special subnets can reserve more, so state the conventional assumption."
+        ],
+        [
+          "What is 192.168.12.0/24 broadcast address?",
+          [
+            "192.168.12.1",
+            "192.168.13.255",
+            "192.168.12.255"
+          ],
+          2,
+          "In 192.168.12.0/24, the eight host bits set to one produce broadcast address 192.168.12.255. Addresses ending .1 and in another /24 do not represent that broadcast."
+        ],
+        [
+          "What does TCP provide for many apps?",
+          [
+            "Guaranteed application security",
+            "Reliable ordered byte stream",
+            "DNS ownership"
+          ],
+          1,
+          "TCP supplies reliable ordered bytes between endpoints under normal functioning; application encryption is separate. TCP does not itself prove that a connection is secure or establish ownership of DNS records."
+        ],
+        [
+          "What should a diagnostic memo separate?",
+          [
+            "Facts and hypotheses",
+            "Observed conditions and diagnostic tests in one unqualified conclusion",
+            "Unverified attribution and confirmed outcomes with no labels"
+          ],
+          0,
+          "A diagnostic memo distinguishes recorded facts from hypotheses and their supporting tests. Style choices or handling private passwords do not replace causal reasoning."
+        ]
+      ],
+      "originalExamIndex": 15
+    },
+    {
+      "title": "Beginner Python Logic and Defensive Automation Mastery Examination — Revised V3",
+      "courses": [
+        "Beginner Python Logic and Defensive Automation"
+      ],
+      "questions": [
+        [
+          "What is the result after count=2 then count=count+1?",
+          [
+            "2",
+            "3",
+            "21"
+          ],
+          1,
+          "The expression adds one to the prior integer 2 and stores 3 in count. Python arithmetic addition is not string concatenation when count is an integer."
+        ],
+        [
+          "What is true about Python 5 == '5'?",
+          [
+            "False, the types differ",
+            "True, all values are text",
+            "A syntax error"
+          ],
+          0,
+          "Python 5 == '5' evaluates to False because the integer and string values are not equal. This is a valid comparison expression, not a syntax error."
+        ],
+        [
+          "How many failed entries are in [failed,success,failed]?",
+          [
+            "3",
+            "1",
+            "2"
+          ],
+          2,
+          "The sequence contains two entries explicitly marked failed and one marked success. Only events actually present in the supplied list can be counted."
+        ],
+        [
+          "What is 3 of 12 as a percentage?",
+          [
+            "36%",
+            "25%",
+            "3%"
+          ],
+          1,
+          "3 divided by 12 is 0.25; multiplying by 100 yields 25 percent. A fraction of observed cases must be computed with the stated denominator."
+        ],
+        [
+          "An empty log proves what?",
+          [
+            "No events are recorded in that data",
+            "That no incidents happened on any monitored endpoint",
+            "That collection and retention were complete without an audit"
+          ],
+          0,
+          "An empty dataset establishes only that no records were captured in that dataset. Missing events may reflect collection gaps; it cannot certify that no incident happened."
+        ]
+      ],
+      "originalExamIndex": 16
+    }
+  ]
+}
