@@ -17,7 +17,23 @@ function form(){
 form();
 onAuthStateChanged(auth,async user=>{
  if(!user){document.body.classList.add('auth-locked');form();return;}
- try{await user.reload()}catch{}
+ // Avoid an indefinitely pending account refresh blocking the Academy on iOS.
+ // A cached unverified email is never treated as verified on refresh failure.
+ let refreshed=false;
+ try{
+  await Promise.race([
+   user.reload().then(()=>{refreshed=true}),
+   new Promise((_,reject)=>setTimeout(()=>reject(new Error('account refresh timed out')),8000))
+  ]);
+ }catch(error){
+  console.warn('Academy verification refresh unavailable:',error?.code||error?.message);
+ }
+ if(!refreshed&&!user.emailVerified){
+  document.body.classList.add('auth-locked');
+  form();
+  message('Unable to verify your email right now. Check your connection and try signing in again.',true);
+  return;
+ }
  if(!auth.currentUser||!auth.currentUser.emailVerified){document.body.classList.add('auth-locked');form();message('Verify your email address to continue.');return;}
  root.hidden=true;document.body.classList.remove('auth-locked');
  let panel=document.getElementById('academy-auth-account');
