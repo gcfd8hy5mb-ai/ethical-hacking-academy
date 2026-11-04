@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#20292e"><title>Advanced Assessor Review | Ethical Hacking Academy</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#172126;color:#f4efe5}
+*{box-sizing:border-box}body{margin:0}main{max-width:940px;margin:auto;padding:22px 16px 75px}
+a{color:#e8c68b}h1{font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2}h2{font-size:1.4rem}h3{font-size:1.13rem}
+.kicker{color:#eccd91;font-size:.79rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.hero,.panel{border:1px solid #596b72;background:#243138;border-radius:15px;padding:20px;margin:16px 0}.hero{border-color:#b59a67}
+label{display:block;margin:12px 0 5px;font-weight:650}
+input,select,textarea,button{font:inherit;border-radius:9px}
+input,select,textarea{width:100%;background:#101b20;border:1px solid #82949a;color:#fff;padding:11px}
+textarea{min-height:100px;resize:vertical}
+button{border:0;background:#e1c285;color:#1b272b;padding:12px 16px;font-weight:750;cursor:pointer;min-height:44px}
+button.secondary{background:#40555c;color:#fff;border:1px solid #718c95}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.muted,small{color:#c2cacc}.warn{color:#f5c996}
+.criterion{border-top:1px solid #4a5c65;padding:12px 0}.criterion p{margin:2px 0 7px}
+.score{max-width:190px}.stage{border:1px solid #536770;border-radius:12px;padding:14px;margin:14px 0}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#101b20;border-radius:10px;padding:14px}
+.badge{font-weight:700;color:#eccd91}
+.check{display:flex;align-items:start;gap:10px;margin:9px 0}.check input{width:auto;margin-top:5px}
+@media(max-width:500px){.hero,.panel{padding:16px}}
+</style></head><body><main>
+<a href="./index.html">← Academy</a> · <a href="./advanced-multistage-assessments.html">Learner assessments</a>
+<section class="hero"><div class="kicker">Levels 6–8 · Independent assessment</div><h1>Assessor scoring & remediation</h1>
+<p>Review the learner's exported multi-stage responses against the original evidence and four criteria per stage. Score each criterion 0–4, enter specific feedback, and record remediation. This tool never assigns grades to the original Academy exams or modifies cloud progress.</p>
+<p class="muted">An assessor should observe a controlled lab demonstration before signing off practical competency. Imported student drafts and all review records stay in this browser until you export them.</p></section>
+<section class="panel">
+<h2>1. Import a learner submission</h2>
+<label for="import">Advanced assessment JSON export</label><input id="import" type="file" accept=".json,application/json">
+<p id="import-status" role="status" class="muted">No submission loaded. You may still inspect the rubric.</p>
+<label for="student">Learner identifier (avoid sensitive details)</label><input id="student" placeholder="Candidate identifier">
+<label for="reviewer">Assessor name or identifier</label><input id="reviewer" placeholder="Reviewer identifier">
+<label for="reviewDate">Review date</label><input id="reviewDate" type="date">
+<label for="level">Assessment</label><select id="level"><option value="0">Level 6 — Home Lab Recovery</option><option value="1">Level 7 — Identity Assessment</option><option value="2">Level 8 — Enterprise Capstone</option></select>
+</section>
+<section class="panel"><h2>2. Score each stage</h2>
+<p><strong>Scoring anchors:</strong> 0 = missing/incorrect; 1 = major errors; 2 = partial with significant gaps; 3 = sound with minor omissions; 4 = accurate, independent, evidence-supported reasoning. Choose “Not scored” when evidence is insufficient.</p>
+<div id="stages">Loading review criteria…</div></section>
+<section class="panel"><h2>3. Final judgment</h2>
+<div id="summary" aria-live="polite"></div>
+<label for="recommendation">Required remediation and retest plan</label><textarea id="recommendation" placeholder="Identify the exact step, missing evidence, practice task and retest condition."></textarea>
+<label for="observation">Observed real-system lab performance</label><select id="observation"><option value="not-observed">Not observed</option><option value="observed-needs-work">Observed — requires remediation</option><option value="observed-adequate">Observed — adequate in authorized lab</option></select>
+<label class="check"><input id="attest" type="checkbox"> I confirm this is an assessor-entered review of evidence, not automatic AI grading or an accredited certification.</label>
+<div class="actions"><button id="export" type="button">Export assessor report</button><button id="copy" class="secondary" type="button">Copy summary</button></div>
+<p id="export-status" role="status" class="muted"></p>
+<p class="warn">Provisional scoring threshold: all 16 criteria scored, at least 80% (52/64) and no criterion scored 0. This is an internal practice threshold only. An “adequate” practical result additionally requires observed authorized lab performance. Neither outcome grants a professional credential.</p>
+</section>
+</main>
+<script>
+'use strict';
+const key='ethical-hacking-assessor-review-v1-';
+let rubric=null,studentSubmission=null;let allReviews={};
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','>':'&gt;',"'":'&#39;'}[c]));
+function localRead(k){try{return JSON.parse(localStorage.getItem(key+k)||'null')}catch{return null}}
+function localWrite(k,v){try{localStorage.setItem(key+k,JSON.stringify(v));return true}catch{return false}}
+function selectIndex(){return Number($('level').value)}
+function draft(i,s){return studentSubmission?.tracks?.[i]?.stages?.[s]?.draft||''}
+function review(i){if(!allReviews[i])allReviews[i]={scores:{},notes:{},recommendation:'',observation:'not-observed'};return allReviews[i]}
+function scores(i){const t=rubric.tracks[i],r=review(i),vals=[];t.stages.forEach((s,j)=>s.criteria.forEach((_,k)=>{const v=r.scores[j+'-'+k];if(Number.isInteger(v)&&v>=0&&v<=4)vals.push(v)}));const total=t.stages.reduce((n,s)=>n+s.criteria.length,0),points=vals.reduce((n,v)=>n+v,0),max=total*4;return {points,max,scored:vals.length,total,zeros:vals.filter(v=>v===0).length,threshold:vals.length===total&&points>=Math.ceil(max*.8)&&!vals.includes(0)}}
+function persist(){localWrite('draft-'+selectIndex(),review(selectIndex()));localWrite('meta',{student:$('student').value,reviewer:$('reviewer').value,date:$('reviewDate').value})}
+function render(){
+if(!rubric)return;
+const i=selectIndex(),track=rubric.tracks[i],r=review(i);
+$('stages').innerHTML=track.stages.map((s,j)=>'<section class="stage"><h3>Stage '+(j+1)+': '+esc(s.title)+'</h3><p class="muted">'+esc(s.evidence)+'</p><label>Candidate response</label><pre>'+esc(draft(i,j)||'No response imported')+'</pre>'+s.criteria.map((c,k)=>{const id=j+'-'+k;const v=r.scores[id];return '<div class="criterion"><label for="score-'+id+'">'+esc(c)+'</label><select class="score" id="score-'+id+'" data-score="'+id+'"><option value="">Not scored</option>'+[0,1,2,3,4].map(n=>'<option value="'+n+'" '+(v===n?'selected':'')+'>'+n+' / 4</option>').join('')+'</select></div>'}).join('')+'<label for="note-'+j+'">Stage-specific evidence, feedback and next steps</label><textarea id="note-'+j+'" data-note="'+j+'" placeholder="Cite what the learner did correctly, what remains unproven, and the practical retest.">'+esc(r.notes[j]||'')+'</textarea></section>').join('');
+$('recommendation').value=r.recommendation||'';
+$('observation').value=r.observation||'not-observed';
+$('attest').checked=Boolean(r.attest);
+renderSummary();
+}
+function renderSummary(){if(!rubric)return;const i=selectIndex(),s=scores(i),r=review(i),percent=s.max?Math.round(s.points/s.max*100):0;
+const disposition=!s.threshold?'Not yet meeting internal written threshold':r.observation==='observed-adequate'?'Written threshold met; assessor reports observed lab adequacy':'Written threshold met; practical observation not confirmed';
+$('summary').innerHTML='<p><span class="badge">'+s.points+' / '+s.max+' points ('+percent+'%)</span> · '+s.scored+' / '+s.total+' criteria scored · '+s.zeros+' zeros</p><p><strong>Disposition:</strong> '+esc(disposition)+'</p><p class="muted">This is a manual rubric calculation from entered scores, not validated against the quality of the imported responses.</p>';}
+function makeReport(){const i=selectIndex(),s=scores(i),r=review(i);return {schema:'ethical-hacking-assessor-report-v1',createdAt:new Date().toISOString(),learner:$('student').value,reviewer:$('reviewer').value,reviewDate:$('reviewDate').value,level:rubric.tracks[i].level,title:rubric.tracks[i].title,assessment:s,observation:r.observation,assessorAttestation:!!r.attest,recommendation:r.recommendation,stageReviews:rubric.tracks[i].stages.map((stage,j)=>({title:stage.title,learnerDraft:draft(i,j),criteria:stage.criteria.map((text,k)=>({criterion:text,score:r.scores[j+'-'+k]??null})),feedback:r.notes[j]||''})),disclaimer:'Manual rubric assessment. Not accredited certification or automated skill verification.'}}
+function start(){const meta=localRead('meta')||{};$('student').value=meta.student||'';$('reviewer').value=meta.reviewer||'';$('reviewDate').value=meta.date||new Date().toISOString().slice(0,10);for(let i=0;i<3;i++)allReviews[i]=localRead('draft-'+i)||{scores:{},notes:{},recommendation:'',observation:'not-observed'};render()}
+fetch('./advanced-assessment-rubrics.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Rubric file unavailable');return r.json()}).then(data=>{if(!Array.isArray(data.tracks)||data.tracks.length!==3||data.tracks.some(t=>t.stages.length!==4))throw Error('Rubric structure invalid');rubric=data;start()}).catch(e=>$('stages').textContent='Unable to load criteria: '+e.message);
+$('level').addEventListener('change',render);
+$('stages').addEventListener('change',e=>{const id=e.target.dataset.score;if(id===undefined)return;const r=review(selectIndex());if(e.target.value==='')delete r.scores[id];else r.scores[id]=Number(e.target.value);persist();renderSummary()});
+$('stages').addEventListener('input',e=>{const id=e.target.dataset.note;if(id===undefined)return;review(selectIndex()).notes[id]=e.target.value;persist()});
+for(const id of ['student','reviewer','reviewDate'])$(id).addEventListener('input',persist);
+$('recommendation').addEventListener('input',e=>{review(selectIndex()).recommendation=e.target.value;persist()});
+$('observation').addEventListener('change',e=>{review(selectIndex()).observation=e.target.value;persist();renderSummary()});
+$('attest').addEventListener('change',e=>{review(selectIndex()).attest=e.target.checked;persist()});
+$('import').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>2000000)throw Error('File exceeds 2 MB');const obj=JSON.parse(await file.text());if(obj.schema!=='ethical-hacking-multistage-v1'||!Array.isArray(obj.tracks)||obj.tracks.length!==3||obj.tracks.some((t,i)=>t.level!==[6,7,8][i]||!Array.isArray(t.stages)||t.stages.length!==4||t.stages.some(s=>typeof s.draft!=='string'||s.draft.length>100000)))throw Error('Not a compatible advanced assessment export');studentSubmission=obj;$('import-status').textContent='Submission loaded for review (not uploaded to cloud).';render()}catch(err){$('import-status').textContent='Import failed: '+err.message;studentSubmission=null;render()}});
+$('export').addEventListener('click',()=>{if(!rubric)return;const r=review(selectIndex());if(!$('reviewer').value.trim()||!r.attest){$('export-status').textContent='Enter assessor identifier and confirm the attestation before exporting.';return}const obj=makeReport();try{const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='advanced-assessor-level-'+obj.level+'-review.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('export-status').textContent='Review export initiated. Store securely; this may contain learner work.'}catch{$('export-status').textContent='Export failed on this device.'}});
+$('copy').addEventListener('click',()=>{if(!rubric)return;const report=makeReport();const body='Level '+report.level+' — '+report.title+'\nScore: '+report.assessment.points+'/'+report.assessment.max+'\nScored criteria: '+report.assessment.scored+'/'+report.assessment.total+'\nObserved lab: '+report.observation+'\nRemediation: '+report.recommendation;navigator.clipboard?.writeText(body).then(()=>$('export-status').textContent='Summary copied.').catch(()=>$('export-status').textContent='Copy unavailable.');});
+</script></body></html>
