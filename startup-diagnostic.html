@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Academy Startup Diagnostic</title><style>*{box-sizing:border-box}body{margin:0;background:#f6efe6;color:#23343c;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:750px;margin:auto;padding:22px 16px 70px}h1{font:38px/1.1 Georgia,serif}h2{font:24px Georgia,serif}.panel{background:#fffaf2;border:1px solid #d7c4ab;border-radius:14px;padding:17px;margin:16px 0}button{background:#1c3039;color:#f9ebcf;border:0;border-radius:9px;padding:13px 16px;font:inherit;cursor:pointer;min-height:44px}button:disabled{opacity:.6}.line{padding:11px 0;border-bottom:1px solid #e2d7c7;overflow-wrap:anywhere}.label{font-weight:700}.status{display:block;color:#765d37;font-size:14px}.muted{color:#636d6d}a{color:#70542b}.notice{background:#f1e6d4;padding:12px;border-left:4px solid #ac8a53;border-radius:7px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style></head><body><main><a href="./">← Academy</a><h1>Academy Startup Diagnostic</h1><p>This checks whether your browser can load the Academy files and public Firebase libraries. It does not sign in, change coursework, read grades or send your saved progress anywhere.</p><p class="notice">Run the checks, then take a screenshot showing the results. Do not share passwords, email addresses or private schoolwork.</p><section class="panel"><button id="run">Check Academy loading</button><p id="summary" aria-live="polite">Ready to check.</p><div id="results"></div></section><section class="panel"><h2>Interpretation</h2><p id="interpret">Results will appear here. A failed file or library check can reveal why the main Academy does not start.</p><p class="muted">Testing is read-only and uses a short network timeout. A successful check does not prove login or Firebase progress saving works.</p><button id="copy" disabled>Copy technical summary</button></section></main><script>
+"use strict";
+const resources=[
+["Main Academy HTML","./index.html","text",1200],
+["Core app JavaScript","./app.js","text",15000],
+["Main curriculum JSON","./curriculum.json","json",100000],
+["PC building supplement","./pc-building-track.json","json",1000],
+["Foundation supplement","./coursework-foundations-expansion-v1.json","json",1000],
+["Examination data","./exams.json","json",1000],
+["Firebase app library","https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js","text",3000],
+["Firebase authentication library","https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js","text",3000]
+];
+const el=id=>document.getElementById(id),results=[];let running=false;
+async function check(label,url,type,min){
+ const ctrl=new AbortController(),timeout=setTimeout(()=>ctrl.abort(),12000),start=performance.now();let out;
+ try{
+  const response=await fetch(url+(url.includes("?")?"&":"?")+"diagnostic="+Date.now(),{cache:"no-store",signal:ctrl.signal});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  const body=await response.text();
+  if(body.length<min)throw Error("File unexpectedly small: "+body.length+" characters");
+  if(type==="json")JSON.parse(body);
+  if(type==="text"&&url.endsWith(".js")&&body.includes("<!doctype html"))throw Error("Received an HTML page instead of JavaScript");
+  out={label,status:"OK",detail:Math.round(performance.now()-start)+" ms; "+body.length+" characters"};
+ }catch(err){out={label,status:"FAILED",detail:err.name==="AbortError"?"Timed out after 12 seconds":String(err.message||err).slice(0,130)}}
+ finally{clearTimeout(timeout)}
+ return out;
+}
+async function run(){
+ if(running)return;running=true;results.length=0;el("run").disabled=true;el("copy").disabled=true;el("results").replaceChildren();el("summary").textContent="Checking files and libraries…";
+ for(const [label,url,type,min] of resources){
+  const line=document.createElement("div");line.className="line";const name=document.createElement("div");name.className="label";name.textContent=label;const status=document.createElement("span");status.className="status";status.textContent="Checking…";line.append(name,status);el("results").append(line);
+  const r=await check(label,url,type,min);results.push(r);status.textContent=r.status+" — "+r.detail;
+ }
+ const failures=results.filter(x=>x.status==="FAILED");el("summary").textContent=(results.length-failures.length)+" of "+results.length+" resource checks passed.";
+ el("interpret").textContent=failures.length?"One or more public resources failed. The affected file names and errors are shown above. This can explain a stuck startup, though login and script execution also need separate testing.":"All public file checks passed on this device. The remaining likely problem is Firebase sign-in verification, JavaScript execution, or the app's startup sequence. Please send this results screen.";
+ el("copy").disabled=false;el("run").disabled=false;running=false;
+}
+el("run").addEventListener("click",run);
+el("copy").addEventListener("click",()=>{const lines=["Ethical Hacking Academy startup diagnostic","Browser: "+navigator.userAgent.replace(/\([^)]+\)/g,"(redacted)"),...results.map(x=>x.label+": "+x.status+" / "+x.detail)];const text=lines.join("\n");if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>el("copy").textContent="Copied",()=>el("copy").textContent="Copy failed");else el("copy").textContent="Copy unavailable"});
+</script></body></html>
