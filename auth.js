@@ -15,8 +15,10 @@ function form(){
  document.getElementById('academy-auth-form').onsubmit=async e=>{e.preventDefault();if(busy)return;busy=true;const email=document.getElementById('auth-email').value.trim(),password=document.getElementById('auth-password').value;message('Checking your account…');try{if(mode==='register'){const created=await createUserWithEmailAndPassword(auth,email,password);await sendEmailVerification(created.user);await signOut(auth);message('Account created. Check your email, verify your address, then sign in.');mode='signin';}else{const result=await signInWithEmailAndPassword(auth,email,password);await result.user.reload();if(!result.user.emailVerified){await sendEmailVerification(result.user);await signOut(auth);message('Please verify your email before entering. A verification email has been sent.');}}}catch(err){const code=err?.code||'';message(code==='auth/invalid-credential'?'Incorrect email or password.':code==='auth/email-already-in-use'?'This email already has an account. Sign in instead.':code==='auth/weak-password'?'Use a stronger password.':'Unable to complete sign-in. Check your details and try again.',true)}finally{busy=false}};
 }
 form();
+window.__academyStage?.('Auth form rendered');
 onAuthStateChanged(auth,async user=>{
- if(!user){document.body.classList.add('auth-locked');form();return;}
+ window.__academyStage?.(user?'Firebase user received':'Firebase signed-out state received');
+ if(!user){document.body.classList.add('auth-locked');form();window.__academyStage?.('Auth state signed out; form ready');return;}
  // Avoid an indefinitely pending account refresh blocking the Academy on iOS.
  // A cached unverified email is never treated as verified on refresh failure.
  let refreshed=false;
@@ -34,8 +36,9 @@ onAuthStateChanged(auth,async user=>{
   message('Unable to verify your email right now. Check your connection and try signing in again.',true);
   return;
  }
+ window.__academyStage?.('Verification refresh returned; verified='+Boolean(auth.currentUser?.emailVerified));
  if(!auth.currentUser||!auth.currentUser.emailVerified){document.body.classList.add('auth-locked');form();message('Verify your email address to continue.');return;}
- root.hidden=true;document.body.classList.remove('auth-locked');
+ root.hidden=true;document.body.classList.remove('auth-locked');window.__academyStage?.('Auth unlocked course view');
  let panel=document.getElementById('academy-auth-account');
  if(!panel){panel=document.createElement('div');panel.id='academy-auth-account';}
  const attachAccount=()=>{const header=document.querySelector('#app header.top');if(header&&panel.parentElement!==header)header.append(panel);};
