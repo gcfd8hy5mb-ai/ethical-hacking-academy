@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "source": "Ethical Hacking Academy practical competency standards — internal instructional rubric, not professional certification",
+  "guidance": "These are portfolio and instructor-assessment criteria. Completing the checklist or a browser simulation alone never proves real-device competency.",
+  "passScore": 80,
+  "criticalRules": [
+    "No access to third-party devices or networks without specific authorization.",
+    "Synthetic records must be explicitly labeled synthetic.",
+    "Never submit passwords, access tokens, private logs or identifying data.",
+    "Critical safety or scope breaches require remediation regardless of score."
+  ],
+  "rubric": [
+    [
+      "Technical accuracy",
+      25,
+      "Commands, reasoning and expected outcomes are technically correct and scoped."
+    ],
+    [
+      "Observed evidence",
+      25,
+      "Actual output or labeled synthetic records, timestamps and provenance support conclusions."
+    ],
+    [
+      "Interpretation",
+      20,
+      "Separates observations from hypotheses, alternatives and unknowns."
+    ],
+    [
+      "Authorization and safety",
+      20,
+      "Permission, privacy, boundaries and stop conditions are respected."
+    ],
+    [
+      "Verification and rollback",
+      10,
+      "Defines and performs permitted positive/negative tests and a recovery plan."
+    ]
+  ],
+  "levels": [
+    {
+      "title": "Computer and IT Fundamentals",
+      "hours": 35,
+      "environment": "Academy browser simulator or an owned computer",
+      "objective": "Locate, inspect, and preserve a harmless test file; distinguish simulated commands from a real shell.",
+      "tasks": [
+        [
+          "Paths and files",
+          "Create an example.txt in an isolated practice folder. Record the absolute path and relative path. Use Get-Location/Get-Item in PowerShell or pwd/ls -l on Linux; explain which path each command reads.",
+          "A path table, two redacted command outputs and a note about where the commands really ran."
+        ],
+        [
+          "Integrity check",
+          "Compute a SHA-256 digest on the file, copy it, edit the copy and compute its digest again. On Windows use Get-FileHash; on Linux use sha256sum.",
+          "Before/after digests and an explanation of why hashes establish byte equality rather than safety."
+        ],
+        [
+          "System observation",
+          "Identify OS release and current username using a native settings screen or read-only commands, separating user identity from administrator privileges.",
+          "Redacted host facts, observed permission limits and one safe troubleshooting hypothesis."
+        ]
+      ],
+      "failure": "Claiming a simulator command operated on the real machine, altering source evidence, or making claims unsupported by hashes."
+    },
+    {
+      "title": "PC Building, Hardware and Repair",
+      "hours": 45,
+      "environment": "Manufacturer diagrams and an unplugged, owned desktop; no PSU enclosure opening",
+      "objective": "Explain hardware compatibility and carry out a defensible no-power diagnostic sequence.",
+      "tasks": [
+        [
+          "Power connectors",
+          "Label ATX 24-pin, EPS CPU, PCIe GPU, SATA power and front-panel headers using exact motherboard and PSU manuals; distinguish similar plug shapes.",
+          "Annotated diagram with source documentation and a no-force connection checklist."
+        ],
+        [
+          "Memory and POST",
+          "Given a DRAM status light, explain a powered-off DIMM seating/slot-compatibility check and compare initial and repeat POST results; simulate if hardware is unavailable.",
+          "Step sequence, safety stop conditions, expected observations and what they do not prove."
+        ],
+        [
+          "Upgrade choice",
+          "Prepare an under-budget comparison of used workstations by CPU virtualization support, RAM slots, storage, PSU constraints and expansion.",
+          "Comparison table, known unknowns, and documented upgrade plan without unsupported performance promises."
+        ]
+      ],
+      "failure": "Opening a sealed power supply, hot-reseating components, forcing cables or presenting a diagram as proof of real hardware proficiency."
+    },
+    {
+      "title": "System and Network Administration",
+      "hours": 75,
+      "environment": "Owned Windows/Linux systems or isolated VMs; simulation permitted but labeled",
+      "objective": "Separate process, port, routing and DNS evidence to diagnose a benign service failure.",
+      "tasks": [
+        [
+          "Windows baseline",
+          "In PowerShell inspect Get-Process, Get-Service and Get-CimInstance Win32_OperatingSystem. Explain that the CPU field is cumulative process time, not instantaneous CPU percentage.",
+          "Command/output table with timestamps, process ownership and a safe next test."
+        ],
+        [
+          "Linux service",
+          "In a test VM inspect systemctl status, journalctl -u and ss -ltn for a known disposable service. Contrast service status with bound interface and port.",
+          "Three observations, one plausible alternative explanation and a non-destructive verification plan."
+        ],
+        [
+          "Network diagnosis",
+          "Use ipconfig /all or ip addr, then nslookup or dig for an owned/test hostname. Explain the distinction between DNS failure, route failure and application response.",
+          "Network diagram, anonymized responses, interpretation and evidence limits."
+        ]
+      ],
+      "failure": "Restarting or changing an unrelated production service, treating one ping as proof of full connectivity, or probing unapproved targets."
+    },
+    {
+      "title": "Cybersecurity Foundations",
+      "hours": 55,
+      "environment": "Fictional organizational records and Academy security simulations",
+      "objective": "Interpret identity, access and event records while maintaining privacy and uncertainty.",
+      "tasks": [
+        [
+          "Access review",
+          "Build a matrix for employee, help desk, administrator and service identities; contrast assigned group membership with approved job duties.",
+          "Least-privilege matrix, two overgrant findings, approval owner and negative test."
+        ],
+        [
+          "Event timeline",
+          "Normalize mixed UTC and local-time log events; mark duplicate records and gaps. Do not infer attacker identity from failed login alone.",
+          "Source-provenance timeline including uncertainty and confidence for each conclusion."
+        ],
+        [
+          "Recovery readiness",
+          "Define a recovery point objective and a recovery time objective for a fictional internal service; specify a restore test.",
+          "Recovery criteria, data-loss estimate and an independently verifiable acceptance test."
+        ]
+      ],
+      "failure": "Confusing authentication with authorization, publishing real tokens, or reporting a hypothetical attack as confirmed."
+    },
+    {
+      "title": "Ethical Hacking and Authorized Assessment",
+      "hours": 75,
+      "environment": "Academy simulations or explicitly approved isolated test targets only",
+      "objective": "Create and execute a safe assessment plan that is bounded by written authorization.",
+      "tasks": [
+        [
+          "Written scope",
+          "Define target names, allowed techniques, dates, stop conditions and escalation contacts for a fictional exercise. Exclude all other hosts.",
+          "Signed/fictional authorization record and a clear stop/go table."
+        ],
+        [
+          "Reproducible finding",
+          "Use a synthetic access-denied or web error example to record exact observations, permitted verification and likely business impact without claiming real exploitation.",
+          "Evidence log, impact assumptions, reproducible steps and fix criteria."
+        ],
+        [
+          "Retest and reporting",
+          "Describe positive and negative tests of a corrected access-control rule and write a concise executive decision note.",
+          "Retest criteria, owner, uncertainty statement and executive summary."
+        ]
+      ],
+      "failure": "Touching targets outside approved scope, inventing access to production data, or presenting a simulation as a live compromise."
+    },
+    {
+      "title": "Home Labs, Servers and Virtualization",
+      "hours": 45,
+      "environment": "Isolated owned virtual network, or diagrams/browser simulation until hardware is available",
+      "objective": "Build or design an isolated two-system lab with recoverable configuration.",
+      "tasks": [
+        [
+          "Isolation design",
+          "Diagram a host-only or internal virtual switch with a client and disposable service VM. Explain why bridged mode can expose vulnerable guests to household networks.",
+          "Network adapter inventory and expected allowed/denied paths."
+        ],
+        [
+          "Boundary validation",
+          "Where hardware allows, use connectivity tests strictly between owned guests and verify disallowed routes toward household devices remain unavailable.",
+          "Test matrix with source, destination, expected result, observed result and uncertainty."
+        ],
+        [
+          "Recovery rehearsal",
+          "Restore an approved snapshot and check OS, test account, service listener and network conditions; distinguish a snapshot from an off-host backup.",
+          "Restoration log, previous state, actual evidence and failure/rollback limits."
+        ]
+      ],
+      "failure": "Connecting intentionally vulnerable practice guests to family devices, claiming isolation from a private IP alone or assuming a snapshot is a verified backup."
+    },
+    {
+      "title": "Advanced Red Team Operations",
+      "hours": 75,
+      "environment": "Synthetic corporate engagement and intentionally isolated owned training assets",
+      "objective": "Perform evidence-led, legally bounded adversary-emulation planning and defender coordination.",
+      "tasks": [
+        [
+          "Engagement design",
+          "Write an objective, fictional threat assumptions, allowed actions, target exclusions, emergency halt and defender notification plan.",
+          "Rules of engagement, authorization and escalation triggers."
+        ],
+        [
+          "Detection hypothesis",
+          "Using synthetic proxy and login logs, formulate two falsifiable hypotheses and two read-only or simulated verification steps.",
+          "Timeline linking evidence to each hypothesis, with explicit alternatives."
+        ],
+        [
+          "Executive report",
+          "Prioritize risk using evidence quality, impact, exposure, controls and uncertainty; include one remediation and retest per issue.",
+          "A board-readable summary, technical appendix and action owner."
+        ]
+      ],
+      "failure": "Claiming real-world compromise based on synthetic records, using production credentials or bypassing documented scope."
+    },
+    {
+      "title": "Professional Capstone and Mastery",
+      "hours": 35,
+      "environment": "Integrated Academy synthetic corporation plus optional owned isolated lab",
+      "objective": "Demonstrate independent end-to-end evidence collection, judgment, reporting and remediation validation.",
+      "tasks": [
+        [
+          "Integrated case",
+          "Receive an unfamiliar simulated change/incident scenario and establish a baseline, evidence preservation and scoped triage.",
+          "Source-aware evidence ledger, assumptions and decision timeline."
+        ],
+        [
+          "Defensible response",
+          "Choose a least-disruptive, authorized corrective action and test both expected success and expected denial after the change.",
+          "Change plan, reversible steps and before/after acceptance results."
+        ],
+        [
+          "Oral/written defense",
+          "Explain uncertainty, distinguish lab demonstration from real device skill, and defend a recovery and security decision to a mock reviewer.",
+          "Technical report, executive note, critical limitations and remediation plan."
+        ]
+      ],
+      "failure": "Missing provenance, unsupported certainty, absent retest evidence, breached authority or misrepresenting simulated work as real equipment qualification."
+    }
+  ]
+}
