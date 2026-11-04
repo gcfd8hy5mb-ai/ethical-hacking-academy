@@ -204,3 +204,26 @@ Created `practical-competency-standards-v1.json` covering all eight planned leve
 Built mobile-friendly `practical-competency-standards.html` that loads the above JSON, enables selection among the eight levels, shows all required tasks and safety gates, provides a local non-persistent score calculation, and supports copying a blank practical evidence template. The guide does **not** change lesson completion, examination grades, mastery status or cloud data. Integrated direct links from the Academy's level screens and Practice Lab; refreshed the versioned `index.html` main-script reference for the iPhone.
 
 Verification: standards JSON parses, 8 levels × 3 tasks = 24 tasks, planned hour references sum to the existing **440 hours**, rubric adds to 100, safety gates present; guide JS and main app JS parsed with no syntax errors and no duplicate top-level function names. No iPhone guided-assessment acceptance test or independent reviewer assessment has yet been performed. Next audit: measure authored workload per lesson/lab against targets; test every 8-level lab link and device behavior; review real-hardware evidence versus synthetic completions.
+
+
+## Authored instructional workload and advanced lab gap audit
+Audited all 29 assembled course identities and **273 lessons** against the eight-level pathway, using original `curriculum.json` (26 courses / 198 lessons), PC Building track (three courses / 30 lessons), and three additional lesson packs (18 + 12 + 15 lessons). Counted approximately **145,364 words of authored lesson instructional text** across the combined catalog, excluding many external interactive lab pages, assessment explanations and supplementary reading. Word counts are a reproducible **inventory measure, not verified learning hours**. No course names were missing from the pathway and no courses were unassigned.
+
+| Level | Planned hours | Mapped lessons | Authored lesson words | Unique-linked lab entries at audit |
+|---|---:|---:|---:|---:|
+| 1 — Computer & IT Fundamentals | 35 | 32 | 15,633 | 3 |
+| 2 — PC Building, Hardware & Repair | 45 | 52 | 16,847 | 4 |
+| 3 — System & Network Administration | 75 | 59 | 39,779 | 10 |
+| 4 — Cybersecurity Foundations | 55 | 48 | 26,844 | 3 |
+| 5 — Ethical Hacking & Red Team Fundamentals | 75 | 37 | 25,890 | 6 |
+| 6 — Home Labs, Servers & Virtualization | 45 | 23 | 10,468 | 10 before new workbook |
+| 7 — Advanced Red Team Operations | 75 | 22 | 9,903 | 10 before new workbook |
+| 8 — Professional Capstone & Mastery | 35 | 0 direct lessons | 0 direct lesson words | 11 |
+
+Level 8 intentionally uses capstone/qualification resources rather than direct course IDs. Level 6 and 7 have comparatively less conventional written instruction per planned hour; a portion of their time must be genuinely supplied by lab execution and evaluated evidence rather than implied by a target-hour field. The sparsest per-lesson courses observed: Red Team Workstation & Home Lab Engineering (10 lessons, ~1,261 words), PC Assembly, Repair & Troubleshooting (13, ~1,981 words), and PC Building & Computer Hardware (13, ~2,057 words). **This is a depth warning, not proof that lab assignments are absent**; practical pages have their own content and were not included in those word counts.
+
+Checked **24 distinct local HTML lab resources** linked across **57 original pathway lab entries** (excluding the index.html#lab anchor). Every referenced page existed in the GitHub repository and was nonempty. This checks source presence only, **not live browser functionality, simulations, accessibility, correctness, or hardware proficiency**.
+
+Created `guided-lab-expansion-l6-l7-v1.json` with **eight guided cases / 40 explained steps / 700 minutes suggested practice**, emphasizing isolation, service health, snapshot restore, resource sizing, rules of engagement, synthetic timeline interpretation, backend authorization and executive reporting. These are suggested exercise durations, not measured learner activity. Created `guided-advanced-labs.html`, a responsive, read-only guide with step-by-step explanation, evidence checklist, privacy-aware worksheet and critical failure conditions. Linked the guide from the Level 6 and Level 7 learning pathway entries without changing course IDs, progress, examinations or Firebase. Postchange checks passed: guide JavaScript, main app JavaScript, required lab/evidence schema, workbook links in Levels 6–7, 8 labs × 5 steps, unchanged total of 440 planned hours and no storage writes in the workbook.
+
+**Next priorities:** deepen the ~126-word-per-lesson Red Team Workstation/Home Lab Engineering course and the thin PC repair courses; add reproducible output interpretation and measurable lab grading to each. Test the new workbook on iPhone; independently time a representative student's complete lesson + lab + report cycle, and do not claim academic equivalence based only on the 440-hour plan.
