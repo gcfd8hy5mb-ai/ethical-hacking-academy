@@ -221,6 +221,10 @@
       ],
       "labs": [
         [
+          "Guided Advanced Hands-On Labs",
+          "guided-advanced-labs.html"
+        ],
+        [
           "Red Team Server Lab Builder",
           "red-team-server-lab-builder.html"
         ],
@@ -278,6 +282,10 @@
         "Security Assessment and Reporting Workshop"
       ],
       "labs": [
+        [
+          "Guided Advanced Hands-On Labs",
+          "guided-advanced-labs.html"
+        ],
         [
           "Independent Red Team Engagements",
           "independent-redteam-engagements.html"
