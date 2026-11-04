@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#20292e"><title>Qualification Evidence Board | Ethical Hacking Academy</title>
+<style>
+:root{color-scheme:dark;background:#172126;color:#f3f0e7;font:16px/1.5 system-ui,sans-serif}*{box-sizing:border-box}body{margin:0}main{max-width:980px;margin:auto;padding:20px 16px 72px}a{color:#ebce97}.hero,.panel,.tile{background:#24323a;border:1px solid #5a6b71;border-radius:15px;padding:19px;margin:15px 0}.hero{border-color:#b09665}h1{font-size:clamp(1.8rem,5vw,2.65rem);line-height:1.15}h2{font-size:1.35rem}.kicker{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:bold;color:#e8c88e}.muted,small{color:#bac9ca}input,textarea,button{font:inherit}input[type=file],textarea{display:block;width:100%;padding:12px;border:1px solid #7c9298;border-radius:10px;background:#142127;color:white}textarea{min-height:95px}button{min-height:44px;padding:11px 14px;border:0;border-radius:10px;background:#dec38e;color:#18282d;font-weight:750;cursor:pointer}.secondary{background:#3d545d;color:white;border:1px solid #78909b}.actions{display:flex;flex-wrap:wrap;gap:9px}.layout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tile{margin:0;padding:14px}.tile strong{font-size:1.5rem;display:block}.level{border-top:1px solid #556871;padding:15px 0}.level:last-child{padding-bottom:0}.status{font-weight:bold;color:#efd29b}.error{color:#ffb7a5}label{display:block;margin:10px 0 5px;font-weight:650}.check{display:flex;align-items:start;gap:9px;font-weight:400}.check input{width:auto;margin-top:5px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#142127;padding:12px;border-radius:9px}p{margin:9px 0 14px}@media(max-width:650px){.layout{grid-template-columns:1fr}.panel,.hero{padding:16px}}
+</style></head><body><main>
+<a href="./index.html">← Academy</a> · <a href="./advanced-multistage-assessments.html">Learner assessment</a> · <a href="./advanced-assessor-review.html">Assessor review</a>
+<section class="hero"><div class="kicker">Advanced levels 6–8</div><h1>Qualification evidence board</h1>
+<p>Track written-assessment results, observed lab performance and outstanding remediation in one place. Import one assessor report for each advanced level. This is a <strong>local evidence tracker, not a certificate or an official credential</strong>.</p>
+<p class="muted">A report file can be edited before import. Scores and reviewer names are self-declared and not cryptographically verified. A qualified human must review the underlying work and observe practical skills before any independent sign-off.</p></section>
+<section class="panel"><h2>Import assessor reviews</h2>
+<label for="reports">Select up to three or more exported assessor reports (.json)</label>
+<input id="reports" type="file" accept=".json,application/json" multiple>
+<p id="import-status" role="status" class="muted">No reports imported.</p>
+<div class="actions"><button id="export" type="button">Export evidence summary</button><button id="clear" class="secondary" type="button">Clear this board</button></div>
+<p id="export-status" role="status" class="muted"></p></section>
+<section class="panel"><h2>Advanced readiness</h2><div class="layout" id="metrics"></div><div id="levels"></div></section>
+<section class="panel"><h2>Evidence and retest journal</h2><p class="muted">Record what needs correction; changes here do not rewrite an assessor's grades. Re-import a newly reviewed report after a retest to refresh results.</p><div id="journal"></div></section>
+<section class="panel"><h2>Qualification rules</h2>
+<p>To reach <strong>provisionally reviewed</strong> status, each Level 6, 7 and 8 needs an assessor-identified, attested report with all 16 rubric criteria scored, at least 52 of 64 points, no zero criteria, and an observed adequate result in an authorized lab. Missing evidence, remediation or unobserved exercises prevent provisional readiness. These are internal practice gates, not validated academic or professional standards.</p>
+<p>Formal credentialing and independent competency sign-off are not provided by this app. Recorded scores and report files can be falsified; an independent review must verify the assessor, raw evidence and laboratory demonstration.</p></section>
+</main>
+<script>
+'use strict';
+const storageKey='ethical-hacking-qualification-board-v1',levelIds=[6,7,8],$=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','>':'&gt;',"'":'&#39;'}[c]));
+const load=()=>{try{const o=JSON.parse(localStorage.getItem(storageKey)||'{}');return o&&typeof o==='object'?o:{}}catch{return {}}};
+let state=load();if(!state.reports||typeof state.reports!=='object')state.reports={};if(!state.journal||typeof state.journal!=='object')state.journal={};
+function save(){try{localStorage.setItem(storageKey,JSON.stringify(state));return true}catch{return false}}
+function validate(obj){if(!obj||obj.schema!=='ethical-hacking-assessor-report-v1'||!levelIds.includes(obj.level))throw Error('Unexpected report schema or level');
+if(!Array.isArray(obj.stageReviews)||obj.stageReviews.length!==4)throw Error('Expected exactly four stages');
+const reviews=obj.stageReviews;let total=0,count=0,zero=0;
+for(const stage of reviews){if(!Array.isArray(stage.criteria)||stage.criteria.length!==4)throw Error('Expected four criteria in every stage');
+if(typeof stage.learnerDraft!=='string'||stage.learnerDraft.length>100000)throw Error('Invalid learner draft');
+for(const c of stage.criteria){if(typeof c.criterion!=='string'||c.criterion.length>400)throw Error('Invalid scoring criterion');
+if(c.score===null){continue}if(!Number.isInteger(c.score)||c.score<0||c.score>4)throw Error('Invalid scoring value');
+total+=c.score;count++;if(c.score===0)zero++;}}
+if(typeof obj.reviewer!=='string'||obj.reviewer.length>120||typeof obj.learner!=='string'||obj.learner.length>120||typeof obj.recommendation!=='string'||obj.recommendation.length>20000)throw Error('Invalid report metadata');
+if(!['not-observed','observed-needs-work','observed-adequate'].includes(obj.observation))throw Error('Invalid observation status');
+if(typeof obj.assessorAttestation!=='boolean')throw Error('Missing attestation field');
+return {report:obj,points:total,scored:count,zero,threshold:count===16&&total>=52&&zero===0,validAssessor:!!obj.reviewer.trim()&&obj.assessorAttestation===true,observed:obj.observation==='observed-adequate',level:obj.level};
+}
+function board(){const results=levelIds.map(level=>{const r=state.reports[level];return r?validate(r):null}),complete=results.filter(r=>r?.threshold&&r.validAssessor&&r.observed).length,scored=results.filter(r=>r).length,unresolved=levelIds.filter(level=>state.journal[level]?.trim()).length;
+$('metrics').innerHTML='<div class="tile"><strong>'+scored+'/3</strong><small>Levels with reports</small></div><div class="tile"><strong>'+complete+'/3</strong><small>Internally reviewed levels</small></div><div class="tile"><strong>'+unresolved+'</strong><small>Remediation journal entries</small></div>';
+$('levels').innerHTML=levelIds.map((level,i)=>{const r=results[i],report=r?.report;
+const status=!r?'Missing assessor report':!r.validAssessor?'Assessor identity / attestation incomplete':!r.threshold?'Written criteria require review or remediation':!r.observed?'Practical lab observation not adequate':'Provisional internal review complete';
+return '<div class="level"><h3>Level '+level+'</h3><p class="status">'+esc(status)+'</p>'+(!r?'<p class="muted">Import the Level '+level+' assessor JSON report to begin.</p>':'<p>Written: '+r.points+'/64 points · '+r.scored+'/16 criteria scored · '+r.zero+' zero scores. Practical: '+esc(report.observation)+'.</p><p class="muted">Reviewer: '+esc(report.reviewer||'Not entered')+' · Reviewed date: '+esc(report.reviewDate||'Not supplied')+'</p><p><strong>Assessor remediation:</strong> '+esc(report.recommendation||'None recorded')+'</p>')+'</div>'}).join('');
+$('journal').innerHTML=levelIds.map(level=>'<label for="notes-'+level+'">Level '+level+' · remediation and next authorized retest</label><textarea id="notes-'+level+'" data-journal="'+level+'" placeholder="Record gaps, required evidence, retest scope and reviewer follow-up.">'+esc(state.journal[level]||'')+'</textarea>').join('');
+const ready=complete===3&&unresolved===0;$('metrics').insertAdjacentHTML('beforeend','<div class="tile"><strong>'+(ready?'Yes':'No')+'</strong><small>Provisional evidence gate met</small></div>');
+}
+$('reports').addEventListener('change',async e=>{const files=[...e.target.files];let imported=0;const errors=[];
+for(const f of files){try{if(f.size>1000000)throw Error('File exceeds 1 MB');const obj=JSON.parse(await f.text()),r=validate(obj);
+if(state.reports[r.level]&&state.reports[r.level].learner?.trim()&&obj.learner?.trim()&&state.reports[r.level].learner.trim()!==obj.learner.trim())throw Error('Learner identifier does not match previous imported report for this level');
+state.reports[r.level]=obj;imported++}catch(err){errors.push(f.name+': '+err.message)}}
+const ok=save();$('import-status').textContent=imported+' report(s) imported locally.'+(ok?'':' Local storage unavailable; export before leaving.')+(errors.length?' Errors: '+errors.join(' | '):'');$('import-status').className=errors.length?'error':'muted';board();e.target.value=''});
+$('journal').addEventListener('input',e=>{const n=e.target.dataset.journal;if(!n)return;state.journal[n]=e.target.value;save();const results=levelIds.map(level=>{try{return state.reports[level]?validate(state.reports[level]):null}catch{return null}});const complete=results.filter(r=>r?.threshold&&r.validAssessor&&r.observed).length;const outstanding=levelIds.filter(level=>state.journal[level]?.trim()).length;const tile=$('metrics');if(tile){tile.children[2].querySelector('strong').textContent=outstanding;tile.children[3].querySelector('strong').textContent=complete===3&&outstanding===0?'Yes':'No';}});
+$('export').addEventListener('click',()=>{const output={schema:'ethical-hacking-qualification-evidence-v1',exportedAt:new Date().toISOString(),reports:state.reports,remediationJournal:state.journal,warning:'Imported assessor reports are self-declared files; this is not independently verified certification.'};try{const url=URL.createObjectURL(new Blob([JSON.stringify(output,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='advanced-qualification-evidence.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('export-status').textContent='Evidence summary export initiated. Keep the file private.'}catch{$('export-status').textContent='Export not available on this device.'}});
+$('clear').addEventListener('click',()=>{if(!confirm('Clear only the imported reports and local remediation journal on this device? Academy lessons and exam records will not be touched.'))return;state={reports:{},journal:{}};save();$('import-status').textContent='This board has been cleared.';board()});
+try{for(const id of levelIds){if(state.reports[id])validate(state.reports[id])}}catch{state.reports={};save()}
+board();
+</script></body></html>
