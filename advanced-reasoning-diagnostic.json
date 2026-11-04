@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "title": "Advanced Evidence Reasoning Diagnostic",
+  "passingPercent": 80,
+  "completionNotice": "Optional self-test; not part of historical mastery exam scores or an externally verified certification.",
+  "tracks": [
+    {
+      "title": "Systems and network diagnosis",
+      "level": 3,
+      "questions": [
+        [
+          "An owned VM has a correct IP, can reach its DNS resolver, and resolves api.corp.lab. An HTTP request returns connection refused. Which evidence is most useful next?",
+          [
+            "Replace the resolver because any HTTP error proves faulty DNS",
+            "Change the VM address because an IP response rules out service faults",
+            "Confirm the intended service is listening on the expected address and port"
+          ],
+          2,
+          "Name resolution and routing have worked to some extent. A refusal points toward listener or policy/service behavior; inspect the intended endpoint before changing DNS."
+        ],
+        [
+          "A Linux app service says active, but another VM cannot reach TCP 8000. ss -ltn shows 127.0.0.1:8000. Which explanation best fits?",
+          [
+            "The service listens only on loopback; a second guest needs an approved network-facing listener",
+            "The service must have stopped because active status is unreliable",
+            "The firewall must be open because a process owns the port"
+          ],
+          0,
+          "A loopback bind typically excludes external guest clients; confirm expected bind, isolation and firewall before modifying any settings."
+        ],
+        [
+          "A Windows workstation has a default route but cannot resolve an internal domain controller SRV record with its public resolver. Which action best isolates the problem?",
+          [
+            "Disable the network adapter to trigger automatic domain repair",
+            "Run authorized SRV lookup against the documented internal DNS server and compare replies",
+            "Reset the domain account password and test again"
+          ],
+          1,
+          "Testing the same service record with the approved internal resolver distinguishes internal DNS configuration from account or routing faults."
+        ],
+        [
+          "An isolated VM has no default gateway yet can reach another VM on the same internal subnet. How should you interpret this?",
+          [
+            "Network isolation failed because every VM must have a default route",
+            "All TCP applications are necessarily unreachable without a default route",
+            "Expected if no external routed connectivity is designed"
+          ],
+          2,
+          "Connected routes can support local-segment traffic without an external default route. Inspect additional adapters and hypervisor modes before claiming full isolation."
+        ]
+      ]
+    },
+    {
+      "title": "Identity and application authorization",
+      "level": 5,
+      "questions": [
+        [
+          "Event 4728 documents a temporary privileged group addition under a ticket that expired 30 minutes ago. Membership still exists. What conclusion is best supported?",
+          [
+            "The access has outlasted approval; verify activity and arrange authorized removal",
+            "The event proves a malicious credential compromise",
+            "The approved ticket makes lingering access harmless regardless of policy"
+          ],
+          0,
+          "The observation establishes expired effective privilege and a review need, but intent requires corroborating evidence."
+        ],
+        [
+          "Two test users authenticate to an owned API. User A receives HTTP 200 for B's private invoice, contrary to policy. What does this demonstrate?",
+          [
+            "Evidence that live customer data have been stolen previously",
+            "An object authorization failure under the synthetic test conditions",
+            "A complete bypass of the authentication mechanism"
+          ],
+          1,
+          "Authentication can succeed while authorization fails. Demonstrate both an allowed owner request and a denied cross-user request after remediation."
+        ],
+        [
+          "An app service identity can read and write every object bucket but requires read-only access to one approved bucket. What change best addresses the observed risk?",
+          [
+            "Block SSH to the application host and leave the cloud role unchanged",
+            "Rotate the service credentials without adjusting the role's permissions",
+            "Restrict the service principal's actions and resource scope, then test necessary reads and forbidden writes"
+          ],
+          2,
+          "Identity privileges and management-network exposure are separate controls. Role scope should match required operations."
+        ],
+        [
+          "A scanner reports an HTTP header absent on one route. What should an assessor do before assigning severity?",
+          [
+            "Check the route's intended behavior, exploit prerequisites, compensating controls, and reproducible impact",
+            "Assume the missing header caused a data breach",
+            "Apply the maximum severity because scanning is objective"
+          ],
+          0,
+          "Configuration observations require context. A missing header by itself does not establish feasible exploitation or organizational impact."
+        ]
+      ]
+    },
+    {
+      "title": "Cloud operations and recovery",
+      "level": 6,
+      "questions": [
+        [
+          "A training cloud policy exposes management TCP/22 to all sources; an old vendor exception has expired. There is no evidence of login abuse. How should this be reported?",
+          [
+            "Mark the risk resolved because application uptime is healthy",
+            "Document excessive reachability and propose scoped rollback without claiming compromise",
+            "Declare confirmed intrusion because open administrative ports imply exploitation"
+          ],
+          1,
+          "An exposure finding is valid independently of exploitation. A controlled change should retain approved admin access and verify denied lab-only paths."
+        ],
+        [
+          "Thirty nightly backup jobs show success, but no complete restore has been performed in 14 months. What conclusion is justified?",
+          [
+            "RTO is guaranteed because the scheduler reports job success",
+            "RPO is zero because snapshots run every night",
+            "Backup creation is documented; application recovery time and data integrity remain unverified"
+          ],
+          2,
+          "RTO/RPO require testing recovered application dependencies, data age and actual time to resume service."
+        ],
+        [
+          "An admin-only management VM should reach a disposable test service; a second guest on a restricted segment should not. What is the best verification design?",
+          [
+            "Test positive access from the owned admin VM and negative access from an owned restricted lab guest",
+            "Test public IPs until a deny rule appears",
+            "Infer the ACL works from its policy name without testing"
+          ],
+          0,
+          "Controlled positive and negative lab-only tests show effective access decisions without crossing authorization boundaries."
+        ],
+        [
+          "A configuration diff shows a storage policy changed from one bucket to wildcard access. What is still unknown?",
+          [
+            "Which resource name was written in the diff",
+            "Whether the widened access was exercised or caused data exposure",
+            "Whether the configuration text is different from baseline"
+          ],
+          1,
+          "A diff proves policy drift, not historical use or exploitation. Review activity logs and change approvals with measured confidence."
+        ]
+      ]
+    },
+    {
+      "title": "Professional engagement and retesting",
+      "level": 8,
+      "questions": [
+        [
+          "A finding states an owned lab API allowed one unauthorized object read. Which report wording is most defensible?",
+          [
+            "All data in the system are compromised because a single endpoint failed",
+            "The issue is theoretical because only one request was observed",
+            "The provided controlled request violated policy; history and external impact remain unverified"
+          ],
+          2,
+          "A reproducible violation is evidence of the specific flaw while the broader blast radius requires additional authorized investigation."
+        ],
+        [
+          "A remediation ticket says the API added ownership checks. What minimum acceptance evidence supports closing the finding?",
+          [
+            "The deployed test build permits authorized owner access and denies cross-user access with recorded results",
+            "The developer confirmed a source-code change was merged",
+            "The staging deployment completed without errors"
+          ],
+          0,
+          "Both positive and negative behavior tests matter; deployment status and intent cannot substitute for observed access control."
+        ],
+        [
+          "A reviewer sees the student changed their report after a prior review. What is the correct handling?",
+          [
+            "Delete the original evidence to avoid confusion",
+            "Flag the old decision as stale and review the revised supporting evidence",
+            "Carry over the prior approval without inspection because the student is the same"
+          ],
+          1,
+          "Evidence and reviewer decisions must be tied to a stable version or revalidated after material edits."
+        ],
+        [
+          "A fictional incident includes an approved group change, an unrelated DNS outage and a single failed login. What avoids unsupported attribution?",
+          [
+            "Treat all events within an hour as proof of one attack",
+            "Ignore the change ticket because legitimate actions never produce alerts",
+            "Create a normalized evidence timeline, distinguish independent causes, and state competing hypotheses"
+          ],
+          2,
+          "Temporal proximity alone does not establish causality or intent. Cross-source identifiers, authorization records and counterevidence improve conclusions."
+        ]
+      ]
+    }
+  ]
+}
