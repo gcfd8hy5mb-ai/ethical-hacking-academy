@@ -1,0 +1,612 @@
+{
+  "version": 2,
+  "sourceVersion": 7,
+  "passingPercent": 80,
+  "description": "Versioned updated assessment bank. Legacy exam scores are kept separate.",
+  "exams": [
+    {
+      "title": "Foundations Mastery Examination — Revised V2",
+      "originalExamIndex": 0,
+      "courses": [
+        "Getting Comfortable With Computers",
+        "Beginner Linux and Terminal Skills",
+        "Digital Identity and Everyday Security"
+      ],
+      "questions": [
+        [
+          "A backup is synced to the same folder and deletes everywhere. What is missing?",
+          [
+            "A versioned independent backup",
+            "A second copy inside the same synchronized folder",
+            "An occasional manual copy kept on the same physical device"
+          ],
+          0,
+          "A synced folder can replicate deletions and corruption. A versioned copy stored independently and tested for restoration avoids sharing that failure."
+        ],
+        [
+          "A filename ends in .pdf.exe. What is the most defensible interpretation?",
+          [
+            "Possible executable masquerading as document",
+            "An ordinary PDF because .pdf appears inside the name",
+            "An executable only if the file icon looks unusual"
+          ],
+          0,
+          "On typical Windows systems .exe is the executable extension; .pdf earlier in the name may disguise intent. The suffix warrants scrutiny, not a conclusion of malware."
+        ],
+        [
+          "What does a simulated terminal's pwd output establish?",
+          [
+            "The simulator's working directory",
+            "The operating system's real current directory",
+            "The directory of the remote training server"
+          ],
+          0,
+          "The Academy simulator returns predetermined educational output, not shell state from your phone or an accessible real machine."
+        ],
+        [
+          "Which is an example of least privilege?",
+          [
+            "Read-only access to needed reports",
+            "Write access to all team files because the trainee is employed there",
+            "Administrator access restricted to one named trainee"
+          ],
+          0,
+          "Least privilege means granting only the reports and actions needed for the stated task, not broad access based on team membership."
+        ],
+        [
+          "Why do unique passwords matter?",
+          [
+            "Breach reuse is contained",
+            "Different passwords guarantee that multifactor authentication is unnecessary",
+            "Different passwords prevent reuse and phishing of every session"
+          ],
+          0,
+          "Unique credentials reduce compromise propagation between services; MFA and phishing-resistant practices still matter."
+        ],
+        [
+          "A message requests a login code urgently. What should you do?",
+          [
+            "Verify independently; do not disclose the code",
+            "Submit the code only when the message names the correct service",
+            "Open the attached link to check whether the request is authentic"
+          ],
+          0,
+          "An unsolicited verification-code request should be treated as suspicious; independently access the legitimate service rather than following the request."
+        ]
+      ]
+    },
+    {
+      "title": "Systems and Networks Examination — Revised V2",
+      "originalExamIndex": 1,
+      "courses": [
+        "Windows Administration and Security",
+        "Networking Practice and Troubleshooting",
+        "Programming Logic for Security Beginners"
+      ],
+      "questions": [
+        [
+          "Two machines are 192.168.40.10 and 192.168.40.20 on /24. Are they generally on the same subnet?",
+          [
+            "Yes",
+            "No, because the final address octets are different",
+            "Only if each client has the same router configured"
+          ],
+          0,
+          "A /24 prefix puts both 192.168.40.x addresses in the same IP network, though that alone does not prove firewall or service reachability."
+        ],
+        [
+          "A name fails to resolve while approved IP connectivity succeeds. Investigate?",
+          [
+            "DNS",
+            "Inspect default gateway settings before reviewing resolver output",
+            "Inspect only application-session cookies first"
+          ],
+          0,
+          "IP connectivity succeeding while hostname resolution fails points to resolver configuration, DNS records or DNS service reachability."
+        ],
+        [
+          "A process uses high CPU after an update. What next?",
+          [
+            "Identify the process and workload",
+            "Restart the process before checking its expected workload",
+            "Treat the CPU spike as evidence that malicious code ran"
+          ],
+          0,
+          "High CPU is a symptom; identify the owning process, baseline, timing and workload before proposing an approved change."
+        ],
+        [
+          "What is the effect of count = count + 1 when count begins at 3?",
+          [
+            "4",
+            "3",
+            "2"
+          ],
+          0,
+          "Increment the stored value by one. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "A web client changes its user role display. Who must verify data access?",
+          [
+            "The trusted server",
+            "The current browser role field after its next refresh",
+            "The navigation component that hides privileged functions"
+          ],
+          0,
+          "A user controls browser state and UI. Trusted server-side logic must authorize requests against the authenticated user and resource."
+        ],
+        [
+          "What is a consequence of granting shared administrator credentials?",
+          [
+            "Poor accountability and excess privilege",
+            "Greater accountability because all actions share a known account name",
+            "More precise least privilege because one account is easier to configure"
+          ],
+          0,
+          "Shared privileged logins make accountability difficult and expand the impact of credential exposure. Use individually attributable roles."
+        ]
+      ]
+    },
+    {
+      "title": "Security Operations and Reporting Examination — Revised V2",
+      "originalExamIndex": 2,
+      "courses": [
+        "Cybersecurity Foundations",
+        "Security Operations and Incident Response",
+        "Security Analysis and Professional Practice",
+        "Defensive Web and Cloud Fundamentals",
+        "Cybersecurity Case Studies and Decision-Making"
+      ],
+      "questions": [
+        [
+          "A test host is outside a written scope. What is appropriate?",
+          [
+            "Do not test it without authorization",
+            "Passive tests are permissible without approval because they do not change state",
+            "Testing can begin if a DNS name resembles an in-scope asset"
+          ],
+          0,
+          "Authorization must cover the target and techniques. Do not probe out-of-scope systems, even using seemingly read-only tools."
+        ],
+        [
+          "You find one unsuccessful authentication event. What is established?",
+          [
+            "One failure was recorded; cause remains uncertain",
+            "The record confirms a password compromise occurred",
+            "The record establishes the user intentionally entered wrong credentials"
+          ],
+          0,
+          "A failed login event proves the recorded authentication outcome only. Determine identity, cause and intent through corroborating evidence."
+        ],
+        [
+          "What should a professional finding include?",
+          [
+            "Reproducible authorized evidence, impact and remediation",
+            "A vulnerability classification and its presumed worst-case impact",
+            "A scanner result without steps to reproduce or validate it"
+          ],
+          0,
+          "A useful finding links scoped evidence, observed conditions, business impact, correction and measurable retest criteria."
+        ],
+        [
+          "Who typically configures application access in a cloud deployment?",
+          [
+            "The application owner",
+            "The infrastructure provider defines all custom application access roles",
+            "The browser enforces data grants without server checks"
+          ],
+          0,
+          "Under shared responsibility, application owners generally configure their own users, privileges and access policy."
+        ],
+        [
+          "A purported supplier changes banking details via email. What is the safest response?",
+          [
+            "Verify over a known independent channel",
+            "Verify by replying to the same email conversation",
+            "Use the invoice attachment to validate the proposed new bank details"
+          ],
+          0,
+          "A compromised email thread may present consistent false claims. Verify changes using previously established independent contact information."
+        ],
+        [
+          "What does a remediation verification establish?",
+          [
+            "Whether the affected condition was actually resolved",
+            "That no future incident is possible",
+            "That no testing is needed"
+          ],
+          0,
+          "Closure requires evidence and acknowledgement of limits. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ]
+      ]
+    },
+    {
+      "title": "Enterprise Identity and Linux Administration Exam — Revised V2",
+      "originalExamIndex": 3,
+      "courses": [
+        "Enterprise Identity and Access Management",
+        "Linux System Administration Lab Theory"
+      ],
+      "questions": [
+        [
+          "A service account backs up one project. What permission is most appropriate?",
+          [
+            "Write to the required backup destination only",
+            "Project-wide administrator access for the backup schedule",
+            "Read and write access to every project's source and destination"
+          ],
+          0,
+          "A service identity needs narrowly scoped destination permissions for its job, with restoration and administrator access separately governed."
+        ],
+        [
+          "An employee leaves but active sessions remain. What is required?",
+          [
+            "Revoke applicable sessions and access",
+            "Disable interactive login but leave current tokens active until expiry",
+            "Change the employee's displayed name and preserve delegated sessions"
+          ],
+          0,
+          "Account offboarding also requires revocation of sessions, delegated access and relevant credentials, not merely a profile update."
+        ],
+        [
+          "On a typical Linux file, what does mode 640 allow its group?",
+          [
+            "Read but not write",
+            "Full execution and modification",
+            "No access"
+          ],
+          0,
+          "The middle digit 4 represents group read permission. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "What is a sensible pre-update control?",
+          [
+            "Backup and test with rollback plan",
+            "Disable every security alert",
+            "Apply changes to production without review"
+          ],
+          0,
+          "Maintenance requires validation and recovery planning. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "A service consumes high CPU at its scheduled backup time. Best inference?",
+          [
+            "Investigate context before diagnosing compromise",
+            "Restart the backup process and assume its CPU usage is malicious",
+            "Assume the scheduling correlation proves all behavior is authorized"
+          ],
+          0,
+          "Time-of-day correlation is useful context but not proof. Review job ownership, workload and logs before asserting a cause."
+        ],
+        [
+          "What is a useful access audit record?",
+          [
+            "Grant, approver, purpose, and review date",
+            "Plaintext password",
+            "Unrelated personal documents"
+          ],
+          0,
+          "Audit evidence should explain who authorized access without collecting secrets. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ]
+      ]
+    },
+    {
+      "title": "Web Application and Cloud Security Exam — Revised V2",
+      "originalExamIndex": 4,
+      "courses": [
+        "Web Application Security Fundamentals",
+        "Cloud Infrastructure Security"
+      ],
+      "questions": [
+        [
+          "Who must decide whether a student can read another student's grades?",
+          [
+            "Trusted API or database rules",
+            "Browser session storage after it receives the displayed role",
+            "A menu element hidden by client code for nonadministrators"
+          ],
+          0,
+          "The server or data layer must enforce authorization. Client-side display or flags can be modified and are not trust boundaries."
+        ],
+        [
+          "What reduces database query injection risks?",
+          [
+            "Parameterized queries",
+            "Client-only validation of what a user types into a form",
+            "Escaping characters manually inside concatenated SQL statements"
+          ],
+          0,
+          "Prepared parameterized queries separate parameters from SQL grammar and reduce injection risk in values. Proper authorization still matters."
+        ],
+        [
+          "A browser uses automatically sent session cookies for modifying requests. What threat deserves consideration?",
+          [
+            "Cross-site request forgery",
+            "Session fixation even when session IDs are rotated correctly",
+            "Clickjacking even when the page cannot be framed"
+          ],
+          0,
+          "Automatically included session cookies enable CSRF in some state-changing workflows absent suitable anti-CSRF controls."
+        ],
+        [
+          "Where should privileged service credentials reside?",
+          [
+            "Restricted server-side secret storage",
+            "An encrypted string shipped inside the public JavaScript bundle",
+            "A secret value embedded in a publicly downloadable source map"
+          ],
+          0,
+          "Anything delivered to browsers is exposed to users. Keep privileged credentials in restricted server-side secret storage."
+        ],
+        [
+          "What does RPO describe?",
+          [
+            "Acceptable data loss measured in time",
+            "The maximum acceptable time the service can remain unavailable",
+            "The interval between backup jobs irrespective of data loss"
+          ],
+          0,
+          "RPO quantifies acceptable loss of recent data measured back from failure; RTO instead measures restoration-time limits."
+        ],
+        [
+          "Why separate public materials from private submissions?",
+          [
+            "Different data classes require different access controls",
+            "To change typography",
+            "So everyone can administer the database"
+          ],
+          0,
+          "Classification guides effective grants. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ]
+      ]
+    },
+    {
+      "title": "Security Assessment and Executive Reporting Exam — Revised V2",
+      "originalExamIndex": 5,
+      "courses": [
+        "Security Assessment and Reporting Workshop"
+      ],
+      "questions": [
+        [
+          "A production endpoint is not in the authorized assessment scope. What next?",
+          [
+            "Request scope approval and refrain from testing",
+            "Perform a read-only connectivity check before requesting scope approval",
+            "Test only the endpoint's public status page to infer permission"
+          ],
+          0,
+          "An endpoint absent from written scope must not be tested until approval expands the engagement."
+        ],
+        [
+          "An analyst has a synthetic screenshot of a denied grade request. What is established?",
+          [
+            "The simulated request was denied",
+            "All production records are protected from this class of request",
+            "The simulated screenshot proves the real service has no alternate access paths"
+          ],
+          0,
+          "Synthetic evidence supports only the observed simulation. It cannot certify production authorization or other resources."
+        ],
+        [
+          "Which finding is most reproducible?",
+          [
+            "Named asset, observed condition, method, impact, and retest",
+            "A severity rating and a claim about systemic insecurity",
+            "A vendor advisory without an affected asset or retest method"
+          ],
+          0,
+          "Reproducible findings identify scope, asset, steps, exact observations, impact, mitigation and a retest."
+        ],
+        [
+          "A patch was installed. What is necessary for closure?",
+          [
+            "Authorized verification of the original issue and functionality",
+            "Delete the ticket",
+            "Assume all risks vanished"
+          ],
+          0,
+          "Retesting checks the outcome and regressions. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "Two findings share a severity score. How should they be prioritized?",
+          [
+            "Exposure and business impact",
+            "Alphabetical order",
+            "Length of vulnerability name"
+          ],
+          0,
+          "Operational risk is contextual. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "What does a board-level report need?",
+          [
+            "Options, evidenced impact, tradeoffs, and uncertainty",
+            "Only raw logs",
+            "Guarantee of zero future incidents"
+          ],
+          0,
+          "Executives need decision-ready information. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ]
+      ]
+    },
+    {
+      "title": "Ethical Hacking Hardware Knowledge Examination — Revised V2",
+      "originalExamIndex": 6,
+      "courses": [
+        "Ethical Hacking Hardware Foundations"
+      ],
+      "questions": [
+        [
+          "A hardware tool is capable of radio transmission. What determines whether a specific use is permissible?",
+          [
+            "Applicable law, authorized scope and operating constraints",
+            "The manufacturer's marketing description of typical intended use",
+            "Retail purchase and possession of the device"
+          ],
+          0,
+          "Legal and authorized boundaries apply irrespective of tool capability, availability or intended application."
+        ],
+        [
+          "Which statement best describes a browser-only hardware exercise?",
+          [
+            "Conceptual simulation, not proof of physical operation",
+            "Proof of competent operation on the physical device",
+            "A reproducible calibration record from a laboratory instrument"
+          ],
+          0,
+          "Browser exercises establish reasoning in a simulation, not verified equipment-operation skill."
+        ],
+        [
+          "A fictional RFID reader accepts any matching card identifier. What's the concern?",
+          [
+            "Identifier-only checks may not prove possession of a protected credential",
+            "Proof that the presented card holds a cryptographic credential",
+            "An assurance that a displayed identifier cannot be copied"
+          ],
+          0,
+          "Static identifiers may be replayed or copied. Authentication strength depends on cryptographic proof and implementation."
+        ],
+        [
+          "A USB device appears as a new keyboard. Which defensive idea is relevant?",
+          [
+            "Device-control policies and endpoint event review",
+            "DNS filtering as the primary control against unexpected keyboard devices",
+            "Data retention policies on centralized backup servers"
+          ],
+          0,
+          "Unexpected USB input devices require endpoint awareness, controlled peripheral policies and event investigation."
+        ],
+        [
+          "A sample digital trace changes at 12 μs and 20 μs. What is the interval?",
+          [
+            "8 μs",
+            "32 μs",
+            "240 μs"
+          ],
+          0,
+          "20 minus 12 equals eight microseconds. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "An SDR student's antenna is connected but transmission parameters are unknown. What is safest?",
+          [
+            "Use offline synthetic data and verify compliance before live RF tests",
+            "Transmit on an apparently quiet frequency without documented approval",
+            "Increase output power until the authorized receiver responds"
+          ],
+          0,
+          "RF use is constrained by regulations and interference risk. Use simulated or shielded authorized environments until compliance is verified."
+        ],
+        [
+          "A firmware package comes from an unverified link. What should the learner do?",
+          [
+            "Verify publisher, provenance and integrity",
+            "Assume a device driver cannot be harmful",
+            "Disable all system protection"
+          ],
+          0,
+          "Firmware is software and may affect device trust. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "An approved wired appliance lab connects to a switch. What should be documented?",
+          [
+            "Ports, topology, boundaries, expected traffic and shutdown procedure",
+            "Nearby private passwords",
+            "Unrelated employee profiles"
+          ],
+          0,
+          "A controlled lab needs clear scope and safety controls. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ]
+      ]
+    },
+    {
+      "title": "Windows Linux and Network Troubleshooting Exam — Revised V2",
+      "originalExamIndex": 7,
+      "courses": [
+        "Windows Administration and Security",
+        "Beginner Linux and Terminal Skills",
+        "Networking Practice and Troubleshooting"
+      ],
+      "questions": [
+        [
+          "192.168.40.25/24 belongs to which network?",
+          [
+            "192.168.40.0/24",
+            "192.168.41.0/24",
+            "192.168.40.25/32"
+          ],
+          0,
+          "A /24 uses the first three octets for the network prefix. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "What is the conventional broadcast address of 192.168.40.0/24?",
+          [
+            "192.168.40.255",
+            "192.168.40.1",
+            "192.168.41.255"
+          ],
+          0,
+          "The final eight host bits are ones in the broadcast address. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "The gateway responds but the hostname does not resolve. Which next check is most focused?",
+          [
+            "Compare resolver configuration and DNS results",
+            "Change the default gateway before checking the configured DNS server",
+            "Investigate browser content caching before testing name resolution"
+          ],
+          0,
+          "When IP connectivity works but names fail, examine resolver settings and DNS lookup results before touching routing."
+        ],
+        [
+          "What access does file mode 640 grant the group on an ordinary Linux file?",
+          [
+            "Read only",
+            "Read and write",
+            "Execute only"
+          ],
+          0,
+          "The group digit 4 grants read access. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "A Windows sign-in failure appears in Event Viewer. What can be concluded?",
+          [
+            "A failed authentication event was recorded",
+            "Credentials were stolen",
+            "Malware was installed"
+          ],
+          0,
+          "An event's recorded outcome does not establish malicious intent. Distinguish the observed evidence and its limits from more sweeping conclusions; explain why the alternatives do not follow."
+        ],
+        [
+          "What is a good method for studying an unfamiliar Windows startup program?",
+          [
+            "Review publisher, expected role and authorized device records",
+            "Disable the startup item immediately to see whether the machine improves",
+            "Assume an unknown name demonstrates an unauthorized persistence mechanism"
+          ],
+          0,
+          "Observe the publisher, path, signed identity, expected function and context before modifying startup behavior."
+        ],
+        [
+          "Which is the best verification after an approved firewall change?",
+          [
+            "Confirm intended traffic works and denied traffic stays blocked",
+            "Check only that the new firewall rule was saved successfully",
+            "Confirm allowed traffic and infer untested denied paths must also be blocked"
+          ],
+          0,
+          "Effective firewall validation requires positive allowed and negative denied tests within permitted lab boundaries."
+        ],
+        [
+          "What is a correct interpretation of the academy's simulated Linux terminal?",
+          [
+            "It models selected commands without operating the phone's real shell",
+            "A real operating-system shell running with the iPhone's privileges",
+            "A live connection to the learner's roommate's device"
+          ],
+          0,
+          "The simulator interprets a limited set of training commands locally; it cannot execute real shell commands or inspect external computers."
+        ]
+      ]
+    }
+  ]
+}
