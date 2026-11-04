@@ -3,7 +3,7 @@ import { mountDiagnosticLabs } from './diagnostic-labs-ui.js';
 import { mountSimulations } from './simulations-ui.js';
 import { mountInvestigations } from './investigations-ui.js';
 import { mountAssignments } from './assignments-ui.js';
-import { mountExams } from './exams-ui.js';
+import { mountExams } from './exams-ui.js?v=answer-shuffle-v2-20261103';
 import { mountLabs } from './labs-ui.js';
 const root=document.querySelector('#app');
 let workedKeys=[],catalog,examCatalog=null,courseIndex=0,lessonIndex=0,screen='home',selected=-1,graded=false,learningPath=null,levelIndex=0;
