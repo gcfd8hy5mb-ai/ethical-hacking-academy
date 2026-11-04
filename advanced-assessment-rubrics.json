@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "note": "Curriculum scenarios and qualitative reviewer criteria; not verified assessment results.",
+  "tracks": [
+    {
+      "level": 6,
+      "title": "Isolated lab outage and recovery",
+      "brief": "A fictional company training lab has a Windows VM, Linux service VM, internal DNS VM, and an offline hypervisor. After changes to a virtual switch, the Windows VM can no longer open the internal application. All systems are owned by your lab; no production network access is authorized.",
+      "stages": [
+        {
+          "title": "Establish scope and baseline",
+          "evidence": "Host RAM 16 GB, host use 5 GB, Windows guest 6 GB, Linux guest 4 GB, DNS guest 2 GB. Virtual switch changed from host-only to bridged at 14:05. No external network connectivity is part of the approved lab scope.",
+          "prompt": "Calculate the requested memory budget and headroom. Name two safety concerns, record what must not be tested, and describe the first reversible action.",
+          "tools": "Linux host: free -h; ip -br addr; ip route. Windows guest: Get-NetAdapter; Get-NetIPConfiguration.",
+          "interpret": "Guest memory requests total 12 GB and host use adds 5 GB = 17 GB, exceeding 16 GB before overhead. Bridged networking may violate isolation. Inspect before changing anything.",
+          "criteria": [
+            "Correct memory arithmetic and overhead caveat",
+            "Clear authorized scope and isolation boundary",
+            "Reversible step with saved configuration",
+            "At least two relevant command outputs described"
+          ]
+        },
+        {
+          "title": "Differentiate failure modes",
+          "evidence": "Windows VM has 10.40.0.22/24 and gateway 10.40.0.1. Linux service is 10.40.0.80; DNS is 10.40.0.53. Ping to gateway succeeds. `Resolve-DnsName app.lab.example -Server 10.40.0.53` times out. `Test-NetConnection 10.40.0.80 -Port 443` succeeds.",
+          "prompt": "Give at least three competing hypotheses and an evidence-driven testing order. Explain what each observation proves and does not prove.",
+          "tools": "Windows PowerShell (lab only): Resolve-DnsName app.lab.example -Server 10.40.0.53; Test-NetConnection 10.40.0.80 -Port 443. Linux (lab only): dig @10.40.0.53 app.lab.example.",
+          "interpret": "A DNS timeout can indicate DNS service, route, firewall, or interface failure; successful TCP/443 by IP narrows but does not prove the app works. ICMP alone is insufficient.",
+          "criteria": [
+            "Distinguishes DNS, transport and application",
+            "Uses controls or comparisons for hypotheses",
+            "Acknowledges limits of ICMP and TCP tests",
+            "Keeps all probes inside lab addresses"
+          ]
+        },
+        {
+          "title": "Plan repair and retest",
+          "evidence": "Switch rollback to host-only restores reachability to DNS, but the name now resolves to 10.40.0.81 instead of expected 10.40.0.80. The application itself answers HTTP 200 on 10.40.0.80.",
+          "prompt": "Describe two separate faults, their likely owners, the smallest safe fixes, and objective closure criteria.",
+          "tools": "Snapshot switch config; use internal DNS admin console to review A record; retest name-to-IP resolution and application response after approved correction.",
+          "interpret": "Network isolation restoration is not the same as correcting a wrong DNS record. Record the initial and final state. Prefer authorized, change-controlled updates.",
+          "criteria": [
+            "Identifies two independent faults",
+            "Separates network and DNS repairs",
+            "Shows before/after validation",
+            "Includes rollback and evidence preservation"
+          ]
+        },
+        {
+          "title": "Write the professional incident record",
+          "evidence": "14:05 switch change; 14:08 name lookup fails; 14:12 IP-based TCP succeeds; 14:20 host-only restored; 14:25 wrong A record identified; 14:37 corrected and tested.",
+          "prompt": "Deliver a concise technical timeline, root-cause statement with confidence, impact, prevention, change approval, and retest evidence. Distinguish direct observations from inferences.",
+          "tools": "Use a structured incident report; export your own lab config and test outputs with timestamps.",
+          "interpret": "Do not claim the DNS record was changed by the switch operation without evidence. Two faults may be independent.",
+          "criteria": [
+            "Chronology is internally consistent",
+            "Separates fact from causal inference",
+            "Includes impact and owners",
+            "Explicit verification and preventive controls"
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "title": "Identity alert and authorization assessment",
+      "brief": "An instructor-generated enterprise log bundle shows an unusually privileged deployment account. You are an authorized read-only analyst. Do not attempt account access, secret extraction, or live role changes.",
+      "stages": [
+        {
+          "title": "Define hypotheses and evidence",
+          "evidence": "At 09:00 a deployment ticket is approved. At 09:07 svc-release gets a broad admin role. At 09:12 a successful sign-in appears from an unfamiliar device; the record contains workload identity `pipeline-8`. A different account had a failed sign-in at 09:10.",
+          "prompt": "Separate observations from assumptions. Give a benign explanation, a malicious explanation, and the minimum corroborating records needed for each.",
+          "tools": "Review synthetic CSV or JSON sign-in/role logs by identity, timestamp and ticket ID; do not contact live accounts.",
+          "interpret": "A new device or unusual role is a reason to investigate, not proof of compromise. The failed sign-in from another account is not necessarily related.",
+          "criteria": [
+            "Competing hypotheses with confidence",
+            "Correlates identity and ticket fields",
+            "Avoids unsupported attribution",
+            "Preserves read-only scope"
+          ]
+        },
+        {
+          "title": "Reconcile contradictory entries",
+          "evidence": "Ticket permits role elevation until 09:20. Token issued at 09:08 expires at 10:08. Role-removal event logged 09:21. At 09:35 an API call using the earlier token succeeds on a low-impact endpoint.",
+          "prompt": "Explain why role removal may not invalidate a previously issued token immediately. Define which token claim, audience and server authorization behaviors need checking.",
+          "tools": "Inspect fictional JWT header/payload fields without accepting them as verified truth; compare server-side audit records and token expiration. Never paste real secrets into the exercise.",
+          "interpret": "Claims and expiration are evidence about a token, not automatic proof that the API re-checks current permissions. Revocation semantics depend on implementation.",
+          "criteria": [
+            "Explains token lifecycle uncertainty",
+            "Asks for server-side corroboration",
+            "Distinguishes access from privilege",
+            "Avoids inspecting real secrets"
+          ]
+        },
+        {
+          "title": "Prioritize containment and prevention",
+          "evidence": "Account permissions exceed documented deployment needs. No confirmed harmful action exists. Operations requires production continuity.",
+          "prompt": "Recommend proportional immediate actions, an approved least-privilege redesign and measures to avoid disrupting deployments.",
+          "tools": "Draft change-control request, permission inventory, temporary credential handling policy and monitoring queries on synthetic logs.",
+          "interpret": "Do not revoke critical production identity unilaterally; coordinate with account owner and incident responders. Restrict scope, shorten elevation and log approval.",
+          "criteria": [
+            "Least privilege is actionable",
+            "Balances continuity and protection",
+            "Names authority for changes",
+            "Includes monitoring and rollback"
+          ]
+        },
+        {
+          "title": "Prepare two audiences",
+          "evidence": "Evidence is incomplete; change records and logs have differing timezones. A manager requests an executive summary and engineers request technical reproduction steps.",
+          "prompt": "Write an executive summary and a technical appendix. Provide confidence, timeline timezone normalization, evidence gaps, accountable owners and clear success measures.",
+          "tools": "Use audit log export, a written timeline and risk register; no live assessment required.",
+          "interpret": "Say 'suspected' when unverified. Keep personally sensitive log data minimized.",
+          "criteria": [
+            "Manager-readable risk summary",
+            "Specific technical evidence references",
+            "Uncertainty and privacy safeguards",
+            "Measurable closure criteria"
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "title": "Independent enterprise response capstone",
+      "brief": "A fictional assessment panel supplies a mixed evidence package: production-like application failures, DNS errors, an automation role change and maintenance activity. The only permitted environment is a local or browser-based simulation, and the capstone tests reasoning and reporting, not offensive access.",
+      "stages": [
+        {
+          "title": "Triage without a narrative shortcut",
+          "evidence": "09:10 maintenance starts; 09:12 automation role expands; 09:14 DNS error rate increases; 09:16 app availability drops; 09:18 storage IO rises. Times are local to two different regions and require normalization.",
+          "prompt": "List three independent root-cause hypotheses, their expected evidence, a severity rationale and the limits of the event ordering.",
+          "tools": "Create a timeline in UTC from supplied timezone offsets. Use read-only application, DNS and identity report extracts.",
+          "interpret": "The displayed ordering cannot establish cause if clocks and timezones differ. Prioritize availability and potential identity misuse without assuming one caused the other.",
+          "criteria": [
+            "Three plausible independent hypotheses",
+            "Clock normalization explicitly considered",
+            "Severity based on business effects",
+            "Evidence-preserving triage"
+          ]
+        },
+        {
+          "title": "Interpret the supplied measurements",
+          "evidence": "Of 200 labelled simulated alerts, 20 are true incidents. The detection rule flags 32, of which 12 are true positives. Resolver errors fall to normal after a route rollback, but elevated storage IO remains.",
+          "prompt": "Calculate precision, recall, false positives and false negatives. Explain why one successful fix does not close the whole incident.",
+          "tools": "Python on fictional data: tp=12; flagged=32; actual=20; print(tp/flagged,tp/actual,flagged-tp,actual-tp).",
+          "interpret": "Precision=37.5%, recall=60%, FP=20, FN=8. Storage IO remains a separate signal needing investigation; a DNS fix does not explain everything.",
+          "criteria": [
+            "All four metrics correct",
+            "Does not conflate accuracy and precision",
+            "Treats remaining IO as open issue",
+            "Offers a discriminating next test"
+          ]
+        },
+        {
+          "title": "Make a controlled recovery decision",
+          "evidence": "Rollback option A restores the prior network route but leaves the widened identity role active. Option B revokes the automation role without confirmed credential compromise but may interrupt billing. Option C temporarily reduces application concurrency while preserving logs.",
+          "prompt": "Rank immediate containment and recovery options under explicit assumptions, and identify what approvals are needed. Give rollback triggers and observability criteria.",
+          "tools": "Change authorization matrix, snapshot inventory, role ownership list, incident bridge, error-budget dashboard and fictional command outputs.",
+          "interpret": "There is no universal correct sequence without business criticality and additional evidence. Justify risk trade-offs and make any action reversible where possible.",
+          "criteria": [
+            "Trade-offs are evidence based",
+            "No unsanctioned production action",
+            "Rollback triggers are clear",
+            "Business and security owners identified"
+          ]
+        },
+        {
+          "title": "Defend your decision to a reviewer",
+          "evidence": "An assessor challenges the diagnosis: route rollback normalized DNS but the app still intermittently fails; a deployment token has not expired. No additional tests are permitted.",
+          "prompt": "Produce an executive report and a technical appendix. State what remains unresolved, the next authorized evidence request, the confidence level of every conclusion, and when you would stop.",
+          "tools": "Use the supplied fictional evidence only and a clear report structure: scope, observations, inferences, risk, actions, verification, open questions.",
+          "interpret": "Strong performance includes acknowledging uncertainty, not inventing lab results, resisting pressure to claim complete remediation, and keeping security boundaries intact.",
+          "criteria": [
+            "Explains unresolved symptoms",
+            "Defends conclusions against contradictions",
+            "Details next authorized evidence requests",
+            "Communicates clear limitations"
+          ]
+        }
+      ]
+    }
+  ]
+}
