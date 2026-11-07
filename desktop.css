@@ -1,0 +1,28 @@
+/* Ethical Hacking Academy desktop presentation; preserve iPhone behavior. */
+@media(min-width:960px){
+ body{background:#ece6dc;color:#202b2d}
+ #app .wrap{max-width:1380px;width:calc(100% - 300px);margin:0 38px 0 250px;padding:38px clamp(24px,3vw,52px) 90px}
+ #app .top{padding:0 0 24px;margin-bottom:32px;border-bottom:1px solid #c3b397}
+ #app .top .brand{font-size:25px}
+ #app .hero{padding:40px 46px;border-radius:20px;background:linear-gradient(120deg,#182b34,#253d45);min-height:245px}
+ #app .hero h1{font-size:clamp(37px,3vw,53px)}
+ #app .hero p{font-size:17px;max-width:740px}
+ #app .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+ #app .tile,#app .course,#app .sheet{padding:26px;border-radius:16px}
+ #app .tile strong{font-size:20px}
+ #app .course-body strong{font-size:20px}
+ #app .body{font-size:18px;line-height:1.85;max-width:90ch}
+ #app .lesson-section{padding:20px 24px}
+ #app .practice-links,#app .sheet .action-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #app .bottom{position:fixed;left:0;top:0;bottom:0;right:auto;width:230px;height:100vh;padding:108px 16px 24px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px;align-items:stretch;background:linear-gradient(180deg,#1b2d34,#111d23);border-right:1px solid #a88754}
+ #app .bottom:before{content:"CYBERSECURITY ACADEMY";position:absolute;left:20px;top:43px;font-size:11px;font-weight:800;letter-spacing:1.1px;color:#e5bf7e}
+ #app .bottom button{flex:none;max-width:none;width:100%;min-height:52px;padding:13px 16px!important;font-size:14px!important;border-radius:10px;text-align:left;white-space:normal}
+ #app .bottom button.active{background:#32444b;color:#f2d399}
+ .auth-screen{position:fixed;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(410px,.9fr);gap:clamp(32px,5vw,92px);align-items:center;justify-content:stretch;padding:60px max(6vw,50px);background:linear-gradient(120deg,#152b34 0%,#1d3740 49%,#f1ece4 49.1%,#f7f3ec 100%)}
+ .auth-screen:before{content:"ETHICAL HACKING ACADEMY\a\a Practical cybersecurity education.\a Built for the desktop lab.\a\a LEARN  •  PRACTICE  •  DEFEND";white-space:pre-line;grid-column:1;grid-row:1;color:#f3dfb8;font:clamp(22px,2.5vw,39px)/1.48 Georgia,serif;max-width:550px}
+ .auth-panel{grid-column:2;grid-row:1;justify-self:center;width:min(100%,510px);padding:37px 42px;box-shadow:0 25px 75px #14252925}
+ .auth-panel h1{font-size:38px}
+ .auth-panel input{min-height:48px}
+ #academy-diagnostic-link{opacity:.65}
+}
+@media(min-width:960px) and (max-width:1150px){.auth-screen{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:28px;padding:35px}.auth-screen:before{font-size:25px}.auth-panel{padding:26px}}
