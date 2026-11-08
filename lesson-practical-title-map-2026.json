@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-08.4",
+  "version": "2026-11-08.5",
   "strategy": "Exact title-based practice mapping across supplemental and primary curriculum lessons; unmatched lessons receive an honest fallback.",
   "mappings": [
     {
@@ -824,6 +824,552 @@
       "unitId": "core-practice-2026-7-6",
       "sectionId": "s1",
       "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security goals and the CIA triad",
+      "unitId": "core-practice-b2-1-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Threats, vulnerabilities, and risk",
+      "unitId": "core-practice-b2-1-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Assets, identities, and trust boundaries",
+      "unitId": "core-practice-b2-1-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security governance and ethics",
+      "unitId": "core-practice-b2-1-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Defense in depth",
+      "unitId": "core-practice-b2-1-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Evidence, documentation, and reporting",
+      "unitId": "core-practice-b2-1-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Packets, protocols and layered models",
+      "unitId": "core-practice-b2-2-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Addresses, subnets and gateways",
+      "unitId": "core-practice-b2-2-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "DNS and domain names",
+      "unitId": "core-practice-b2-2-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "TCP, UDP and common services",
+      "unitId": "core-practice-b2-2-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "HTTP, HTTPS and TLS",
+      "unitId": "core-practice-b2-2-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Network segmentation and monitoring",
+      "unitId": "core-practice-b2-2-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "What happens when you open an app",
+      "unitId": "core-practice-b2-3-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Bits, bytes and file sizes",
+      "unitId": "core-practice-b2-3-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Files, apps and extensions",
+      "unitId": "core-practice-b2-3-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Operating systems: iPhone, Windows and Linux",
+      "unitId": "core-practice-b2-3-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Local storage versus cloud storage",
+      "unitId": "core-practice-b2-3-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Practicing safely on your phone",
+      "unitId": "core-practice-b2-3-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passwords and password managers",
+      "unitId": "core-practice-b2-4-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Multifactor authentication",
+      "unitId": "core-practice-b2-4-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passkeys and account recovery",
+      "unitId": "core-practice-b2-4-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Recognizing fraudulent login pages",
+      "unitId": "core-practice-b2-4-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "App permissions and personal information",
+      "unitId": "core-practice-b2-4-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Security incident reporting at work",
+      "unitId": "core-practice-b2-4-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Security scope and rules of engagement",
+      "unitId": "core-practice-b2-5-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "From assets to business impact",
+      "unitId": "core-practice-b2-5-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Documenting evidence ethically",
+      "unitId": "core-practice-b2-5-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Writing a professional finding",
+      "unitId": "core-practice-b2-5-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Risk prioritization tradeoffs",
+      "unitId": "core-practice-b2-5-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Remediation verification and closure",
+      "unitId": "core-practice-b2-5-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Browser versus server responsibilities",
+      "unitId": "core-practice-b2-6-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Input validation and encoding",
+      "unitId": "core-practice-b2-6-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Session cookies and authentication",
+      "unitId": "core-practice-b2-6-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "APIs and least privilege",
+      "unitId": "core-practice-b2-6-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Cloud responsibility boundaries",
+      "unitId": "core-practice-b2-6-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Secrets and configuration hygiene",
+      "unitId": "core-practice-b2-6-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: suspicious supplier invoice",
+      "unitId": "core-practice-b2-7-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: ransomware and recovery",
+      "unitId": "core-practice-b2-7-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: cloud storage exposure",
+      "unitId": "core-practice-b2-7-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: hospital system availability",
+      "unitId": "core-practice-b2-7-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: former employee access",
+      "unitId": "core-practice-b2-7-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: board security briefing",
+      "unitId": "core-practice-b2-7-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Map an application before securing it",
+      "unitId": "core-practice-b2-8-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Build a simple threat model",
+      "unitId": "core-practice-b2-8-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Protect authentication and session state",
+      "unitId": "core-practice-b2-8-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Security logging without oversharing",
+      "unitId": "core-practice-b2-8-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Design for failure and recovery",
+      "unitId": "core-practice-b2-8-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Prioritize controls with a budget",
+      "unitId": "core-practice-b2-8-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Create an equipment inventory",
+      "unitId": "core-practice-b2-9-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Handle an IT support request",
+      "unitId": "core-practice-b2-9-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Plan a maintenance change",
+      "unitId": "core-practice-b2-9-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Learn command-line documentation",
+      "unitId": "core-practice-b2-9-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Interpret logs and timestamps",
+      "unitId": "core-practice-b2-9-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Practical IT Service Operations",
+      "lesson": "Escalation and professional communication",
+      "unitId": "core-practice-b2-9-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Why encryption exists",
+      "unitId": "core-practice-b2-10-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Symmetric and asymmetric keys",
+      "unitId": "core-practice-b2-10-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Hashes and integrity",
+      "unitId": "core-practice-b2-10-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Digital signatures",
+      "unitId": "core-practice-b2-10-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "TLS certificates and trust",
+      "unitId": "core-practice-b2-10-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Secrets rotation and recovery",
+      "unitId": "core-practice-b2-10-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Permission before testing",
+      "unitId": "core-practice-b2-11-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Inventory an approved target",
+      "unitId": "core-practice-b2-11-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Form a test hypothesis",
+      "unitId": "core-practice-b2-11-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Use isolated and simulated labs",
+      "unitId": "core-practice-b2-11-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Handle findings responsibly",
+      "unitId": "core-practice-b2-11-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Write a validation plan",
+      "unitId": "core-practice-b2-11-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Trace a website request end to end",
+      "unitId": "core-practice-b2-12-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Subnets with a pencil",
+      "unitId": "core-practice-b2-12-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Model a packet journey",
+      "unitId": "core-practice-b2-12-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Compare DNS, TCP and HTTP errors",
+      "unitId": "core-practice-b2-12-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Plan safe network troubleshooting",
+      "unitId": "core-practice-b2-12-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Write a network diagnosis memo",
+      "unitId": "core-practice-b2-12-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Read a simple Python script",
+      "unitId": "core-practice-b2-13-1",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Work with a mock event list",
+      "unitId": "core-practice-b2-13-2",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Use decisions without mixing types",
+      "unitId": "core-practice-b2-13-3",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Make a reusable function",
+      "unitId": "core-practice-b2-13-4",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Recognize data sensitivity",
+      "unitId": "core-practice-b2-13-5",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
+    },
+    {
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Validate results and limitations",
+      "unitId": "core-practice-b2-13-6",
+      "sectionId": "s1",
+      "source": "core-guided-practice-batch2-2026.json"
     }
   ]
 }
