@@ -100,3 +100,46 @@
  .academy-dashboard-metrics,.academy-operations{grid-template-columns:1fr}
  .academy-dashboard-heading{align-items:flex-start;flex-direction:column}
 }
+
+
+/* Dedicated learning workstation: mobile-first presentation.
+   Actual command execution happens only in authorized external labs. */
+#app .academy-workstation-title{margin:8px 0 23px}
+#app .academy-workstation-title h1{margin:9px 0 10px}
+#app .academy-workstation-title .kicker{margin:13px 0 8px}
+#app .academy-workstation-split{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0}
+#app .academy-reading-panel,#app .academy-practice-panel{min-width:0;max-width:100%;margin:0;border:1px solid #d9c9ad;border-radius:13px;overflow-wrap:anywhere}
+#app .academy-reading-panel{background:#fffaf2;padding:19px}
+#app .academy-practice-panel{background:#14232b;color:#f2eadb;padding:19px}
+#app .academy-practice-panel .academy-workstation-section-head h2{color:#f3e8d7}
+#app .academy-workstation-section-head{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:0 0 15px}
+#app .academy-workstation-section-head .academy-eyebrow{width:100%;color:#b18a54;font-size:10px;letter-spacing:.1em}
+#app .academy-workstation-section-head h2{font-size:24px;margin:0}
+#app .academy-simulation-disclaimer{font-size:12px;line-height:1.55;color:#d6d1c4;margin:0 0 14px}
+#app .academy-expand-practice{display:none}
+#app .academy-practice-panel #academy-embedded-practice{min-width:0}
+#app .academy-practice-panel #academy-embedded-practice>.sheet{background:#fdf8ee;color:#26343a;margin:0!important;padding:17px;border:1px solid #b59a6d!important;max-width:100%}
+#app .academy-practice-panel #academy-embedded-practice>.sheet h2,
+#app .academy-practice-panel #academy-embedded-practice>.sheet h3,
+#app .academy-practice-panel #academy-embedded-practice>.sheet h4{color:#27353a;line-height:1.35}
+#app .academy-practice-panel #academy-embedded-practice>.sheet p{font-size:14px;line-height:1.68}
+#app .academy-practice-panel #academy-embedded-practice pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto;font-size:12px;line-height:1.6}
+#app .academy-workstation-assessment{margin-top:20px;border:1px solid #dbc9a8;border-radius:13px;background:#fffaf2;overflow:hidden}
+#app .academy-workstation-tabs{display:flex;gap:0;border-bottom:1px solid #dac8a8;background:#ede2d0}
+#app .academy-workstation-tabs button{flex:1;min-width:0;padding:15px 12px;color:#665d50;background:transparent;border:0;border-bottom:3px solid transparent;font-weight:750;font-size:13px}
+#app .academy-workstation-tabs button[aria-selected="true"]{background:#fffaf2;border-bottom-color:#ac854e;color:#4e3c26}
+#app .academy-workstation-assessment .assessment{margin:0;padding:22px 19px;background:#fffaf2;border:0;box-shadow:none;max-width:100%}
+#app .academy-workstation-assessment .assessment .answers{margin:15px 0}
+#app .academy-lab-report{padding:22px 19px;background:#fffaf2}
+#app .academy-lab-report h2{margin:8px 0 12px;color:#27353a}
+#app .academy-lab-report p{line-height:1.7;color:#53616a}
+#app .academy-report-label{display:block;margin:16px 0 8px;font-size:13px;font-weight:750;color:#51412d}
+#app #academy-report-notes{display:block;width:100%;max-width:100%;min-height:175px;box-sizing:border-box;border:1px solid #cdb99a;border-radius:10px;background:#fffefb;padding:14px;color:#26343a;font:15px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;resize:vertical}
+#app .academy-report-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:15px 0 10px}
+#app .academy-report-actions .button{font-size:13px}
+#app .academy-report-actions #academy-report-status{font-size:12px}
+#app .academy-report-disclaimer{font-size:12px!important}
+#app .academy-workstation-assessment [hidden]{display:none!important}
+@media(min-width:600px) and (max-width:959px){
+ #app .academy-reading-panel,#app .academy-practice-panel{padding:24px}
+}
