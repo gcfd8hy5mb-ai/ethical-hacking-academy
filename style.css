@@ -176,3 +176,24 @@
  #app .academy-practice-command pre{font-size:12px}
  #app .academy-practice-block{padding:13px}
 }
+
+
+/* Objective practice checkpoints: no nested scrolling, no effect on official grades. */
+#app .academy-checkpoint-launch{border:1px solid #be9d69;background:#f5ecdc;border-radius:11px;padding:14px 15px;margin:4px 0}
+#app .academy-checkpoint-start{width:100%;min-height:45px;background:#20323a;color:#f5dfb8;border:1px solid #8f7046;border-radius:8px;font-weight:780;font-size:13px;padding:12px 15px;text-align:center;cursor:pointer}
+#app .academy-checkpoint-start:hover{background:#334851}
+#app #academy-practice-checkpoint{margin-top:12px;color:#29373a;font-size:14px;line-height:1.65}
+#app #academy-practice-checkpoint:empty{display:none}
+#app .academy-checkpoint-heading{font:800 11px/1.5 ui-monospace,SFMono-Regular,monospace;letter-spacing:.09em;color:#886336}
+#app .academy-checkpoint-options{display:grid;gap:9px;margin:15px 0}
+#app .academy-checkpoint-answer{width:100%;text-align:left;min-height:48px;white-space:normal;overflow-wrap:anywhere;background:#fffdf8;border:1px solid #d5c4a7;border-radius:8px;padding:13px;color:#26343a;font-weight:650;font-size:13px;line-height:1.5}
+#app .academy-checkpoint-answer:hover{border-color:#ad8956;background:#fef9ed}
+#app .academy-checkpoint-answer[aria-pressed="true"]{outline:2px solid #a77b40;outline-offset:0}
+#app .academy-checkpoint-answer.academy-choice-correct{border-color:#63806e;background:#ebf3ec}
+#app .academy-checkpoint-answer.academy-choice-incorrect{border-color:#ae745b;background:#fbede8}
+#app .academy-checkpoint-feedback{background:#ece1cb;border-left:3px solid #af874e;border-radius:0 7px 7px 0;padding:12px 14px;line-height:1.65;font-size:13px}
+#app .academy-checkpoint-scope{margin:12px 0 0!important;font-size:11px!important;color:#66665c;line-height:1.5!important}
+@media(min-width:1180px){
+ #app .academy-practice-panel #academy-embedded-practice .academy-checkpoint-answer{font-size:14px;min-height:53px}
+ #app .academy-practice-panel #academy-embedded-practice .academy-checkpoint-feedback{font-size:14px}
+}
