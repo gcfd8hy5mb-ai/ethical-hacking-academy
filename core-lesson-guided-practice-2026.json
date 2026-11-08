@@ -129,9 +129,9 @@
           "id": "s1",
           "heading": "Applied practice: Why professionals use terminals",
           "command": "whoami; pwd; ls",
-          "instruction": "Record the environment and explain why read-only discovery should precede modification.",
-          "interpretation": "A prompt establishes a local user context, not permission to inspect other systems.",
-          "task": "Make a short terminal investigation log.",
+          "instruction": "Begin by executing whoami to identify the current account, pwd to identify the current folder, and ls to display only that folder. These commands are read-only observations useful before diagnosing or changing anything.",
+          "interpretation": "If the command outputs your own username and a path under /home, the session is likely running as your normal Linux user. A command prompt and account label do not establish permission to inspect another person's files.",
+          "task": "Produce a dated command log containing the exact three commands, their outputs, one reason each is useful, and one uncertainty you cannot resolve from this evidence alone.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -148,9 +148,9 @@
           "id": "s1",
           "heading": "Applied practice: The present working directory",
           "command": "pwd; cd ~; pwd",
-          "instruction": "Predict how the directory changes when entering the Linux home.",
-          "interpretation": "A /mnt/c path points into the Windows filesystem in WSL; /home usually locates the Linux home.",
-          "task": "Document the difference between absolute and relative paths.",
+          "instruction": "Run pwd and record its value. Run cd ~ to move to your own Linux home and then pwd again; explain how the tilde expands to the current user's home and how a relative filename depends on the current working directory.",
+          "interpretation": "The first pwd may show /mnt/c on WSL when a Windows directory was inherited; the second should show the Linux home, such as /home/hp. The command does not move or alter files.",
+          "task": "Write the two resulting paths and give one absolute and one relative file reference pointing to a hypothetical notes.txt in your home directory. Explain why a mistaken directory can cause an overwrite.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -167,9 +167,9 @@
           "id": "s1",
           "heading": "Applied practice: Listing files and hidden entries",
           "command": "ls; ls -la",
-          "instruction": "In your own training folder, compare normal listings and dotfiles; identify mode columns.",
-          "interpretation": "Hidden names are not encrypted or secure just because they begin with a dot.",
-          "task": "Explain which metadata is useful for a file investigation.",
+          "instruction": "Enter your own disposable folder and compare ls with ls -la. Identify the file type and the owner/group/other permission columns, and explain why dotfiles appear only when hidden entries are included.",
+          "interpretation": "A leading dot only affects ordinary listing conventions; it is not encryption. The long listing also includes timestamps, ownership, mode and directory entries, none of which alone establishes malicious activity.",
+          "task": "Document two differences between the listings, interpret one mode string, and explain why you should inspect an unexpected hidden file without executing it.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -186,9 +186,9 @@
           "id": "s1",
           "heading": "Applied practice: Moving through directories",
           "command": "mkdir -p ~/academy-paths/subfolder; cd ~/academy-paths/subfolder; pwd; cd ..; pwd",
-          "instruction": "Create and navigate a disposable directory; label parent and child locations.",
-          "interpretation": "The parent operator '..' changes directory context; it does not by itself delete files.",
-          "task": "Write down the before/after path at each step.",
+          "instruction": "Create a disposable nested folder with mkdir -p under your home. Use cd to enter it, pwd to confirm location, then cd .. to move exactly one directory upward; do not run commands in Windows system folders.",
+          "interpretation": "The path should end with /subfolder in the first pwd and /academy-paths after moving to its parent. The '..' path component navigates; it does not erase directories or change ownership.",
+          "task": "Provide the exact first and second paths, a diagram showing parent and child directories, and a description of what a relative reference to subfolder would resolve to.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -205,9 +205,9 @@
           "id": "s1",
           "heading": "Applied practice: Reading without modifying files",
           "command": "printf '%s\\n' 'INFO boot complete' 'WARN retry' > ~/academy-paths/example.log; cat ~/academy-paths/example.log; grep -n WARN ~/academy-paths/example.log",
-          "instruction": "Observe the example file and the warning line number.",
-          "interpretation": "A warning isn't proof of compromise; surrounding events and corroboration are needed.",
-          "task": "Record the line number and two hypotheses.",
+          "instruction": "Only inside your own practice directory, use printf with redirection to create a synthetic two-line log. Read it with cat, then search WARN with grep -n; explain that writing the fixture is intentional and the later commands are read-only.",
+          "interpretation": "The grep result should include the warning's line number. A warning is a signal of an event, not a confirmed incident, and grep can miss relevant records when the search term is too narrow.",
+          "task": "Record the matched line number, copy the preceding and following synthetic events, and propose two competing explanations for the retry warning and a corroborating check for each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -224,9 +224,9 @@
           "id": "s1",
           "heading": "Applied practice: Users, permissions and safe defaults",
           "command": "printf 'student training\\n' > ~/academy-paths/private.txt; chmod 600 ~/academy-paths/private.txt; ls -l ~/academy-paths/private.txt",
-          "instruction": "Explain why 600 grants only owner read/write, and why access to a directory also matters.",
-          "interpretation": "Permissions in WSL 1 do not provide the same isolation as a full VM.",
-          "task": "Write an owner/group/other access matrix.",
+          "instruction": "Use printf to create a disposable file under your home, apply chmod 600 only to that file, and verify the mode with ls -l. Break the value into owner 6 (read/write), group 0 and others 0.",
+          "interpretation": "The expected listing starts -rw-------. The owner still needs directory traversal permission to access the file, and Windows/WSL filesystem integration means this is not equivalent to full machine isolation.",
+          "task": "Create an access matrix for owner, group and others, record the actual mode output, and explain why chmod 777 or blanket sudo is not an acceptable repair for routine permission errors.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -243,9 +243,9 @@
           "id": "s1",
           "heading": "Applied practice: Processes and graceful troubleshooting",
           "command": "ps -ef | head",
-          "instruction": "Record a sample process and explain why process presence alone is insufficient to prove health.",
-          "interpretation": "A process can exist while its dependencies fail.",
-          "task": "Draft a read-only health-check plan.",
+          "instruction": "Execute ps -ef | head in your WSL training session and identify columns such as user, PID and command. Use it as a snapshot of visible processes rather than a substitute for endpoint or service health tests.",
+          "interpretation": "The list will vary with the system and may not include every process. A process being listed only establishes its existence at that moment; its backend dependencies or response handling may still fail.",
+          "task": "Record a selected harmless process name and PID, then design two non-destructive follow-up checks that could establish whether an associated service performs its intended function.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -262,9 +262,9 @@
           "id": "s1",
           "heading": "Applied practice: Command mistakes and recovery habits",
           "command": "cd ~/academy-paths; ls a-file-that-is-not-here; pwd",
-          "instruction": "Observe a failed ls request and classify the error without changing access or permissions.",
-          "interpretation": "A missing file error does not justify broad chmod or root access.",
-          "task": "Write the expected path check before retrying an action.",
+          "instruction": "From the known training folder, deliberately list a nonexistent filename. Capture the error, then run pwd and ls to diagnose whether the problem is the current directory, filename or absent artifact.",
+          "interpretation": "The expected 'No such file or directory' response describes a failed path lookup, not a permission compromise. A nonzero command result calls for investigating the cause before retrying.",
+          "task": "Write a small error-response plan: verify cwd, inspect similar filenames, distinguish missing paths from access denied, then choose a safe corrective action without escalating privileges.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -281,9 +281,9 @@
           "id": "s1",
           "heading": "Applied practice: Windows accounts and profiles",
           "command": "whoami /user; whoami /groups",
-          "instruction": "Inspect your own security principal and groups; explain what identity information should be redacted before reporting.",
-          "interpretation": "Membership alone doesn't prove access to a particular protected resource.",
-          "task": "Document a least-privilege user profile.",
+          "instruction": "In Windows PowerShell or Command Prompt, run whoami /user and whoami /groups. Identify your own account SID and group memberships; redact personal identifiers from any training report shared with classmates.",
+          "interpretation": "The output shows identity and memberships at the time of the command. Effective access still depends on ACLs, deny rules and the requested resource, so membership alone is not proof of a successful access.",
+          "task": "Create a fictional user access profile listing a role, one allowed file operation, one prohibited privileged operation, and what evidence would confirm both outcomes.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -300,9 +300,9 @@
           "id": "s1",
           "heading": "Applied practice: Folders, paths and extensions",
           "command": "Get-Location; Get-ChildItem -Force",
-          "instruction": "Open PowerShell and list your own Documents directory, not system/private folders.",
-          "interpretation": "File extension alone is not a reliable security classification.",
-          "task": "Describe two safe validation steps for an unfamiliar file.",
+          "instruction": "In PowerShell, first navigate to a disposable folder you own. Use Get-Location to confirm context and Get-ChildItem -Force to list hidden and normal entries without editing or launching unfamiliar files.",
+          "interpretation": "A .txt or .exe suffix influences Windows associations but is not a guarantee of file contents or safety. Force includes hidden entries and may reveal configuration files, not necessarily security findings.",
+          "task": "Document an absolute and relative Windows path, identify one hidden entry, and give two safe checks for an unknown file, such as inspecting properties and validating trusted provenance.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -319,9 +319,9 @@
           "id": "s1",
           "heading": "Applied practice: Windows security updates",
           "command": "Settings → Windows Update → View update history",
-          "instruction": "Review update status and plan a maintenance window without installing unapproved changes.",
-          "interpretation": "An update entry records activity but isn't proof that every application remains compatible.",
-          "task": "Build a rollback and verification checklist.",
+          "instruction": "Review Windows Update history and record the relevant KB number, reported installation state and date. Plan how to confirm application functionality and restore data before any approved maintenance changes.",
+          "interpretation": "An update marked installed establishes an update event, not universal compatibility. A pending restart or failed update may affect the observed state and should be documented explicitly.",
+          "task": "Draft a change checklist with authorization, backup, rollback option, post-reboot build check and two application acceptance tests; perform no unapproved installation.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -338,9 +338,9 @@
           "id": "s1",
           "heading": "Applied practice: Task Manager and services",
           "command": "Get-Process | Select-Object -First 10 Name,Id,CPU; Get-Service | Select-Object -First 10 Name,Status",
-          "instruction": "Inspect process and service state and identify one hypothesis needing a follow-up functional test.",
-          "interpretation": "Get-Process CPU is cumulative CPU time, not an instantaneous percent.",
-          "task": "Record process/service observations without terminating anything.",
+          "instruction": "Use PowerShell's Get-Process and Get-Service to collect read-only snapshots. Record the process identifier, accumulated CPU time, service status and one question about whether a user-facing request actually works.",
+          "interpretation": "Get-Process CPU normally reports cumulative processor seconds, not current utilization percentage. A stopped service may be expected, and a running process can still have unhealthy dependencies.",
+          "task": "Record two process rows and two service rows, then propose a separate functional check and one log source that could distinguish a normal state from an outage.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -357,9 +357,9 @@
           "id": "s1",
           "heading": "Applied practice: Windows file access controls",
           "command": "Get-Acl -Path . | Format-List",
-          "instruction": "Run in an owned practice folder and identify access rules and inheritance.",
-          "interpretation": "An ACL entry does not by itself establish a completed unauthorized read.",
-          "task": "Write one allowed and one denied access test.",
+          "instruction": "Navigate to an owned training directory in PowerShell and run Get-Acl -Path . | Format-List. Identify the owner, access-control entries and inheritance status; do not modify access on shared or system directories.",
+          "interpretation": "Allow/deny entries interact with group membership and inherited permissions; one ACE in isolation does not demonstrate an actual successful access or a complete privilege evaluation.",
+          "task": "Draw a three-role access matrix for a fictional private file and state both a permitted read and an expected denied read that a qualified reviewer could validate.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -376,9 +376,9 @@
           "id": "s1",
           "heading": "Applied practice: Defender, firewall and system health",
           "command": "Windows Security → Virus & threat protection; Firewall & network protection",
-          "instruction": "Read current protection status without disabling any feature.",
-          "interpretation": "An enabled protective control reduces risk but does not guarantee the absence of a threat.",
-          "task": "Draft a safe triage plan for an unexplained warning.",
+          "instruction": "Open Windows Security and inspect malware-protection status, update state and firewall profiles without turning any defense off. Note the date, the observed control state and any notification details.",
+          "interpretation": "An enabled antivirus and firewall indicate configured protective layers, not proof that all threats are absent. An alert requires context such as source, timestamp and policy disposition.",
+          "task": "Draft a benign security-warning triage report with the alert evidence, user impact, approved reporting route, and what independent observation is needed before attributing a cause.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -395,9 +395,9 @@
           "id": "s1",
           "heading": "Applied practice: Event Viewer and evidence",
           "command": "Event Viewer → Windows Logs → System",
-          "instruction": "Find a benign system event and record level, event ID, provider and timestamp.",
-          "interpretation": "A single event ID may be broad; source and surrounding records matter.",
-          "task": "Write a timeline entry with confidence and uncertainty.",
+          "instruction": "Open Event Viewer and select a benign, non-sensitive event from Windows Logs → System. Record event ID, provider, level, event timestamp and neighboring relevant events in a common time zone.",
+          "interpretation": "Event identifiers can mean different things under different providers. A lone warning rarely establishes causality; review the provider's documented meaning and correlate other signals.",
+          "task": "Create a three-row fictional event timeline with source, timestamp, observation and uncertainty. Describe one alternate explanation and the next record that would help distinguish it.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -414,9 +414,9 @@
           "id": "s1",
           "heading": "Applied practice: Windows recovery and hardening",
           "command": "Settings → System → Recovery",
-          "instruction": "Compare restore, reset and backup options in a written plan without invoking destructive actions.",
-          "interpretation": "A reboot is not the same as a verified recovery.",
-          "task": "Define acceptance checks for user data, patches and service functionality.",
+          "instruction": "Review recovery options without initiating Reset this PC or destructive repair. Compare backup restore, startup repair, system restore where available, and clean installation by data impact and reversibility.",
+          "interpretation": "A successful reboot only shows that the device started once. Recovery validation must include user data integrity, account access, security updates, device drivers and expected application transactions.",
+          "task": "Write a decision tree for a fictional failure with approval requirements, data backup prerequisites, post-repair functional checks and a stop condition to prevent accidental data loss.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
