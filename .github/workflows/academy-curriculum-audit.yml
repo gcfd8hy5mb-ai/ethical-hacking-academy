@@ -16,6 +16,8 @@ on:
       - 'app.js'
       - 'style.css'
       - 'desktop.css'
+      - 'redesign-v2.css'
+      - 'v2-world-map.svg'
       - '.github/workflows/academy-curriculum-audit.yml'
   pull_request:
     paths:
@@ -28,6 +30,8 @@ on:
       - 'app.js'
       - 'style.css'
       - 'desktop.css'
+      - 'redesign-v2.css'
+      - 'v2-world-map.svg'
       - '.github/workflows/academy-curriculum-audit.yml'
   workflow_dispatch:
 
@@ -57,3 +61,5 @@ jobs:
         run: node tests/test_learning_workstation.mjs
       - name: Validate interactive guided checkpoints
         run: node tests/test_practice_checkpoints.mjs
+      - name: Validate approved V2 dashboard redesign
+        run: node tests/test_v2_dashboard.mjs
