@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'curriculum.json'
+      - 'practice-checkpoints-v1.json'
       - 'lesson-practical-title-map-2026.json'
       - 'coursework-practical-expansion-2026.json'
       - 'coursework-specific-practice-2026.json'
@@ -19,6 +20,7 @@ on:
   pull_request:
     paths:
       - 'curriculum.json'
+      - 'practice-checkpoints-v1.json'
       - 'lesson-practical-title-map-2026.json'
       - '*practice*2026.json'
       - 'local-vm-labs/academy_evidence_review.py'
@@ -53,3 +55,5 @@ jobs:
         run: node tests/test_embedded_practice.mjs
       - name: Verify split workstation and local report controls
         run: node tests/test_learning_workstation.mjs
+      - name: Validate interactive guided checkpoints
+        run: node tests/test_practice_checkpoints.mjs
