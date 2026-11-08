@@ -1,0 +1,330 @@
+{
+  "version": "2026-11-08",
+  "strategy": "Explicit, exact course and lesson title mapping only. Unmapped lessons receive a neutral link instead of unrelated practice.",
+  "mappings": [
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Files, folders, paths, and evidence preservation",
+      "unitId": "curriculum-practical-2026-l1-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Processes, services, and performance clues",
+      "unitId": "curriculum-practical-2026-l4-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "A repeatable troubleshooting notebook",
+      "unitId": "curriculum-practical-2026-l1-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "ATX power, EPS connectors, and wiring safety",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "RAM channels, DIMM seating, and POST indicators",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "NVMe, SATA, storage sharing and backups",
+      "unitId": "curriculum-practical-2026-l2-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "How a computer works",
+      "unitId": "curriculum-practical-2026-l2-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Motherboard anatomy and form factors",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "CPU selection and virtualization",
+      "unitId": "curriculum-practical-2026-l6-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "No-display POST troubleshooting",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Cooling failure and thermal shutdown",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Ethical computer repair for friends and family",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Build planning and compatibility worksheet",
+      "unitId": "curriculum-practical-2026-l2-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Safe physical assembly sequence",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "First boot and UEFI checks",
+      "unitId": "curriculum-practical-2026-l2-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Linux diagnostic commands and flags",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Systemd service failure and port conflicts",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Linux permissions and least privilege",
+      "unitId": "curriculum-practical-2026-l1-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "CIDR and subnet planning",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "DNS, Active Directory SRV records and reachability",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Test isolated lab networks without crossing boundaries",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Confidentiality, integrity and availability in operations",
+      "unitId": "curriculum-practical-2026-l4-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Privileged identities and audit reasoning",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Cybersecurity Foundations",
+      "lesson": "Write security findings without overclaiming",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "PowerShell inspection: processes, services, and safe triage",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Event Viewer: build a reliable troubleshooting timeline",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Domain clients: DNS, time, accounts, and trust boundaries",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Linux services, ports, and dependency reasoning",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Linux permissions, identities and safe changes",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Backups, logs and Linux capacity diagnostics",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Layered connectivity diagnosis: interface to application",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Subnetting and firewall decisions in an isolated lab",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "DNS and domain discovery: distinguish name, service and policy",
+      "unitId": "curriculum-practical-2026-l3-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Plan a scoped assessment before using tools",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Evidence-based findings and measured severity",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Executive reporting, retesting and handoff",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Map identity, authentication, authorization, and auditing",
+      "unitId": "curriculum-practical-2026-l3-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Service accounts, secrets, and machine identities",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Domain group changes: timeline and confidence",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Normalize logs into a usable timeline",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Detection signals, baselines, and false positives",
+      "unitId": "curriculum-practical-2026-l7-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Containment and evidence preservation during triage",
+      "unitId": "curriculum-practical-2026-l4-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Map HTTP requests, sessions, and trust boundaries",
+      "unitId": "curriculum-practical-2026-l5-1",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Separate authentication from object-level authorization",
+      "unitId": "curriculum-practical-2026-l5-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Security headers and safe reporting of configuration gaps",
+      "unitId": "curriculum-practical-2026-l5-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Cloud identity versus network reachability",
+      "unitId": "curriculum-practical-2026-l6-2",
+      "sectionId": "s1"
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Infrastructure configuration drift and reversible changes",
+      "unitId": "curriculum-practical-2026-l6-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Cloud backup and disaster-recovery validation",
+      "unitId": "curriculum-practical-2026-l6-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Triangulate evidence across enterprise systems",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Translate technical findings into business priorities",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Independent remediation review and retest",
+      "unitId": "curriculum-practical-2026-l7-2",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Threat model and lab authorization",
+      "unitId": "curriculum-practical-2026-l6-1",
+      "sectionId": "s3"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Virtualization architecture",
+      "unitId": "curriculum-practical-2026-l6-1",
+      "sectionId": "s2"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Safely isolated virtual networks",
+      "unitId": "curriculum-practical-2026-l6-1",
+      "sectionId": "s3"
+    }
+  ]
+}
