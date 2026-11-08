@@ -15,9 +15,9 @@
           "id": "s1",
           "heading": "Applied practice: CPU, memory, storage and processes",
           "command": "Task Manager or system monitor → CPU, Memory, Disk, Processes",
-          "instruction": "Observe usage for one minute and explain why CPU time, memory occupancy and disk capacity measure different constraints.",
-          "interpretation": "A busy process is an observation, not evidence of malware.",
-          "task": "Identify two processes and which resource each consumes; describe the limitation of one screenshot.",
+          "instruction": "Observe CPU utilization, memory occupancy and disk activity separately in Task Manager or a system monitor. Record the workload at idle and with one approved application open, then compare changes rather than treating a single peak as a diagnosis.",
+          "interpretation": "CPU activity reflects scheduled computation, memory in use is not the same as memory pressure, and a nearly full disk does not prove that the CPU is faulty. Performance evidence needs timestamps and a reproducible symptom.",
+          "task": "Produce an evidence table for two observation points with CPU, available RAM, disk capacity and the two busiest processes. Explain which subsystem is most constrained and give a safe follow-up measurement.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -433,9 +433,9 @@
           "id": "s1",
           "heading": "Applied practice: Reading network diagrams",
           "command": "Training diagram → client → switch → router → resolver → service",
-          "instruction": "Label each device and record permitted data paths.",
-          "interpretation": "A diagram is a hypothesis until verified against actual configuration.",
-          "task": "Create a route trace checklist without probing third-party systems.",
+          "instruction": "Start at the fictional client, label its switch, router, DNS resolver and application server, then draw the path for a hostname request and a subsequent application request. Mark every interface or trust boundary where a different failure can occur.",
+          "interpretation": "The DNS resolver maps names, while routing decides the packet's next hop. A drawing shows intended connections but cannot verify an actual route or prove a working service.",
+          "task": "Annotate the training topology with source, destination, subnet and gateway for each hop. Give three failure hypotheses and the one read-only observation that would distinguish each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -452,9 +452,9 @@
           "id": "s1",
           "heading": "Applied practice: Private and public addresses",
           "command": "python3 -c 'import ipaddress;print(ipaddress.ip_address(\"10.40.0.80\").is_private)'",
-          "instruction": "Compare RFC1918 ranges with public examples offline using Python.",
-          "interpretation": "Private addressing does not establish network isolation.",
-          "task": "Explain the difference between private and safely isolated.",
+          "instruction": "Run the ipaddress calculation for the synthetic 10.40.0.80 address and classify the result. Compare this with an explicitly reserved documentation address, then distinguish addressing from firewall and routing design.",
+          "interpretation": "The library should classify 10.40.0.80 as private. A private address can still be reachable from other private networks; private addressing is not equivalent to isolation.",
+          "task": "Write a table for three synthetic addresses showing address category, expected reachability assumptions and a verification needed before approving a vulnerable lab network.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -471,9 +471,9 @@
           "id": "s1",
           "heading": "Applied practice: Subnet reasoning",
           "command": "python3 -c 'import ipaddress;print(ipaddress.ip_network(\"10.40.0.0/24\").num_addresses)'",
-          "instruction": "Calculate network and usable host count on paper and with ipaddress.",
-          "interpretation": "A /24 holds 256 IPv4 addresses, typically 254 conventional usable host addresses.",
-          "task": "Show a worked /26 subnet example.",
+          "instruction": "Calculate the network and broadcast addresses of 10.40.0.0/24, and distinguish the total 256 address slots from the conventional 254 usable host addresses. Then verify a /26 example with Python ipaddress.",
+          "interpretation": "A /24 includes addresses .0 through .255, with network/broadcast typically reserved in conventional IPv4 LANs. Prefix length is not the number of hosts.",
+          "task": "Present a worked /26 example with network, broadcast, first usable, last usable, and total usable hosts; state where /31 special-purpose rules may differ.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -490,9 +490,9 @@
           "id": "s1",
           "heading": "Applied practice: What DHCP does",
           "command": "Sample lease: address 10.40.0.20 mask /24 gateway 10.40.0.1 DNS 10.40.0.5",
-          "instruction": "Draw what the client receives and which failure occurs when DNS is wrong.",
-          "interpretation": "A valid lease doesn't establish application availability.",
-          "task": "Write a three-layer connectivity checklist.",
+          "instruction": "Interpret the supplied fictional lease fields one by one: client IP, prefix, default gateway and resolver. Model what a client would still be able to do if DNS were wrong but local routing were healthy.",
+          "interpretation": "A valid DHCP lease confirms assigned network configuration but cannot establish that remote applications, their ports or authentication services work.",
+          "task": "Create a four-row lease table and two failure scenarios: incorrect DNS and incorrect gateway. State the distinct expected symptom and read-only test for each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -509,9 +509,9 @@
           "id": "s1",
           "heading": "Applied practice: DNS troubleshooting",
           "command": "getent hosts example.com; ip route",
-          "instruction": "Observe benign hostname resolution and routes; do not alter DNS or routing on shared devices.",
-          "interpretation": "DNS answers don't prove TCP or HTTPS works.",
-          "task": "Write a resolution-versus-connection decision tree.",
+          "instruction": "Use getent to observe a benign public hostname, then inspect the local routing table without editing the network. Compare a fictional expected A record with a divergent answer and reason about why connection by IP might work.",
+          "interpretation": "Successful name resolution establishes only a name-to-address result. It does not prove that TCP can connect, that TLS is valid, or that the application serves correct content.",
+          "task": "Write a decision tree for NXDOMAIN, correct address with connection timeout, and correct address with HTTP 503. Specify the next observation and what it cannot prove.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -528,9 +528,9 @@
           "id": "s1",
           "heading": "Applied practice: Ports and protocols",
           "command": "Service inventory: DNS UDP/TCP 53; HTTPS TCP 443; SSH TCP 22",
-          "instruction": "Classify a fictional client request by transport and application protocol.",
-          "interpretation": "A port number suggests intended service, not definitive application identity.",
-          "task": "Design a minimum-service firewall allowlist in plain language.",
+          "instruction": "Review the supplied DNS, HTTPS and SSH service inventory. For each row, identify application-layer purpose, transport type, destination port and the distinction between a listening socket and a permitted firewall path.",
+          "interpretation": "A conventional port number suggests intended service but does not authenticate the running process or guarantee it is reachable. DNS can use both UDP and TCP.",
+          "task": "Prepare an allowed/denied service matrix for a fictional analyst workstation and private server. Include an expected result and scope-safe verification for each rule.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -547,9 +547,9 @@
           "id": "s1",
           "heading": "Applied practice: Safe connectivity diagnostics",
           "command": "ip -br addr; ip route; getent hosts example.com",
-          "instruction": "Document interface, route and resolution in order without scanning.",
-          "interpretation": "An interface being UP doesn't establish external reachability.",
-          "task": "Choose a next test based on the first failed layer.",
+          "instruction": "Record local interface status, routes and benign name resolution in that order. If a failure appears, stop rather than changing host routes or probing unknown devices; identify the exact layer implicated.",
+          "interpretation": "An UP interface is not proof of end-to-end availability. A successful DNS answer also does not establish TCP connection, HTTP response or business transaction success.",
+          "task": "Produce a five-step diagnostic worksheet, listing command, expected observation, abnormal result, and one next read-only check. Do not scan third-party systems.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -566,9 +566,9 @@
           "id": "s1",
           "heading": "Applied practice: Segmenting a small organization",
           "command": "VLAN A workstations; VLAN B servers; guest isolated",
-          "instruction": "Build an allowed/denied matrix and identify where routing is enforced.",
-          "interpretation": "VLAN separation isn't a firewall guarantee when inter-VLAN routing exists.",
-          "task": "Write verification cases for a guest-to-server deny and workstation-to-service allow.",
+          "instruction": "Draw the fictional workstation, guest and server zones. Identify which traffic must cross a router or firewall and define the smallest approved allow rules rather than assuming VLAN tags enforce everything.",
+          "interpretation": "Separate VLAN IDs limit broadcast domains, but inter-VLAN routing and shared services may reconnect segments. Confirm deny and allow outcomes independently.",
+          "task": "Specify at least six source-to-destination flows in an access matrix, then write expected positive and negative tests for guests and authorized administrators.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -585,9 +585,9 @@
           "id": "s1",
           "heading": "Applied practice: What code is",
           "command": "python3 -c 'print(\"Hello, Academy\")'",
-          "instruction": "Identify statements and outputs, and distinguish source from execution.",
-          "interpretation": "Code can be readable yet logically incorrect.",
-          "task": "Write a three-line explanation of how Python prints text.",
+          "instruction": "Run the print example with Python 3 and identify the interpreter, literal string, function call and observed standard output. Compare an input statement to a side effect without modifying any real files.",
+          "interpretation": "The expected output is the text Hello, Academy on standard output. This demonstrates successful execution, not that the entire program is logically or securely correct.",
+          "task": "Record the exact output and exit status, then write one modified example that prints a different harmless string and predict its output before running.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -604,9 +604,9 @@
           "id": "s1",
           "heading": "Applied practice: Variables and values",
           "command": "python3 -c 'count=3; count=count+1; print(count)'",
-          "instruction": "Predict value before running; explain assignment versus equality.",
-          "interpretation": "Changing a variable doesn't modify external data unless the program explicitly writes it.",
-          "task": "Document the expected output and why.",
+          "instruction": "Predict count after assignment and increment, then run the example and compare the observed result. Explain the difference between assigning a value and testing equality in a condition.",
+          "interpretation": "The result should be 4 because the second assignment uses the previous value 3 and adds 1. Variables are local program state unless explicitly written to a file or database.",
+          "task": "Provide a three-row trace table with statement, prior value, new value, and one simple test for a negative or zero starting count.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -623,9 +623,9 @@
           "id": "s1",
           "heading": "Applied practice: Strings, numbers and booleans",
           "command": "python3 -c 'print(type(\"3\"),type(3),type(True))'",
-          "instruction": "Compare strings, integers and booleans; reason about conversion errors.",
-          "interpretation": "The string 'False' is truthy in Python unless parsed explicitly.",
-          "task": "Explain a type confusion bug without using live external inputs.",
+          "instruction": "Execute the Python type example and explain why the quoted numeral is a string while the unquoted numeral is an integer. Compare the truth value of an actual False boolean with the nonempty string 'False'.",
+          "interpretation": "The types are str, int and bool. The nonempty string 'False' is truthy, so blindly converting untrusted text with bool() can produce an incorrect security decision.",
+          "task": "Record all type outputs and design two parser tests that distinguish the literal strings 'true' and 'false' from Boolean values without relying on truthiness.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -642,9 +642,9 @@
           "id": "s1",
           "heading": "Applied practice: Conditions and decisions",
           "command": "python3 -c 'x=5; print(\"allow\" if x>=5 else \"deny\")'",
-          "instruction": "Change x in a copied example and predict both outputs.",
-          "interpretation": "An input check is not equivalent to authentication or authorization.",
-          "task": "Write a simple condition and its boundary cases.",
+          "instruction": "Predict whether the threshold expression allows x=5, then vary the value to 4 and 6 in a disposable Python snippet. Identify the comparison operator and its inclusive boundary.",
+          "interpretation": "At x=5, x>=5 is true and prints allow; at x=4 it prints deny. A programmatic threshold is not a substitute for identity verification or server-side authorization.",
+          "task": "Create a truth table for x values 4, 5 and 6, explaining the boundary and why authorization decisions need trusted inputs.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -661,9 +661,9 @@
           "id": "s1",
           "heading": "Applied practice: Loops and counters",
           "command": "python3 -c 'for n in range(3): print(n)'",
-          "instruction": "Explain why range(3) outputs 0, 1, 2.",
-          "interpretation": "A loop with no exit condition can consume resources indefinitely.",
-          "task": "Define a bounded loop for three fictional events.",
+          "instruction": "Run the bounded loop as a single Python -c command and explain the range upper bound, the iteration variable and output order. Do not use an unbounded while loop to practice counting.",
+          "interpretation": "range(3) generates 0, 1 and 2; the upper limit 3 is excluded. A bounded loop can still do unsafe operations if the body touches resources outside the lab.",
+          "task": "Provide the exact three output lines, predict range(1,4), and explain an exit condition for a loop processing up to five synthetic log records.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -680,9 +680,9 @@
           "id": "s1",
           "heading": "Applied practice: Functions and reusable work",
           "command": "python3 -c 'label=lambda x: \"WARN\" if x else \"INFO\"; print(label(True))'",
-          "instruction": "Compare a small callable lambda with a named Python function. Identify the parameter, returned value and sample input; explain why reusable functions improve testability.",
-          "interpretation": "A function definition needs explicit invocation; one-liners can be harder to inspect.",
-          "task": "Write a function outline and a sample input/output pair.",
+          "instruction": "Run the callable example and identify the parameter x, returned labels and the boolean input. Rewrite it as a named function in a disposable file to compare clarity and testing.",
+          "interpretation": "For input True the function returns WARN and for False it returns INFO. A function can be pure and deterministic, which helps repeatability and separate tests from external side effects.",
+          "task": "Write three input/output test cases including True and False, and explain why naming a function does not automatically make it safe for untrusted input.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -699,9 +699,9 @@
           "id": "s1",
           "heading": "Applied practice: Arrays and records",
           "command": "python3 -c 'rows=[{\"status\":\"ok\"},{\"status\":\"warn\"}]; print(rows[1][\"status\"])'",
-          "instruction": "Find index and key access; explain zero-based positions.",
-          "interpretation": "A missing index or key can raise an error and should be handled.",
-          "task": "List two safe error-handling cases.",
+          "instruction": "Inspect the two-element list of dictionaries; identify why the second entry is index 1 and how the status key selects its value. Predict the behavior of an out-of-range index.",
+          "interpretation": "The example prints warn. Lists use zero-based indexing; a missing list item or missing dictionary key can raise an exception instead of returning a meaningful default.",
+          "task": "Write the expected output, an example of an invalid index and a safe way to check for a missing key in a fictional event record.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -718,9 +718,9 @@
           "id": "s1",
           "heading": "Applied practice: Reading code defensively",
           "command": "python3 -c 'from pathlib import Path; print(Path(\"report.txt\").suffix)'",
-          "instruction": "Describe trusted versus untrusted strings in a file-path processing program.",
-          "interpretation": "A file extension check alone does not make a path safe.",
-          "task": "Propose path containment and input-type tests for a synthetic script.",
+          "instruction": "Read the pathlib suffix example as a chain of object creation and attribute access. Explain why an extension is a descriptive string and not proof of safe or permitted file contents.",
+          "interpretation": "The example returns .txt without opening or executing the file. Filename extensions do not prevent traversal, malicious file contents or escaping an allowed root.",
+          "task": "Write a checklist covering permitted path root, symlink handling, file size, text decoding, and error cases for a hypothetical read-only report parser.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -737,9 +737,9 @@
           "id": "s1",
           "heading": "Applied practice: Logging and alert triage",
           "command": "09:00 INFO deployment; 09:02 WARN failed sign-in; 09:04 INFO application healthy",
-          "instruction": "Record actor, source, timestamp and observed outcome for each event.",
-          "interpretation": "A WARN event does not prove a successful compromise.",
-          "task": "Identify two facts to request before escalating.",
+          "instruction": "Normalize the three fictional events into a timestamped timeline. Separate event class, observed status, actor/source if known, and one missing fact needed to assess the warning.",
+          "interpretation": "A failed sign-in is an observation; a later healthy application event does not prove that all account access is authorized or the source identity is established.",
+          "task": "Prepare a three-row event table plus two alternative explanations for the warning, confidence level, and the next specific evidence request.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -756,9 +756,9 @@
           "id": "s1",
           "heading": "Applied practice: Incident response lifecycle",
           "command": "Fictional alert → evidence preservation → scoped response → restore → lessons learned",
-          "instruction": "Assign approvals and measurable checks to each incident phase.",
-          "interpretation": "Restoration of service doesn't prove attacker attribution or containment.",
-          "task": "Create a phase-by-phase response playbook.",
+          "instruction": "Trace a fictional incident through preparation, detection, analysis, approved containment, eradication, recovery and lessons learned. Identify which role can approve potentially disruptive actions.",
+          "interpretation": "Containment may stop a current impact without proving eradication; operational recovery likewise does not establish root cause or that every identity is safe.",
+          "task": "Write a staged playbook listing owner, evidence, change authorization, validation and rollback for each phase, including an explicit emergency stop condition.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -775,9 +775,9 @@
           "id": "s1",
           "heading": "Applied practice: Phishing and social engineering",
           "command": "Fictional invoice email: urgent payment; mismatched sender domain",
-          "instruction": "Identify social-engineering indicators, preserve headers and choose an escalation route.",
-          "interpretation": "Suspicious wording alone does not prove the sender's identity.",
-          "task": "Write a cautious employee notification and incident-triage note.",
+          "instruction": "Review only the provided synthetic invoice metadata. Identify domain mismatch, unusual urgency and changed payment instruction, then define a verification by a known independent contact channel.",
+          "interpretation": "Suspicious wording and sender mismatch are phishing indicators, but neither proves who authored the message. Do not reply, open attachments or follow the embedded payment link.",
+          "task": "Draft a cautious five-sentence triage notification with reported indicators, verification channel, protected evidence and escalation owner; avoid accusing a named sender.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -794,9 +794,9 @@
           "id": "s1",
           "heading": "Applied practice: Vulnerability management",
           "command": "Synthetic findings: public critical service; internal low-risk test host",
-          "instruction": "Rank issues by exposure, asset impact, exploit conditions and available patches.",
-          "interpretation": "A high severity label isn't proof of exploitation.",
-          "task": "Design a patch approval and retest schedule.",
+          "instruction": "Rank fictional findings using exposure, exploit prerequisites, asset criticality, business impact and compensating controls. Separate the existence of a vulnerability from evidence of its exploitation.",
+          "interpretation": "A public critical service typically merits attention but the order still depends on asset value and controls. A severity label by itself is not an incident finding.",
+          "task": "Create a two-finding risk register with priority rationale, patch/change owner, downtime risk, rollback option, retest criteria and residual uncertainty.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -813,9 +813,9 @@
           "id": "s1",
           "heading": "Applied practice: Access reviews and audit trails",
           "command": "Fictional account disabled 10:30; privileged use logged 10:31",
-          "instruction": "Compare system clocks, event sources, session expiry and expected revocation propagation.",
-          "interpretation": "A disable event doesn't guarantee existing sessions immediately ended.",
-          "task": "Write a verification plan for deprovisioning.",
+          "instruction": "Compare the 10:30 disablement event against the 10:31 activity, accounting for event source clock differences, session expiry and token revocation behavior.",
+          "interpretation": "The apparent sequence can arise from a previously issued session token or unsynchronized clocks; it does not by itself prove a person intentionally violated policy.",
+          "task": "Build a timeline with source, timestamp, confidence and hypotheses, then define a revocation test covering direct login and preexisting tokens.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -832,9 +832,9 @@
           "id": "s1",
           "heading": "Applied practice: Security communication and recovery",
           "command": "DNS error rate normalized, application queue remains elevated",
-          "instruction": "Produce an executive update that separates confirmed recovery from remaining risk.",
-          "interpretation": "One normalized metric doesn't establish complete business recovery.",
-          "task": "Specify owners, residual findings, and next verification thresholds.",
+          "instruction": "Write a fictional incident update after a resolver recovery while application health remains uncertain. Include affected users, current service indicators, owner, verification and next expected milestone.",
+          "interpretation": "One improved network metric does not establish end-to-end business recovery. State verified recovery only for the component and scope actually measured.",
+          "task": "Prepare an executive summary and a separate technical appendix with observed values, remaining unknowns and explicit owner/accountability for retests.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -851,9 +851,9 @@
           "id": "s1",
           "heading": "Applied practice: Understand event records",
           "command": "timestamp, host, actor, action, result, correlation-id",
-          "instruction": "Build a fictional event record and mark missing/uncertain fields.",
-          "interpretation": "A record may be incomplete or inaccurate without independent corroboration.",
-          "task": "Create an evidence schema and sampling note.",
+          "instruction": "Define a minimum fictional security event schema with timestamp including time zone, host, pseudonymized actor, action, result and correlation identifier.",
+          "interpretation": "A missing source or clock offset makes cross-system analysis less reliable; the presence of a field alone does not establish the record's authenticity.",
+          "task": "Create three example entries, identify one missing-field problem, and state how you would minimize personal data while retaining useful troubleshooting context.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -870,9 +870,9 @@
           "id": "s1",
           "heading": "Applied practice: Time windows and correlation",
           "command": "09:00Z service event; 04:00-05:00 local display (illustrative)",
-          "instruction": "Convert labeled timestamps to one reference zone before ordering events.",
-          "interpretation": "Time zone and daylight-saving offsets must be checked for the specific date.",
-          "task": "Construct a three-event unified timeline.",
+          "instruction": "Normalize the provided UTC and local-offset event examples to a common timeline before comparing order. Include clock uncertainty and daylight-saving assumptions.",
+          "interpretation": "A local timestamp without its offset is ambiguous near daylight-saving transitions. Coincident times increase correlation but do not prove causality.",
+          "task": "Present a timeline with ISO 8601 timestamps, source, normalized UTC, confidence and one alternate explanation for the order.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -889,9 +889,9 @@
           "id": "s1",
           "heading": "Applied practice: Build a basic alert rule",
           "command": "Fictional rule: >5 failed logins for one account in 10 minutes",
-          "instruction": "List rule inputs, scope, exclusions and likely benign triggers.",
-          "interpretation": "A high count suggests investigation, not proof of attacker intent.",
-          "task": "Write two positive and two negative test cases.",
+          "instruction": "Create a mock rule that triggers after more than five failed logins for one account within ten minutes. Define how it handles duplicate records and account identifiers.",
+          "interpretation": "More than five means at least six matching events in the interval. A threshold is a detection criterion, not proof that the actor is hostile.",
+          "task": "Write two positive and two negative test sequences, including a window-boundary case, and explain which benign behavior could cause a false alarm.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -908,9 +908,9 @@
           "id": "s1",
           "heading": "Applied practice: Detection versus prevention",
           "command": "Firewall policy deny versus login-failure alert",
-          "instruction": "Classify a control's intended effect and independent evidence of operation.",
-          "interpretation": "A detector may observe a blocked attempt but not prevent it.",
-          "task": "Write one preventive and one detective verification.",
+          "instruction": "Classify a deny firewall rule as preventive control and a log alert as detective control, then specify how each would be independently verified in a fictional network.",
+          "interpretation": "Blocking and alerting may coexist; a detected blocked request was not necessarily successful and a lack of alert may indicate missing telemetry rather than no attacks.",
+          "task": "Build a control matrix with purpose, input, expected action, evidence source and a negative verification case for each control.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -927,9 +927,9 @@
           "id": "s1",
           "heading": "Applied practice: Triage and escalation",
           "command": "Single sign-in anomaly; device owner unverified; no observed privilege abuse",
-          "instruction": "Write a proportionate incident handoff and identify independent evidence needs.",
-          "interpretation": "Anomaly scoring is not equivalent to proof of malicious access.",
-          "task": "Define escalation threshold and review deadline.",
+          "instruction": "Assess the fictional anomalous login with unresolved device ownership and no proof of privileged abuse. Distinguish confidence about the observation from business impact and response urgency.",
+          "interpretation": "A suspicious sign-in may warrant escalation even without confirmed compromise, especially when its role is privileged. Avoid overclaiming person attribution.",
+          "task": "Write a triage disposition containing evidence summary, confidence level, owner, deadline, proportional action and specific missing records.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
@@ -946,9 +946,9 @@
           "id": "s1",
           "heading": "Applied practice: Measure detection quality",
           "command": "TP=9 FP=15 FN=6 TN=70",
-          "instruction": "Compute precision 9/(9+15) and recall 9/(9+6), and discuss missed incidents.",
-          "interpretation": "Precision is 37.5%; recall is 60%, but sample quality and distribution matter.",
-          "task": "Recommend holdout validation and rollback criteria.",
+          "instruction": "Using TP=9, FP=15, FN=6 and TN=70, compute precision and recall explicitly, then evaluate a proposed rule change on held-out data.",
+          "interpretation": "Precision=9/24=37.5%; recall=9/15=60%. Overall accuracy can conceal serious false-negative rates when incident classes are imbalanced.",
+          "task": "Provide both worked formulas, identify the consequences of six missed incidents, and propose monitoring plus rollback thresholds for rule tuning.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
         }
       ]
