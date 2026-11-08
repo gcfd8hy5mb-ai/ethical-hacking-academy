@@ -88,7 +88,7 @@ def capture(phase: str) -> None:
     print(f"Captured {phase} mode for {len(CASES)} rooms in {OUTPUT}")
     print("No grading yet: the recorded responses may be incomplete or unexpected.")
 
-def grade() -> None:
+def grade_score() -> dict:
     doc = read()
     vulnerable = doc["captures"].get("vulnerable", {}).get("rooms", {})
     patched = doc["captures"].get("patched", {}).get("rooms", {})
@@ -111,13 +111,17 @@ def grade() -> None:
                          "root_cause": case["explain"]}
     if all(x["patched_authorized_preserved"] for x in checked.values()):
         score += 10
-    print(json.dumps({"automatic_practice_score": score, "maximum": 100,
+    return {"score": score, "maximum": 100,
                       "components": {"before": 45, "patched_denials": 45,
                                      "all_patched_valid_access": 10},
                       "results": checked,
                       "written_analysis": "Not evaluated; instructor/assessor review required",
-                      "independent_real_machine_proof": False}, indent=2))
-    if score == 100:
+                      "independent_real_machine_proof": False}
+
+def grade() -> None:
+    result = grade_score()
+    print(json.dumps(result, indent=2))
+    if result["score"] == 100:
         print("Internal lab observation threshold met, pending instructor review.")
     else:
         print("Review incomplete or failing checks; capture both modes and retest.")
