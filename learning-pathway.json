@@ -14,6 +14,10 @@
       ],
       "labs": [
         [
+          "Interactive Room Classroom · Split-Screen Lesson & Terminal",
+          "interactive-rooms.html"
+        ],
+        [
           "Basic command terminal",
           "index.html#lab"
         ],
@@ -82,6 +86,10 @@
         "Enterprise Identity and Access Management"
       ],
       "labs": [
+        [
+          "Interactive Room Classroom · Split-Screen Lesson & Terminal",
+          "interactive-rooms.html"
+        ],
         [
           "Command & Troubleshooting Field Lab",
           "command-troubleshooting-field-lab.html"
@@ -413,6 +421,10 @@
       "goal": "Integrate hardware planning, virtual enterprise infrastructure, evidence analysis and professional reporting. Hands-on physical mastery requires separate real-system evaluation.",
       "courses": [],
       "labs": [
+        [
+          "Interactive Room Classroom · Split-Screen Lesson & Terminal",
+          "interactive-rooms.html"
+        ],
         [
           "Advanced Independent Practice Workbook · 3 case studies",
           "advanced-independent-practice.html"
