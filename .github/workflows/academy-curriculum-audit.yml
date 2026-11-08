@@ -43,3 +43,5 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_offline_evidence_review.py' -v
       - name: Validate main app JavaScript syntax
         run: node --check app.js
+      - name: Exercise embedded lesson integration against mock browser
+        run: node tests/test_embedded_practice.mjs
