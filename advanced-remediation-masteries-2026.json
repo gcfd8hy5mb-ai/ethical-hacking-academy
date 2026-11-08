@@ -1,0 +1,935 @@
+{
+  "schema": "eh-remediation-masteries-2026-v1",
+  "version": "2026-11-08",
+  "policy": "Additional fictional coursework, not a replacement for original lessons or exams. Initial MC assessment may trigger an alternate remediation check. Written evidence is not automatically graded or accredited.",
+  "modules": [
+    {
+      "id": "mastery-l1-2026",
+      "level": 1,
+      "title": "Linux evidence and permissions — applied mastery",
+      "brief": "Use ordinary account permissions and preserved evidence in a local training workspace. Judge each result without claiming that a file proves an intrusion.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A report is owned by hp and must only be read and changed by hp.",
+          "evidence": "-rw-r--r-- 1 hp hp 84 report.txt",
+          "initial": {
+            "prompt": "Which mode is the smallest appropriate change?",
+            "options": [
+              "chmod 600 report.txt",
+              "chmod 777 report.txt",
+              "sudo rm report.txt"
+            ],
+            "correct": 0,
+            "explanation": "Mode 600 grants read/write to the owner and no permissions to group or others."
+          },
+          "remediation": {
+            "prompt": "Which post-change display would confirm the intended mode?",
+            "options": [
+              "-rwxrwxrwx",
+              "-rw-------",
+              "-rw-r--r--"
+            ],
+            "correct": 1,
+            "explanation": "The first ten characters should indicate a regular file and owner-only read/write access."
+          },
+          "practice": "chmod 600 report.txt; ls -l report.txt",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "A fictional sign-in log contains one failed login.",
+          "evidence": "09:10 INFO app started\\n09:12 WARN login failed for guest\\n09:13 INFO backup complete",
+          "initial": {
+            "prompt": "What can be concluded?",
+            "options": [
+              "The server was taken over",
+              "A failed authentication was recorded",
+              "The account password is compromised"
+            ],
+            "correct": 1,
+            "explanation": "A failed login is an observable event, not evidence of a successful compromise."
+          },
+          "remediation": {
+            "prompt": "Which addition would most improve a cautious triage report?",
+            "options": [
+              "Authentication success/failure context around the event",
+              "A new desktop wallpaper",
+              "A guess about attacker nationality"
+            ],
+            "correct": 0,
+            "explanation": "Corroborating authentication outcomes and source context test whether anything else occurred."
+          },
+          "practice": "grep -n 'WARN' auth-training.log; wc -l auth-training.log",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "A training log is copied for analysis.",
+          "evidence": "sha256sum original.log -> aa12...\\nsha256sum analysis.log -> aa12...",
+          "initial": {
+            "prompt": "What does matching SHA-256 support?",
+            "options": [
+              "Same file ownership",
+              "Matching file content with very high confidence",
+              "An authenticated chain of custody"
+            ],
+            "correct": 1,
+            "explanation": "Hashes support byte-integrity comparison but not author identity, acquisition history or legal authenticity."
+          },
+          "remediation": {
+            "prompt": "What else should be recorded?",
+            "options": [
+              "Acquisition time, source, handling steps and tool",
+              "Nothing else; the hash is enough",
+              "Only the filename extension"
+            ],
+            "correct": 0,
+            "explanation": "Evidence provenance requires source and handling documentation in addition to digests."
+          },
+          "practice": "sha256sum original.log analysis.log",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "A learner is at /mnt/c/Windows/System32 inside WSL.",
+          "evidence": "pwd -> /mnt/c/Windows/System32",
+          "initial": {
+            "prompt": "Where should disposable Unix file exercises be created?",
+            "options": [
+              "In System32",
+              "In the Linux user's home training directory",
+              "On an unknown corporate share"
+            ],
+            "correct": 1,
+            "explanation": "The Linux home directory keeps training artifacts separate from Windows system files."
+          },
+          "remediation": {
+            "prompt": "Which command returns to the Linux user's home?",
+            "options": [
+              "cd ~",
+              "sudo chmod -R 777 /mnt/c",
+              "format C:"
+            ],
+            "correct": 0,
+            "explanation": "Tilde expands to the current user's home directory."
+          },
+          "practice": "cd ~; mkdir -p ethical-hacking-labs; pwd",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l2-2026",
+      "level": 2,
+      "title": "Hardware failure isolation — applied mastery",
+      "brief": "Review memory, boot, heat and service-ticket evidence. Choose safe tests before ordering replacement hardware.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A desktop stops before showing the BIOS logo.",
+          "evidence": "Fan spinning, power LED lit, memory POST code repeated",
+          "initial": {
+            "prompt": "Which failure layer is most likely implicated?",
+            "options": [
+              "Pre-OS hardware initialization",
+              "Browser DNS settings",
+              "User password expiration"
+            ],
+            "correct": 0,
+            "explanation": "A memory POST indicator occurs during firmware initialization before the operating system loads."
+          },
+          "remediation": {
+            "prompt": "What should be recorded first?",
+            "options": [
+              "POST code and firmware/hardware inventory",
+              "A speculative malware attribution",
+              "A full disk wipe"
+            ],
+            "correct": 0,
+            "explanation": "Observations should be preserved before corrective actions."
+          },
+          "practice": "Record power state, POST code, installed RAM slots",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "The same DIMM reports errors in two approved slots.",
+          "evidence": "Slot A1: module X errors\\nSlot B2: module X errors\\nOther module Y passes in both slots",
+          "initial": {
+            "prompt": "Which part is most suspect?",
+            "options": [
+              "Network adapter",
+              "Module X",
+              "Both motherboard slots definitively"
+            ],
+            "correct": 1,
+            "explanation": "Faults following a module across slots are consistent with a faulty module."
+          },
+          "remediation": {
+            "prompt": "What protects the technician during retest?",
+            "options": [
+              "Power disconnection and ESD precautions",
+              "Hot swapping under load",
+              "Disabling temperature protection"
+            ],
+            "correct": 0,
+            "explanation": "Memory must not be moved while energized; physical inspection requires approved safety controls."
+          },
+          "practice": "One-variable-at-a-time module/slot retesting",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "A low-load CPU is running at 97 C.",
+          "evidence": "CPU 19% utilized, fan reports 0 RPM, system throttling",
+          "initial": {
+            "prompt": "Which subsystem needs diagnosis first?",
+            "options": [
+              "Cooling system",
+              "Cloud IAM",
+              "Local DNS cache"
+            ],
+            "correct": 0,
+            "explanation": "High temperature and a stalled fan directly suggest cooling trouble."
+          },
+          "remediation": {
+            "prompt": "Which observation best validates an authorized cooling fix?",
+            "options": [
+              "Stable safe temperature and fan RPM under repeatable load",
+              "Only a successful login",
+              "A shorter boot splash"
+            ],
+            "correct": 0,
+            "explanation": "Retest the same thermal condition under controlled workload."
+          },
+          "practice": "Temperature, fan RPM, sustained workload record",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "A technician wants to increase a 4 GB laptop to 16 GB.",
+          "evidence": "Memory slots: 1/1 used. Exact model support not checked.",
+          "initial": {
+            "prompt": "Which next action is warranted?",
+            "options": [
+              "Verify the exact service specification and compatible modules",
+              "Buy the largest module without checking",
+              "Replace the soldered CPU"
+            ],
+            "correct": 0,
+            "explanation": "Slot and speed readings do not independently establish maximum supported capacity."
+          },
+          "remediation": {
+            "prompt": "What must the report include?",
+            "options": [
+              "The measured problem, supported upgrade option, and limits",
+              "Only the retailer price",
+              "A promise that RAM fixes every bottleneck"
+            ],
+            "correct": 0,
+            "explanation": "RAM doesn't upgrade CPU performance or eMMC storage capability."
+          },
+          "practice": "Exact SKU, supported capacity, storage and workload limits",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l3-2026",
+      "level": 3,
+      "title": "Networking and Linux administration — applied mastery",
+      "brief": "Distinguish address, name resolution, routing and privilege. Avoid unauthorized network modifications.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A client connects to 10.40.0.80 but fails by hostname.",
+          "evidence": "GET http://10.40.0.80 -> 200\\napp.lab.example -> 10.40.0.81",
+          "initial": {
+            "prompt": "Which evidence identifies the likely broken layer?",
+            "options": [
+              "Wrong DNS A record",
+              "No NIC installed",
+              "Uncertain account privileges"
+            ],
+            "correct": 0,
+            "explanation": "The direct IP request works while name resolution points to another address."
+          },
+          "remediation": {
+            "prompt": "How should recovery be verified?",
+            "options": [
+              "DNS answer and HTTP application transaction",
+              "Only a ping to localhost",
+              "Only service restart exit code"
+            ],
+            "correct": 0,
+            "explanation": "Validate both the resolution and resulting user-facing service."
+          },
+          "practice": "Resolve name; compare destination; retest HTTP",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "A guest has no route to the isolated training subnet.",
+          "evidence": "ip route get 10.40.0.80 -> network unreachable",
+          "initial": {
+            "prompt": "What should the engineer inspect?",
+            "options": [
+              "Routing table and private interface attachment",
+              "CPU thermal paste",
+              "Account browser history"
+            ],
+            "correct": 0,
+            "explanation": "The kernel reports no valid route for the destination."
+          },
+          "remediation": {
+            "prompt": "What must not be introduced to fix the lab?",
+            "options": [
+              "A bridged path to the office LAN",
+              "An approved private static route",
+              "A repeatable route verification"
+            ],
+            "correct": 0,
+            "explanation": "Bridging a vulnerable training subnet to production defeats intended isolation."
+          },
+          "practice": "ip -br addr; ip route; ip route get 10.40.0.80",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "An app process is running but users see HTTP 503.",
+          "evidence": "ps shows app-server PID 212; HTTP GET returns 503",
+          "initial": {
+            "prompt": "What can be concluded?",
+            "options": [
+              "Process presence means service is healthy",
+              "Process exists but request handling is impaired",
+              "DNS is always the only cause"
+            ],
+            "correct": 1,
+            "explanation": "A running process doesn't establish successful transactions or dependency health."
+          },
+          "remediation": {
+            "prompt": "What is the best next evidence?",
+            "options": [
+              "App error logs, request metrics and dependency health",
+              "A wallpaper image",
+              "More root privileges for every account"
+            ],
+            "correct": 0,
+            "explanation": "Investigate the failing request path and its dependencies."
+          },
+          "practice": "ps -ef; inspect app error log and response",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "An appteam user cannot read root's file.",
+          "evidence": "-rw------- root root report.txt; user=appuser groups=appteam",
+          "initial": {
+            "prompt": "Which change fits least privilege?",
+            "options": [
+              "Grant appuser unrestricted sudo",
+              "Authorize group ownership/mode changes to enable narrowly scoped read",
+              "Make all files mode 777"
+            ],
+            "correct": 1,
+            "explanation": "Only needed access should be added, under change control."
+          },
+          "remediation": {
+            "prompt": "Which two tests establish the desired result?",
+            "options": [
+              "Approved user read works; unrelated user remains denied",
+              "Only owner can read",
+              "Every user can edit"
+            ],
+            "correct": 0,
+            "explanation": "Negative and positive authorization checks establish scope."
+          },
+          "practice": "id appuser; ls -l report.txt; controlled read retest",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l4-2026",
+      "level": 4,
+      "title": "SOC evidence and defensive security — applied mastery",
+      "brief": "Interpret alerts, cryptographic controls, and response decisions with limited evidence and explicit uncertainty.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "An unfamiliar device signs in during an approved release.",
+          "evidence": "09:12 svc-release from D-9; CHG-42 approved 09:00–09:20",
+          "initial": {
+            "prompt": "Which interpretation is defensible?",
+            "options": [
+              "Fully attributed authorized access",
+              "An overlapping but unverified sign-in",
+              "Confirmed compromise"
+            ],
+            "correct": 1,
+            "explanation": "Change-window overlap doesn't authenticate the device or actor."
+          },
+          "remediation": {
+            "prompt": "Which evidence reduces attribution uncertainty?",
+            "options": [
+              "Token audience and device ownership records",
+              "A company marketing flyer",
+              "Only the ticket number"
+            ],
+            "correct": 0,
+            "explanation": "Token and device provenance are the most directly relevant records."
+          },
+          "practice": "Correlate identity, device, token and signed workload",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "A log copy has a different digest from the original.",
+          "evidence": "SHA-256 original 12ab...; copy 91ff...",
+          "initial": {
+            "prompt": "What does this indicate?",
+            "options": [
+              "Byte contents likely differ",
+              "Attacker intent has been proven",
+              "The hash algorithm failed definitively"
+            ],
+            "correct": 0,
+            "explanation": "Different digests are strong evidence the content isn't identical, but the cause is unknown."
+          },
+          "remediation": {
+            "prompt": "What is a safe response?",
+            "options": [
+              "Preserve both and inspect how the copy was made",
+              "Overwrite the original",
+              "Delete the source log"
+            ],
+            "correct": 0,
+            "explanation": "Preserving artifacts allows independent verification of the discrepancy."
+          },
+          "practice": "sha256sum on both, acquisition manifest",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "A user wants encryption to replace access-control checks.",
+          "evidence": "Confidential file transferred over TLS, but guest role can request it",
+          "initial": {
+            "prompt": "Why isn't TLS sufficient?",
+            "options": [
+              "Encryption in transit doesn't enforce which authenticated roles may retrieve data",
+              "TLS always corrupts JSON",
+              "HTTPS blocks all guest accounts"
+            ],
+            "correct": 0,
+            "explanation": "Transport confidentiality does not substitute for application authorization."
+          },
+          "remediation": {
+            "prompt": "Which control is needed?",
+            "options": [
+              "Server-side authorization on each protected object",
+              "Disable encryption entirely",
+              "Rely solely on button visibility"
+            ],
+            "correct": 0,
+            "explanation": "Restrict protected resources by identity and permissions on the server."
+          },
+          "practice": "Control map: TLS, authentication, authorization",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "An alert has medium confidence and no impact proof.",
+          "evidence": "Anomalous sign-in; no successful privileged actions established",
+          "initial": {
+            "prompt": "What should the analyst do?",
+            "options": [
+              "Escalate or monitor per policy while preserving gaps",
+              "Name a specific suspect",
+              "Delete the alert as harmless"
+            ],
+            "correct": 0,
+            "explanation": "Proportional incident response preserves evidence and uncertainties."
+          },
+          "remediation": {
+            "prompt": "What belongs in the disposition?",
+            "options": [
+              "Sources, facts, alternatives, owner, follow-up and timing",
+              "Only a red badge",
+              "A fictional verdict"
+            ],
+            "correct": 0,
+            "explanation": "An auditable disposition needs the reasoning and next steps."
+          },
+          "practice": "Evidence summary and confidence assessment",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l5-2026",
+      "level": 5,
+      "title": "Ethical web testing and defensive Python — applied mastery",
+      "brief": "Practice scoped web authorization testing and safe code review using synthetic resources only.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A guest can read a private account object.",
+          "evidence": "guest /account/102 -> 200; owner /account/102 -> 200",
+          "initial": {
+            "prompt": "Which is the likely defect?",
+            "options": [
+              "Object-level authorization gap",
+              "Faulty RAM slot",
+              "DNS resolver timeout"
+            ],
+            "correct": 0,
+            "explanation": "The server isn't enforcing the expected ownership policy."
+          },
+          "remediation": {
+            "prompt": "What is a complete regression pair?",
+            "options": [
+              "Guest receives 403 and owner receives 200",
+              "All roles receive 403",
+              "Button is hidden while server still returns 200"
+            ],
+            "correct": 0,
+            "explanation": "Negative and positive tests prevent both leaks and accidental lockouts."
+          },
+          "practice": "Synthetic guest/owner request comparison",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "A Python tool joins a user input to a root path.",
+          "evidence": "root=/home/lab; user='../secrets.txt'",
+          "initial": {
+            "prompt": "What is the direct risk?",
+            "options": [
+              "Traversal outside the intended folder",
+              "Laptop overheating",
+              "DHCP lease expiration"
+            ],
+            "correct": 0,
+            "explanation": "Unvalidated parent directory components can escape the intended path."
+          },
+          "remediation": {
+            "prompt": "How should the input be handled?",
+            "options": [
+              "Resolve and restrict paths to the allowed root, addressing symlinks",
+              "Pass directly into shell=True",
+              "Disable input validation"
+            ],
+            "correct": 0,
+            "explanation": "Canonical containment and symlink checks restrict unauthorized filesystem reads."
+          },
+          "practice": "pathlib path checks; allowed-root tests",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "A security trainee sees a public hostname and starts probing.",
+          "evidence": "No explicit asset owner authorization or rules of engagement",
+          "initial": {
+            "prompt": "What should happen first?",
+            "options": [
+              "Obtain verifiable written scope and permitted testing methods",
+              "Scan immediately",
+              "Guess session tokens"
+            ],
+            "correct": 0,
+            "explanation": "Authorization and boundaries must precede any live assessment."
+          },
+          "remediation": {
+            "prompt": "What belongs in scope?",
+            "options": [
+              "Assets, methods, dates, contacts and stop conditions",
+              "Only the trainee's preferred tools",
+              "An unlimited test window"
+            ],
+            "correct": 0,
+            "explanation": "A proper rules-of-engagement agreement limits harm and confusion."
+          },
+          "practice": "Draft authorized test plan for synthetic target",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "A mock app returns HTTP 403 after a patch.",
+          "evidence": "guest -> 403; owner -> 403",
+          "initial": {
+            "prompt": "Can the fix be considered complete?",
+            "options": [
+              "Yes, no further testing",
+              "No, legitimate authorized access has also failed",
+              "Yes, HTTP 403 is always secure"
+            ],
+            "correct": 1,
+            "explanation": "A fix that blocks permitted users violates availability and functionality requirements."
+          },
+          "remediation": {
+            "prompt": "What is the next test?",
+            "options": [
+              "Restore owner access while keeping guest denied",
+              "Disable audit logging",
+              "Expose another endpoint"
+            ],
+            "correct": 0,
+            "explanation": "Test both access paths before signing off."
+          },
+          "practice": "Role matrix: denied guest, allowed owner",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l6-2026",
+      "level": 6,
+      "title": "Local labs, resource planning and cloud controls — applied mastery",
+      "brief": "Use realistic VM resource and isolation constraints, and plan secure cloud remediations without paid accounts.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A host has 16 GiB RAM and 12 GiB guest allocations.",
+          "evidence": "Host baseline 5 GiB; guests 6+4+2 GiB; total nominal 17 GiB",
+          "initial": {
+            "prompt": "Which problem is demonstrated?",
+            "options": [
+              "Nominal demand already exceeds installed RAM",
+              "The host has infinite swap",
+              "CPU cores double RAM"
+            ],
+            "correct": 0,
+            "explanation": "Host baseline plus planned guests exceeds RAM even before overhead."
+          },
+          "remediation": {
+            "prompt": "What's the safe capacity action?",
+            "options": [
+              "Reduce concurrent guest allocations and reserve overhead",
+              "Disable all host security tools",
+              "Add a public bridge"
+            ],
+            "correct": 0,
+            "explanation": "A smaller workload plan is safer than overcommitting memory."
+          },
+          "practice": "Host/guest capacity table and overhead estimate",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "The vulnerable target VM uses a bridged adapter.",
+          "evidence": "Default gateway 192.168.1.1; expected internal-only AcademyLab",
+          "initial": {
+            "prompt": "What is wrong?",
+            "options": [
+              "Training isolation policy is violated",
+              "Everything is isolated because IP is private",
+              "The VM is guaranteed compromised"
+            ],
+            "correct": 0,
+            "explanation": "Private IP addressing doesn't prove isolation from real networks."
+          },
+          "remediation": {
+            "prompt": "What's the first response?",
+            "options": [
+              "Stop vulnerable service, correct adapter and routes, then verify",
+              "Continue testing on home Wi-Fi",
+              "Expose port 8766"
+            ],
+            "correct": 0,
+            "explanation": "Stop risky services until the boundary is established."
+          },
+          "practice": "Check hypervisor adapter type and guest routes",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "An object store allows every principal to read all items.",
+          "evidence": "Principal *; Action GetObject; Scope confidential bucket",
+          "initial": {
+            "prompt": "What does this prove?",
+            "options": [
+              "A broad exposure risk, not necessarily historical data theft",
+              "A named attacker stole every file",
+              "No security risk exists"
+            ],
+            "correct": 0,
+            "explanation": "Public allow is a misconfiguration even if access logs are absent."
+          },
+          "remediation": {
+            "prompt": "What is the correct response?",
+            "options": [
+              "Scope principals, back up policy and test allow/deny cases",
+              "Delete all storage permanently",
+              "Turn off access monitoring"
+            ],
+            "correct": 0,
+            "explanation": "Least-privilege remediation with regression testing preserves functionality."
+          },
+          "practice": "Synthetic IAM policy review and rollback",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "A learner is using WSL 1 on a 4 GB laptop.",
+          "evidence": "WSL VERSION 1; limited RAM and storage",
+          "initial": {
+            "prompt": "What can be practiced safely?",
+            "options": [
+              "Linux files, text parsing, basic Python and evidence handling",
+              "Two full vulnerable VMs simultaneously",
+              "Attacking the home router"
+            ],
+            "correct": 0,
+            "explanation": "WSL 1 supports foundational commands but isn't a two-VM isolation substitute."
+          },
+          "remediation": {
+            "prompt": "Which statement is accurate?",
+            "options": [
+              "WSL 1 is not a full isolated virtual lab",
+              "WSL 1 guarantees network isolation",
+              "RAM use is irrelevant"
+            ],
+            "correct": 0,
+            "explanation": "WSL integrates with Windows and requires separate isolation for vulnerable network targets."
+          },
+          "practice": "WSL version, available memory and lab scope record",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l7-2026",
+      "level": 7,
+      "title": "Security metrics and professional scope — applied mastery",
+      "brief": "Evaluate detection quality and responsible client engagement practices.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "A rule fires on 24 events; 9 are true incidents.",
+          "evidence": "TP 9, FP 15, FN 6, TN 70",
+          "initial": {
+            "prompt": "What is precision?",
+            "options": [
+              "37.5%",
+              "60%",
+              "90%"
+            ],
+            "correct": 0,
+            "explanation": "Precision is 9/(9+15)=37.5%."
+          },
+          "remediation": {
+            "prompt": "What is recall?",
+            "options": [
+              "60%",
+              "37.5%",
+              "94%"
+            ],
+            "correct": 0,
+            "explanation": "Recall is 9/(9+6)=60%."
+          },
+          "practice": "Calculate confusion-matrix metrics",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "A candidate rule finds more incidents.",
+          "evidence": "TP 12, FP 8, FN 3, TN 77 on another 100-event dataset",
+          "initial": {
+            "prompt": "What is candidate recall?",
+            "options": [
+              "80%",
+              "60%",
+              "20%"
+            ],
+            "correct": 0,
+            "explanation": "Recall = 12/15 = 80%."
+          },
+          "remediation": {
+            "prompt": "What is candidate precision?",
+            "options": [
+              "60%",
+              "80%",
+              "30%"
+            ],
+            "correct": 0,
+            "explanation": "Precision = 12/(12+8)=60%."
+          },
+          "practice": "Compare baseline/candidate with dataset cautions",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "A company asks for a penetration test, but sends no scope.",
+          "evidence": "No asset list, no verified signer, no stop conditions",
+          "initial": {
+            "prompt": "What is the most responsible first action?",
+            "options": [
+              "Request written authorization and boundaries",
+              "Run discovery against all known domains",
+              "Guess admin credentials"
+            ],
+            "correct": 0,
+            "explanation": "An ambiguous invitation is insufficient authority for a live test."
+          },
+          "remediation": {
+            "prompt": "Which constraint belongs in the agreement?",
+            "options": [
+              "Permitted targets, times, methods, contacts and emergency stop conditions",
+              "Only color scheme",
+              "No evidence handling rules"
+            ],
+            "correct": 0,
+            "explanation": "Rules of engagement define the ethical and technical limits."
+          },
+          "practice": "Draft rules of engagement and escalation",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "A rule is tuned against the same labels used to develop it.",
+          "evidence": "Training precision improved; unseen holdout not tested",
+          "initial": {
+            "prompt": "Why is the improvement inconclusive?",
+            "options": [
+              "Overfitting and dataset shift remain possible",
+              "All false negatives are eliminated",
+              "Precision cannot be computed"
+            ],
+            "correct": 0,
+            "explanation": "Performance must be checked on independent labeled samples."
+          },
+          "remediation": {
+            "prompt": "What should govern deployment?",
+            "options": [
+              "Holdout tests, risk review, monitoring and rollback thresholds",
+              "A promise that volume is lower",
+              "Disabling all alerts"
+            ],
+            "correct": 0,
+            "explanation": "Controlled rollout ensures accountability for missed incidents and false alarms."
+          },
+          "practice": "Detection change plan and monitoring thresholds",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    },
+    {
+      "id": "mastery-l8-2026",
+      "level": 8,
+      "title": "Enterprise incident and final technical defense — applied mastery",
+      "brief": "Integrate multi-fault incident analysis, executive communication and validation gaps in a capstone evidence review.",
+      "activities": [
+        {
+          "id": "challenge-1",
+          "scenario": "An enterprise resolver recovers but the app is degraded.",
+          "evidence": "DNS errors 0.5%; HTTP 503 23%; queue depth 790",
+          "initial": {
+            "prompt": "What is the current recovery state?",
+            "options": [
+              "Partial recovery with application degradation",
+              "Fully restored service",
+              "Confirmed malicious sabotage"
+            ],
+            "correct": 0,
+            "explanation": "Resolver health doesn't prove application health."
+          },
+          "remediation": {
+            "prompt": "Which check should be prioritized?",
+            "options": [
+              "App queue/dependencies and known-good business transaction",
+              "Changing DNS randomly again",
+              "Only ping localhost"
+            ],
+            "correct": 0,
+            "explanation": "Service-level evidence is needed before declaring recovery."
+          },
+          "practice": "Independent DNS, HTTP, queue and transaction checks",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-2",
+          "scenario": "An identity alert overlaps an approved network change.",
+          "evidence": "Unusual sign-in 09:17, actor identity uncertain; routing fix at 09:25",
+          "initial": {
+            "prompt": "What can be claimed?",
+            "options": [
+              "An unexplained identity event co-occurred",
+              "A specific employee is guilty",
+              "Identity compromise was ruled out"
+            ],
+            "correct": 0,
+            "explanation": "Correlation alone does not establish attribution."
+          },
+          "remediation": {
+            "prompt": "How should it be tracked?",
+            "options": [
+              "Separate owner, evidence request and follow-up decision",
+              "Delete the identity record",
+              "Close because HTTP is healthy"
+            ],
+            "correct": 0,
+            "explanation": "Preserve independent security investigation until resolved."
+          },
+          "practice": "Identity provenance and confidence note",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-3",
+          "scenario": "All synthetic HTTP security checks pass after remediation.",
+          "evidence": "Guest 403; owner 200; no production authentication under test",
+          "initial": {
+            "prompt": "What does a passing score establish?",
+            "options": [
+              "Only the scoped synthetic authorization behavior passed",
+              "Professional certification",
+              "All web services are secure"
+            ],
+            "correct": 0,
+            "explanation": "The fixture uses fictional role selectors and covers only the tested endpoints."
+          },
+          "remediation": {
+            "prompt": "Which limitation must be written?",
+            "options": [
+              "Untested routes, identity assumptions, and independent review need",
+              "No limitations",
+              "The app's font family"
+            ],
+            "correct": 0,
+            "explanation": "Report methodology scope and uncertainties to avoid overclaiming."
+          },
+          "practice": "Technical report scope and test matrix",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        },
+        {
+          "id": "challenge-4",
+          "scenario": "An executive asks to announce a complete security guarantee.",
+          "evidence": "Operational metrics restored, but no independent security sign-off",
+          "initial": {
+            "prompt": "Which response is accurate?",
+            "options": [
+              "Report measured recovery and outstanding investigations",
+              "Promise no future incidents",
+              "Claim accreditation"
+            ],
+            "correct": 0,
+            "explanation": "Measured outcomes don't establish universal security or academic qualification."
+          },
+          "remediation": {
+            "prompt": "What should final handoff include?",
+            "options": [
+              "Owners, remaining findings, validation criteria and monitoring",
+              "Only the 100-point grade",
+              "A screenshot without context"
+            ],
+            "correct": 0,
+            "explanation": "An accountable handoff preserves residual risk and verification requirements."
+          },
+          "practice": "Executive summary and technical appendix",
+          "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
+        }
+      ]
+    }
+  ]
+}
