@@ -130,7 +130,7 @@
           "command": "Firmware hardware monitor or manufacturer diagnostic utility",
           "instruction": "Record idle and load temperatures and fan behavior under a short, monitored, approved test.",
           "interpretation": "High temperature plus low fan speed suggests cooling issues but may also reflect a bad sensor.",
-          "task": "Prepare a cooling fault tree and a post-repair retest plan.",
+          "task": "Prepare a cooling fault tree separating blocked airflow, fan failure, poor heatsink contact, and sensor error. Record safe idle/load temperature and fan observations, then specify the same measurement required after repair.",
           "safety": "Stop a test if overheating or thermal shutdown occurs; disconnect power before opening the chassis."
         }
       ]
@@ -281,7 +281,7 @@
           "heading": "Distinguish repairable from integrated components",
           "command": "Exact model service guide; board images; warranty policy",
           "instruction": "Classify RAM, SSD, wireless, battery, cooling and CPU as socketed, replaceable, soldered or manufacturer-service-only.",
-          "interpretation": "A desktop's upgrade freedom cannot be assumed for laptops.",
+          "interpretation": "Unlike desktops, many laptops have soldered memory, embedded storage, proprietary connectors, and restricted service procedures. A slot count alone cannot establish capacity or replaceability; confirm exact model support.",
           "task": "Write a repair-versus-replace recommendation including cost and performance limits.",
           "safety": "Inspect the service guide before opening the device, and observe battery safety."
         }
@@ -432,7 +432,7 @@
           "id": "s1",
           "heading": "Design a budget-conscious safe lab blueprint",
           "command": "Host resource table; network adapter map; clean image inventory",
-          "instruction": "Budget for guest memory, host headroom, disk, CPU virtualization and network isolation.",
+          "instruction": "Start with the currently available CPU, physical RAM, storage capacity and hypervisor support. Budget host memory plus both guest allocations and overhead, then map each VM's network interfaces. Produce a staged plan: WSL file-only practice now and separate internally networked VMs only after hardware and isolation checks pass.",
           "interpretation": "A plan that fits disk but exceeds available RAM will not produce reliable concurrent VMs.",
           "task": "Prepare a two-phase blueprint: WSL file exercises now, private two-VM lab after hardware upgrade.",
           "safety": "Keep vulnerable targets powered down until independent isolation checks pass."
