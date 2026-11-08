@@ -36,7 +36,7 @@ function courseMasteryPanel(c,i){const m=courseMastery(c,i);return '<section cla
 function lessonReadingHTML(reading){return String(reading).split(/\n\s*\n/).filter(Boolean).map(block=>'<div class="lesson-section">'+block.split('\n').filter(Boolean).map(line=>{const m=line.match(/^([A-Z][A-Z0-9 ,\/()—–-]{3,85}):\s*(.*)$/);return m?'<p><strong>'+safe(m[1])+':</strong> '+safe(m[2])+'</p>':'<p>'+safe(line)+'</p>'}).join('')+'</div>').join('')}
 // Supplemental practical instruction is lazy-loaded inside the existing lesson view.
 // It never adds, removes, reorders or marks an original lesson complete.
-let embeddedPracticePromise=null;
+const embeddedPracticeCatalogs=new Map();
 let embeddedPracticeMapPromise=null;
 const embeddedPracticeKey=t=>String(t||'').trim().toLowerCase().replace(/\\s+/g,' ');
 function embeddedPracticeSectionHTML(section,unit,lessonTitle){
@@ -72,12 +72,19 @@ async function loadEmbeddedPracticeForLesson(expectedCourse,expectedLesson){
    current.innerHTML='<section class="sheet body"><h2>Related practice library</h2><p class="muted">A lesson-specific practical exercise has not been reviewed for this exact lesson yet. Open the Academy practice library instead of showing an unrelated exercise.</p><p><a class="button" href="./coursework-practical-expansion.html">Browse practical coursework →</a></p></section>';
    return;
   }
-  if(!embeddedPracticePromise)embeddedPracticePromise=Promise.allSettled([
-   fetch('./coursework-practical-expansion-2026.json').then(r=>{if(!r.ok)throw Error('Existing practice HTTP '+r.status);return r.json()}),
-   fetch('./coursework-specific-practice-2026.json').then(r=>{if(!r.ok)throw Error('Specific practice HTTP '+r.status);return r.json()}),
-   fetch('./core-lesson-guided-practice-2026.json').then(r=>{if(!r.ok)throw Error('Core lesson practice HTTP '+r.status);return r.json()})
-  ]).then(results=>({units:results.flatMap(result=>result.status==='fulfilled'&&Array.isArray(result.value?.units)?result.value.units:[])})).catch(e=>{embeddedPracticePromise=null;throw e});
-  const data=await embeddedPracticePromise;
+  const allowedPracticeSources=new Set([
+   'coursework-practical-expansion-2026.json',
+   'coursework-specific-practice-2026.json',
+   'core-lesson-guided-practice-2026.json',
+   'core-guided-practice-batch2-2026.json'
+  ]);
+  const source=match.source||'coursework-practical-expansion-2026.json';
+  if(!allowedPracticeSources.has(source))throw Error('Unrecognized practice source');
+  if(!embeddedPracticeCatalogs.has(source)){
+   const pending=fetch('./'+source).then(r=>{if(!r.ok)throw Error('Practice HTTP '+r.status);return r.json()}).catch(e=>{embeddedPracticeCatalogs.delete(source);throw e});
+   embeddedPracticeCatalogs.set(source,pending);
+  }
+  const data=await embeddedPracticeCatalogs.get(source);
   if(screen!=='lesson'||courseIndex!==expectedCourse||lessonIndex!==expectedLesson)return;
   const latest=document.getElementById('academy-embedded-practice');
   if(!latest)return;
