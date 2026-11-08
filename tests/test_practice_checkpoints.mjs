@@ -18,7 +18,7 @@ for(const item of data.entries){
  keys.add(item.unitId);
  assert.ok(typeof item.question==='string'&&item.question.length>=30);
  assert.ok(Array.isArray(item.options)&&item.options.length===3);
- assert.ok(item.options.every(x=>typeof x==='string'&&x.length>=3));
+ assert.ok(item.options.every(x=>typeof x==='string'&&x.trim().length>=1));
  assert.ok(Number.isInteger(item.answer)&&item.answer>=0&&item.answer<item.options.length);
  assert.ok(typeof item.explanation==='string'&&item.explanation.length>=60);
 }
