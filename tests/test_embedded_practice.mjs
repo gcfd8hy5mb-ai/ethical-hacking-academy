@@ -8,7 +8,7 @@ import { dirname, resolve } from 'node:path';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const js = readFileSync(resolve(ROOT, 'app.js'), 'utf8');
-const begin = js.indexOf('let embeddedPracticeMapPromise=null;');
+const begin = js.indexOf('const embeddedPracticeCatalogs=new Map();');
 const end = js.indexOf('function nav(){', begin);
 assert.ok(begin >= 0 && end > begin, 'Expected original embedded-practice integration exists.');
 const helper = js.slice(begin, end);
