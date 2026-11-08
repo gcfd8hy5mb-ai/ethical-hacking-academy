@@ -1,0 +1,443 @@
+{
+  "version": "2026-11-08",
+  "description": "Targeted practice supplements for exact previously unassigned published lesson titles; no original lesson records modified.",
+  "units": [
+    {
+      "id": "specific-practice-2026-01",
+      "level": 1,
+      "title": "Processes, services, and performance clues — practical fieldwork",
+      "scenario": "A slow workstation needs evidence-based diagnosis.",
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Processes, services, and performance clues",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Observe resource usage without modifying the system",
+          "command": "Windows Task Manager → Processes → sort by CPU and Memory",
+          "instruction": "Record the top process names and resource percentages at two observation times, and compare with the machine's available memory.",
+          "interpretation": "High CPU or RAM identifies workload pressure, not automatically malware or failing hardware.",
+          "task": "Create a short incident note separating current measurements from hypotheses.",
+          "safety": "Do not end unfamiliar system processes or disable security software merely to improve performance."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-02",
+      "level": 3,
+      "title": "PowerShell inspection: processes, services, and safe triage — practical fieldwork",
+      "scenario": "A support analyst must identify what is running without stopping services.",
+      "course": "Windows Administration and Security",
+      "lesson": "PowerShell inspection: processes, services, and safe triage",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Inspect running services and process state safely",
+          "command": "Get-Process | Select-Object -First 10 Name,Id,CPU; Get-Service | Select-Object -First 10 Name,Status",
+          "instruction": "Use read-only PowerShell process and service queries; process CPU is cumulative CPU time, not an instantaneous percentage.",
+          "interpretation": "A stopped service may be expected. Correlate startup type, dependencies, and logs before inferring a fault.",
+          "task": "List two healthy versus suspicious interpretations of the same stopped service.",
+          "safety": "Use PowerShell only on your own or authorized Windows computer. Do not run scripts from unknown sources."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-03",
+      "level": 2,
+      "title": "RAM selection and upgrade planning — practical fieldwork",
+      "scenario": "A 4 GB laptop is slow, and a seller recommends a 16 GB DIMM.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "RAM selection and upgrade planning",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Confirm memory compatibility and budget",
+          "command": "Task Manager → Performance → Memory; manufacturer service guide",
+          "instruction": "Check exact model, socket/soldered layout, maximum supported memory, module type and serviceability before purchasing.",
+          "interpretation": "A single installed memory slot does not prove that 16 GB is supported; extra RAM does not fix a slow CPU.",
+          "task": "Prepare a compatibility worksheet listing current RAM, supported options and limits.",
+          "safety": "Disconnect power and follow manufacturer battery/ESD precautions for physical upgrades."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-04",
+      "level": 2,
+      "title": "Storage, SSDs and backup strategy — practical fieldwork",
+      "scenario": "A low-storage laptop cannot install a large training image.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Storage, SSDs and backup strategy",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Distinguish capacity, media and data protection",
+          "command": "Settings → System → Storage; File Explorer drive properties",
+          "instruction": "Compare free capacity, drive type, external backup options, and restore-time goals before selecting storage.",
+          "interpretation": "An SSD upgrade may help throughput but cannot be assumed possible when the laptop uses embedded eMMC.",
+          "task": "Design a backup/restore plan for synthetic lab files and record verification steps.",
+          "safety": "Back up important data before changes; never initialize or format the live system disk during the exercise."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-05",
+      "level": 2,
+      "title": "Power supplies and electrical safety — practical fieldwork",
+      "scenario": "A workstation upgrade adds a new GPU but retains an unknown old power supply.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Power supplies and electrical safety",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Estimate demand and safe power margin",
+          "command": "GPU vendor power recommendation; PSU label; motherboard connector checklist",
+          "instruction": "Estimate component wattage under load and check connector availability, voltage requirements, unit age and quality.",
+          "interpretation": "A wattage sticker alone does not establish usable rail capacity or electrical safety.",
+          "task": "Draft a justified PSU selection with safety margin and compatibility evidence.",
+          "safety": "Never open a power supply enclosure; capacitors can retain dangerous charge after unplugging."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-06",
+      "level": 2,
+      "title": "GPU needs for cybersecurity — practical fieldwork",
+      "scenario": "A beginner wants an expensive GPU for Linux administration and virtual machines.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "GPU needs for cybersecurity",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Assess GPU value against the training workload",
+          "command": "System requirements of local VMs and training tools; GPU memory specification",
+          "instruction": "Compare RAM, CPU virtualization, SSD storage and graphics needs for the actual coursework.",
+          "interpretation": "Linux CLI, networking and most defensive labs do not need a high-end GPU; local AI or GPU workloads may.",
+          "task": "Write a budget trade-off matrix showing more useful upgrades first.",
+          "safety": "Do not promise accelerated work without verifying tool-specific hardware support."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-07",
+      "level": 2,
+      "title": "Cooling, airflow and thermals — practical fieldwork",
+      "scenario": "A desktop slows under moderate load, while its fan reports a warning.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Cooling, airflow and thermals",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Collect thermal evidence before repair",
+          "command": "Firmware hardware monitor or manufacturer diagnostic utility",
+          "instruction": "Record idle and load temperatures and fan behavior under a short, monitored, approved test.",
+          "interpretation": "High temperature plus low fan speed suggests cooling issues but may also reflect a bad sensor.",
+          "task": "Prepare a cooling fault tree and a post-repair retest plan.",
+          "safety": "Stop a test if overheating or thermal shutdown occurs; disconnect power before opening the chassis."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-08",
+      "level": 2,
+      "title": "Compatibility and purchasing exercise — practical fieldwork",
+      "scenario": "A student must select components without exceeding a fixed budget.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Compatibility and purchasing exercise",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Build a parts compatibility checklist",
+          "command": "CPU socket; motherboard chipset; RAM generation; PSU connectors; case clearance",
+          "instruction": "Check each cross-component constraint and retain links to manufacturer specifications with revision date.",
+          "interpretation": "A compatible CPU socket is necessary but not always sufficient; BIOS support can still matter.",
+          "task": "Create a bill of materials with alternatives, availability uncertainty and upgrade path.",
+          "safety": "Avoid assuming current retail prices or stock without dated verification."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-09",
+      "level": 2,
+      "title": "Hardware inspection and tool safety — practical fieldwork",
+      "scenario": "A training PC is ready for authorized internal inspection.",
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Hardware inspection and tool safety",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Prepare a no-damage hardware inspection",
+          "command": "Power off; unplug; confirm internal battery and ESD procedures",
+          "instruction": "Document power state, external connectors, case condition and approved inspection sequence before handling components.",
+          "interpretation": "A clean-looking component does not mean it works; physical inspection supplements but doesn't replace diagnostics.",
+          "task": "Write a checklist for static control, tools, screws, photos and reassembly.",
+          "safety": "Do not probe energized circuits or open power supplies."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-10",
+      "level": 2,
+      "title": "Windows installation and drivers — practical fieldwork",
+      "scenario": "A workstation requires a clean Windows installation, with user data still present.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Windows installation and drivers",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Plan a safe OS install workflow",
+          "command": "Windows recovery options; device manufacturer's official driver catalog",
+          "instruction": "Confirm OS license, recovery path, backups, storage target and driver source before initiating changes.",
+          "interpretation": "A successful OS boot isn't proof all drivers, security updates and user data are restored.",
+          "task": "Write an install acceptance checklist with data restore, updates and Device Manager checks.",
+          "safety": "Do not erase or format a real user's drive as practice."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-11",
+      "level": 2,
+      "title": "Linux installation and dual boot — practical fieldwork",
+      "scenario": "A student wants Linux on a small Windows laptop with limited storage.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Linux installation and dual boot",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Compare non-destructive install options",
+          "command": "wsl --list --verbose; Windows storage free-space view",
+          "instruction": "Compare WSL 1, WSL 2, bootable live USB and dual boot against RAM, disk and recoverability.",
+          "interpretation": "WSL 1 is lightweight but not equivalent to a hardened virtual-machine sandbox.",
+          "task": "Recommend a reversible beginner setup and describe rollback steps.",
+          "safety": "Never resize or overwrite a personal Windows partition without a verified backup."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-12",
+      "level": 2,
+      "title": "Diagnosing no-POST and no-display faults — practical fieldwork",
+      "scenario": "A system turns on without displaying a BIOS logo.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Diagnosing no-POST and no-display faults",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Separate startup failure categories",
+          "command": "POST beeps/LED codes; external display; firmware health diagnostics",
+          "instruction": "Use known-good power and display checks, then follow a staged firmware, memory and video diagnostic flow.",
+          "interpretation": "Power LEDs and spinning fans do not confirm successful POST or OS startup.",
+          "task": "Make a decision tree with a safe observation and next step for three branches.",
+          "safety": "Power down before reseating components; follow ESD practices."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-13",
+      "level": 2,
+      "title": "Diagnosing crashes and performance — practical fieldwork",
+      "scenario": "A training workstation freezes when a memory-heavy app opens.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Diagnosing crashes and performance",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Correlate symptom timing with resource and event logs",
+          "command": "Windows Reliability Monitor; Event Viewer; Task Manager",
+          "instruction": "Record error timestamps and app/process memory usage, then compare to storage, thermal and driver evidence.",
+          "interpretation": "A crash event can identify a symptom but seldom proves its ultimate cause.",
+          "task": "Propose two controlled hypothesis tests and an evidence collection plan.",
+          "safety": "Don't disable security protections or replace multiple components at once."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-14",
+      "level": 2,
+      "title": "Privacy and ethics in repairing others' PCs — practical fieldwork",
+      "scenario": "A friend authorizes hardware repair but has not authorized access to personal documents.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Privacy and ethics in repairing others' PCs",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Protect device owner data during repairs",
+          "command": "Written repair authorization and data-handling checklist",
+          "instruction": "Define allowed diagnostics, consent scope, data backup handling, and secure reporting before starting.",
+          "interpretation": "Device possession is not permission to inspect private photos, emails or passwords.",
+          "task": "Draft repair consent conditions and a data minimization procedure.",
+          "safety": "Use fictional data; never access personal files outside the explicitly agreed repair scope."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-15",
+      "level": 2,
+      "title": "Laptop vs desktop upgrades — practical fieldwork",
+      "scenario": "A compact laptop has one RAM slot and embedded storage.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Laptop vs desktop upgrades",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Distinguish repairable from integrated components",
+          "command": "Exact model service guide; board images; warranty policy",
+          "instruction": "Classify RAM, SSD, wireless, battery, cooling and CPU as socketed, replaceable, soldered or manufacturer-service-only.",
+          "interpretation": "A desktop's upgrade freedom cannot be assumed for laptops.",
+          "task": "Write a repair-versus-replace recommendation including cost and performance limits.",
+          "safety": "Inspect the service guide before opening the device, and observe battery safety."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-16",
+      "level": 2,
+      "title": "Repair capstone: diagnose and document — practical fieldwork",
+      "scenario": "A customer reports crashes and requests an immediate motherboard replacement.",
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Repair capstone: diagnose and document",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Complete an evidence-backed service ticket",
+          "command": "Fault record; controlled tests; change approval; retest observations",
+          "instruction": "Write intake, reproduce symptoms, eliminate hypotheses one by one, and record outcome with confidence.",
+          "interpretation": "A part replacement followed by one successful reboot is not enough to establish long-term resolution.",
+          "task": "Submit a service report including decision rationale, residual uncertainty and next monitoring step.",
+          "safety": "Use authorized equipment and protect customer information."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-17",
+      "level": 6,
+      "title": "Kali Linux workstation fundamentals — practical fieldwork",
+      "scenario": "A learner wants to install a security distribution to run offline tools.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Kali Linux workstation fundamentals",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Define legitimate workstation roles and boundaries",
+          "command": "Virtualization plan; operating-system requirements; authorized lab scope",
+          "instruction": "List tool categories, package provenance, updates, user permissions and why a dedicated practice environment is useful.",
+          "interpretation": "Installing Kali Linux does not by itself provide authorization or isolation from other systems.",
+          "task": "Draft a workstation provisioning checklist with rollback and least-privilege controls.",
+          "safety": "On a low-resource WSL 1 laptop, use approved offline exercises instead of running vulnerable services."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-18",
+      "level": 6,
+      "title": "Windows domain simulation — practical fieldwork",
+      "scenario": "A student wants to understand Windows domain users and group policy.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Windows domain simulation",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Design a fictional identity lab",
+          "command": "Synthetic OU, account and group policy diagram",
+          "instruction": "Draw a domain controller, member workstation, service account and user roles, defining intended trust boundaries.",
+          "interpretation": "A domain can demonstrate central identity; it is not a license to test real corporate environments.",
+          "task": "Create a role matrix and describe one authorized and one denied access test.",
+          "safety": "Use a fully isolated training domain and synthetic identities only."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-19",
+      "level": 6,
+      "title": "Linux and web practice targets — practical fieldwork",
+      "scenario": "A future lab hosts a deliberately vulnerable training web application.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Linux and web practice targets",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Choose isolated targets for skill progression",
+          "command": "Two separate VM diagrams; internal-only adapter settings",
+          "instruction": "Define instructor target and analyst roles, permitted ports, snapshots and stop conditions before launch.",
+          "interpretation": "A localhost address or a private IP alone does not prove safe containment.",
+          "task": "Produce an isolation acceptance checklist with adapter, routing and firewall tests.",
+          "safety": "Do not host intentionally vulnerable targets on WSL 1 connected to real networks."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-20",
+      "level": 6,
+      "title": "Managed switches and VLANs — practical fieldwork",
+      "scenario": "A training network separates simulated analyst and target zones.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Managed switches and VLANs",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Reason about segmentation without touching real switches",
+          "command": "Network diagram with VLAN 10 analyst, VLAN 20 target",
+          "instruction": "Identify VLAN membership, trunk links, routing policies and where isolation enforcement occurs.",
+          "interpretation": "VLANs alone do not replace firewall policies; inter-VLAN routing may reconnect segments.",
+          "task": "Specify an allowed and denied traffic matrix for a fictional managed switch.",
+          "safety": "Do not change household or corporate switch configurations without owner approval."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-21",
+      "level": 6,
+      "title": "Storage, backups, and recovery — practical fieldwork",
+      "scenario": "A VM update corrupts the training target, but a snapshot exists.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Storage, backups, and recovery",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Establish rollback-ready lab operations",
+          "command": "Snapshot manifest; backing storage capacity; restore test report",
+          "instruction": "Compare snapshots, independent backups, configuration-as-code and periodic restore validation.",
+          "interpretation": "A snapshot may depend on the original disk; it is not necessarily an independent backup.",
+          "task": "Write a recovery sequence with verification of VM isolation after restore.",
+          "safety": "Use synthetic training data and keep backup copies off public repositories."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-22",
+      "level": 6,
+      "title": "Red Team lab exercise workflow — practical fieldwork",
+      "scenario": "A student is given written authorization for a fictional web target.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Red Team lab exercise workflow",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Design a scoped technical assessment process",
+          "command": "Scope sheet; hypothesis; evidence; fix; retest forms",
+          "instruction": "Sequence preflight authorization, baseline observations, approved testing, recording and remediation validation.",
+          "interpretation": "A successful technical request is not a complete security assessment or certified finding.",
+          "task": "Write a workflow showing an evidence checkpoint and a stop condition at each stage.",
+          "safety": "Never test real external systems without explicit permission."
+        }
+      ]
+    },
+    {
+      "id": "specific-practice-2026-23",
+      "level": 6,
+      "title": "Infrastructure capstone blueprint — practical fieldwork",
+      "scenario": "A learner plans a future two-VM cyber range but currently has 4 GB RAM.",
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Infrastructure capstone blueprint",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Design a budget-conscious safe lab blueprint",
+          "command": "Host resource table; network adapter map; clean image inventory",
+          "instruction": "Budget for guest memory, host headroom, disk, CPU virtualization and network isolation.",
+          "interpretation": "A plan that fits disk but exceeds available RAM will not produce reliable concurrent VMs.",
+          "task": "Prepare a two-phase blueprint: WSL file exercises now, private two-VM lab after hardware upgrade.",
+          "safety": "Keep vulnerable targets powered down until independent isolation checks pass."
+        }
+      ]
+    }
+  ]
+}
