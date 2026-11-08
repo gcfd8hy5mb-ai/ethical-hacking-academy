@@ -34,7 +34,7 @@
           "heading": "Investigate and verify: Provisioning least-privilege roles",
           "command": "Roles: analyst read-only; incident lead limited write; HR no server access",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Roles: analyst read-only; incident lead limited write; HR no server access",
-          "interpretation": "A role name alone does not establish effective privileges.",
+          "interpretation": "Role labels do not guarantee effective access. The decision must consider inherited groups, temporary grants, resource-specific policy and the final allow/deny outcome tested with each authorized role.",
           "task": "Build an allow/deny matrix and explain why inherited group permissions must be reviewed.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -72,7 +72,7 @@
           "heading": "Investigate and verify: Privileged access reviews",
           "command": "Sample quarterly privileged account inventory with unused admin account",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Sample quarterly privileged account inventory with unused admin account",
-          "interpretation": "An unused account is a risk indicator, not proof of misuse.",
+          "interpretation": "An unused privileged account indicates access may be unnecessary, not that misuse occurred. Confirm ownership, last activity, business justification, revoke approval and downstream entitlements before closure.",
           "task": "Identify stale permissions and define a review owner, deadline and removal verification.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -129,7 +129,7 @@
           "heading": "Investigate and verify: Identity audit evidence",
           "command": "Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
-          "interpretation": "A granted role does not prove it was actually used.",
+          "interpretation": "A role assignment at 09:00 followed by a read at 09:03 provides a timeline, not proof the role caused the access. Correlate subject, session, resource policy and authenticated request identity.",
           "task": "Normalize times and corroborate actor, session, policy and resource access records.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -452,7 +452,7 @@
           "heading": "Investigate and verify: User input validation",
           "command": "Form field accepts unexpected negative quantity and a 20,000-character string",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Form field accepts unexpected negative quantity and a 20,000-character string",
-          "interpretation": "Input validation is distinct from safe output encoding.",
+          "interpretation": "Validation checks input type, format, length, range and normalization; output encoding depends on rendering context. Rejecting negative quantity does not by itself prevent injection or unauthorized requests.",
           "task": "Design type, range, length and normalization tests on a synthetic form.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -642,7 +642,7 @@
           "heading": "Investigate and verify: Storage data classification",
           "command": "Synthetic customer files labeled public, internal and confidential",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic customer files labeled public, internal and confidential",
-          "interpretation": "Labels are meaningful only when enforced and maintained.",
+          "interpretation": "A classification label is only effective when storage policies, encryption, retention rules, logging and recovery settings enforce it. Check who can read confidential objects, not just their filenames.",
           "task": "Assign encryption, access, retention, geographic and backup controls by classification.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -699,7 +699,7 @@
           "heading": "Investigate and verify: Central logging and audit trails",
           "command": "Mock logs in three services with offset timestamps",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock logs in three services with offset timestamps",
-          "interpretation": "Incomplete logs limit incident attribution.",
+          "interpretation": "Missing, unsynchronized or untrusted logs limit attribution and incident reconstruction. Correlation IDs, consistent UTC conversion and appropriate integrity controls improve the evidentiary value.",
           "task": "Normalize clocks, correlate request IDs and define immutable retention without overcollecting PII.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -737,7 +737,7 @@
           "heading": "Investigate and verify: Infrastructure change approval",
           "command": "Terraform-like fictional config drift detected in a storage policy",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Terraform-like fictional config drift detected in a storage policy",
-          "interpretation": "Automated changes still require scope and change control.",
+          "interpretation": "A planned configuration deployment can still introduce exposure; evaluate the exact before/after policy, the authorized approver, affected assets, rollback plan and denied/allowed access results.",
           "task": "Document before/after diff, approver, rollback and independent deny/allow validation.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -756,7 +756,7 @@
           "heading": "Investigate and verify: Cloud incident communication",
           "command": "Fictional cloud exposure resolved but access history incomplete",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional cloud exposure resolved but access history incomplete",
-          "interpretation": "Avoid saying data was stolen or safe without evidence.",
+          "interpretation": "Resolution of a misconfigured policy proves the current configuration changed; incomplete historical access logs leave earlier data exposure uncertain. Report confirmed events and unknowns separately.",
           "task": "Prepare incident update with known exposure window, confirmed access, unknowns and next owner.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -775,7 +775,7 @@
           "heading": "Investigate and verify: Defining authorized testing scope",
           "command": "Assessment request identifies two URLs but no verified owner authorization",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Assessment request identifies two URLs but no verified owner authorization",
-          "interpretation": "A request from an unverified person is not authorization.",
+          "interpretation": "A request naming targets is not sufficient without verified authority from the owner. Confirm permission, exact hosts, allowed methods, schedule, data handling and a stop/escalation process in writing.",
           "task": "Draft written scope, authority, dates, permitted methods, limits and stop triggers.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -813,7 +813,7 @@
           "heading": "Investigate and verify: Building a target inventory from supplied diagrams",
           "command": "Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
-          "interpretation": "Do not expand inventory by scanning unknown assets.",
+          "interpretation": "The supplied architecture is a starting inventory, not permission to discover excluded hosts. Track approved host identifiers, owner confirmation, environment and any expressly prohibited services.",
           "task": "Prepare inventory with allowed asset identifiers and excluded components.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -870,7 +870,7 @@
           "heading": "Investigate and verify: Risk ranking in business context",
           "command": "Compare public private-data disclosure with internal verbose error logging",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Compare public private-data disclosure with internal verbose error logging",
-          "interpretation": "A numeric score is not a substitute for business context.",
+          "interpretation": "A scoring formula cannot replace business context: compare exploit prerequisites, reachable exposure, data sensitivity, compensating controls, likelihood evidence and potential operational harm.",
           "task": "Rank likely business impact, asset exposure, prerequisites, cost and confidence.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -889,7 +889,7 @@
           "heading": "Investigate and verify: Writing reproducible findings",
           "command": "Reproduce a synthetic guest access-control issue",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Reproduce a synthetic guest access-control issue",
-          "interpretation": "Never include real third-party private data in a finding.",
+          "interpretation": "Demonstrate a synthetic finding with prerequisites, exact request role/object, expected and observed response, and timestamps. Exclude real unauthorized private data and disclose limitations.",
           "task": "Write prerequisites, request, expected versus observed response, limits and minimal evidence.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
@@ -908,7 +908,7 @@
           "heading": "Investigate and verify: Remediation recommendations",
           "command": "Synthetic bug fix adds owner check to API endpoint",
           "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic bug fix adds owner check to API endpoint",
-          "interpretation": "Hiding the UI link alone is not remediation.",
+          "interpretation": "Hiding an interface control is not a security fix when the API remains callable. Enforce the object authorization server-side, retain permitted owner access, and retest both scenarios after deployment.",
           "task": "Recommend server-side check, tests, deployment plan and owner accountable for rollout.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
         }
