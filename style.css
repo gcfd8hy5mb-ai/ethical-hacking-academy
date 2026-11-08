@@ -143,3 +143,36 @@
 @media(min-width:600px) and (max-width:959px){
  #app .academy-reading-panel,#app .academy-practice-panel{padding:24px}
 }
+
+
+/* Workstation refinement: readable numbered evidence cards and navigation. */
+#app .academy-workstation-jumps{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:15px 0 19px}
+#app .academy-workstation-jumps button{border:1px solid #d1bea1;border-radius:9px;background:#fffaf2;color:#69512f;padding:11px 12px;font-size:12px;font-weight:750;line-height:1.4}
+#app .academy-workstation-jumps button:hover{border-color:#a9864c;background:#f6ebd9}
+#app .academy-workstation-jumps button:focus-visible{outline:3px solid #b18a50;outline-offset:2px}
+#app .academy-practical-steps{display:flex;flex-direction:column;gap:13px}
+#app .academy-practical-steps>.kicker{margin:2px 0 0;color:#947143}
+#app .academy-practical-steps>h2{margin:0!important;font-size:21px;line-height:1.3}
+#app .academy-practical-steps>h3{margin:3px 0 0;font-size:17px;line-height:1.5}
+#app .academy-practice-context{font-size:13px!important;margin:0;color:#647070}
+#app .academy-practice-block{padding:15px 16px;border:1px solid #e3d7c4;background:#fffdf8;border-radius:10px}
+#app .academy-practice-block h4{font-size:11px!important;letter-spacing:.05em;text-transform:uppercase;font-weight:800;color:#957044!important;margin:0 0 9px!important}
+#app .academy-practice-block p{font-size:14px!important;line-height:1.75!important;margin:0!important;color:#293b3f}
+#app .academy-practice-assignment{border-left:4px solid #ab834b;background:#f6eddc}
+#app .academy-practice-command{background:#101e25;border:1px solid #4b625c;border-radius:10px;overflow:hidden}
+#app .academy-practice-command-label{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 15px;background:#203138;color:#e6c18a;font:800 11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.04em}
+#app .academy-method-tag{border:1px solid #7b775e;padding:3px 6px;border-radius:5px;color:#d4d4c5;font-size:9px;letter-spacing:.06em}
+#app .academy-practice-command pre{margin:0;padding:18px 16px;background:#101e25;color:#c3e9ca;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto;font:14px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace}
+#app .academy-practice-scope{border:1px solid #d9cab4;border-radius:9px;padding:13px 15px;background:#f9f4ea}
+#app .academy-practice-scope summary{font-weight:750;font-size:12px;color:#775a34;cursor:pointer}
+#app .academy-practice-scope p{margin:11px 0 0!important;font-size:13px!important;line-height:1.65!important}
+#app .academy-practice-more{display:block;padding:12px 0;color:#795931!important;font-size:13px;font-weight:750;text-decoration:none}
+#app .academy-reading-panel .lesson-section{margin:12px 0;padding:18px 20px}
+#app .academy-reading-panel .lesson-section p{font-size:15px;line-height:1.84}
+#app .academy-workstation-jumps,#app #academy-reading,#app #academy-practice-panel,#app #academy-knowledge-check,#app #academy-lab-report{scroll-margin-top:116px}
+@media(max-width:599px){
+ #app .academy-workstation-jumps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ #app .academy-workstation-jumps button{padding:11px 6px;font-size:11px}
+ #app .academy-practice-command pre{font-size:12px}
+ #app .academy-practice-block{padding:13px}
+}
