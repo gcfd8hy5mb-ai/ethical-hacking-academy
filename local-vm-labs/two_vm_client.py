@@ -23,8 +23,9 @@ def request(action):
         raise ValueError("Unrecognized training action")
     path = ROUTES[action]
     req = urllib.request.Request(BASE + path, headers={"Accept": "application/json"})
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     try:
-        with urllib.request.urlopen(req, timeout=4) as result:
+        with opener.open(req, timeout=4) as result:
             return result.status, json.loads(result.read(7000))
     except urllib.error.HTTPError as ex:
         return ex.code, json.loads(ex.read(7000))
