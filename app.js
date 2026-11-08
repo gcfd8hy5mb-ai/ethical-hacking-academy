@@ -41,7 +41,7 @@ let embeddedPracticeMapPromise=null;
 const embeddedPracticeKey=t=>String(t||'').trim().toLowerCase().replace(/\\s+/g,' ');
 // Thirty reviewed, read-only concept checkpoints. These never alter exam or progress records.
 let practiceCheckpointCatalogPromise=null;
-const checkpointUnitsAvailable=unitId=>/^core-practice-2026-(2|4|5|6)-[1-9][0-9]*$/.test(String(unitId));
+function checkpointUnitsAvailable(unitId){return /^core-practice-2026-(2|4|5|6)-[1-9][0-9]*$/.test(String(unitId));}
 async function loadPracticeCheckpoint(unitId,expectedCourse,expectedLesson){
  const target=document.getElementById('academy-practice-checkpoint');
  if(!target||!checkpointUnitsAvailable(unitId))return;
