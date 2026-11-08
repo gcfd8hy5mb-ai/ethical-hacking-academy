@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 390" fill="none">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#EAC374" stroke-opacity=".1" stroke-width="1"/></pattern><pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.65" fill="#E5B75C" opacity=".88"/></pattern><radialGradient id="glow"><stop stop-color="#C28E38" stop-opacity=".17"/><stop offset="1" stop-color="#C28E38" stop-opacity="0"/></radialGradient></defs>
+<rect width="880" height="390" fill="url(#grid)"/><ellipse cx="470" cy="190" rx="370" ry="185" fill="url(#glow)"/>
+<g fill="url(#dots)" stroke="#E7B95B" stroke-opacity=".37" stroke-width="1.1">
+<path d="M89 99 118 79 155 76 191 89 226 80 262 104 251 128 224 143 229 167 210 185 187 190 171 220 150 230 130 212 117 191 94 175 80 143Z"/>
+<path d="M209 214 244 225 260 253 254 280 236 294 222 330 205 347 186 326 180 302 165 272 175 242Z"/>
+<path d="M313 98 337 83 365 84 381 101 411 91 437 104 469 95 489 119 523 104 559 119 604 112 634 138 676 141 691 161 673 185 636 191 609 178 590 196 565 184 547 203 521 186 492 190 476 174 448 182 427 163 395 170 378 153 345 154 333 134 313 127Z"/>
+<path d="M369 175 407 177 435 195 456 229 445 265 423 300 390 309 370 290 348 260 343 224Z"/>
+<path d="M655 260 681 247 719 264 744 283 735 308 698 317 665 304 651 280Z"/>
+<path d="M565 226 580 232 578 253 564 248Z"/>
+<path d="M264 69 280 57 302 63 298 81 274 84Z"/>
+</g><g stroke="#E0B25B" stroke-opacity=".17"><circle cx="457" cy="191" r="118"/><circle cx="457" cy="191" r="174"/><path d="M45 191H840M457 21V372"/></g>
+</svg>
