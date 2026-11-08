@@ -13,6 +13,9 @@ import json
 import os
 import secrets
 import stat
+import subprocess
+import urllib.request
+import urllib.error
 
 from academy_lab import BASE, files, check_state, setup
 
@@ -46,6 +49,12 @@ pre{background:#0c1b22;border:1px solid #566b75;min-height:240px;max-height:510p
 <button data-action="logs">Read DNS log</button>
 <button data-action="config">Inspect config</button>
 </div>
+<h2>Real command workbench</h2>
+<p>Run only the listed read-only commands against this VM and its local training files. Commands are executed by Linux without a shell. The separate target is bound to 127.0.0.1.</p>
+<div class="buttons"><button data-command="pwd">pwd</button><button data-command="ls -l">ls -l</button><button data-command="stat permissions/report.txt">stat permissions/report.txt</button><button data-command="cat logs/resolver.log">cat logs/resolver.log</button><button data-command="cat config/web.conf">cat config/web.conf</button></div>
+<p>Local web target investigation:</p>
+<div class="buttons"><button data-command="curl -i http://127.0.0.1:8766/account?id=101&amp;as=guest">Guest request</button><button data-command="curl -i http://127.0.0.1:8766/account?id=102&amp;as=guest">Guest accesses private record</button></div>
+<p><small>These are allowlisted real Linux and local HTTP operations, not an arbitrary bash shell. For full Linux commands use the VM's native Terminal.</small></p>
 <h2>Approved corrections</h2>
 <div class="buttons">
 <button data-action="fix-permissions">Set mode 640</button>
@@ -75,6 +84,7 @@ feedback.textContent=r.ok?'Local action completed.':'Local action failed ('+r.st
 }
 document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>act(b.dataset.action)));
 document.getElementById('save-finding').onclick=()=>act('save-finding',{text:document.getElementById('finding').value});
+document.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>act('terminal',{command:b.dataset.command})));
 </script></body></html>"""
 
 
@@ -103,6 +113,43 @@ def action(name: str, payload: dict) -> str:
     f = files()
     if not BASE.is_dir() or BASE.is_symlink():
         return "Lab missing. Click Create training files first."
+    if name == "terminal":
+        cmd = payload.get("command")
+        if not isinstance(cmd, str) or len(cmd) > 140:
+            raise ValueError("Invalid command")
+        commands = {
+            "pwd": ["pwd"],
+            "ls -l": ["ls", "-l"],
+            "stat permissions/report.txt": ["stat", "permissions/report.txt"],
+            "cat logs/resolver.log": ["cat", "logs/resolver.log"],
+            "cat config/web.conf": ["cat", "config/web.conf"],
+        }
+        if cmd in commands:
+            # Guard against replacing lab files with symlinks before invoking any real tool.
+            for file_path in files().values():
+                if file_path.exists() or file_path.is_symlink():
+                    safe_file(file_path)
+            try:
+                p = subprocess.run(commands[cmd], shell=False, cwd=BASE,
+                                   capture_output=True, text=True, timeout=4, check=False)
+                return (f"$ {cmd}\\n" + p.stdout + p.stderr)[:6500] + f"\\nexit: {p.returncode}"
+            except (subprocess.TimeoutExpired, FileNotFoundError) as e:
+                return f"Command did not finish: {e}"
+        urls = {
+            "curl -i http://127.0.0.1:8766/account?id=101&as=guest": "/account?id=101&as=guest",
+            "curl -i http://127.0.0.1:8766/account?id=102&as=guest": "/account?id=102&as=guest",
+        }
+        if cmd in urls:
+            request = urllib.request.Request("http://127.0.0.1:8766" + urls[cmd],
+                                             headers={"Host": "127.0.0.1:8766"})
+            try:
+                with urllib.request.urlopen(request, timeout=3) as resp:
+                    return f"$ {cmd}\\nHTTP {resp.status}\\n" + resp.read(5000).decode("utf-8", "replace")
+            except urllib.error.HTTPError as ex:
+                return f"$ {cmd}\\nHTTP {ex.code}\\n" + ex.read(5000).decode("utf-8", "replace")
+            except urllib.error.URLError:
+                return "Local target unavailable. Launch academy_target.py in another VM terminal."
+        raise ValueError("Command not allowlisted")
     if name == "environment":
         return f"Training root: {BASE}\nFile-state checks: {json.dumps(check_state(), indent=2)}"
     if name == "permissions":
