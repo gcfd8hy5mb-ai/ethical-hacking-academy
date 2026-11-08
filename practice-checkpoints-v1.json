@@ -1,0 +1,336 @@
+{
+  "version": "2026-11-08",
+  "purpose": "Objective educational interpretation checkpoints for selected curated practices; not certification or course mastery.",
+  "entries": [
+    {
+      "unitId": "core-practice-2026-2-1",
+      "question": "You run `whoami` in a normal student shell. What should the output identify?",
+      "options": [
+        "The effective account name running the command",
+        "Every account on the computer",
+        "The IP address of the computer"
+      ],
+      "answer": 0,
+      "explanation": "`whoami` reports the current effective user name. For a complete user/group identity, compare with `id`."
+    },
+    {
+      "unitId": "core-practice-2026-2-2",
+      "question": "After `cd ~`, what does `pwd` display?",
+      "options": [
+        "The names of all files in the home directory",
+        "The absolute path of the current directory",
+        "The last executed command"
+      ],
+      "answer": 1,
+      "explanation": "`pwd` means print working directory. The shell's `~` expands to the user's home directory."
+    },
+    {
+      "unitId": "core-practice-2026-2-3",
+      "question": "Which command shows hidden dotfiles and long-format permissions?",
+      "options": [
+        "`ls`",
+        "`ls -la`",
+        "`pwd`"
+      ],
+      "answer": 1,
+      "explanation": "`-l` requests a long listing; `-a` includes entries whose names begin with a dot. Avoid confusing hidden with encrypted."
+    },
+    {
+      "unitId": "core-practice-2026-2-4",
+      "question": "You are in `/home/student/academy-paths/subfolder` and run `cd ..` then `pwd`. What path is expected?",
+      "options": [
+        "`/home/student/academy-paths`",
+        "`/`",
+        "`/home/student/academy-paths/subfolder`"
+      ],
+      "answer": 0,
+      "explanation": "`..` represents the parent of the current directory. It moves up one directory without removing anything."
+    },
+    {
+      "unitId": "core-practice-2026-2-5",
+      "question": "What does `grep -n WARN example.log` show?",
+      "options": [
+        "Only the number of WARN lines",
+        "Matching lines and their line numbers",
+        "It deletes lines that contain WARN"
+      ],
+      "answer": 1,
+      "explanation": "`grep` searches text; `-n` includes the matching line numbers. Reading an authorized training log is not the same as altering it."
+    },
+    {
+      "unitId": "core-practice-2026-2-6",
+      "question": "After `chmod 600 private.txt`, which standard permission interpretation is right?",
+      "options": [
+        "Owner read/write, group none, others none",
+        "Owner read/write, group read, others none",
+        "Everyone read/write"
+      ],
+      "answer": 0,
+      "explanation": "Octal 6 = read plus write; each 0 gives no conventional permission bits. Check actual ACLs and directory access separately."
+    },
+    {
+      "unitId": "core-practice-2026-2-7",
+      "question": "What does `ps -ef | head` safely show?",
+      "options": [
+        "A short sample from a process listing",
+        "All open network ports and their owners",
+        "A command that immediately ends all processes"
+      ],
+      "answer": 0,
+      "explanation": "`ps -ef` lists processes in full format; `head` limits the displayed lines. A snapshot does not establish persistent CPU pressure."
+    },
+    {
+      "unitId": "core-practice-2026-2-8",
+      "question": "A training command says a file does not exist. What should you do first?",
+      "options": [
+        "Delete the parent folder and recreate it",
+        "Check the current directory and exact filename",
+        "Run the same command with administrative privileges"
+      ],
+      "answer": 1,
+      "explanation": "Read-only checks such as `pwd` and `ls` help distinguish incorrect paths from other failures. Do not escalate privileges merely to bypass an error."
+    },
+    {
+      "unitId": "core-practice-2026-4-1",
+      "question": "A diagram shows a DNS resolver between a client and website. What does the resolver provide?",
+      "options": [
+        "A name-to-address answer",
+        "A guaranteed secure web session",
+        "The final routing path for each packet"
+      ],
+      "answer": 0,
+      "explanation": "DNS resolution supplies name/address information; routing, TCP, TLS and HTTP can independently fail."
+    },
+    {
+      "unitId": "core-practice-2026-4-2",
+      "question": "How should `10.40.0.80` be classified?",
+      "options": [
+        "A public globally routed IPv4 address",
+        "An address in an RFC 1918 private range",
+        "An IPv6 address"
+      ],
+      "answer": 1,
+      "explanation": "10.0.0.0/8 is an RFC 1918 private address range. Private does not automatically mean isolated or safe."
+    },
+    {
+      "unitId": "core-practice-2026-4-3",
+      "question": "How many total IPv4 addresses are in `10.40.0.0/24`?",
+      "options": [
+        "24",
+        "254",
+        "256"
+      ],
+      "answer": 2,
+      "explanation": "32−24 leaves 8 host bits, giving 2⁸=256 total addresses. Conventional LANs reserve network and broadcast addresses, leaving 254 usable."
+    },
+    {
+      "unitId": "core-practice-2026-4-4",
+      "question": "A client can reach a private server by IP but not by hostname. Which first hypothesis best fits?",
+      "options": [
+        "A DNS configuration or resolution issue",
+        "A failed keyboard driver",
+        "Proof the server is compromised"
+      ],
+      "answer": 0,
+      "explanation": "A working connection by address but failed hostname lookup suggests examining the resolver first. Other causes remain possible."
+    },
+    {
+      "unitId": "core-practice-2026-4-5",
+      "question": "A DNS query returns the expected IP, but HTTPS fails. What does that prove?",
+      "options": [
+        "DNS resolution succeeded; later layers still need checking",
+        "HTTPS must be functioning because DNS did",
+        "The user authenticated to the website"
+      ],
+      "answer": 0,
+      "explanation": "DNS success is only one step; test routing, transport, certificate validation and HTTP separately, within the approved scope."
+    },
+    {
+      "unitId": "core-practice-2026-4-6",
+      "question": "Which port/transport pair normally carries HTTPS?",
+      "options": [
+        "TCP 443",
+        "UDP 22",
+        "TCP 53 only"
+      ],
+      "answer": 0,
+      "explanation": "HTTPS typically uses TCP 443, while HTTP/3 can use UDP 443. A port number alone does not prove a secure application."
+    },
+    {
+      "unitId": "core-practice-2026-4-7",
+      "question": "Which sequence begins safe troubleshooting without modifying network settings?",
+      "options": [
+        "Inspect interface, route and resolver state",
+        "Disable the firewall before collecting evidence",
+        "Scan every neighboring computer"
+      ],
+      "answer": 0,
+      "explanation": "Start with read-only local observations, then perform only explicitly permitted connectivity tests."
+    },
+    {
+      "unitId": "core-practice-2026-4-8",
+      "question": "Guest and management devices use separate VLANs. What is still required to verify isolation?",
+      "options": [
+        "Confirm firewall/routing access rules and test allowed/denied traffic",
+        "Assume VLAN labels guarantee complete isolation",
+        "Give guests admin credentials"
+      ],
+      "answer": 0,
+      "explanation": "Separate broadcast domains do not alone prevent routed connectivity. Inspect enforcement boundaries and verify deny/allow outcomes."
+    },
+    {
+      "unitId": "core-practice-2026-5-1",
+      "question": "What is the expected output of `python3 -c 'print(\"Hello, Academy\")'`?",
+      "options": [
+        "Hello, Academy",
+        "The current directory",
+        "A new text file named Academy"
+      ],
+      "answer": 0,
+      "explanation": "`print()` writes the string to standard output. This simple example does not create a file or change system settings."
+    },
+    {
+      "unitId": "core-practice-2026-5-2",
+      "question": "What does `count=3; count=count+1; print(count)` print?",
+      "options": [
+        "3",
+        "4",
+        "31"
+      ],
+      "answer": 1,
+      "explanation": "The second assignment adds the integer 1 to the prior value 3; the final print call outputs 4."
+    },
+    {
+      "unitId": "core-practice-2026-5-3",
+      "question": "What is the truth value of the Python expression `bool(\"False\")`?",
+      "options": [
+        "True",
+        "False",
+        "Syntax error"
+      ],
+      "answer": 0,
+      "explanation": "Nonempty strings are truthy in Python, even when their text spells `False`. Parse text explicitly for security decisions."
+    },
+    {
+      "unitId": "core-practice-2026-5-4",
+      "question": "With `x=5`, what does `print(\"allow\" if x>=5 else \"deny\")` print?",
+      "options": [
+        "deny",
+        "allow",
+        "5"
+      ],
+      "answer": 1,
+      "explanation": "The `>=` operator is inclusive. At the exact boundary 5, the condition evaluates True."
+    },
+    {
+      "unitId": "core-practice-2026-5-5",
+      "question": "What does `range(3)` generate in a Python loop?",
+      "options": [
+        "1, 2, 3",
+        "0, 1, 2",
+        "0, 1, 2, 3"
+      ],
+      "answer": 1,
+      "explanation": "Python ranges include the starting value and exclude the stop value. `range(3)` contains three integers: 0, 1, 2."
+    },
+    {
+      "unitId": "core-practice-2026-5-6",
+      "question": "A function returns `WARN` for a True input and `INFO` otherwise. What is returned for `False`?",
+      "options": [
+        "WARN",
+        "INFO",
+        "False as a string"
+      ],
+      "answer": 1,
+      "explanation": "The conditional chooses the alternate label for a false input; a pure function supports repeatable tests."
+    },
+    {
+      "unitId": "core-practice-2026-5-7",
+      "question": "What does `rows[1][\"status\"]` return from `[{'status':'ok'},{'status':'warn'}]`?",
+      "options": [
+        "ok",
+        "warn",
+        "The second dictionary"
+      ],
+      "answer": 1,
+      "explanation": "Lists are zero-indexed; index 1 chooses the second dictionary and its `status` field is `warn`."
+    },
+    {
+      "unitId": "core-practice-2026-5-8",
+      "question": "What does `Path(\"report.txt\").suffix` reveal?",
+      "options": [
+        "The file extension `.txt`",
+        "The file's actual contents",
+        "Whether the file is safe to execute"
+      ],
+      "answer": 0,
+      "explanation": "The suffix describes the filename only; it does not read the file or prove its contents are safe."
+    },
+    {
+      "unitId": "core-practice-2026-6-1",
+      "question": "A log contains one failed login and a later healthy application event. What is warranted?",
+      "options": [
+        "Investigate the sign-in; later application health does not prove account safety",
+        "Declare the account compromised without further evidence",
+        "Dismiss the login because the app recovered"
+      ],
+      "answer": 0,
+      "explanation": "A failed sign-in is an observation. Look for actor context, repeated attempts, clocks and relevant controls before attributing an incident."
+    },
+    {
+      "unitId": "core-practice-2026-6-2",
+      "question": "An incident appears contained. What can you conclude?",
+      "options": [
+        "The active impact may be limited, but eradication and recovery remain to verify",
+        "Root cause is guaranteed removed",
+        "There is no need to preserve evidence"
+      ],
+      "answer": 0,
+      "explanation": "Containment, eradication and recovery are distinct phases. Preserve evidence and confirm approved restoration criteria."
+    },
+    {
+      "unitId": "core-practice-2026-6-3",
+      "question": "A fictional invoice email requests urgent payment to a changed account. What's the safest verification?",
+      "options": [
+        "Contact the vendor using a previously verified independent channel",
+        "Reply to the sender and trust their explanation",
+        "Click the invoice link immediately"
+      ],
+      "answer": 0,
+      "explanation": "Use independently verified contact details, preserve the message and follow the organization's escalation process."
+    },
+    {
+      "unitId": "core-practice-2026-6-4",
+      "question": "Which is the sounder vulnerability priority method?",
+      "options": [
+        "Combine severity with exposure, asset criticality and controls",
+        "Sort alphabetically by affected software",
+        "Treat every medium finding as harmless"
+      ],
+      "answer": 0,
+      "explanation": "Severity alone is insufficient; consider business impact, exploitability evidence, reachability and remediation constraints."
+    },
+    {
+      "unitId": "core-practice-2026-6-5",
+      "question": "An account was disabled at 10:30, but activity was logged at 10:31. What should be checked?",
+      "options": [
+        "Existing sessions, token revocation and clock offsets",
+        "Assume the disabled user committed a crime",
+        "Delete the audit records"
+      ],
+      "answer": 0,
+      "explanation": "Previously issued sessions and clock offsets can explain apparent post-disable activity without proving user intent."
+    },
+    {
+      "unitId": "core-practice-2026-6-6",
+      "question": "DNS errors return to normal but application queues remain high. What's an accurate report?",
+      "options": [
+        "DNS appears recovered; end-to-end app recovery is not yet verified",
+        "Everything is fully restored",
+        "The queue data can be ignored"
+      ],
+      "answer": 0,
+      "explanation": "Report the precise component verified and the remaining user-impact evidence needed to confirm recovery."
+    }
+  ]
+}
