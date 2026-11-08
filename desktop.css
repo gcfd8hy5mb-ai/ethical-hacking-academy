@@ -1,64 +1,130 @@
-/* Ethical Hacking Academy desktop presentation; preserve iPhone behavior. */
-@media(min-width:960px){
- body{background:#ece6dc;color:#202b2d}
- #app .wrap{max-width:1380px;width:calc(100% - 300px);margin:0 38px 0 250px;padding:38px clamp(24px,3vw,52px) 90px}
- #app .top{padding:0 0 24px;margin-bottom:32px;border-bottom:1px solid #c3b397}
- #app .top .brand{font-size:25px}
- #app .hero{padding:40px 46px;border-radius:20px;background:linear-gradient(120deg,#182b34,#253d45);min-height:245px}
- #app .hero h1{font-size:clamp(37px,3vw,53px)}
- #app .hero p{font-size:17px;max-width:740px}
- #app .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
- #app .tile,#app .course,#app .sheet{padding:26px;border-radius:16px}
- #app .tile strong{font-size:20px}
- #app .course-body strong{font-size:20px}
- #app .body{font-size:18px;line-height:1.85;max-width:90ch}
- #app .lesson-section{padding:20px 24px}
- #app .practice-links,#app .sheet .action-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
- #app .bottom{position:fixed;left:0;top:0;bottom:0;right:auto;width:230px;height:100vh;padding:108px 16px 24px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px;align-items:stretch;background:linear-gradient(180deg,#1b2d34,#111d23);border-right:1px solid #a88754}
- #app .bottom:before{content:"CYBERSECURITY ACADEMY";position:absolute;left:20px;top:43px;font-size:11px;font-weight:800;letter-spacing:1.1px;color:#e5bf7e}
- #app .bottom button{flex:none;max-width:none;width:100%;min-height:52px;padding:13px 16px!important;font-size:14px!important;border-radius:10px;text-align:left;white-space:normal}
- #app .bottom button.active{background:#32444b;color:#f2d399}
- .auth-screen{position:fixed;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(410px,.9fr);gap:clamp(32px,5vw,92px);align-items:center;justify-content:stretch;padding:60px max(6vw,50px);background:linear-gradient(120deg,#152b34 0%,#1d3740 49%,#f1ece4 49.1%,#f7f3ec 100%)}
- .auth-screen:before{content:"ETHICAL HACKING ACADEMY\a\a Practical cybersecurity education.\a Built for the desktop lab.\a\a LEARN  •  PRACTICE  •  DEFEND";white-space:pre-line;grid-column:1;grid-row:1;color:#f3dfb8;font:clamp(22px,2.5vw,39px)/1.48 Georgia,serif;max-width:550px}
- .auth-panel{grid-column:2;grid-row:1;justify-self:center;width:min(100%,510px);padding:37px 42px;box-shadow:0 25px 75px #14252925}
- .auth-panel h1{font-size:38px}
- .auth-panel input{min-height:48px}
- #academy-diagnostic-link{opacity:.65}
+/* Desktop workspace v3 — Ethical Hacking Academy.
+   All layout and color overrides are limited to desktop widths.
+   The existing mobile course navigation and Firebase progress are untouched. */
+@media (min-width: 960px) {
+ :root{scroll-behavior:smooth}
+ html{background:#eaf0f1}
+ body{background:#eaf0f1;color:#202d32;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+ #app{min-height:100vh}
+ #app .wrap{
+  box-sizing:border-box;max-width:none;width:auto;min-width:0;
+  margin:0 0 0 252px;padding:0 clamp(24px,3.3vw,62px) 110px;
+ }
+ #app .top{
+  position:sticky;top:0;z-index:40;min-height:83px;margin:0 0 36px;
+  padding:16px 0;display:flex;align-items:center;gap:20px;
+  border-bottom:1px solid #d4dfe2;
+  background:rgba(234,240,241,.96);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+ }
+ #app .brand{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;letter-spacing:.12em;font-weight:800;color:#273c45}
+ #app .brand .seal{font-size:24px;color:#ac8448;margin-right:8px;vertical-align:middle}
+ #app .top>button{margin-left:auto!important;background:#fff!important;color:#34454d!important;border:1px solid #cad5d9!important;border-radius:10px!important;min-height:39px!important;padding:10px 15px!important;font-size:12px;font-weight:750}
+ #app .wrap>.kicker,#app .wrap>.back+.kicker{font-size:11px;letter-spacing:.15em;font-weight:800;color:#8c6c3e;margin:17px 0 11px}
+ #app h1,#app h2{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:770;letter-spacing:-.025em}
+ #app .wrap>h1{font-size:clamp(30px,2.5vw,43px);line-height:1.19;margin:5px 0 17px;color:#223039}
+ #app .wrap>h2{font-size:clamp(23px,1.7vw,29px);line-height:1.25;color:#23343a}
+ #app .muted{color:#62727a}
+ #app p{line-height:1.65}
+ #app .hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#182b35 0%,#203e48 58%,#2c4850 100%);color:#f6f0e7;border:1px solid #46626b;border-radius:17px;margin:6px 0 34px;padding:38px clamp(31px,3.5vw,56px);min-height:292px;box-shadow:0 14px 35px #1c3d4c18}
+ #app .hero:after{content:"";pointer-events:none;position:absolute;right:-130px;top:-210px;width:480px;height:480px;border:1px solid #cfb27f24;border-radius:50%;box-shadow:0 0 0 68px #d8c18e08,0 0 0 140px #d8c18e07}
+ #app .hero .chip{color:#eacb92!important;font-size:11px!important;font-weight:800!important}
+ #app .hero h1{font-size:clamp(35px,3.2vw,54px);line-height:1.12;letter-spacing:-.04em;font-weight:780;max-width:850px;color:#fcf7ec;margin:15px 0}
+ #app .hero p{max-width:800px;font-size:15px;color:#dbe7e8;line-height:1.7}
+ #app .hero .button{display:inline-flex;align-items:center;justify-content:center;background:#e0bd80;color:#192c33;border:1px solid #efd29f;padding:13px 20px;margin:9px 9px 0 0;font-weight:770;min-height:49px;border-radius:10px;max-width:100%;white-space:normal}
+ #app .hero .button:hover{background:#f1d5a0}
+ #app .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+ #app .tile,#app .course,#app .lesson-row,#app .sheet{background:#fff;border:1px solid #d5dfe2;border-radius:13px;box-shadow:0 4px 17px #19344308;color:#283740;min-width:0}
+ #app .tile{padding:25px;transition:border-color .18s,transform .18s,box-shadow .18s}
+ #app .tile strong{font-size:17px;font-weight:800}
+ #app .tile small{font-size:13px;color:#677b81;line-height:1.45}
+ #app .course{display:flex;align-items:center;gap:22px;width:100%;margin:0 0 11px;padding:22px 26px;min-height:94px;transition:border-color .18s,box-shadow .18s,transform .18s}
+ #app .course-index{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:23px;font-weight:750;color:#ad8750;min-width:35px}
+ #app .course-body strong{font-size:18px;font-weight:770;letter-spacing:-.015em}
+ #app .course-body small{color:#63767d;font-size:13px;margin-top:7px;line-height:1.5}
+ #app .tile:hover,#app .course:hover,#app .lesson-row:hover{transform:translateY(-1px);border-color:#b99b6c;box-shadow:0 8px 26px #233a4814}
+ #app .back{display:inline-flex;align-items:center;color:#627079;font-size:13px;font-weight:750;margin:7px 0 5px}
+ #app .back:hover{color:#926a33}
+ #app .lesson-row{min-height:73px;padding:17px 23px;display:flex;gap:17px;align-items:center;justify-content:space-between;text-align:left;font-size:15px;line-height:1.5;margin:9px 0}
+ #app .lesson-row small{color:#977448;font-size:12px;font-weight:750;white-space:nowrap}
+ #app .sheet{padding:clamp(25px,2.7vw,39px);margin:22px 0}
+ #app .sheet h2{font-size:clamp(21px,1.9vw,29px);margin:5px 0 18px}
+ #app .sheet p{max-width:90ch;font-size:15px;line-height:1.82}
+ #app .body{font-size:16px;line-height:1.8;max-width:none}
+ #app .body .lesson-section{background:#f7faf9;border:1px solid #dae6e5;border-left:3px solid #b49059;border-radius:0 10px 10px 0;padding:20px 25px;margin:19px 0}
+ #app .body .lesson-section p{font-size:16px;line-height:1.85;margin:11px 0;max-width:88ch}
+ #app .body .lesson-section strong{color:#554633}
+ #app .assessment{background:#fff;border:1px solid #d5dfe2;box-shadow:0 4px 17px #19344308;border-radius:14px;padding:28px 34px;margin:26px 0;max-width:none}
+ #app .assessment h2{font-size:26px;margin:0 0 9px}
+ #app .assessment .answers{display:grid;gap:10px}
+ #app .assessment .answer{background:#f8fbfb;color:#26353a;border:1px solid #d6e0e3;border-radius:9px;padding:16px 19px;text-align:left;line-height:1.55;min-height:56px}
+ #app .assessment .answer:hover,#app .assessment .answer.selected{border-color:#b68d53;background:#fcf6e9}
+ #app .feedback{border-left:4px solid #b18b54;background:#f7f0e3;padding:17px 21px;border-radius:0 9px 9px 0}
+ #app .button{cursor:pointer;min-height:46px;border-radius:9px}
+ #app .progress{background:#e1e9e9}
+ #app .progress span{background:#b48c50}
+ #app .lab{background:#172931;border:1px solid #2d4953;border-radius:14px;padding:28px;margin:20px 0;box-shadow:0 9px 28px #162c3715}
+ #app .terminal{background:#0b151b;color:#b4e6c2;border:1px solid #355349;font-size:14px;line-height:1.75;max-width:100%;overflow:auto;min-height:190px;padding:24px}
+ #app .cmds{gap:9px}
+ #app .cmds button{padding:11px 16px;min-height:43px;border-radius:8px}
+ #app .practice-section{min-width:0;max-width:none}
+ #app .practice-links,#app .sheet .action-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+ #app .practice-links>.button,#app .sheet .action-list>a.button{padding:17px 20px!important;min-height:65px!important;border-radius:10px!important}
+ #app .mastery-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;max-width:920px}
+ #app textarea{font-size:15px;line-height:1.7;min-height:180px}
+ #app .academy-anchor,#app #academy-embedded-practice{scroll-margin-top:115px}
+ #app a{color:#805f37}
+ #app a.button,#app .hero a.button{color:#f9f2e8}
+ #app .bottom{
+  z-index:60;position:fixed;top:0;bottom:0;left:0;right:auto;
+  width:252px;height:100dvh;padding:126px 13px 22px;
+  display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:5px;
+  background:linear-gradient(180deg,#14232c,#172932 63%,#111e26);
+  border-right:1px solid #39515b;box-shadow:9px 0 28px #0d26310c;overflow-y:auto;
+ }
+ #app .bottom:before{content:"ETHICAL HACKING\\AACADEMY";white-space:pre-line;position:absolute;top:32px;left:25px;right:13px;font-size:16px;font-weight:820;line-height:1.4;letter-spacing:.105em;color:#f1d4a2}
+ #app .bottom:after{content:"PROFESSIONAL LEARNING WORKSPACE";position:absolute;top:92px;left:25px;right:12px;font-size:9px;font-weight:700;color:#849fa8;letter-spacing:.11em}
+ #app .bottom button{
+  flex:none;width:100%;max-width:none;min-height:48px;margin:0;padding:13px 15px!important;text-align:left;
+  font-size:13px!important;font-weight:680;color:#becdd1;border:1px solid transparent;
+  border-radius:9px;background:transparent;white-space:normal;line-height:1.35;
+ }
+ #app .bottom button:hover{color:#fff2d8;background:#253d47}
+ #app .bottom button.active{background:#344e59;border-color:#667378;color:#f6d49b;box-shadow:inset 3px 0 #d4b57b}
+ #app .bottom button:focus-visible,#app a:focus-visible,#app input:focus-visible,#app button:focus-visible,#app textarea:focus-visible{outline:3px solid #bd9155;outline-offset:3px}
+ #app .desktop-context{display:none}
+ #academy-diagnostic-link{opacity:.42;font-size:11px!important}
+ /* Auth screen remains independent of the signed-in study layout. */
+ .auth-screen{position:fixed;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(410px,.95fr);gap:clamp(25px,4vw,85px);align-items:center;justify-content:stretch;padding:55px max(5vw,42px);background:linear-gradient(112deg,#152b34 0%,#1e3942 49%,#eaf0f1 49.1%,#f2f5f5 100%)}
+ .auth-screen:before{content:"ETHICAL HACKING ACADEMY\\a\\a Practical cybersecurity education.\\a Built for the desktop lab.\\a\\a LEARN  •  PRACTICE  •  DEFEND";white-space:pre-line;grid-column:1;grid-row:1;color:#f2deb4;font:clamp(24px,2.5vw,40px)/1.45 Georgia,serif;max-width:550px}
+ .auth-panel{grid-column:2;grid-row:1;justify-self:center;width:min(100%,510px);padding:35px 40px;box-shadow:0 24px 65px #1425291d}
+ .auth-panel h1{font-size:35px}
+ .auth-panel input{min-height:47px}
 }
-@media(min-width:960px) and (max-width:1150px){.auth-screen{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:28px;padding:35px}.auth-screen:before{font-size:25px}.auth-panel{padding:26px}}
-
-
-/* Phase 2 — laboratory and coursework workspace. */
-@media(min-width:960px){
-  #app .wrap>h1,#app .wrap .sheet>h1{font-size:clamp(34px,3.4vw,48px);line-height:1.2}
-  #app .wrap h2{font-size:30px;line-height:1.28}
-  #app .course{align-items:center;gap:26px;min-height:100px;border:1px solid #c8b89e;transition:border-color .15s,transform .15s}
-  #app .course:hover,#app .tile:hover,#app .lesson-row:hover{border-color:#9f7843;transform:translateY(-1px)}
-  #app .course-index{font-size:28px;min-width:36px}
-  #app .course-body small{font-size:14px;line-height:1.7}
-  #app .lesson-row{min-height:72px;padding:19px 24px;align-items:center;font-size:16px;line-height:1.5}
-  #app .sheet{margin:22px 0;padding:35px 42px}
-  #app .sheet p{max-width:90ch;line-height:1.8;font-size:16px}
-  #app .body{max-width:94ch}
-  #app .body .lesson-section{max-width:94ch;margin:19px 0;padding:20px 26px;background:#fcf8ef;border:1px solid #dfd2bc;border-left:4px solid #ad8750;border-radius:0 12px 12px 0}
-  #app .body .lesson-section p{font-size:17px;line-height:1.85;max-width:90ch}
-  #app .assessment{padding:27px 0 10px;max-width:940px}
-  #app .assessment .answers{gap:13px}
-  #app .assessment .answer{padding:18px 23px;font-size:16px;line-height:1.55;min-height:58px}
-  #app .lab{padding:30px 34px;margin:25px 0;border:1px solid #8f7756}
-  #app .terminal{font-size:15px;line-height:1.8;min-height:255px;padding:26px 29px;max-width:100%;overflow:auto;border:1px solid #36534e}
-  #app .cmds{gap:12px}
-  #app .cmds button{padding:12px 16px;min-height:45px;font-size:14px}
-  #app .mastery-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:920px}
-  #app .mastery-actions .button{min-height:56px;padding:15px 18px;font-size:15px}
-  #app .practice-section{padding:12px 0 24px}
-  #app .practice-links{gap:16px}
-  #app .practice-links>.button{min-height:68px!important;padding:20px!important;font-size:16px!important}
-  #app textarea{min-height:220px;font-size:16px;line-height:1.7}
-  #app button:focus-visible,#app a:focus-visible,#app input:focus-visible,#app textarea:focus-visible{outline:3px solid #bb8d51;outline-offset:3px}
+@media(min-width:1400px){
+ #app .wrap:has(~.desktop-context){margin-right:275px;padding-right:clamp(22px,2.4vw,40px)}
+ #app .desktop-context{display:block;position:fixed;right:19px;top:112px;bottom:auto;width:237px;max-height:calc(100dvh - 135px);overflow-y:auto;padding:22px 20px;background:#fff;border:1px solid #d4dfe2;border-radius:12px;box-shadow:0 8px 25px #1e36400e;z-index:15}
+ #app .desktop-context-label{font-size:10px;letter-spacing:.13em;font-weight:850;color:#977346;margin-bottom:11px}
+ #app .desktop-context h2{font-size:17px;line-height:1.32;margin:0 0 11px;overflow-wrap:anywhere}
+ #app .desktop-context p{font-size:12px;color:#697a7e;margin:0 0 10px;line-height:1.5}
+ #app .desktop-context-track{height:7px;border-radius:9px;background:#e3ebeb;overflow:hidden}
+ #app .desktop-context-track span{display:block;height:100%;border-radius:9px;background:#b68f57}
+ #app .desktop-section-label{margin-top:30px}
+ #app .desktop-context a,#app .desktop-context button{display:block;width:100%;border:0;background:none;color:#35484f;font-size:13px;font-weight:650;text-decoration:none;text-align:left;margin:3px 0;padding:12px 10px;border-radius:8px;cursor:pointer}
+ #app .desktop-context a:hover,#app .desktop-context button:hover{background:#f1f5f5;color:#886439}
+ #app .desktop-context-foot{border-top:1px solid #e3eaeb;margin-top:21px;padding-top:15px;color:#7d8c90;font-size:11px;line-height:1.65}
 }
-@media(min-width:960px) and (max-width:1200px){
- #app .sheet{padding:24px 26px}
+@media(min-width:960px) and (max-width:1260px){
+ #app .wrap{padding:0 29px 85px}
  #app .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- #app .body .lesson-section{padding:17px 20px}
+ #app .hero{padding:31px 35px}
+ #app .sheet{padding:26px}
+}
+@media(min-width:960px) and (max-width:1110px){
+ .auth-screen{grid-template-columns:minmax(0,.9fr) minmax(350px,1.1fr);gap:23px;padding:35px}
+ .auth-screen:before{font-size:24px}
+ .auth-panel{padding:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ @media(min-width:960px){:root{scroll-behavior:auto}#app .tile,#app .course,#app .lesson-row{transition:none!important}}
 }
