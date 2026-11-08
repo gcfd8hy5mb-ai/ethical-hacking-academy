@@ -679,8 +679,8 @@
         {
           "id": "s1",
           "heading": "Applied practice: Functions and reusable work",
-          "command": "python3 -c 'def label(x): return \"WARN\" if x else \"INFO\"; print(label(True))'",
-          "instruction": "Identify arguments, return values and why pure functions support testing.",
+          "command": "python3 -c 'label=lambda x: \"WARN\" if x else \"INFO\"; print(label(True))'",
+          "instruction": "Compare a small callable lambda with a named Python function. Identify the parameter, returned value and sample input; explain why reusable functions improve testability.",
           "interpretation": "A function definition needs explicit invocation; one-liners can be harder to inspect.",
           "task": "Write a function outline and a sample input/output pair.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
