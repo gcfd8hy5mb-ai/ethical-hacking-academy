@@ -254,3 +254,31 @@
  #app .academy-workstation-split{grid-template-columns:1fr}
  #app .academy-workstation-assessment{margin-top:16px}
 }
+
+
+/* Refinement for laptop displays: professional reading + wider lab,
+   with adjustable scroll and larger exercise text. */
+@media(min-width:1180px){
+ #app .academy-workstation-split{grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);gap:19px}
+ #app .academy-workstation-split>.academy-reading-panel{padding:24px 25px}
+ #app .academy-workstation-split>.academy-practice-panel{padding:23px 25px;scrollbar-color:#97794f #17272d;scrollbar-width:thin}
+ #app .academy-reading-panel .lesson-section p{font-size:16px;line-height:1.86}
+ #app .academy-reading-panel .lesson-section{padding:18px 21px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet{padding:20px!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-block p{font-size:15px!important;line-height:1.75!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-command pre{font-size:14px!important;line-height:1.8}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet h2{font-size:22px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-block h4{font-size:12px!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-context{font-size:13px!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-scope p{font-size:13px!important}
+ #app .academy-workstation-jumps{position:sticky;top:83px;z-index:35;background:rgba(236,230,220,.96);padding:10px 0;border-bottom:1px solid #d8c9ac;backdrop-filter:blur(8px)}
+ #app .academy-workstation-jumps button{font-size:13px;padding:12px 15px}
+}
+@media(min-width:960px) and (max-width:1179px){
+ #app .academy-reading-panel .lesson-section p{font-size:16px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-block p{font-size:15px!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet .academy-practice-command pre{font-size:14px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .academy-workstation-jumps{scroll-behavior:auto}
+}
