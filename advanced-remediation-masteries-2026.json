@@ -621,7 +621,7 @@
           "scenario": "The vulnerable target VM uses a bridged adapter.",
           "evidence": "Default gateway 192.168.1.1; expected internal-only AcademyLab",
           "initial": {
-            "prompt": "What is wrong?",
+            "prompt": "Which specific isolation boundary is violated?",
             "options": [
               "Training isolation policy is violated",
               "Everything is isolated because IP is private",
