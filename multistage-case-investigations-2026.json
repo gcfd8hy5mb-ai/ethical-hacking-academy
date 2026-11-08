@@ -418,7 +418,7 @@
                 "Delete the anomaly"
               ],
               "answerIndex": 0,
-              "explanation": "Preserve primary facts."
+              "explanation": "Record primary identity, timestamp, device and source evidence before drawing conclusions; premature classification can distort the investigation."
             }
           ],
           "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
@@ -851,7 +851,7 @@
                 "20%"
               ],
               "answerIndex": 0,
-              "explanation": "12/(12+3)=80%."
+              "explanation": "Recall = 12/(12+3) = 80% of the 15 actual incidents in this held-out evaluation. The other three incidents were missed."
             },
             {
               "id": "b",
@@ -862,7 +862,7 @@
                 "90%"
               ],
               "answerIndex": 1,
-              "explanation": "12/(12+8)=60%."
+              "explanation": "Precision = 12/(12+8) = 60% of the 20 alerts that were true positives in the held-out evaluation."
             }
           ],
           "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
