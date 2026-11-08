@@ -1,0 +1,1336 @@
+{
+  "version": "2026-11-08.c",
+  "description": "70 tailored practical assignments for the remaining core lessons: enterprise IAM, Linux, web, cloud, professional security reporting, hardware.",
+  "units": [
+    {
+      "id": "core-practice-b3-1-1",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Identity lifecycle and onboarding",
+      "title": "Identity lifecycle and onboarding — real-world reasoning practice",
+      "scenario": "Fictional hire → role request → approval → account provision → review",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Identity lifecycle and onboarding",
+          "command": "Fictional hire → role request → approval → account provision → review",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional hire → role request → approval → account provision → review",
+          "interpretation": "Onboarding without approval and expiration control can produce enduring excess access.",
+          "task": "Write a lifecycle checklist with named approver, start date, minimum access and audit record.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-2",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Provisioning least-privilege roles",
+      "title": "Provisioning least-privilege roles — real-world reasoning practice",
+      "scenario": "Roles: analyst read-only; incident lead limited write; HR no server access",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Provisioning least-privilege roles",
+          "command": "Roles: analyst read-only; incident lead limited write; HR no server access",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Roles: analyst read-only; incident lead limited write; HR no server access",
+          "interpretation": "A role name alone does not establish effective privileges.",
+          "task": "Build an allow/deny matrix and explain why inherited group permissions must be reviewed.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-3",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "MFA deployment and recovery",
+      "title": "MFA deployment and recovery — real-world reasoning practice",
+      "scenario": "Mock user loses hardware key after MFA deployment",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: MFA deployment and recovery",
+          "command": "Mock user loses hardware key after MFA deployment",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock user loses hardware key after MFA deployment",
+          "interpretation": "Recovery flow can undermine otherwise strong MFA when verification is weak.",
+          "task": "Document safe recovery with identity verification, phishing-resistant methods and account-owner notification.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-4",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Privileged access reviews",
+      "title": "Privileged access reviews — real-world reasoning practice",
+      "scenario": "Sample quarterly privileged account inventory with unused admin account",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Privileged access reviews",
+          "command": "Sample quarterly privileged account inventory with unused admin account",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Sample quarterly privileged account inventory with unused admin account",
+          "interpretation": "An unused account is a risk indicator, not proof of misuse.",
+          "task": "Identify stale permissions and define a review owner, deadline and removal verification.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-5",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Service identities and secrets",
+      "title": "Service identities and secrets — real-world reasoning practice",
+      "scenario": "Fictional service account uses a long-lived API key in an app configuration",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Service identities and secrets",
+          "command": "Fictional service account uses a long-lived API key in an app configuration",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional service account uses a long-lived API key in an app configuration",
+          "interpretation": "A machine account still needs lifecycle management and bounded privileges.",
+          "task": "Define least-privilege grant, key rotation, workload identity alternatives and audit evidence.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-6",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Federation and single sign-on",
+      "title": "Federation and single sign-on — real-world reasoning practice",
+      "scenario": "Diagram identity provider → service provider assertion → API session",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Federation and single sign-on",
+          "command": "Diagram identity provider → service provider assertion → API session",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Diagram identity provider → service provider assertion → API session",
+          "interpretation": "Single sign-on doesn't automatically authorize all resource actions.",
+          "task": "Mark signing, audience, expiry, account mapping and logout trust boundaries.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-7",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Identity audit evidence",
+      "title": "Identity audit evidence — real-world reasoning practice",
+      "scenario": "Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Identity audit evidence",
+          "command": "Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
+          "interpretation": "A granted role does not prove it was actually used.",
+          "task": "Normalize times and corroborate actor, session, policy and resource access records.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-8",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Departures and access revocation",
+      "title": "Departures and access revocation — real-world reasoning practice",
+      "scenario": "Mock employee departure: central account disabled, third-party token still active",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Departures and access revocation",
+          "command": "Mock employee departure: central account disabled, third-party token still active",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock employee departure: central account disabled, third-party token still active",
+          "interpretation": "Disabling the central identity does not necessarily revoke third-party credentials.",
+          "task": "Create a deprovisioning acceptance checklist covering sessions, integrations, keys and audit logs.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-9",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Role-based versus attribute-based rules",
+      "title": "Role-based versus attribute-based rules — real-world reasoning practice",
+      "scenario": "Mock attributes: department=finance; employment=active; record owner=42",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Role-based versus attribute-based rules",
+          "command": "Mock attributes: department=finance; employment=active; record owner=42",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock attributes: department=finance; employment=active; record owner=42",
+          "interpretation": "Claims must be verified by a trusted server, not blindly accepted from the client.",
+          "task": "Compare RBAC role rules and ABAC claims with an explicit forbidden case.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-1-10",
+      "level": 3,
+      "course": "Enterprise Identity and Access Management",
+      "lesson": "Emergency access governance",
+      "title": "Emergency access governance — real-world reasoning practice",
+      "scenario": "Emergency admin access requested during fictional outage",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Emergency access governance",
+          "command": "Emergency admin access requested during fictional outage",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Emergency admin access requested during fictional outage",
+          "interpretation": "Break-glass access needs control even when response urgency is high.",
+          "task": "Define two-person approval, time limit, logging, retrospective review and account revocation.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-1",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Linux directory hierarchy",
+      "title": "Linux directory hierarchy — real-world reasoning practice",
+      "scenario": "/etc, /var/log, /home, /tmp, /usr and a disposable training folder",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Linux directory hierarchy",
+          "command": "/etc, /var/log, /home, /tmp, /usr and a disposable training folder",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. /etc, /var/log, /home, /tmp, /usr and a disposable training folder",
+          "interpretation": "Not every Linux distribution or WSL environment has identical service paths.",
+          "task": "Explain directory purposes and use pwd, ls -la only in owned training locations.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-2",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Users and groups review",
+      "title": "Users and groups review — real-world reasoning practice",
+      "scenario": "whoami; id; groups",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Users and groups review",
+          "command": "whoami; id; groups",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. whoami; id; groups",
+          "interpretation": "A group listing alone does not establish access to every protected object.",
+          "task": "Document your normal user's UID, primary group and supplemental groups.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-3",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Permission bits in context",
+      "title": "Permission bits in context — real-world reasoning practice",
+      "scenario": "Disposable file: printf 'training\\n' > ~/mode-test.txt; chmod 640 ~/mode-test.txt; ls -l ~/mode-test.txt",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Permission bits in context",
+          "command": "Disposable file: printf 'training\\n' > ~/mode-test.txt; chmod 640 ~/mode-test.txt; ls -l ~/mode-test.txt",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Disposable file: printf 'training\\n' > ~/mode-test.txt; chmod 640 ~/mode-test.txt; ls -l ~/mode-test.txt",
+          "interpretation": "A mode of 640 on a file is not the same as the directory permissions that control access to it.",
+          "task": "Explain octal mode and directory traversal rights; document intended group sharing.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-4",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Processes and system resource health",
+      "title": "Processes and system resource health — real-world reasoning practice",
+      "scenario": "ps -ef | head; free -m",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Processes and system resource health",
+          "command": "ps -ef | head; free -m",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. ps -ef | head; free -m",
+          "interpretation": "Reported free memory depends on caches and OS accounting; a high number isn't conclusive failure.",
+          "task": "Record a process listing and memory totals while distinguishing process presence from health.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-5",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Services and startup behavior",
+      "title": "Services and startup behavior — real-world reasoning practice",
+      "scenario": "Fictional service dependency: web worker starts only after database available",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Services and startup behavior",
+          "command": "Fictional service dependency: web worker starts only after database available",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional service dependency: web worker starts only after database available",
+          "interpretation": "WSL 1 does not necessarily use systemd or represent a complete Linux server.",
+          "task": "Draw service dependency ordering, restart policy and read-only validation for WSL versus systemd installations.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-6",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Package updates and patch planning",
+      "title": "Package updates and patch planning — real-world reasoning practice",
+      "scenario": "Simulated package inventory, vendor patch advisory and approved maintenance window",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Package updates and patch planning",
+          "command": "Simulated package inventory, vendor patch advisory and approved maintenance window",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Simulated package inventory, vendor patch advisory and approved maintenance window",
+          "interpretation": "Installing updates without verifying compatibility can disrupt a service.",
+          "task": "Build prepatch backup, version comparison, validation and rollback criteria.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-7",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "System logs and journal concepts",
+      "title": "System logs and journal concepts — real-world reasoning practice",
+      "scenario": "Fictional journal: 09:00 start; 09:02 timeout; 09:03 retry successful",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: System logs and journal concepts",
+          "command": "Fictional journal: 09:00 start; 09:02 timeout; 09:03 retry successful",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional journal: 09:00 start; 09:02 timeout; 09:03 retry successful",
+          "interpretation": "A log entry may reflect a symptom rather than the root cause.",
+          "task": "Construct a timeline, normalize timestamps and state two competing hypotheses.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-8",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Storage and backup verification",
+      "title": "Storage and backup verification — real-world reasoning practice",
+      "scenario": "Disposable report plus independent backup copy and SHA-256 digest",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Storage and backup verification",
+          "command": "Disposable report plus independent backup copy and SHA-256 digest",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Disposable report plus independent backup copy and SHA-256 digest",
+          "interpretation": "Equal hashes prove matching content with high confidence, not provenance or recoverability under all conditions.",
+          "task": "Design restore verification and independent backup storage strategy.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-9",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Scheduled tasks and automation safety",
+      "title": "Scheduled tasks and automation safety — real-world reasoning practice",
+      "scenario": "Fictional scheduled job runs every hour with access to private reports",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Scheduled tasks and automation safety",
+          "command": "Fictional scheduled job runs every hour with access to private reports",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional scheduled job runs every hour with access to private reports",
+          "interpretation": "An automated task can amplify a mistake unless it has explicit limits.",
+          "task": "Define least privilege, logging, input validation, safe failure, time zone and scheduling overlap checks.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-2-10",
+      "level": 3,
+      "course": "Linux System Administration Lab Theory",
+      "lesson": "Hardening and configuration baselines",
+      "title": "Hardening and configuration baselines — real-world reasoning practice",
+      "scenario": "Mock baseline: root login disabled, unnecessary service running, updates pending",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Hardening and configuration baselines",
+          "command": "Mock baseline: root login disabled, unnecessary service running, updates pending",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock baseline: root login disabled, unnecessary service running, updates pending",
+          "interpretation": "A hardened checklist is not proof that every exploitable weakness is absent.",
+          "task": "Compare baseline to current state; prioritize reversible changes with documented approvals.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-1",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Browser and server trust boundaries",
+      "title": "Browser and server trust boundaries — real-world reasoning practice",
+      "scenario": "Browser changes UI price to $1; expected server price is $20",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Browser and server trust boundaries",
+          "command": "Browser changes UI price to $1; expected server price is $20",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Browser changes UI price to $1; expected server price is $20",
+          "interpretation": "Browser-provided fields cannot enforce an application's financial rules.",
+          "task": "List which validation must happen server-side, and verify price using an authorized synthetic fixture.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-2",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Identity versus authorization",
+      "title": "Identity versus authorization — real-world reasoning practice",
+      "scenario": "Guest and owner both request fictional private object 102",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Identity versus authorization",
+          "command": "Guest and owner both request fictional private object 102",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Guest and owner both request fictional private object 102",
+          "interpretation": "Authentication establishes identity; server-side authorization controls objects.",
+          "task": "Build identity and object authorization matrix; require guest 403 and owner 200.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-3",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Secure session lifecycle",
+      "title": "Secure session lifecycle — real-world reasoning practice",
+      "scenario": "Mock session created, rotated on login, expired and revoked on logout",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Secure session lifecycle",
+          "command": "Mock session created, rotated on login, expired and revoked on logout",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock session created, rotated on login, expired and revoked on logout",
+          "interpretation": "Cookie flags lower some risks but aren't an authorization system.",
+          "task": "Define Secure, HttpOnly, SameSite, expiration, rotation and server invalidation checks.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-4",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "User input validation",
+      "title": "User input validation — real-world reasoning practice",
+      "scenario": "Form field accepts unexpected negative quantity and a 20,000-character string",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: User input validation",
+          "command": "Form field accepts unexpected negative quantity and a 20,000-character string",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Form field accepts unexpected negative quantity and a 20,000-character string",
+          "interpretation": "Input validation is distinct from safe output encoding.",
+          "task": "Design type, range, length and normalization tests on a synthetic form.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-5",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Contextual output encoding",
+      "title": "Contextual output encoding — real-world reasoning practice",
+      "scenario": "Fictional HTML content 'A & B <demo>' rendered in a page",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Contextual output encoding",
+          "command": "Fictional HTML content 'A & B <demo>' rendered in a page",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional HTML content 'A & B <demo>' rendered in a page",
+          "interpretation": "Encoding depends on output context; one universal escape function is insufficient.",
+          "task": "Choose context-appropriate text/attribute encoding and note DOM insertion risks.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-6",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Parameterized database access",
+      "title": "Parameterized database access — real-world reasoning practice",
+      "scenario": "Fictional customer search with a user-provided surname",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Parameterized database access",
+          "command": "Fictional customer search with a user-provided surname",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional customer search with a user-provided surname",
+          "interpretation": "Parameterized queries address SQL syntax injection but don't authorize data access.",
+          "task": "Contrast parameter binding with unsafe string concatenation; design a mocked query test.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-7",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Cross-site request protections",
+      "title": "Cross-site request protections — real-world reasoning practice",
+      "scenario": "Mock update form with an authenticated browser and a cross-origin request",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Cross-site request protections",
+          "command": "Mock update form with an authenticated browser and a cross-origin request",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock update form with an authenticated browser and a cross-origin request",
+          "interpretation": "CSRF defenses and XSS defenses address different threat paths.",
+          "task": "Describe CSRF token, origin checks, SameSite and state-changing request validation.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-8",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Secure file upload design",
+      "title": "Secure file upload design — real-world reasoning practice",
+      "scenario": "Synthetic upload named report.png containing unexpected content type",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Secure file upload design",
+          "command": "Synthetic upload named report.png containing unexpected content type",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic upload named report.png containing unexpected content type",
+          "interpretation": "Extensions and declared MIME types alone cannot establish a safe file.",
+          "task": "Specify extension, content validation, storage separation, malware screening and size limits.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-9",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "API access control checks",
+      "title": "API access control checks — real-world reasoning practice",
+      "scenario": "Fictional API: GET /accounts/102 and PATCH /accounts/102",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: API access control checks",
+          "command": "Fictional API: GET /accounts/102 and PATCH /accounts/102",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional API: GET /accounts/102 and PATCH /accounts/102",
+          "interpretation": "An HTTP 200 from a training role picker isn't proof of real-world authentication.",
+          "task": "Create per-method, per-role access checks for owner, admin and guest.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-3-10",
+      "level": 5,
+      "course": "Web Application Security Fundamentals",
+      "lesson": "Security headers and deployment review",
+      "title": "Security headers and deployment review — real-world reasoning practice",
+      "scenario": "Deployment header set: CSP, HSTS, Referrer-Policy, X-Content-Type-Options",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Security headers and deployment review",
+          "command": "Deployment header set: CSP, HSTS, Referrer-Policy, X-Content-Type-Options",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Deployment header set: CSP, HSTS, Referrer-Policy, X-Content-Type-Options",
+          "interpretation": "Headers supplement but cannot replace application authorization and safe code.",
+          "task": "Explain purpose, compatibility testing and what protections each does not guarantee.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-1",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Cloud service models",
+      "title": "Cloud service models — real-world reasoning practice",
+      "scenario": "Diagram SaaS, PaaS, IaaS and customer-owned on-prem services",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Cloud service models",
+          "command": "Diagram SaaS, PaaS, IaaS and customer-owned on-prem services",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Diagram SaaS, PaaS, IaaS and customer-owned on-prem services",
+          "interpretation": "Provider/customer obligations vary by contract and specific offering.",
+          "task": "Allocate platform, software, identity, data and logging tasks by model.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-2",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Shared responsibility maps",
+      "title": "Shared responsibility maps — real-world reasoning practice",
+      "scenario": "Mock hosted application with provider-managed OS and customer-managed API roles",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Shared responsibility maps",
+          "command": "Mock hosted application with provider-managed OS and customer-managed API roles",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock hosted application with provider-managed OS and customer-managed API roles",
+          "interpretation": "Provider security does not absolve customer identity governance.",
+          "task": "Identify what provider patches and what customer must configure and audit.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-3",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Identity policies and resource grants",
+      "title": "Identity policies and resource grants — real-world reasoning practice",
+      "scenario": "Fictional policy Allow GetObject to all principals for confidential objects",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Identity policies and resource grants",
+          "command": "Fictional policy Allow GetObject to all principals for confidential objects",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional policy Allow GetObject to all principals for confidential objects",
+          "interpretation": "Broad permission establishes exposure risk but not evidence of historical theft.",
+          "task": "Rewrite policy using least privilege and test permitted and denied roles.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-4",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Storage data classification",
+      "title": "Storage data classification — real-world reasoning practice",
+      "scenario": "Synthetic customer files labeled public, internal and confidential",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Storage data classification",
+          "command": "Synthetic customer files labeled public, internal and confidential",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic customer files labeled public, internal and confidential",
+          "interpretation": "Labels are meaningful only when enforced and maintained.",
+          "task": "Assign encryption, access, retention, geographic and backup controls by classification.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-5",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Network zone boundaries",
+      "title": "Network zone boundaries — real-world reasoning practice",
+      "scenario": "Diagram public load balancer, private API and database zone",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Network zone boundaries",
+          "command": "Diagram public load balancer, private API and database zone",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Diagram public load balancer, private API and database zone",
+          "interpretation": "Private subnets don't imply perfect isolation without routing/security policy checks.",
+          "task": "Create an ingress/egress matrix and identify management-plane access controls.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-6",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Secrets and key services",
+      "title": "Secrets and key services — real-world reasoning practice",
+      "scenario": "Mock API key committed to repository and rotated under an approved change",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Secrets and key services",
+          "command": "Mock API key committed to repository and rotated under an approved change",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock API key committed to repository and rotated under an approved change",
+          "interpretation": "A removed Git commit may remain in history; rotation is still required.",
+          "task": "Design revocation, replacement, audit and downtime mitigation without printing real values.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-7",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Central logging and audit trails",
+      "title": "Central logging and audit trails — real-world reasoning practice",
+      "scenario": "Mock logs in three services with offset timestamps",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Central logging and audit trails",
+          "command": "Mock logs in three services with offset timestamps",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock logs in three services with offset timestamps",
+          "interpretation": "Incomplete logs limit incident attribution.",
+          "task": "Normalize clocks, correlate request IDs and define immutable retention without overcollecting PII.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-8",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Backup and recovery objectives",
+      "title": "Backup and recovery objectives — real-world reasoning practice",
+      "scenario": "Business sets RPO=1h and RTO=4h for a fictional booking service",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Backup and recovery objectives",
+          "command": "Business sets RPO=1h and RTO=4h for a fictional booking service",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Business sets RPO=1h and RTO=4h for a fictional booking service",
+          "interpretation": "A backup job marked successful doesn't prove restore objectives can be met.",
+          "task": "Design backups and timed restore acceptance; note dependency and data consistency.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-9",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Infrastructure change approval",
+      "title": "Infrastructure change approval — real-world reasoning practice",
+      "scenario": "Terraform-like fictional config drift detected in a storage policy",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Infrastructure change approval",
+          "command": "Terraform-like fictional config drift detected in a storage policy",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Terraform-like fictional config drift detected in a storage policy",
+          "interpretation": "Automated changes still require scope and change control.",
+          "task": "Document before/after diff, approver, rollback and independent deny/allow validation.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-4-10",
+      "level": 6,
+      "course": "Cloud Infrastructure Security",
+      "lesson": "Cloud incident communication",
+      "title": "Cloud incident communication — real-world reasoning practice",
+      "scenario": "Fictional cloud exposure resolved but access history incomplete",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Cloud incident communication",
+          "command": "Fictional cloud exposure resolved but access history incomplete",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional cloud exposure resolved but access history incomplete",
+          "interpretation": "Avoid saying data was stolen or safe without evidence.",
+          "task": "Prepare incident update with known exposure window, confirmed access, unknowns and next owner.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-1",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Defining authorized testing scope",
+      "title": "Defining authorized testing scope — real-world reasoning practice",
+      "scenario": "Assessment request identifies two URLs but no verified owner authorization",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Defining authorized testing scope",
+          "command": "Assessment request identifies two URLs but no verified owner authorization",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Assessment request identifies two URLs but no verified owner authorization",
+          "interpretation": "A request from an unverified person is not authorization.",
+          "task": "Draft written scope, authority, dates, permitted methods, limits and stop triggers.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-2",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Evidence requirements and limitations",
+      "title": "Evidence requirements and limitations — real-world reasoning practice",
+      "scenario": "Synthetic finding has one screenshot and no request reproduction",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Evidence requirements and limitations",
+          "command": "Synthetic finding has one screenshot and no request reproduction",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic finding has one screenshot and no request reproduction",
+          "interpretation": "An isolated screenshot is often insufficient for independent reproducibility.",
+          "task": "Specify source, exact conditions, timestamps, redactions and alternative explanations.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-3",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Building a target inventory from supplied diagrams",
+      "title": "Building a target inventory from supplied diagrams — real-world reasoning practice",
+      "scenario": "Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Building a target inventory from supplied diagrams",
+          "command": "Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
+          "interpretation": "Do not expand inventory by scanning unknown assets.",
+          "task": "Prepare inventory with allowed asset identifiers and excluded components.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-4",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Threat model development",
+      "title": "Threat model development — real-world reasoning practice",
+      "scenario": "Use fictional shopping API diagram and a role-based access policy",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Threat model development",
+          "command": "Use fictional shopping API diagram and a role-based access policy",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Use fictional shopping API diagram and a role-based access policy",
+          "interpretation": "A threat model describes possibilities, not verified exploitation.",
+          "task": "Identify assets, entry points, trust boundaries and two competing attack hypotheses.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-5",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Control validation plans",
+      "title": "Control validation plans — real-world reasoning practice",
+      "scenario": "Mock controls: MFA present, object authorization uncertain, logs incomplete",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Control validation plans",
+          "command": "Mock controls: MFA present, object authorization uncertain, logs incomplete",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Mock controls: MFA present, object authorization uncertain, logs incomplete",
+          "interpretation": "A passing login test cannot prove backend object access is correct.",
+          "task": "Write independent positive/negative validation for each and expected safe result.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-6",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Risk ranking in business context",
+      "title": "Risk ranking in business context — real-world reasoning practice",
+      "scenario": "Compare public private-data disclosure with internal verbose error logging",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Risk ranking in business context",
+          "command": "Compare public private-data disclosure with internal verbose error logging",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Compare public private-data disclosure with internal verbose error logging",
+          "interpretation": "A numeric score is not a substitute for business context.",
+          "task": "Rank likely business impact, asset exposure, prerequisites, cost and confidence.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-7",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Writing reproducible findings",
+      "title": "Writing reproducible findings — real-world reasoning practice",
+      "scenario": "Reproduce a synthetic guest access-control issue",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Writing reproducible findings",
+          "command": "Reproduce a synthetic guest access-control issue",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Reproduce a synthetic guest access-control issue",
+          "interpretation": "Never include real third-party private data in a finding.",
+          "task": "Write prerequisites, request, expected versus observed response, limits and minimal evidence.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-8",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Remediation recommendations",
+      "title": "Remediation recommendations — real-world reasoning practice",
+      "scenario": "Synthetic bug fix adds owner check to API endpoint",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Remediation recommendations",
+          "command": "Synthetic bug fix adds owner check to API endpoint",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Synthetic bug fix adds owner check to API endpoint",
+          "interpretation": "Hiding the UI link alone is not remediation.",
+          "task": "Recommend server-side check, tests, deployment plan and owner accountable for rollout.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-9",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Retest and closure criteria",
+      "title": "Retest and closure criteria — real-world reasoning practice",
+      "scenario": "Prepatch guest 200; postpatch guest 403/owner 200",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Retest and closure criteria",
+          "command": "Prepatch guest 200; postpatch guest 403/owner 200",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Prepatch guest 200; postpatch guest 403/owner 200",
+          "interpretation": "A patch may close one path while leaving similar endpoints untested.",
+          "task": "Define retest conditions, independent verification and residual-risk documentation.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-5-10",
+      "level": 7,
+      "course": "Security Assessment and Reporting Workshop",
+      "lesson": "Executive reporting and presentation",
+      "title": "Executive reporting and presentation — real-world reasoning practice",
+      "scenario": "Board briefing with three synthetic findings and one unresolved alert",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Executive reporting and presentation",
+          "command": "Board briefing with three synthetic findings and one unresolved alert",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Board briefing with three synthetic findings and one unresolved alert",
+          "interpretation": "Do not equate self-authored training exams with a professional certification.",
+          "task": "Deliver executive risk summary, prioritized actions, milestones, confidence and a technical appendix.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-1",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Flipper Zero: recognition and safe use",
+      "title": "Flipper Zero: recognition and safe use — real-world reasoning practice",
+      "scenario": "Flipper Zero multifunction device and fictional NFC/IR training assets",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Flipper Zero: recognition and safe use",
+          "command": "Flipper Zero multifunction device and fictional NFC/IR training assets",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Flipper Zero multifunction device and fictional NFC/IR training assets",
+          "interpretation": "Owning a multifunction tool does not authorize interaction with third-party badges or devices.",
+          "task": "Identify hardware subsystems, consent limits, firmware provenance and a harmless offline demonstration plan.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-2",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "WiFi Pineapple: recognition and safe use",
+      "title": "WiFi Pineapple: recognition and safe use — real-world reasoning practice",
+      "scenario": "WiFi Pineapple wireless assessment appliance",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: WiFi Pineapple: recognition and safe use",
+          "command": "WiFi Pineapple wireless assessment appliance",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. WiFi Pineapple wireless assessment appliance",
+          "interpretation": "A controlled lab setup is required before any wireless interception exercise.",
+          "task": "Draw test network architecture, radio boundary and approved SSID ownership; do not transmit a rogue AP.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-3",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "USB Rubber Ducky: recognition and safe use",
+      "title": "USB Rubber Ducky: recognition and safe use — real-world reasoning practice",
+      "scenario": "USB Rubber Ducky keystroke automation device",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: USB Rubber Ducky: recognition and safe use",
+          "command": "USB Rubber Ducky keystroke automation device",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. USB Rubber Ducky keystroke automation device",
+          "interpretation": "Automated keystrokes can trigger unintended commands; no unauthorized payload deployment.",
+          "task": "Describe HID trust and create a harmless scripted text-editor demonstration on an owned training machine.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-4",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "HackRF One: recognition and safe use",
+      "title": "HackRF One: recognition and safe use — real-world reasoning practice",
+      "scenario": "HackRF One software-defined radio transceiver",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: HackRF One: recognition and safe use",
+          "command": "HackRF One software-defined radio transceiver",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. HackRF One software-defined radio transceiver",
+          "interpretation": "RF emissions may be regulated even when a device is inexpensive and technically capable.",
+          "task": "Distinguish receive and transmit modes, licensed frequencies, antenna requirements and RF power restrictions.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-5",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Proxmark3: recognition and safe use",
+      "title": "Proxmark3: recognition and safe use — real-world reasoning practice",
+      "scenario": "Proxmark3 RFID/NFC research device",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Proxmark3: recognition and safe use",
+          "command": "Proxmark3 RFID/NFC research device",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Proxmark3 RFID/NFC research device",
+          "interpretation": "Reading a training tag's identifier does not grant permission to access an external system.",
+          "task": "Identify low/high-frequency card families and how authentication differs from a UID.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-6",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Bash Bunny: recognition and safe use",
+      "title": "Bash Bunny: recognition and safe use — real-world reasoning practice",
+      "scenario": "Bash Bunny USB automation platform",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Bash Bunny: recognition and safe use",
+          "command": "Bash Bunny USB automation platform",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Bash Bunny USB automation platform",
+          "interpretation": "Never collect credentials or inject commands on others' machines without written consent.",
+          "task": "Explain USB enumeration modes and safe training workflows in a disposable user account.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-7",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Raspberry Pi: recognition and safe use",
+      "title": "Raspberry Pi: recognition and safe use — real-world reasoning practice",
+      "scenario": "Raspberry Pi single-board computer",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Raspberry Pi: recognition and safe use",
+          "command": "Raspberry Pi single-board computer",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Raspberry Pi single-board computer",
+          "interpretation": "A small server must be hardened before exposure to any shared network.",
+          "task": "Plan SD imaging, standard-user account, patching and a local offline log parser.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-8",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "ESP32 Marauder: recognition and safe use",
+      "title": "ESP32 Marauder: recognition and safe use — real-world reasoning practice",
+      "scenario": "ESP32 Marauder firmware ecosystem",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: ESP32 Marauder: recognition and safe use",
+          "command": "ESP32 Marauder firmware ecosystem",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. ESP32 Marauder firmware ecosystem",
+          "interpretation": "Do not perform deauthentication or interfere with nearby networks.",
+          "task": "Describe ESP32 microcontroller capabilities and difference between passive observation and active transmission.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-9",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Shark Jack: recognition and safe use",
+      "title": "Shark Jack: recognition and safe use — real-world reasoning practice",
+      "scenario": "Shark Jack portable network device",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Shark Jack: recognition and safe use",
+          "command": "Shark Jack portable network device",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Shark Jack portable network device",
+          "interpretation": "Never insert network tools into third-party infrastructure without explicit authorization.",
+          "task": "Draw a private wired test lab with clear ownership and logging rules.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-10",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "O.MG Cable: recognition and safe use",
+      "title": "O.MG Cable: recognition and safe use — real-world reasoning practice",
+      "scenario": "O.MG Cable embedded electronics risk",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: O.MG Cable: recognition and safe use",
+          "command": "O.MG Cable embedded electronics risk",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. O.MG Cable embedded electronics risk",
+          "interpretation": "Unexpected USB devices can cross trust boundaries even when physically small.",
+          "task": "Design an asset-inspection exercise comparing normal and unknown USB cables without activating unknown firmware.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-11",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Alfa Wi-Fi Adapter: recognition and safe use",
+      "title": "Alfa Wi-Fi Adapter: recognition and safe use — real-world reasoning practice",
+      "scenario": "Alfa Wi-Fi USB adapter",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Alfa Wi-Fi Adapter: recognition and safe use",
+          "command": "Alfa Wi-Fi USB adapter",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Alfa Wi-Fi USB adapter",
+          "interpretation": "Hardware compatibility is version-specific; do not attempt unauthorized interception.",
+          "task": "Compare chipset/driver compatibility, monitor-mode availability and legal passive capture rules.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-12",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Logic Analyzer: recognition and safe use",
+      "title": "Logic Analyzer: recognition and safe use — real-world reasoning practice",
+      "scenario": "Logic analyzer and test signal source",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Logic Analyzer: recognition and safe use",
+          "command": "Logic analyzer and test signal source",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Logic analyzer and test signal source",
+          "interpretation": "Do not attach an analyzer to energized mains/high-voltage circuits.",
+          "task": "Explain sampling rate, voltage tolerance, logic levels and simple clock-waveform capture on a breadboard.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-13",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Hardware lab rules and safe boundaries",
+      "title": "Hardware lab rules and safe boundaries — real-world reasoning practice",
+      "scenario": "Local lab safety charter and authorized equipment inventory",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Hardware lab rules and safe boundaries",
+          "command": "Local lab safety charter and authorized equipment inventory",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Local lab safety charter and authorized equipment inventory",
+          "interpretation": "Consent must be specific about activities and can be withdrawn.",
+          "task": "Define allowed assets, stop conditions, emergency contacts and privacy limits.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-14",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Radio frequency, power and legal compliance",
+      "title": "Radio frequency, power and legal compliance — real-world reasoning practice",
+      "scenario": "RF license and power-budget worksheet",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Radio frequency, power and legal compliance",
+          "command": "RF license and power-budget worksheet",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. RF license and power-budget worksheet",
+          "interpretation": "Receiving and transmitting can have different legal constraints; confirm current applicable rules.",
+          "task": "Distinguish authorized frequency bands, transmission limits, shielding and local regulations.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-15",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "USB trust boundaries and endpoint controls",
+      "title": "USB trust boundaries and endpoint controls — real-world reasoning practice",
+      "scenario": "USB keyboard, storage and composite device enrollment",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: USB trust boundaries and endpoint controls",
+          "command": "USB keyboard, storage and composite device enrollment",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. USB keyboard, storage and composite device enrollment",
+          "interpretation": "A device claiming to be a keyboard is not necessarily trustworthy.",
+          "task": "Create endpoint policy matrix for trusted/unknown USB device classes and alerts.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-16",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "RFID and NFC authentication fundamentals",
+      "title": "RFID and NFC authentication fundamentals — real-world reasoning practice",
+      "scenario": "Fictional RFID/NFC badges using UID and cryptographic challenge-response",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: RFID and NFC authentication fundamentals",
+          "command": "Fictional RFID/NFC badges using UID and cryptographic challenge-response",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional RFID/NFC badges using UID and cryptographic challenge-response",
+          "interpretation": "Duplicable identifiers are not proof of identity; use test cards you own.",
+          "task": "Compare UID-only identification with strong mutual authentication and key management.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-17",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Network appliance setup diagrams",
+      "title": "Network appliance setup diagrams — real-world reasoning practice",
+      "scenario": "Fictional managed-switch + private test laptop + isolated target diagram",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Network appliance setup diagrams",
+          "command": "Fictional managed-switch + private test laptop + isolated target diagram",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Fictional managed-switch + private test laptop + isolated target diagram",
+          "interpretation": "A diagram doesn't certify isolation; host and guest settings must be checked.",
+          "task": "Label each device, port, VLAN, route and defensive boundary without configuring a real switch.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-18",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Logic analyzer measurements and timing",
+      "title": "Logic analyzer measurements and timing — real-world reasoning practice",
+      "scenario": "Training square wave generator and low-voltage logic analyzer",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Logic analyzer measurements and timing",
+          "command": "Training square wave generator and low-voltage logic analyzer",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Training square wave generator and low-voltage logic analyzer",
+          "interpretation": "Poor sampling can alias a signal; high-voltage measurement is unsafe with common logic probes.",
+          "task": "Calculate sample resolution, edge timing and whether the instrument's maximum voltage is respected.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-19",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Microcontroller firmware and supply-chain trust",
+      "title": "Microcontroller firmware and supply-chain trust — real-world reasoning practice",
+      "scenario": "ESP32 firmware image, hash and signed release manifest",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Microcontroller firmware and supply-chain trust",
+          "command": "ESP32 firmware image, hash and signed release manifest",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. ESP32 firmware image, hash and signed release manifest",
+          "interpretation": "A checksum from an untrusted source doesn't by itself authenticate firmware origin.",
+          "task": "Design a firmware provenance checklist including source, checksum, signature, rollback and version.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b3-6-20",
+      "level": 2,
+      "course": "Ethical Hacking Hardware Foundations",
+      "lesson": "Portable hardware case documentation",
+      "title": "Portable hardware case documentation — real-world reasoning practice",
+      "scenario": "Portable device case with documented training inventory",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Investigate and verify: Portable hardware case documentation",
+          "command": "Portable device case with documented training inventory",
+          "instruction": "Work from a synthetic case or an explicitly authorized environment. Identify the decision and expected evidence, not just the outcome. Portable device case with documented training inventory",
+          "interpretation": "Never deploy portable assessment tools outside written scope.",
+          "task": "Write a field checklist: owner approval, device IDs, firmware version, USB/radio scope, battery/power safety, evidence handling.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        }
+      ]
+    }
+  ]
+}
