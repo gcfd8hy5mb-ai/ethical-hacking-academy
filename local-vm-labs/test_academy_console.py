@@ -68,6 +68,19 @@ class LocalBrowserConsoleTests(TestCase):
             academy_console.action("fix-config", {})
         self.assertEqual(target.read_text(), "Do not modify me.")
 
+    def test_allowlisted_real_command_and_rejects_extra_arguments(self):
+        academy_console.action("setup", {})
+        result = academy_console.action("terminal", {"command": "pwd"})
+        self.assertIn(str(self.base), result)
+        result = academy_console.action("terminal", {"command": "cat logs/resolver.log"})
+        self.assertIn("dns timeout", result.lower())
+        with self.assertRaises(ValueError):
+            academy_console.action("terminal", {"command": "ls -l; whoami"})
+        with self.assertRaises(ValueError):
+            academy_console.action("terminal", {"command": "cat /etc/passwd"})
+        with self.assertRaises(ValueError):
+            academy_console.action("terminal", {"command": ["pwd"]})
+
     def test_http_requires_correct_origin_host_and_session_token(self):
         old_port, old_origin = academy_console.PORT, academy_console.ORIGIN
         server = ThreadingHTTPServer(("127.0.0.1", 0), academy_console.Handler)
