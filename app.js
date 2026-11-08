@@ -37,18 +37,14 @@ function lessonReadingHTML(reading){return String(reading).split(/\n\s*\n/).filt
 // Supplemental practical instruction is lazy-loaded inside the existing lesson view.
 // It never adds, removes, reorders or marks an original lesson complete.
 let embeddedPracticePromise=null;
-function embeddedPracticeCourseLevel(){
- if(!learningPath?.levels?.length||!catalog?.courses?.[courseIndex])return null;
- const name=catalog.courses[courseIndex].title;
- const index=learningPath.levels.findIndex(level=>Array.isArray(level.courses)&&level.courses.includes(name));
- return index>=0?index+1:null;
-}
-function embeddedPracticeSectionHTML(section,unit,level){
+let embeddedPracticeMapPromise=null;
+const embeddedPracticeKey=t=>String(t||'').trim().toLowerCase().replace(/\\s+/g,' ');
+function embeddedPracticeSectionHTML(section,unit,lessonTitle){
  const line=(label,value)=>'<h4>'+safe(label)+'</h4><p>'+safe(value)+'</p>';
  return '<section class="sheet body" aria-label="Practical lesson extension" style="border:1px solid #b29a68;margin-top:14px">'
- +'<div class="kicker">LEVEL '+level+' · HANDS-ON LEARNING EXTENSION</div>'
+ +'<div class="kicker">CURATED PRACTICAL EXTENSION</div>'
  +'<h2>'+safe(unit.title)+'</h2>'
- +'<p class="muted">This is supplemental instruction matched to your current course level. It is not a requirement for marking this original lesson complete.</p>'
+ +'<p class="muted">A related practical exercise selected by the title of your current lesson: '+safe(lessonTitle)+'. This does not replace the original lesson or knowledge check.</p>'
  +line('Scenario',unit.scenario)
  +'<h3>'+safe(section.heading)+'</h3>'
  +line('What it does, why it works, and when to use it',section.instruction)
@@ -62,23 +58,32 @@ function embeddedPracticeSectionHTML(section,unit,level){
 async function loadEmbeddedPracticeForLesson(expectedCourse,expectedLesson){
  const node=document.getElementById('academy-embedded-practice');
  if(!node)return;
- const level=embeddedPracticeCourseLevel();
- if(!level){node.textContent='Practical guidance for this course is available from your level overview.';return}
+ const course=catalog?.courses?.[expectedCourse],lesson=course?.lessons?.[expectedLesson];
+ if(!lesson)return;
+ const courseTitle=course.title,lessonTitle=lesson[0];
  try{
-  if(!embeddedPracticePromise)embeddedPracticePromise=fetch('./coursework-practical-expansion-2026.json').then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).catch(e=>{embeddedPracticePromise=null;throw e});
-  const data=await embeddedPracticePromise;
+  if(!embeddedPracticeMapPromise)embeddedPracticeMapPromise=fetch('./lesson-practical-title-map-2026.json').then(r=>{if(!r.ok)throw Error('Mapping HTTP '+r.status);return r.json()}).catch(e=>{embeddedPracticeMapPromise=null;throw e});
+  const map=await embeddedPracticeMapPromise;
   if(screen!=='lesson'||courseIndex!==expectedCourse||lessonIndex!==expectedLesson)return;
+  const match=(map.mappings||[]).find(m=>embeddedPracticeKey(m.course)===embeddedPracticeKey(courseTitle)&&embeddedPracticeKey(m.lesson)===embeddedPracticeKey(lessonTitle));
   const current=document.getElementById('academy-embedded-practice');
   if(!current)return;
-  const units=(data.units||[]).filter(unit=>unit.level===level&&Array.isArray(unit.sections)&&unit.sections.length);
-  if(!units.length){current.textContent='No supplemental practice is assigned for this level yet.';return}
-  // Deterministic round-robin mapping for continuity; avoid changing legacy lesson progress keys.
-  const unit=units[Math.floor(expectedLesson/3)%units.length],section=unit.sections[expectedLesson%unit.sections.length];
-  current.innerHTML=embeddedPracticeSectionHTML(section,unit,level);
+  if(!match){
+   current.innerHTML='<section class="sheet body"><h2>Related practice library</h2><p class="muted">A lesson-specific practical exercise has not been reviewed for this exact lesson yet. Open the Academy practice library instead of showing an unrelated exercise.</p><p><a class="button" href="./coursework-practical-expansion.html">Browse practical coursework →</a></p></section>';
+   return;
+  }
+  if(!embeddedPracticePromise)embeddedPracticePromise=fetch('./coursework-practical-expansion-2026.json').then(r=>{if(!r.ok)throw Error('Practical catalog HTTP '+r.status);return r.json()}).catch(e=>{embeddedPracticePromise=null;throw e});
+  const data=await embeddedPracticePromise;
+  if(screen!=='lesson'||courseIndex!==expectedCourse||lessonIndex!==expectedLesson)return;
+  const latest=document.getElementById('academy-embedded-practice');
+  if(!latest)return;
+  const unit=(data.units||[]).find(u=>u.id===match.unitId),section=unit?.sections?.find(x=>x.id===match.sectionId);
+  if(!section){latest.textContent='Assigned practice is unavailable. Continue the core lesson or open the practice library.';return;}
+  latest.innerHTML=embeddedPracticeSectionHTML(section,unit,lessonTitle);
  }catch(error){
   const current=document.getElementById('academy-embedded-practice');
   if(current&&screen==='lesson'&&courseIndex===expectedCourse&&lessonIndex===expectedLesson){
-   current.innerHTML='<p class="muted">Supplemental practical guidance is temporarily unavailable. Your original lesson remains accessible. <a href="./coursework-practical-expansion.html">Open the practice collection</a>.</p>';
+   current.innerHTML='<p class="muted">Supplemental practice is temporarily unavailable. Your core lesson remains usable. <a href="./coursework-practical-expansion.html">Open the practice collection</a>.</p>';
   }
  }
 }
