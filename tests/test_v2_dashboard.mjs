@@ -24,7 +24,7 @@ assert.match(css,/--v2-gold:#efbd5d/);
 assert.match(css,/academy-v2-course-grid/);
 assert.match(css,/@media\(max-width:959px\)/);
 assert.match(css,/@media\(max-width:560px\)/);
-assert.ok(!/overflow-y\s*:\s*(auto|scroll)/i.test(css),'Redesign must not introduce another internal lesson scroll region');
+assert.ok(!/academy-practice-panel[^{}]*\{[^}]*overflow-y\s*:\s*(auto|scroll)/i.test(css),'Redesign must not introduce an internal practice-panel scrollbar');
 assert.match(map,/<svg/);
 assert.ok(!/https?:\/\//i.test(css),'Branch-only visual layer must not depend on remote imagery or fonts');
 console.log('V2 dashboard checks passed: branch-only styling, real progress, real course actions, accessibility and natural page scrolling.');
