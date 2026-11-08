@@ -1,0 +1,45 @@
+name: Academy curriculum and offline lab validation
+
+on:
+  push:
+    paths:
+      - 'curriculum.json'
+      - 'lesson-practical-title-map-2026.json'
+      - 'coursework-practical-expansion-2026.json'
+      - 'coursework-specific-practice-2026.json'
+      - 'core-lesson-guided-practice-2026.json'
+      - 'core-guided-practice-batch2-2026.json'
+      - 'core-guided-practice-batch3-2026.json'
+      - 'local-vm-labs/academy_evidence_review.py'
+      - 'tests/**'
+      - '.github/workflows/academy-curriculum-audit.yml'
+  pull_request:
+    paths:
+      - 'curriculum.json'
+      - 'lesson-practical-title-map-2026.json'
+      - '*practice*2026.json'
+      - 'local-vm-labs/academy_evidence_review.py'
+      - 'tests/**'
+      - '.github/workflows/academy-curriculum-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run practical-course mapping audit
+        run: python3 tests/audit_practical_mapping.py
+      - name: Run Linux evidence review regression tests
+        run: python3 -m unittest discover -s tests -p 'test_offline_evidence_review.py' -v
+      - name: Validate main app JavaScript syntax
+        run: node --check app.js
