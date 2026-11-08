@@ -1,10 +1,10 @@
-/* Desktop workspace v3 — Ethical Hacking Academy.
+/* Desktop workspace v3 — original cream, charcoal and gold palette.
    All layout and color overrides are limited to desktop widths.
    The existing mobile course navigation and Firebase progress are untouched. */
 @media (min-width: 960px) {
  :root{scroll-behavior:smooth}
- html{background:#eaf0f1}
- body{background:#eaf0f1;color:#202d32;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+ html{background:#ece6dc}
+ body{background:#ece6dc;color:#252b2b;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
  #app{min-height:100vh}
  #app .wrap{
   box-sizing:border-box;max-width:none;width:auto;min-width:0;
@@ -13,17 +13,17 @@
  #app .top{
   position:sticky;top:0;z-index:40;min-height:83px;margin:0 0 36px;
   padding:16px 0;display:flex;align-items:center;gap:20px;
-  border-bottom:1px solid #d4dfe2;
-  background:rgba(234,240,241,.96);
+  border-bottom:1px solid #ded1ba;
+  background:rgba(236,230,220,.96);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
  }
- #app .brand{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;letter-spacing:.12em;font-weight:800;color:#273c45}
+ #app .brand{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;letter-spacing:.12em;font-weight:800;color:#29353a}
  #app .brand .seal{font-size:24px;color:#ac8448;margin-right:8px;vertical-align:middle}
- #app .top>button{margin-left:auto!important;background:#fff!important;color:#34454d!important;border:1px solid #cad5d9!important;border-radius:10px!important;min-height:39px!important;padding:10px 15px!important;font-size:12px;font-weight:750}
+ #app .top>button{margin-left:auto!important;background:#fff!important;color:#34454d!important;border:1px solid #d4c5af!important;border-radius:10px!important;min-height:39px!important;padding:10px 15px!important;font-size:12px;font-weight:750}
  #app .wrap>.kicker,#app .wrap>.back+.kicker{font-size:11px;letter-spacing:.15em;font-weight:800;color:#8c6c3e;margin:17px 0 11px}
  #app h1,#app h2{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:770;letter-spacing:-.025em}
- #app .wrap>h1{font-size:clamp(30px,2.5vw,43px);line-height:1.19;margin:5px 0 17px;color:#223039}
- #app .wrap>h2{font-size:clamp(23px,1.7vw,29px);line-height:1.25;color:#23343a}
+ #app .wrap>h1{font-size:clamp(30px,2.5vw,43px);line-height:1.19;margin:5px 0 17px;color:#252b2b}
+ #app .wrap>h2{font-size:clamp(23px,1.7vw,29px);line-height:1.25;color:#252b2b}
  #app .muted{color:#62727a}
  #app p{line-height:1.65}
  #app .hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#182b35 0%,#203e48 58%,#2c4850 100%);color:#f6f0e7;border:1px solid #46626b;border-radius:17px;margin:6px 0 34px;padding:38px clamp(31px,3.5vw,56px);min-height:292px;box-shadow:0 14px 35px #1c3d4c18}
@@ -34,7 +34,7 @@
  #app .hero .button{display:inline-flex;align-items:center;justify-content:center;background:#e0bd80;color:#192c33;border:1px solid #efd29f;padding:13px 20px;margin:9px 9px 0 0;font-weight:770;min-height:49px;border-radius:10px;max-width:100%;white-space:normal}
  #app .hero .button:hover{background:#f1d5a0}
  #app .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
- #app .tile,#app .course,#app .lesson-row,#app .sheet{background:#fff;border:1px solid #d5dfe2;border-radius:13px;box-shadow:0 4px 17px #19344308;color:#283740;min-width:0}
+ #app .tile,#app .course,#app .lesson-row,#app .sheet{background:#fffaf2;border:1px solid #ded1ba;border-radius:13px;box-shadow:0 4px 17px #19344308;color:#252b2b;min-width:0}
  #app .tile{padding:25px;transition:border-color .18s,transform .18s,box-shadow .18s}
  #app .tile strong{font-size:17px;font-weight:800}
  #app .tile small{font-size:13px;color:#677b81;line-height:1.45}
@@ -51,17 +51,17 @@
  #app .sheet h2{font-size:clamp(21px,1.9vw,29px);margin:5px 0 18px}
  #app .sheet p{max-width:90ch;font-size:15px;line-height:1.82}
  #app .body{font-size:16px;line-height:1.8;max-width:none}
- #app .body .lesson-section{background:#f7faf9;border:1px solid #dae6e5;border-left:3px solid #b49059;border-radius:0 10px 10px 0;padding:20px 25px;margin:19px 0}
+ #app .body .lesson-section{background:#f9f3e9;border:1px solid #dfd2bc;border-left:3px solid #b49059;border-radius:0 10px 10px 0;padding:20px 25px;margin:19px 0}
  #app .body .lesson-section p{font-size:16px;line-height:1.85;margin:11px 0;max-width:88ch}
  #app .body .lesson-section strong{color:#554633}
- #app .assessment{background:#fff;border:1px solid #d5dfe2;box-shadow:0 4px 17px #19344308;border-radius:14px;padding:28px 34px;margin:26px 0;max-width:none}
+ #app .assessment{background:#fffaf2;border:1px solid #ded1ba;box-shadow:0 4px 17px #19344308;border-radius:14px;padding:28px 34px;margin:26px 0;max-width:none}
  #app .assessment h2{font-size:26px;margin:0 0 9px}
  #app .assessment .answers{display:grid;gap:10px}
- #app .assessment .answer{background:#f8fbfb;color:#26353a;border:1px solid #d6e0e3;border-radius:9px;padding:16px 19px;text-align:left;line-height:1.55;min-height:56px}
+ #app .assessment .answer{background:#fffaf2;color:#252b2b;border:1px solid #d8cab4;border-radius:9px;padding:16px 19px;text-align:left;line-height:1.55;min-height:56px}
  #app .assessment .answer:hover,#app .assessment .answer.selected{border-color:#b68d53;background:#fcf6e9}
  #app .feedback{border-left:4px solid #b18b54;background:#f7f0e3;padding:17px 21px;border-radius:0 9px 9px 0}
  #app .button{cursor:pointer;min-height:46px;border-radius:9px}
- #app .progress{background:#e1e9e9}
+ #app .progress{background:#dfd6c6}
  #app .progress span{background:#b48c50}
  #app .lab{background:#172931;border:1px solid #2d4953;border-radius:14px;padding:28px;margin:20px 0;box-shadow:0 9px 28px #162c3715}
  #app .terminal{background:#0b151b;color:#b4e6c2;border:1px solid #355349;font-size:14px;line-height:1.75;max-width:100%;overflow:auto;min-height:190px;padding:24px}
@@ -79,10 +79,10 @@
   z-index:60;position:fixed;top:0;bottom:0;left:0;right:auto;
   width:252px;height:100dvh;padding:126px 13px 22px;
   display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:5px;
-  background:linear-gradient(180deg,#14232c,#172932 63%,#111e26);
+  background:linear-gradient(180deg,#1b2d34,#111d23 63%,#111e26);
   border-right:1px solid #39515b;box-shadow:9px 0 28px #0d26310c;overflow-y:auto;
  }
- #app .bottom:before{content:"ETHICAL HACKING\\AACADEMY";white-space:pre-line;position:absolute;top:32px;left:25px;right:13px;font-size:16px;font-weight:820;line-height:1.4;letter-spacing:.105em;color:#f1d4a2}
+ #app .bottom:before{content:"ETHICAL HACKING\\AACADEMY";white-space:pre-line;position:absolute;top:32px;left:25px;right:13px;font-size:16px;font-weight:820;line-height:1.4;letter-spacing:.105em;color:#e5bf7e}
  #app .bottom:after{content:"PROFESSIONAL LEARNING WORKSPACE";position:absolute;top:92px;left:25px;right:12px;font-size:9px;font-weight:700;color:#849fa8;letter-spacing:.11em}
  #app .bottom button{
   flex:none;width:100%;max-width:none;min-height:48px;margin:0;padding:13px 15px!important;text-align:left;
@@ -95,7 +95,7 @@
  #app .desktop-context{display:none}
  #academy-diagnostic-link{opacity:.42;font-size:11px!important}
  /* Auth screen remains independent of the signed-in study layout. */
- .auth-screen{position:fixed;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(410px,.95fr);gap:clamp(25px,4vw,85px);align-items:center;justify-content:stretch;padding:55px max(5vw,42px);background:linear-gradient(112deg,#152b34 0%,#1e3942 49%,#eaf0f1 49.1%,#f2f5f5 100%)}
+ .auth-screen{position:fixed;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(410px,.95fr);gap:clamp(25px,4vw,85px);align-items:center;justify-content:stretch;padding:55px max(5vw,42px);background:linear-gradient(112deg,#152b34 0%,#253d45 49%,#ece6dc 49.1%,#f7f3ec 100%)}
  .auth-screen:before{content:"ETHICAL HACKING ACADEMY\\a\\a Practical cybersecurity education.\\a Built for the desktop lab.\\a\\a LEARN  •  PRACTICE  •  DEFEND";white-space:pre-line;grid-column:1;grid-row:1;color:#f2deb4;font:clamp(24px,2.5vw,40px)/1.45 Georgia,serif;max-width:550px}
  .auth-panel{grid-column:2;grid-row:1;justify-self:center;width:min(100%,510px);padding:35px 40px;box-shadow:0 24px 65px #1425291d}
  .auth-panel h1{font-size:35px}
@@ -103,16 +103,16 @@
 }
 @media(min-width:1400px){
  #app .wrap:has(~.desktop-context){margin-right:275px;padding-right:clamp(22px,2.4vw,40px)}
- #app .desktop-context{display:block;position:fixed;right:19px;top:112px;bottom:auto;width:237px;max-height:calc(100dvh - 135px);overflow-y:auto;padding:22px 20px;background:#fff;border:1px solid #d4dfe2;border-radius:12px;box-shadow:0 8px 25px #1e36400e;z-index:15}
+ #app .desktop-context{display:block;position:fixed;right:19px;top:112px;bottom:auto;width:237px;max-height:calc(100dvh - 135px);overflow-y:auto;padding:22px 20px;background:#fffaf2;border:1px solid #ded1ba;border-radius:12px;box-shadow:0 8px 25px #1e36400e;z-index:15}
  #app .desktop-context-label{font-size:10px;letter-spacing:.13em;font-weight:850;color:#977346;margin-bottom:11px}
  #app .desktop-context h2{font-size:17px;line-height:1.32;margin:0 0 11px;overflow-wrap:anywhere}
  #app .desktop-context p{font-size:12px;color:#697a7e;margin:0 0 10px;line-height:1.5}
- #app .desktop-context-track{height:7px;border-radius:9px;background:#e3ebeb;overflow:hidden}
+ #app .desktop-context-track{height:7px;border-radius:9px;background:#e9e0d0;overflow:hidden}
  #app .desktop-context-track span{display:block;height:100%;border-radius:9px;background:#b68f57}
  #app .desktop-section-label{margin-top:30px}
  #app .desktop-context a,#app .desktop-context button{display:block;width:100%;border:0;background:none;color:#35484f;font-size:13px;font-weight:650;text-decoration:none;text-align:left;margin:3px 0;padding:12px 10px;border-radius:8px;cursor:pointer}
- #app .desktop-context a:hover,#app .desktop-context button:hover{background:#f1f5f5;color:#886439}
- #app .desktop-context-foot{border-top:1px solid #e3eaeb;margin-top:21px;padding-top:15px;color:#7d8c90;font-size:11px;line-height:1.65}
+ #app .desktop-context a:hover,#app .desktop-context button:hover{background:#f9f3e9;color:#886439}
+ #app .desktop-context-foot{border-top:1px solid #e0d3bd;margin-top:21px;padding-top:15px;color:#7d8c90;font-size:11px;line-height:1.65}
 }
 @media(min-width:960px) and (max-width:1260px){
  #app .wrap{padding:0 29px 85px}
