@@ -72,7 +72,10 @@ async function loadEmbeddedPracticeForLesson(expectedCourse,expectedLesson){
    current.innerHTML='<section class="sheet body"><h2>Related practice library</h2><p class="muted">A lesson-specific practical exercise has not been reviewed for this exact lesson yet. Open the Academy practice library instead of showing an unrelated exercise.</p><p><a class="button" href="./coursework-practical-expansion.html">Browse practical coursework →</a></p></section>';
    return;
   }
-  if(!embeddedPracticePromise)embeddedPracticePromise=fetch('./coursework-practical-expansion-2026.json').then(r=>{if(!r.ok)throw Error('Practical catalog HTTP '+r.status);return r.json()}).catch(e=>{embeddedPracticePromise=null;throw e});
+  if(!embeddedPracticePromise)embeddedPracticePromise=Promise.all([
+   fetch('./coursework-practical-expansion-2026.json').then(r=>{if(!r.ok)throw Error('Core practice HTTP '+r.status);return r.json()}),
+   fetch('./coursework-specific-practice-2026.json').then(r=>{if(!r.ok)throw Error('Specific practice HTTP '+r.status);return r.json()})
+  ]).then(([core,specific])=>({units:[...(core.units||[]),...(specific.units||[])]})).catch(e=>{embeddedPracticePromise=null;throw e});
   const data=await embeddedPracticePromise;
   if(screen!=='lesson'||courseIndex!==expectedCourse||lessonIndex!==expectedLesson)return;
   const latest=document.getElementById('academy-embedded-practice');
