@@ -209,3 +209,48 @@
  #app .wrap{animation:none!important}
  #app .academy-operation,#app .academy-level-grid .academy-level-card{transition:none!important}
 }
+
+
+/* Workstation: study and guided practice remain visible simultaneously on desktop. */
+@media(min-width:1180px){
+ #app .academy-workstation-split{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:start;gap:17px}
+ #app .academy-workstation-split>.academy-reading-panel,
+ #app .academy-workstation-split>.academy-practice-panel{margin:0;min-height:500px;min-width:0}
+ #app .academy-workstation-split .academy-reading-panel{padding:27px 30px;background:#fffaf2;border:1px solid #d8c7aa}
+ #app .academy-workstation-split .academy-practice-panel{padding:25px 26px;background:#14232b;border:1px solid #95774d;box-shadow:0 9px 23px #15242a11}
+ #app .academy-workstation-split .academy-practice-panel .academy-workstation-section-head h2{color:#f0e3cf}
+ #app .academy-workstation-split .academy-practice-panel>.academy-simulation-disclaimer{color:#dbcdb2}
+ #app .academy-workstation-split .academy-expand-practice{display:inline-flex;margin-left:auto;align-items:center;justify-content:center;padding:8px 11px;border-radius:8px;background:#2a3d44;border:1px solid #ab8b58;color:#eed8b6;font-size:12px;font-weight:750}
+ #app .academy-workstation-split.academy-practice-expanded{grid-template-columns:1fr}
+ #app .academy-workstation-split.academy-practice-expanded>.academy-reading-panel{display:none}
+ #app .academy-workstation-split.academy-practice-expanded>.academy-practice-panel{width:100%}
+ #app .academy-workstation-title{max-width:920px;margin:12px 0 25px}
+ #app .academy-workstation-title h1{font-size:clamp(30px,2.5vw,42px);margin:9px 0 11px}
+ #app .academy-workstation-title p{font-size:14px}
+ #app .academy-workstation-section-head{border-bottom:1px solid #c8b49633;padding-bottom:13px;margin-bottom:20px}
+ #app .academy-workstation-section-head h2{font-size:23px;font-weight:790}
+ #app .academy-reading-panel .lesson-section{background:#f8f2e8;border-left-color:#a9834d}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet{background:#fbf5e9;border-color:#b99e73!important;padding:20px!important}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet h2{font-size:21px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet h3{font-size:17px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet h4{font-size:14px}
+ #app .academy-practice-panel #academy-embedded-practice>.sheet p{font-size:13px;line-height:1.7}
+ #app .academy-workstation-assessment{margin-top:22px;background:#fffaf2}
+ #app .academy-workstation-tabs button{flex:0 0 auto;padding:17px 27px;min-width:175px}
+ #app .academy-workstation-assessment .assessment,
+ #app .academy-workstation-assessment .academy-lab-report{max-width:none;padding:30px 36px}
+ #app .academy-workstation-assessment .assessment .answers{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #app .academy-workstation-assessment .assessment .answer{min-height:78px}
+ #app .academy-report-actions{gap:17px}
+ #app #academy-report-notes{min-height:220px}
+}
+/* Context sidebar is useful on course listings, but obstructs two-column lessons. */
+@media(min-width:1400px){
+ #app .wrap:has(.academy-workstation-split){margin-right:0;padding-right:clamp(24px,3.3vw,62px)}
+ #app:has(.academy-workstation-split)>.desktop-context{display:none}
+}
+@media(min-width:960px) and (max-width:1179px){
+ #app .academy-reading-panel,#app .academy-practice-panel{padding:25px}
+ #app .academy-workstation-split{grid-template-columns:1fr}
+ #app .academy-workstation-assessment{margin-top:16px}
+}
