@@ -128,3 +128,84 @@
 @media(prefers-reduced-motion:reduce){
  @media(min-width:960px){:root{scroll-behavior:auto}#app .tile,#app .course,#app .lesson-row{transition:none!important}}
 }
+
+
+/* Hacking Academy identity: mission control, not the Business Academy dashboard.
+   Keeps the original dark charcoal, warm cream and gold study palette. */
+@media (min-width:960px) {
+ body,#app{background:#ece6dc}
+ #app .wrap{animation:academy-workspace-enter .26s ease-out both}
+ @keyframes academy-workspace-enter{from{opacity:.78;transform:translateY(6px)}to{opacity:1;transform:none}}
+ #app .academy-command-hero{position:relative;min-height:350px;background:
+   radial-gradient(circle at 82% 29%,#bb95591a 0 1px,transparent 2px) 0 0/21px 21px,
+   linear-gradient(116deg,#121f26 0%,#192c33 53%,#2a3b40 100%);
+   border:1px solid #b38f554d;border-radius:12px;padding:42px 48px 33px;box-shadow:0 14px 36px #17242e16}
+ #app .academy-command-hero:after{right:2.5%;top:12%;width:260px;height:260px;border:1px solid #d4b77c25;box-shadow:0 0 0 34px #c9a56a0a,0 0 0 70px #c9a56a08}
+ #app .academy-command-hero .chip{font-size:10px!important;letter-spacing:.16em!important;color:#e0be7f!important}
+ #app .academy-command-hero h1{font:800 clamp(37px,3.15vw,56px)/1.13 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.035em;max-width:770px;margin:19px 0}
+ #app .academy-command-hero h1 em{font-style:normal;color:#e7c88f}
+ #app .academy-command-hero p{max-width:720px;font-size:15px;line-height:1.7;color:#dfded6}
+ #app .academy-hero-actions{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin-top:19px}
+ #app .academy-command-hero .button{font-size:13px;font-weight:800;letter-spacing:.012em;margin:0}
+ #app .academy-command-hero .academy-hero-secondary{color:#eddfc4;background:transparent;border:1px solid #8e8b7e}
+ #app .academy-command-hero .academy-hero-secondary:hover{background:#ffffff13;color:white}
+ #app .academy-hero-status{display:flex;gap:22px;flex-wrap:wrap;border-top:1px solid #d2c0992c;margin-top:31px;padding-top:19px;font:750 10px/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:.09em;color:#b5c3c3}
+ #app .academy-hero-status span:first-child{color:#dfbd84}
+ #app .academy-dashboard-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 40px}
+ #app .academy-metric{display:flex;flex-direction:column;justify-content:space-between;min-height:136px;min-width:0;padding:19px 20px;border:1px solid #d8cab4;background:#fffaf2;border-radius:10px;box-shadow:0 4px 13px #33231307}
+ #app .academy-metric>span{font:800 10px/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:.11em;color:#8b785e}
+ #app .academy-metric strong{color:#232b2b;font:800 35px/1.1 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.03em;margin:13px 0 6px}
+ #app .academy-metric strong small{font-size:14px;font-weight:700;color:#807e75;letter-spacing:0}
+ #app .academy-metric p{font-size:12px;line-height:1.45;color:#716e65;margin:0}
+ #app .academy-metric-bar,#app .academy-level-meter{display:block;width:100%;height:7px;overflow:hidden;background:#e5dac6;border-radius:9px}
+ #app .academy-metric-bar>span,#app .academy-level-meter>span{display:block;height:100%;background:linear-gradient(90deg,#a27a43,#d5ad6b);border-radius:9px}
+ #app .academy-dashboard-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:35px 0 16px}
+ #app .academy-eyebrow{display:block;font:800 10px/1.6 ui-monospace,SFMono-Regular,monospace;letter-spacing:.15em;color:#9b7846;margin-bottom:5px}
+ #app .academy-dashboard-heading h2{margin:0;font-size:26px;font-weight:800}
+ #app .academy-heading-action{border:1px solid #cdbb9e;background:#fffaf2;border-radius:9px;padding:12px 15px;color:#78613e;font-size:12px;font-weight:800;cursor:pointer}
+ #app .academy-heading-action:hover{background:#f4e8d6}
+ #app .academy-operations{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+ #app .academy-operation{display:flex;align-items:center;gap:11px;min-height:109px;min-width:0;width:100%;text-align:left;padding:19px 15px;border:1px solid #b9a98f;background:#17282e;color:#f1e9d9;border-radius:11px;cursor:pointer;transition:transform .17s,border-color .17s}
+ #app .academy-operation:hover{transform:translateY(-2px);border-color:#dfbc84;background:#24363a}
+ #app .academy-operation-icon{display:flex;align-items:center;justify-content:center;width:37px;height:37px;flex:none;border:1px solid #94764d;border-radius:9px;font:700 21px/1 ui-monospace,monospace;color:#e4c08a}
+ #app .academy-operation>span:nth-child(2){display:flex;flex-direction:column;gap:5px;flex:1;min-width:0}
+ #app .academy-operation strong{font-size:13px;font-weight:800;color:#f8eee0}
+ #app .academy-operation small{font-size:11px;line-height:1.5;color:#c0c1b9}
+ #app .academy-operation>span:last-child{font-size:14px;color:#ddb77c}
+ #app .academy-level-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:21px}
+ #app .academy-level-grid .academy-level-card{display:flex;flex-direction:column;align-items:stretch;gap:0;position:relative;min-height:226px;padding:23px 24px;text-align:left;margin:0;background:#fffaf2;border:1px solid #dac9ac;border-radius:12px;box-shadow:0 4px 15px #382e2208}
+ #app .academy-level-grid .academy-level-card:hover{background:#fffdf7;border-color:#b28d52;box-shadow:0 10px 25px #463a2714;transform:translateY(-2px)}
+ #app .academy-level-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+ #app .academy-level-number{font:850 11px/1.3 ui-monospace,SFMono-Regular,monospace;letter-spacing:.12em;color:#9b7848}
+ #app .academy-level-status{font:750 10px/1.3 ui-monospace,monospace;letter-spacing:.04em;color:#788078}
+ #app .academy-level-title{display:block;font-size:20px;font-weight:820;line-height:1.25;letter-spacing:-.02em;color:#202e32;margin-bottom:7px}
+ #app .academy-level-summary{display:block;flex:1;font-size:13px;line-height:1.55;color:#6d7372;max-width:48ch}
+ #app .academy-level-meter{margin:17px 0 12px;height:5px}
+ #app .academy-level-footer{display:flex;justify-content:space-between;gap:12px;color:#6e706b;font-size:11px;font-weight:700}
+ #app .academy-level-footer>span:last-child{color:#9f783e;font-size:10px;letter-spacing:.08em}
+ #app .academy-page-intro{padding:8px 0 13px}
+ #app .academy-page-intro h1{font-size:clamp(31px,2.8vw,43px);margin:8px 0 11px}
+ #app .academy-page-intro p{max-width:680px;font-size:15px}
+ #app .academy-pathway-grid{margin-top:23px}
+ #app .academy-module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0 27px}
+ #app .academy-module-grid .academy-lesson-tile{display:flex;align-items:start;gap:12px;flex-direction:column;justify-content:space-between;min-height:124px;margin:0;padding:19px 21px;border-radius:11px}
+ #app .academy-module-grid .academy-lesson-tile span{font-size:15px;font-weight:750;line-height:1.45}
+ #app .academy-module-grid .academy-lesson-tile small{align-self:flex-end;font-size:11px;border-top:1px solid #e7dac4;padding-top:10px;width:100%;text-align:right}
+ #app .academy-curriculum-disclaimer{font-size:12px;max-width:900px;margin:27px 0 35px}
+ #app .desktop-context{background:#fffaf2;border-color:#dfd0b4}
+ #app .desktop-context h2{font-weight:800}
+ #app .desktop-context-track{background:#e8ddcb}
+ #app .desktop-context-track span{background:#b68f57}
+}
+@media (min-width:960px) and (max-width:1370px){
+ #app .academy-operations{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #app .academy-dashboard-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:960px) and (max-width:1120px){
+ #app .academy-level-grid,#app .academy-module-grid{grid-template-columns:1fr}
+ #app .academy-command-hero{padding:32px}
+}
+@media (prefers-reduced-motion:reduce){
+ #app .wrap{animation:none!important}
+ #app .academy-operation,#app .academy-level-grid .academy-level-card{transition:none!important}
+}
