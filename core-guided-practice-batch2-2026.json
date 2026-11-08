@@ -207,7 +207,7 @@
           "command": "Fictional request: GET /account/102; TLS valid; guest HTTP 200",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Distinguish HTTPS transport trust from HTTP application authorization.",
           "interpretation": "TLS protects transport but cannot replace server-side access control.",
-          "task": "Document URL, method, status, principal and exposure risk.",
+          "task": "Create a request-evidence table with URL, HTTP method, synthetic role, response status, and returned fields. Explain why valid TLS and a guest receiving HTTP 200 can coexist with broken object authorization.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -226,7 +226,7 @@
           "command": "Synthetic ACL matrix: guests→server deny; staff→app allow; admin→management scoped",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design segmentation between guest, workstation and server zones.",
           "interpretation": "Private IP ranges and VLAN tags alone do not prove isolation.",
-          "task": "Draw permitted flows and a read-only verification plan.",
+          "task": "Draw separate guest, employee and management zones, state the routing enforcement point, then write positive employee-to-app and negative guest-to-server test expectations, including evidence needed to verify both.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -244,8 +244,8 @@
           "heading": "Apply: What happens when you open an app",
           "command": "Observation: Task Manager application, process name and memory",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Trace a click from application launch through process creation, memory use, and storage access.",
-          "interpretation": "An app icon is not proof of its file origin or privileges.",
-          "task": "Write an input-to-process-to-display timeline for a benign app.",
+          "interpretation": "An app icon represents a launcher, not proof of the executable's origin, privileges, or process health. A live task list can show CPU and memory consumption but not the complete startup chain.",
+          "task": "Create a five-stage app-launch timeline from click, executable loading, process allocation, data read, to display, and identify an observation you could capture at each stage.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -302,7 +302,7 @@
           "command": "Matrix: iPhone, Windows, Linux; installation, user access, updates, sandbox",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare mobile and desktop permission, update, and app-installation models.",
           "interpretation": "Running Linux through WSL is not the same as isolated vulnerable VM practice.",
-          "task": "Identify who approves access and where OS protections differ.",
+          "task": "Complete a three-column comparison of app installation, permission prompts, operating-system updates, filesystem visibility, and rollback options; explain why WSL 1 does not replace isolated VM testing.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -358,7 +358,7 @@
           "heading": "Apply: Passwords and password managers",
           "command": "Fictional accounts A/B/C and distinct generated-secret placeholders",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare a strong unique password to reused passwords and a password manager.",
-          "interpretation": "Strength is not guaranteed by a long but reused password.",
+          "interpretation": "A long password may still be vulnerable when reused across accounts; a reputable password manager supports unique secrets, but account recovery, device security and MFA remain important separate safeguards.",
           "task": "Design an account inventory with unique secrets and recovery procedure without storing real passwords.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -378,7 +378,7 @@
           "command": "Matrix: TOTP, hardware key, push, SMS; phishing resistance and recovery",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Evaluate MFA methods and a lost-device recovery case.",
           "interpretation": "MFA methods differ in phishing resistance; no single method makes accounts invulnerable.",
-          "task": "Choose appropriate MFA and state account-recovery controls.",
+          "task": "Rank security keys, TOTP, push and SMS for a fictional administrator account, explaining phishing resistance, usability, lost-device recovery, and how the organization would verify account ownership.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -587,7 +587,7 @@
           "command": "Fictional checkout: browser price=1; server price stored=20",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Assign validation duties to browser, API and database trust boundaries.",
           "interpretation": "Client-side UI rules can be bypassed and cannot enforce resource permissions.",
-          "task": "Show why the server must recalculate/authorize sensitive values.",
+          "task": "Write a three-row trust-boundary worksheet showing browser-supplied price, server-maintained authoritative price, and database record. Define a positive valid-price and negative tampered-price acceptance test.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -643,7 +643,7 @@
           "heading": "Apply: APIs and least privilege",
           "command": "Mock GET /account/102 role matrix: owner allow, guest deny",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Write least-privilege API access checks for a synthetic private record.",
-          "interpretation": "A hidden button does not protect an API endpoint.",
+          "interpretation": "Hiding a client-side button doesn't secure a server API: direct requests can still reach the endpoint. The server must validate the authenticated principal's right to the requested object on every access.",
           "task": "Specify both positive and negative tests and returned-field restrictions.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -757,7 +757,7 @@
           "heading": "Apply: Case: hospital system availability",
           "command": "Simulated EHR unavailable, downtime procedure approved, no verified data loss",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Prioritize service availability and patient safety during a fictional hospital outage.",
-          "interpretation": "Operational outage does not establish unauthorized access.",
+          "interpretation": "Loss of an electronic health record service is an availability issue that can create patient-safety risks. It does not alone prove unauthorized access, data loss, or intentional sabotage.",
           "task": "Identify safety-critical workflows, approved escalation and restoration criteria.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -853,7 +853,7 @@
           "command": "Workflow: login, cookie issuance, session rotation, logout, expiry",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design session-state protections against stolen-session risk.",
           "interpretation": "Frontend redirection after logout doesn't prove server sessions were invalidated.",
-          "task": "Write allow/deny tests for expired and revoked sessions.",
+          "task": "Specify a session lifecycle acceptance matrix including successful login, expired cookie, server-side revocation after logout, token rotation, and a negative replay check, using only a mocked application.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -947,7 +947,7 @@
           "heading": "Apply: Handle an IT support request",
           "command": "Ticket: app stalls on launch, reboot helped temporarily, no logs yet",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Triage a fictional user support ticket.",
-          "interpretation": "A temporary reboot improvement does not prove root cause.",
+          "interpretation": "A reboot may temporarily clear memory or restart a failing dependency without resolving the underlying problem. Reproducible symptoms, timestamps, and application logs are needed to support a cause.",
           "task": "Record reproducible symptoms, impact, user consent, severity and next diagnostic step.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1004,8 +1004,8 @@
           "heading": "Apply: Interpret logs and timestamps",
           "command": "Log A ISO 8601 UTC; Log B offset-aware local; DST date specified",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Normalize fictional event timestamps across two time zones.",
-          "interpretation": "Two adjacent timestamps do not establish causation.",
-          "task": "Convert to a shared time reference and track clock uncertainty.",
+          "interpretation": "Two events shown next to each other are not automatically causally connected. Offsets, daylight-saving transitions, log ingestion delays, and clock drift may alter their apparent sequence.",
+          "task": "Convert two synthetic ISO 8601 timestamps to UTC, preserve their original offsets, calculate elapsed time, and record one clock uncertainty that could change the event ordering.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -1042,7 +1042,7 @@
           "heading": "Apply: Why encryption exists",
           "command": "Document: private report sent across untrusted network",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Choose confidentiality and integrity controls for a synthetic file transfer.",
-          "interpretation": "Encryption alone may not provide sender authenticity.",
+          "interpretation": "Encryption protects message confidentiality under appropriate key management, but origin authentication and tamper detection require appropriate integrity and identity mechanisms, such as authenticated encryption or a signature.",
           "task": "Explain why encryption, authenticated transfer and recipient verification are different controls.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1156,7 +1156,7 @@
           "heading": "Apply: Permission before testing",
           "command": "Synthetic scope: two internal hostnames, allowed tests, contact and window",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Specify written approval and safe testing constraints.",
-          "interpretation": "Finding a reachable system is not permission to test it.",
+          "interpretation": "A reachable system, recognizable company name or informal invitation is not legal or ethical authorization for a technical test. Confirm the owner and approved testing boundaries in writing before any activity.",
           "task": "Write an authorization matrix including emergency stop conditions.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1175,7 +1175,7 @@
           "heading": "Apply: Inventory an approved target",
           "command": "Provided fictional asset list: app, resolver and test database",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Build a target inventory only from supplied diagrams and owner records.",
-          "interpretation": "Discovery beyond approved assets is out of scope.",
+          "interpretation": "An inventory is a bounded list supplied or approved by the owner. Discovering additional reachable hosts without permission expands the scope and can affect unrelated services.",
           "task": "Identify role, IP, owner, data classification and excluded hosts.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1194,7 +1194,7 @@
           "heading": "Apply: Form a test hypothesis",
           "command": "Synthetic claim: guest sees private record due to missing server-side check",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Turn a suspected problem into a falsifiable hypothesis.",
-          "interpretation": "A single error response cannot prove the proposed cause.",
+          "interpretation": "An HTTP response can contradict expected access but does not by itself prove a specific implementation flaw. Use controlled comparisons with permitted and denied roles to isolate the authorization decision.",
           "task": "Write expected behavior and a bounded positive/negative test pair.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1270,7 +1270,7 @@
           "heading": "Apply: Trace a website request end to end",
           "command": "Diagram: browser → resolver → gateway → internal app",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Trace a fictional browser request across DNS, TCP and HTTP.",
-          "interpretation": "A working DNS lookup does not imply HTTP success.",
+          "interpretation": "Successful DNS lookup confirms name-to-address resolution only. It does not prove that routing, TCP connection, TLS validation or an HTTP business transaction will succeed.",
           "task": "Label the stage, expected success signal and failure symptom for each hop.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1347,7 +1347,7 @@
           "command": "Checklist: adapter, route, resolver, connection, application",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design a minimal-impact diagnosis for a private authorized network.",
           "interpretation": "Do not scan or change any third-party home or corporate network.",
-          "task": "Specify read-only tests in order with stop conditions.",
+          "task": "Draft a five-layer plan—interface, route, resolver, permitted connection and application—listing a read-only observation, expected outcome and stop condition at each layer.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -1403,7 +1403,7 @@
           "heading": "Apply: Work with a mock event list",
           "command": "python3 -c 'events=[\"INFO\",\"WARN\",\"INFO\"];print(events.count(\"INFO\"))'",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Analyze fictional event records without accessing real logs.",
-          "interpretation": "Frequency alone cannot establish incident severity.",
+          "interpretation": "The count should be 2 for INFO in this synthetic three-item list. Frequency is a numerical summary and does not establish the business impact, truth or severity of any event.",
           "task": "Count synthetic labels and explain the structure of an event list.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
@@ -1423,7 +1423,7 @@
           "command": "python3 -c 'print(3==\"3\",bool(\"False\"),bool(False))'",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare integer, string and boolean conditions.",
           "interpretation": "The nonempty string 'False' is truthy; explicit parsing is required.",
-          "task": "Predict the three results and justify data type effects.",
+          "task": "Predict and record outputs False, True, False. Explain why the string 'False' is truthy, then outline explicit parsing rules to distinguish user-entered text from actual boolean values.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
@@ -1442,7 +1442,7 @@
           "command": "python3 -c 'f=lambda count: count>5;print(f(3),f(8))'",
           "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Create a reusable pure function for a simulated alert threshold.",
           "interpretation": "A threshold match is a detection signal, not incident proof.",
-          "task": "Describe parameters, return type, and boundary tests 5 and 6.",
+          "task": "Define expected inputs of 3, 5, 6, and 8 for the synthetic threshold function, explain why only 6 and 8 return True, and describe how to validate the input type before comparing.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
         }
       ]
