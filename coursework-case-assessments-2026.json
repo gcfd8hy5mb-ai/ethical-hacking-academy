@@ -548,7 +548,7 @@
             "90%"
           ],
           "answerIndex": 0,
-          "explanation": "Precision is TP/(TP+FP) = 9/24 = 37.5%."
+          "explanation": "Precision is TP/(TP+FP) = 9/(9+15) = 37.5%. This measures the proportion of triggered alerts that were true positives in the labeled sample."
         },
         {
           "id": "q2",
@@ -559,7 +559,7 @@
             "70%"
           ],
           "answerIndex": 1,
-          "explanation": "Recall is TP/(TP+FN) = 9/15 = 60%."
+          "explanation": "Recall is TP/(TP+FN) = 9/(9+6) = 60%. This measures how many of the labeled actual incidents were detected; missed cases matter."
         },
         {
           "id": "q3",
