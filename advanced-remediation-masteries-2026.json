@@ -717,7 +717,7 @@
               "90%"
             ],
             "correct": 0,
-            "explanation": "Precision is 9/(9+15)=37.5%."
+            "explanation": "Precision is TP/(TP+FP), so 9/(9+15) = 9/24 = 37.5% of the detected alerts were true positives."
           },
           "remediation": {
             "prompt": "What is recall?",
@@ -727,7 +727,7 @@
               "94%"
             ],
             "correct": 0,
-            "explanation": "Recall is 9/(9+6)=60%."
+            "explanation": "Recall is TP/(TP+FN), so 9/(9+6) = 9/15 = 60% of actual labeled incidents were detected."
           },
           "practice": "Calculate confusion-matrix metrics",
           "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
@@ -744,7 +744,7 @@
               "20%"
             ],
             "correct": 0,
-            "explanation": "Recall = 12/15 = 80%."
+            "explanation": "Recall is TP/(TP+FN) = 12/(12+3) = 80% of the actual incidents in the candidate dataset."
           },
           "remediation": {
             "prompt": "What is candidate precision?",
@@ -754,7 +754,7 @@
               "30%"
             ],
             "correct": 0,
-            "explanation": "Precision = 12/(12+8)=60%."
+            "explanation": "Precision is TP/(TP+FP) = 12/(12+8) = 60% of the candidate rule's alerts that were true positives."
           },
           "practice": "Compare baseline/candidate with dataset cautions",
           "writtenPrompt": "In 80+ words, explain what the given evidence establishes, what it does not establish, why the chosen remediation is appropriate, and which observation would verify it."
