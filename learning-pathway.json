@@ -127,6 +127,10 @@
           "command-troubleshooting-field-lab.html"
         ],
         [
+          "Real Two-VM Private Network Lab · Attacker & Training Target",
+          "two-vm-private-lab.html"
+        ],
+        [
           "Stateful Troubleshooting Workstation",
           "stateful-troubleshooting-workstation.html"
         ],
@@ -247,6 +251,10 @@
           "red-team-practical-assessment.html"
         ],
         [
+          "Real Two-VM Private Network Lab · Attacker & Training Target",
+          "two-vm-private-lab.html"
+        ],
+        [
           "Independent Red Team Engagements",
           "independent-redteam-engagements.html"
         ],
@@ -299,6 +307,10 @@
         [
           "Real Linux VM Practice · Offline Lab Setup & Evidence",
           "real-local-linux-lab.html"
+        ],
+        [
+          "Real Two-VM Private Network Lab · Attacker & Training Target",
+          "two-vm-private-lab.html"
         ],
         [
           "Advanced Independent Practice Workbook · 3 case studies",
@@ -415,6 +427,10 @@
           "advanced-independent-practice.html"
         ],
         [
+          "Real Two-VM Private Network Lab · Attacker & Training Target",
+          "two-vm-private-lab.html"
+        ],
+        [
           "Technical Evidence Diagnostics · 3 exercises",
           "advanced-technical-evidence-diagnostics.html"
         ],
@@ -520,6 +536,10 @@
         [
           "Advanced Independent Practice Workbook · 3 case studies",
           "advanced-independent-practice.html"
+        ],
+        [
+          "Real Two-VM Private Network Lab · Attacker & Training Target",
+          "two-vm-private-lab.html"
         ],
         [
           "Technical Evidence Diagnostics · 3 exercises",
