@@ -19,6 +19,7 @@ SOURCES = (
     "core-guided-practice-batch2-2026.json",
     "core-guided-practice-batch3-2026.json",
 )
+SUPPLEMENT_SOURCES = ("coursework-foundations-expansion-v1.json", "coursework-systems-redteam-v1.json", "coursework-applied-security-v1.json", "pc-building-track.json")
 FIELDS = ("heading", "command", "instruction", "interpretation", "task", "safety")
 
 
@@ -34,6 +35,10 @@ def audit() -> tuple[list[str], list[str], dict]:
     mapping = read_json("lesson-practical-title-map-2026.json")
     catalog = {name: read_json(name) for name in SOURCES}
     originals = {(c["title"], lesson[0]) for c in core["courses"] for lesson in c["lessons"]}
+    supplements = {((c.get("title") or c.get("course")), lesson[0])
+                   for source in SUPPLEMENT_SOURCES
+                   for c in read_json(source)["courses"] for lesson in c["lessons"]}
+    supplement_only_count = 0
     mapped_keys: set[tuple[str, str]] = set()
     all_unit_ids: set[str] = set()
     unit_index: dict[tuple[str, str], dict] = {}
@@ -83,10 +88,11 @@ def audit() -> tuple[list[str], list[str], dict]:
             errors.append(f"{pair}: missing source unit/section {key}")
         else:
             counters[filename] += 1
-        # For exact-match core course titles, require that core lesson exists;
-        # supplementary lessons may legitimately be outside the main catalog.
-        if pair[0] in {c["title"] for c in core["courses"]} and pair not in originals:
-            warnings.append(f"Supplement-only lesson in a core course: {pair}")
+        if pair not in originals:
+            if pair in supplements:
+                supplement_only_count += 1
+            else:
+                errors.append(f"Mapping title not found in core or supplementary catalogs: {pair}")
 
     uncovered = originals - mapped_keys
     for pair in sorted(uncovered):
@@ -100,6 +106,8 @@ def audit() -> tuple[list[str], list[str], dict]:
         "unique_units": len(all_unit_ids),
         "source_mapping_counts": dict(counters),
         "editorial_warnings": len(warnings),
+        "supplement_only_mappings": supplement_only_count,
+        "supplementary_title_sources": len(SUPPLEMENT_SOURCES),
     }
     return errors, warnings, summary
 
