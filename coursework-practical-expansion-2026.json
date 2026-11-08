@@ -1,0 +1,583 @@
+{
+  "version": "2026-11-07",
+  "kind": "academic-coursework-supplement",
+  "policy": "Original course and lesson indexes unchanged. Browser-local supplement progress; never claim Firebase sync or independent accreditation.",
+  "units": [
+    {
+      "id": "curriculum-practical-2026-l1-1",
+      "level": 1,
+      "title": "Linux files, permissions & evidence",
+      "subtitle": "WSL 1 on a low-memory laptop",
+      "scenario": "A learner needs to preserve a small training file and show its permissions before and after a safe change.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "pwd; ls -la",
+          "heading": "Inspect the current directory and its entries",
+          "instruction": "pwd reports the working directory; ls -la lists hidden files, modes, ownership, and sizes. Use this before making changes to avoid editing the wrong place.",
+          "interpretation": "A normal result begins with /home/<user> after cd ~. If it begins /mnt/c, you are working on the Windows filesystem; move back to your Linux home.",
+          "task": "In Ubuntu run: cd ~; mkdir -p ethical-hacking-labs; cd ethical-hacking-labs; pwd; ls -la. Record the returned path.",
+          "safety": "Only inspect and modify files you own. Linux permissions in WSL 1 do not create a security boundary against Windows."
+        },
+        {
+          "id": "s2",
+          "command": "printf '%s\\n' 'Training only' > evidence.txt; stat evidence.txt",
+          "heading": "Create and document a known test artifact",
+          "instruction": "printf emits controlled text; > replaces the destination file content. stat reports mode, owner, size and timestamps. Never redirect to an unknown important file.",
+          "interpretation": "The new file should have a size near 14 bytes; timestamps should reflect creation. The mode may depend on umask.",
+          "task": "Create evidence.txt in your training folder, run stat, and write down size, owner and current permissions.",
+          "safety": "Redirection overwrites files; use a disposable filename in your own lab."
+        },
+        {
+          "id": "s3",
+          "command": "chmod 600 evidence.txt; ls -l evidence.txt; cat evidence.txt",
+          "heading": "Apply least privilege and verify read access",
+          "instruction": "chmod 600 grants read/write to the owner, nothing to group or others. ls verifies mode; cat checks the file remains readable by the owner.",
+          "interpretation": "The ls output should start -rw-------. If chmod fails, inspect file ownership and location.",
+          "task": "Explain why 600 is appropriate for a personal secret and why 644 would reveal data to other local users.",
+          "safety": "Avoid running chmod recursively or using 777 to bypass access problems."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l1-2",
+      "level": 1,
+      "title": "Linux text processing & investigation notes",
+      "subtitle": "Read-only evidence handling",
+      "scenario": "A synthetic system log contains one failed sign-in among normal status messages.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "printf '%s\\n' 'INFO boot ok' 'WARN failed login for guest' 'INFO backup ok' > auth-training.log",
+          "heading": "Create controlled log evidence",
+          "instruction": "printf produces predictable entries; a synthetic log removes the need to inspect real users' activity. Each entry conveys event type and message.",
+          "interpretation": "File should contain three lines. It does not prove real unauthorized access.",
+          "task": "Create the log in your training folder and explain the difference between WARN and confirmed compromise.",
+          "safety": "No real authentication logs or third-party user data are needed."
+        },
+        {
+          "id": "s2",
+          "command": "grep -n 'WARN' auth-training.log; wc -l auth-training.log",
+          "heading": "Find relevant events without discarding context",
+          "instruction": "grep -n finds matching lines with line numbers, while wc -l counts records. A narrow search can miss related events.",
+          "interpretation": "Expected: a WARN on line 2, and 3 total lines. No match results in grep exit status 1; that is not necessarily a crash.",
+          "task": "Identify the warning and state two additional facts you would need before attributing it to an attacker.",
+          "safety": "This is analysis of your own fictional file, not a live security alert."
+        },
+        {
+          "id": "s3",
+          "command": "cp auth-training.log auth-copy.log; sha256sum auth-training.log auth-copy.log",
+          "heading": "Preserve and compare evidence",
+          "instruction": "cp creates a working copy. sha256sum calculates a cryptographic content digest; equal digests are strong evidence of identical file contents, not identity or time of acquisition.",
+          "interpretation": "Two equal 64-character hashes should appear. If they differ, investigate accidental edits rather than assume malicious tampering.",
+          "task": "Record both hashes, then explain why an evidence log needs timestamps and an acquisition narrative in addition to a hash.",
+          "safety": "Hash equality alone does not establish chain of custody."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l2-1",
+      "level": 2,
+      "title": "Hardware diagnosis & component isolation",
+      "subtitle": "Low-spec laptop repair scenario",
+      "scenario": "A Windows laptop is slow and its memory graph shows limited free RAM.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Task Manager → Performance → Memory",
+          "heading": "Observe memory pressure",
+          "instruction": "Total capacity, in-use memory, commit, speed, and slots used are separate signals. High utilization alone does not prove failing hardware.",
+          "interpretation": "A 4 GB system with 2.6 GB in use has limited headroom; a 1-of-1 SODIMM entry suggests a single installed module but doesn't certify upgrade support.",
+          "task": "Write down observed RAM, usable capacity and available memory. Identify whether upgradeability requires a service-manual check.",
+          "safety": "Avoid purchasing replacement memory until exact model and supported module are confirmed."
+        },
+        {
+          "id": "s2",
+          "command": "Task Manager → Processes → Memory",
+          "heading": "Correlate workload with utilization",
+          "instruction": "Sort memory consumption to identify resource-heavy applications; include startup, background services and browser tab count.",
+          "interpretation": "Memory use by Windows can be normal. An application consuming more RAM than expected is a lead, not proof of malware.",
+          "task": "Compare memory usage with browser closed versus open. Report processes without disclosing personal app or account data.",
+          "safety": "Do not disable Windows security services to free RAM."
+        },
+        {
+          "id": "s3",
+          "command": "Settings → System → Storage",
+          "heading": "Assess the full system before recommending hardware",
+          "instruction": "Small eMMC drives can constrain Windows updates and swap. Storage space, RAM and CPU must be assessed together.",
+          "interpretation": "A system with limited free storage may slow down during updates; a RAM upgrade will not change CPU capability or drive capacity.",
+          "task": "Create a repair recommendation with evidence, the cheapest mitigation, and the limitations of upgrading.",
+          "safety": "Back up files before any hardware service."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l2-2",
+      "level": 2,
+      "title": "PC assembly safety & fault trees",
+      "subtitle": "POST failure on a training workstation",
+      "scenario": "A machine powers on but produces intermittent memory test errors.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Record symptoms and power state",
+          "heading": "Define the failure boundary",
+          "instruction": "Separate no-power, no-POST, no-display and operating-system boot failure. These are different diagnostic branches.",
+          "interpretation": "A spinning fan does not establish a completed POST; an external display may help distinguish panel from system faults.",
+          "task": "Write a fault tree with at least three possible causes and a read-only observation for each.",
+          "safety": "Shut down, disconnect power, observe battery/ESD precautions before touching components."
+        },
+        {
+          "id": "s2",
+          "command": "Read firmware memory inventory and test report",
+          "heading": "Triangulate independent evidence",
+          "instruction": "A repeated memory fault can involve a module, seating, a socket or timings. Compare slot and module behavior before concluding a part failed.",
+          "interpretation": "If errors follow the module to another approved slot, suspect module; if faults remain in one slot, suspect the board.",
+          "task": "Explain a controlled one-variable-at-a-time isolation test and the evidence each outcome would provide.",
+          "safety": "Never hot-swap memory or open a device with internal battery connected."
+        },
+        {
+          "id": "s3",
+          "command": "Document replacement and retest",
+          "heading": "Close the ticket with proof",
+          "instruction": "A good service record includes preconditions, approvals, action, serial or asset information, post-change tests, and rollback.",
+          "interpretation": "A successful reboot after a replacement is only one piece of validation; run a repeat memory test.",
+          "task": "Draft a short service report and classify observed facts versus hypotheses.",
+          "safety": "Only use authorized equipment and protect customer data."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l3-1",
+      "level": 3,
+      "title": "Networking: addressing, routes & DNS",
+      "subtitle": "Isolated lab network reasoning",
+      "scenario": "A workstation cannot load app.lab.example, yet the service responds by IP.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "ip -br addr; ip route",
+          "heading": "Establish local address and route",
+          "instruction": "ip -br addr shows interface address/state, and ip route shows the routing decision. Under WSL 1, networking inherits important Windows characteristics.",
+          "interpretation": "An address without a route to a remote subnet won't establish end-to-end reachability. A default route on WSL is normal: don't delete it for this lesson.",
+          "task": "Write down interfaces, private addresses and routes; classify each as local host, gateway or destination.",
+          "safety": "Do not change your real home router or WSL routes for this observation."
+        },
+        {
+          "id": "s2",
+          "command": "getent hosts example.com",
+          "heading": "Check name-resolution output",
+          "instruction": "getent queries system name services and is useful for understanding resolver behavior. It doesn't show every DNS hop or prove an application works.",
+          "interpretation": "A result maps a name to an address; empty output could be name-resolution failure or unavailable internet.",
+          "task": "Explain what you'd investigate if names fail but addresses work, and why you should compare the expected IP.",
+          "safety": "Use public domains only for benign resolution, not scanning."
+        },
+        {
+          "id": "s3",
+          "command": "python3 -c 'import ipaddress;print(ipaddress.ip_network(\"10.40.0.0/24\").num_addresses)'",
+          "heading": "Calculate subnet size",
+          "instruction": "The ipaddress standard-library module avoids mental arithmetic mistakes when reading CIDR masks. A /24 includes 256 addresses total, with conventional network/broadcast reservations for IPv4 LANs.",
+          "interpretation": "Expected output is 256, not the number of simultaneously available hosts.",
+          "task": "Calculate usable hosts under conventional IPv4 addressing and explain why a /30 is different.",
+          "safety": "This calculation is offline and safe."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l3-2",
+      "level": 3,
+      "title": "Linux accounts, processes & troubleshooting",
+      "subtitle": "A fictional service appears to be down",
+      "scenario": "A training operator sees an application failure and must collect observations without guessing.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "whoami; id; groups",
+          "heading": "Establish identity and group privileges",
+          "instruction": "whoami shows effective username, id reports UID and groups, groups lists memberships. Access control decisions depend on more than usernames.",
+          "interpretation": "If commands show the hp account and group, you're working as a normal user. Do not assume root rights.",
+          "task": "Explain the difference between ordinary user and root, and why least privilege reduces impact.",
+          "safety": "Avoid using sudo unless a lab exercise clearly requires it."
+        },
+        {
+          "id": "s2",
+          "command": "ps -ef | head",
+          "heading": "Inspect process context",
+          "instruction": "ps lists processes; piping to head limits output. Presence of a process doesn't prove that it is healthy or reachable.",
+          "interpretation": "WSL 1 process listings differ from a complete Ubuntu server; a service may not use systemd.",
+          "task": "Describe two checks beyond process presence needed to confirm a web application is working.",
+          "safety": "No service changes are required in this observation."
+        },
+        {
+          "id": "s3",
+          "command": "printf '%s\\n' 'ERROR backend timeout' 'INFO restart approved' > service-training.log; grep -n 'ERROR' service-training.log",
+          "heading": "Separate symptoms from cause",
+          "instruction": "A timeout is a symptom that can result from routing, DNS, application latency or dependency failures. A single log is not conclusive.",
+          "interpretation": "Expected: one ERROR line. An approval record is not a substitute for before/after service metrics.",
+          "task": "List at least three hypotheses and evidence that would discriminate among them.",
+          "safety": "Work from fictional logs and avoid touching real running services."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l4-1",
+      "level": 4,
+      "title": "SOC triage: authentication and event correlation",
+      "subtitle": "Change-window identity alert",
+      "scenario": "A monitoring tool flags a sign-in during an approved deployment.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Review timestamp, actor, device and outcome",
+          "heading": "Establish a factual timeline",
+          "instruction": "Each log source has its own clock and schema. Normalize time zones before interpreting event order. A sign-in alert alone does not prove compromise.",
+          "interpretation": "A sign-in at 09:12 within a 09:00–09:20 change window establishes overlap, not authorization for that individual login.",
+          "task": "Write an evidence table with fact, source, interpretation and uncertainty.",
+          "safety": "Use synthetic identities and preserve original records."
+        },
+        {
+          "id": "s2",
+          "command": "Compare sign-in, change ticket and workload logs",
+          "heading": "Correlate independent sources",
+          "instruction": "A valid ticket and workload execution may support a benign hypothesis, but token issuer and device ownership can remain unknown.",
+          "interpretation": "Concordant timestamps increase confidence; missing device ownership must remain an open question.",
+          "task": "State which facts support benign and malicious hypotheses. Identify minimum extra evidence.",
+          "safety": "Do not claim an alert is false positive without sufficient corroboration."
+        },
+        {
+          "id": "s3",
+          "command": "Write an incident disposition",
+          "heading": "Separate confidence from severity",
+          "instruction": "Disposition should include scope, known impact, residual risk, owner, deadline and rationale for escalation or closure.",
+          "interpretation": "A medium-confidence anomaly may warrant monitoring and verification without emergency intervention.",
+          "task": "Draft an escalation note and one follow-up control to reduce repeated alerts.",
+          "safety": "Never contact or access third-party systems as part of a fictional exercise."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l4-2",
+      "level": 4,
+      "title": "Defensive cryptography & log integrity",
+      "subtitle": "Evidence chain for local files",
+      "scenario": "A practice log was copied for later review and must be verified as unchanged.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "sha256sum auth-training.log",
+          "heading": "Hash a training artifact",
+          "instruction": "SHA-256 creates a fixed-length digest of contents. Identical digests strongly support content equality but can't prove authorship.",
+          "interpretation": "The hexadecimal hash is 64 characters; changing one character in the source should generally change the digest.",
+          "task": "Record digest, file path, acquisition time and tool version.",
+          "safety": "Do not alter real evidence to test hash differences."
+        },
+        {
+          "id": "s2",
+          "command": "cp auth-training.log review-copy.log; sha256sum review-copy.log",
+          "heading": "Compare an evidence copy",
+          "instruction": "An independent comparison helps detect corruption or modification between acquisition and review.",
+          "interpretation": "A matching digest on copied file demonstrates matching bytes, not proof of the original source's authenticity.",
+          "task": "Explain why digital signatures or trusted timestamps might be needed to establish provenance.",
+          "safety": "Perform all changes within your disposable training directory."
+        },
+        {
+          "id": "s3",
+          "command": "Distinguish hashing, encryption and signatures",
+          "heading": "Choose appropriate controls",
+          "instruction": "Hashing checks integrity, encryption protects confidentiality, and digital signatures can support origin authentication and integrity under key-management assumptions.",
+          "interpretation": "Encrypted data can still be tampered with unless authenticated encryption or an appropriate MAC is used.",
+          "task": "Choose a security control for password storage, confidential transfer, and release provenance, with one reason each.",
+          "safety": "Never store actual passwords in your practice files."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l5-1",
+      "level": 5,
+      "title": "Authorized web testing & server-side access",
+      "subtitle": "Synthetic object-level authorization bug",
+      "scenario": "A guest requests an account record that should belong only to an owner.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Write scope and expected access matrix",
+          "heading": "Define before touching the application",
+          "instruction": "Authentication answers who claims to be present; authorization decides what resources that identity may access. An ethical assessment begins with written permission and boundaries.",
+          "interpretation": "A guest receiving HTTP 403 for private record is the expected result; HTTP 200 with private data is a possible defect.",
+          "task": "Build a role-to-object matrix with guest, owner and admin for one fictional private record.",
+          "safety": "Only run tests against Academy-owned synthetic targets."
+        },
+        {
+          "id": "s2",
+          "command": "Compare predefined guest and owner responses",
+          "heading": "Use a controlled negative test",
+          "instruction": "A paired test uses the same object with distinct roles to isolate the permission decision. A UI-only restriction is not enough.",
+          "interpretation": "Guest 200 and owner 200 is suspicious if the guest isn't authorized; guest 403 and owner 200 is the expected protected behavior.",
+          "task": "Document method, request, status, returned fields, business impact and any ambiguity.",
+          "safety": "Do not try object IDs on a real website without explicit authorization."
+        },
+        {
+          "id": "s3",
+          "command": "Validate remediation and regression coverage",
+          "heading": "Avoid false confidence after a patch",
+          "instruction": "A successful negative test must be accompanied by a positive test to ensure legitimate access remains available.",
+          "interpretation": "Denying all roles may stop disclosure but breaks the service, and should not receive full credit.",
+          "task": "Write two regression checks, one deny and one allow, and describe how to record them.",
+          "safety": "The Academy training server uses fictional role selectors, not production login controls."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l5-2",
+      "level": 5,
+      "title": "Defensive Python automation & input safety",
+      "subtitle": "Automate checks without creating new risk",
+      "scenario": "A junior analyst needs to examine approved files and report mismatches.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "python3 --version",
+          "heading": "Check the runtime and compatibility",
+          "instruction": "Different Python versions affect syntax and dependency availability. Record version before running scripts.",
+          "interpretation": "A modern Python 3 version is expected. If command is missing, check package availability rather than downloading random binaries.",
+          "task": "Record your version and explain why repeatability matters.",
+          "safety": "Use Python's standard library first on a low-memory laptop."
+        },
+        {
+          "id": "s2",
+          "command": "python3 -c 'from pathlib import Path; print(Path.cwd())'",
+          "heading": "Read the current folder safely",
+          "instruction": "pathlib allows path manipulation without shell string concatenation. Inspect rather than modifying unknown paths.",
+          "interpretation": "Expected: your current Linux folder path. A path is data, not automatically a trusted location.",
+          "task": "Explain what could go wrong if a program accepts arbitrary relative paths.",
+          "safety": "Never construct shell commands by concatenating untrusted file names."
+        },
+        {
+          "id": "s3",
+          "command": "python3 -c 'import hashlib; print(hashlib.sha256(b\"training\").hexdigest())'",
+          "heading": "Understand deterministic hashes",
+          "instruction": "The same input bytes produce the same digest across runs. Use a known fixed string for repeatable practice.",
+          "interpretation": "A 64-character hex string is expected and should be identical on every run.",
+          "task": "Describe a scripted integrity check for your own lab file and what it does not prove.",
+          "safety": "Hashes are not passwords and this fixed example is not a secure secret."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l6-1",
+      "level": 6,
+      "title": "Virtualization, WSL and training isolation",
+      "subtitle": "Design a realistic low-resource lab",
+      "scenario": "A 4 GB laptop cannot comfortably host two full Ubuntu virtual machines and Windows.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "wsl --list --verbose (PowerShell)",
+          "heading": "Identify the Linux execution model",
+          "instruction": "WSL 1 translates Linux system calls; WSL 2 uses a lightweight VM. They differ in compatibility, networking and resource requirements.",
+          "interpretation": "A VERSION 1 listing confirms the distribution uses WSL 1, not an isolated vulnerable target machine.",
+          "task": "Explain which lessons are appropriate on WSL 1 and which require a properly isolated VM.",
+          "safety": "Don't run intentionally vulnerable network servers on WSL connected to your home network."
+        },
+        {
+          "id": "s2",
+          "command": "Plan CPU, RAM, storage and isolation",
+          "heading": "Compare resource constraints",
+          "instruction": "For a lab host, add guest RAM, host overhead and hypervisor overhead before scheduling workloads. Full VMs need dedicated storage.",
+          "interpretation": "Two 2 GB VMs plus Windows exceed practical headroom on a 4 GB laptop. This is a capacity limit, not a learner failure.",
+          "task": "Prepare a minimum/target specification for future lab hardware and an interim WSL curriculum.",
+          "safety": "Use low-memory local file exercises until upgraded hardware is available."
+        },
+        {
+          "id": "s3",
+          "command": "Check virtual NIC types before launching targets",
+          "heading": "Know isolation modes",
+          "instruction": "Internal networks can isolate guests from the host/LAN; host-only often allows host connections; bridged exposes guests to the physical network.",
+          "interpretation": "An internal switch without a default route is preferable for intentionally vulnerable targets, but does not guarantee no compromise path.",
+          "task": "Write an isolation checklist with NIC types, gateway, host firewall, guest services and shutdown.",
+          "safety": "Never publish vulnerable training targets on GitHub Pages or forward their ports."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l6-2",
+      "level": 6,
+      "title": "Cloud infrastructure trust boundaries",
+      "subtitle": "Configuration review without cloud bills",
+      "scenario": "A fictional organization exposes a private storage bucket through a mistaken policy.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Define resource, principal, action and condition",
+          "heading": "Read identity-based policy semantics",
+          "instruction": "A cloud IAM rule combines what can be accessed, by whom, which actions are allowed, and contextual conditions. Least privilege reduces unnecessary blast radius.",
+          "interpretation": "Allowing all principals to read all objects is broad exposure; an explicit deny may take precedence depending on provider policy evaluation.",
+          "task": "Draft a least-privilege allow statement in plain English and state any expected policy precedence.",
+          "safety": "Do not deploy or alter real cloud services for this exercise."
+        },
+        {
+          "id": "s2",
+          "command": "Trace data classification and logging",
+          "heading": "Evaluate impact and detection",
+          "instruction": "An exposed policy is a configuration finding; actual data access requires separate access logs or other evidence.",
+          "interpretation": "A risk finding can exist even without evidence of an attacker accessing the object.",
+          "task": "Distinguish exposure from exploitation, and propose a monitoring query.",
+          "safety": "Synthetic examples avoid requiring paid cloud accounts."
+        },
+        {
+          "id": "s3",
+          "command": "Create rollback and remediation checks",
+          "heading": "Prevent recurrence",
+          "instruction": "Correct policy, verify authorized and unauthorized access, add preventive policy checks, and preserve rollback evidence.",
+          "interpretation": "A policy change without a deny/allow regression check has incomplete validation.",
+          "task": "Write a repair playbook: approve, snapshot policy, fix, test, monitor, rollback.",
+          "safety": "Cloud examples are conceptual until practiced in a controlled tenant."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l7-1",
+      "level": 7,
+      "title": "Advanced detection: metrics and rule tuning",
+      "subtitle": "SOC alert fatigue case",
+      "scenario": "A detection fired on 24 events, 9 true incidents, and missed 6 other incidents.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Compute confusion-matrix values",
+          "heading": "Separate the four outcomes",
+          "instruction": "TP, FP, FN and TN quantify distinct performance dimensions; a rule can be precise while missing important events.",
+          "interpretation": "If 100 events are labeled, TP=9, FP=15, FN=6, TN=70.",
+          "task": "Reconcile all four counts and explain the danger of looking only at total accuracy.",
+          "safety": "Use fictional labeled data and protect customer telemetry."
+        },
+        {
+          "id": "s2",
+          "command": "Calculate precision and recall",
+          "heading": "Evaluate detection trade-offs",
+          "instruction": "Precision = TP/(TP+FP), recall = TP/(TP+FN). Tuning to reduce false positives may increase false negatives.",
+          "interpretation": "Precision = 9/24 = 37.5%; recall = 9/15 = 60%.",
+          "task": "Calculate both values and propose a minimum-recall rule acceptance threshold.",
+          "safety": "No metric alone certifies detection quality."
+        },
+        {
+          "id": "s3",
+          "command": "Define holdout and rollback criteria",
+          "heading": "Validate proposed production changes",
+          "instruction": "Tune with a training set, test on separately labeled holdout data, and monitor after deploy. Approval and rollback thresholds are required.",
+          "interpretation": "A rule suppressing all alerts has zero useful recall, even if false positives disappear.",
+          "task": "Draft an evidence-backed rollout plan and monitoring window.",
+          "safety": "Do not disable production protections as part of a class exercise."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l7-2",
+      "level": 7,
+      "title": "Professional scope, legal authorization & evidence",
+      "subtitle": "Client assessment governance",
+      "scenario": "A consultant receives an ambiguous request to assess a corporate web application.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Define permission and assets in writing",
+          "heading": "Require explicit authorization",
+          "instruction": "Scope should list legal entity, authorized systems, dates, contact, technical limits and reporting channel. An informal message from an unknown requester is insufficient.",
+          "interpretation": "A hostname alone doesn't establish who owns the service or who is empowered to approve a test.",
+          "task": "Write an authorization checklist and identify who must sign off.",
+          "safety": "Do not perform live testing until owner authorization is verified."
+        },
+        {
+          "id": "s2",
+          "command": "Create safe test plan and stop conditions",
+          "heading": "Reduce avoidable disruption",
+          "instruction": "Use known low-impact tests first. Declare rate limits, prohibited techniques, emergency contacts and stop conditions.",
+          "interpretation": "Unusual 5xx error spikes or unexpected sensitive data may trigger a stop-and-escalate decision.",
+          "task": "Draft a two-stage discovery-and-validation plan and identify evidence needed at each stage.",
+          "safety": "Never reuse real exposed data as a demonstration artifact."
+        },
+        {
+          "id": "s3",
+          "command": "Document severity and remediation",
+          "heading": "Explain findings responsibly",
+          "instruction": "A report should include affected asset, evidence, exploit prerequisites, realistic impact, likelihood, limitations, fix and retest.",
+          "interpretation": "A medium-severity hypothetical does not automatically establish business-critical compromise.",
+          "task": "Write executive and technical summaries of the same fictional issue.",
+          "safety": "Avoid claiming certification or external audit approval from self-authored work."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l8-1",
+      "level": 8,
+      "title": "Capstone: multi-cause incident reconstruction",
+      "subtitle": "Complex outage with concurrent faults",
+      "scenario": "A fictional enterprise suffers DNS resolver errors and application queue saturation in the same hour.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "Create the timeline",
+          "heading": "Avoid single-cause assumptions",
+          "instruction": "Correlate alerts by timestamp and data source. Two symptoms can share an origin or be independent.",
+          "interpretation": "09:14 resolver alarm and 09:16 HTTP 503 spike do not prove one caused the other.",
+          "task": "Create a timeline with fact/source/confidence columns; list two competing causal models.",
+          "safety": "Operate only on supplied synthetic records."
+        },
+        {
+          "id": "s2",
+          "command": "Distinguish network and application failures",
+          "heading": "Demand independent observables",
+          "instruction": "DNS lookup, TCP connection, HTTP status and business transaction are different layers; each can recover while another remains impaired.",
+          "interpretation": "DNS errors falling to 0.5% doesn't prove queue length normalized; service still may fail.",
+          "task": "Specify pre/post checks for resolver error rate, 503 rate, queue depth and a known-good transaction.",
+          "safety": "Do not change production network routing as a shortcut."
+        },
+        {
+          "id": "s3",
+          "command": "Propose approved recovery and follow-up",
+          "heading": "Use controlled change management",
+          "instruction": "Containment, approval, reversible remediation, success criteria and long-term prevention should be documented separately.",
+          "interpretation": "A successful rollback of one fault with continuing service errors must be reported as partial recovery.",
+          "task": "Write an incident report and state which evidence would be necessary for sign-off.",
+          "safety": "Real system sign-off requires trained operators and independent review."
+        }
+      ]
+    },
+    {
+      "id": "curriculum-practical-2026-l8-2",
+      "level": 8,
+      "title": "Capstone: independent security assessment report",
+      "subtitle": "Board-level and technical communication",
+      "scenario": "Present a synthetic security assessment covering access controls, identity and monitoring.",
+      "sections": [
+        {
+          "id": "s1",
+          "command": "State scope, evidence and limitations",
+          "heading": "Separate observed fact from opinion",
+          "instruction": "A report must identify what was tested, what was not, sources, permission, timing and any constraints on conclusions.",
+          "interpretation": "A simulated HTTP 200 response demonstrates the scenario behavior but does not prove actual compromise.",
+          "task": "Write a scope declaration and evidence inventory for three fictional issues.",
+          "safety": "Don't imply independent accreditation or penetration-testing certification."
+        },
+        {
+          "id": "s2",
+          "command": "Prioritize findings and mitigations",
+          "heading": "Relate security issues to business risk",
+          "instruction": "Risk severity depends on exposure, exploit conditions, asset sensitivity, controls and likelihood—not CVSS alone.",
+          "interpretation": "An unauthenticated private-report exposure may be urgent; an internal-only diagnostic warning can be lower risk depending on impact.",
+          "task": "Prepare a triage table with severity, confidence, owner, deadline and retest criteria.",
+          "safety": "Be careful not to include secrets in a report."
+        },
+        {
+          "id": "s3",
+          "command": "Defend final recommendations",
+          "heading": "Explain trade-offs under questioning",
+          "instruction": "An assessor should challenge assumptions, false positives, available evidence, residual risk, rollback and cost.",
+          "interpretation": "High confidence requires corroboration, not merely long narratives or a 100-point automated score.",
+          "task": "Write an executive summary of 200 words and a separate technical appendix, then list five reviewer questions.",
+          "safety": "A self-graded portfolio is not equivalent to professional licensure."
+        }
+      ]
+    }
+  ]
+}
