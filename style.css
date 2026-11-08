@@ -55,3 +55,48 @@
 #app .hero .chip{color:#f0cb88!important;font-size:12px!important;font-weight:800!important;letter-spacing:.12em!important}
 #app .hero p{color:#f2eadc!important;font-size:15px!important;line-height:1.65!important}
 #app .hero .button{background:#d1a669!important;color:#16232d!important;border:1px solid #f1cf8f!important;font-weight:750!important;min-height:48px!important;margin:6px 8px 6px 0!important}
+
+
+/* Cybersecurity command-center components — mobile fallback.
+   Full workstation layout is applied only by desktop.css at >=960px. */
+.academy-command-hero em{font-style:normal;color:#f0cd8d}
+.academy-hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.academy-hero-actions>.button{margin:0 8px 7px 0}
+.academy-hero-status{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:20px;border-top:1px solid #ffffff24;padding-top:12px;color:#e5d5b7;font-size:10px;letter-spacing:.06em}
+.academy-dashboard-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0 25px}
+.academy-metric{display:flex;flex-direction:column;gap:8px;background:#fffaf2;border:1px solid #ded1ba;border-radius:11px;padding:16px;min-width:0}
+.academy-metric>span,.academy-eyebrow{font-size:10px;font-weight:800;letter-spacing:.1em;color:#927243}
+.academy-metric strong{font-size:25px;font-weight:800;color:#253239;line-height:1.2}
+.academy-metric strong small{font-size:11px;color:#697277}
+.academy-metric p{margin:0;font-size:11px;color:#73746d}
+.academy-metric-bar,.academy-level-meter{display:block;height:6px;border-radius:9px;overflow:hidden;background:#e5dac6;width:100%}
+.academy-metric-bar span,.academy-level-meter span{display:block;height:100%;background:#b18a50}
+.academy-dashboard-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 13px}
+.academy-dashboard-heading h2{margin:5px 0;font-size:22px}
+.academy-heading-action{background:#fffaf2;border:1px solid #ded1ba;border-radius:8px;padding:10px;font-size:12px;color:#82643b}
+.academy-operations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.academy-operation{display:flex;flex-direction:column;align-items:flex-start;gap:9px;justify-content:space-between;min-width:0;background:#18262d;border:1px solid #a48558;color:#f2e7d6;border-radius:10px;padding:15px;text-align:left}
+.academy-operation-icon{font-size:21px;color:#e6c288}
+.academy-operation span:nth-child(2){display:flex;flex-direction:column;gap:4px}
+.academy-operation strong{font-size:13px}
+.academy-operation small{font-size:11px;color:#cec6b9;line-height:1.4}
+.academy-operation>span:last-child{align-self:flex-end;color:#e4c18b}
+.academy-level-grid{display:grid;grid-template-columns:1fr;gap:11px}
+.academy-level-grid .academy-level-card{display:flex;flex-direction:column;align-items:stretch;gap:9px;margin:0;width:100%;min-height:155px}
+.academy-level-top,.academy-level-footer{display:flex;align-items:center;justify-content:space-between;gap:9px}
+.academy-level-number,.academy-level-status{font-size:10px;font-weight:800;letter-spacing:.08em;color:#9a7743}
+.academy-level-title{font-size:18px;font-weight:750;text-align:left}
+.academy-level-summary{font-size:12px;line-height:1.5;color:#686f6f}
+.academy-level-footer{font-size:11px;color:#7b715f}
+.academy-page-intro{margin:18px 0 21px}
+.academy-module-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.academy-module-grid .lesson-row{margin:0}
+.academy-curriculum-disclaimer{font-size:12px;margin:22px 0}
+@media (min-width:600px) and (max-width:959px){
+ .academy-level-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .academy-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:375px){
+ .academy-dashboard-metrics,.academy-operations{grid-template-columns:1fr}
+ .academy-dashboard-heading{align-items:flex-start;flex-direction:column}
+}
