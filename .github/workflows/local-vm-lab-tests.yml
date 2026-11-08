@@ -1,0 +1,28 @@
+name: Local VM lab regression tests
+on:
+  push:
+    paths:
+      - "local-vm-labs/**"
+      - ".github/workflows/local-vm-lab-tests.yml"
+  pull_request:
+    paths:
+      - "local-vm-labs/**"
+      - ".github/workflows/local-vm-lab-tests.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-lab-tests:
+    name: Python syntax and localhost lab tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python training scripts
+        run: python3 -m compileall -q local-vm-labs
+      - name: Test strictly local training services and exercises
+        working-directory: local-vm-labs
+        run: python3 -m unittest -v test_academy_console test_academy_target test_two_vm_lab test_three_room_lab
