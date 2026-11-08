@@ -1,0 +1,1489 @@
+{
+  "version": "2026-11-08.b",
+  "origin": "Primary core curriculum",
+  "description": "78 exact-title tailored practical lessons for thirteen six-lesson core courses; original exam/lesson definitions unchanged.",
+  "units": [
+    {
+      "id": "core-practice-b2-1-1",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security goals and the CIA triad",
+      "title": "Security goals and the CIA triad — applied fieldwork",
+      "scenario": "Classify customer-record confidentiality, balance integrity, and checkout availability in a fictional retailer.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Security goals and the CIA triad",
+          "command": "CIA impact matrix with three assets and expected control owners",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Classify customer-record confidentiality, balance integrity, and checkout availability in a fictional retailer.",
+          "interpretation": "Confidentiality controls can reduce usability; a high-impact classification alone does not prove a breach.",
+          "task": "Rate C/I/A impact separately, then defend which failure would affect customers most.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-1-2",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Threats, vulnerabilities, and risk",
+      "title": "Threats, vulnerabilities, and risk — applied fieldwork",
+      "scenario": "Differentiate a vulnerable unpatched service, an actor capable of exploiting it, and resulting business risk.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Threats, vulnerabilities, and risk",
+          "command": "Threat-vulnerability-impact table for a synthetic inventory server",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Differentiate a vulnerable unpatched service, an actor capable of exploiting it, and resulting business risk.",
+          "interpretation": "A CVE or severity score is not evidence that an intrusion occurred.",
+          "task": "Create a risk statement with threat, exploitable weakness, likelihood assumptions and impact.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-1-3",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Assets, identities, and trust boundaries",
+      "title": "Assets, identities, and trust boundaries — applied fieldwork",
+      "scenario": "Draw identities, sensitive assets, entry points and trust boundaries for a fictitious sales portal.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Assets, identities, and trust boundaries",
+          "command": "System diagram: guest browser, service API, identity provider, private database",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Draw identities, sensitive assets, entry points and trust boundaries for a fictitious sales portal.",
+          "interpretation": "Trust boundaries are architectural limits, not automatic guarantees of protection.",
+          "task": "Mark data flows across browser/server/database boundaries and identify a privilege decision on each crossing.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-1-4",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Security governance and ethics",
+      "title": "Security governance and ethics — applied fieldwork",
+      "scenario": "Apply written authorization and minimal-data collection to a hypothetical client assessment.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Security governance and ethics",
+          "command": "Rules-of-engagement checklist and stakeholder approval record",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Apply written authorization and minimal-data collection to a hypothetical client assessment.",
+          "interpretation": "A public hostname or client interest alone does not authorize testing.",
+          "task": "State scope, permission, evidence retention, exclusions and emergency contact.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-1-5",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Defense in depth",
+      "title": "Defense in depth — applied fieldwork",
+      "scenario": "Build a layered-control diagram for stolen-account prevention.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Defense in depth",
+          "command": "Control layers: MFA, rate limits, session review, device registration, alerting",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Build a layered-control diagram for stolen-account prevention.",
+          "interpretation": "Multiple controls reduce but do not remove risk; a passed UI test is not proof of backend enforcement.",
+          "task": "Show which control prevents, detects or mitigates account abuse and where single points of failure remain.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-1-6",
+      "level": 4,
+      "course": "Cybersecurity Foundations",
+      "lesson": "Evidence, documentation, and reporting",
+      "title": "Evidence, documentation, and reporting — applied fieldwork",
+      "scenario": "Write a concise finding from a fictional access-denied log and one unexplained alert.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Evidence, documentation, and reporting",
+          "command": "Finding template: observation, source, confidence, alternative, risk, owner, validation",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Write a concise finding from a fictional access-denied log and one unexplained alert.",
+          "interpretation": "An unexplained event must not be reported as a confirmed compromise.",
+          "task": "Separate observed lines from your hypotheses and recommend a measurable follow-up.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-1",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Packets, protocols and layered models",
+      "title": "Packets, protocols and layered models — applied fieldwork",
+      "scenario": "Trace how a request moves from application to transport and network layers.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Packets, protocols and layered models",
+          "command": "Diagram: browser HTTPS → TCP → IP → Ethernet/Wi-Fi",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Trace how a request moves from application to transport and network layers.",
+          "interpretation": "Layer diagrams explain roles but do not establish actual packet capture evidence.",
+          "task": "Label header roles, sender/receiver endpoints, and one example failure at each layer.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-2",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Addresses, subnets and gateways",
+      "title": "Addresses, subnets and gateways — applied fieldwork",
+      "scenario": "Calculate a fictional /26 network and label gateway, client and broadcast.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Addresses, subnets and gateways",
+          "command": "python3 -c 'import ipaddress;print(list(ipaddress.ip_network(\"10.40.0.0/26\").hosts())[:2])'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Calculate a fictional /26 network and label gateway, client and broadcast.",
+          "interpretation": "A /26 has 64 addresses; conventional IPv4 usable-host count is 62.",
+          "task": "Compute address count, usable host range, and test whether 10.40.0.70 belongs to the subnet.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-3",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "DNS and domain names",
+      "title": "DNS and domain names — applied fieldwork",
+      "scenario": "Compare public DNS resolution with a fictional internal name record.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: DNS and domain names",
+          "command": "getent hosts example.com; fictional app.lab.example → 10.40.0.80",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare public DNS resolution with a fictional internal name record.",
+          "interpretation": "A successful DNS answer does not prove the destination service is healthy.",
+          "task": "Draw resolver request/response and identify how stale records can misroute applications.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-4",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "TCP, UDP and common services",
+      "title": "TCP, UDP and common services — applied fieldwork",
+      "scenario": "Compare stateful TCP sessions to UDP datagrams in a fictional service matrix.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: TCP, UDP and common services",
+          "command": "Table: DNS 53 UDP/TCP, HTTPS 443 TCP, NTP 123 UDP",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare stateful TCP sessions to UDP datagrams in a fictional service matrix.",
+          "interpretation": "Port numbers are conventions, not definitive proof of running application identity.",
+          "task": "Assign transport and describe why retransmission/ordering matters for a selected use case.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-5",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "HTTP, HTTPS and TLS",
+      "title": "HTTP, HTTPS and TLS — applied fieldwork",
+      "scenario": "Distinguish HTTPS transport trust from HTTP application authorization.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: HTTP, HTTPS and TLS",
+          "command": "Fictional request: GET /account/102; TLS valid; guest HTTP 200",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Distinguish HTTPS transport trust from HTTP application authorization.",
+          "interpretation": "TLS protects transport but cannot replace server-side access control.",
+          "task": "Document URL, method, status, principal and exposure risk.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-2-6",
+      "level": 1,
+      "course": "Networking and Internet Fundamentals",
+      "lesson": "Network segmentation and monitoring",
+      "title": "Network segmentation and monitoring — applied fieldwork",
+      "scenario": "Design segmentation between guest, workstation and server zones.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Network segmentation and monitoring",
+          "command": "Synthetic ACL matrix: guests→server deny; staff→app allow; admin→management scoped",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design segmentation between guest, workstation and server zones.",
+          "interpretation": "Private IP ranges and VLAN tags alone do not prove isolation.",
+          "task": "Draw permitted flows and a read-only verification plan.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-1",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "What happens when you open an app",
+      "title": "What happens when you open an app — applied fieldwork",
+      "scenario": "Trace a click from application launch through process creation, memory use, and storage access.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: What happens when you open an app",
+          "command": "Observation: Task Manager application, process name and memory",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Trace a click from application launch through process creation, memory use, and storage access.",
+          "interpretation": "An app icon is not proof of its file origin or privileges.",
+          "task": "Write an input-to-process-to-display timeline for a benign app.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-2",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Bits, bytes and file sizes",
+      "title": "Bits, bytes and file sizes — applied fieldwork",
+      "scenario": "Convert file sizes without confusing bytes and bits.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Bits, bytes and file sizes",
+          "command": "Synthetic file sizes: 8 MB, 512 KiB and 2 GiB",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Convert file sizes without confusing bytes and bits.",
+          "interpretation": "MB and MiB have different unit bases; visible storage capacity includes system overhead.",
+          "task": "Calculate byte/binary unit differences and network-transfer implications.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-3",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Files, apps and extensions",
+      "title": "Files, apps and extensions — applied fieldwork",
+      "scenario": "Compare file extension, file type and associated application in a training folder.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Files, apps and extensions",
+          "command": "Create synthetic .txt and .csv files; inspect extension and opened format",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare file extension, file type and associated application in a training folder.",
+          "interpretation": "Extensions help associations but should not be trusted as definitive security checks.",
+          "task": "Explain why renaming an extension does not transform a file's contents.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-4",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Operating systems: iPhone, Windows and Linux",
+      "title": "Operating systems: iPhone, Windows and Linux — applied fieldwork",
+      "scenario": "Compare mobile and desktop permission, update, and app-installation models.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Operating systems: iPhone, Windows and Linux",
+          "command": "Matrix: iPhone, Windows, Linux; installation, user access, updates, sandbox",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare mobile and desktop permission, update, and app-installation models.",
+          "interpretation": "Running Linux through WSL is not the same as isolated vulnerable VM practice.",
+          "task": "Identify who approves access and where OS protections differ.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-5",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Local storage versus cloud storage",
+      "title": "Local storage versus cloud storage — applied fieldwork",
+      "scenario": "Map what is stored locally versus in a cloud account.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Local storage versus cloud storage",
+          "command": "Synthetic workflow: create local note → sync account → offline read → delete",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Map what is stored locally versus in a cloud account.",
+          "interpretation": "Cloud synchronization is not always a separate versioned backup.",
+          "task": "List which copy exists at each point and which backup you can verify.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-3-6",
+      "level": 1,
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Practicing safely on your phone",
+      "title": "Practicing safely on your phone — applied fieldwork",
+      "scenario": "Define a safe phone-only study practice session.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Practicing safely on your phone",
+          "command": "Checklist: read lesson, simulate commands, record explanation, defer VM tasks",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Define a safe phone-only study practice session.",
+          "interpretation": "A simulated terminal cannot prove a real Linux command was executed.",
+          "task": "Separate browser simulations from actual operating-system tools on a laptop.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-1",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passwords and password managers",
+      "title": "Passwords and password managers — applied fieldwork",
+      "scenario": "Compare a strong unique password to reused passwords and a password manager.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Passwords and password managers",
+          "command": "Fictional accounts A/B/C and distinct generated-secret placeholders",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare a strong unique password to reused passwords and a password manager.",
+          "interpretation": "Strength is not guaranteed by a long but reused password.",
+          "task": "Design an account inventory with unique secrets and recovery procedure without storing real passwords.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-2",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Multifactor authentication",
+      "title": "Multifactor authentication — applied fieldwork",
+      "scenario": "Evaluate MFA methods and a lost-device recovery case.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Multifactor authentication",
+          "command": "Matrix: TOTP, hardware key, push, SMS; phishing resistance and recovery",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Evaluate MFA methods and a lost-device recovery case.",
+          "interpretation": "MFA methods differ in phishing resistance; no single method makes accounts invulnerable.",
+          "task": "Choose appropriate MFA and state account-recovery controls.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-3",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Passkeys and account recovery",
+      "title": "Passkeys and account recovery — applied fieldwork",
+      "scenario": "Explain passkeys and how platform sync affects account recovery.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Passkeys and account recovery",
+          "command": "Fictional passkey credential record and new-device enrollment flow",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Explain passkeys and how platform sync affects account recovery.",
+          "interpretation": "A passkey keeps a private key off the server, but device and recovery security still matter.",
+          "task": "Describe public/private keys and explain how enrollment authorization is verified.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-4",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Recognizing fraudulent login pages",
+      "title": "Recognizing fraudulent login pages — applied fieldwork",
+      "scenario": "Inspect signs of a fictional lookalike login page without entering credentials.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Recognizing fraudulent login pages",
+          "command": "Fictional domain: login-example-security.test; legitimate: account.example.test",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Inspect signs of a fictional lookalike login page without entering credentials.",
+          "interpretation": "A padlock shows transport encryption, not that a website belongs to the intended organization.",
+          "task": "Compare full hostnames, origin, certificate limits, and reporting route.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-5",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "App permissions and personal information",
+      "title": "App permissions and personal information — applied fieldwork",
+      "scenario": "Review an app permission inventory for minimal data collection.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: App permissions and personal information",
+          "command": "Mock app requests camera, microphone and location for a text-only note feature",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Review an app permission inventory for minimal data collection.",
+          "interpretation": "A granted permission does not demonstrate that access was actually used.",
+          "task": "Choose least-privilege settings and explain permission review cadence.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-4-6",
+      "level": 4,
+      "course": "Digital Identity and Everyday Security",
+      "lesson": "Security incident reporting at work",
+      "title": "Security incident reporting at work — applied fieldwork",
+      "scenario": "Create a workplace account incident report with no leaked personal data.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Security incident reporting at work",
+          "command": "Mock login alert: unknown device at 09:12, source unconfirmed",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Create a workplace account incident report with no leaked personal data.",
+          "interpretation": "One alert is not sufficient evidence to attribute the event to a person.",
+          "task": "Record event time, affected account, action taken, evidence gaps and escalation.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-1",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Security scope and rules of engagement",
+      "title": "Security scope and rules of engagement — applied fieldwork",
+      "scenario": "Draft rules of engagement before assessing a fictional corporate app.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Security scope and rules of engagement",
+          "command": "Scope: app.training.test; written owner, dates, exclusions, stop conditions",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Draft rules of engagement before assessing a fictional corporate app.",
+          "interpretation": "An email from an unverified sender is not sufficient legal permission.",
+          "task": "Prepare a client-authorized scope matrix and stop/escalation triggers.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-2",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "From assets to business impact",
+      "title": "From assets to business impact — applied fieldwork",
+      "scenario": "Map a fictional financial services asset to business consequence.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: From assets to business impact",
+          "command": "Asset-impact table: client portal, transaction database, privileged identity",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Map a fictional financial services asset to business consequence.",
+          "interpretation": "Business impact must be justified by context, not tool severity alone.",
+          "task": "Separate confidentiality, integrity, availability, regulatory and reputation impact.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-3",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Documenting evidence ethically",
+      "title": "Documenting evidence ethically — applied fieldwork",
+      "scenario": "Preserve synthetic logs with provenance and data minimization.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Documenting evidence ethically",
+          "command": "Synthetic event log, acquisition note, SHA-256 digest",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Preserve synthetic logs with provenance and data minimization.",
+          "interpretation": "A hash supports byte integrity, not the identity of the original producer.",
+          "task": "Write origin, extraction method, time zone, handling and uncertainty.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-4",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Writing a professional finding",
+      "title": "Writing a professional finding — applied fieldwork",
+      "scenario": "Write a professional finding about a synthetic unauthorized object response.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Writing a professional finding",
+          "command": "Given: guest GET /account/102 returns 200; policy owner-only",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Write a professional finding about a synthetic unauthorized object response.",
+          "interpretation": "A synthetic fixture does not establish a flaw on any real production site.",
+          "task": "Report scope, reproducibility, prerequisite, impact, fix, and test limits.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-5",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Risk prioritization tradeoffs",
+      "title": "Risk prioritization tradeoffs — applied fieldwork",
+      "scenario": "Prioritize two remediation actions under a fixed budget.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Risk prioritization tradeoffs",
+          "command": "Candidate risks: external private-record exposure, internal low-severity diagnostic leak",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Prioritize two remediation actions under a fixed budget.",
+          "interpretation": "Risk ranking needs exposure and exploit conditions, not only an abstract score.",
+          "task": "Explain which action reduces expected impact sooner, including confidence and effort.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-5-6",
+      "level": 7,
+      "course": "Security Analysis and Professional Practice",
+      "lesson": "Remediation verification and closure",
+      "title": "Remediation verification and closure — applied fieldwork",
+      "scenario": "Close a fictional finding with permitted and denied regression checks.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Remediation verification and closure",
+          "command": "Prepatch guest 200/owner 200; postpatch guest 403/owner 200",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Close a fictional finding with permitted and denied regression checks.",
+          "interpretation": "A fix to one endpoint does not certify the whole application.",
+          "task": "Record before/after results, owner approval, residual risk and retest timestamp.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-1",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Browser versus server responsibilities",
+      "title": "Browser versus server responsibilities — applied fieldwork",
+      "scenario": "Assign validation duties to browser, API and database trust boundaries.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Browser versus server responsibilities",
+          "command": "Fictional checkout: browser price=1; server price stored=20",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Assign validation duties to browser, API and database trust boundaries.",
+          "interpretation": "Client-side UI rules can be bypassed and cannot enforce resource permissions.",
+          "task": "Show why the server must recalculate/authorize sensitive values.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-2",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Input validation and encoding",
+      "title": "Input validation and encoding — applied fieldwork",
+      "scenario": "Compare input validation to output encoding with a harmless text fixture.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Input validation and encoding",
+          "command": "Synthetic user input: 'A & B <demo>'; expected safe rendered text",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare input validation to output encoding with a harmless text fixture.",
+          "interpretation": "Validation and encoding solve different classes of mistakes.",
+          "task": "Define type/length checks and context-sensitive HTML escaping; no live target needed.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-3",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Session cookies and authentication",
+      "title": "Session cookies and authentication — applied fieldwork",
+      "scenario": "Design an authenticated session lifecycle on paper.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Session cookies and authentication",
+          "command": "Fictional user login → session cookie → expiry → logout",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design an authenticated session lifecycle on paper.",
+          "interpretation": "Cookie flags lower risk but do not themselves establish user authorization.",
+          "task": "Mark Secure, HttpOnly, SameSite, rotation, server invalidation and expiry expectations.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-4",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "APIs and least privilege",
+      "title": "APIs and least privilege — applied fieldwork",
+      "scenario": "Write least-privilege API access checks for a synthetic private record.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: APIs and least privilege",
+          "command": "Mock GET /account/102 role matrix: owner allow, guest deny",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Write least-privilege API access checks for a synthetic private record.",
+          "interpretation": "A hidden button does not protect an API endpoint.",
+          "task": "Specify both positive and negative tests and returned-field restrictions.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-5",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Cloud responsibility boundaries",
+      "title": "Cloud responsibility boundaries — applied fieldwork",
+      "scenario": "Assign security controls in SaaS, PaaS and IaaS responsibility scenarios.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Cloud responsibility boundaries",
+          "command": "Fictional cloud service table: provider infrastructure vs customer identity/data",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Assign security controls in SaaS, PaaS and IaaS responsibility scenarios.",
+          "interpretation": "Shared responsibility varies by service/provider and must be confirmed in contracts.",
+          "task": "Identify responsibility for patching, identity, encryption configuration and monitoring.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-6-6",
+      "level": 4,
+      "course": "Defensive Web and Cloud Fundamentals",
+      "lesson": "Secrets and configuration hygiene",
+      "title": "Secrets and configuration hygiene — applied fieldwork",
+      "scenario": "Design secrets-handling and rollback checks for a fictional deployment.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Secrets and configuration hygiene",
+          "command": "Mock config: API_KEY placeholder in source vs environment-managed secret",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design secrets-handling and rollback checks for a fictional deployment.",
+          "interpretation": "Never copy real secrets into course notes or public repository examples.",
+          "task": "Define secret storage, rotation, restricted read access and audit logging.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-1",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: suspicious supplier invoice",
+      "title": "Case: suspicious supplier invoice — applied fieldwork",
+      "scenario": "Investigate a fictional supplier invoice without sending payment.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: suspicious supplier invoice",
+          "command": "Mock invoice: urgent new bank details, different reply-to, unverified vendor",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Investigate a fictional supplier invoice without sending payment.",
+          "interpretation": "Suspicious email metadata is a lead, not proof of the sender's identity.",
+          "task": "List validation by known independent contact route and escalation path.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-2",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: ransomware and recovery",
+      "title": "Case: ransomware and recovery — applied fieldwork",
+      "scenario": "Create a ransomware response decision tree for a fictitious company.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: ransomware and recovery",
+          "command": "Simulated shared files unreadable, backups unverified, affected scope unknown",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Create a ransomware response decision tree for a fictitious company.",
+          "interpretation": "Restoring files doesn't by itself prove eradication of malicious access.",
+          "task": "Prioritize evidence preservation, incident lead approval, isolation and restore planning.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-3",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: cloud storage exposure",
+      "title": "Case: cloud storage exposure — applied fieldwork",
+      "scenario": "Classify a synthetic public storage policy and unknown access logs.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: cloud storage exposure",
+          "command": "Mock policy: Principal '*', GetObject for confidential objects",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Classify a synthetic public storage policy and unknown access logs.",
+          "interpretation": "A public-read misconfiguration proves risk, not historical theft.",
+          "task": "Write exposure finding, least-privilege fix and positive/negative read retests.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-4",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: hospital system availability",
+      "title": "Case: hospital system availability — applied fieldwork",
+      "scenario": "Prioritize service availability and patient safety during a fictional hospital outage.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: hospital system availability",
+          "command": "Simulated EHR unavailable, downtime procedure approved, no verified data loss",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Prioritize service availability and patient safety during a fictional hospital outage.",
+          "interpretation": "Operational outage does not establish unauthorized access.",
+          "task": "Identify safety-critical workflows, approved escalation and restoration criteria.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-5",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: former employee access",
+      "title": "Case: former employee access — applied fieldwork",
+      "scenario": "Review a departed employee's fictional access across systems.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: former employee access",
+          "command": "Synthetic identity disabled, but a third-party app token may remain active",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Review a departed employee's fictional access across systems.",
+          "interpretation": "Disabling one account doesn't revoke every active integration session.",
+          "task": "Build a deprovisioning checklist including tokens, sessions, groups and evidence.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-7-6",
+      "level": 5,
+      "course": "Cybersecurity Case Studies and Decision-Making",
+      "lesson": "Case: board security briefing",
+      "title": "Case: board security briefing — applied fieldwork",
+      "scenario": "Prepare a board briefing with evidence-backed uncertainties.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Case: board security briefing",
+          "command": "Three fictional findings: access-control leak, DNS downtime, unconfirmed identity alert",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Prepare a board briefing with evidence-backed uncertainties.",
+          "interpretation": "A board briefing should not claim external certification or a confirmed attacker without corroboration.",
+          "task": "Write five executive sentences: known impact, top risk, budget action, owner and remaining uncertainty.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-1",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Map an application before securing it",
+      "title": "Map an application before securing it — applied fieldwork",
+      "scenario": "Draw a synthetic online store's actors, assets and trust boundaries.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Map an application before securing it",
+          "command": "Context diagram: browser → API → database → third-party payment gateway",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Draw a synthetic online store's actors, assets and trust boundaries.",
+          "interpretation": "A diagram is a model, not a tested assertion of system security.",
+          "task": "Mark trust boundaries, assets, identity checks and sensitive flows.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-2",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Build a simple threat model",
+      "title": "Build a simple threat model — applied fieldwork",
+      "scenario": "Apply STRIDE categories to a fictional login and order workflow.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Build a simple threat model",
+          "command": "Mock model: user identity, order price, audit events, API responses",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Apply STRIDE categories to a fictional login and order workflow.",
+          "interpretation": "Threat hypotheses need prioritization; listing all categories doesn't prove exploitability.",
+          "task": "Identify one plausible threat per relevant category and a verifiable mitigation.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-3",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Protect authentication and session state",
+      "title": "Protect authentication and session state — applied fieldwork",
+      "scenario": "Design session-state protections against stolen-session risk.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Protect authentication and session state",
+          "command": "Workflow: login, cookie issuance, session rotation, logout, expiry",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design session-state protections against stolen-session risk.",
+          "interpretation": "Frontend redirection after logout doesn't prove server sessions were invalidated.",
+          "task": "Write allow/deny tests for expired and revoked sessions.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-4",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Security logging without oversharing",
+      "title": "Security logging without oversharing — applied fieldwork",
+      "scenario": "Build a minimal-PII security event schema.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Security logging without oversharing",
+          "command": "Fields: timestamp, actor token pseudonym, action, outcome, correlation ID",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Build a minimal-PII security event schema.",
+          "interpretation": "Overcollection increases privacy risk; missing fields reduce investigation confidence.",
+          "task": "Identify secrets/personal fields to exclude and how to preserve forensic utility.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-5",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Design for failure and recovery",
+      "title": "Design for failure and recovery — applied fieldwork",
+      "scenario": "Model backup and controlled failure recovery for two dependencies.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Design for failure and recovery",
+          "command": "Synthetic failures: database unavailable and DNS stale",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Model backup and controlled failure recovery for two dependencies.",
+          "interpretation": "A recovered resolver doesn't prove queued transactions were processed correctly.",
+          "task": "Define retries, fallbacks, alarms, rollbacks and business transaction acceptance.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-8-6",
+      "level": 4,
+      "course": "Applied Security Architecture and Threat Modeling",
+      "lesson": "Prioritize controls with a budget",
+      "title": "Prioritize controls with a budget — applied fieldwork",
+      "scenario": "Choose three security controls under a fictional $10,000 budget.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Prioritize controls with a budget",
+          "command": "Candidates: MFA, backup restore testing, alert tuning, extra dashboard",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Choose three security controls under a fictional $10,000 budget.",
+          "interpretation": "Control selection must balance realistic exposure, business effect and ongoing costs.",
+          "task": "Rank by expected risk reduction, feasibility, ownership and validation.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-1",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Create an equipment inventory",
+      "title": "Create an equipment inventory — applied fieldwork",
+      "scenario": "Create an authorized asset inventory without collecting personal passwords.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Create an equipment inventory",
+          "command": "Mock laptops with asset ID, model, OS, owner role, support status",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Create an authorized asset inventory without collecting personal passwords.",
+          "interpretation": "An inventory is point-in-time; missing assets need follow-up instead of invented records.",
+          "task": "Define minimum fields for warranty, maintenance and patch scheduling.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-2",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Handle an IT support request",
+      "title": "Handle an IT support request — applied fieldwork",
+      "scenario": "Triage a fictional user support ticket.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Handle an IT support request",
+          "command": "Ticket: app stalls on launch, reboot helped temporarily, no logs yet",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Triage a fictional user support ticket.",
+          "interpretation": "A temporary reboot improvement does not prove root cause.",
+          "task": "Record reproducible symptoms, impact, user consent, severity and next diagnostic step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-3",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Plan a maintenance change",
+      "title": "Plan a maintenance change — applied fieldwork",
+      "scenario": "Plan an approved update and rollback for a test workstation.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Plan a maintenance change",
+          "command": "Change worksheet: scope, approver, time, backup, validation, rollback",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Plan an approved update and rollback for a test workstation.",
+          "interpretation": "A change ticket is not itself proof that implementation succeeded.",
+          "task": "Write change-control acceptance criteria and a downtime notification.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-4",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Learn command-line documentation",
+      "title": "Learn command-line documentation — applied fieldwork",
+      "scenario": "Learn to interpret command documentation and safe flags.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Learn command-line documentation",
+          "command": "python3 --help; pwd; ls --help",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Learn to interpret command documentation and safe flags.",
+          "interpretation": "Copied shell commands may behave differently on Windows PowerShell and Linux.",
+          "task": "For a command, explain syntax, options, exit status and where OS support can differ.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-5",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Interpret logs and timestamps",
+      "title": "Interpret logs and timestamps — applied fieldwork",
+      "scenario": "Normalize fictional event timestamps across two time zones.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Interpret logs and timestamps",
+          "command": "Log A ISO 8601 UTC; Log B offset-aware local; DST date specified",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Normalize fictional event timestamps across two time zones.",
+          "interpretation": "Two adjacent timestamps do not establish causation.",
+          "task": "Convert to a shared time reference and track clock uncertainty.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-9-6",
+      "level": 2,
+      "course": "Practical IT Service Operations",
+      "lesson": "Escalation and professional communication",
+      "title": "Escalation and professional communication — applied fieldwork",
+      "scenario": "Prepare a concise handoff for an unresolved repair.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Escalation and professional communication",
+          "command": "Case: device still overheats after one cleaning step",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Prepare a concise handoff for an unresolved repair.",
+          "interpretation": "An incomplete repair must not be marked resolved merely because a task was attempted.",
+          "task": "List observed results, risk, escalation owner, approval and next check.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-1",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Why encryption exists",
+      "title": "Why encryption exists — applied fieldwork",
+      "scenario": "Choose confidentiality and integrity controls for a synthetic file transfer.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Why encryption exists",
+          "command": "Document: private report sent across untrusted network",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Choose confidentiality and integrity controls for a synthetic file transfer.",
+          "interpretation": "Encryption alone may not provide sender authenticity.",
+          "task": "Explain why encryption, authenticated transfer and recipient verification are different controls.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-2",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Symmetric and asymmetric keys",
+      "title": "Symmetric and asymmetric keys — applied fieldwork",
+      "scenario": "Compare shared-secret and public-key workflows.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Symmetric and asymmetric keys",
+          "command": "Fictional message exchange with symmetric key, public key and private key",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare shared-secret and public-key workflows.",
+          "interpretation": "Private keys must not be copied into shared course material.",
+          "task": "Diagram who can encrypt, decrypt, sign or verify under each scheme.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-3",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Hashes and integrity",
+      "title": "Hashes and integrity — applied fieldwork",
+      "scenario": "Calculate a digest for a harmless fixed string.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Hashes and integrity",
+          "command": "python3 -c 'import hashlib;print(hashlib.sha256(b\"academy\").hexdigest())'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Calculate a digest for a harmless fixed string.",
+          "interpretation": "Matching hashes strongly support equal bytes, not file provenance.",
+          "task": "Repeat hashing on the same bytes, then compare after changing one byte.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-4",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Digital signatures",
+      "title": "Digital signatures — applied fieldwork",
+      "scenario": "Explain signing and verification versus hashing alone.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Digital signatures",
+          "command": "Mock release manifest with publisher public key and signature placeholder",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Explain signing and verification versus hashing alone.",
+          "interpretation": "A checksum posted by the same compromised site cannot guarantee authenticity.",
+          "task": "Define how a trusted public key and authenticated signature establish origin assumptions.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-5",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "TLS certificates and trust",
+      "title": "TLS certificates and trust — applied fieldwork",
+      "scenario": "Model a TLS trust decision for a fictional corporate service.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: TLS certificates and trust",
+          "command": "Certificate fields: hostname, expiry, issuer chain, revocation status",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Model a TLS trust decision for a fictional corporate service.",
+          "interpretation": "A valid certificate does not prove the business is trustworthy or its API authorization is correct.",
+          "task": "List what a browser checks before displaying a secure connection.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-10-6",
+      "level": 4,
+      "course": "Introduction to Defensive Cryptography",
+      "lesson": "Secrets rotation and recovery",
+      "title": "Secrets rotation and recovery — applied fieldwork",
+      "scenario": "Design rotation and recovery for a fictional API secret.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Secrets rotation and recovery",
+          "command": "Synthetic key inventory: owner, scope, expiry, rotation window",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design rotation and recovery for a fictional API secret.",
+          "interpretation": "Never place real API keys into educational reports or source files.",
+          "task": "Define dual-key overlap, safe revocation, monitoring and failed-rotation rollback.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-1",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Permission before testing",
+      "title": "Permission before testing — applied fieldwork",
+      "scenario": "Specify written approval and safe testing constraints.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Permission before testing",
+          "command": "Synthetic scope: two internal hostnames, allowed tests, contact and window",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Specify written approval and safe testing constraints.",
+          "interpretation": "Finding a reachable system is not permission to test it.",
+          "task": "Write an authorization matrix including emergency stop conditions.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-2",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Inventory an approved target",
+      "title": "Inventory an approved target — applied fieldwork",
+      "scenario": "Build a target inventory only from supplied diagrams and owner records.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Inventory an approved target",
+          "command": "Provided fictional asset list: app, resolver and test database",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Build a target inventory only from supplied diagrams and owner records.",
+          "interpretation": "Discovery beyond approved assets is out of scope.",
+          "task": "Identify role, IP, owner, data classification and excluded hosts.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-3",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Form a test hypothesis",
+      "title": "Form a test hypothesis — applied fieldwork",
+      "scenario": "Turn a suspected problem into a falsifiable hypothesis.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Form a test hypothesis",
+          "command": "Synthetic claim: guest sees private record due to missing server-side check",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Turn a suspected problem into a falsifiable hypothesis.",
+          "interpretation": "A single error response cannot prove the proposed cause.",
+          "task": "Write expected behavior and a bounded positive/negative test pair.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-4",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Use isolated and simulated labs",
+      "title": "Use isolated and simulated labs — applied fieldwork",
+      "scenario": "Compare browser simulation to isolated VM tests.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Use isolated and simulated labs",
+          "command": "Matrix: simulated API role picker vs isolated private VM server",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare browser simulation to isolated VM tests.",
+          "interpretation": "WSL 1 is not a hardened isolated vulnerable-target environment.",
+          "task": "State which results are demonstrations and which count as real OS observations.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-5",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Handle findings responsibly",
+      "title": "Handle findings responsibly — applied fieldwork",
+      "scenario": "Document findings with minimum data disclosure.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Handle findings responsibly",
+          "command": "Synthetic response includes fictitious private email and account ID",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Document findings with minimum data disclosure.",
+          "interpretation": "Evidence must not include real unauthorized data in public reports.",
+          "task": "Redact fields, record reproducible request conditions and responsible recipient.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-11-6",
+      "level": 5,
+      "course": "Safe Authorized Assessment Methodology",
+      "lesson": "Write a validation plan",
+      "title": "Write a validation plan — applied fieldwork",
+      "scenario": "Define retesting and acceptance under client approval.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Write a validation plan",
+          "command": "Expected guest 403, owner 200; prepatch guest 200",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Define retesting and acceptance under client approval.",
+          "interpretation": "A patch that blocks legitimate owner access is not acceptable remediation.",
+          "task": "Write test owner, prerequisites, expected results, rollback and follow-up.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-1",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Trace a website request end to end",
+      "title": "Trace a website request end to end — applied fieldwork",
+      "scenario": "Trace a fictional browser request across DNS, TCP and HTTP.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Trace a website request end to end",
+          "command": "Diagram: browser → resolver → gateway → internal app",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Trace a fictional browser request across DNS, TCP and HTTP.",
+          "interpretation": "A working DNS lookup does not imply HTTP success.",
+          "task": "Label the stage, expected success signal and failure symptom for each hop.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-2",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Subnets with a pencil",
+      "title": "Subnets with a pencil — applied fieldwork",
+      "scenario": "Solve /24 and /26 subnets manually then verify offline.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Subnets with a pencil",
+          "command": "python3 -c 'import ipaddress;print(ipaddress.ip_network(\"10.40.0.64/26\"))'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Solve /24 and /26 subnets manually then verify offline.",
+          "interpretation": "The /26 network beginning at 10.40.0.64 spans through 10.40.0.127.",
+          "task": "Calculate range, prefix, address count, and conventional usable hosts.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-3",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Model a packet journey",
+      "title": "Model a packet journey — applied fieldwork",
+      "scenario": "Explain packet next-hop behavior for same-subnet vs remote destinations.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Model a packet journey",
+          "command": "Mock client 10.40.0.20/24; server 10.40.1.30/24; gateway 10.40.0.1",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Explain packet next-hop behavior for same-subnet vs remote destinations.",
+          "interpretation": "Network routes depend on actual masks, interfaces and ARP/neighbor state.",
+          "task": "Draw destination MAC decision and routed IP path without sending packets.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-4",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Compare DNS, TCP and HTTP errors",
+      "title": "Compare DNS, TCP and HTTP errors — applied fieldwork",
+      "scenario": "Classify fictional DNS, TCP and HTTP failures.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Compare DNS, TCP and HTTP errors",
+          "command": "Samples: NXDOMAIN; TCP timeout; HTTP 503",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Classify fictional DNS, TCP and HTTP failures.",
+          "interpretation": "An HTTP 503 proves a response arrived; it doesn't identify the failing backend dependency.",
+          "task": "Match each symptom to the corresponding layer and next diagnostic observation.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-5",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Plan safe network troubleshooting",
+      "title": "Plan safe network troubleshooting — applied fieldwork",
+      "scenario": "Design a minimal-impact diagnosis for a private authorized network.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Plan safe network troubleshooting",
+          "command": "Checklist: adapter, route, resolver, connection, application",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Design a minimal-impact diagnosis for a private authorized network.",
+          "interpretation": "Do not scan or change any third-party home or corporate network.",
+          "task": "Specify read-only tests in order with stop conditions.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-12-6",
+      "level": 5,
+      "course": "Hands-On Network Reasoning Workshop",
+      "lesson": "Write a network diagnosis memo",
+      "title": "Write a network diagnosis memo — applied fieldwork",
+      "scenario": "Write a professional network troubleshooting memo.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Write a network diagnosis memo",
+          "command": "Synthetic outage includes wrong DNS A record and a bad client route",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Write a professional network troubleshooting memo.",
+          "interpretation": "Correcting one component does not prove every affected client is restored.",
+          "task": "Separate timeline, facts, contributing factors, validation and unknown impact.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-1",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Read a simple Python script",
+      "title": "Read a simple Python script — applied fieldwork",
+      "scenario": "Explain a tiny Python program's inputs and output.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Read a simple Python script",
+          "command": "python3 -c 'x=3;print(x+2)'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Explain a tiny Python program's inputs and output.",
+          "interpretation": "Code should be tested against the actual interpreter version.",
+          "task": "Predict and verify output, identify variable assignment and arithmetic.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-2",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Work with a mock event list",
+      "title": "Work with a mock event list — applied fieldwork",
+      "scenario": "Analyze fictional event records without accessing real logs.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Work with a mock event list",
+          "command": "python3 -c 'events=[\"INFO\",\"WARN\",\"INFO\"];print(events.count(\"INFO\"))'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Analyze fictional event records without accessing real logs.",
+          "interpretation": "Frequency alone cannot establish incident severity.",
+          "task": "Count synthetic labels and explain the structure of an event list.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-3",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Use decisions without mixing types",
+      "title": "Use decisions without mixing types — applied fieldwork",
+      "scenario": "Compare integer, string and boolean conditions.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Use decisions without mixing types",
+          "command": "python3 -c 'print(3==\"3\",bool(\"False\"),bool(False))'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Compare integer, string and boolean conditions.",
+          "interpretation": "The nonempty string 'False' is truthy; explicit parsing is required.",
+          "task": "Predict the three results and justify data type effects.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-4",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Make a reusable function",
+      "title": "Make a reusable function — applied fieldwork",
+      "scenario": "Create a reusable pure function for a simulated alert threshold.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Make a reusable function",
+          "command": "python3 -c 'f=lambda count: count>5;print(f(3),f(8))'",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Create a reusable pure function for a simulated alert threshold.",
+          "interpretation": "A threshold match is a detection signal, not incident proof.",
+          "task": "Describe parameters, return type, and boundary tests 5 and 6.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-5",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Recognize data sensitivity",
+      "title": "Recognize data sensitivity — applied fieldwork",
+      "scenario": "Minimize personal data in scripted security reports.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Recognize data sensitivity",
+          "command": "Sample dataset contains fictional identity, token placeholder and event timestamp",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Minimize personal data in scripted security reports.",
+          "interpretation": "Never process or store real passwords and authentication tokens as examples.",
+          "task": "Identify secret fields for removal or pseudonymization before export.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    },
+    {
+      "id": "core-practice-b2-13-6",
+      "level": 5,
+      "course": "Beginner Python Logic and Defensive Automation",
+      "lesson": "Validate results and limitations",
+      "title": "Validate results and limitations — applied fieldwork",
+      "scenario": "Validate program output and state uncertainty.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Apply: Validate results and limitations",
+          "command": "Synthetic script reports 2 failed events but log has 3, one malformed",
+          "instruction": "Use the supplied fictional evidence or perform the read-only/offline action in a workspace you own. Validate program output and state uncertainty.",
+          "interpretation": "Passing a happy-path demo does not establish robust correctness.",
+          "task": "Test missing keys, wrong types, Unicode data and incomplete entries.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        }
+      ]
+    }
+  ]
+}
