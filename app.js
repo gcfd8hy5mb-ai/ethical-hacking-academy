@@ -39,6 +39,56 @@ function lessonReadingHTML(reading){return String(reading).split(/\n\s*\n/).filt
 const embeddedPracticeCatalogs=new Map();
 let embeddedPracticeMapPromise=null;
 const embeddedPracticeKey=t=>String(t||'').trim().toLowerCase().replace(/\\s+/g,' ');
+// Thirty reviewed, read-only concept checkpoints. These never alter exam or progress records.
+let practiceCheckpointCatalogPromise=null;
+const checkpointUnitsAvailable=unitId=>/^core-practice-2026-(2|4|5|6)-[1-9][0-9]*$/.test(String(unitId));
+async function loadPracticeCheckpoint(unitId,expectedCourse,expectedLesson){
+ const target=document.getElementById('academy-practice-checkpoint');
+ if(!target||!checkpointUnitsAvailable(unitId))return;
+ target.textContent='Loading the practice question…';
+ try{
+  if(!practiceCheckpointCatalogPromise){
+   practiceCheckpointCatalogPromise=fetch('./practice-checkpoints-v1.json').then(r=>{
+    if(!r.ok)throw Error('Checkpoint HTTP '+r.status);
+    return r.json();
+   }).catch(e=>{practiceCheckpointCatalogPromise=null;throw e;});
+  }
+  const data=await practiceCheckpointCatalogPromise;
+  if(screen!=='lesson'||courseIndex!==expectedCourse||lessonIndex!==expectedLesson)return;
+  const current=document.getElementById('academy-practice-checkpoint');
+  if(!current||current.dataset.unit!==unitId)return;
+  const entry=(data.entries||[]).find(x=>x.unitId===unitId);
+  if(!entry||!Array.isArray(entry.options)||entry.options.length<2||!Number.isInteger(entry.answer)
+     ||entry.answer<0||entry.answer>=entry.options.length){current.textContent='Checkpoint unavailable. Continue the written exercise.';return;}
+  current.innerHTML='<div class="academy-checkpoint-heading">INTERACTIVE PRACTICE CHECK</div><p>'+safe(entry.question)+'</p><div class="academy-checkpoint-options">'
+   +entry.options.map((o,i)=>'<button type="button" class="academy-checkpoint-answer" data-practice-choice="'+i+'">'+safe(o)+'</button>').join('')
+   +'</div><div id="academy-checkpoint-feedback" class="academy-checkpoint-feedback" role="status" aria-live="polite">Select an answer to see the explanation.</div>'
+   +'<p class="academy-checkpoint-scope">Training feedback only. This does not grade a lab, mark a lesson complete, or change your examination score.</p>';
+ }catch(error){
+  const current=document.getElementById('academy-practice-checkpoint');
+  if(current&&current.dataset.unit===unitId&&screen==='lesson'&&courseIndex===expectedCourse&&lessonIndex===expectedLesson){
+   current.textContent='Interactive question unavailable. Continue the written practice assignment.';
+  }
+ }
+}
+async function gradePracticeChoice(choice){
+ const container=document.getElementById('academy-practice-checkpoint');
+ if(!container)return;
+ const unitId=container.dataset.unit;
+ if(!checkpointUnitsAvailable(unitId)||!practiceCheckpointCatalogPromise)return;
+ const data=await practiceCheckpointCatalogPromise.catch(()=>null);
+ if(!data||screen!=='lesson'||document.getElementById('academy-practice-checkpoint')!==container)return;
+ const entry=(data.entries||[]).find(x=>x.unitId===unitId);
+ if(!entry||!Number.isInteger(choice)||choice<0||choice>=entry.options.length)return;
+ container.querySelectorAll('[data-practice-choice]').forEach(b=>{
+  const selected=Number(b.dataset.practiceChoice)===choice;
+  b.setAttribute('aria-pressed',String(selected));
+  b.classList.toggle('academy-choice-correct',Number(b.dataset.practiceChoice)===entry.answer);
+  b.classList.toggle('academy-choice-incorrect',selected&&choice!==entry.answer);
+ });
+ const feedback=document.getElementById('academy-checkpoint-feedback');
+ if(feedback)feedback.textContent=(choice===entry.answer?'Correct. ':'Not quite. ')+entry.explanation;
+}
 function embeddedPracticeSectionHTML(section,unit,lessonTitle){
  const block=(label,value,kind='note')=>'<div class="academy-practice-block academy-practice-'+kind+'"><h4>'+safe(label)+'</h4><p>'+safe(value)+'</p></div>';
  return '<section class="sheet body academy-practical-steps" aria-label="Practical lesson extension">'
@@ -51,6 +101,7 @@ function embeddedPracticeSectionHTML(section,unit,lessonTitle){
  +'<div class="academy-practice-command"><div class="academy-practice-command-label"><span>03 / COMMAND OR METHOD</span><span class="academy-method-tag">REFERENCE</span></div><pre>'+safe(section.command)+'</pre></div>'
  +block('04 / How to interpret results',section.interpretation,'interpretation')
  +block('05 / Your assignment and evidence',section.task,'assignment')
+ +(checkpointUnitsAvailable(unit.id)?'<div class="academy-checkpoint-launch"><button type="button" class="academy-checkpoint-start" data-practice-start="'+safe(unit.id)+'">Try an interactive knowledge check</button><div id="academy-practice-checkpoint" data-unit="'+safe(unit.id)+'" aria-live="polite"></div></div>':'')
  +'<details class="academy-practice-scope"><summary>Safety and authorized scope</summary><p>'+safe(section.safety)+'</p></details>'
  +'<a class="academy-practice-more" href="./coursework-practical-expansion.html">Explore the complete practical collection →</a>'
  +'</section>';
@@ -234,6 +285,15 @@ else if(screen==='investigations'){shell('<div class="kicker">EVIDENCE-BASED SEC
 else if(screen==='simulations'){shell('<div class="kicker">ADVANCED GUIDED PRACTICE</div><h1>Multi-stage simulations</h1><div id="simulations-root">Loading simulations…</div>');void import('./simulations-ui.js').then(m=>m.mountSimulations(document.querySelector('#simulations-root'))).catch(err=>{console.error('Optional module mountSimulations unavailable',err);const slot=document.querySelector("#simulations-root");if(slot)slot.textContent='This optional module could not load. Check your connection and reopen the section.'});}
 else if(screen==='progress'){const done=count();const ae=assessmentEvidence();const studio=technicalStudioEvidence();const qualification=qualificationEvidence();const advanced=advancedQualificationEvidence();const commandLab=commandLabEvidence();const virtualScore=virtualLabEvidence();const windowsScore=windowsLabEvidence();const networkScore=networkLabEvidence();const blind=blindLabEvidence();const multifault=multiFaultEvidence();const randomized=randomizedEvidence();shell('<div class="kicker">STUDENT RECORD</div><h1>Learning progress</h1><section class="sheet"><h2>Eight-level learning pathway</h2>'+pathwayLevels().map(l=>{const st=levelStats(l);return '<p>Level '+(l.index+1)+' · '+safe(l.title)+': '+(st.lessons?st.done+' / '+st.lessons+' lessons':'Practical assessments')+'</p>';}).join('')+'<p class="muted">These counts reflect recorded lesson completion. Exam and practical readiness are listed below; real-world competency is not verified.</p></section><section class="sheet"><h2>Readiness by level</h2>'+pathwayLevels().map(l=>'<p><strong>Level '+(l.index+1)+'</strong> — '+safe(masteryStatus(l))+'</p>').join('')+'<p class="muted">The readiness summary reads local exam and practical results without changing them. These records do not all sync to Firebase.</p></section><div class="sheet"><h2>'+done+' of '+total()+' lessons completed</h2><div class="progress"><span style="width:'+(done/total()*100)+'%"></span></div><p class="muted">Lesson progress is saved locally and can sync through the configured Firebase account in Settings. Practical checkpoint records are separate; confirm their storage status before changing devices.</p>'+courses.map((c,i)=>'<p>'+safe(c.title)+': '+c.lessons.filter((_,j)=>isDone(i,j)).length+' / '+c.lessons.length+'</p>').join('')+'</div>' + '<section class="sheet"><h2>Graded assessment evidence</h2><p>Passed mastery exams (80%+): '+ae.examPasses+' · Passed investigations (80%+): '+ae.investigationPasses+' · Perfect-score simulations: '+ae.simulationPerfect+'</p><p class="muted">These results are automated multiple-choice assessments, not independently validated hands-on proficiency. Course-specific exam evidence appears below.</p>'+courses.map(c=>{const evidence=examEvidence(c.title);return evidence.length?'<p><strong>'+safe(c.title)+'</strong>: '+evidence.map(e=>safe(e.title)+' — '+(e.score?e.score+'%'+(e.passed?' ✓ passed':' · review needed'):'not attempted')).join('; ')+'</p>':''}).join('')+'</section>' + '<section class="sheet"><h2>Technical Assessment Studio</h2><p>Attempts with a best score: '+studio.attempted+' / '+studio.total+' · Objective scores at or above 80%: '+studio.passed+' / '+studio.total+'</p><p class="muted">These are scored synthetic multiple-choice and evidence-selection exercises. Written reasoning quality and actual computer proficiency have not been independently assessed.</p><a class="button" href="./technical-assessment-studio.html">Open technical assessment studio</a></section>' + '<section class="sheet"><h2>Practical qualification simulation</h2><p>Best objective score: '+qualification.best+' / 40 · '+(qualification.pass?'Simulation pass recorded':'Not yet passed')+'</p><p class="muted">Four fictional investigations; 80% overall plus 6/10 each required. This is not real-system certification.</p><p>Advanced Part II: '+advanced.best+' / 30 · '+(advanced.passed?'Simulation pass recorded':'Not yet passed')+'</p><p>Typed command investigations: '+commandLab.attempted+' / 3 attempted · '+commandLab.passed+' scoring 8/10 or higher</p><p>Virtual Linux Workstation: best objective lab score '+virtualScore+' / 10</p><p>Virtual Windows Workstation: best objective lab score '+windowsScore+' / 10</p><p>Virtual Network Workstation: best objective lab score '+networkScore+' / 10</p><p>Blind troubleshooting: '+blind.attempted+' / 4 scenarios attempted · '+blind.mastered+' focused resolutions mastered</p><p>Multi-fault troubleshooting: '+multifault.attempted+' / 4 scenarios attempted · '+multifault.mastered+' mastered</p><p>Randomized enterprise troubleshooting: '+randomized.attempted+' / 10 fault pairs attempted · '+randomized.mastered+' mastered</p><div class="action-list"><a class="button" href="./randomized-enterprise-lab.html">Open Randomized enterprise lab →</a><a class="button" href="./multi-fault-troubleshooting-lab.html">Open Multi-fault investigations →</a><a class="button" href="./blind-troubleshooting-lab.html">Open Blind troubleshooting →</a><a class="button" href="./virtual-network-workstation.html">Open Network simulation →</a><a class="button" href="./virtual-windows-workstation.html">Open Windows simulation →</a><a class="button" href="./virtual-linux-workstation.html">Open Stateful Linux lab →</a><a class="button" href="./command-investigation-lab.html">Open Command investigations →</a><a class="button" href="./practical-qualification-exam.html">Open Qualification exam →</a><a class="button" href="./advanced-qualification-exam.html">Open Advanced Qualification — Part II →</a></div></section>' + '<section class="sheet"><h2>Portfolio progress</h2><p>Drafts with content: '+portfolioStatus().drafts+' · Self-reviewed: '+portfolioStatus().reviewed+'</p><p class="muted">Self-reviews are not graded exams or proof of hands-on proficiency. All portfolio progress is stored on this device.</p><button class="button" data-screen="assignments">Open written assignments</button></section>');}}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.practiceStart){
+  if(screen==='lesson')loadPracticeCheckpoint(b.dataset.practiceStart,courseIndex,lessonIndex);
+  return;
+ }
+ if(b.dataset.practiceChoice!==undefined){
+  if(screen==='lesson')gradePracticeChoice(Number(b.dataset.practiceChoice));
+  return;
+ }
+
  if(b.dataset.workstationJump){
   const target=b.dataset.workstationJump;
   if(target==='academy-knowledge-check')setWorkstationPanel('check');
