@@ -268,7 +268,7 @@
           "heading": "Hash a training artifact",
           "instruction": "SHA-256 creates a fixed-length digest of contents. Identical digests strongly support content equality but can't prove authorship.",
           "interpretation": "The hexadecimal hash is 64 characters; changing one character in the source should generally change the digest.",
-          "task": "Record digest, file path, acquisition time and tool version.",
+          "task": "Record the digest alongside the file path, acquisition timestamp, operator, and hash-tool version. Explain why matching digest values cannot establish who produced the original data or when.",
           "safety": "Do not alter real evidence to test hash differences."
         },
         {
@@ -340,7 +340,7 @@
           "heading": "Check the runtime and compatibility",
           "instruction": "Different Python versions affect syntax and dependency availability. Record version before running scripts.",
           "interpretation": "A modern Python 3 version is expected. If command is missing, check package availability rather than downloading random binaries.",
-          "task": "Record your version and explain why repeatability matters.",
+          "task": "Record the exact Python version shown on your authorized Linux installation, then describe two compatibility risks, such as removed syntax or missing standard-library features, before running any script.",
           "safety": "Use Python's standard library first on a low-memory laptop."
         },
         {
@@ -447,7 +447,7 @@
           "command": "Compute confusion-matrix values",
           "heading": "Separate the four outcomes",
           "instruction": "TP, FP, FN and TN quantify distinct performance dimensions; a rule can be precise while missing important events.",
-          "interpretation": "If 100 events are labeled, TP=9, FP=15, FN=6, TN=70.",
+          "interpretation": "For 100 labeled examples, TP=9, FP=15, FN=6 and TN=70. The rule detected only 9 of 15 actual incidents, despite 79% overall accuracy; the denominator matters.",
           "task": "Reconcile all four counts and explain the danger of looking only at total accuracy.",
           "safety": "Use fictional labeled data and protect customer telemetry."
         },
@@ -456,7 +456,7 @@
           "command": "Calculate precision and recall",
           "heading": "Evaluate detection trade-offs",
           "instruction": "Precision = TP/(TP+FP), recall = TP/(TP+FN). Tuning to reduce false positives may increase false negatives.",
-          "interpretation": "Precision = 9/24 = 37.5%; recall = 9/15 = 60%.",
+          "interpretation": "Precision = 9/(9+15) = 37.5% of issued alerts were truly positive. Recall = 9/(9+6) = 60% of actual incidents were detected; six incidents were missed.",
           "task": "Calculate both values and propose a minimum-recall rule acceptance threshold.",
           "safety": "No metric alone certifies detection quality."
         },
@@ -466,7 +466,7 @@
           "heading": "Validate proposed production changes",
           "instruction": "Tune with a training set, test on separately labeled holdout data, and monitor after deploy. Approval and rollback thresholds are required.",
           "interpretation": "A rule suppressing all alerts has zero useful recall, even if false positives disappear.",
-          "task": "Draft an evidence-backed rollout plan and monitoring window.",
+          "task": "Specify a holdout dataset, minimum acceptable recall, maximum false-positive burden, owner approval, monitoring duration, and rollback trigger. State the baseline metrics used for comparison.",
           "safety": "Do not disable production protections as part of a class exercise."
         }
       ]
@@ -484,7 +484,7 @@
           "heading": "Require explicit authorization",
           "instruction": "Scope should list legal entity, authorized systems, dates, contact, technical limits and reporting channel. An informal message from an unknown requester is insufficient.",
           "interpretation": "A hostname alone doesn't establish who owns the service or who is empowered to approve a test.",
-          "task": "Write an authorization checklist and identify who must sign off.",
+          "task": "Draft a written authorization checklist naming the legal owner and verified signer, included and excluded assets, permitted methods, dates, emergency contact, and conditions requiring immediate termination.",
           "safety": "Do not perform live testing until owner authorization is verified."
         },
         {
