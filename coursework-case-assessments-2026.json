@@ -1,0 +1,711 @@
+{
+  "version": "2026-11-07.2",
+  "kind": "case-study-decision-assessment",
+  "policy": "Fictional lab scenarios only. Does not alter original lesson IDs, exams, grades, or cloud saved progress.",
+  "cases": [
+    {
+      "id": "eh-case-2026-01",
+      "level": 1,
+      "title": "Lost configuration file",
+      "subject": "Operating system fundamentals",
+      "brief": "A trainee notices a configuration document is missing from the training directory. Its last known location is /home/student/academy and the trainee is unsure whether it was deleted or simply moved.",
+      "evidence": "$ pwd → /home/student\n$ ls -la → academy/  notes.txt\n$ find ~/academy -maxdepth 2 -name '*.conf' → /home/student/academy/archive/app.conf",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is the first supported conclusion?",
+          "options": [
+            "The operating system deleted the file",
+            "The file exists under the archive subfolder",
+            "The filesystem has been compromised"
+          ],
+          "answerIndex": 1,
+          "explanation": "The find output proves the file exists at the displayed path. No evidence supports deletion or compromise."
+        },
+        {
+          "id": "q2",
+          "prompt": "Which command should be used to read it without editing?",
+          "options": [
+            "cat ~/academy/archive/app.conf",
+            "rm -rf ~/academy/archive",
+            "chmod -R 777 ~/academy"
+          ],
+          "answerIndex": 0,
+          "explanation": "cat reads a text file. Deletion and recursive permission broadening are not warranted."
+        },
+        {
+          "id": "q3",
+          "prompt": "What evidence should the trainee record?",
+          "options": [
+            "Only a claim that the file was found",
+            "Its complete password contents in a public issue",
+            "Path, commands, timestamps and any uncertainty"
+          ],
+          "answerIndex": 2,
+          "explanation": "Record relevant observations and their limits, while avoiding disclosure of confidential file contents."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-02",
+      "level": 1,
+      "title": "Suspicious log entry",
+      "subject": "Text files and evidence",
+      "brief": "A fictional authentication log contains a failed sign-in. A colleague asks you to state that the server was hacked.",
+      "evidence": "09:10 INFO service started\n09:12 WARN failed login for test-user\n09:13 INFO backup completed",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What does the WARN line establish?",
+          "options": [
+            "A failed login was recorded",
+            "An intruder gained administrative privileges",
+            "All later log entries are false"
+          ],
+          "answerIndex": 0,
+          "explanation": "The entry states one failed login. It does not establish successful access."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the most useful next evidence?",
+          "options": [
+            "Delete the log",
+            "Relevant authentication outcomes, source context and surrounding timestamps",
+            "Publish the account password"
+          ],
+          "answerIndex": 1,
+          "explanation": "Broader and corroborating records are needed before attribution."
+        },
+        {
+          "id": "q3",
+          "prompt": "How should the finding be written?",
+          "options": [
+            "Confirmed breach",
+            "No security issue is possible",
+            "Observed failed login, cause and impact not established"
+          ],
+          "answerIndex": 2,
+          "explanation": "A defensible report separates observations from hypotheses."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-03",
+      "level": 2,
+      "title": "Memory fault at boot",
+      "subject": "PC repair and diagnostics",
+      "brief": "An authorized desktop starts intermittently. The repair ticket includes repeated memory errors, but the owner wants you to replace the storage drive immediately.",
+      "evidence": "POST: intermittent errors\nTest A: errors associated with DIMM B2\nSSD health: no critical alert\nService window: approved for inspection only",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is the best working hypothesis?",
+          "options": [
+            "Memory subsystem may be faulty",
+            "SSD failure is confirmed",
+            "A remote attacker changed the BIOS"
+          ],
+          "answerIndex": 0,
+          "explanation": "Repeated DIMM-associated errors point toward a memory/module/slot problem, not conclusively to any single part."
+        },
+        {
+          "id": "q2",
+          "prompt": "What action fits the existing approval?",
+          "options": [
+            "Replace the SSD",
+            "Document evidence and request authorization for safe module/slot isolation",
+            "Disassemble the powered-on laptop"
+          ],
+          "answerIndex": 1,
+          "explanation": "Diagnosis should proceed by approved, safe hardware checks before parts replacement."
+        },
+        {
+          "id": "q3",
+          "prompt": "What must happen after a repair?",
+          "options": [
+            "Only report that it powers on once",
+            "Assume all data loss was prevented",
+            "Repeat memory tests and document the result"
+          ],
+          "answerIndex": 2,
+          "explanation": "Repeat testing and recorded validation are necessary to close the fault."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-04",
+      "level": 2,
+      "title": "Thermal throttling",
+      "subject": "Hardware performance",
+      "brief": "A refurbished workstation slows during ordinary workloads. The case report includes high processor temperature and a fan tachometer warning.",
+      "evidence": "CPU load: 22%\nCPU temperature: 96°C\nFan reported RPM: 0\nSSD critical warning: none",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "Which system should be investigated first?",
+          "options": [
+            "Cooling and fan operation",
+            "A browser account password",
+            "DNS server configuration"
+          ],
+          "answerIndex": 0,
+          "explanation": "High temperature with stopped fan is directly relevant to thermal throttling."
+        },
+        {
+          "id": "q2",
+          "prompt": "Which next step is safest?",
+          "options": [
+            "Apply overclocking settings",
+            "Power down and follow approved fan/cooling inspection procedures",
+            "Bypass thermal shutdown"
+          ],
+          "answerIndex": 1,
+          "explanation": "Safety and diagnostic integrity require powering down and following manufacturer-approved procedures."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which result supports successful remediation?",
+          "options": [
+            "A single faster page load",
+            "No need to retest",
+            "Sustained safe temperatures and verified fan operation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Measure the affected condition under a repeatable test."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-05",
+      "level": 3,
+      "title": "DNS mismatch during deployment",
+      "subject": "Network administration",
+      "brief": "A controlled lab application resolves to the wrong IP after a training DNS change. Direct IP access succeeds.",
+      "evidence": "ip route: 10.40.0.0/24 dev eth0\nDNS app.lab.example → 10.40.0.81\nExpected A record → 10.40.0.80\nHTTP direct 10.40.0.80 → 200",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is best supported by the evidence?",
+          "options": [
+            "A DNS record mismatch",
+            "An application source-code fault is confirmed",
+            "The private subnet is inaccessible"
+          ],
+          "answerIndex": 0,
+          "explanation": "Direct IP success and wrong A record point toward name resolution."
+        },
+        {
+          "id": "q2",
+          "prompt": "Who should authorize the correction?",
+          "options": [
+            "Any internet visitor",
+            "The owner of the training DNS zone under change control",
+            "No one; silently change production DNS"
+          ],
+          "answerIndex": 1,
+          "explanation": "Configuration changes must be within authorized scope."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which post-change check is appropriate?",
+          "options": [
+            "Delete the service logs",
+            "Check just the DNS tool version",
+            "Resolve the name again and verify application reachability"
+          ],
+          "answerIndex": 2,
+          "explanation": "Both DNS and end-to-end application verification matter."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-06",
+      "level": 3,
+      "title": "Unknown Linux account privileges",
+      "subject": "System and identity management",
+      "brief": "A new administrator wants to give every user root permission because an application cannot read one training file.",
+      "evidence": "id appuser → uid=1102(appuser) groups=appteam\nls -l report.txt → -rw------- 1 root root\nRequired access: appteam read-only",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is the immediate issue?",
+          "options": [
+            "File owner/mode don't grant appteam read access",
+            "Systemwide root is required",
+            "The report was necessarily deleted"
+          ],
+          "answerIndex": 0,
+          "explanation": "The file is readable only by root. Group membership alone doesn't override mode bits."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the least-privilege direction?",
+          "options": [
+            "Grant root to all users",
+            "Adjust file ownership/group and read permissions under authorization",
+            "Disable permissions globally"
+          ],
+          "answerIndex": 1,
+          "explanation": "A scoped group-readable mode is preferable to administrative elevation."
+        },
+        {
+          "id": "q3",
+          "prompt": "How should success be checked?",
+          "options": [
+            "An admin says it works",
+            "A chmod command exits successfully but nothing is read",
+            "The intended account can read and unintended accounts remain denied"
+          ],
+          "answerIndex": 2,
+          "explanation": "Test both allowed and disallowed paths to confirm access scope."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-07",
+      "level": 4,
+      "title": "Deployment sign-in alert",
+      "subject": "SOC triage",
+      "brief": "An unfamiliar sign-in appears in a service identity alert during an approved release window. Attribution remains incomplete.",
+      "evidence": "09:00 approved CHG-42 begins\n09:12 svc-release signs in from D-9\n09:13 deployment pipeline-8 executes\nDevice owner: unknown",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is justified now?",
+          "options": [
+            "A correlated but unconfirmed sign-in event",
+            "An attacker has been identified",
+            "The event is definitively harmless"
+          ],
+          "answerIndex": 0,
+          "explanation": "Temporal overlap supports correlation, not identity or intent."
+        },
+        {
+          "id": "q2",
+          "prompt": "What next evidence matters most?",
+          "options": [
+            "An unrelated marketing report",
+            "Device ownership, token audience and signed pipeline records",
+            "The user's personal email history"
+          ],
+          "answerIndex": 1,
+          "explanation": "Those records test the authorization and attribution hypotheses directly."
+        },
+        {
+          "id": "q3",
+          "prompt": "How should the SOC dispose of the alert?",
+          "options": [
+            "Quietly erase it",
+            "Call it a confirmed critical intrusion",
+            "Record confidence, gaps, owner and a follow-up decision"
+          ],
+          "answerIndex": 2,
+          "explanation": "Proper triage documents uncertainty and next steps."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-08",
+      "level": 4,
+      "title": "Misleading hash mismatch",
+      "subject": "Evidence integrity and cryptography",
+      "brief": "A responder copies a fictional training log. The original and copy have different SHA-256 hashes.",
+      "evidence": "Original log SHA-256: 12ab…\nCopy SHA-256: 89ef…\nCopy process: unknown\nNo chain-of-custody notes",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What does this prove?",
+          "options": [
+            "The byte contents differ, assuming valid hashes",
+            "Someone intentionally destroyed evidence",
+            "The original source identity is verified"
+          ],
+          "answerIndex": 0,
+          "explanation": "Different cryptographic digests suggest differing bytes, not motive or provenance."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the safest response?",
+          "options": [
+            "Overwrite the original",
+            "Preserve both and investigate the acquisition/copy process",
+            "Delete the copy"
+          ],
+          "answerIndex": 1,
+          "explanation": "Preserve competing artifacts for repeatable comparison."
+        },
+        {
+          "id": "q3",
+          "prompt": "What does a matching future hash prove?",
+          "options": [
+            "Legal admissibility by itself",
+            "That both files came from the same authenticated source",
+            "Strong evidence of matching content, not authenticity by itself"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hashing supports integrity comparison without certifying origin."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-09",
+      "level": 5,
+      "title": "Private-account record exposure",
+      "subject": "Authorized web assessment",
+      "brief": "A fictional Academy server returns another owner's account record to a guest role. No real website is involved.",
+      "evidence": "guest GET /account/102 → HTTP 200 with owner data\nowner GET /account/102 → HTTP 200\nPolicy: owner only",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "Which category best describes the defect?",
+          "options": [
+            "Missing object-level authorization",
+            "DNS poisoning",
+            "Memory corruption"
+          ],
+          "answerIndex": 0,
+          "explanation": "The server fails to check whether the requester may access the selected object."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a suitable remediation?",
+          "options": [
+            "Hide the button only",
+            "Enforce object ownership at the server and deny unauthorized roles",
+            "Make all accounts public"
+          ],
+          "answerIndex": 1,
+          "explanation": "A server-side authorization check is required; UI hiding doesn't protect the endpoint."
+        },
+        {
+          "id": "q3",
+          "prompt": "What completes validation?",
+          "options": [
+            "Guest blocked and owner still permitted",
+            "Only a screenshot of the patched source",
+            "A passing login page without a record test"
+          ],
+          "answerIndex": 0,
+          "explanation": "Both a negative test and a legitimate positive test are required."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-10",
+      "level": 5,
+      "title": "Python path validation",
+      "subject": "Defensive coding",
+      "brief": "An analyst writes a Python script that accepts a filename and reads it. A reviewer worries that inputs might escape the intended evidence folder.",
+      "evidence": "Trusted root: /home/hp/ethical-hacking-labs\nInput: ../private.txt\nCurrent code: open(root / user_input)",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is the main risk?",
+          "options": [
+            "Path traversal beyond the authorized root",
+            "Loss of internet speed",
+            "A higher screen resolution"
+          ],
+          "answerIndex": 0,
+          "explanation": "Parent-directory segments can escape a folder when unvalidated."
+        },
+        {
+          "id": "q2",
+          "prompt": "Which design is strongest?",
+          "options": [
+            "Use shell=True to simplify paths",
+            "Resolve and verify the path remains beneath an approved root, rejecting symlinks where appropriate",
+            "Trust any file named .txt"
+          ],
+          "answerIndex": 1,
+          "explanation": "Canonical path containment and link handling are necessary to enforce the intended root."
+        },
+        {
+          "id": "q3",
+          "prompt": "What should tests include?",
+          "options": [
+            "Only a normal filename",
+            "Only an empty string",
+            "Valid paths, traversal attempts and symbolic-link cases"
+          ],
+          "answerIndex": 2,
+          "explanation": "Security tests should cover boundary cases and expected denials."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-11",
+      "level": 6,
+      "title": "Laptop capacity and virtual lab",
+      "subject": "Home lab engineering",
+      "brief": "A 4 GB Windows laptop is asked to run two 2 GB Linux VMs while Windows itself uses roughly 2.6 GB.",
+      "evidence": "Host installed RAM: 4 GB\nHost working set: ~2.6 GB\nRequested guest RAM: 2 + 2 GB\nFree storage: limited",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "Is the proposed configuration appropriate?",
+          "options": [
+            "No; it substantially exceeds available headroom",
+            "Yes; guest RAM is free",
+            "The GPU automatically doubles RAM"
+          ],
+          "answerIndex": 0,
+          "explanation": "The host and two guests exceed physical memory, before hypervisor overhead."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the responsible interim plan?",
+          "options": [
+            "Expose a vulnerable app on home Wi-Fi",
+            "Use WSL 1 for local files/commands and postpone the two-VM target",
+            "Turn off security updates to free resources"
+          ],
+          "answerIndex": 1,
+          "explanation": "WSL 1 supports foundational practice without pretending to provide network-isolated VMs."
+        },
+        {
+          "id": "q3",
+          "prompt": "What change enables fuller labs later?",
+          "options": [
+            "A second mouse",
+            "New wallpapers",
+            "Adequate RAM, storage, processor, and verified virtual network isolation"
+          ],
+          "answerIndex": 2,
+          "explanation": "An appropriate host and isolation design are prerequisites."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-12",
+      "level": 6,
+      "title": "Cloud storage policy exposure",
+      "subject": "Cloud security architecture",
+      "brief": "A fictional company's training bucket grants read access to all principals by mistake. No access log currently demonstrates that anyone downloaded data.",
+      "evidence": "Policy: Allow GetObject to Principal '*'\nBucket classification: Confidential\nCloud access events: incomplete\nExpected: scoped service reader",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is the supported conclusion?",
+          "options": [
+            "Overly broad exposure is a configuration risk",
+            "A specific attacker has stolen files",
+            "No issue exists because there are no logs"
+          ],
+          "answerIndex": 0,
+          "explanation": "A broad public allow rule is a security finding independent of observed exploitation."
+        },
+        {
+          "id": "q2",
+          "prompt": "What should the approved fix do?",
+          "options": [
+            "Delete monitoring",
+            "Restrict principals/actions and test authorized/denied cases",
+            "Block all storage permanently"
+          ],
+          "answerIndex": 1,
+          "explanation": "Least-privilege policy and regression testing limit risk while preserving operations."
+        },
+        {
+          "id": "q3",
+          "prompt": "What must the report distinguish?",
+          "options": [
+            "UI theme and icon colors",
+            "Storage price only",
+            "Exposure, observed access, and unknown historical activity"
+          ],
+          "answerIndex": 2,
+          "explanation": "Incomplete access evidence must not be misrepresented as proof of no access."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-13",
+      "level": 7,
+      "title": "Detection rule quality",
+      "subject": "Advanced security analysis",
+      "brief": "A fictional detection rule is evaluated on 100 labeled events. There are 9 true positives, 15 false positives and 6 false negatives.",
+      "evidence": "TP=9\nFP=15\nFN=6\nTN=70\nTotal=100",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is precision?",
+          "options": [
+            "37.5%",
+            "60%",
+            "90%"
+          ],
+          "answerIndex": 0,
+          "explanation": "Precision is TP/(TP+FP) = 9/24 = 37.5%."
+        },
+        {
+          "id": "q2",
+          "prompt": "What is recall?",
+          "options": [
+            "37.5%",
+            "60%",
+            "70%"
+          ],
+          "answerIndex": 1,
+          "explanation": "Recall is TP/(TP+FN) = 9/15 = 60%."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which production decision is defensible?",
+          "options": [
+            "Disable every alert",
+            "Tune only against the same dataset",
+            "Validate changes on separate holdout labels and define rollback thresholds"
+          ],
+          "answerIndex": 2,
+          "explanation": "Guard against overfitting, missed threats and unreviewed production changes."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-14",
+      "level": 7,
+      "title": "Unclear assessment authorization",
+      "subject": "Professional ethical practice",
+      "brief": "A client emails 'test our company' but provides no asset list or signed authorization. The security contractor has seen several possible company domains.",
+      "evidence": "Message: 'Please test our company soon'\nAsset scope: unspecified\nStop conditions: unspecified\nAuthorized signer: not verified",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What is missing?",
+          "options": [
+            "Specific scope and verified authorization",
+            "An attack script",
+            "A list of public social accounts"
+          ],
+          "answerIndex": 0,
+          "explanation": "An ambiguous request is not sufficient permission to test arbitrary assets."
+        },
+        {
+          "id": "q2",
+          "prompt": "What should the assessor do first?",
+          "options": [
+            "Begin scanning immediately",
+            "Request signed scope, permitted methods, contacts and stop conditions",
+            "Try guessing vulnerable subdomains"
+          ],
+          "answerIndex": 1,
+          "explanation": "The rules of engagement must precede live testing."
+        },
+        {
+          "id": "q3",
+          "prompt": "How should the project be documented?",
+          "options": [
+            "A log of guessed targets",
+            "A note saying permission was probably implied",
+            "Assets, windows, constraints, evidence rules and emergency escalation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Written governance protects both the customer and practitioner."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-15",
+      "level": 8,
+      "title": "Enterprise outage with two causes",
+      "subject": "Capstone incident reconstruction",
+      "brief": "A global training company's service experiences DNS resolver failures and application queue saturation. A resolver rollback fixes DNS but doesn't fix HTTP errors.",
+      "evidence": "09:14 resolver errors 72%\n09:16 HTTP 503 rate 24%; queue depth 800\n09:25 resolver rollback\n09:27 resolver errors 0.5%; queue 780",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What does the rollback show?",
+          "options": [
+            "Only the resolver fault appears improved; application remains impaired",
+            "Everything is fully restored",
+            "All symptoms must have one cause"
+          ],
+          "answerIndex": 0,
+          "explanation": "Service-layer failures remain visible after resolver recovery."
+        },
+        {
+          "id": "q2",
+          "prompt": "What should the investigator do next?",
+          "options": [
+            "Announce full recovery",
+            "Investigate queue saturation independently and compare post-fix application metrics",
+            "Delete app metrics"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each suspected contributing failure requires its own evidence and validation."
+        },
+        {
+          "id": "q3",
+          "prompt": "What should the executive report say?",
+          "options": [
+            "Recovery complete",
+            "Root cause verified with no uncertainty",
+            "Partial recovery, unresolved capacity fault and defined owner/next checks"
+          ],
+          "answerIndex": 2,
+          "explanation": "Leadership needs accurate status and residual-risk reporting."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    },
+    {
+      "id": "eh-case-2026-16",
+      "level": 8,
+      "title": "Final security assessment defense",
+      "subject": "Professional capstone",
+      "brief": "A student presents an access-control finding, a detection tuning proposal and a cloud policy review. The automated practice grade is 100, but no reviewer has examined the work.",
+      "evidence": "Access-control demo: synthetic HTTP responses\nDetection evaluation: 100 labeled events\nCloud policy: fictional public read allow\nHuman technical sign-off: absent",
+      "decisions": [
+        {
+          "id": "q1",
+          "prompt": "What does the automated grade establish?",
+          "options": [
+            "The programmed checks passed, not independent professional competence",
+            "Legal authorization to test real companies",
+            "A university degree"
+          ],
+          "answerIndex": 0,
+          "explanation": "Automation can verify discrete outcomes but cannot attest professional readiness without further evaluation."
+        },
+        {
+          "id": "q2",
+          "prompt": "What would improve the evidence?",
+          "options": [
+            "Delete failed attempts",
+            "Independent technical review, live demonstration and challenge questions",
+            "Increase the self-awarded grade"
+          ],
+          "answerIndex": 1,
+          "explanation": "Independent assessors should examine source, reasoning, live actions and limitations."
+        },
+        {
+          "id": "q3",
+          "prompt": "Which statement is accurate for the portfolio?",
+          "options": [
+            "Accredited professional certification",
+            "Unrestricted penetration-testing license",
+            "Completed self-directed synthetic assessments, pending independent validation"
+          ],
+          "answerIndex": 2,
+          "explanation": "Clear attribution of the program's limitations avoids unsupported credential claims."
+        }
+      ],
+      "writtenTask": "Write a 120+ word investigation memo separating confirmed evidence from hypotheses, explaining the safest next step, and specifying a measurable verification or follow-up. Automated scoring does not assess this memo."
+    }
+  ]
+}
