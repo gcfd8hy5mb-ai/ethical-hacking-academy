@@ -1,0 +1,1031 @@
+{
+  "schema": "eh-multistage-2026-v1",
+  "version": "2026-11-07",
+  "policy": "Original courses and exams remain unchanged. Case content is fictional, decision assessments are browser-local, and written work requires independent expert review.",
+  "cases": [
+    {
+      "id": "multistage-l1-2026",
+      "level": 1,
+      "title": "Linux Audit Trail — Unexpected Configuration Change",
+      "scope": "An authorized learner investigates a synthetic file-change alert inside a disposable Linux workspace. The objective is evidence preservation and defensible conclusions, not exploitation.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Establish the baseline",
+          "evidence": "Training directory /home/student/lab. The app.conf file existed at 08:00 and was last modified at 09:14. An operator says the app was 'hacked'.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What can you conclude from the timestamp?",
+              "options": [
+                "An unexpected modification is recorded; cause is unknown",
+                "A remote attacker is identified",
+                "The file was definitely deleted"
+              ],
+              "answerIndex": 0,
+              "explanation": "A changed timestamp is an observation, not attribution."
+            },
+            {
+              "id": "b",
+              "prompt": "Which evidence should you capture first?",
+              "options": [
+                "Current file metadata and content hash with acquisition time",
+                "Rewrite the file to an earlier version immediately",
+                "Run chmod -R 777"
+              ],
+              "answerIndex": 0,
+              "explanation": "Capture non-destructive evidence before applying changes."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Correlate records",
+          "evidence": "09:10 approved maintenance CHG-21. 09:14 file hash changes. 09:14 svc-update process reads the file. No actor authentication evidence is supplied.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "How should the change ticket be interpreted?",
+              "options": [
+                "Proof the update was safe",
+                "Corroborating context, not proof this modification was authorized",
+                "Irrelevant and should be deleted"
+              ],
+              "answerIndex": 1,
+              "explanation": "Change-window overlap is relevant but does not establish authorization of a specific action."
+            },
+            {
+              "id": "b",
+              "prompt": "Which missing artifact most directly helps attribution?",
+              "options": [
+                "Process ancestry and approved deployment execution record",
+                "Laptop wallpaper history",
+                "Public DNS MX records"
+              ],
+              "answerIndex": 0,
+              "explanation": "Process and workload provenance help determine which actor caused a change."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Plan remediation",
+          "evidence": "The current config contains 'debug=true' but the approved baseline requires 'debug=false'. Recovery has not been authorized.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is the appropriate next step?",
+              "options": [
+                "Edit it silently",
+                "Request approval and document rollback plus verification",
+                "Erase all recent logs"
+              ],
+              "answerIndex": 1,
+              "explanation": "Changes to a system should be approved and reversible."
+            },
+            {
+              "id": "b",
+              "prompt": "What verification is needed after an approved fix?",
+              "options": [
+                "Config content, hash and service health",
+                "Only successful chmod output",
+                "A screenshot of a login page"
+              ],
+              "answerIndex": 0,
+              "explanation": "Check file state and the effect on the service."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Close with uncertainty",
+          "evidence": "After an approved configuration correction, the service reports healthy; the identity behind the original change remains uncertain.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which conclusion is defensible?",
+              "options": [
+                "The root actor is proved",
+                "The service is recovered, while attribution remains unresolved",
+                "All logs are fraudulent"
+              ],
+              "answerIndex": 1,
+              "explanation": "Operational recovery and attribution are separate."
+            },
+            {
+              "id": "b",
+              "prompt": "Which follow-up matters?",
+              "options": [
+                "Review deployment credentials, access logs and change controls",
+                "Delete the incident ticket",
+                "Make the file world writable"
+              ],
+              "answerIndex": 0,
+              "explanation": "Remaining gaps should have accountable owners and specific evidence requests."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l2-2026",
+      "level": 2,
+      "title": "Workstation Boot Failure — Hardware Versus OS",
+      "scope": "A repair technician is authorized to inspect a fictional training computer, but not to replace components until diagnostic evidence is reviewed.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Classify the symptom",
+          "evidence": "Power light on, fan spins, no BIOS logo, POST memory code appears. Storage test not yet available.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which stage is failing?",
+              "options": [
+                "Operating-system desktop login",
+                "Potential pre-boot hardware POST",
+                "External DNS resolution"
+              ],
+              "answerIndex": 1,
+              "explanation": "A POST fault arises before operating-system loading."
+            },
+            {
+              "id": "b",
+              "prompt": "What is a safe first observation?",
+              "options": [
+                "Record POST code and known hardware configuration",
+                "Delete the OS partition",
+                "Hot-swap RAM while powered"
+              ],
+              "answerIndex": 0,
+              "explanation": "Record the symptom before modifying the system."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Compare component evidence",
+          "evidence": "Approved repeat memory test reports errors for DIMM B2. SSD has no critical warning. Errors reproduce when the module is reinstalled in the same slot.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What remains uncertain?",
+              "options": [
+                "Nothing; the module is proven faulty",
+                "The error is definitely a virus",
+                "Whether the module or slot is defective"
+              ],
+              "answerIndex": 2,
+              "explanation": "One slot/module combination does not discriminate between module and socket."
+            },
+            {
+              "id": "b",
+              "prompt": "What test best separates causes?",
+              "options": [
+                "Change one variable by trying the same module in an approved alternate slot",
+                "Replace SSD immediately",
+                "Turn off POST diagnostics"
+              ],
+              "answerIndex": 0,
+              "explanation": "Controlled isolation is stronger than swapping unrelated parts."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Authorize correction",
+          "evidence": "A repair window and ESD procedure are approved. The fault follows the module to another approved slot.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which component is now most suspect?",
+              "options": [
+                "The RAM module",
+                "Home router",
+                "Monitor wallpaper"
+              ],
+              "answerIndex": 0,
+              "explanation": "A traveling fault supports a module hypothesis."
+            },
+            {
+              "id": "b",
+              "prompt": "What do you document?",
+              "options": [
+                "Pretest, authorization, part identification, action and posttest",
+                "Only 'fixed'",
+                "Only purchase price"
+              ],
+              "answerIndex": 0,
+              "explanation": "Traceability matters in technical service operations."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Retest and close",
+          "evidence": "Replacement memory passes a repeat test and workstation starts repeatedly. No extended stress test has been completed.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What should the final report state?",
+              "options": [
+                "All failures are impossible now",
+                "Diagnostic tests passed; long-term stability still needs monitoring",
+                "Firmware compromise confirmed"
+              ],
+              "answerIndex": 1,
+              "explanation": "Pass results support improvement without proving future infallibility."
+            },
+            {
+              "id": "b",
+              "prompt": "What is a proper safeguard?",
+              "options": [
+                "Record a monitoring plan and asset information",
+                "Discard failed-test results",
+                "Turn off all health checks"
+              ],
+              "answerIndex": 0,
+              "explanation": "Retain the complete service record."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l3-2026",
+      "level": 3,
+      "title": "Network Outage — DNS and Routing in Sequence",
+      "scope": "A fictional internal application is unreachable by hostname. The scope permits read-only checks and approved changes within training network 10.40.0.0/24.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Map the reachability layers",
+          "evidence": "Client IP 10.40.0.20/24; expected server 10.40.0.80. DNS resolves app.lab.example to 10.40.0.81. Direct HTTP to 10.40.0.80 returns 200.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is initially supported?",
+              "options": [
+                "DNS A record mismatch",
+                "Web service stopped",
+                "Physical cable removed"
+              ],
+              "answerIndex": 0,
+              "explanation": "Name resolution is inconsistent with the expected service IP."
+            },
+            {
+              "id": "b",
+              "prompt": "Which safe read-only comparison is best?",
+              "options": [
+                "Check DNS answer and direct-IP HTTP separately",
+                "Reconfigure the production home router",
+                "Scan an unrelated network"
+              ],
+              "answerIndex": 0,
+              "explanation": "Layer-separated checks reduce false conclusions."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Reassess after correction",
+          "evidence": "An approved DNS correction now resolves 10.40.0.80, but a second client still fails because it has a route for 10.40.0.0/24 via the wrong adapter.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What changed in the diagnosis?",
+              "options": [
+                "DNS is still necessarily wrong",
+                "The remaining issue is client-specific routing",
+                "The app is proven compromised"
+              ],
+              "answerIndex": 1,
+              "explanation": "Different clients can suffer distinct faults."
+            },
+            {
+              "id": "b",
+              "prompt": "Which observation best supports the routing hypothesis?",
+              "options": [
+                "ip route get 10.40.0.80 on the affected client",
+                "A user name lookup",
+                "RAM SODIMM speed"
+              ],
+              "answerIndex": 0,
+              "explanation": "Routing decisions are the relevant layer."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Plan limited recovery",
+          "evidence": "The authorized network engineer approves correcting the affected client's static route, with a rollback.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which action is appropriate?",
+              "options": [
+                "Change only the scoped client route and retain previous setting",
+                "Disable all firewall policies",
+                "Bridge the vulnerable lab to the office LAN"
+              ],
+              "answerIndex": 0,
+              "explanation": "Use minimum-scope changes and preserve isolation."
+            },
+            {
+              "id": "b",
+              "prompt": "Which post-change evidence matters?",
+              "options": [
+                "Routing decision, DNS answer and successful application transaction",
+                "Only the command's exit code",
+                "Only ping to localhost"
+              ],
+              "answerIndex": 0,
+              "explanation": "Service recovery requires multiple independent checks."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Report findings",
+          "evidence": "DNS and a bad client route were both corrected. No user impact records exist for the outage interval.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is a sound conclusion?",
+              "options": [
+                "Both faults were addressed; impact duration remains uncertain",
+                "No outage occurred",
+                "A single person intentionally caused both faults"
+              ],
+              "answerIndex": 0,
+              "explanation": "Separate verified fixes from unmeasured impact and attribution."
+            },
+            {
+              "id": "b",
+              "prompt": "What would strengthen impact assessment?",
+              "options": [
+                "Time-series service availability and user transaction logs",
+                "A screenshot of Task Manager only",
+                "Disabling logging"
+              ],
+              "answerIndex": 0,
+              "explanation": "Recover measurable business impact from independent logs."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l4-2026",
+      "level": 4,
+      "title": "SOC Incident — Approved Deployment or Credential Abuse?",
+      "scope": "Analyze synthetic identity logs, endpoint inventory and change approval. No access to real accounts or production systems is required.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Initial detection",
+          "evidence": "svc-release logs in from device D-9 at 09:12. Anomaly score 72. Successful sign-in with no verified device owner.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is justified?",
+              "options": [
+                "Possible anomalous identity event, attribution unknown",
+                "Confirmed ransomware",
+                "Proven authorized maintenance"
+              ],
+              "answerIndex": 0,
+              "explanation": "Anomaly detection flags a question for investigation."
+            },
+            {
+              "id": "b",
+              "prompt": "What is the correct triage action?",
+              "options": [
+                "Record identity, source and exact timestamp before interpreting",
+                "Disable all employees immediately",
+                "Delete the anomaly"
+              ],
+              "answerIndex": 0,
+              "explanation": "Preserve primary facts."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Evidence correlation",
+          "evidence": "CHG-42 permits deployment 09:00–09:20. Pipeline-8 executed at 09:13. D-9 is not in the registered device inventory.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "How much does CHG-42 prove?",
+              "options": [
+                "Specific D-9 device is safe",
+                "An overlapping change window, not validated device ownership",
+                "The alert has no relevance"
+              ],
+              "answerIndex": 1,
+              "explanation": "Approved changes can coexist with misuse."
+            },
+            {
+              "id": "b",
+              "prompt": "Which record most improves the assessment?",
+              "options": [
+                "Signed pipeline provenance and device ownership",
+                "Printer ink inventory",
+                "Unrelated internet advertisements"
+              ],
+              "answerIndex": 0,
+              "explanation": "Investigate the event's chain of identity and execution."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Containment decision",
+          "evidence": "No malicious action has been proven. The identity has broad privileges and is still active; security lead approves a scoped privilege review.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which action is proportionate?",
+              "options": [
+                "Review token scope and rotate/revoke if approved by incident owner",
+                "Publish credentials in an incident thread",
+                "Disable unrelated company networks"
+              ],
+              "answerIndex": 0,
+              "explanation": "Containment should match evidence and approvals, with attention to service continuity."
+            },
+            {
+              "id": "b",
+              "prompt": "What information belongs in the change plan?",
+              "options": [
+                "Owners, downtime risk, fallback, monitoring and validation",
+                "Only a generic 'done' label",
+                "No communication to stakeholders"
+              ],
+              "answerIndex": 0,
+              "explanation": "Scoped changes still need operational controls."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Close or escalate",
+          "evidence": "Deployment records validate an expected job, but D-9 ownership remains unresolved and token audience logs are missing.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is defensible?",
+              "options": [
+                "Confirmed harmless and closed",
+                "Document open attribution gap and follow-up owner",
+                "Publicly name a suspect"
+              ],
+              "answerIndex": 1,
+              "explanation": "Residual uncertainty warrants specific follow-up rather than false closure."
+            },
+            {
+              "id": "b",
+              "prompt": "What should the final report explicitly separate?",
+              "options": [
+                "Observed activity, hypotheses, and unresolved evidence",
+                "Only the alert score",
+                "Only management's guess"
+              ],
+              "answerIndex": 0,
+              "explanation": "Separation of observation and interpretation underpins accurate SOC reporting."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l5-2026",
+      "level": 5,
+      "title": "Web Assessment — Authorization and Regression",
+      "scope": "The assessment targets only a synthetic web application on a privately isolated lab. A trainee must document object authorization and patch verification.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Define permitted behavior",
+          "evidence": "Policy: guest can view public profile 101, owner can view private account 102. Guest GET /account/102 returns HTTP 200 with private fields.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What defect is supported?",
+              "options": [
+                "Object-level authorization not enforced",
+                "DNS cache poisoning",
+                "CPU thermal throttling"
+              ],
+              "answerIndex": 0,
+              "explanation": "The endpoint disclosed a protected object to an unauthorized role."
+            },
+            {
+              "id": "b",
+              "prompt": "What makes the evidence reproducible?",
+              "options": [
+                "Record role, object, HTTP status and response fields",
+                "Try random real websites",
+                "Only report a feeling that it is insecure"
+              ],
+              "answerIndex": 0,
+              "explanation": "A high-quality finding describes a controlled request and result."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Compare authorized behavior",
+          "evidence": "Owner GET /account/102 returns HTTP 200. Guest GET /account/101 returns HTTP 200. No production identity authentication exists in this fictional training service.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which constraint matters?",
+              "options": [
+                "The mock as= role selector is not production authentication",
+                "The role selector proves secure identities",
+                "The application is a real bank"
+              ],
+              "answerIndex": 0,
+              "explanation": "The training model focuses on authorization logic rather than real login security."
+            },
+            {
+              "id": "b",
+              "prompt": "Which baseline is essential before remediation?",
+              "options": [
+                "Both successful permitted paths",
+                "Only the initial unauthorized 200",
+                "Network scan of public hosts"
+              ],
+              "answerIndex": 0,
+              "explanation": "Positive baselines protect expected functionality."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Implement the check",
+          "evidence": "A code review proposes an owner check at the server endpoint. The UI will still display the private-account link in a training navigation menu.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Is UI hiding an adequate substitute?",
+              "options": [
+                "Yes, because users cannot click the link",
+                "No; enforce authorization for each protected object on the server",
+                "Yes, if the page uses dark mode"
+              ],
+              "answerIndex": 1,
+              "explanation": "Authorization must be decided by the server."
+            },
+            {
+              "id": "b",
+              "prompt": "Which result is required after patch?",
+              "options": [
+                "Guest gets 403 and owner still gets 200",
+                "All roles receive 403",
+                "Only the UI link disappears"
+              ],
+              "answerIndex": 0,
+              "explanation": "A denial alone is not enough if legitimate use also breaks."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Write the finding",
+          "evidence": "The patched mode returns expected HTTP results. The trainee has not checked tokens, session expiry, or authorization for other endpoints.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What can be claimed?",
+              "options": [
+                "All web app security issues are gone",
+                "This scoped object authorization case now passes defined regression checks",
+                "Production identity design is certified"
+              ],
+              "answerIndex": 1,
+              "explanation": "A specific fix does not justify global security claims."
+            },
+            {
+              "id": "b",
+              "prompt": "What should be recorded as limitations?",
+              "options": [
+                "Untested endpoints and absence of real authentication",
+                "Nothing; scoring is 100",
+                "Only theme colors"
+              ],
+              "answerIndex": 0,
+              "explanation": "An honest report identifies what wasn't tested."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l6-2026",
+      "level": 6,
+      "title": "VM Isolation — Unauthorized Bridge and Capacity",
+      "scope": "A fictional investigator VM and target VM must run only on an internal virtual switch. No cloud services or physical router changes are in scope.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Preflight resources",
+          "evidence": "Host RAM 16 GiB; OS baseline 5 GiB; guests requested 6 GiB, 4 GiB and 2 GiB. Before hypervisor overhead, allocations total 17 GiB.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is the resource concern?",
+              "options": [
+                "Combined nominal memory demand exceeds physical RAM",
+                "All VMs have infinite shared RAM",
+                "The CPU speed is the only issue"
+              ],
+              "answerIndex": 0,
+              "explanation": "Guest memory plus host baseline exceeds installed memory."
+            },
+            {
+              "id": "b",
+              "prompt": "What is the appropriate plan?",
+              "options": [
+                "Reduce simultaneous workloads while preserving host overhead",
+                "Disable Windows firewall",
+                "Ignore swap and memory pressure"
+              ],
+              "answerIndex": 0,
+              "explanation": "Capacity planning must reserve host and hypervisor resources."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Check lab boundaries",
+          "evidence": "Training target VM uses a bridged adapter and has default route 192.168.1.1. Intended state is internal-only AcademyLab, private 10.40.0.0/24.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What does this show?",
+              "options": [
+                "Isolation policy is violated",
+                "The VM is perfectly isolated",
+                "The target must already be compromised"
+              ],
+              "answerIndex": 0,
+              "explanation": "A bridge can place the intentionally vulnerable VM on the real physical network."
+            },
+            {
+              "id": "b",
+              "prompt": "What is the safety response?",
+              "options": [
+                "Stop the vulnerable service and correct VM adapter configuration",
+                "Publish the service externally",
+                "Continue with real client data"
+              ],
+              "answerIndex": 0,
+              "explanation": "Do not start vulnerable services until the network boundary is verified."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Reconfigure safely",
+          "evidence": "The trainee disconnects extra adapters, uses an internal switch, removes external default gateway and snapshots the clean lab.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What evidence should be checked?",
+              "options": [
+                "Both guests' addresses/routes and hypervisor adapter settings",
+                "Only wallpaper color",
+                "Only an HTTP 200"
+              ],
+              "answerIndex": 0,
+              "explanation": "Host-side and guest-side configurations must match."
+            },
+            {
+              "id": "b",
+              "prompt": "What is still uncertain?",
+              "options": [
+                "Whether external paths remain due to hypervisor or host configuration",
+                "Nothing; isolation is mathematically proved",
+                "Whether a laptop has a trackpad"
+              ],
+              "answerIndex": 0,
+              "explanation": "Configuration review alone is not a complete security audit."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Service acceptance",
+          "evidence": "The target accepts only the documented investigator IP. A separate login mechanism is not implemented.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which claim is accurate?",
+              "options": [
+                "A fixed source-IP check substitutes for real authentication",
+                "This is a limited lab guard, not robust identity authentication",
+                "Public internet access is safe"
+              ],
+              "answerIndex": 1,
+              "explanation": "Source-IP controls have limitations and must be layered with isolation."
+            },
+            {
+              "id": "b",
+              "prompt": "What is the next engineering requirement?",
+              "options": [
+                "Independent VM/hypervisor acceptance and access-control review",
+                "More decorative icons",
+                "Disabling all logs"
+              ],
+              "answerIndex": 0,
+              "explanation": "A secure workflow needs verified boundaries and controls."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l7-2026",
+      "level": 7,
+      "title": "Detection Engineering — False-Positive Reduction",
+      "scope": "An advanced analyst evaluates a fictional detection rule using 100 labeled events; the objective is justified tuning and rollback.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Measure baseline",
+          "evidence": "TP=9; FP=15; FN=6; TN=70. Alerts fired on 24 events. Total labeled events 100.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is precision?",
+              "options": [
+                "37.5%",
+                "60%",
+                "85%"
+              ],
+              "answerIndex": 0,
+              "explanation": "Precision = TP/(TP+FP) = 9/24 = 37.5%."
+            },
+            {
+              "id": "b",
+              "prompt": "What is recall?",
+              "options": [
+                "93%",
+                "60%",
+                "24%"
+              ],
+              "answerIndex": 1,
+              "explanation": "Recall = TP/(TP+FN) = 9/15 = 60%."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Propose tuning",
+          "evidence": "An engineer wants to filter all service account events, which would cut false positives but also remove detection of some true incidents.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is the key trade-off?",
+              "options": [
+                "Missed incidents may rise as false positives fall",
+                "No trade-off exists",
+                "All service activity is authorized"
+              ],
+              "answerIndex": 0,
+              "explanation": "Optimization must consider false negatives, not just alert volume."
+            },
+            {
+              "id": "b",
+              "prompt": "What is a fair validation?",
+              "options": [
+                "Independent holdout labels and operational impact",
+                "Only the training set used to tune the rule",
+                "Management preference alone"
+              ],
+              "answerIndex": 0,
+              "explanation": "Holdout performance reduces overfitting risk."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Assess changed candidate",
+          "evidence": "Candidate on a held-out labeled dataset: TP=12, FP=8, FN=3, TN=77. This dataset has 100 events with 15 actual incidents.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is candidate recall?",
+              "options": [
+                "80%",
+                "60%",
+                "20%"
+              ],
+              "answerIndex": 0,
+              "explanation": "12/(12+3)=80%."
+            },
+            {
+              "id": "b",
+              "prompt": "What is candidate precision?",
+              "options": [
+                "40%",
+                "60%",
+                "90%"
+              ],
+              "answerIndex": 1,
+              "explanation": "12/(12+8)=60%."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Production decision",
+          "evidence": "Candidate looks better on this holdout but deployment requires monitoring, sign-off and rollback. Data distributions can shift.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which deployment approach is defensible?",
+              "options": [
+                "Controlled rollout with owner, thresholds, rollback and monitoring",
+                "Disable all alerts immediately",
+                "Treat held-out results as a future guarantee"
+              ],
+              "answerIndex": 0,
+              "explanation": "Positive retrospective evidence still needs production safeguards."
+            },
+            {
+              "id": "b",
+              "prompt": "What goes in the final report?",
+              "options": [
+                "Sample definitions, baselines, error impact and residual uncertainty",
+                "Only the improved precision headline",
+                "No false-negative discussion"
+              ],
+              "answerIndex": 0,
+              "explanation": "Explain limitations and the missed incident trade-off."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "multistage-l8-2026",
+      "level": 8,
+      "title": "Executive Capstone — Multi-Cause Enterprise Outage",
+      "scope": "A fictional multinational enterprise experiences concurrent DNS failures, application capacity pressure and a privileged identity anomaly. Scope is analysis, not production operations.",
+      "stages": [
+        {
+          "id": "stage-1",
+          "title": "Build an evidence timeline",
+          "evidence": "09:10 approved routing change. 09:14 DNS failures 72%. 09:16 HTTP 503 failures 24%; queue depth 800. 09:17 service account anomaly.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which statement is justified?",
+              "options": [
+                "Multiple concurrent observations, causes not yet established",
+                "One actor definitively caused all faults",
+                "Everything is a DNS issue"
+              ],
+              "answerIndex": 0,
+              "explanation": "Time correlation does not prove causation."
+            },
+            {
+              "id": "b",
+              "prompt": "What should the report preserve?",
+              "options": [
+                "Source, timestamp, confidence and hypothesis for each event",
+                "Only a single root-cause headline",
+                "Only the CEO's preferred explanation"
+              ],
+              "answerIndex": 0,
+              "explanation": "Provenance allows audit and revision of conclusions."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-2",
+          "title": "Inspect independent signals",
+          "evidence": "Routing rollback reduces resolver failures to 0.5%. HTTP 503 rate remains 23%, and queue depth is 790. Identity anomaly still lacks actor attribution.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What is now clear?",
+              "options": [
+                "Resolver improved but application service remains degraded",
+                "The outage is fully resolved",
+                "Identity compromise is confirmed"
+              ],
+              "answerIndex": 0,
+              "explanation": "Metrics show independent residual faults."
+            },
+            {
+              "id": "b",
+              "prompt": "What is the next appropriate investigation?",
+              "options": [
+                "Application capacity and dependencies, plus separate identity evidence",
+                "Delete queue metrics",
+                "Reapply the faulty DNS route"
+              ],
+              "answerIndex": 0,
+              "explanation": "Different layers require independent tests."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-3",
+          "title": "Plan approved remediation",
+          "evidence": "The application owner approves a reversible capacity adjustment. Security lead requests token-audience logs but cannot yet attribute the sign-in.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "Which operating rule fits?",
+              "options": [
+                "Implement scoped change, monitor service metrics, and keep identity inquiry open",
+                "Use the identity anomaly to name a suspect",
+                "Close the whole incident immediately"
+              ],
+              "answerIndex": 0,
+              "explanation": "Operational repair must not imply identity attribution."
+            },
+            {
+              "id": "b",
+              "prompt": "What is a suitable recovery test?",
+              "options": [
+                "DNS health, HTTP errors, queue depth and successful business transaction",
+                "Only ping to loopback",
+                "One happy developer message"
+              ],
+              "answerIndex": 0,
+              "explanation": "Validate end-to-end service, not one layer."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        },
+        {
+          "id": "stage-4",
+          "title": "Defend executive conclusion",
+          "evidence": "Post-adjustment: DNS errors 0.5%; HTTP 503 errors 0.4%; queue depth 15. Synthetic business transactions succeed. Identity audit remains incomplete.",
+          "decisions": [
+            {
+              "id": "a",
+              "prompt": "What should executives hear?",
+              "options": [
+                "Service metrics recovered; identity investigation and monitoring continue",
+                "All possible security risks eliminated",
+                "Attacker arrested"
+              ],
+              "answerIndex": 0,
+              "explanation": "Communicate recovery and residual risks separately."
+            },
+            {
+              "id": "b",
+              "prompt": "What should remain in the final handoff?",
+              "options": [
+                "Owners, open questions, monitoring thresholds and independent review needs",
+                "Only a self-graded certificate",
+                "No rollback documentation"
+              ],
+              "answerIndex": 0,
+              "explanation": "An accountable handoff makes remaining risk actionable."
+            }
+          ],
+          "reflectionPrompt": "Document the observed evidence, what is uncertain, why your chosen action fits the scope, and a concrete test that would prove or disprove the working hypothesis."
+        }
+      ]
+    }
+  ]
+}
