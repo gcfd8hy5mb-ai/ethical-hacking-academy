@@ -1,18 +1,12 @@
 {
-  "version": "2026-11-08",
-  "strategy": "Explicit, exact course and lesson title mapping only. Unmapped lessons receive a neutral link instead of unrelated practice.",
+  "version": "2026-11-08.2",
+  "strategy": "Explicit approved related-topic mappings for known exact course and lesson titles; unmatched lessons display a neutral library link rather than unrelated content.",
   "mappings": [
     {
       "course": "Getting Comfortable With Computers",
       "lesson": "Files, folders, paths, and evidence preservation",
       "unitId": "curriculum-practical-2026-l1-1",
       "sectionId": "s2"
-    },
-    {
-      "course": "Getting Comfortable With Computers",
-      "lesson": "Processes, services, and performance clues",
-      "unitId": "curriculum-practical-2026-l4-2",
-      "sectionId": "s1"
     },
     {
       "course": "Getting Comfortable With Computers",
@@ -145,12 +139,6 @@
       "lesson": "Write security findings without overclaiming",
       "unitId": "curriculum-practical-2026-l4-1",
       "sectionId": "s3"
-    },
-    {
-      "course": "Windows Administration and Security",
-      "lesson": "PowerShell inspection: processes, services, and safe triage",
-      "unitId": "curriculum-practical-2026-l3-2",
-      "sectionId": "s2"
     },
     {
       "course": "Windows Administration and Security",
