@@ -76,7 +76,8 @@ async function loadEmbeddedPracticeForLesson(expectedCourse,expectedLesson){
    'coursework-practical-expansion-2026.json',
    'coursework-specific-practice-2026.json',
    'core-lesson-guided-practice-2026.json',
-   'core-guided-practice-batch2-2026.json'
+   'core-guided-practice-batch2-2026.json',
+   'core-guided-practice-batch3-2026.json'
   ]);
   const source=match.source||'coursework-practical-expansion-2026.json';
   if(!allowedPracticeSources.has(source))throw Error('Unrecognized practice source');
