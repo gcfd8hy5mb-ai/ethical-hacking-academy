@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-08.3",
-  "strategy": "Exact course and lesson title mapping to two authored practice catalogs; no index-based rotation.",
+  "version": "2026-11-08.4",
+  "strategy": "Exact title-based practice mapping across supplemental and primary curriculum lessons; unmatched lessons receive an honest fallback.",
   "mappings": [
     {
       "course": "Getting Comfortable With Computers",
@@ -474,6 +474,356 @@
       "unitId": "specific-practice-2026-23",
       "sectionId": "s1",
       "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "CPU, memory, storage and processes",
+      "unitId": "core-practice-2026-1-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Files, directories and permissions",
+      "unitId": "core-practice-2026-1-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Users, groups and privilege",
+      "unitId": "core-practice-2026-1-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "The terminal and command syntax",
+      "unitId": "core-practice-2026-1-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Processes and services",
+      "unitId": "core-practice-2026-1-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Computer and Operating-System Essentials",
+      "lesson": "Backups, updates and recovery",
+      "unitId": "core-practice-2026-1-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Why professionals use terminals",
+      "unitId": "core-practice-2026-2-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "The present working directory",
+      "unitId": "core-practice-2026-2-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Listing files and hidden entries",
+      "unitId": "core-practice-2026-2-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Moving through directories",
+      "unitId": "core-practice-2026-2-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Reading without modifying files",
+      "unitId": "core-practice-2026-2-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Users, permissions and safe defaults",
+      "unitId": "core-practice-2026-2-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Processes and graceful troubleshooting",
+      "unitId": "core-practice-2026-2-7",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Beginner Linux and Terminal Skills",
+      "lesson": "Command mistakes and recovery habits",
+      "unitId": "core-practice-2026-2-8",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows accounts and profiles",
+      "unitId": "core-practice-2026-3-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Folders, paths and extensions",
+      "unitId": "core-practice-2026-3-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows security updates",
+      "unitId": "core-practice-2026-3-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Task Manager and services",
+      "unitId": "core-practice-2026-3-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows file access controls",
+      "unitId": "core-practice-2026-3-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Defender, firewall and system health",
+      "unitId": "core-practice-2026-3-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Event Viewer and evidence",
+      "unitId": "core-practice-2026-3-7",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "Windows recovery and hardening",
+      "unitId": "core-practice-2026-3-8",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Reading network diagrams",
+      "unitId": "core-practice-2026-4-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Private and public addresses",
+      "unitId": "core-practice-2026-4-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Subnet reasoning",
+      "unitId": "core-practice-2026-4-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "What DHCP does",
+      "unitId": "core-practice-2026-4-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "DNS troubleshooting",
+      "unitId": "core-practice-2026-4-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Ports and protocols",
+      "unitId": "core-practice-2026-4-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Safe connectivity diagnostics",
+      "unitId": "core-practice-2026-4-7",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Networking Practice and Troubleshooting",
+      "lesson": "Segmenting a small organization",
+      "unitId": "core-practice-2026-4-8",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "What code is",
+      "unitId": "core-practice-2026-5-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Variables and values",
+      "unitId": "core-practice-2026-5-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Strings, numbers and booleans",
+      "unitId": "core-practice-2026-5-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Conditions and decisions",
+      "unitId": "core-practice-2026-5-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Loops and counters",
+      "unitId": "core-practice-2026-5-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Functions and reusable work",
+      "unitId": "core-practice-2026-5-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Arrays and records",
+      "unitId": "core-practice-2026-5-7",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Programming Logic for Security Beginners",
+      "lesson": "Reading code defensively",
+      "unitId": "core-practice-2026-5-8",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Logging and alert triage",
+      "unitId": "core-practice-2026-6-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Incident response lifecycle",
+      "unitId": "core-practice-2026-6-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Phishing and social engineering",
+      "unitId": "core-practice-2026-6-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Vulnerability management",
+      "unitId": "core-practice-2026-6-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Access reviews and audit trails",
+      "unitId": "core-practice-2026-6-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Operations and Incident Response",
+      "lesson": "Security communication and recovery",
+      "unitId": "core-practice-2026-6-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Understand event records",
+      "unitId": "core-practice-2026-7-1",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Time windows and correlation",
+      "unitId": "core-practice-2026-7-2",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Build a basic alert rule",
+      "unitId": "core-practice-2026-7-3",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Detection versus prevention",
+      "unitId": "core-practice-2026-7-4",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Triage and escalation",
+      "unitId": "core-practice-2026-7-5",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
+    },
+    {
+      "course": "Security Monitoring and Log Analysis",
+      "lesson": "Measure detection quality",
+      "unitId": "core-practice-2026-7-6",
+      "sectionId": "s1",
+      "source": "core-lesson-guided-practice-2026.json"
     }
   ]
 }
