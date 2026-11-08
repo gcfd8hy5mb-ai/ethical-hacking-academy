@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-08.2",
-  "strategy": "Explicit approved related-topic mappings for known exact course and lesson titles; unmatched lessons display a neutral library link rather than unrelated content.",
+  "version": "2026-11-08.3",
+  "strategy": "Exact course and lesson title mapping to two authored practice catalogs; no index-based rotation.",
   "mappings": [
     {
       "course": "Getting Comfortable With Computers",
@@ -313,6 +313,167 @@
       "lesson": "Safely isolated virtual networks",
       "unitId": "curriculum-practical-2026-l6-1",
       "sectionId": "s3"
+    },
+    {
+      "course": "Getting Comfortable With Computers",
+      "lesson": "Processes, services, and performance clues",
+      "unitId": "specific-practice-2026-01",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Windows Administration and Security",
+      "lesson": "PowerShell inspection: processes, services, and safe triage",
+      "unitId": "specific-practice-2026-02",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "RAM selection and upgrade planning",
+      "unitId": "specific-practice-2026-03",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Storage, SSDs and backup strategy",
+      "unitId": "specific-practice-2026-04",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Power supplies and electrical safety",
+      "unitId": "specific-practice-2026-05",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "GPU needs for cybersecurity",
+      "unitId": "specific-practice-2026-06",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Cooling, airflow and thermals",
+      "unitId": "specific-practice-2026-07",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Compatibility and purchasing exercise",
+      "unitId": "specific-practice-2026-08",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Building & Computer Hardware",
+      "lesson": "Hardware inspection and tool safety",
+      "unitId": "specific-practice-2026-09",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Windows installation and drivers",
+      "unitId": "specific-practice-2026-10",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Linux installation and dual boot",
+      "unitId": "specific-practice-2026-11",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Diagnosing no-POST and no-display faults",
+      "unitId": "specific-practice-2026-12",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Diagnosing crashes and performance",
+      "unitId": "specific-practice-2026-13",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Privacy and ethics in repairing others' PCs",
+      "unitId": "specific-practice-2026-14",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Laptop vs desktop upgrades",
+      "unitId": "specific-practice-2026-15",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "PC Assembly, Repair & Troubleshooting",
+      "lesson": "Repair capstone: diagnose and document",
+      "unitId": "specific-practice-2026-16",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Kali Linux workstation fundamentals",
+      "unitId": "specific-practice-2026-17",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Windows domain simulation",
+      "unitId": "specific-practice-2026-18",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Linux and web practice targets",
+      "unitId": "specific-practice-2026-19",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Managed switches and VLANs",
+      "unitId": "specific-practice-2026-20",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Storage, backups, and recovery",
+      "unitId": "specific-practice-2026-21",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Red Team lab exercise workflow",
+      "unitId": "specific-practice-2026-22",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
+    },
+    {
+      "course": "Red Team Workstation & Home Lab Engineering",
+      "lesson": "Infrastructure capstone blueprint",
+      "unitId": "specific-practice-2026-23",
+      "sectionId": "s1",
+      "source": "coursework-specific-practice-2026.json"
     }
   ]
 }
