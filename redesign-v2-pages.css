@@ -1,0 +1,76 @@
+/* Academy V2 — second pass: all application sections and account screen.
+   Presentation only: do not alter completion keys, Firebase, scoring or question data. */
+:root{color-scheme:dark}
+html{scroll-padding-top:24px}
+#app .wrap{min-width:0}
+#app .academy-v2-screen-level>p,#app .academy-v2-screen-progress>p{color:#ded2bb}
+#app .academy-v2-screen-level .course{min-height:92px}
+#app .academy-v2-screen-level .course-index{color:#f3c575!important;font:800 23px ui-monospace,monospace!important}
+#app .academy-v2-screen-level .course-body{min-width:0;flex:1}
+#app .academy-v2-screen-level .course-body small{display:block;margin-top:7px}
+#app .academy-v2-screen-level .course>span:last-child{color:#ffcd76;font-size:21px}
+#app .academy-v2-screen-settings .sheet{max-width:100%}
+#app .academy-v2-screen-settings #ethical-cloud-settings-slot{min-width:0;overflow-wrap:anywhere}
+#app .academy-v2-screen-progress>.sheet{margin-bottom:16px}
+#app .academy-v2-screen-progress .sheet>p{padding:10px 0;margin:0;border-bottom:1px solid #3d3a31;line-height:1.55}
+#app .academy-v2-screen-progress .sheet>p:last-child{border:0}
+#app .academy-v2-screen-progress .progress{height:9px;border-radius:20px}
+#app .academy-v2-screen-lab .practice-links{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+#app .academy-v2-screen-lab .practice-links .button{display:flex!important;align-items:center;min-height:68px!important;height:auto!important;padding:15px!important;margin:0!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.45!important;text-align:left!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important;font-size:12px!important;color:#f0d395!important;border:1px solid #766342!important;background:#1b272a!important;text-decoration:none!important}
+#app .academy-v2-screen-lab .practice-links .button:hover{background:#352a1c!important;border-color:#f4c36f!important}
+#app .academy-v2-screen-lab .practice-section{padding:20px!important;margin:14px 0}
+#app .academy-v2-screen-lab .lab{padding:21px!important}
+#app .academy-v2-screen-lab .terminal{min-height:150px}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root){min-width:0;max-width:100%;color:#e9ddc8}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) :is(.sheet,.lab,.assessment){background:#121c20!important;color:#ede2d0!important;border:1px solid #756141!important;box-shadow:none!important;border-radius:10px!important;padding:22px!important;min-width:0}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) :is(h2,h3,h4){color:#f5cc79!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important;line-height:1.4}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) :is(p,li,label){color:#dfd4c2!important;line-height:1.7}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) label{display:block;font:700 12px/1.5 ui-monospace,Consolas,monospace!important;color:#efc77f!important;margin:13px 0 7px}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) :is(select,textarea,input:not([type="checkbox"]):not([type="radio"])){
+ display:block;box-sizing:border-box;max-width:100%;min-width:0;background:#0b1418!important;color:#f5e7cf!important;border:1px solid #87704a!important;border-radius:8px!important;padding:12px 13px!important;font:15px/1.5 system-ui!important;accent-color:#e5b765
+}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) select{width:min(100%,650px)!important;min-height:48px!important}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) textarea{width:100%!important;min-height:160px;resize:vertical}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .answers{display:grid!important;gap:9px!important;grid-template-columns:1fr!important}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .answer{min-height:52px!important;width:100%;padding:13px 16px!important;border:1px solid #69563a!important;border-radius:8px!important;background:#1b292d!important;color:#f0e7d7!important;text-align:left;white-space:normal}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .answer.selected,
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .answer:hover{background:#3b2e1c!important;border-color:#efc16f!important}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .feedback{border-left:3px solid #e8b866!important;color:#f6e3c1!important;background:#322a1e!important;padding:15px!important;margin:15px 0!important}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .terminal{min-height:0!important;padding:19px!important;white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:13px/1.7 ui-monospace,Consolas,monospace}
+#app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) .button{background:linear-gradient(#f6cc77,#c18b35)!important;color:#1d1a15!important;border:1px solid #ffdf9b!important;font:750 12px/1.45 ui-monospace,Consolas,monospace!important;padding:12px 17px!important;min-height:45px!important;margin:10px 8px 10px 0}
+#app button:disabled,#app .button:disabled{opacity:.48;cursor:not-allowed;transform:none!important}
+#app :is(textarea,input,select,button,a):focus-visible{outline:2px solid #f5c56b!important;outline-offset:3px}
+#app .academy-workstation-tabs{display:flex;gap:9px;flex-wrap:wrap;border-bottom:1px solid #65533a;padding:0 0 12px}
+#app .academy-workstation-tabs button{padding:11px 16px!important;background:#1a2427!important;border:1px solid #6f5b3d!important;color:#e0c799!important;border-radius:7px!important}
+#app .academy-workstation-tabs button[aria-selected="true"]{background:#49371c!important;border-color:#e9b95d!important;color:#ffe1a4!important}
+#app .academy-workstation-assessment :is(textarea,input,select){max-width:100%;background:#0c1519!important;border:1px solid #8f774e!important;border-radius:7px;color:#eee5d8!important;padding:12px}
+#app .academy-workstation-assessment .answer{color:#ede2d0!important;border:1px solid #746042!important;background:#1b292d!important}
+#app .academy-workstation-assessment .answer.selected{border-color:#edbf69!important;background:#3c2d1c!important}
+body.auth-locked,body.auth-locked .auth-screen{background:radial-gradient(ellipse at 20% 15%,#49371955,transparent 43%),#090d10!important;color:#f7e8c9!important}
+body.auth-locked .auth-panel{background:#141d21!important;color:#f5e8d0!important;border:1px solid #a1804b!important;box-shadow:0 18px 65px #0007!important}
+body.auth-locked .auth-emblem{color:#f3c46a!important;border-color:#aa8045!important}
+body.auth-locked :is(.auth-kicker,.auth-panel h1 em){color:#f1bf65!important}
+body.auth-locked .auth-panel h1{font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important;color:#ffe1a6!important;letter-spacing:-.04em}
+body.auth-locked :is(.auth-intro,.auth-foot){color:#c9bda8!important}
+body.auth-locked .auth-panel label{color:#ead3a9!important}
+body.auth-locked .auth-panel input{background:#0a1317!important;border:1px solid #8f754a!important;color:#faf0dd!important}
+body.auth-locked .auth-primary{background:linear-gradient(#f6d38b,#cb9439)!important;color:#211a11!important;font-weight:800}
+body.auth-locked .auth-actions button{color:#f1c476!important}
+body.auth-locked .auth-foot{border-top-color:#675339!important}
+@media(min-width:960px){
+ body.auth-locked .auth-screen{background:radial-gradient(ellipse at 18% 45%,#5a431b45,transparent 39%),linear-gradient(116deg,#0b1114 0%,#151e21 49%,#0b1114 100%)!important}
+ body.auth-locked .auth-screen:before{color:#f3cd85!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important;font-size:clamp(23px,2.5vw,38px)!important}
+}
+@media(max-width:959px){
+ #app .academy-v2-screen-lab .practice-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #app .academy-v2-screen-lab .practice-links .button{min-height:70px!important}
+ #app :is(#academy-exams,#academy-assignments,#academy-investigations,#simulations-root,#guided-labs,#diagnostic-labs-root,#terminal-challenge-root) :is(.sheet,.lab,.assessment){padding:16px!important}
+}
+@media(max-width:480px){
+ #app .academy-v2-screen-lab .practice-links{grid-template-columns:1fr!important}
+ #app .academy-v2-screen-lab .practice-links .button{min-height:50px!important}
+ #app .academy-v2-screen-level .course{padding:16px 12px!important;gap:12px}
+ #app .academy-v2-screen-level .course-index{font-size:16px!important}
+ body.auth-locked .auth-panel{padding:21px 18px!important}
+}
+@media(prefers-reduced-motion:reduce){#app *{scroll-behavior:auto!important}}
