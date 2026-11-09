@@ -168,7 +168,24 @@ function desktopContext(){
   :'<div class="desktop-context-label desktop-section-label">COURSE NAVIGATION</div><button data-screen="level">Level overview</button><button data-screen="courses">All learning levels</button>';
  return '<aside class="desktop-context" aria-label="Course study overview">'+info+links+'<div class="desktop-context-foot">Progress reflects existing lesson completion. Practical work is assessed separately.</div></aside>';
 }
-function shell(content){const labChild=new Set(['labs','investigations','simulations','diagnostics','terminal-challenges']).has(screen);const back=labChild?'<button class="back academy-practice-back" data-screen="lab" aria-label="Back to Practice Lab">← Back to Practice Lab</button>':'';root.innerHTML='<div class="wrap academy-v2-screen-'+safe(screen)+'"><header class="top"><div class="brand"><span class="seal">&gt;_</span> WORLD-CLASS CYBERSECURITY TRAINING</div><button data-screen="settings" class="chip" style="cursor:pointer;border:1px solid #b69c65;padding:9px 12px;border-radius:9px" aria-label="Open Academy settings">⚙ Settings</button></header>'+back+content+'</div>'+desktopContext()+nav();document.dispatchEvent(new Event('ethical-academy-rendered'))}
+const v2PageDetails={
+ courses:['CURRICULUM / EXPLORE','learning_pathways();','Choose your training level, follow the learning sequence, and track your progress.'],
+ level:['TRAINING / LEVEL OVERVIEW','level_overview();','Review coursework, practice objectives, and the mastery requirements for this level.'],
+ course:['TRAINING / COURSE','course_modules();','Work through guided lessons and complete each knowledge check.'],
+ lesson:['LEARNING / WORKSTATION','learning_workstation();','Study the concept, investigate the evidence, and document your results.'],
+ lab:['PRACTICE / CYBER RANGE','cyber_range();','Explore authorized, simulated challenges and practical workstations.'],
+ labs:['PRACTICE / GUIDED LABS','scenario_labs();','Work through safe, guided security scenarios.'],
+ investigations:['PRACTICE / CASE FILES','investigations();','Review fictional evidence and defend your technical decisions.'],
+ simulations:['PRACTICE / SIMULATIONS','simulations();','Work through multi-stage synthetic enterprise scenarios.'],
+ diagnostics:['PRACTICE / DIAGNOSTICS','diagnostic_labs();','Investigate simulated faults, evidence and remediation.'],
+ 'terminal-challenges':['PRACTICE / TERMINAL','terminal_challenges();','Run supported mock commands in an isolated learning environment.'],
+ exams:['ASSESSMENTS / EXAMINATIONS','mastery_exams();','Check your understanding with scored assessments and explanations.'],
+ assignments:['ASSESSMENTS / PORTFOLIO','written_assignments();','Develop your professional reasoning through saved written work.'],
+ progress:['STUDENT / RECORD','learning_progress();','Track lesson completion, examination evidence and practical readiness.'],
+ settings:['ACCOUNT / PREFERENCES','academy_settings();','Manage your Academy account and cloud saving in one place.']
+};
+function v2InteriorHero(){const page=v2PageDetails[screen];if(!page)return '';const action=screen==='lab'?'<button data-screen="courses">view_courses(); ↗</button>':screen==='settings'?'<button data-screen="progress">view_progress(); ↗</button>':'<button data-screen="lab">enter_cyber_range(); ↗</button>';return '<section class="academy-v2-interior-hero"><div class="academy-v2-interior-copy"><span class="academy-v2-prompt">&gt;_ '+page[0]+'</span><h2>'+page[1]+'</h2><p>/* '+page[2]+' */</p></div><div class="academy-v2-interior-action">'+action+'</div></section>';}
+function shell(content){const labChild=new Set(['labs','investigations','simulations','diagnostics','terminal-challenges']).has(screen);const back=labChild?'<button class="back academy-practice-back" data-screen="lab" aria-label="Back to Practice Lab">← Back to Practice Lab</button>':'';root.innerHTML='<div class="wrap academy-v2-screen-'+safe(screen)+'"><header class="top"><div class="brand"><span class="seal">&gt;_</span> WORLD-CLASS CYBERSECURITY TRAINING</div><button data-screen="settings" class="chip" style="cursor:pointer;border:1px solid #b69c65;padding:9px 12px;border-radius:9px" aria-label="Open Academy settings">⚙ Settings</button></header>'+back+v2InteriorHero()+content+'</div>'+desktopContext()+nav();document.dispatchEvent(new Event('ethical-academy-rendered'))}
 // Workstation report drafts are device-local and intentionally do not affect exams or mastery.
 const workstationReportKey='ethical-hacking-workstation-reports-v1';
 let workstationPanel='check';
