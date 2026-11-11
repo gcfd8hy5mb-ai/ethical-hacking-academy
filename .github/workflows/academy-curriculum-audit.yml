@@ -14,6 +14,8 @@ on:
       - 'local-vm-labs/academy_evidence_review.py'
       - 'local-vm-labs/batch5_local_service.py'
       - 'local-vm-labs/batch5_independent_challenge.py'
+      - 'local-vm-labs/batch6_local_web_assessment.py'
+      - 'local-vm-labs/batch6_security_triage.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -28,6 +30,8 @@ on:
       - 'local-vm-labs/academy_evidence_review.py'
       - 'local-vm-labs/batch5_local_service.py'
       - 'local-vm-labs/batch5_independent_challenge.py'
+      - 'local-vm-labs/batch6_local_web_assessment.py'
+      - 'local-vm-labs/batch6_security_triage.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -61,6 +65,10 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_batch5_local_service.py' -v
       - name: Verify independent first-diagnosis scoring against real loopback requests
         run: python3 -m unittest discover -s tests -p 'test_batch5_independent_challenge.py' -v
+      - name: Run Batch 6 actual localhost web assessment integration tests
+        run: python3 -m unittest discover -s tests -p 'test_batch6_local_web_assessment.py' -v
+      - name: Run Batch 6 synthetic network evidence and prioritization tests
+        run: python3 -m unittest discover -s tests -p 'test_batch6_security_triage.py' -v
       - name: Validate main app JavaScript syntax
         run: node --check app.js
       - name: Exercise embedded lesson integration against mock browser
@@ -91,3 +99,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_batch5_local_service.py' -v
       - name: Exercise independent diagnosis and locked answers
         run: python -m unittest discover -s tests -p 'test_batch5_independent_challenge.py' -v
+      - name: Verify real localhost web checks on Windows and Ubuntu
+        run: python -m unittest discover -s tests -p 'test_batch6_local_web_assessment.py' -v
+      - name: Verify network evidence triage and finding priorities
+        run: python -m unittest discover -s tests -p 'test_batch6_security_triage.py' -v
