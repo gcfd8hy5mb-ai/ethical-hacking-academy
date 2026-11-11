@@ -101,6 +101,12 @@ function embeddedPracticeSectionHTML(section,unit,lessonTitle){
  +'<div class="academy-practice-command"><div class="academy-practice-command-label"><span>03 / COMMAND OR METHOD</span><span class="academy-method-tag">REFERENCE</span></div><pre>'+safe(section.command)+'</pre></div>'
  +block('04 / How to interpret results',section.interpretation,'interpretation')
  +block('05 / Your assignment and evidence',section.task,'assignment')
+ +((unit.sections||[]).filter(extra=>extra.id!==section.id).map((extra,index)=>'<div class="academy-practice-followup"><h3>'+safe(String(index+1)+' / '+extra.heading)+'</h3>'
+  +block('What you will do and why',extra.instruction,'instruction')
+  +'<div class="academy-practice-command"><div class="academy-practice-command-label"><span>COMMAND OR METHOD</span><span class="academy-method-tag">REFERENCE</span></div><pre>'+safe(extra.command)+'</pre></div>'
+  +block('Expected result and interpretation',extra.interpretation,'interpretation')
+  +block('Independent assessment question and evidence',extra.task,'assignment')
+  +'<details class="academy-practice-scope"><summary>Scope for this follow-up</summary><p>'+safe(extra.safety)+'</p></details></div>').join(''))
  +(checkpointUnitsAvailable(unit.id)?'<div class="academy-checkpoint-launch"><button type="button" class="academy-checkpoint-start" data-practice-start="'+safe(unit.id)+'">Try an interactive knowledge check</button><div id="academy-practice-checkpoint" data-unit="'+safe(unit.id)+'" aria-live="polite"></div></div>':'')
  +'<details class="academy-practice-scope"><summary>Safety and authorized scope</summary><p>'+safe(section.safety)+'</p></details>'
  +'<a class="academy-practice-more" href="./coursework-practical-expansion.html">Explore the complete practical collection →</a>'
