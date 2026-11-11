@@ -51,6 +51,8 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_offline_evidence_review.py' -v
       - name: Run Batch 3 offline real-computer lab regression tests
         run: python3 -m unittest discover -s tests -p 'test_batch3_offline_lab.py' -v
+      - name: Run Batch 4 network fault isolation regression tests
+        run: python3 -m unittest discover -s tests -p 'test_batch4_fault_isolation.py' -v
       - name: Validate main app JavaScript syntax
         run: node --check app.js
       - name: Exercise embedded lesson integration against mock browser
