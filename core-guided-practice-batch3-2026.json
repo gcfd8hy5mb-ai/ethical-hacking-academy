@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-08.c",
-  "description": "70 tailored practical assignments for the remaining core lessons: enterprise IAM, Linux, web, cloud, professional security reporting, hardware.",
+  "version": "2026-11-10-batch2",
+  "description": "70 tailored practical assignments for the remaining core lessons: enterprise IAM, Linux, web, cloud, professional security reporting, hardware. Batch 2: independent evidence and self-check extensions (read-only/synthetic), without changing original IDs or lesson order.",
   "units": [
     {
       "id": "core-practice-b3-1-1",
@@ -18,6 +18,15 @@
           "interpretation": "Onboarding without approval and expiration control can produce enduring excess access.",
           "task": "Write a lifecycle checklist with named approver, start date, minimum access and audit record.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Identity lifecycle and onboarding",
+          "command": "Fictional hire → role request → approval → account provision → review",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Identity lifecycle and onboarding', and predict the result. Baseline case: Fictional hire → role request → approval → account provision → review Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Onboarding without approval and expiration control can produce enduring excess access. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a lifecycle checklist with named approver, start date, minimum access and audit record. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -37,6 +46,15 @@
           "interpretation": "Role labels do not guarantee effective access. The decision must consider inherited groups, temporary grants, resource-specific policy and the final allow/deny outcome tested with each authorized role.",
           "task": "Build an allow/deny matrix and explain why inherited group permissions must be reviewed.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Provisioning least-privilege roles",
+          "command": "Roles: analyst read-only; incident lead limited write; HR no server access",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Provisioning least-privilege roles', and predict the result. Baseline case: Roles: analyst read-only; incident lead limited write; HR no server access Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Role labels do not guarantee effective access. The decision must consider inherited groups, temporary grants, resource-specific policy and the final allow/deny outcome tested with each authorized role. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build an allow/deny matrix and explain why inherited group permissions must be reviewed. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -56,6 +74,15 @@
           "interpretation": "Recovery flow can undermine otherwise strong MFA when verification is weak.",
           "task": "Document safe recovery with identity verification, phishing-resistant methods and account-owner notification.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: MFA deployment and recovery",
+          "command": "Mock user loses hardware key after MFA deployment",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'MFA deployment and recovery', and predict the result. Baseline case: Mock user loses hardware key after MFA deployment Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Recovery flow can undermine otherwise strong MFA when verification is weak. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Document safe recovery with identity verification, phishing-resistant methods and account-owner notification. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -75,6 +102,15 @@
           "interpretation": "An unused privileged account indicates access may be unnecessary, not that misuse occurred. Confirm ownership, last activity, business justification, revoke approval and downstream entitlements before closure.",
           "task": "Identify stale permissions and define a review owner, deadline and removal verification.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Privileged access reviews",
+          "command": "Sample quarterly privileged account inventory with unused admin account",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Privileged access reviews', and predict the result. Baseline case: Sample quarterly privileged account inventory with unused admin account Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An unused privileged account indicates access may be unnecessary, not that misuse occurred. Confirm ownership, last activity, business justification, revoke approval and downstream entitlements before closure. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify stale permissions and define a review owner, deadline and removal verification. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -94,6 +130,15 @@
           "interpretation": "A machine account still needs lifecycle management and bounded privileges.",
           "task": "Define least-privilege grant, key rotation, workload identity alternatives and audit evidence.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Service identities and secrets",
+          "command": "Fictional service account uses a long-lived API key in an app configuration",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Service identities and secrets', and predict the result. Baseline case: Fictional service account uses a long-lived API key in an app configuration Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A machine account still needs lifecycle management and bounded privileges. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define least-privilege grant, key rotation, workload identity alternatives and audit evidence. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -113,6 +158,15 @@
           "interpretation": "Single sign-on doesn't automatically authorize all resource actions.",
           "task": "Mark signing, audience, expiry, account mapping and logout trust boundaries.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Federation and single sign-on",
+          "command": "Diagram identity provider → service provider assertion → API session",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Federation and single sign-on', and predict the result. Baseline case: Diagram identity provider → service provider assertion → API session Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Single sign-on doesn't automatically authorize all resource actions. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Mark signing, audience, expiry, account mapping and logout trust boundaries. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -132,6 +186,15 @@
           "interpretation": "A role assignment at 09:00 followed by a read at 09:03 provides a timeline, not proof the role caused the access. Correlate subject, session, resource policy and authenticated request identity.",
           "task": "Normalize times and corroborate actor, session, policy and resource access records.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Identity audit evidence",
+          "command": "Synthetic identity changes: role assigned 09:00; sensitive read 09:03",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Identity audit evidence', and predict the result. Baseline case: Synthetic identity changes: role assigned 09:00; sensitive read 09:03 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A role assignment at 09:00 followed by a read at 09:03 provides a timeline, not proof the role caused the access. Correlate subject, session, resource policy and authenticated request identity. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Normalize times and corroborate actor, session, policy and resource access records. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -151,6 +214,15 @@
           "interpretation": "Disabling the central identity does not necessarily revoke third-party credentials.",
           "task": "Create a deprovisioning acceptance checklist covering sessions, integrations, keys and audit logs.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Departures and access revocation",
+          "command": "Mock employee departure: central account disabled, third-party token still active",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Departures and access revocation', and predict the result. Baseline case: Mock employee departure: central account disabled, third-party token still active Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Disabling the central identity does not necessarily revoke third-party credentials. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a deprovisioning acceptance checklist covering sessions, integrations, keys and audit logs. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -170,6 +242,15 @@
           "interpretation": "Claims must be verified by a trusted server, not blindly accepted from the client.",
           "task": "Compare RBAC role rules and ABAC claims with an explicit forbidden case.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Role-based versus attribute-based rules",
+          "command": "Mock attributes: department=finance; employment=active; record owner=42",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Role-based versus attribute-based rules', and predict the result. Baseline case: Mock attributes: department=finance; employment=active; record owner=42 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Claims must be verified by a trusted server, not blindly accepted from the client. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compare RBAC role rules and ABAC claims with an explicit forbidden case. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -189,6 +270,15 @@
           "interpretation": "Break-glass access needs control even when response urgency is high.",
           "task": "Define two-person approval, time limit, logging, retrospective review and account revocation.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Emergency access governance",
+          "command": "Emergency admin access requested during fictional outage",
+          "instruction": "Build a subject-role-resource access matrix including approval, expiration and review. First explain what this method does, why it is appropriate for 'Emergency access governance', and predict the result. Baseline case: Emergency admin access requested during fictional outage Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Break-glass access needs control even when response urgency is high. Alternative explanation to consider: Role labels alone do not prove effective authorization; inherited grants may matter. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define two-person approval, time limit, logging, retrospective review and account revocation. Self-check question: Which inherited permission could violate least privilege? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -208,6 +298,15 @@
           "interpretation": "Not every Linux distribution or WSL environment has identical service paths.",
           "task": "Explain directory purposes and use pwd, ls -la only in owned training locations.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Linux directory hierarchy",
+          "command": "/etc, /var/log, /home, /tmp, /usr and a disposable training folder",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Linux directory hierarchy', and predict the result. Baseline case: /etc, /var/log, /home, /tmp, /usr and a disposable training folder Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Not every Linux distribution or WSL environment has identical service paths. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain directory purposes and use pwd, ls -la only in owned training locations. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -227,6 +326,15 @@
           "interpretation": "A group listing alone does not establish access to every protected object.",
           "task": "Document your normal user's UID, primary group and supplemental groups.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Users and groups review",
+          "command": "whoami; id; groups",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Users and groups review', and predict the result. Baseline case: whoami; id; groups Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A group listing alone does not establish access to every protected object. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Document your normal user's UID, primary group and supplemental groups. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -246,6 +354,15 @@
           "interpretation": "A mode of 640 on a file is not the same as the directory permissions that control access to it.",
           "task": "Explain octal mode and directory traversal rights; document intended group sharing.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Permission bits in context",
+          "command": "Disposable file: printf 'training\\n' > ~/mode-test.txt; chmod 640 ~/mode-test.txt; ls -l ~/mode-test.txt",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Permission bits in context', and predict the result. Baseline case: Disposable file: printf 'training\\n' > ~/mode-test.txt; chmod 640 ~/mode-test.txt; ls -l ~/mode-test.txt Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A mode of 640 on a file is not the same as the directory permissions that control access to it. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain octal mode and directory traversal rights; document intended group sharing. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -265,6 +382,15 @@
           "interpretation": "Reported free memory depends on caches and OS accounting; a high number isn't conclusive failure.",
           "task": "Record a process listing and memory totals while distinguishing process presence from health.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Processes and system resource health",
+          "command": "ps -ef | head; free -m",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Processes and system resource health', and predict the result. Baseline case: ps -ef | head; free -m Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Reported free memory depends on caches and OS accounting; a high number isn't conclusive failure. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record a process listing and memory totals while distinguishing process presence from health. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -284,6 +410,15 @@
           "interpretation": "WSL 1 does not necessarily use systemd or represent a complete Linux server.",
           "task": "Draw service dependency ordering, restart policy and read-only validation for WSL versus systemd installations.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Services and startup behavior",
+          "command": "Fictional service dependency: web worker starts only after database available",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Services and startup behavior', and predict the result. Baseline case: Fictional service dependency: web worker starts only after database available Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: WSL 1 does not necessarily use systemd or represent a complete Linux server. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw service dependency ordering, restart policy and read-only validation for WSL versus systemd installations. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -303,6 +438,15 @@
           "interpretation": "Installing updates without verifying compatibility can disrupt a service.",
           "task": "Build prepatch backup, version comparison, validation and rollback criteria.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Package updates and patch planning",
+          "command": "Simulated package inventory, vendor patch advisory and approved maintenance window",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Package updates and patch planning', and predict the result. Baseline case: Simulated package inventory, vendor patch advisory and approved maintenance window Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Installing updates without verifying compatibility can disrupt a service. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build prepatch backup, version comparison, validation and rollback criteria. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -322,6 +466,15 @@
           "interpretation": "A log entry may reflect a symptom rather than the root cause.",
           "task": "Construct a timeline, normalize timestamps and state two competing hypotheses.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: System logs and journal concepts",
+          "command": "Fictional journal: 09:00 start; 09:02 timeout; 09:03 retry successful",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'System logs and journal concepts', and predict the result. Baseline case: Fictional journal: 09:00 start; 09:02 timeout; 09:03 retry successful Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A log entry may reflect a symptom rather than the root cause. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Construct a timeline, normalize timestamps and state two competing hypotheses. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -341,6 +494,15 @@
           "interpretation": "Equal hashes prove matching content with high confidence, not provenance or recoverability under all conditions.",
           "task": "Design restore verification and independent backup storage strategy.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Storage and backup verification",
+          "command": "Disposable report plus independent backup copy and SHA-256 digest",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Storage and backup verification', and predict the result. Baseline case: Disposable report plus independent backup copy and SHA-256 digest Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Equal hashes prove matching content with high confidence, not provenance or recoverability under all conditions. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design restore verification and independent backup storage strategy. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -360,6 +522,15 @@
           "interpretation": "An automated task can amplify a mistake unless it has explicit limits.",
           "task": "Define least privilege, logging, input validation, safe failure, time zone and scheduling overlap checks.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Scheduled tasks and automation safety",
+          "command": "Fictional scheduled job runs every hour with access to private reports",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Scheduled tasks and automation safety', and predict the result. Baseline case: Fictional scheduled job runs every hour with access to private reports Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An automated task can amplify a mistake unless it has explicit limits. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define least privilege, logging, input validation, safe failure, time zone and scheduling overlap checks. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -379,6 +550,15 @@
           "interpretation": "A hardened checklist is not proof that every exploitable weakness is absent.",
           "task": "Compare baseline to current state; prioritize reversible changes with documented approvals.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Hardening and configuration baselines",
+          "command": "Mock baseline: root login disabled, unnecessary service running, updates pending",
+          "instruction": "Write the exact Linux command and a verification command for an owned test VM, without elevated changes. First explain what this method does, why it is appropriate for 'Hardening and configuration baselines', and predict the result. Baseline case: Mock baseline: root login disabled, unnecessary service running, updates pending Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A hardened checklist is not proof that every exploitable weakness is absent. Alternative explanation to consider: File ownership, systemd state and mount options can alter observed behavior. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compare baseline to current state; prioritize reversible changes with documented approvals. Self-check question: What verification would prove the proposed fix worked without increasing privileges? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -398,6 +578,15 @@
           "interpretation": "Browser-provided fields cannot enforce an application's financial rules.",
           "task": "List which validation must happen server-side, and verify price using an authorized synthetic fixture.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Browser and server trust boundaries",
+          "command": "Browser changes UI price to $1; expected server price is $20",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Browser and server trust boundaries', and predict the result. Baseline case: Browser changes UI price to $1; expected server price is $20 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Browser-provided fields cannot enforce an application's financial rules. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: List which validation must happen server-side, and verify price using an authorized synthetic fixture. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -417,6 +606,15 @@
           "interpretation": "Authentication establishes identity; server-side authorization controls objects.",
           "task": "Build identity and object authorization matrix; require guest 403 and owner 200.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Identity versus authorization",
+          "command": "Guest and owner both request fictional private object 102",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Identity versus authorization', and predict the result. Baseline case: Guest and owner both request fictional private object 102 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Authentication establishes identity; server-side authorization controls objects. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build identity and object authorization matrix; require guest 403 and owner 200. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -436,6 +634,15 @@
           "interpretation": "Cookie flags lower some risks but aren't an authorization system.",
           "task": "Define Secure, HttpOnly, SameSite, expiration, rotation and server invalidation checks.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Secure session lifecycle",
+          "command": "Mock session created, rotated on login, expired and revoked on logout",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Secure session lifecycle', and predict the result. Baseline case: Mock session created, rotated on login, expired and revoked on logout Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Cookie flags lower some risks but aren't an authorization system. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define Secure, HttpOnly, SameSite, expiration, rotation and server invalidation checks. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -455,6 +662,15 @@
           "interpretation": "Validation checks input type, format, length, range and normalization; output encoding depends on rendering context. Rejecting negative quantity does not by itself prevent injection or unauthorized requests.",
           "task": "Design type, range, length and normalization tests on a synthetic form.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: User input validation",
+          "command": "Form field accepts unexpected negative quantity and a 20,000-character string",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'User input validation', and predict the result. Baseline case: Form field accepts unexpected negative quantity and a 20,000-character string Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Validation checks input type, format, length, range and normalization; output encoding depends on rendering context. Rejecting negative quantity does not by itself prevent injection or unauthorized requests. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design type, range, length and normalization tests on a synthetic form. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -474,6 +690,15 @@
           "interpretation": "Encoding depends on output context; one universal escape function is insufficient.",
           "task": "Choose context-appropriate text/attribute encoding and note DOM insertion risks.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Contextual output encoding",
+          "command": "Fictional HTML content 'A & B <demo>' rendered in a page",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Contextual output encoding', and predict the result. Baseline case: Fictional HTML content 'A & B <demo>' rendered in a page Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Encoding depends on output context; one universal escape function is insufficient. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Choose context-appropriate text/attribute encoding and note DOM insertion risks. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -493,6 +718,15 @@
           "interpretation": "Parameterized queries address SQL syntax injection but don't authorize data access.",
           "task": "Contrast parameter binding with unsafe string concatenation; design a mocked query test.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Parameterized database access",
+          "command": "Fictional customer search with a user-provided surname",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Parameterized database access', and predict the result. Baseline case: Fictional customer search with a user-provided surname Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Parameterized queries address SQL syntax injection but don't authorize data access. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Contrast parameter binding with unsafe string concatenation; design a mocked query test. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -512,6 +746,15 @@
           "interpretation": "CSRF defenses and XSS defenses address different threat paths.",
           "task": "Describe CSRF token, origin checks, SameSite and state-changing request validation.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Cross-site request protections",
+          "command": "Mock update form with an authenticated browser and a cross-origin request",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Cross-site request protections', and predict the result. Baseline case: Mock update form with an authenticated browser and a cross-origin request Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: CSRF defenses and XSS defenses address different threat paths. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Describe CSRF token, origin checks, SameSite and state-changing request validation. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -531,6 +774,15 @@
           "interpretation": "Extensions and declared MIME types alone cannot establish a safe file.",
           "task": "Specify extension, content validation, storage separation, malware screening and size limits.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Secure file upload design",
+          "command": "Synthetic upload named report.png containing unexpected content type",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Secure file upload design', and predict the result. Baseline case: Synthetic upload named report.png containing unexpected content type Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Extensions and declared MIME types alone cannot establish a safe file. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify extension, content validation, storage separation, malware screening and size limits. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -550,6 +802,15 @@
           "interpretation": "An HTTP 200 from a training role picker isn't proof of real-world authentication.",
           "task": "Create per-method, per-role access checks for owner, admin and guest.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: API access control checks",
+          "command": "Fictional API: GET /accounts/102 and PATCH /accounts/102",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'API access control checks', and predict the result. Baseline case: Fictional API: GET /accounts/102 and PATCH /accounts/102 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An HTTP 200 from a training role picker isn't proof of real-world authentication. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create per-method, per-role access checks for owner, admin and guest. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -569,6 +830,15 @@
           "interpretation": "Headers supplement but cannot replace application authorization and safe code.",
           "task": "Explain purpose, compatibility testing and what protections each does not guarantee.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security headers and deployment review",
+          "command": "Deployment header set: CSP, HSTS, Referrer-Policy, X-Content-Type-Options",
+          "instruction": "Use a fictional request/response table to compare authenticated versus unauthorized roles. First explain what this method does, why it is appropriate for 'Security headers and deployment review', and predict the result. Baseline case: Deployment header set: CSP, HSTS, Referrer-Policy, X-Content-Type-Options Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Headers supplement but cannot replace application authorization and safe code. Alternative explanation to consider: Client-side hiding is not server-side authorization and status codes need context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain purpose, compatibility testing and what protections each does not guarantee. Self-check question: Which server-side authorization check must reject the request? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -588,6 +858,15 @@
           "interpretation": "Provider/customer obligations vary by contract and specific offering.",
           "task": "Allocate platform, software, identity, data and logging tasks by model.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Cloud service models",
+          "command": "Diagram SaaS, PaaS, IaaS and customer-owned on-prem services",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Cloud service models', and predict the result. Baseline case: Diagram SaaS, PaaS, IaaS and customer-owned on-prem services Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Provider/customer obligations vary by contract and specific offering. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Allocate platform, software, identity, data and logging tasks by model. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -607,6 +886,15 @@
           "interpretation": "Provider security does not absolve customer identity governance.",
           "task": "Identify what provider patches and what customer must configure and audit.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Shared responsibility maps",
+          "command": "Mock hosted application with provider-managed OS and customer-managed API roles",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Shared responsibility maps', and predict the result. Baseline case: Mock hosted application with provider-managed OS and customer-managed API roles Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Provider security does not absolve customer identity governance. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify what provider patches and what customer must configure and audit. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -626,6 +914,15 @@
           "interpretation": "Broad permission establishes exposure risk but not evidence of historical theft.",
           "task": "Rewrite policy using least privilege and test permitted and denied roles.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Identity policies and resource grants",
+          "command": "Fictional policy Allow GetObject to all principals for confidential objects",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Identity policies and resource grants', and predict the result. Baseline case: Fictional policy Allow GetObject to all principals for confidential objects Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Broad permission establishes exposure risk but not evidence of historical theft. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Rewrite policy using least privilege and test permitted and denied roles. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -645,6 +942,15 @@
           "interpretation": "A classification label is only effective when storage policies, encryption, retention rules, logging and recovery settings enforce it. Check who can read confidential objects, not just their filenames.",
           "task": "Assign encryption, access, retention, geographic and backup controls by classification.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Storage data classification",
+          "command": "Synthetic customer files labeled public, internal and confidential",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Storage data classification', and predict the result. Baseline case: Synthetic customer files labeled public, internal and confidential Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A classification label is only effective when storage policies, encryption, retention rules, logging and recovery settings enforce it. Check who can read confidential objects, not just their filenames. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Assign encryption, access, retention, geographic and backup controls by classification. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -664,6 +970,15 @@
           "interpretation": "Private subnets don't imply perfect isolation without routing/security policy checks.",
           "task": "Create an ingress/egress matrix and identify management-plane access controls.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Network zone boundaries",
+          "command": "Diagram public load balancer, private API and database zone",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Network zone boundaries', and predict the result. Baseline case: Diagram public load balancer, private API and database zone Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Private subnets don't imply perfect isolation without routing/security policy checks. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create an ingress/egress matrix and identify management-plane access controls. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -683,6 +998,15 @@
           "interpretation": "A removed Git commit may remain in history; rotation is still required.",
           "task": "Design revocation, replacement, audit and downtime mitigation without printing real values.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Secrets and key services",
+          "command": "Mock API key committed to repository and rotated under an approved change",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Secrets and key services', and predict the result. Baseline case: Mock API key committed to repository and rotated under an approved change Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A removed Git commit may remain in history; rotation is still required. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design revocation, replacement, audit and downtime mitigation without printing real values. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -702,6 +1026,15 @@
           "interpretation": "Missing, unsynchronized or untrusted logs limit attribution and incident reconstruction. Correlation IDs, consistent UTC conversion and appropriate integrity controls improve the evidentiary value.",
           "task": "Normalize clocks, correlate request IDs and define immutable retention without overcollecting PII.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Central logging and audit trails",
+          "command": "Mock logs in three services with offset timestamps",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Central logging and audit trails', and predict the result. Baseline case: Mock logs in three services with offset timestamps Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Missing, unsynchronized or untrusted logs limit attribution and incident reconstruction. Correlation IDs, consistent UTC conversion and appropriate integrity controls improve the evidentiary value. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Normalize clocks, correlate request IDs and define immutable retention without overcollecting PII. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -721,6 +1054,15 @@
           "interpretation": "A backup job marked successful doesn't prove restore objectives can be met.",
           "task": "Design backups and timed restore acceptance; note dependency and data consistency.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Backup and recovery objectives",
+          "command": "Business sets RPO=1h and RTO=4h for a fictional booking service",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Backup and recovery objectives', and predict the result. Baseline case: Business sets RPO=1h and RTO=4h for a fictional booking service Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A backup job marked successful doesn't prove restore objectives can be met. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design backups and timed restore acceptance; note dependency and data consistency. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -740,6 +1082,15 @@
           "interpretation": "A planned configuration deployment can still introduce exposure; evaluate the exact before/after policy, the authorized approver, affected assets, rollback plan and denied/allowed access results.",
           "task": "Document before/after diff, approver, rollback and independent deny/allow validation.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Infrastructure change approval",
+          "command": "Terraform-like fictional config drift detected in a storage policy",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Infrastructure change approval', and predict the result. Baseline case: Terraform-like fictional config drift detected in a storage policy Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A planned configuration deployment can still introduce exposure; evaluate the exact before/after policy, the authorized approver, affected assets, rollback plan and denied/allowed access results. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Document before/after diff, approver, rollback and independent deny/allow validation. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -759,6 +1110,15 @@
           "interpretation": "Resolution of a misconfigured policy proves the current configuration changed; incomplete historical access logs leave earlier data exposure uncertain. Report confirmed events and unknowns separately.",
           "task": "Prepare incident update with known exposure window, confirmed access, unknowns and next owner.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Cloud incident communication",
+          "command": "Fictional cloud exposure resolved but access history incomplete",
+          "instruction": "Construct a fictional IAM/network/storage exposure inventory and map data flow. First explain what this method does, why it is appropriate for 'Cloud incident communication', and predict the result. Baseline case: Fictional cloud exposure resolved but access history incomplete Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Resolution of a misconfigured policy proves the current configuration changed; incomplete historical access logs leave earlier data exposure uncertain. Report confirmed events and unknowns separately. Alternative explanation to consider: A resource's presence in a console does not show public reachability or effective permission. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prepare incident update with known exposure window, confirmed access, unknowns and next owner. Self-check question: Which effective policy and access path must be checked? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -778,6 +1138,15 @@
           "interpretation": "A request naming targets is not sufficient without verified authority from the owner. Confirm permission, exact hosts, allowed methods, schedule, data handling and a stop/escalation process in writing.",
           "task": "Draft written scope, authority, dates, permitted methods, limits and stop triggers.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Defining authorized testing scope",
+          "command": "Assessment request identifies two URLs but no verified owner authorization",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Defining authorized testing scope', and predict the result. Baseline case: Assessment request identifies two URLs but no verified owner authorization Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A request naming targets is not sufficient without verified authority from the owner. Confirm permission, exact hosts, allowed methods, schedule, data handling and a stop/escalation process in writing. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draft written scope, authority, dates, permitted methods, limits and stop triggers. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -797,6 +1166,15 @@
           "interpretation": "An isolated screenshot is often insufficient for independent reproducibility.",
           "task": "Specify source, exact conditions, timestamps, redactions and alternative explanations.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Evidence requirements and limitations",
+          "command": "Synthetic finding has one screenshot and no request reproduction",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Evidence requirements and limitations', and predict the result. Baseline case: Synthetic finding has one screenshot and no request reproduction Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An isolated screenshot is often insufficient for independent reproducibility. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify source, exact conditions, timestamps, redactions and alternative explanations. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -816,6 +1194,15 @@
           "interpretation": "The supplied architecture is a starting inventory, not permission to discover excluded hosts. Track approved host identifiers, owner confirmation, environment and any expressly prohibited services.",
           "task": "Prepare inventory with allowed asset identifiers and excluded components.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Building a target inventory from supplied diagrams",
+          "command": "Owner supplies diagram with app, DNS, authentication and excluded payroll servers",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Building a target inventory from supplied diagrams', and predict the result. Baseline case: Owner supplies diagram with app, DNS, authentication and excluded payroll servers Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The supplied architecture is a starting inventory, not permission to discover excluded hosts. Track approved host identifiers, owner confirmation, environment and any expressly prohibited services. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prepare inventory with allowed asset identifiers and excluded components. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -835,6 +1222,15 @@
           "interpretation": "A threat model describes possibilities, not verified exploitation.",
           "task": "Identify assets, entry points, trust boundaries and two competing attack hypotheses.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Threat model development",
+          "command": "Use fictional shopping API diagram and a role-based access policy",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Threat model development', and predict the result. Baseline case: Use fictional shopping API diagram and a role-based access policy Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A threat model describes possibilities, not verified exploitation. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify assets, entry points, trust boundaries and two competing attack hypotheses. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -854,6 +1250,15 @@
           "interpretation": "A passing login test cannot prove backend object access is correct.",
           "task": "Write independent positive/negative validation for each and expected safe result.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Control validation plans",
+          "command": "Mock controls: MFA present, object authorization uncertain, logs incomplete",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Control validation plans', and predict the result. Baseline case: Mock controls: MFA present, object authorization uncertain, logs incomplete Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A passing login test cannot prove backend object access is correct. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write independent positive/negative validation for each and expected safe result. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -873,6 +1278,15 @@
           "interpretation": "A scoring formula cannot replace business context: compare exploit prerequisites, reachable exposure, data sensitivity, compensating controls, likelihood evidence and potential operational harm.",
           "task": "Rank likely business impact, asset exposure, prerequisites, cost and confidence.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Risk ranking in business context",
+          "command": "Compare public private-data disclosure with internal verbose error logging",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Risk ranking in business context', and predict the result. Baseline case: Compare public private-data disclosure with internal verbose error logging Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A scoring formula cannot replace business context: compare exploit prerequisites, reachable exposure, data sensitivity, compensating controls, likelihood evidence and potential operational harm. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Rank likely business impact, asset exposure, prerequisites, cost and confidence. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -892,6 +1306,15 @@
           "interpretation": "Demonstrate a synthetic finding with prerequisites, exact request role/object, expected and observed response, and timestamps. Exclude real unauthorized private data and disclose limitations.",
           "task": "Write prerequisites, request, expected versus observed response, limits and minimal evidence.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Writing reproducible findings",
+          "command": "Reproduce a synthetic guest access-control issue",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Writing reproducible findings', and predict the result. Baseline case: Reproduce a synthetic guest access-control issue Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Demonstrate a synthetic finding with prerequisites, exact request role/object, expected and observed response, and timestamps. Exclude real unauthorized private data and disclose limitations. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write prerequisites, request, expected versus observed response, limits and minimal evidence. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -911,6 +1334,15 @@
           "interpretation": "Hiding an interface control is not a security fix when the API remains callable. Enforce the object authorization server-side, retain permitted owner access, and retest both scenarios after deployment.",
           "task": "Recommend server-side check, tests, deployment plan and owner accountable for rollout.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Remediation recommendations",
+          "command": "Synthetic bug fix adds owner check to API endpoint",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Remediation recommendations', and predict the result. Baseline case: Synthetic bug fix adds owner check to API endpoint Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Hiding an interface control is not a security fix when the API remains callable. Enforce the object authorization server-side, retain permitted owner access, and retest both scenarios after deployment. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Recommend server-side check, tests, deployment plan and owner accountable for rollout. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -930,6 +1362,15 @@
           "interpretation": "A patch may close one path while leaving similar endpoints untested.",
           "task": "Define retest conditions, independent verification and residual-risk documentation.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Retest and closure criteria",
+          "command": "Prepatch guest 200; postpatch guest 403/owner 200",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Retest and closure criteria', and predict the result. Baseline case: Prepatch guest 200; postpatch guest 403/owner 200 Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A patch may close one path while leaving similar endpoints untested. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define retest conditions, independent verification and residual-risk documentation. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -949,6 +1390,15 @@
           "interpretation": "Do not equate self-authored training exams with a professional certification.",
           "task": "Deliver executive risk summary, prioritized actions, milestones, confidence and a technical appendix.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Executive reporting and presentation",
+          "command": "Board briefing with three synthetic findings and one unresolved alert",
+          "instruction": "Build an evidence-backed finding with affected asset, observed condition, reproduction limits and remediation. First explain what this method does, why it is appropriate for 'Executive reporting and presentation', and predict the result. Baseline case: Board briefing with three synthetic findings and one unresolved alert Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Do not equate self-authored training exams with a professional certification. Alternative explanation to consider: An unverified hypothesis must not be reported as an exploited vulnerability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Deliver executive risk summary, prioritized actions, milestones, confidence and a technical appendix. Self-check question: What exact evidence would upgrade this from hypothesis to confirmed finding? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -968,6 +1418,15 @@
           "interpretation": "Owning a multifunction tool does not authorize interaction with third-party badges or devices.",
           "task": "Identify hardware subsystems, consent limits, firmware provenance and a harmless offline demonstration plan.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Flipper Zero: recognition and safe use",
+          "command": "Flipper Zero multifunction device and fictional NFC/IR training assets",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Flipper Zero: recognition and safe use', and predict the result. Baseline case: Flipper Zero multifunction device and fictional NFC/IR training assets Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Owning a multifunction tool does not authorize interaction with third-party badges or devices. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify hardware subsystems, consent limits, firmware provenance and a harmless offline demonstration plan. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -987,6 +1446,15 @@
           "interpretation": "A controlled lab setup is required before any wireless interception exercise.",
           "task": "Draw test network architecture, radio boundary and approved SSID ownership; do not transmit a rogue AP.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: WiFi Pineapple: recognition and safe use",
+          "command": "WiFi Pineapple wireless assessment appliance",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'WiFi Pineapple: recognition and safe use', and predict the result. Baseline case: WiFi Pineapple wireless assessment appliance Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A controlled lab setup is required before any wireless interception exercise. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw test network architecture, radio boundary and approved SSID ownership; do not transmit a rogue AP. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1006,6 +1474,15 @@
           "interpretation": "Automated keystrokes can trigger unintended commands; no unauthorized payload deployment.",
           "task": "Describe HID trust and create a harmless scripted text-editor demonstration on an owned training machine.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: USB Rubber Ducky: recognition and safe use",
+          "command": "USB Rubber Ducky keystroke automation device",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'USB Rubber Ducky: recognition and safe use', and predict the result. Baseline case: USB Rubber Ducky keystroke automation device Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Automated keystrokes can trigger unintended commands; no unauthorized payload deployment. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Describe HID trust and create a harmless scripted text-editor demonstration on an owned training machine. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1025,6 +1502,15 @@
           "interpretation": "RF emissions may be regulated even when a device is inexpensive and technically capable.",
           "task": "Distinguish receive and transmit modes, licensed frequencies, antenna requirements and RF power restrictions.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: HackRF One: recognition and safe use",
+          "command": "HackRF One software-defined radio transceiver",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'HackRF One: recognition and safe use', and predict the result. Baseline case: HackRF One software-defined radio transceiver Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: RF emissions may be regulated even when a device is inexpensive and technically capable. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Distinguish receive and transmit modes, licensed frequencies, antenna requirements and RF power restrictions. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1044,6 +1530,15 @@
           "interpretation": "Reading a training tag's identifier does not grant permission to access an external system.",
           "task": "Identify low/high-frequency card families and how authentication differs from a UID.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Proxmark3: recognition and safe use",
+          "command": "Proxmark3 RFID/NFC research device",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Proxmark3: recognition and safe use', and predict the result. Baseline case: Proxmark3 RFID/NFC research device Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Reading a training tag's identifier does not grant permission to access an external system. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify low/high-frequency card families and how authentication differs from a UID. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1063,6 +1558,15 @@
           "interpretation": "Never collect credentials or inject commands on others' machines without written consent.",
           "task": "Explain USB enumeration modes and safe training workflows in a disposable user account.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Bash Bunny: recognition and safe use",
+          "command": "Bash Bunny USB automation platform",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Bash Bunny: recognition and safe use', and predict the result. Baseline case: Bash Bunny USB automation platform Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never collect credentials or inject commands on others' machines without written consent. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain USB enumeration modes and safe training workflows in a disposable user account. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1082,6 +1586,15 @@
           "interpretation": "A small server must be hardened before exposure to any shared network.",
           "task": "Plan SD imaging, standard-user account, patching and a local offline log parser.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Raspberry Pi: recognition and safe use",
+          "command": "Raspberry Pi single-board computer",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Raspberry Pi: recognition and safe use', and predict the result. Baseline case: Raspberry Pi single-board computer Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A small server must be hardened before exposure to any shared network. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Plan SD imaging, standard-user account, patching and a local offline log parser. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1101,6 +1614,15 @@
           "interpretation": "Do not perform deauthentication or interfere with nearby networks.",
           "task": "Describe ESP32 microcontroller capabilities and difference between passive observation and active transmission.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: ESP32 Marauder: recognition and safe use",
+          "command": "ESP32 Marauder firmware ecosystem",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'ESP32 Marauder: recognition and safe use', and predict the result. Baseline case: ESP32 Marauder firmware ecosystem Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Do not perform deauthentication or interfere with nearby networks. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Describe ESP32 microcontroller capabilities and difference between passive observation and active transmission. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1120,6 +1642,15 @@
           "interpretation": "Never insert network tools into third-party infrastructure without explicit authorization.",
           "task": "Draw a private wired test lab with clear ownership and logging rules.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Shark Jack: recognition and safe use",
+          "command": "Shark Jack portable network device",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Shark Jack: recognition and safe use', and predict the result. Baseline case: Shark Jack portable network device Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never insert network tools into third-party infrastructure without explicit authorization. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw a private wired test lab with clear ownership and logging rules. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1139,6 +1670,15 @@
           "interpretation": "Unexpected USB devices can cross trust boundaries even when physically small.",
           "task": "Design an asset-inspection exercise comparing normal and unknown USB cables without activating unknown firmware.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: O.MG Cable: recognition and safe use",
+          "command": "O.MG Cable embedded electronics risk",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'O.MG Cable: recognition and safe use', and predict the result. Baseline case: O.MG Cable embedded electronics risk Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Unexpected USB devices can cross trust boundaries even when physically small. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design an asset-inspection exercise comparing normal and unknown USB cables without activating unknown firmware. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1158,6 +1698,15 @@
           "interpretation": "Hardware compatibility is version-specific; do not attempt unauthorized interception.",
           "task": "Compare chipset/driver compatibility, monitor-mode availability and legal passive capture rules.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Alfa Wi-Fi Adapter: recognition and safe use",
+          "command": "Alfa Wi-Fi USB adapter",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Alfa Wi-Fi Adapter: recognition and safe use', and predict the result. Baseline case: Alfa Wi-Fi USB adapter Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Hardware compatibility is version-specific; do not attempt unauthorized interception. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compare chipset/driver compatibility, monitor-mode availability and legal passive capture rules. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1177,6 +1726,15 @@
           "interpretation": "Do not attach an analyzer to energized mains/high-voltage circuits.",
           "task": "Explain sampling rate, voltage tolerance, logic levels and simple clock-waveform capture on a breadboard.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Logic Analyzer: recognition and safe use",
+          "command": "Logic analyzer and test signal source",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Logic Analyzer: recognition and safe use', and predict the result. Baseline case: Logic analyzer and test signal source Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Do not attach an analyzer to energized mains/high-voltage circuits. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain sampling rate, voltage tolerance, logic levels and simple clock-waveform capture on a breadboard. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1196,6 +1754,15 @@
           "interpretation": "Consent must be specific about activities and can be withdrawn.",
           "task": "Define allowed assets, stop conditions, emergency contacts and privacy limits.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Hardware lab rules and safe boundaries",
+          "command": "Local lab safety charter and authorized equipment inventory",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Hardware lab rules and safe boundaries', and predict the result. Baseline case: Local lab safety charter and authorized equipment inventory Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Consent must be specific about activities and can be withdrawn. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define allowed assets, stop conditions, emergency contacts and privacy limits. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1215,6 +1782,15 @@
           "interpretation": "Receiving and transmitting can have different legal constraints; confirm current applicable rules.",
           "task": "Distinguish authorized frequency bands, transmission limits, shielding and local regulations.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Radio frequency, power and legal compliance",
+          "command": "RF license and power-budget worksheet",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Radio frequency, power and legal compliance', and predict the result. Baseline case: RF license and power-budget worksheet Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Receiving and transmitting can have different legal constraints; confirm current applicable rules. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Distinguish authorized frequency bands, transmission limits, shielding and local regulations. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1234,6 +1810,15 @@
           "interpretation": "A device claiming to be a keyboard is not necessarily trustworthy.",
           "task": "Create endpoint policy matrix for trusted/unknown USB device classes and alerts.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: USB trust boundaries and endpoint controls",
+          "command": "USB keyboard, storage and composite device enrollment",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'USB trust boundaries and endpoint controls', and predict the result. Baseline case: USB keyboard, storage and composite device enrollment Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A device claiming to be a keyboard is not necessarily trustworthy. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create endpoint policy matrix for trusted/unknown USB device classes and alerts. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1253,6 +1838,15 @@
           "interpretation": "Duplicable identifiers are not proof of identity; use test cards you own.",
           "task": "Compare UID-only identification with strong mutual authentication and key management.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: RFID and NFC authentication fundamentals",
+          "command": "Fictional RFID/NFC badges using UID and cryptographic challenge-response",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'RFID and NFC authentication fundamentals', and predict the result. Baseline case: Fictional RFID/NFC badges using UID and cryptographic challenge-response Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Duplicable identifiers are not proof of identity; use test cards you own. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compare UID-only identification with strong mutual authentication and key management. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1272,6 +1866,15 @@
           "interpretation": "A diagram doesn't certify isolation; host and guest settings must be checked.",
           "task": "Label each device, port, VLAN, route and defensive boundary without configuring a real switch.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Network appliance setup diagrams",
+          "command": "Fictional managed-switch + private test laptop + isolated target diagram",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Network appliance setup diagrams', and predict the result. Baseline case: Fictional managed-switch + private test laptop + isolated target diagram Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A diagram doesn't certify isolation; host and guest settings must be checked. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Label each device, port, VLAN, route and defensive boundary without configuring a real switch. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1291,6 +1894,15 @@
           "interpretation": "Poor sampling can alias a signal; high-voltage measurement is unsafe with common logic probes.",
           "task": "Calculate sample resolution, edge timing and whether the instrument's maximum voltage is respected.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Logic analyzer measurements and timing",
+          "command": "Training square wave generator and low-voltage logic analyzer",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Logic analyzer measurements and timing', and predict the result. Baseline case: Training square wave generator and low-voltage logic analyzer Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Poor sampling can alias a signal; high-voltage measurement is unsafe with common logic probes. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Calculate sample resolution, edge timing and whether the instrument's maximum voltage is respected. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1310,6 +1922,15 @@
           "interpretation": "A checksum from an untrusted source doesn't by itself authenticate firmware origin.",
           "task": "Design a firmware provenance checklist including source, checksum, signature, rollback and version.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Microcontroller firmware and supply-chain trust",
+          "command": "ESP32 firmware image, hash and signed release manifest",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Microcontroller firmware and supply-chain trust', and predict the result. Baseline case: ESP32 firmware image, hash and signed release manifest Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A checksum from an untrusted source doesn't by itself authenticate firmware origin. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design a firmware provenance checklist including source, checksum, signature, rollback and version. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1329,6 +1950,15 @@
           "interpretation": "Never deploy portable assessment tools outside written scope.",
           "task": "Write a field checklist: owner approval, device IDs, firmware version, USB/radio scope, battery/power safety, evidence handling.",
           "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Portable hardware case documentation",
+          "command": "Portable device case with documented training inventory",
+          "instruction": "Identify device interfaces, firmware provenance, power and radio/USB scope on paper; do not transmit or inject. First explain what this method does, why it is appropriate for 'Portable hardware case documentation', and predict the result. Baseline case: Portable device case with documented training inventory Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never deploy portable assessment tools outside written scope. Alternative explanation to consider: Simulated choices cannot demonstrate physical-device operational competence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a field checklist: owner approval, device IDs, firmware version, USB/radio scope, battery/power safety, evidence handling. Self-check question: Which physical safety, consent and post-test cleanup check is required? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Do not touch external targets, accounts, wireless networks, hardware or confidential data without explicit authorization. Use fictional data or equipment you control. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     }
