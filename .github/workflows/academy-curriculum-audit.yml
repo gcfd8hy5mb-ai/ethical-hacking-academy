@@ -12,6 +12,7 @@ on:
       - 'core-guided-practice-batch2-2026.json'
       - 'core-guided-practice-batch3-2026.json'
       - 'local-vm-labs/academy_evidence_review.py'
+      - 'local-vm-labs/batch5_local_service.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -24,6 +25,7 @@ on:
       - 'lesson-practical-title-map-2026.json'
       - '*practice*2026.json'
       - 'local-vm-labs/academy_evidence_review.py'
+      - 'local-vm-labs/batch5_local_service.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -53,6 +55,8 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_batch3_offline_lab.py' -v
       - name: Run Batch 4 network fault isolation regression tests
         run: python3 -m unittest discover -s tests -p 'test_batch4_fault_isolation.py' -v
+      - name: Verify Batch 5 actual loopback HTTP repairs and no-overwrite
+        run: python3 -m unittest discover -s tests -p 'test_batch5_local_service.py' -v
       - name: Validate main app JavaScript syntax
         run: node --check app.js
       - name: Exercise embedded lesson integration against mock browser
