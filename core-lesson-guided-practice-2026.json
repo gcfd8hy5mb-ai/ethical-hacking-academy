@@ -250,7 +250,7 @@
           "command": "cd ~; mkdir -p academy-listing; printf 'demo\\n' > academy-listing/.training-note; ls academy-listing; ls -la academy-listing",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If the hidden file is absent from both listings, check the current path using pwd and whether the printf command succeeded. Never run these commands in a shared or production directory.",
           "interpretation": "In a Linux shell, the first ls should not display .training-note; ls -la should. The -a option includes dot-prefixed entries; it does not decrypt or unhide an operating-system secret.",
-          "task": "Perform both listings in your personal training directory. Record which output contains .training-note, and explain the difference between a dot-prefixed filename and confidentiality.",
+          "task": "Perform both listings in your personal training directory. Record which output contains .training-note, and explain the difference between a dot-prefixed filename and confidentiality. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Use a disposable directory in your own home; > overwrites a file if the name already exists."
         }
       ]
@@ -334,7 +334,7 @@
           "command": "cd ~; mkdir -p academy-permissions; printf 'fictional training data\\n' > academy-permissions/note.txt; chmod 600 academy-permissions/note.txt; ls -l academy-permissions/note.txt",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If chmod fails, check ownership with ls -l and filesystem type; Windows-mounted WSL paths can behave differently from native Linux paths.",
           "interpretation": "On a typical Linux filesystem, -rw------- means owner read/write and no group/other permissions. Directory traversal permissions still affect effective access.",
-          "task": "Capture the before/after mode and owner; explain why changing to 777 is not a troubleshooting shortcut. Predict whether a different non-privileged local user can read the file.",
+          "task": "Capture the before/after mode and owner; explain why changing to 777 is not a troubleshooting shortcut. Predict whether a different non-privileged local user can read the file. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Modify only the disposable file you created; avoid sudo and recursive chmod."
         }
       ]
@@ -502,7 +502,7 @@
           "command": "Get-Process | Select-Object -First 5 Name,Id,CPU; Get-Service | Select-Object -First 5 Name,Status",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If output differs or access is denied, record the message and verify the PowerShell session context. Do not start, stop or kill processes to force a desired output.",
           "interpretation": "The CPU property from Get-Process is accumulated CPU seconds, not live percentage. A Stopped service may be normal if its start mode is manual or triggered.",
-          "task": "Record two process rows and two service rows and explain why neither a large cumulative CPU number nor Stopped status alone proves compromise.",
+          "task": "Record two process rows and two service rows and explain why neither a large cumulative CPU number nor Stopped status alone proves compromise. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Read-only inspection on your own Windows machine; omit account names or other personal data from shared reports."
         }
       ]
@@ -586,7 +586,7 @@
           "command": "Get-WinEvent -ListLog System | Select-Object -First 1 LogName,RecordCount; Get-WinEvent -LogName System -MaxEvents 3 | Select-Object TimeCreated,Id,ProviderName,LevelDisplayName",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If event access is unavailable or no results are returned, use Event Viewer → Windows Logs → System and document the limitation; do not elevate just to obtain an example.",
           "interpretation": "Recent System events supply time, identifier and provider, but event IDs have meaning only with their provider and context. A single error does not prove an attack.",
-          "task": "Write a three-row table with event time, provider, event ID and a benign alternative explanation. Include the log name in your evidence note.",
+          "task": "Write a three-row table with event time, provider, event ID and a benign alternative explanation. Include the log name in your evidence note. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Observe only logs on your own or an authorized training computer; avoid publishing unredacted event details."
         }
       ]
@@ -698,7 +698,7 @@
           "command": "Paper calculation: 192.0.2.64/27; subnet mask 255.255.255.224; block size 32",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If the host count is 32, distinguish total addresses from conventional usable addresses. This is a paper exercise; routing environments may use special cases.",
           "interpretation": "Documentation subnet 192.0.2.64/27 has network .64, usable hosts .65–.94 and broadcast .95. There are 30 usable conventional IPv4 host addresses.",
-          "task": "Show the binary last octet or 256−224 calculation, then classify .64, .73, .94 and .95 as network, usable or broadcast.",
+          "task": "Show the binary last octet or 256−224 calculation, then classify .64, .73, .94 and .95 as network, usable or broadcast. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Use only documentation-range examples; do not scan arbitrary public subnets."
         }
       ]
@@ -754,7 +754,7 @@
           "command": "nslookup example.com; ipconfig /all (Windows) OR resolvectl status (supported Linux systems)",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If resolvectl is unavailable, consult your platform's resolver configuration instead of installing tools merely for the exercise. Document environment and timestamp.",
           "interpretation": "A successful DNS answer shows name resolution from the queried resolver, not proof of HTTPS reachability. Timeout and NXDOMAIN convey different hypotheses; cached answers may hide an upstream fault.",
-          "task": "For a fictional browser failure, list the DNS server, the answer or error, and two follow-up checks: application/service status and route/connectivity evidence.",
+          "task": "For a fictional browser failure, list the DNS server, the answer or error, and two follow-up checks: application/service status and route/connectivity evidence. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Use the example domain or an owned training domain; do not alter resolver settings on a shared network."
         }
       ]
@@ -810,7 +810,7 @@
           "command": "ipconfig /all; ping -n 2 192.0.2.1 (Windows synthetic example); nslookup example.com",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If ping fails, distinguish gateway address selection, firewall ICMP policy, and path outage before proposing a change. Never infer a missing service solely from ICMP failure.",
           "interpretation": "The documentation address 192.0.2.1 is intentionally not a real network target and need not respond. A failed ping can mean no route, filtering, or a nonexistent host; it is not proof that DNS is broken.",
-          "task": "Replace the synthetic ping with your own known gateway only on an authorized machine, then document interface address, actual default gateway, ping result and name resolution separately.",
+          "task": "Replace the synthetic ping with your own known gateway only on an authorized machine, then document interface address, actual default gateway, ping result and name resolution separately. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "No ping sweep, unknown target testing, or firewall changes; check only your own gateway if permitted."
         }
       ]
@@ -950,7 +950,7 @@
           "command": "Python: attempts=3; locked=attempts>=3; print(locked); print(attempts==2)",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If Python raises a syntax error, verify that statements are entered on separate lines or separated with semicolons. Avoid mixing string '3' with integer 3.",
           "interpretation": "The first comparison evaluates to True and the second to False. >= compares numeric values; == checks equality and does not assign a value.",
-          "task": "Predict both outputs, execute in a local Python interpreter or browser-only training environment, and explain how changing attempts to 2 changes the results.",
+          "task": "Predict both outputs, execute in a local Python interpreter or browser-only training environment, and explain how changing attempts to 2 changes the results. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Use non-sensitive fictional account data; do not build login attack automation."
         }
       ]
@@ -1034,7 +1034,7 @@
           "command": "Python: events=[{'status':'allow'},{'status':'deny'},{'status':'deny'}]; counts={key:sum(e['status']==key for e in events) for key in ('allow','deny')}; print(counts)",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If KeyError appears, check each record's status field and avoid silently counting malformed records as legitimate events.",
           "interpretation": "Expected dictionary is {'allow': 1, 'deny': 2}. The list contains three independent records; the sum counts exact equality results, not a risk or probability score.",
-          "task": "Predict the output; add one allow record and explain the new counts. Describe one limitation of deciding an incident from a two-category tally.",
+          "task": "Predict the output; add one allow record and explain the new counts. Describe one limitation of deciding an incident from a two-category tally. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Run only against fictional local records; never load a stranger's logs or credentials."
         }
       ]
@@ -1090,7 +1090,7 @@
           "command": "Synthetic evidence: 09:00 userA fail; 09:01 userA fail; 09:02 userA success; 09:03 serviceB fail",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If the data seems contradictory, record clock source, time zone and log ingestion delays instead of forcing an incident narrative.",
           "interpretation": "A successful event after two failures might indicate typing error or credential misuse; four records alone cannot establish attacker identity, source or impact.",
-          "task": "Create a timeline, rank two plausible explanations, and name specific missing data: source IP, device/session, MFA result and known maintenance activity. Propose an authorized low-impact next step.",
+          "task": "Create a timeline, rank two plausible explanations, and name specific missing data: source IP, device/session, MFA result and known maintenance activity. Propose an authorized low-impact next step. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Fictional evidence only; do not lock real accounts or pursue an external source."
         }
       ]
@@ -1286,7 +1286,7 @@
           "command": "Synthetic UTC events: 2026-11-08T16:00:00Z endpoint alert; 2026-11-08T16:02:00Z sign-in failure; dashboard displays UTC−6",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If events appear reversed, check offset, daylight saving rules, clock skew, and log arrival versus event time; preserve the original UTC timestamps.",
           "interpretation": "A dashboard at UTC−6 displays the first event at 10:00 local and the second at 10:02 local on that date. The events are two minutes apart; ordering alone does not establish causation.",
-          "task": "Build a two-event timeline in both UTC and dashboard time, calculate the interval, and describe one missing correlation key such as device ID or account.",
+          "task": "Build a two-event timeline in both UTC and dashboard time, calculate the interval, and describe one missing correlation key such as device ID or account. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Use fictional telemetry and state the timezone clearly; avoid changing machine clock settings."
         }
       ]
@@ -1398,7 +1398,7 @@
           "command": "Paper calculation: TP=8; FP=2; FN=4; TN=86",
           "instruction": "Objective: interpret the command or evidence first, predict the observable result, then compare the observation against the expected outcome. Record both what the evidence supports and what it cannot establish. If recall is calculated using FP, recheck the denominator: recall counts actual positive cases TP+FN, while precision counts predicted positives TP+FP.",
           "interpretation": "Precision = TP/(TP+FP) = 8/10 = 80%; recall = TP/(TP+FN) = 8/12 ≈ 66.7%. Accuracy = 94/100 = 94%; high accuracy can mask missed malicious events.",
-          "task": "Calculate precision and recall independently, explain the operational trade-off of lowering an alert threshold, and list evidence needed before tuning in production.",
+          "task": "Calculate precision and recall independently, explain the operational trade-off of lowering an alert threshold, and list evidence needed before tuning in production. Self-check question: What specific observation in this exercise supports the expected interpretation, and what alternate cause remains possible? Model-answer criterion: cite the observed or explicitly simulated evidence, state a limitation, and justify a safe next diagnostic step.",
           "safety": "Synthetic values only. No real alerts or production tuning are needed."
         }
       ]
