@@ -55,6 +55,8 @@ def init(workspace: Path) -> dict:
         target.parent.mkdir(exist_ok=True)
         with target.open("x", encoding="utf-8", newline="") as stream:
             stream.write(content)
+        if name == "permissions/private.txt" and os.name != "nt":
+            target.chmod(0o600)
     return {"created": str(workspace), "files": list(FILES), "network_used": False}
 
 
