@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f2e9"><title>Real Computer Labs | Ethical Hacking Academy</title>
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./desktop.css">
+<style>
+body{margin:0}main{max-width:960px;margin:0 auto;padding:24px 16px 60px}
+h1{line-height:1.2}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:14px;border:1px solid #a18a65;border-radius:10px;line-height:1.6}
+section{margin:20px 0;padding:20px}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+.lab-back{display:inline-block;margin-bottom:20px}
+.note{border-left:3px solid #b69c65;padding-left:14px}
+</style></head>
+<body><main><a class="button lab-back" href="./index.html">← Back to Academy</a>
+<div class="kicker">REAL COMPUTER WORKSTATION · BATCH 3</div>
+<h1>Windows, Linux &amp; Python Field Labs</h1>
+<p>Use your own Windows/Linux computer or authorized VM. These commands are not executed by the website; run them locally and document actual results. No admin rights or external targets required.</p>
+<section class="sheet"><h2>1 · Offline evidence workstation</h2>
+<p>Create four disposable, fictional evidence files and verify expected login counts, digests and permission state. Requires Python 3 and a downloaded copy of this repository.</p>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch3_offline_lab.py init --workspace "$HOME\academy-batch3-lab"
+py -3 local-vm-labs/batch3_offline_lab.py check --workspace "$HOME\academy-batch3-lab" --json</pre>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch3_offline_lab.py init --workspace "$HOME/academy-batch3-lab"
+python3 local-vm-labs/batch3_offline_lab.py check --workspace "$HOME/academy-batch3-lab" --json</pre>
+<p><strong>Expected:</strong> 2 success and 2 failure events; check output includes <code>"synthetic_event_counts": true</code>. The checker refuses to overwrite an existing workspace. Do not change unrelated folders to satisfy a test.</p></section>
+<section class="sheet"><h2>2 · Windows observational triage</h2>
+<pre>Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Name,Id,CPU
+Get-Service | Select-Object -First 10 Name,Status,StartType
+Get-NetIPConfiguration | Select-Object InterfaceAlias,IPv4Address,IPv4DefaultGateway</pre>
+<p><strong>Interpret:</strong> process CPU is cumulative seconds; a stopped service can be normal. Capture the local status and give one benign alternative to a suspicious-looking condition.</p></section>
+<section class="sheet"><h2>3 · Linux system interpretation</h2>
+<pre>whoami
+pwd
+ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
+ip route show</pre>
+<p><strong>Interpret:</strong> identify your current user, top processes and default route if one exists. Missing commands or empty route data are observations, not reasons to change the machine.</p></section>
+<section class="sheet"><h2>4 · Python defensive log analysis</h2>
+<pre>from pathlib import Path
+from collections import Counter
+import csv
+with (Path.home() / "academy-batch3-lab" / "events.csv").open(newline="", encoding="utf-8") as stream:
+    events = list(csv.DictReader(stream))
+print(Counter(row["result"] for row in events))</pre>
+<p><strong>Expected:</strong> two successes and two failures. Explain why a count alone does not prove an incident.</p></section>
+<section class="sheet"><h2>Evidence rubric</h2>
+<p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
+<p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
+<p><a class="button" href="https://github.com/gcfd8hy5mb-ai/ethical-hacking-academy/blob/main/local-vm-labs/BATCH3_REAL_COMPUTER_LABS.md">Read the full step-by-step field guide →</a></p></section>
+</main></body></html>
