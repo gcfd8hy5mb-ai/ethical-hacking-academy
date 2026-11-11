@@ -57,3 +57,5 @@ jobs:
         run: node tests/test_learning_workstation.mjs
       - name: Validate interactive guided checkpoints
         run: node tests/test_practice_checkpoints.mjs
+      - name: Verify Batch 2 practice depth and visible self-checks
+        run: node tests/test_batch2_depth.mjs
