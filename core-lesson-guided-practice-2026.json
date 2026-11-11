@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-09",
+  "version": "2026-11-10-batch2",
   "origin": "Primary curriculum version 36",
-  "description": "One separately authored practical instruction per exact original lesson for seven foundation courses. No original lessons changed. November 9: 12 additional command-and-evidence guided sections with expected results, troubleshooting and learner deliverables; original unit IDs preserved.",
+  "description": "One separately authored practical instruction per exact original lesson for seven foundation courses. No original lessons changed. November 9: 12 additional command-and-evidence guided sections with expected results, troubleshooting and learner deliverables; original unit IDs preserved. Batch 2: independent evidence and self-check extensions (read-only/synthetic), without changing original IDs or lesson order.",
   "units": [
     {
       "id": "core-practice-2026-1-1",
@@ -19,6 +19,15 @@
           "interpretation": "CPU activity reflects scheduled computation, memory in use is not the same as memory pressure, and a nearly full disk does not prove that the CPU is faulty. Performance evidence needs timestamps and a reproducible symptom.",
           "task": "Produce an evidence table for two observation points with CPU, available RAM, disk capacity and the two busiest processes. Explain which subsystem is most constrained and give a safe follow-up measurement.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: CPU, memory, storage and processes",
+          "command": "Task Manager or system monitor → CPU, Memory, Disk, Processes",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'CPU, memory, storage and processes', and predict the result. Baseline case: Use task manager and operating-system architecture to classify CPU, memory, storage and process responsibilities. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: CPU activity reflects scheduled computation, memory in use is not the same as memory pressure, and a nearly full disk does not prove that the CPU is faulty. Performance evidence needs timestamps and a reproducible symptom. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Produce an evidence table for two observation points with CPU, available RAM, disk capacity and the two busiest processes. Explain which subsystem is most constrained and give a safe follow-up measurement. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -38,6 +47,15 @@
           "interpretation": "A file path locates an object; owner and permissions control who may access it.",
           "task": "Write the absolute path, a relative path and a least-privilege recommendation.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Files, directories and permissions",
+          "command": "cd ~; pwd; ls -la",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'Files, directories and permissions', and predict the result. Baseline case: Inspect a disposable file path and its access model without changing system folders. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A file path locates an object; owner and permissions control who may access it. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write the absolute path, a relative path and a least-privilege recommendation. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -57,6 +75,15 @@
           "interpretation": "Being in an allowed group does not automatically confer rights to every file.",
           "task": "Create a user/role matrix with one allowed and one denied action.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Users, groups and privilege",
+          "command": "whoami; id; groups",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'Users, groups and privilege', and predict the result. Baseline case: Distinguish personal accounts from service accounts and admin privilege. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Being in an allowed group does not automatically confer rights to every file. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a user/role matrix with one allowed and one denied action. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -76,6 +103,15 @@
           "interpretation": "An exit code of zero means a command finished, not that a larger security goal is met.",
           "task": "Explain why typos or a changed working directory can alter command outcomes.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: The terminal and command syntax",
+          "command": "cd ~; mkdir -p academy-demo; ls -la academy-demo",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'The terminal and command syntax', and predict the result. Baseline case: Learn terminal verbs, arguments, flags and errors in a safe folder. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An exit code of zero means a command finished, not that a larger security goal is met. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain why typos or a changed working directory can alter command outcomes. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -95,6 +131,15 @@
           "interpretation": "A listed process may still be unresponsive or unable to accept requests.",
           "task": "Specify a separate functional check that would establish a service is working.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Processes and services",
+          "command": "ps -ef | head; whoami",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'Processes and services', and predict the result. Baseline case: Inspect running processes while separating existence from health. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A listed process may still be unresponsive or unable to accept requests. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify a separate functional check that would establish a service is working. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -114,6 +159,15 @@
           "interpretation": "Identical hashes imply matching bytes, not an independently authenticated backup process.",
           "task": "Write a restore checklist and identify what a successful restore must demonstrate.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Backups, updates and recovery",
+          "command": "cp academy-demo/sample.txt academy-demo/sample.backup.txt; sha256sum academy-demo/sample*.txt",
+          "instruction": "Capture a before/after observation with the operating system's built-in read-only viewer. First explain what this method does, why it is appropriate for 'Backups, updates and recovery', and predict the result. Baseline case: Design a restore test for disposable files and controlled update planning. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Identical hashes imply matching bytes, not an independently authenticated backup process. Alternative explanation to consider: Resource or permission symptoms can arise from benign configuration or workload, not only compromise. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a restore checklist and identify what a successful restore must demonstrate. Self-check question: Which observed change would falsify your first diagnosis? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -133,6 +187,15 @@
           "interpretation": "If the command outputs your own username and a path under /home, the session is likely running as your normal Linux user. A command prompt and account label do not establish permission to inspect another person's files.",
           "task": "Produce a dated command log containing the exact three commands, their outputs, one reason each is useful, and one uncertainty you cannot resolve from this evidence alone.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Why professionals use terminals",
+          "command": "whoami; pwd; ls",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'Why professionals use terminals', and predict the result. Baseline case: Explain command-line tools and permissions in a least-privilege investigation. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: If the command outputs your own username and a path under /home, the session is likely running as your normal Linux user. A command prompt and account label do not establish permission to inspect another person's files. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Produce a dated command log containing the exact three commands, their outputs, one reason each is useful, and one uncertainty you cannot resolve from this evidence alone. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -152,6 +215,15 @@
           "interpretation": "The first pwd may show /mnt/c on WSL when a Windows directory was inherited; the second should show the Linux home, such as /home/hp. The command does not move or alter files.",
           "task": "Write the two resulting paths and give one absolute and one relative file reference pointing to a hypothetical notes.txt in your home directory. Explain why a mistaken directory can cause an overwrite.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: The present working directory",
+          "command": "pwd; cd ~; pwd",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'The present working directory', and predict the result. Baseline case: Find and interpret the current working directory. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The first pwd may show /mnt/c on WSL when a Windows directory was inherited; the second should show the Linux home, such as /home/hp. The command does not move or alter files. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write the two resulting paths and give one absolute and one relative file reference pointing to a hypothetical notes.txt in your home directory. Explain why a mistaken directory can cause an overwrite. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -199,6 +271,15 @@
           "interpretation": "The path should end with /subfolder in the first pwd and /academy-paths after moving to its parent. The '..' path component navigates; it does not erase directories or change ownership.",
           "task": "Provide the exact first and second paths, a diagram showing parent and child directories, and a description of what a relative reference to subfolder would resolve to.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Moving through directories",
+          "command": "mkdir -p ~/academy-paths/subfolder; cd ~/academy-paths/subfolder; pwd; cd ..; pwd",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'Moving through directories', and predict the result. Baseline case: Move deliberately through a safe folder tree. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The path should end with /subfolder in the first pwd and /academy-paths after moving to its parent. The '..' path component navigates; it does not erase directories or change ownership. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Provide the exact first and second paths, a diagram showing parent and child directories, and a description of what a relative reference to subfolder would resolve to. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -218,6 +299,15 @@
           "interpretation": "The grep result should include the warning's line number. A warning is a signal of an event, not a confirmed incident, and grep can miss relevant records when the search term is too narrow.",
           "task": "Record the matched line number, copy the preceding and following synthetic events, and propose two competing explanations for the retry warning and a corroborating check for each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Reading without modifying files",
+          "command": "printf '%s\\n' 'INFO boot complete' 'WARN retry' > ~/academy-paths/example.log; cat ~/academy-paths/example.log; grep -n WARN ~/academy-paths/example.log",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'Reading without modifying files', and predict the result. Baseline case: Read content non-destructively and locate text evidence. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The grep result should include the warning's line number. A warning is a signal of an event, not a confirmed incident, and grep can miss relevant records when the search term is too narrow. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record the matched line number, copy the preceding and following synthetic events, and propose two competing explanations for the retry warning and a corroborating check for each. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -265,6 +355,15 @@
           "interpretation": "The list will vary with the system and may not include every process. A process being listed only establishes its existence at that moment; its backend dependencies or response handling may still fail.",
           "task": "Record a selected harmless process name and PID, then design two non-destructive follow-up checks that could establish whether an associated service performs its intended function.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Processes and graceful troubleshooting",
+          "command": "ps -ef | head",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'Processes and graceful troubleshooting', and predict the result. Baseline case: Correlate processes with benign troubleshooting hypotheses. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The list will vary with the system and may not include every process. A process being listed only establishes its existence at that moment; its backend dependencies or response handling may still fail. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record a selected harmless process name and PID, then design two non-destructive follow-up checks that could establish whether an associated service performs its intended function. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -284,6 +383,15 @@
           "interpretation": "The expected 'No such file or directory' response describes a failed path lookup, not a permission compromise. A nonzero command result calls for investigating the cause before retrying.",
           "task": "Write a small error-response plan: verify cwd, inspect similar filenames, distinguish missing paths from access denied, then choose a safe corrective action without escalating privileges.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Command mistakes and recovery habits",
+          "command": "cd ~/academy-paths; ls a-file-that-is-not-here; pwd",
+          "instruction": "Run the referenced read-only command in an owned disposable Linux directory and record exit status and one line of output. First explain what this method does, why it is appropriate for 'Command mistakes and recovery habits', and predict the result. Baseline case: Recover from harmless errors without escalating privileges. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The expected 'No such file or directory' response describes a failed path lookup, not a permission compromise. A nonzero command result calls for investigating the cause before retrying. Alternative explanation to consider: Shell paths, permissions and environment differences can explain unexpected results; do not use sudo to bypass errors. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a small error-response plan: verify cwd, inspect similar filenames, distinguish missing paths from access denied, then choose a safe corrective action without escalating privileges. Self-check question: What would a nonzero exit status mean in this specific exercise? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -303,6 +411,15 @@
           "interpretation": "The output shows identity and memberships at the time of the command. Effective access still depends on ACLs, deny rules and the requested resource, so membership alone is not proof of a successful access.",
           "task": "Create a fictional user access profile listing a role, one allowed file operation, one prohibited privileged operation, and what evidence would confirm both outcomes.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Windows accounts and profiles",
+          "command": "whoami /user; whoami /groups",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Windows accounts and profiles', and predict the result. Baseline case: Inspect local accounts, groups and permissions without exporting personal data. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The output shows identity and memberships at the time of the command. Effective access still depends on ACLs, deny rules and the requested resource, so membership alone is not proof of a successful access. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a fictional user access profile listing a role, one allowed file operation, one prohibited privileged operation, and what evidence would confirm both outcomes. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -322,6 +439,15 @@
           "interpretation": "A .txt or .exe suffix influences Windows associations but is not a guarantee of file contents or safety. Force includes hidden entries and may reveal configuration files, not necessarily security findings.",
           "task": "Document an absolute and relative Windows path, identify one hidden entry, and give two safe checks for an unknown file, such as inspecting properties and validating trusted provenance.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Folders, paths and extensions",
+          "command": "Get-Location; Get-ChildItem -Force",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Folders, paths and extensions', and predict the result. Baseline case: Navigate Windows file paths and distinguish extensions from content types. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A .txt or .exe suffix influences Windows associations but is not a guarantee of file contents or safety. Force includes hidden entries and may reveal configuration files, not necessarily security findings. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Document an absolute and relative Windows path, identify one hidden entry, and give two safe checks for an unknown file, such as inspecting properties and validating trusted provenance. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -341,6 +467,15 @@
           "interpretation": "An update marked installed establishes an update event, not universal compatibility. A pending restart or failed update may affect the observed state and should be documented explicitly.",
           "task": "Draft a change checklist with authorization, backup, rollback option, post-reboot build check and two application acceptance tests; perform no unapproved installation.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Windows security updates",
+          "command": "Settings → Windows Update → View update history",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Windows security updates', and predict the result. Baseline case: Plan updates and recovery checkpoints. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An update marked installed establishes an update event, not universal compatibility. A pending restart or failed update may affect the observed state and should be documented explicitly. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draft a change checklist with authorization, backup, rollback option, post-reboot build check and two application acceptance tests; perform no unapproved installation. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -388,6 +523,15 @@
           "interpretation": "Allow/deny entries interact with group membership and inherited permissions; one ACE in isolation does not demonstrate an actual successful access or a complete privilege evaluation.",
           "task": "Draw a three-role access matrix for a fictional private file and state both a permitted read and an expected denied read that a qualified reviewer could validate.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Windows file access controls",
+          "command": "Get-Acl -Path . | Format-List",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Windows file access controls', and predict the result. Baseline case: Evaluate file access using account, ACL and inheritance context. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Allow/deny entries interact with group membership and inherited permissions; one ACE in isolation does not demonstrate an actual successful access or a complete privilege evaluation. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw a three-role access matrix for a fictional private file and state both a permitted read and an expected denied read that a qualified reviewer could validate. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -407,6 +551,15 @@
           "interpretation": "An enabled antivirus and firewall indicate configured protective layers, not proof that all threats are absent. An alert requires context such as source, timestamp and policy disposition.",
           "task": "Draft a benign security-warning triage report with the alert evidence, user impact, approved reporting route, and what independent observation is needed before attributing a cause.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Defender, firewall and system health",
+          "command": "Windows Security → Virus & threat protection; Firewall & network protection",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Defender, firewall and system health', and predict the result. Baseline case: Separate antivirus, firewall and system-health controls. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An enabled antivirus and firewall indicate configured protective layers, not proof that all threats are absent. An alert requires context such as source, timestamp and policy disposition. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draft a benign security-warning triage report with the alert evidence, user impact, approved reporting route, and what independent observation is needed before attributing a cause. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -454,6 +607,15 @@
           "interpretation": "A successful reboot only shows that the device started once. Recovery validation must include user data integrity, account access, security updates, device drivers and expected application transactions.",
           "task": "Write a decision tree for a fictional failure with approval requirements, data backup prerequisites, post-repair functional checks and a stop condition to prevent accidental data loss.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Windows recovery and hardening",
+          "command": "Settings → System → Recovery",
+          "instruction": "Use built-in Windows or PowerShell read-only inspection; capture the computer context, timestamp and exact command. First explain what this method does, why it is appropriate for 'Windows recovery and hardening', and predict the result. Baseline case: Create an authorized, reversible Windows recovery plan. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A successful reboot only shows that the device started once. Recovery validation must include user data integrity, account access, security updates, device drivers and expected application transactions. Alternative explanation to consider: Event records and service state require provider, configuration and timeline context. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a decision tree for a fictional failure with approval requirements, data backup prerequisites, post-repair functional checks and a stop condition to prevent accidental data loss. Self-check question: What benign explanation must be ruled out before changing Windows settings? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -473,6 +635,15 @@
           "interpretation": "The DNS resolver maps names, while routing decides the packet's next hop. A drawing shows intended connections but cannot verify an actual route or prove a working service.",
           "task": "Annotate the training topology with source, destination, subnet and gateway for each hop. Give three failure hypotheses and the one read-only observation that would distinguish each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Reading network diagrams",
+          "command": "Training diagram → client → switch → router → resolver → service",
+          "instruction": "Record interface configuration, local gateway and name resolution separately in a lab you control. First explain what this method does, why it is appropriate for 'Reading network diagrams', and predict the result. Baseline case: Translate an authorized network topology into nodes, links and trust boundaries. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The DNS resolver maps names, while routing decides the packet's next hop. A drawing shows intended connections but cannot verify an actual route or prove a working service. Alternative explanation to consider: DNS, routing, ICMP filtering and application failure are distinct causes. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Annotate the training topology with source, destination, subnet and gateway for each hop. Give three failure hypotheses and the one read-only observation that would distinguish each. Self-check question: Which next read-only test distinguishes a name resolution fault from a route fault? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -492,6 +663,15 @@
           "interpretation": "The library should classify 10.40.0.80 as private. A private address can still be reachable from other private networks; private addressing is not equivalent to isolation.",
           "task": "Write a table for three synthetic addresses showing address category, expected reachability assumptions and a verification needed before approving a vulnerable lab network.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Private and public addresses",
+          "command": "python3 -c 'import ipaddress;print(ipaddress.ip_address(\"10.40.0.80\").is_private)'",
+          "instruction": "Record interface configuration, local gateway and name resolution separately in a lab you control. First explain what this method does, why it is appropriate for 'Private and public addresses', and predict the result. Baseline case: Classify IPv4 private address ranges and their implications. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The library should classify 10.40.0.80 as private. A private address can still be reachable from other private networks; private addressing is not equivalent to isolation. Alternative explanation to consider: DNS, routing, ICMP filtering and application failure are distinct causes. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a table for three synthetic addresses showing address category, expected reachability assumptions and a verification needed before approving a vulnerable lab network. Self-check question: Which next read-only test distinguishes a name resolution fault from a route fault? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -539,6 +719,15 @@
           "interpretation": "A valid DHCP lease confirms assigned network configuration but cannot establish that remote applications, their ports or authentication services work.",
           "task": "Create a four-row lease table and two failure scenarios: incorrect DNS and incorrect gateway. State the distinct expected symptom and read-only test for each.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: What DHCP does",
+          "command": "Sample lease: address 10.40.0.20 mask /24 gateway 10.40.0.1 DNS 10.40.0.5",
+          "instruction": "Record interface configuration, local gateway and name resolution separately in a lab you control. First explain what this method does, why it is appropriate for 'What DHCP does', and predict the result. Baseline case: Explain DHCP address leases and gateway options using fictional data. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A valid DHCP lease confirms assigned network configuration but cannot establish that remote applications, their ports or authentication services work. Alternative explanation to consider: DNS, routing, ICMP filtering and application failure are distinct causes. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a four-row lease table and two failure scenarios: incorrect DNS and incorrect gateway. State the distinct expected symptom and read-only test for each. Self-check question: Which next read-only test distinguishes a name resolution fault from a route fault? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -586,6 +775,15 @@
           "interpretation": "A conventional port number suggests intended service but does not authenticate the running process or guarantee it is reachable. DNS can use both UDP and TCP.",
           "task": "Prepare an allowed/denied service matrix for a fictional analyst workstation and private server. Include an expected result and scope-safe verification for each rule.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Ports and protocols",
+          "command": "Service inventory: DNS UDP/TCP 53; HTTPS TCP 443; SSH TCP 22",
+          "instruction": "Record interface configuration, local gateway and name resolution separately in a lab you control. First explain what this method does, why it is appropriate for 'Ports and protocols', and predict the result. Baseline case: Distinguish transport ports, protocols, and allowed services. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A conventional port number suggests intended service but does not authenticate the running process or guarantee it is reachable. DNS can use both UDP and TCP. Alternative explanation to consider: DNS, routing, ICMP filtering and application failure are distinct causes. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prepare an allowed/denied service matrix for a fictional analyst workstation and private server. Include an expected result and scope-safe verification for each rule. Self-check question: Which next read-only test distinguishes a name resolution fault from a route fault? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -633,6 +831,15 @@
           "interpretation": "Separate VLAN IDs limit broadcast domains, but inter-VLAN routing and shared services may reconnect segments. Confirm deny and allow outcomes independently.",
           "task": "Specify at least six source-to-destination flows in an access matrix, then write expected positive and negative tests for guests and authorized administrators.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Segmenting a small organization",
+          "command": "VLAN A workstations; VLAN B servers; guest isolated",
+          "instruction": "Record interface configuration, local gateway and name resolution separately in a lab you control. First explain what this method does, why it is appropriate for 'Segmenting a small organization', and predict the result. Baseline case: Design segmentation for a small fictional organization. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Separate VLAN IDs limit broadcast domains, but inter-VLAN routing and shared services may reconnect segments. Confirm deny and allow outcomes independently. Alternative explanation to consider: DNS, routing, ICMP filtering and application failure are distinct causes. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify at least six source-to-destination flows in an access matrix, then write expected positive and negative tests for guests and authorized administrators. Self-check question: Which next read-only test distinguishes a name resolution fault from a route fault? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -652,6 +859,15 @@
           "interpretation": "The expected output is the text Hello, Academy on standard output. This demonstrates successful execution, not that the entire program is logically or securely correct.",
           "task": "Record the exact output and exit status, then write one modified example that prints a different harmless string and predict its output before running.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: What code is",
+          "command": "python3 -c 'print(\"Hello, Academy\")'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'What code is', and predict the result. Baseline case: Trace code input, execution and output in a non-networked example. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The expected output is the text Hello, Academy on standard output. This demonstrates successful execution, not that the entire program is logically or securely correct. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record the exact output and exit status, then write one modified example that prints a different harmless string and predict its output before running. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -671,6 +887,15 @@
           "interpretation": "The result should be 4 because the second assignment uses the previous value 3 and adds 1. Variables are local program state unless explicitly written to a file or database.",
           "task": "Provide a three-row trace table with statement, prior value, new value, and one simple test for a negative or zero starting count.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Variables and values",
+          "command": "python3 -c 'count=3; count=count+1; print(count)'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'Variables and values', and predict the result. Baseline case: Identify variable names, values and mutation. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The result should be 4 because the second assignment uses the previous value 3 and adds 1. Variables are local program state unless explicitly written to a file or database. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Provide a three-row trace table with statement, prior value, new value, and one simple test for a negative or zero starting count. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -690,6 +915,15 @@
           "interpretation": "The types are str, int and bool. The nonempty string 'False' is truthy, so blindly converting untrusted text with bool() can produce an incorrect security decision.",
           "task": "Record all type outputs and design two parser tests that distinguish the literal strings 'true' and 'false' from Boolean values without relying on truthiness.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Strings, numbers and booleans",
+          "command": "python3 -c 'print(type(\"3\"),type(3),type(True))'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'Strings, numbers and booleans', and predict the result. Baseline case: Explain data types and safe conversion. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The types are str, int and bool. The nonempty string 'False' is truthy, so blindly converting untrusted text with bool() can produce an incorrect security decision. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record all type outputs and design two parser tests that distinguish the literal strings 'true' and 'false' from Boolean values without relying on truthiness. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -737,6 +971,15 @@
           "interpretation": "range(3) generates 0, 1 and 2; the upper limit 3 is excluded. A bounded loop can still do unsafe operations if the body touches resources outside the lab.",
           "task": "Provide the exact three output lines, predict range(1,4), and explain an exit condition for a loop processing up to five synthetic log records.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Loops and counters",
+          "command": "python3 -c 'for n in range(3): print(n)'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'Loops and counters', and predict the result. Baseline case: Understand bounded loops and counters. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: range(3) generates 0, 1 and 2; the upper limit 3 is excluded. A bounded loop can still do unsafe operations if the body touches resources outside the lab. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Provide the exact three output lines, predict range(1,4), and explain an exit condition for a loop processing up to five synthetic log records. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -756,6 +999,15 @@
           "interpretation": "For input True the function returns WARN and for False it returns INFO. A function can be pure and deterministic, which helps repeatability and separate tests from external side effects.",
           "task": "Write three input/output test cases including True and False, and explain why naming a function does not automatically make it safe for untrusted input.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Functions and reusable work",
+          "command": "python3 -c 'label=lambda x: \"WARN\" if x else \"INFO\"; print(label(True))'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'Functions and reusable work', and predict the result. Baseline case: Wrap repeated logic into a function. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: For input True the function returns WARN and for False it returns INFO. A function can be pure and deterministic, which helps repeatability and separate tests from external side effects. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write three input/output test cases including True and False, and explain why naming a function does not automatically make it safe for untrusted input. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -803,6 +1055,15 @@
           "interpretation": "The example returns .txt without opening or executing the file. Filename extensions do not prevent traversal, malicious file contents or escaping an allowed root.",
           "task": "Write a checklist covering permitted path root, symlink handling, file size, text decoding, and error cases for a hypothetical read-only report parser.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Reading code defensively",
+          "command": "python3 -c 'from pathlib import Path; print(Path(\"report.txt\").suffix)'",
+          "instruction": "Predict the result with a 3-row trace table before trying the supplied code on fictional records. First explain what this method does, why it is appropriate for 'Reading code defensively', and predict the result. Baseline case: Read defensive code with input validation and error boundaries. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The example returns .txt without opening or executing the file. Filename extensions do not prevent traversal, malicious file contents or escaping an allowed root. Alternative explanation to consider: Type errors, missing keys and boundary conditions often invalidate a correct-looking happy path. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a checklist covering permitted path root, symlink handling, file size, text decoding, and error cases for a hypothetical read-only report parser. Self-check question: Which input would make the program take a different branch? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -850,6 +1111,15 @@
           "interpretation": "Containment may stop a current impact without proving eradication; operational recovery likewise does not establish root cause or that every identity is safe.",
           "task": "Write a staged playbook listing owner, evidence, change authorization, validation and rollback for each phase, including an explicit emergency stop condition.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Incident response lifecycle",
+          "command": "Fictional alert → evidence preservation → scoped response → restore → lessons learned",
+          "instruction": "Build a timestamped incident timeline and preserve observation-versus-hypothesis columns. First explain what this method does, why it is appropriate for 'Incident response lifecycle', and predict the result. Baseline case: Distinguish prepare, detect, contain, eradicate, recover and review. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Containment may stop a current impact without proving eradication; operational recovery likewise does not establish root cause or that every identity is safe. Alternative explanation to consider: Alert volume alone does not establish exploitation, identity or impact. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a staged playbook listing owner, evidence, change authorization, validation and rollback for each phase, including an explicit emergency stop condition. Self-check question: What evidence would justify escalation while avoiding unsupported attribution? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -869,6 +1139,15 @@
           "interpretation": "Suspicious wording and sender mismatch are phishing indicators, but neither proves who authored the message. Do not reply, open attachments or follow the embedded payment link.",
           "task": "Draft a cautious five-sentence triage notification with reported indicators, verification channel, protected evidence and escalation owner; avoid accusing a named sender.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Phishing and social engineering",
+          "command": "Fictional invoice email: urgent payment; mismatched sender domain",
+          "instruction": "Build a timestamped incident timeline and preserve observation-versus-hypothesis columns. First explain what this method does, why it is appropriate for 'Phishing and social engineering', and predict the result. Baseline case: Evaluate a phishing report without contacting the sender. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Suspicious wording and sender mismatch are phishing indicators, but neither proves who authored the message. Do not reply, open attachments or follow the embedded payment link. Alternative explanation to consider: Alert volume alone does not establish exploitation, identity or impact. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draft a cautious five-sentence triage notification with reported indicators, verification channel, protected evidence and escalation owner; avoid accusing a named sender. Self-check question: What evidence would justify escalation while avoiding unsupported attribution? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -888,6 +1167,15 @@
           "interpretation": "A public critical service typically merits attention but the order still depends on asset value and controls. A severity label by itself is not an incident finding.",
           "task": "Create a two-finding risk register with priority rationale, patch/change owner, downtime risk, rollback option, retest criteria and residual uncertainty.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Vulnerability management",
+          "command": "Synthetic findings: public critical service; internal low-risk test host",
+          "instruction": "Build a timestamped incident timeline and preserve observation-versus-hypothesis columns. First explain what this method does, why it is appropriate for 'Vulnerability management', and predict the result. Baseline case: Prioritize patching using exposure, impact and compensating controls. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A public critical service typically merits attention but the order still depends on asset value and controls. A severity label by itself is not an incident finding. Alternative explanation to consider: Alert volume alone does not establish exploitation, identity or impact. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a two-finding risk register with priority rationale, patch/change owner, downtime risk, rollback option, retest criteria and residual uncertainty. Self-check question: What evidence would justify escalation while avoiding unsupported attribution? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -907,6 +1195,15 @@
           "interpretation": "The apparent sequence can arise from a previously issued session token or unsynchronized clocks; it does not by itself prove a person intentionally violated policy.",
           "task": "Build a timeline with source, timestamp, confidence and hypotheses, then define a revocation test covering direct login and preexisting tokens.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Access reviews and audit trails",
+          "command": "Fictional account disabled 10:30; privileged use logged 10:31",
+          "instruction": "Build a timestamped incident timeline and preserve observation-versus-hypothesis columns. First explain what this method does, why it is appropriate for 'Access reviews and audit trails', and predict the result. Baseline case: Review access changes and evidence source quality. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The apparent sequence can arise from a previously issued session token or unsynchronized clocks; it does not by itself prove a person intentionally violated policy. Alternative explanation to consider: Alert volume alone does not establish exploitation, identity or impact. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build a timeline with source, timestamp, confidence and hypotheses, then define a revocation test covering direct login and preexisting tokens. Self-check question: What evidence would justify escalation while avoiding unsupported attribution? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -926,6 +1223,15 @@
           "interpretation": "One improved network metric does not establish end-to-end business recovery. State verified recovery only for the component and scope actually measured.",
           "task": "Prepare an executive summary and a separate technical appendix with observed values, remaining unknowns and explicit owner/accountability for retests.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security communication and recovery",
+          "command": "DNS error rate normalized, application queue remains elevated",
+          "instruction": "Build a timestamped incident timeline and preserve observation-versus-hypothesis columns. First explain what this method does, why it is appropriate for 'Security communication and recovery', and predict the result. Baseline case: Communicate service recovery without overclaiming attribution. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: One improved network metric does not establish end-to-end business recovery. State verified recovery only for the component and scope actually measured. Alternative explanation to consider: Alert volume alone does not establish exploitation, identity or impact. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prepare an executive summary and a separate technical appendix with observed values, remaining unknowns and explicit owner/accountability for retests. Self-check question: What evidence would justify escalation while avoiding unsupported attribution? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -945,6 +1251,15 @@
           "interpretation": "A missing source or clock offset makes cross-system analysis less reliable; the presence of a field alone does not establish the record's authenticity.",
           "task": "Create three example entries, identify one missing-field problem, and state how you would minimize personal data while retaining useful troubleshooting context.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Understand event records",
+          "command": "timestamp, host, actor, action, result, correlation-id",
+          "instruction": "Create a small synthetic event table and document the proposed detection condition and false-positive cost. First explain what this method does, why it is appropriate for 'Understand event records', and predict the result. Baseline case: Identify fields necessary for a useful audit event. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A missing source or clock offset makes cross-system analysis less reliable; the presence of a field alone does not establish the record's authenticity. Alternative explanation to consider: Log gaps, clock offsets and class imbalance affect confidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create three example entries, identify one missing-field problem, and state how you would minimize personal data while retaining useful troubleshooting context. Self-check question: Which test case should the detector reject as a false positive? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -992,6 +1307,15 @@
           "interpretation": "More than five means at least six matching events in the interval. A threshold is a detection criterion, not proof that the actor is hostile.",
           "task": "Write two positive and two negative test sequences, including a window-boundary case, and explain which benign behavior could cause a false alarm.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Build a basic alert rule",
+          "command": "Fictional rule: >5 failed logins for one account in 10 minutes",
+          "instruction": "Create a small synthetic event table and document the proposed detection condition and false-positive cost. First explain what this method does, why it is appropriate for 'Build a basic alert rule', and predict the result. Baseline case: Design an explicit alert condition with low false positives. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: More than five means at least six matching events in the interval. A threshold is a detection criterion, not proof that the actor is hostile. Alternative explanation to consider: Log gaps, clock offsets and class imbalance affect confidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write two positive and two negative test sequences, including a window-boundary case, and explain which benign behavior could cause a false alarm. Self-check question: Which test case should the detector reject as a false positive? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1011,6 +1335,15 @@
           "interpretation": "Blocking and alerting may coexist; a detected blocked request was not necessarily successful and a lack of alert may indicate missing telemetry rather than no attacks.",
           "task": "Build a control matrix with purpose, input, expected action, evidence source and a negative verification case for each control.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Detection versus prevention",
+          "command": "Firewall policy deny versus login-failure alert",
+          "instruction": "Create a small synthetic event table and document the proposed detection condition and false-positive cost. First explain what this method does, why it is appropriate for 'Detection versus prevention', and predict the result. Baseline case: Separate preventive and detective security controls. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Blocking and alerting may coexist; a detected blocked request was not necessarily successful and a lack of alert may indicate missing telemetry rather than no attacks. Alternative explanation to consider: Log gaps, clock offsets and class imbalance affect confidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build a control matrix with purpose, input, expected action, evidence source and a negative verification case for each control. Self-check question: Which test case should the detector reject as a false positive? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1030,6 +1363,15 @@
           "interpretation": "A suspicious sign-in may warrant escalation even without confirmed compromise, especially when its role is privileged. Avoid overclaiming person attribution.",
           "task": "Write a triage disposition containing evidence summary, confidence level, owner, deadline, proportional action and specific missing records.",
           "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Triage and escalation",
+          "command": "Single sign-in anomaly; device owner unverified; no observed privilege abuse",
+          "instruction": "Create a small synthetic event table and document the proposed detection condition and false-positive cost. First explain what this method does, why it is appropriate for 'Triage and escalation', and predict the result. Baseline case: Assess confidence, severity and response ownership. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A suspicious sign-in may warrant escalation even without confirmed compromise, especially when its role is privileged. Avoid overclaiming person attribution. Alternative explanation to consider: Log gaps, clock offsets and class imbalance affect confidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a triage disposition containing evidence summary, confidence level, owner, deadline, proportional action and specific missing records. Self-check question: Which test case should the detector reject as a false positive? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Practice only on synthetic files, owned computers or explicitly approved training environments. Observe first; avoid changing production configurations. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
