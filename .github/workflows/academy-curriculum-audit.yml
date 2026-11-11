@@ -16,6 +16,7 @@ on:
       - 'local-vm-labs/batch5_independent_challenge.py'
       - 'local-vm-labs/batch6_local_web_assessment.py'
       - 'local-vm-labs/batch6_security_triage.py'
+      - 'local-vm-labs/batch7_integrated_capstone.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -32,6 +33,7 @@ on:
       - 'local-vm-labs/batch5_independent_challenge.py'
       - 'local-vm-labs/batch6_local_web_assessment.py'
       - 'local-vm-labs/batch6_security_triage.py'
+      - 'local-vm-labs/batch7_integrated_capstone.py'
       - 'tests/**'
       - 'app.js'
       - 'style.css'
@@ -69,6 +71,8 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_batch6_local_web_assessment.py' -v
       - name: Run Batch 6 synthetic network evidence and prioritization tests
         run: python3 -m unittest discover -s tests -p 'test_batch6_security_triage.py' -v
+      - name: Test Batch 7 integrated practical capstone with live localhost servers
+        run: python3 -m unittest discover -s tests -p 'test_batch7_integrated_capstone.py' -v
       - name: Validate main app JavaScript syntax
         run: node --check app.js
       - name: Exercise embedded lesson integration against mock browser
@@ -103,3 +107,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_batch6_local_web_assessment.py' -v
       - name: Verify network evidence triage and finding priorities
         run: python -m unittest discover -s tests -p 'test_batch6_security_triage.py' -v
+      - name: Exercise full Batch 7 capstone on Windows and Ubuntu
+        run: python -m unittest discover -s tests -p 'test_batch7_integrated_capstone.py' -v
