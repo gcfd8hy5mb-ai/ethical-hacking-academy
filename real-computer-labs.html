@@ -39,6 +39,13 @@ with (Path.home() / "academy-batch3-lab" / "events.csv").open(newline="", encodi
     events = list(csv.DictReader(stream))
 print(Counter(row["result"] for row in events))</pre>
 <p><strong>Expected:</strong> two successes and two failures. Explain why a count alone does not prove an incident.</p></section>
+<section class="sheet"><h2>Batch 4 · VM administration and network fault isolation</h2>
+<p>Build an owned, disposable Ubuntu VM; practice read-only Windows and Linux administration; then diagnose four fictional network/security faults using the offline Python decision trainer.</p>
+<pre>python3 local-vm-labs/batch4_fault_isolation.py --list
+python3 local-vm-labs/batch4_fault_isolation.py --case dns</pre>
+<p>Windows users: use <code>py -3</code> in place of <code>python3</code>. The trainer does not access a real network, and it never changes your saved course progress.</p>
+<p><a class="button" href="https://github.com/gcfd8hy5mb-ai/ethical-hacking-academy/blob/main/local-vm-labs/BATCH4_VM_ADMIN_NETWORK.md">Open complete VM and network workbook →</a></p>
+</section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
