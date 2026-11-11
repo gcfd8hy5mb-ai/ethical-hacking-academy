@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-08.b",
+  "version": "2026-11-10-batch2",
   "origin": "Primary core curriculum",
-  "description": "78 exact-title tailored practical lessons for thirteen six-lesson core courses; original exam/lesson definitions unchanged.",
+  "description": "78 exact-title tailored practical lessons for thirteen six-lesson core courses; original exam/lesson definitions unchanged. Batch 2: independent evidence and self-check extensions (read-only/synthetic), without changing original IDs or lesson order.",
   "units": [
     {
       "id": "core-practice-b2-1-1",
@@ -19,6 +19,15 @@
           "interpretation": "Confidentiality controls can reduce usability; a high-impact classification alone does not prove a breach.",
           "task": "Rate C/I/A impact separately, then defend which failure would affect customers most.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security goals and the CIA triad",
+          "command": "CIA impact matrix with three assets and expected control owners",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Security goals and the CIA triad', and predict the result. Baseline case: Classify customer-record confidentiality, balance integrity, and checkout availability in a fictional retailer. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Confidentiality controls can reduce usability; a high-impact classification alone does not prove a breach. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Rate C/I/A impact separately, then defend which failure would affect customers most. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -38,6 +47,15 @@
           "interpretation": "A CVE or severity score is not evidence that an intrusion occurred.",
           "task": "Create a risk statement with threat, exploitable weakness, likelihood assumptions and impact.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Threats, vulnerabilities, and risk",
+          "command": "Threat-vulnerability-impact table for a synthetic inventory server",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Threats, vulnerabilities, and risk', and predict the result. Baseline case: Differentiate a vulnerable unpatched service, an actor capable of exploiting it, and resulting business risk. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A CVE or severity score is not evidence that an intrusion occurred. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a risk statement with threat, exploitable weakness, likelihood assumptions and impact. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -57,6 +75,15 @@
           "interpretation": "Trust boundaries are architectural limits, not automatic guarantees of protection.",
           "task": "Mark data flows across browser/server/database boundaries and identify a privilege decision on each crossing.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Assets, identities, and trust boundaries",
+          "command": "System diagram: guest browser, service API, identity provider, private database",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Assets, identities, and trust boundaries', and predict the result. Baseline case: Draw identities, sensitive assets, entry points and trust boundaries for a fictitious sales portal. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Trust boundaries are architectural limits, not automatic guarantees of protection. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Mark data flows across browser/server/database boundaries and identify a privilege decision on each crossing. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -76,6 +103,15 @@
           "interpretation": "A public hostname or client interest alone does not authorize testing.",
           "task": "State scope, permission, evidence retention, exclusions and emergency contact.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security governance and ethics",
+          "command": "Rules-of-engagement checklist and stakeholder approval record",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Security governance and ethics', and predict the result. Baseline case: Apply written authorization and minimal-data collection to a hypothetical client assessment. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A public hostname or client interest alone does not authorize testing. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: State scope, permission, evidence retention, exclusions and emergency contact. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -95,6 +131,15 @@
           "interpretation": "Multiple controls reduce but do not remove risk; a passed UI test is not proof of backend enforcement.",
           "task": "Show which control prevents, detects or mitigates account abuse and where single points of failure remain.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Defense in depth",
+          "command": "Control layers: MFA, rate limits, session review, device registration, alerting",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Defense in depth', and predict the result. Baseline case: Build a layered-control diagram for stolen-account prevention. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Multiple controls reduce but do not remove risk; a passed UI test is not proof of backend enforcement. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Show which control prevents, detects or mitigates account abuse and where single points of failure remain. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -114,6 +159,15 @@
           "interpretation": "An unexplained event must not be reported as a confirmed compromise.",
           "task": "Separate observed lines from your hypotheses and recommend a measurable follow-up.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Evidence, documentation, and reporting",
+          "command": "Finding template: observation, source, confidence, alternative, risk, owner, validation",
+          "instruction": "Write an asset-threat-control matrix using the scenario's explicit system boundaries. First explain what this method does, why it is appropriate for 'Evidence, documentation, and reporting', and predict the result. Baseline case: Write a concise finding from a fictional access-denied log and one unexplained alert. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An unexplained event must not be reported as a confirmed compromise. Alternative explanation to consider: Severity, likelihood and verified compromise are separate concepts. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Separate observed lines from your hypotheses and recommend a measurable follow-up. Self-check question: What assumption would change your risk rating most? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -133,6 +187,15 @@
           "interpretation": "Layer diagrams explain roles but do not establish actual packet capture evidence.",
           "task": "Label header roles, sender/receiver endpoints, and one example failure at each layer.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Packets, protocols and layered models",
+          "command": "Diagram: browser HTTPS → TCP → IP → Ethernet/Wi-Fi",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'Packets, protocols and layered models', and predict the result. Baseline case: Trace how a request moves from application to transport and network layers. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Layer diagrams explain roles but do not establish actual packet capture evidence. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Label header roles, sender/receiver endpoints, and one example failure at each layer. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -152,6 +215,15 @@
           "interpretation": "A /26 has 64 addresses; conventional IPv4 usable-host count is 62.",
           "task": "Compute address count, usable host range, and test whether 10.40.0.70 belongs to the subnet.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Addresses, subnets and gateways",
+          "command": "python3 -c 'import ipaddress;print(list(ipaddress.ip_network(\"10.40.0.0/26\").hosts())[:2])'",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'Addresses, subnets and gateways', and predict the result. Baseline case: Calculate a fictional /26 network and label gateway, client and broadcast. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A /26 has 64 addresses; conventional IPv4 usable-host count is 62. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compute address count, usable host range, and test whether 10.40.0.70 belongs to the subnet. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -171,6 +243,15 @@
           "interpretation": "A successful DNS answer does not prove the destination service is healthy.",
           "task": "Draw resolver request/response and identify how stale records can misroute applications.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: DNS and domain names",
+          "command": "getent hosts example.com; fictional app.lab.example → 10.40.0.80",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'DNS and domain names', and predict the result. Baseline case: Compare public DNS resolution with a fictional internal name record. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A successful DNS answer does not prove the destination service is healthy. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw resolver request/response and identify how stale records can misroute applications. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -190,6 +271,15 @@
           "interpretation": "Port numbers are conventions, not definitive proof of running application identity.",
           "task": "Assign transport and describe why retransmission/ordering matters for a selected use case.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: TCP, UDP and common services",
+          "command": "Table: DNS 53 UDP/TCP, HTTPS 443 TCP, NTP 123 UDP",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'TCP, UDP and common services', and predict the result. Baseline case: Compare stateful TCP sessions to UDP datagrams in a fictional service matrix. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Port numbers are conventions, not definitive proof of running application identity. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Assign transport and describe why retransmission/ordering matters for a selected use case. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -209,6 +299,15 @@
           "interpretation": "TLS protects transport but cannot replace server-side access control.",
           "task": "Create a request-evidence table with URL, HTTP method, synthetic role, response status, and returned fields. Explain why valid TLS and a guest receiving HTTP 200 can coexist with broken object authorization.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: HTTP, HTTPS and TLS",
+          "command": "Fictional request: GET /account/102; TLS valid; guest HTTP 200",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'HTTP, HTTPS and TLS', and predict the result. Baseline case: Distinguish HTTPS transport trust from HTTP application authorization. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: TLS protects transport but cannot replace server-side access control. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a request-evidence table with URL, HTTP method, synthetic role, response status, and returned fields. Explain why valid TLS and a guest receiving HTTP 200 can coexist with broken object authorization. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -228,6 +327,15 @@
           "interpretation": "Private IP ranges and VLAN tags alone do not prove isolation.",
           "task": "Draw separate guest, employee and management zones, state the routing enforcement point, then write positive employee-to-app and negative guest-to-server test expectations, including evidence needed to verify both.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Network segmentation and monitoring",
+          "command": "Synthetic ACL matrix: guests→server deny; staff→app allow; admin→management scoped",
+          "instruction": "Draw the packets' conceptual path with source, destination, protocol and failure point. First explain what this method does, why it is appropriate for 'Network segmentation and monitoring', and predict the result. Baseline case: Design segmentation between guest, workstation and server zones. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Private IP ranges and VLAN tags alone do not prove isolation. Alternative explanation to consider: Resolution, transport and application are different layers and cannot be diagnosed from one symptom. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw separate guest, employee and management zones, state the routing enforcement point, then write positive employee-to-app and negative guest-to-server test expectations, including evidence needed to verify both. Self-check question: Which protocol-layer observation would narrow the cause? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -247,6 +355,15 @@
           "interpretation": "An app icon represents a launcher, not proof of the executable's origin, privileges, or process health. A live task list can show CPU and memory consumption but not the complete startup chain.",
           "task": "Create a five-stage app-launch timeline from click, executable loading, process allocation, data read, to display, and identify an observation you could capture at each stage.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: What happens when you open an app",
+          "command": "Observation: Task Manager application, process name and memory",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'What happens when you open an app', and predict the result. Baseline case: Trace a click from application launch through process creation, memory use, and storage access. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An app icon represents a launcher, not proof of the executable's origin, privileges, or process health. A live task list can show CPU and memory consumption but not the complete startup chain. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Create a five-stage app-launch timeline from click, executable loading, process allocation, data read, to display, and identify an observation you could capture at each stage. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -266,6 +383,15 @@
           "interpretation": "MB and MiB have different unit bases; visible storage capacity includes system overhead.",
           "task": "Calculate byte/binary unit differences and network-transfer implications.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Bits, bytes and file sizes",
+          "command": "Synthetic file sizes: 8 MB, 512 KiB and 2 GiB",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'Bits, bytes and file sizes', and predict the result. Baseline case: Convert file sizes without confusing bytes and bits. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: MB and MiB have different unit bases; visible storage capacity includes system overhead. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Calculate byte/binary unit differences and network-transfer implications. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -285,6 +411,15 @@
           "interpretation": "Extensions help associations but should not be trusted as definitive security checks.",
           "task": "Explain why renaming an extension does not transform a file's contents.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Files, apps and extensions",
+          "command": "Create synthetic .txt and .csv files; inspect extension and opened format",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'Files, apps and extensions', and predict the result. Baseline case: Compare file extension, file type and associated application in a training folder. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Extensions help associations but should not be trusted as definitive security checks. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain why renaming an extension does not transform a file's contents. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -304,6 +439,15 @@
           "interpretation": "Running Linux through WSL is not the same as isolated vulnerable VM practice.",
           "task": "Complete a three-column comparison of app installation, permission prompts, operating-system updates, filesystem visibility, and rollback options; explain why WSL 1 does not replace isolated VM testing.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Operating systems: iPhone, Windows and Linux",
+          "command": "Matrix: iPhone, Windows, Linux; installation, user access, updates, sandbox",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'Operating systems: iPhone, Windows and Linux', and predict the result. Baseline case: Compare mobile and desktop permission, update, and app-installation models. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Running Linux through WSL is not the same as isolated vulnerable VM practice. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Complete a three-column comparison of app installation, permission prompts, operating-system updates, filesystem visibility, and rollback options; explain why WSL 1 does not replace isolated VM testing. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -323,6 +467,15 @@
           "interpretation": "Cloud synchronization is not always a separate versioned backup.",
           "task": "List which copy exists at each point and which backup you can verify.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Local storage versus cloud storage",
+          "command": "Synthetic workflow: create local note → sync account → offline read → delete",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'Local storage versus cloud storage', and predict the result. Baseline case: Map what is stored locally versus in a cloud account. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Cloud synchronization is not always a separate versioned backup. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: List which copy exists at each point and which backup you can verify. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -342,6 +495,15 @@
           "interpretation": "A simulated terminal cannot prove a real Linux command was executed.",
           "task": "Separate browser simulations from actual operating-system tools on a laptop.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Practicing safely on your phone",
+          "command": "Checklist: read lesson, simulate commands, record explanation, defer VM tasks",
+          "instruction": "Repeat the observation with one controlled variable changed, noting the UI location and timestamp. First explain what this method does, why it is appropriate for 'Practicing safely on your phone', and predict the result. Baseline case: Define a safe phone-only study practice session. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A simulated terminal cannot prove a real Linux command was executed. Alternative explanation to consider: A visible symptom is not enough to determine hardware or software root cause. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Separate browser simulations from actual operating-system tools on a laptop. Self-check question: What is the safest reversible next troubleshooting action? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -361,6 +523,15 @@
           "interpretation": "A long password may still be vulnerable when reused across accounts; a reputable password manager supports unique secrets, but account recovery, device security and MFA remain important separate safeguards.",
           "task": "Design an account inventory with unique secrets and recovery procedure without storing real passwords.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Passwords and password managers",
+          "command": "Fictional accounts A/B/C and distinct generated-secret placeholders",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'Passwords and password managers', and predict the result. Baseline case: Compare a strong unique password to reused passwords and a password manager. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A long password may still be vulnerable when reused across accounts; a reputable password manager supports unique secrets, but account recovery, device security and MFA remain important separate safeguards. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Design an account inventory with unique secrets and recovery procedure without storing real passwords. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -380,6 +551,15 @@
           "interpretation": "MFA methods differ in phishing resistance; no single method makes accounts invulnerable.",
           "task": "Rank security keys, TOTP, push and SMS for a fictional administrator account, explaining phishing resistance, usability, lost-device recovery, and how the organization would verify account ownership.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Multifactor authentication",
+          "command": "Matrix: TOTP, hardware key, push, SMS; phishing resistance and recovery",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'Multifactor authentication', and predict the result. Baseline case: Evaluate MFA methods and a lost-device recovery case. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: MFA methods differ in phishing resistance; no single method makes accounts invulnerable. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Rank security keys, TOTP, push and SMS for a fictional administrator account, explaining phishing resistance, usability, lost-device recovery, and how the organization would verify account ownership. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -399,6 +579,15 @@
           "interpretation": "A passkey keeps a private key off the server, but device and recovery security still matter.",
           "task": "Describe public/private keys and explain how enrollment authorization is verified.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Passkeys and account recovery",
+          "command": "Fictional passkey credential record and new-device enrollment flow",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'Passkeys and account recovery', and predict the result. Baseline case: Explain passkeys and how platform sync affects account recovery. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A passkey keeps a private key off the server, but device and recovery security still matter. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Describe public/private keys and explain how enrollment authorization is verified. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -418,6 +607,15 @@
           "interpretation": "A padlock shows transport encryption, not that a website belongs to the intended organization.",
           "task": "Compare full hostnames, origin, certificate limits, and reporting route.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Recognizing fraudulent login pages",
+          "command": "Fictional domain: login-example-security.test; legitimate: account.example.test",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'Recognizing fraudulent login pages', and predict the result. Baseline case: Inspect signs of a fictional lookalike login page without entering credentials. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A padlock shows transport encryption, not that a website belongs to the intended organization. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Compare full hostnames, origin, certificate limits, and reporting route. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -437,6 +635,15 @@
           "interpretation": "A granted permission does not demonstrate that access was actually used.",
           "task": "Choose least-privilege settings and explain permission review cadence.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: App permissions and personal information",
+          "command": "Mock app requests camera, microphone and location for a text-only note feature",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'App permissions and personal information', and predict the result. Baseline case: Review an app permission inventory for minimal data collection. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A granted permission does not demonstrate that access was actually used. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Choose least-privilege settings and explain permission review cadence. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -456,6 +663,15 @@
           "interpretation": "One alert is not sufficient evidence to attribute the event to a person.",
           "task": "Record event time, affected account, action taken, evidence gaps and escalation.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security incident reporting at work",
+          "command": "Mock login alert: unknown device at 09:12, source unconfirmed",
+          "instruction": "Create an identity-to-resource access matrix with one successful and one denied case. First explain what this method does, why it is appropriate for 'Security incident reporting at work', and predict the result. Baseline case: Create a workplace account incident report with no leaked personal data. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: One alert is not sufficient evidence to attribute the event to a person. Alternative explanation to consider: A login result does not prove all underlying permissions or MFA recovery safeguards. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record event time, affected account, action taken, evidence gaps and escalation. Self-check question: Which authorization decision should be recorded for audit? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -475,6 +691,15 @@
           "interpretation": "An email from an unverified sender is not sufficient legal permission.",
           "task": "Prepare a client-authorized scope matrix and stop/escalation triggers.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security scope and rules of engagement",
+          "command": "Scope: app.training.test; written owner, dates, exclusions, stop conditions",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'Security scope and rules of engagement', and predict the result. Baseline case: Draft rules of engagement before assessing a fictional corporate app. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An email from an unverified sender is not sufficient legal permission. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prepare a client-authorized scope matrix and stop/escalation triggers. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -494,6 +719,15 @@
           "interpretation": "Business impact must be justified by context, not tool severity alone.",
           "task": "Separate confidentiality, integrity, availability, regulatory and reputation impact.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: From assets to business impact",
+          "command": "Asset-impact table: client portal, transaction database, privileged identity",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'From assets to business impact', and predict the result. Baseline case: Map a fictional financial services asset to business consequence. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Business impact must be justified by context, not tool severity alone. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Separate confidentiality, integrity, availability, regulatory and reputation impact. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -513,6 +747,15 @@
           "interpretation": "A hash supports byte integrity, not the identity of the original producer.",
           "task": "Write origin, extraction method, time zone, handling and uncertainty.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Documenting evidence ethically",
+          "command": "Synthetic event log, acquisition note, SHA-256 digest",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'Documenting evidence ethically', and predict the result. Baseline case: Preserve synthetic logs with provenance and data minimization. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A hash supports byte integrity, not the identity of the original producer. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write origin, extraction method, time zone, handling and uncertainty. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -532,6 +775,15 @@
           "interpretation": "A synthetic fixture does not establish a flaw on any real production site.",
           "task": "Report scope, reproducibility, prerequisite, impact, fix, and test limits.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Writing a professional finding",
+          "command": "Given: guest GET /account/102 returns 200; policy owner-only",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'Writing a professional finding', and predict the result. Baseline case: Write a professional finding about a synthetic unauthorized object response. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A synthetic fixture does not establish a flaw on any real production site. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Report scope, reproducibility, prerequisite, impact, fix, and test limits. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -551,6 +803,15 @@
           "interpretation": "Risk ranking needs exposure and exploit conditions, not only an abstract score.",
           "task": "Explain which action reduces expected impact sooner, including confidence and effort.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Risk prioritization tradeoffs",
+          "command": "Candidate risks: external private-record exposure, internal low-severity diagnostic leak",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'Risk prioritization tradeoffs', and predict the result. Baseline case: Prioritize two remediation actions under a fixed budget. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Risk ranking needs exposure and exploit conditions, not only an abstract score. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain which action reduces expected impact sooner, including confidence and effort. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -570,6 +831,15 @@
           "interpretation": "A fix to one endpoint does not certify the whole application.",
           "task": "Record before/after results, owner approval, residual risk and retest timestamp.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Remediation verification and closure",
+          "command": "Prepatch guest 200/owner 200; postpatch guest 403/owner 200",
+          "instruction": "Produce a short analyst memo separating verified evidence, inference, uncertainty and next step. First explain what this method does, why it is appropriate for 'Remediation verification and closure', and predict the result. Baseline case: Close a fictional finding with permitted and denied regression checks. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A fix to one endpoint does not certify the whole application. Alternative explanation to consider: An attractive narrative is not a substitute for reproducible evidence. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record before/after results, owner approval, residual risk and retest timestamp. Self-check question: What claim in your report would overstate the observed evidence? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -589,6 +859,15 @@
           "interpretation": "Client-side UI rules can be bypassed and cannot enforce resource permissions.",
           "task": "Write a three-row trust-boundary worksheet showing browser-supplied price, server-maintained authoritative price, and database record. Define a positive valid-price and negative tampered-price acceptance test.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Browser versus server responsibilities",
+          "command": "Fictional checkout: browser price=1; server price stored=20",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'Browser versus server responsibilities', and predict the result. Baseline case: Assign validation duties to browser, API and database trust boundaries. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Client-side UI rules can be bypassed and cannot enforce resource permissions. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write a three-row trust-boundary worksheet showing browser-supplied price, server-maintained authoritative price, and database record. Define a positive valid-price and negative tampered-price acceptance test. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -608,6 +887,15 @@
           "interpretation": "Validation and encoding solve different classes of mistakes.",
           "task": "Define type/length checks and context-sensitive HTML escaping; no live target needed.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Input validation and encoding",
+          "command": "Synthetic user input: 'A & B <demo>'; expected safe rendered text",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'Input validation and encoding', and predict the result. Baseline case: Compare input validation to output encoding with a harmless text fixture. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Validation and encoding solve different classes of mistakes. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define type/length checks and context-sensitive HTML escaping; no live target needed. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -627,6 +915,15 @@
           "interpretation": "Cookie flags lower risk but do not themselves establish user authorization.",
           "task": "Mark Secure, HttpOnly, SameSite, rotation, server invalidation and expiry expectations.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Session cookies and authentication",
+          "command": "Fictional user login → session cookie → expiry → logout",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'Session cookies and authentication', and predict the result. Baseline case: Design an authenticated session lifecycle on paper. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Cookie flags lower risk but do not themselves establish user authorization. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Mark Secure, HttpOnly, SameSite, rotation, server invalidation and expiry expectations. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -646,6 +943,15 @@
           "interpretation": "Hiding a client-side button doesn't secure a server API: direct requests can still reach the endpoint. The server must validate the authenticated principal's right to the requested object on every access.",
           "task": "Specify both positive and negative tests and returned-field restrictions.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: APIs and least privilege",
+          "command": "Mock GET /account/102 role matrix: owner allow, guest deny",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'APIs and least privilege', and predict the result. Baseline case: Write least-privilege API access checks for a synthetic private record. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Hiding a client-side button doesn't secure a server API: direct requests can still reach the endpoint. The server must validate the authenticated principal's right to the requested object on every access. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify both positive and negative tests and returned-field restrictions. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -665,6 +971,15 @@
           "interpretation": "Shared responsibility varies by service/provider and must be confirmed in contracts.",
           "task": "Identify responsibility for patching, identity, encryption configuration and monitoring.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Cloud responsibility boundaries",
+          "command": "Fictional cloud service table: provider infrastructure vs customer identity/data",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'Cloud responsibility boundaries', and predict the result. Baseline case: Assign security controls in SaaS, PaaS and IaaS responsibility scenarios. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Shared responsibility varies by service/provider and must be confirmed in contracts. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify responsibility for patching, identity, encryption configuration and monitoring. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -684,6 +999,15 @@
           "interpretation": "Never copy real secrets into course notes or public repository examples.",
           "task": "Define secret storage, rotation, restricted read access and audit logging.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Secrets and configuration hygiene",
+          "command": "Mock config: API_KEY placeholder in source vs environment-managed secret",
+          "instruction": "Diagram the browser, service, data store and trust boundaries of the fictional system. First explain what this method does, why it is appropriate for 'Secrets and configuration hygiene', and predict the result. Baseline case: Design secrets-handling and rollback checks for a fictional deployment. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never copy real secrets into course notes or public repository examples. Alternative explanation to consider: A configured control may still be ineffective if the actual request path bypasses it. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define secret storage, rotation, restricted read access and audit logging. Self-check question: What authorized read-only artifact would demonstrate the control's effect? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -703,6 +1027,15 @@
           "interpretation": "Suspicious email metadata is a lead, not proof of the sender's identity.",
           "task": "List validation by known independent contact route and escalation path.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: suspicious supplier invoice",
+          "command": "Mock invoice: urgent new bank details, different reply-to, unverified vendor",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: suspicious supplier invoice', and predict the result. Baseline case: Investigate a fictional supplier invoice without sending payment. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Suspicious email metadata is a lead, not proof of the sender's identity. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: List validation by known independent contact route and escalation path. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -722,6 +1055,15 @@
           "interpretation": "Restoring files doesn't by itself prove eradication of malicious access.",
           "task": "Prioritize evidence preservation, incident lead approval, isolation and restore planning.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: ransomware and recovery",
+          "command": "Simulated shared files unreadable, backups unverified, affected scope unknown",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: ransomware and recovery', and predict the result. Baseline case: Create a ransomware response decision tree for a fictitious company. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Restoring files doesn't by itself prove eradication of malicious access. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Prioritize evidence preservation, incident lead approval, isolation and restore planning. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -741,6 +1083,15 @@
           "interpretation": "A public-read misconfiguration proves risk, not historical theft.",
           "task": "Write exposure finding, least-privilege fix and positive/negative read retests.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: cloud storage exposure",
+          "command": "Mock policy: Principal '*', GetObject for confidential objects",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: cloud storage exposure', and predict the result. Baseline case: Classify a synthetic public storage policy and unknown access logs. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A public-read misconfiguration proves risk, not historical theft. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write exposure finding, least-privilege fix and positive/negative read retests. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -760,6 +1111,15 @@
           "interpretation": "Loss of an electronic health record service is an availability issue that can create patient-safety risks. It does not alone prove unauthorized access, data loss, or intentional sabotage.",
           "task": "Identify safety-critical workflows, approved escalation and restoration criteria.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: hospital system availability",
+          "command": "Simulated EHR unavailable, downtime procedure approved, no verified data loss",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: hospital system availability', and predict the result. Baseline case: Prioritize service availability and patient safety during a fictional hospital outage. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Loss of an electronic health record service is an availability issue that can create patient-safety risks. It does not alone prove unauthorized access, data loss, or intentional sabotage. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify safety-critical workflows, approved escalation and restoration criteria. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -779,6 +1139,15 @@
           "interpretation": "Disabling one account doesn't revoke every active integration session.",
           "task": "Build a deprovisioning checklist including tokens, sessions, groups and evidence.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: former employee access",
+          "command": "Synthetic identity disabled, but a third-party app token may remain active",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: former employee access', and predict the result. Baseline case: Review a departed employee's fictional access across systems. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Disabling one account doesn't revoke every active integration session. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Build a deprovisioning checklist including tokens, sessions, groups and evidence. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -798,6 +1167,15 @@
           "interpretation": "A board briefing should not claim external certification or a confirmed attacker without corroboration.",
           "task": "Write five executive sentences: known impact, top risk, budget action, owner and remaining uncertainty.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Case: board security briefing",
+          "command": "Three fictional findings: access-control leak, DNS downtime, unconfirmed identity alert",
+          "instruction": "Prepare a decision table with two plausible hypotheses and their disconfirming evidence. First explain what this method does, why it is appropriate for 'Case: board security briefing', and predict the result. Baseline case: Prepare a board briefing with evidence-backed uncertainties. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A board briefing should not claim external certification or a confirmed attacker without corroboration. Alternative explanation to consider: Business constraints and uncertainty must be disclosed rather than hidden. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write five executive sentences: known impact, top risk, budget action, owner and remaining uncertainty. Self-check question: What new evidence could reverse your recommended decision? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -817,6 +1195,15 @@
           "interpretation": "A diagram is a model, not a tested assertion of system security.",
           "task": "Mark trust boundaries, assets, identity checks and sensitive flows.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Map an application before securing it",
+          "command": "Context diagram: browser → API → database → third-party payment gateway",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Map an application before securing it', and predict the result. Baseline case: Draw a synthetic online store's actors, assets and trust boundaries. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A diagram is a model, not a tested assertion of system security. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Mark trust boundaries, assets, identity checks and sensitive flows. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -836,6 +1223,15 @@
           "interpretation": "Threat hypotheses need prioritization; listing all categories doesn't prove exploitability.",
           "task": "Identify one plausible threat per relevant category and a verifiable mitigation.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Build a simple threat model",
+          "command": "Mock model: user identity, order price, audit events, API responses",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Build a simple threat model', and predict the result. Baseline case: Apply STRIDE categories to a fictional login and order workflow. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Threat hypotheses need prioritization; listing all categories doesn't prove exploitability. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify one plausible threat per relevant category and a verifiable mitigation. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -855,6 +1251,15 @@
           "interpretation": "Frontend redirection after logout doesn't prove server sessions were invalidated.",
           "task": "Specify a session lifecycle acceptance matrix including successful login, expired cookie, server-side revocation after logout, token rotation, and a negative replay check, using only a mocked application.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Protect authentication and session state",
+          "command": "Workflow: login, cookie issuance, session rotation, logout, expiry",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Protect authentication and session state', and predict the result. Baseline case: Design session-state protections against stolen-session risk. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Frontend redirection after logout doesn't prove server sessions were invalidated. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Specify a session lifecycle acceptance matrix including successful login, expired cookie, server-side revocation after logout, token rotation, and a negative replay check, using only a mocked application. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -874,6 +1279,15 @@
           "interpretation": "Overcollection increases privacy risk; missing fields reduce investigation confidence.",
           "task": "Identify secrets/personal fields to exclude and how to preserve forensic utility.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Security logging without oversharing",
+          "command": "Fields: timestamp, actor token pseudonym, action, outcome, correlation ID",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Security logging without oversharing', and predict the result. Baseline case: Build a minimal-PII security event schema. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Overcollection increases privacy risk; missing fields reduce investigation confidence. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify secrets/personal fields to exclude and how to preserve forensic utility. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -893,6 +1307,15 @@
           "interpretation": "A recovered resolver doesn't prove queued transactions were processed correctly.",
           "task": "Define retries, fallbacks, alarms, rollbacks and business transaction acceptance.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Design for failure and recovery",
+          "command": "Synthetic failures: database unavailable and DNS stale",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Design for failure and recovery', and predict the result. Baseline case: Model backup and controlled failure recovery for two dependencies. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A recovered resolver doesn't prove queued transactions were processed correctly. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define retries, fallbacks, alarms, rollbacks and business transaction acceptance. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -912,6 +1335,15 @@
           "interpretation": "Control selection must balance realistic exposure, business effect and ongoing costs.",
           "task": "Rank by expected risk reduction, feasibility, ownership and validation.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Prioritize controls with a budget",
+          "command": "Candidates: MFA, backup restore testing, alert tuning, extra dashboard",
+          "instruction": "Draw a data-flow diagram with actors, assets and explicit trust transitions. First explain what this method does, why it is appropriate for 'Prioritize controls with a budget', and predict the result. Baseline case: Choose three security controls under a fictional $10,000 budget. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Control selection must balance realistic exposure, business effect and ongoing costs. Alternative explanation to consider: Design intentions are not proof of enforced security boundaries. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Rank by expected risk reduction, feasibility, ownership and validation. Self-check question: Which trust transition needs a least-privilege check? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -931,6 +1363,15 @@
           "interpretation": "An inventory is point-in-time; missing assets need follow-up instead of invented records.",
           "task": "Define minimum fields for warranty, maintenance and patch scheduling.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Create an equipment inventory",
+          "command": "Mock laptops with asset ID, model, OS, owner role, support status",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Create an equipment inventory', and predict the result. Baseline case: Create an authorized asset inventory without collecting personal passwords. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An inventory is point-in-time; missing assets need follow-up instead of invented records. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define minimum fields for warranty, maintenance and patch scheduling. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -950,6 +1391,15 @@
           "interpretation": "A reboot may temporarily clear memory or restart a failing dependency without resolving the underlying problem. Reproducible symptoms, timestamps, and application logs are needed to support a cause.",
           "task": "Record reproducible symptoms, impact, user consent, severity and next diagnostic step.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Handle an IT support request",
+          "command": "Ticket: app stalls on launch, reboot helped temporarily, no logs yet",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Handle an IT support request', and predict the result. Baseline case: Triage a fictional user support ticket. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A reboot may temporarily clear memory or restart a failing dependency without resolving the underlying problem. Reproducible symptoms, timestamps, and application logs are needed to support a cause. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Record reproducible symptoms, impact, user consent, severity and next diagnostic step. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -969,6 +1419,15 @@
           "interpretation": "A change ticket is not itself proof that implementation succeeded.",
           "task": "Write change-control acceptance criteria and a downtime notification.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Plan a maintenance change",
+          "command": "Change worksheet: scope, approver, time, backup, validation, rollback",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Plan a maintenance change', and predict the result. Baseline case: Plan an approved update and rollback for a test workstation. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A change ticket is not itself proof that implementation succeeded. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write change-control acceptance criteria and a downtime notification. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -988,6 +1447,15 @@
           "interpretation": "Copied shell commands may behave differently on Windows PowerShell and Linux.",
           "task": "For a command, explain syntax, options, exit status and where OS support can differ.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Learn command-line documentation",
+          "command": "python3 --help; pwd; ls --help",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Learn command-line documentation', and predict the result. Baseline case: Learn to interpret command documentation and safe flags. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Copied shell commands may behave differently on Windows PowerShell and Linux. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: For a command, explain syntax, options, exit status and where OS support can differ. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1007,6 +1475,15 @@
           "interpretation": "Two events shown next to each other are not automatically causally connected. Offsets, daylight-saving transitions, log ingestion delays, and clock drift may alter their apparent sequence.",
           "task": "Convert two synthetic ISO 8601 timestamps to UTC, preserve their original offsets, calculate elapsed time, and record one clock uncertainty that could change the event ordering.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Interpret logs and timestamps",
+          "command": "Log A ISO 8601 UTC; Log B offset-aware local; DST date specified",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Interpret logs and timestamps', and predict the result. Baseline case: Normalize fictional event timestamps across two time zones. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Two events shown next to each other are not automatically causally connected. Offsets, daylight-saving transitions, log ingestion delays, and clock drift may alter their apparent sequence. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Convert two synthetic ISO 8601 timestamps to UTC, preserve their original offsets, calculate elapsed time, and record one clock uncertainty that could change the event ordering. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1026,6 +1503,15 @@
           "interpretation": "An incomplete repair must not be marked resolved merely because a task was attempted.",
           "task": "List observed results, risk, escalation owner, approval and next check.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Escalation and professional communication",
+          "command": "Case: device still overheats after one cleaning step",
+          "instruction": "Write a change ticket including precondition, observable outcome, owner and rollback. First explain what this method does, why it is appropriate for 'Escalation and professional communication', and predict the result. Baseline case: Prepare a concise handoff for an unresolved repair. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An incomplete repair must not be marked resolved merely because a task was attempted. Alternative explanation to consider: Service availability should be verified after changes; a green status alone is incomplete. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: List observed results, risk, escalation owner, approval and next check. Self-check question: Which post-change measurement would justify rollback? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1045,6 +1531,15 @@
           "interpretation": "Encryption protects message confidentiality under appropriate key management, but origin authentication and tamper detection require appropriate integrity and identity mechanisms, such as authenticated encryption or a signature.",
           "task": "Explain why encryption, authenticated transfer and recipient verification are different controls.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Why encryption exists",
+          "command": "Document: private report sent across untrusted network",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'Why encryption exists', and predict the result. Baseline case: Choose confidentiality and integrity controls for a synthetic file transfer. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Encryption protects message confidentiality under appropriate key management, but origin authentication and tamper detection require appropriate integrity and identity mechanisms, such as authenticated encryption or a signature. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Explain why encryption, authenticated transfer and recipient verification are different controls. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1064,6 +1559,15 @@
           "interpretation": "Private keys must not be copied into shared course material.",
           "task": "Diagram who can encrypt, decrypt, sign or verify under each scheme.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Symmetric and asymmetric keys",
+          "command": "Fictional message exchange with symmetric key, public key and private key",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'Symmetric and asymmetric keys', and predict the result. Baseline case: Compare shared-secret and public-key workflows. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Private keys must not be copied into shared course material. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Diagram who can encrypt, decrypt, sign or verify under each scheme. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1083,6 +1587,15 @@
           "interpretation": "Matching hashes strongly support equal bytes, not file provenance.",
           "task": "Repeat hashing on the same bytes, then compare after changing one byte.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Hashes and integrity",
+          "command": "python3 -c 'import hashlib;print(hashlib.sha256(b\"academy\").hexdigest())'",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'Hashes and integrity', and predict the result. Baseline case: Calculate a digest for a harmless fixed string. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Matching hashes strongly support equal bytes, not file provenance. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Repeat hashing on the same bytes, then compare after changing one byte. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1102,6 +1615,15 @@
           "interpretation": "A checksum posted by the same compromised site cannot guarantee authenticity.",
           "task": "Define how a trusted public key and authenticated signature establish origin assumptions.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Digital signatures",
+          "command": "Mock release manifest with publisher public key and signature placeholder",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'Digital signatures', and predict the result. Baseline case: Explain signing and verification versus hashing alone. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A checksum posted by the same compromised site cannot guarantee authenticity. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define how a trusted public key and authenticated signature establish origin assumptions. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1121,6 +1643,15 @@
           "interpretation": "A valid certificate does not prove the business is trustworthy or its API authorization is correct.",
           "task": "List what a browser checks before displaying a secure connection.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: TLS certificates and trust",
+          "command": "Certificate fields: hostname, expiry, issuer chain, revocation status",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'TLS certificates and trust', and predict the result. Baseline case: Model a TLS trust decision for a fictional corporate service. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A valid certificate does not prove the business is trustworthy or its API authorization is correct. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: List what a browser checks before displaying a secure connection. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1140,6 +1671,15 @@
           "interpretation": "Never place real API keys into educational reports or source files.",
           "task": "Define dual-key overlap, safe revocation, monitoring and failed-rotation rollback.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Secrets rotation and recovery",
+          "command": "Synthetic key inventory: owner, scope, expiry, rotation window",
+          "instruction": "Identify the algorithm's security goal, relevant keys, input and output in a synthetic example. First explain what this method does, why it is appropriate for 'Secrets rotation and recovery', and predict the result. Baseline case: Design rotation and recovery for a fictional API secret. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never place real API keys into educational reports or source files. Alternative explanation to consider: A hash cannot substitute for encryption, authentication or key management. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define dual-key overlap, safe revocation, monitoring and failed-rotation rollback. Self-check question: Which property does the method provide and which does it not? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1159,6 +1699,15 @@
           "interpretation": "A reachable system, recognizable company name or informal invitation is not legal or ethical authorization for a technical test. Confirm the owner and approved testing boundaries in writing before any activity.",
           "task": "Write an authorization matrix including emergency stop conditions.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Permission before testing",
+          "command": "Synthetic scope: two internal hostnames, allowed tests, contact and window",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Permission before testing', and predict the result. Baseline case: Specify written approval and safe testing constraints. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A reachable system, recognizable company name or informal invitation is not legal or ethical authorization for a technical test. Confirm the owner and approved testing boundaries in writing before any activity. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write an authorization matrix including emergency stop conditions. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1178,6 +1727,15 @@
           "interpretation": "An inventory is a bounded list supplied or approved by the owner. Discovering additional reachable hosts without permission expands the scope and can affect unrelated services.",
           "task": "Identify role, IP, owner, data classification and excluded hosts.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Inventory an approved target",
+          "command": "Provided fictional asset list: app, resolver and test database",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Inventory an approved target', and predict the result. Baseline case: Build a target inventory only from supplied diagrams and owner records. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An inventory is a bounded list supplied or approved by the owner. Discovering additional reachable hosts without permission expands the scope and can affect unrelated services. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify role, IP, owner, data classification and excluded hosts. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1197,6 +1755,15 @@
           "interpretation": "An HTTP response can contradict expected access but does not by itself prove a specific implementation flaw. Use controlled comparisons with permitted and denied roles to isolate the authorization decision.",
           "task": "Write expected behavior and a bounded positive/negative test pair.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Form a test hypothesis",
+          "command": "Synthetic claim: guest sees private record due to missing server-side check",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Form a test hypothesis', and predict the result. Baseline case: Turn a suspected problem into a falsifiable hypothesis. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An HTTP response can contradict expected access but does not by itself prove a specific implementation flaw. Use controlled comparisons with permitted and denied roles to isolate the authorization decision. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write expected behavior and a bounded positive/negative test pair. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1216,6 +1783,15 @@
           "interpretation": "WSL 1 is not a hardened isolated vulnerable-target environment.",
           "task": "State which results are demonstrations and which count as real OS observations.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Use isolated and simulated labs",
+          "command": "Matrix: simulated API role picker vs isolated private VM server",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Use isolated and simulated labs', and predict the result. Baseline case: Compare browser simulation to isolated VM tests. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: WSL 1 is not a hardened isolated vulnerable-target environment. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: State which results are demonstrations and which count as real OS observations. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1235,6 +1811,15 @@
           "interpretation": "Evidence must not include real unauthorized data in public reports.",
           "task": "Redact fields, record reproducible request conditions and responsible recipient.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Handle findings responsibly",
+          "command": "Synthetic response includes fictitious private email and account ID",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Handle findings responsibly', and predict the result. Baseline case: Document findings with minimum data disclosure. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Evidence must not include real unauthorized data in public reports. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Redact fields, record reproducible request conditions and responsible recipient. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1254,6 +1839,15 @@
           "interpretation": "A patch that blocks legitimate owner access is not acceptable remediation.",
           "task": "Write test owner, prerequisites, expected results, rollback and follow-up.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Write a validation plan",
+          "command": "Expected guest 403, owner 200; prepatch guest 200",
+          "instruction": "Write a scope-of-work record with owner, approved assets, allowable methods and stop condition. First explain what this method does, why it is appropriate for 'Write a validation plan', and predict the result. Baseline case: Define retesting and acceptance under client approval. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A patch that blocks legitimate owner access is not acceptable remediation. Alternative explanation to consider: Technical possibility does not equal permission to test. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Write test owner, prerequisites, expected results, rollback and follow-up. Self-check question: What observation requires pausing and obtaining renewed authorization? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1273,6 +1867,15 @@
           "interpretation": "Successful DNS lookup confirms name-to-address resolution only. It does not prove that routing, TCP connection, TLS validation or an HTTP business transaction will succeed.",
           "task": "Label the stage, expected success signal and failure symptom for each hop.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Trace a website request end to end",
+          "command": "Diagram: browser → resolver → gateway → internal app",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Trace a website request end to end', and predict the result. Baseline case: Trace a fictional browser request across DNS, TCP and HTTP. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Successful DNS lookup confirms name-to-address resolution only. It does not prove that routing, TCP connection, TLS validation or an HTTP business transaction will succeed. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Label the stage, expected success signal and failure symptom for each hop. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1292,6 +1895,15 @@
           "interpretation": "The /26 network beginning at 10.40.0.64 spans through 10.40.0.127.",
           "task": "Calculate range, prefix, address count, and conventional usable hosts.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Subnets with a pencil",
+          "command": "python3 -c 'import ipaddress;print(ipaddress.ip_network(\"10.40.0.64/26\"))'",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Subnets with a pencil', and predict the result. Baseline case: Solve /24 and /26 subnets manually then verify offline. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The /26 network beginning at 10.40.0.64 spans through 10.40.0.127. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Calculate range, prefix, address count, and conventional usable hosts. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1311,6 +1923,15 @@
           "interpretation": "Network routes depend on actual masks, interfaces and ARP/neighbor state.",
           "task": "Draw destination MAC decision and routed IP path without sending packets.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Model a packet journey",
+          "command": "Mock client 10.40.0.20/24; server 10.40.1.30/24; gateway 10.40.0.1",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Model a packet journey', and predict the result. Baseline case: Explain packet next-hop behavior for same-subnet vs remote destinations. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Network routes depend on actual masks, interfaces and ARP/neighbor state. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draw destination MAC decision and routed IP path without sending packets. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1330,6 +1951,15 @@
           "interpretation": "An HTTP 503 proves a response arrived; it doesn't identify the failing backend dependency.",
           "task": "Match each symptom to the corresponding layer and next diagnostic observation.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Compare DNS, TCP and HTTP errors",
+          "command": "Samples: NXDOMAIN; TCP timeout; HTTP 503",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Compare DNS, TCP and HTTP errors', and predict the result. Baseline case: Classify fictional DNS, TCP and HTTP failures. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: An HTTP 503 proves a response arrived; it doesn't identify the failing backend dependency. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Match each symptom to the corresponding layer and next diagnostic observation. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1349,6 +1979,15 @@
           "interpretation": "Do not scan or change any third-party home or corporate network.",
           "task": "Draft a five-layer plan—interface, route, resolver, permitted connection and application—listing a read-only observation, expected outcome and stop condition at each layer.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Plan safe network troubleshooting",
+          "command": "Checklist: adapter, route, resolver, connection, application",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Plan safe network troubleshooting', and predict the result. Baseline case: Design a minimal-impact diagnosis for a private authorized network. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Do not scan or change any third-party home or corporate network. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Draft a five-layer plan—interface, route, resolver, permitted connection and application—listing a read-only observation, expected outcome and stop condition at each layer. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1368,6 +2007,15 @@
           "interpretation": "Correcting one component does not prove every affected client is restored.",
           "task": "Separate timeline, facts, contributing factors, validation and unknown impact.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Write a network diagnosis memo",
+          "command": "Synthetic outage includes wrong DNS A record and a bad client route",
+          "instruction": "Create a small fictional address/route table and test two competing failure explanations. First explain what this method does, why it is appropriate for 'Write a network diagnosis memo', and predict the result. Baseline case: Write a professional network troubleshooting memo. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Correcting one component does not prove every affected client is restored. Alternative explanation to consider: A response from one layer does not prove end-to-end service availability. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Separate timeline, facts, contributing factors, validation and unknown impact. Self-check question: Which intermediate observation separates the two hypotheses? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1387,6 +2035,15 @@
           "interpretation": "Code should be tested against the actual interpreter version.",
           "task": "Predict and verify output, identify variable assignment and arithmetic.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Read a simple Python script",
+          "command": "python3 -c 'x=3;print(x+2)'",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Read a simple Python script', and predict the result. Baseline case: Explain a tiny Python program's inputs and output. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Code should be tested against the actual interpreter version. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Predict and verify output, identify variable assignment and arithmetic. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1406,6 +2063,15 @@
           "interpretation": "The count should be 2 for INFO in this synthetic three-item list. Frequency is a numerical summary and does not establish the business impact, truth or severity of any event.",
           "task": "Count synthetic labels and explain the structure of an event list.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Work with a mock event list",
+          "command": "python3 -c 'events=[\"INFO\",\"WARN\",\"INFO\"];print(events.count(\"INFO\"))'",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Work with a mock event list', and predict the result. Baseline case: Analyze fictional event records without accessing real logs. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The count should be 2 for INFO in this synthetic three-item list. Frequency is a numerical summary and does not establish the business impact, truth or severity of any event. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Count synthetic labels and explain the structure of an event list. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1425,6 +2091,15 @@
           "interpretation": "The nonempty string 'False' is truthy; explicit parsing is required.",
           "task": "Predict and record outputs False, True, False. Explain why the string 'False' is truthy, then outline explicit parsing rules to distinguish user-entered text from actual boolean values.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Use decisions without mixing types",
+          "command": "python3 -c 'print(3==\"3\",bool(\"False\"),bool(False))'",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Use decisions without mixing types', and predict the result. Baseline case: Compare integer, string and boolean conditions. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: The nonempty string 'False' is truthy; explicit parsing is required. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Predict and record outputs False, True, False. Explain why the string 'False' is truthy, then outline explicit parsing rules to distinguish user-entered text from actual boolean values. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1444,6 +2119,15 @@
           "interpretation": "A threshold match is a detection signal, not incident proof.",
           "task": "Define expected inputs of 3, 5, 6, and 8 for the synthetic threshold function, explain why only 6 and 8 return True, and describe how to validate the input type before comparing.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Make a reusable function",
+          "command": "python3 -c 'f=lambda count: count>5;print(f(3),f(8))'",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Make a reusable function', and predict the result. Baseline case: Create a reusable pure function for a simulated alert threshold. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: A threshold match is a detection signal, not incident proof. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Define expected inputs of 3, 5, 6, and 8 for the synthetic threshold function, explain why only 6 and 8 return True, and describe how to validate the input type before comparing. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1463,6 +2147,15 @@
           "interpretation": "Never process or store real passwords and authentication tokens as examples.",
           "task": "Identify secret fields for removal or pseudonymization before export.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Recognize data sensitivity",
+          "command": "Sample dataset contains fictional identity, token placeholder and event timestamp",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Recognize data sensitivity', and predict the result. Baseline case: Minimize personal data in scripted security reports. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Never process or store real passwords and authentication tokens as examples. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Identify secret fields for removal or pseudonymization before export. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     },
@@ -1482,6 +2175,15 @@
           "interpretation": "Passing a happy-path demo does not establish robust correctness.",
           "task": "Test missing keys, wrong types, Unicode data and incomplete entries.",
           "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets."
+        },
+        {
+          "id": "s2",
+          "heading": "Independent verification and evidence challenge: Validate results and limitations",
+          "command": "Synthetic script reports 2 failed events but log has 3, one malformed",
+          "instruction": "Trace one normal and one malformed synthetic record through the described script. First explain what this method does, why it is appropriate for 'Validate results and limitations', and predict the result. Baseline case: Validate program output and state uncertainty. Work offline if the specified tool is unavailable.",
+          "interpretation": "Expected reasoning benchmark: Passing a happy-path demo does not establish robust correctness. Alternative explanation to consider: Silent omission of invalid records can produce misleading security conclusions. Compare measured evidence with the benchmark; do not invent command output.",
+          "task": "Deliver a dated evidence table with command/method, predicted outcome, actual or explicitly simulated observation, one competing hypothesis, and a safe verification step. Original assignment: Test missing keys, wrong types, Unicode data and incomplete entries. Self-check question: How should invalid input be recorded without hiding the failure? Model-answer criterion: explicitly use the observed evidence and explain a limitation before selecting a next step.",
+          "safety": "Follow written authorization, protect private data and limit changes to your own disposable training assets. Synthetic evidence is acceptable and must be labeled. Unavailable commands are not permission to run them on a third-party target."
         }
       ]
     }
