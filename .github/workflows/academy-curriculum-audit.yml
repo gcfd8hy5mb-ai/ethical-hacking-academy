@@ -67,3 +67,21 @@ jobs:
         run: node tests/test_practice_checkpoints.mjs
       - name: Verify Batch 2 practice depth and visible self-checks
         run: node tests/test_batch2_depth.mjs
+
+  batch5-platform-check:
+    name: Batch 5 loopback service on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    timeout-minutes: 6
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise real loopback HTTP faults and repairs
+        run: python -m unittest discover -s tests -p 'test_batch5_local_service.py' -v
