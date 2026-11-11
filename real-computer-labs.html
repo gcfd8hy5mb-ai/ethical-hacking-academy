@@ -46,6 +46,12 @@ python3 local-vm-labs/batch4_fault_isolation.py --case dns</pre>
 <p>Windows users: use <code>py -3</code> in place of <code>python3</code>. The trainer does not access a real network, and it never changes your saved course progress.</p>
 <p><a class="button" href="https://github.com/gcfd8hy5mb-ai/ethical-hacking-academy/blob/main/local-vm-labs/BATCH4_VM_ADMIN_NETWORK.md">Open complete VM and network workbook →</a></p>
 </section>
+<section class="sheet"><h2>Batch 5 · Live localhost service and repair</h2>
+<p>New real-machine lab: start an actual HTTP service on <code>127.0.0.1</code> only, diagnose three controlled faults, repair the service configuration and run an objective HTTP response check. Works with Python 3 on your own Windows or Linux computer or isolated VM.</p>
+<pre>python3 local-vm-labs/batch5_local_service.py init --workspace "$HOME/academy-batch5"
+python3 local-vm-labs/batch5_local_service.py serve --workspace "$HOME/academy-batch5"</pre>
+<p>In another terminal, run <code>verify</code> with the same workspace. Windows: use <code>py -3</code>. Commands run on your own computer, not in this website. The service never binds a public interface.</p>
+<p><a class="button" href="https://github.com/gcfd8hy5mb-ai/ethical-hacking-academy/blob/main/local-vm-labs/BATCH5_LIVE_LOCAL_LABS.md">Open Batch 5 step-by-step field guide →</a></p></section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
