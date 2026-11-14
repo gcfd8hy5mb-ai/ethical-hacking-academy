@@ -90,6 +90,14 @@ python3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME
 py -3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME\academy-batch10"</pre>
 <p>Start the server in one terminal and use a second terminal for inspect, submit, repair and grade. The workbook explains each command and the scoring boundaries.</p>
 <p><a class="button" href="./local-vm-labs/BATCH10_LIVE_DEFENSE_PRACTICUM.md">Open Batch 10 full practicum workbook →</a></p></section>
+<section class="sheet"><h2>Batch 11 · SOC evidence correlation and incident response</h2>
+<p>New independent security-operations coursework links synthetic Windows, Linux, DNS, application and offboarding evidence. Includes a 16-event offline JSONL dataset, four evidence-driven investigations, SHA-256 integrity check, a 12-point objective checkpoint, seven regression tests, and a 30-point human-review capstone. No network scan or real host-log collection.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch11_soc_correlation.py init --workspace "$HOME/academy-batch11"
+python3 local-vm-labs/batch11_soc_correlation.py analyze --workspace "$HOME/academy-batch11"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch11_soc_correlation.py init --workspace "$HOME\academy-batch11"
+py -3 local-vm-labs/batch11_soc_correlation.py analyze --workspace "$HOME\academy-batch11"</pre>
+<p>Review the evidence, complete the answers.json template, and run the grade command in the workbook. All data remains in a new disposable local folder.</p>
+<p><a class="button" href="./local-vm-labs/BATCH11_SOC_CORRELATION.md">Open Batch 11 investigation workbook →</a></p></section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
