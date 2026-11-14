@@ -82,6 +82,14 @@ py -3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HO
 python3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HOME/academy-batch9" --case windows</pre>
 <p>Edit answers.json in the new disposable workspace, then run the <code>grade</code> command explained in the workbook. This program does not affect lesson progress or cloud records.</p>
 <p><a class="button" href="./local-vm-labs/BATCH9_INDEPENDENT_PRACTICAL.md">Open Batch 9 full practical workbook →</a></p></section>
+<section class="sheet"><h2>Batch 10 · Live defensive red-team/blue-team practicum</h2>
+<p>Diagnose an unknown training fault in a <strong>real localhost HTTP service</strong>, lock your initial diagnosis, select an allowlisted repair and check live HTTP health, exact report data, caching policy and restricted-route denial. Four randomized fault types, ten-point objective scoring and a separate 30-point written report rubric. No external target access or existing student progress changes.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch10_live_defense_practicum.py init --workspace "$HOME/academy-batch10"
+python3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME/academy-batch10"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch10_live_defense_practicum.py init --workspace "$HOME\academy-batch10"
+py -3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME\academy-batch10"</pre>
+<p>Start the server in one terminal and use a second terminal for inspect, submit, repair and grade. The workbook explains each command and the scoring boundaries.</p>
+<p><a class="button" href="./local-vm-labs/BATCH10_LIVE_DEFENSE_PRACTICUM.md">Open Batch 10 full practicum workbook →</a></p></section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
