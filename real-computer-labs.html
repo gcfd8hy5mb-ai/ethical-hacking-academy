@@ -74,6 +74,14 @@ python3 local-vm-labs/batch6_local_web_assessment.py serve --workspace "$HOME/ac
 <pre>python3 local-vm-labs/batch7_integrated_capstone.py</pre>
 <p>Begin with the offline/read-only exercises; the optional executable example reuses the Batch 7 loopback-only fixture on an owned computer. Windows: use <code>py -3</code>.</p>
 <p><a class="button" href="./local-vm-labs/BATCH8_INDEPENDENT_INVESTIGATION.md">Open Batch 8 independent investigation workbook →</a></p></section>
+<section class="sheet"><h2>Batch 9 · Independent practical investigation</h2>
+<p>Five offline evidence investigations across Windows, Linux, DNS, cross-tenant web authorization and cloud session revocation. Includes a Python 3 objective selection grader (15 points), SHA-256 training-evidence checks, detailed troubleshooting workbook and 25-point human-reviewed final incident report. No network access, target scanning or external services.</p>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch9_independent_investigation.py init --workspace "$HOME\academy-batch9"
+py -3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HOME\academy-batch9" --case windows</pre>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch9_independent_investigation.py init --workspace "$HOME/academy-batch9"
+python3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HOME/academy-batch9" --case windows</pre>
+<p>Edit answers.json in the new disposable workspace, then run the <code>grade</code> command explained in the workbook. This program does not affect lesson progress or cloud records.</p>
+<p><a class="button" href="./local-vm-labs/BATCH9_INDEPENDENT_PRACTICAL.md">Open Batch 9 full practical workbook →</a></p></section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>
