@@ -175,6 +175,26 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
                 self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
                 self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
 
+    def test_phase9_professional_security_course_rewrites(self):
+        target={
+            10:"Security Analysis and Professional Practice",
+            11:"Defensive Web and Cloud Fundamentals",
+            15:"Introduction to Defensive Cryptography",
+            16:"Security Monitoring and Log Analysis",
+            17:"Safe Authorized Assessment Methodology",
+        }
+        for index,title in target.items():
+            course=DATA["courses"][index]
+            self.assertEqual(course["title"],title)
+            self.assertEqual(len(course["lessons"]),6)
+            for lesson in course["lessons"]:
+                body=lesson[1]
+                self.assertEqual(body.count("APPLIED SECURITY REVIEW —"),1)
+                self.assertIn("MECHANISM AND CONFIDENCE LIMITS:",body)
+                self.assertIn("INDEPENDENT ASSIGNMENT:",body)
+                self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+                self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
