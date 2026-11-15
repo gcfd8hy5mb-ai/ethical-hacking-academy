@@ -21,8 +21,11 @@ for(const unit of units){
  for(const section of unit.sections){
   assert.ok(!keys.has(section.id),'Duplicate practice section ID: '+unit.id);
   keys.add(section.id);
-  for(const field of ['heading','command','instruction','interpretation','task','safety'])
+  for(const field of ['heading','instruction','interpretation','task','safety'])
    assert.ok(typeof section[field]==='string'&&section[field].trim().length>15,unit.id+' missing '+field);
+  // Valid shell commands can be short (for example, pwd or ls).
+  // Require a real command, not artificial padding to satisfy prose length checks.
+  assert.ok(typeof section.command==='string'&&section.command.trim().length>=2,unit.id+' missing command');
  }
  const verify=unit.sections.find(s=>s.id==='s2');
  assert.match(verify.task,/Self-check question:/,'Self-check question missing '+unit.id);
