@@ -155,6 +155,26 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
             self.assertIn("EVIDENCE LIMITATIONS AND POST-FIX VALIDATION:",body)
             self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
 
+    def test_windows_network_and_programming_editorial_repairs(self):
+        expected={
+            7:("Windows Administration and Security",8),
+            8:("Networking Practice and Troubleshooting",8),
+            9:("Programming Logic for Security Beginners",8),
+            19:("Beginner Python Logic and Defensive Automation",6),
+        }
+        for index,(title,count) in expected.items():
+            course=DATA["courses"][index]
+            self.assertEqual(course["title"],title)
+            self.assertEqual(len(course["lessons"]),count)
+            for lesson in course["lessons"]:
+                body=lesson[1]
+                self.assertEqual(body.count("PROFESSIONAL FIELD STUDY —"),1)
+                self.assertIn("UNDERLYING MECHANISM:",body)
+                self.assertIn("WORKED EVIDENCE AND ALTERNATIVE INTERPRETATION:",body)
+                self.assertIn("INDEPENDENT PRACTICE:",body)
+                self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+                self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
