@@ -49,6 +49,23 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
         self.assertEqual(tuple(l[0] for l in course["lessons"]),REPORT_TITLES)
         self.assertTrue(all("APPLIED REPORTING PRACTICUM —" in l[1] for l in course["lessons"]))
 
+    def test_hardware_device_specific_lesson_depth(self):
+        course=DATA["courses"][25]
+        self.assertEqual(course["title"],"Ethical Hacking Hardware Foundations")
+        self.assertEqual(len(course["lessons"]),20)
+        for lesson in course["lessons"]:
+            self.assertEqual(lesson[1].count("DEVICE-SPECIFIC MASTERY EXPANSION —"),1)
+            self.assertIn("INTERPRETING EVIDENCE AND TROUBLESHOOTING:",lesson[1])
+            self.assertIn("INDEPENDENT MASTERY ASSIGNMENT:",lesson[1])
+
+    def test_identity_lesson_depth(self):
+        course=DATA["courses"][6]
+        self.assertEqual(course["title"],"Digital Identity and Everyday Security")
+        self.assertEqual(len(course["lessons"]),6)
+        for lesson in course["lessons"]:
+            self.assertEqual(lesson[1].count("IDENTITY-SECURITY MASTERY EXPANSION —"),1)
+            self.assertIn("GUIDED SAFE PRACTICE:",lesson[1])
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
