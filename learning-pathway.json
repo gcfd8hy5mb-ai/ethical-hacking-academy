@@ -56,6 +56,14 @@
         [
           "Practical Mastery Checkpoint",
           "practical-mastery-checkpoint.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
         ]
       ],
       "targetHours": 35,
@@ -213,6 +221,34 @@
         [
           "Advanced Reasoning Diagnostic",
           "advanced-reasoning-diagnostic.html"
+        ],
+        [
+          "Independent Systems & Incident Fieldbook · Four Guided Investigations",
+          "independent-systems-incident-fieldbook.html"
+        ],
+        [
+          "Diagnostic Evidence Simulator · Ten Independent Investigations",
+          "diagnostic-evidence-simulator.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
         ]
       ],
       "targetHours": 75,
@@ -284,6 +320,38 @@
         [
           "Practical Mastery Checkpoint",
           "practical-mastery-checkpoint.html"
+        ],
+        [
+          "Independent Systems & Incident Fieldbook · Four Guided Investigations",
+          "independent-systems-incident-fieldbook.html"
+        ],
+        [
+          "Diagnostic Evidence Simulator · Ten Independent Investigations",
+          "diagnostic-evidence-simulator.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Security Operations & Purple Team Fieldbook · Four Deep-Dive Modules",
+          "security-operations-purple-team-fieldbook.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
         ]
       ],
       "targetHours": 55,
@@ -369,6 +437,46 @@
         [
           "Advanced Reasoning Diagnostic",
           "advanced-reasoning-diagnostic.html"
+        ],
+        [
+          "Independent Systems & Incident Fieldbook · Four Guided Investigations",
+          "independent-systems-incident-fieldbook.html"
+        ],
+        [
+          "Authorized Red-Team & Purple-Team Field Labs · Six Workshops",
+          "authorized-redteam-purpleteam-field-labs.html"
+        ],
+        [
+          "Diagnostic Evidence Simulator · Ten Independent Investigations",
+          "diagnostic-evidence-simulator.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Security Operations & Purple Team Fieldbook · Four Deep-Dive Modules",
+          "security-operations-purple-team-fieldbook.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
+        ],
+        [
+          "Advanced Authorized Red-Team Field Guide · Four Professional Workshops",
+          "advanced-authorized-redteam-field-guide.html"
         ]
       ],
       "targetHours": 75,
@@ -511,6 +619,46 @@
         [
           "Advanced Reasoning Diagnostic",
           "advanced-reasoning-diagnostic.html"
+        ],
+        [
+          "Independent Systems & Incident Fieldbook · Four Guided Investigations",
+          "independent-systems-incident-fieldbook.html"
+        ],
+        [
+          "Authorized Red-Team & Purple-Team Field Labs · Six Workshops",
+          "authorized-redteam-purpleteam-field-labs.html"
+        ],
+        [
+          "Diagnostic Evidence Simulator · Ten Independent Investigations",
+          "diagnostic-evidence-simulator.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Security Operations & Purple Team Fieldbook · Four Deep-Dive Modules",
+          "security-operations-purple-team-fieldbook.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
+        ],
+        [
+          "Advanced Authorized Red-Team Field Guide · Four Professional Workshops",
+          "advanced-authorized-redteam-field-guide.html"
         ]
       ],
       "targetHours": 45,
@@ -649,6 +797,34 @@
         [
           "Practice Evidence Transfer",
           "practice-evidence-transfer.html"
+        ],
+        [
+          "Authorized Red-Team & Purple-Team Field Labs · Six Workshops",
+          "authorized-redteam-purpleteam-field-labs.html"
+        ],
+        [
+          "Diagnostic Evidence Simulator · Ten Independent Investigations",
+          "diagnostic-evidence-simulator.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Security Operations & Purple Team Fieldbook · Four Deep-Dive Modules",
+          "security-operations-purple-team-fieldbook.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
+        ],
+        [
+          "Advanced Authorized Red-Team Field Guide · Four Professional Workshops",
+          "advanced-authorized-redteam-field-guide.html"
         ]
       ],
       "targetHours": 75,
@@ -788,6 +964,38 @@
         [
           "Advanced Reasoning Diagnostic",
           "advanced-reasoning-diagnostic.html"
+        ],
+        [
+          "Authorized Red-Team & Purple-Team Field Labs · Six Workshops",
+          "authorized-redteam-purpleteam-field-labs.html"
+        ],
+        [
+          "Integrated Multi-Stage Investigation Studio · Seven Cases & 28 Evidence Stages",
+          "integrated-multistage-investigation-studio.html"
+        ],
+        [
+          "Real-System Read-Only Lab Manual · Eight Guided Windows/Linux Exercises",
+          "real-system-readonly-lab-manual.html"
+        ],
+        [
+          "Repeatable Local VM Practice · Six Independent Windows/Linux Labs",
+          "repeatable-local-vm-practice.html"
+        ],
+        [
+          "Independent Local Investigation Workbench · Four Cases and Sixteen Evidence Stages",
+          "independent-local-investigation-workbench.html"
+        ],
+        [
+          "Security Operations & Purple Team Fieldbook · Four Deep-Dive Modules",
+          "security-operations-purple-team-fieldbook.html"
+        ],
+        [
+          "Cross-System Defensive Operations Labs · Four Deep Investigations",
+          "cross-system-defensive-operations-labs.html"
+        ],
+        [
+          "Advanced Authorized Red-Team Field Guide · Four Professional Workshops",
+          "advanced-authorized-redteam-field-guide.html"
         ]
       ],
       "targetHours": 35,

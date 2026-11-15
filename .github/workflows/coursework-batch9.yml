@@ -1,0 +1,25 @@
+name: Coursework Batch 9 Regression
+on:
+  pull_request:
+    paths:
+      - 'learning-pathway.json'
+      - '*.html'
+      - 'app.js'
+      - 'tests/test_coursework_batch9.mjs'
+      - '.github/workflows/coursework-batch9.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coursework-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Coursework links and interaction regression
+        run: node tests/test_coursework_batch9.mjs
+      - name: Existing approved desktop regression
+        run: node tests/test_approved_desktop_v2.mjs
