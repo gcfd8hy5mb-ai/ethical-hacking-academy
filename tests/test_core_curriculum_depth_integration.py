@@ -195,6 +195,27 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
                 self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
                 self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
 
+    def test_final_24_foundational_lessons_have_specific_examples(self):
+        expected={0:"Cybersecurity Foundations",
+                  1:"Computer and Operating-System Essentials",
+                  4:"Getting Comfortable With Computers",
+                  6:"Digital Identity and Everyday Security"}
+        for index,title in expected.items():
+            course=DATA["courses"][index]
+            self.assertEqual(course["title"],title)
+            self.assertEqual(len(course["lessons"]),6)
+            for lesson in course["lessons"]:
+                body=lesson[1]
+                self.assertEqual(body.count("SUBJECT-SPECIFIC WORKED CASE —"),1)
+                self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+
+    def test_all_tracked_generic_scaffolds_gone(self):
+        for course in DATA["courses"]:
+            for lesson in course["lessons"]:
+                body=lesson[1]
+                self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
+                self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
