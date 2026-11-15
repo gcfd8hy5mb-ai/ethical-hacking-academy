@@ -66,6 +66,26 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
             self.assertEqual(lesson[1].count("IDENTITY-SECURITY MASTERY EXPANSION —"),1)
             self.assertIn("GUIDED SAFE PRACTICE:",lesson[1])
 
+    def test_all_primary_lesson_bodies_reach_triage_threshold(self):
+        import re
+        word_pattern=re.compile(r"\\b[\\w]+(?:[-’'][\\w]+)*\\b",flags=re.UNICODE)
+        short=[(course["title"],lesson[0])
+               for course in DATA["courses"]
+               for lesson in course["lessons"]
+               if len(word_pattern.findall(lesson[1]))<500]
+        self.assertEqual(short,[],f"Lessons needing length triage: {short}")
+
+    def test_remaining_foundation_depth_integrations(self):
+        targeted={0:5,1:6,2:6,4:5,12:6,13:5,14:6}
+        for index,expected in targeted.items():
+            lessons=DATA["courses"][index]["lessons"]
+            matches=[l for l in lessons if "FOUNDATION DEPTH INTEGRATION —" in l[1]]
+            self.assertEqual(len(matches),expected,DATA["courses"][index]["title"])
+            for lesson in matches:
+                self.assertEqual(lesson[1].count("FOUNDATION DEPTH INTEGRATION —"),1)
+                self.assertIn("WORKED FICTIONAL EXAMPLE:",lesson[1])
+                self.assertIn("INDEPENDENT TASK:",lesson[1])
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
