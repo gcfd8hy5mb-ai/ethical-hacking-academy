@@ -68,7 +68,7 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
 
     def test_all_primary_lesson_bodies_reach_triage_threshold(self):
         import re
-        word_pattern=re.compile(r"\\b[\\w]+(?:[-’'][\\w]+)*\\b",flags=re.UNICODE)
+        word_pattern=re.compile(r"\b[\w]+(?:[-’'][\w]+)*\b",flags=re.UNICODE)
         short=[(course["title"],lesson[0])
                for course in DATA["courses"]
                for lesson in course["lessons"]
