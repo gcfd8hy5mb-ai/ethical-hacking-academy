@@ -21,3 +21,59 @@ body.auth-locked #academy-desktop-toggle{display:none!important}
 #academy-desktop-workspace .desk-commands{display:flex;gap:8px;flex-wrap:wrap}
 #academy-desktop-workspace .desk-status{min-height:20px;font-size:12px}
 @media(max-width:750px){#academy-desktop-toggle{bottom:80px;right:12px;font-size:12px}#academy-desktop-workspace{padding:18px 12px}#academy-desktop-workspace .desk-main{grid-template-columns:1fr}#academy-desktop-workspace h2{font-size:25px}}
+
+/* Desktop redesign continuation: retain existing workspace behavior and palette. */
+@media (min-width: 900px) {
+  #academy-desktop-workspace {
+    padding: clamp(20px, 2.2vw, 36px) clamp(20px, 3vw, 52px) 64px;
+    background: radial-gradient(ellipse at 85% 0%, #203641 0%, #101b23 45%, #0b1118 100%);
+  }
+  #academy-desktop-workspace .desk-head,
+  #academy-desktop-workspace .desk-main,
+  #academy-desktop-workspace .desk-keyboard-help,
+  #academy-desktop-workspace .desk-live-message {max-width: 1560px}
+  #academy-desktop-workspace .desk-head {
+    align-items:center;
+    padding: 12px 0 20px;
+    margin-bottom:22px;
+    border-bottom: 1px solid #4b5d61;
+  }
+  #academy-desktop-workspace .desk-main {
+    grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);
+    align-items:start;
+    gap:18px;
+  }
+  #academy-desktop-workspace .desk-panel {
+    padding:clamp(20px,2vw,30px);
+    background:linear-gradient(150deg,#1b2a32,#132129);
+    border-color:#415960;
+    box-shadow:0 14px 42px #0003;
+  }
+  #academy-desktop-workspace .desk-panel h3 {
+    font-size:17px;
+    letter-spacing:.04em;
+    padding-bottom:12px;
+    border-bottom:1px solid #41545a;
+  }
+  #academy-desktop-workspace .desk-terminal {min-height:220px}
+  #academy-desktop-workspace .desk-actions {gap:8px}
+  #academy-desktop-workspace .desk-result {max-height:440px;overflow:auto}
+}
+#academy-desktop-workspace h2 {
+  font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
+  letter-spacing:-.04em;
+  font-weight:700;
+}
+#academy-desktop-workspace h2::before {content:">_ ";color:#83c9bd}
+#academy-desktop-workspace :is(button,input,textarea,select) {transition:border-color .16s ease,background-color .16s ease}
+#academy-desktop-workspace button:hover {background:#46545a;border-color:#f0c987}
+#academy-desktop-workspace .desk-panel :is(input,textarea):focus {border-color:#e1bd7d}
+#academy-desktop-workspace .desk-terminal {overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(min-width:900px) and (max-width:1199px) {
+  #academy-desktop-workspace .desk-main {grid-template-columns:minmax(0,1fr) minmax(300px,.9fr)}
+}
+@media(max-width:899px) {
+  #academy-desktop-workspace .desk-main {grid-template-columns:minmax(0,1fr)}
+  #academy-desktop-workspace {padding:18px 14px 96px}
+  #academy-desktop-workspace .desk-head {flex-wrap:wrap}
+}
