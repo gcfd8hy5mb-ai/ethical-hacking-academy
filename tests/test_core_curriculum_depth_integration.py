@@ -117,6 +117,24 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
         for lesson in DATA["courses"][24]["lessons"]:
             self.assertIn("APPLIED REPORTING PRACTICUM —",lesson[1])
 
+    def test_advanced_four_course_scaffold_replacement(self):
+        expected={
+            20:"Enterprise Identity and Access Management",
+            21:"Linux System Administration Lab Theory",
+            22:"Web Application Security Fundamentals",
+            23:"Cloud Infrastructure Security",
+        }
+        for index,title in expected.items():
+            course=DATA["courses"][index]
+            self.assertEqual(course["title"],title)
+            self.assertEqual(len(course["lessons"]),10)
+            for lesson in course["lessons"]:
+                body=lesson[1]
+                self.assertEqual(body.count("TOPIC-SPECIFIC VALIDATION CASE —"),1)
+                self.assertIn("FICTIONAL OBSERVATION:",body)
+                self.assertIn("TECHNICAL INTERPRETATION AND LIMITS:",body)
+                self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
