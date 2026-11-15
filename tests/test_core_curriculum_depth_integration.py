@@ -86,6 +86,22 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
                 self.assertIn("WORKED FICTIONAL EXAMPLE:",lesson[1])
                 self.assertIn("INDEPENDENT TASK:",lesson[1])
 
+    def test_answer_positions_are_not_predictable(self):
+        from collections import Counter
+        positions=Counter(lesson[4] for course in DATA["courses"] for lesson in course["lessons"])
+        self.assertEqual(positions,Counter({0:66,1:65,2:67}))
+        self.assertTrue(all(len(lesson[3])==3 for course in DATA["courses"] for lesson in course["lessons"]))
+
+    def test_unique_question_prompts_and_answer_options(self):
+        prompts=[]
+        for course in DATA["courses"]:
+            for lesson in course["lessons"]:
+                prompts.append(lesson[2].strip().casefold())
+                options=[x.strip().casefold() for x in lesson[3]]
+                self.assertEqual(len(options),len(set(options)),lesson[0])
+                self.assertTrue(lesson[3][lesson[4]].strip())
+        self.assertEqual(len(prompts),len(set(prompts)))
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
