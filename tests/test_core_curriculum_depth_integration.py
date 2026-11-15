@@ -102,6 +102,21 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
                 self.assertTrue(lesson[3][lesson[4]].strip())
         self.assertEqual(len(prompts),len(set(prompts)))
 
+    def test_network_and_hardware_scaffolding_replaced(self):
+        for index, expected in ((2,6),(25,20)):
+            lessons=DATA["courses"][index]["lessons"]
+            self.assertEqual(len(lessons),expected)
+            for lesson in lessons:
+                body=lesson[1]
+                self.assertEqual(body.count("TOPIC-SPECIFIC TECHNICAL INVESTIGATION —"),1)
+                self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
+                self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+                self.assertIn("INDEPENDENT",body.upper())
+
+    def test_report_workshop_keeps_specific_cases(self):
+        for lesson in DATA["courses"][24]["lessons"]:
+            self.assertIn("APPLIED REPORTING PRACTICUM —",lesson[1])
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
