@@ -8,6 +8,8 @@ on:
       - 'tests/test_batch*.py'
       - 'tests/test_core_curriculum_depth_integration.py'
       - 'curriculum.json'
+      - 'exams.json'
+      - 'tests/test_exam_bank_integrity.py'
       - '.github/workflows/coursework-practical-tests.yml'
   workflow_dispatch:
 
@@ -32,6 +34,8 @@ jobs:
       - name: Check Python sources compile
         run: |
           python -m py_compile local-vm-labs/batch9_independent_investigation.py local-vm-labs/batch10_live_defense_practicum.py local-vm-labs/batch11_soc_correlation.py local-vm-labs/batch12_forensics_triage.py local-vm-labs/batch13_assessment_reporting.py local-vm-labs/batch14_enterprise_architecture.py local-vm-labs/batch15_defensive_automation.py
+      - name: Exam bank integrity
+        run: python -m unittest discover -s tests -p 'test_exam_bank_integrity.py' -v
       - name: Primary curriculum depth integration
         run: python -m unittest discover -s tests -p 'test_core_curriculum_depth_integration.py' -v
       - name: Batch 9-15 offline and localhost regressions
