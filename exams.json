@@ -14,8 +14,8 @@
           "A backup is synced to the same folder and deletes everywhere. What is missing?",
           [
             "A versioned independent backup",
-            "A new wallpaper",
-            "An admin password"
+            "More frequent synchronization of the same deletions",
+            "A higher network transfer rate"
           ],
           0,
           "Sync is not necessarily a recoverable backup."
@@ -801,8 +801,8 @@
         [
           "A device is online but DNS fails. What check is focused?",
           [
-            "Wallpaper",
-            "Speaker volume",
+            "Link speed on the local switch",
+            "Application display scaling",
             "Resolver configuration"
           ],
           2,
@@ -938,8 +938,8 @@
           "Which metric helps assess monitoring?",
           [
             "Actionable alert proportion",
-            "Office paint color",
-            "Number of wallpaper themes"
+            "Number of events received without checking outcomes",
+            "Total log file size irrespective of relevance"
           ],
           0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
@@ -1346,8 +1346,8 @@
         [
           "An incident report should distinguish what?",
           [
-            "Officer rank and wallpaper",
-            "Private passwords and tokens",
+            "The device's registered owner and rack location",
+            "The names of all installed applications",
             "Confirmed facts and working hypotheses"
           ],
           2,
@@ -1681,8 +1681,8 @@
           "A former contractor still has an active session. What should be verified?",
           [
             "Account disablement and actual session revocation across systems",
-            "Only their desktop wallpaper",
-            "Whether their badge photo is updated"
+            "Whether the next interactive login is blocked only",
+            "Whether the account was removed from one local device only"
           ],
           0,
           "Supported answer: Account disablement and actual session revocation across systems. This conclusion follows from the supplied evidence and avoids unsupported certainty."
@@ -1809,8 +1809,8 @@
         [
           "A computer shuts off under high CPU load after a cooler change. Which evidence is most useful?",
           [
-            "A desktop wallpaper screenshot",
-            "How often the mouse is clicked",
+            "A successful operating system sign-in",
+            "An idle desktop screenshot",
             "CPU temperatures, cooler mounting, fan operation and thermal logs"
           ],
           2,
