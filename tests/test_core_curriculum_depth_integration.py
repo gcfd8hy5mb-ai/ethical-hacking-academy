@@ -145,6 +145,16 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
             self.assertIn("INDEPENDENT LAB OR PAPER PRACTICE:",body)
             self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
 
+    def test_incident_response_workshops_are_distinct(self):
+        course=DATA["courses"][3]
+        self.assertEqual(course["title"],"Security Operations and Incident Response")
+        self.assertEqual(len(course["lessons"]),6)
+        for lesson in course["lessons"]:
+            body=lesson[1]
+            self.assertEqual(body.count("INCIDENT EVIDENCE WORKSHOP —"),1)
+            self.assertIn("EVIDENCE LIMITATIONS AND POST-FIX VALIDATION:",body)
+            self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
