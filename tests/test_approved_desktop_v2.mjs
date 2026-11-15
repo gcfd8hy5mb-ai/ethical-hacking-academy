@@ -30,10 +30,10 @@ assert.ok(!/https?:\/\//i.test(css),'Branch-only visual layer must not depend on
 assert.match(app,/academy-practice-followup/,'Preserve merged core practice follow-up sections');
 assert.match(html,/redesign-v2-unified-layout\.css/);
 const workspaceCss=file('redesign-v2-study-workstation.css');
-assert.match(html,/redesign-v2-study-workstation\\.css/);
+assert.match(html,/redesign-v2-study-workstation\.css/);
 assert.match(workspaceCss,/desktop-context/);
 assert.match(workspaceCss,/academy-workstation-split/);
 assert.match(workspaceCss,/academy-practice-followup/);
 assert.match(workspaceCss,/max-width:959px/);
-assert.ok(!/academy-practice-panel[^{}]*\\{[^}]*overflow-y\\s*:\\s*(auto|scroll)/i.test(workspaceCss),'No nested scrolling allowed in lesson workspace');
+assert.ok(!/academy-practice-panel[^{}]*\{[^}]*overflow-y\s*:\s*(auto|scroll)/i.test(workspaceCss),'No nested scrolling allowed in lesson workspace');
 console.log('Approved desktop redesign checks passed: dashboard, course links, stored progress, and multi-section guided practice.');
