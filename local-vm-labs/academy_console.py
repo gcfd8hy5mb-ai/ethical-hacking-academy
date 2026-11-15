@@ -107,6 +107,16 @@ def safe_file(path: Path) -> Path:
 
 
 def action(name: str, payload: dict) -> str:
+    # Reject unknown actions before returning the missing-lab helper message.
+    # Otherwise unsupported requests appear successful before setup.
+    allowed_actions = {
+        "setup", "terminal", "environment", "permissions", "logs", "config",
+        "fix-permissions", "fix-config", "save-finding", "check", "export",
+    }
+    if not isinstance(name, str) or name not in allowed_actions:
+        raise ValueError("Unknown or disallowed lab action")
+    if not isinstance(payload, dict):
+        raise ValueError("Invalid action payload")
     if name == "setup":
         setup()  # refuses to overwrite an existing directory
         return "Created a local training folder. Select Lab status next."
