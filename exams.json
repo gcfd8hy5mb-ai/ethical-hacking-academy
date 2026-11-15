@@ -14,8 +14,8 @@
           "A backup is synced to the same folder and deletes everywhere. What is missing?",
           [
             "A versioned independent backup",
-            "A new wallpaper",
-            "An admin password"
+            "More frequent synchronization of the same deletions",
+            "A higher network transfer rate"
           ],
           0,
           "Sync is not necessarily a recoverable backup."
@@ -23,21 +23,21 @@
         [
           "A filename ends in .pdf.exe. What is the most defensible interpretation?",
           [
-            "Possible executable masquerading as document",
             "Definitely a PDF",
+            "Possible executable masquerading as document",
             "Already proven malicious"
           ],
-          0,
+          1,
           "Extension alone is not proof of contents, but the final executable extension warrants caution."
         ],
         [
           "What does a simulated terminal's pwd output establish?",
           [
-            "The simulator's working directory",
+            "A discovered router",
             "The iPhone's actual Linux account",
-            "A discovered router"
+            "The simulator's working directory"
           ],
-          0,
+          2,
           "The demo runs in isolated browser logic."
         ],
         [
@@ -53,21 +53,21 @@
         [
           "Why do unique passwords matter?",
           [
-            "Breach reuse is contained",
             "They remove all phishing risk",
+            "Breach reuse is contained",
             "They require no recovery plan"
           ],
-          0,
+          1,
           "Credential reuse can spread a compromise."
         ],
         [
           "A message requests a login code urgently. What should you do?",
           [
-            "Verify independently; do not disclose the code",
+            "Disable MFA permanently",
             "Send the code to test the request",
-            "Disable MFA permanently"
+            "Verify independently; do not disclose the code"
           ],
-          0,
+          2,
           "Never treat unsolicited code requests as trustworthy."
         ]
       ]
@@ -93,21 +93,21 @@
         [
           "A name fails to resolve while approved IP connectivity succeeds. Investigate?",
           [
-            "DNS",
             "Monitor brightness",
+            "DNS",
             "Local printer toner"
           ],
-          0,
+          1,
           "DNS resolves names to connection information."
         ],
         [
           "A process uses high CPU after an update. What next?",
           [
-            "Identify the process and workload",
+            "Erase all files",
             "Declare confirmed malware",
-            "Erase all files"
+            "Identify the process and workload"
           ],
-          0,
+          2,
           "A performance symptom is not proof of compromise."
         ],
         [
@@ -123,21 +123,21 @@
         [
           "A web client changes its user role display. Who must verify data access?",
           [
-            "The trusted server",
             "Only the page CSS",
+            "The trusted server",
             "Only the browser menu"
           ],
-          0,
+          1,
           "Client controls can be modified and do not establish authorization."
         ],
         [
           "What is a consequence of granting shared administrator credentials?",
           [
-            "Poor accountability and excess privilege",
+            "Automatic network encryption",
             "Guaranteed security",
-            "Automatic network encryption"
+            "Poor accountability and excess privilege"
           ],
-          0,
+          2,
           "Individual least-privileged accounts are safer."
         ]
       ]
@@ -165,21 +165,21 @@
         [
           "You find one unsuccessful authentication event. What is established?",
           [
-            "One failure was recorded; cause remains uncertain",
             "A successful breach",
+            "One failure was recorded; cause remains uncertain",
             "The user's intent"
           ],
-          0,
+          1,
           "Separate evidence from inference."
         ],
         [
           "What should a professional finding include?",
           [
-            "Reproducible authorized evidence, impact and remediation",
+            "A public dump of private data",
             "Unsupported blame",
-            "A public dump of private data"
+            "Reproducible authorized evidence, impact and remediation"
           ],
-          0,
+          2,
           "Reports should enable safe verification and remediation."
         ],
         [
@@ -195,21 +195,21 @@
         [
           "A purported supplier changes banking details via email. What is the safest response?",
           [
-            "Verify over a known independent channel",
             "Send payment immediately",
+            "Verify over a known independent channel",
             "Reply with credentials"
           ],
-          0,
+          1,
           "Out-of-band validation reduces impersonation fraud."
         ],
         [
           "What does a remediation verification establish?",
           [
-            "Whether the affected condition was actually resolved",
+            "That no testing is needed",
             "That no future incident is possible",
-            "That no testing is needed"
+            "Whether the affected condition was actually resolved"
           ],
-          0,
+          2,
           "Closure requires evidence and acknowledgement of limits."
         ]
       ]
@@ -234,21 +234,21 @@
         [
           "An employee leaves but active sessions remain. What is required?",
           [
-            "Revoke applicable sessions and access",
             "Only change the display name",
+            "Revoke applicable sessions and access",
             "Leave shared credentials unchanged"
           ],
-          0,
+          1,
           "Offboarding includes active session and credential lifecycle."
         ],
         [
           "On a typical Linux file, what does mode 640 allow its group?",
           [
-            "Read but not write",
+            "No access",
             "Full execution and modification",
-            "No access"
+            "Read but not write"
           ],
-          0,
+          2,
           "The middle digit 4 represents group read permission."
         ],
         [
@@ -264,21 +264,21 @@
         [
           "A service consumes high CPU at its scheduled backup time. Best inference?",
           [
-            "Investigate context before diagnosing compromise",
             "It is definitely malware",
+            "Investigate context before diagnosing compromise",
             "Immediately delete the service"
           ],
-          0,
+          1,
           "Resource use alone does not establish intent or infection."
         ],
         [
           "What is a useful access audit record?",
           [
-            "Grant, approver, purpose, and review date",
+            "Unrelated personal documents",
             "Plaintext password",
-            "Unrelated personal documents"
+            "Grant, approver, purpose, and review date"
           ],
-          0,
+          2,
           "Audit evidence should explain who authorized access without collecting secrets."
         ]
       ]
@@ -303,21 +303,21 @@
         [
           "What reduces database query injection risks?",
           [
-            "Parameterized queries",
             "Building SQL by string concatenation",
+            "Parameterized queries",
             "Disabling every log"
           ],
-          0,
+          1,
           "Data parameters remain separate from query structure."
         ],
         [
           "A browser uses automatically sent session cookies for modifying requests. What threat deserves consideration?",
           [
-            "Cross-site request forgery",
+            "Monitor refresh rate",
             "Keyboard wear",
-            "Monitor refresh rate"
+            "Cross-site request forgery"
           ],
-          0,
+          2,
           "Ambient credentials require suitable CSRF defenses."
         ],
         [
@@ -333,21 +333,21 @@
         [
           "What does RPO describe?",
           [
-            "Acceptable data loss measured in time",
             "Maximum CPU frequency",
+            "Acceptable data loss measured in time",
             "Identity provider name"
           ],
-          0,
+          1,
           "Recovery point objectives bound tolerated loss of recent updates."
         ],
         [
           "Why separate public materials from private submissions?",
           [
-            "Different data classes require different access controls",
+            "So everyone can administer the database",
             "To change typography",
-            "So everyone can administer the database"
+            "Different data classes require different access controls"
           ],
-          0,
+          2,
           "Classification guides effective grants."
         ]
       ]
@@ -371,21 +371,21 @@
         [
           "An analyst has a synthetic screenshot of a denied grade request. What is established?",
           [
-            "The simulated request was denied",
             "Every production record is secure",
+            "The simulated request was denied",
             "No software bugs exist"
           ],
-          0,
+          1,
           "Evidence applies only to the observed conditions."
         ],
         [
           "Which finding is most reproducible?",
           [
-            "Named asset, observed condition, method, impact, and retest",
+            "All users malicious",
             "System insecure",
-            "All users malicious"
+            "Named asset, observed condition, method, impact, and retest"
           ],
-          0,
+          2,
           "Traceable evidence makes a finding actionable."
         ],
         [
@@ -401,21 +401,21 @@
         [
           "Two findings share a severity score. How should they be prioritized?",
           [
-            "Exposure and business impact",
             "Alphabetical order",
+            "Exposure and business impact",
             "Length of vulnerability name"
           ],
-          0,
+          1,
           "Operational risk is contextual."
         ],
         [
           "What does a board-level report need?",
           [
-            "Options, evidenced impact, tradeoffs, and uncertainty",
+            "Guarantee of zero future incidents",
             "Only raw logs",
-            "Guarantee of zero future incidents"
+            "Options, evidenced impact, tradeoffs, and uncertainty"
           ],
-          0,
+          2,
           "Executives need decision-ready information."
         ]
       ]
@@ -439,21 +439,21 @@
         [
           "Which statement best describes a browser-only hardware exercise?",
           [
-            "Conceptual simulation, not proof of physical operation",
             "Validated device calibration",
+            "Conceptual simulation, not proof of physical operation",
             "Completed real-world penetration test"
           ],
-          0,
+          1,
           "Physical skill requires actual supervised equipment work."
         ],
         [
           "A fictional RFID reader accepts any matching card identifier. What's the concern?",
           [
-            "Identifier-only checks may not prove possession of a protected credential",
+            "A public identifier is always secret",
             "Every NFC system works identically",
-            "A public identifier is always secret"
+            "Identifier-only checks may not prove possession of a protected credential"
           ],
-          0,
+          2,
           "Cryptographic authentication differs from reading a static ID."
         ],
         [
@@ -469,21 +469,21 @@
         [
           "A sample digital trace changes at 12 μs and 20 μs. What is the interval?",
           [
-            "8 μs",
             "32 μs",
+            "8 μs",
             "240 μs"
           ],
-          0,
+          1,
           "20 minus 12 equals eight microseconds."
         ],
         [
           "An SDR student's antenna is connected but transmission parameters are unknown. What is safest?",
           [
-            "Use offline synthetic data and verify compliance before live RF tests",
+            "Scan unrelated private communications",
             "Transmit at maximum power",
-            "Scan unrelated private communications"
+            "Use offline synthetic data and verify compliance before live RF tests"
           ],
-          0,
+          2,
           "Begin with isolated data and authorized regulatory-compliant procedures."
         ],
         [
@@ -499,11 +499,11 @@
         [
           "An approved wired appliance lab connects to a switch. What should be documented?",
           [
-            "Ports, topology, boundaries, expected traffic and shutdown procedure",
             "Nearby private passwords",
+            "Ports, topology, boundaries, expected traffic and shutdown procedure",
             "Unrelated employee profiles"
           ],
-          0,
+          1,
           "A controlled lab needs clear scope and safety controls."
         ]
       ]
@@ -519,11 +519,11 @@
         [
           "192.168.40.25/24 belongs to which network?",
           [
-            "192.168.40.0/24",
+            "192.168.40.25/32",
             "192.168.41.0/24",
-            "192.168.40.25/32"
+            "192.168.40.0/24"
           ],
-          0,
+          2,
           "A /24 uses the first three octets for the network prefix."
         ],
         [
@@ -539,21 +539,21 @@
         [
           "The gateway responds but the hostname does not resolve. Which next check is most focused?",
           [
-            "Compare resolver configuration and DNS results",
             "Reset all company routers",
+            "Compare resolver configuration and DNS results",
             "Delete the app's files"
           ],
-          0,
+          1,
           "Local IP connectivity works, while name resolution fails."
         ],
         [
           "What access does file mode 640 grant the group on an ordinary Linux file?",
           [
-            "Read only",
+            "Execute only",
             "Read and write",
-            "Execute only"
+            "Read only"
           ],
-          0,
+          2,
           "The group digit 4 grants read access."
         ],
         [
@@ -569,21 +569,21 @@
         [
           "What is a good method for studying an unfamiliar Windows startup program?",
           [
-            "Review publisher, expected role and authorized device records",
             "Delete it without checking",
+            "Review publisher, expected role and authorized device records",
             "Run unrelated scripts"
           ],
-          0,
+          1,
           "Scope and corroboration prevent unnecessary disruption."
         ],
         [
           "Which is the best verification after an approved firewall change?",
           [
-            "Confirm intended traffic works and denied traffic stays blocked",
+            "Disable all endpoint logs",
             "Only confirm the Save button was clicked",
-            "Disable all endpoint logs"
+            "Confirm intended traffic works and denied traffic stays blocked"
           ],
-          0,
+          2,
           "Positive and negative behavior both matter."
         ],
         [
@@ -617,21 +617,21 @@
         [
           "A user needs to read a report. Which privilege best fits?",
           [
-            "Read permission on the required report",
+            "All staff passwords",
             "Full administrator access",
-            "All staff passwords"
+            "Read permission on the required report"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What does a running process represent?",
           [
-            "Only a saved file",
+            "An executing program",
             "A network address",
-            "An executing program"
+            "Only a saved file"
           ],
-          2,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -647,11 +647,11 @@
         [
           "What validates backup recoverability?",
           [
-            "A controlled restore test",
+            "File synchronization alone",
             "A green backup icon alone",
-            "File synchronization alone"
+            "A controlled restore test"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -665,21 +665,21 @@
         [
           "What is DNS used for?",
           [
-            "Encrypting a hard drive",
             "Resolving names to records such as IP addresses",
+            "Encrypting a hard drive",
             "Assigning file permissions"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which address belongs to 192.168.8.0/24?",
           [
-            "192.168.8.32",
             "192.168.9.32",
+            "192.168.8.32",
             "10.8.0.1"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -695,21 +695,21 @@
         [
           "What does HTTP 404 indicate?",
           [
-            "No packet reached any server",
             "An HTTP server responded but did not find the resource",
+            "No packet reached any server",
             "A password was stolen"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which defense restricts traffic between network zones?",
           [
-            "Segmentation and firewall policy",
             "A longer filename",
+            "Segmentation and firewall policy",
             "Disabling backups"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -724,10 +724,10 @@
           "What starts a threat model?",
           [
             "Assuming an attacker is present",
-            "Asset and data-flow mapping",
-            "Changing passwords without scope"
+            "Changing passwords without scope",
+            "Asset and data-flow mapping"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -744,20 +744,20 @@
           "What is risk prioritization based on?",
           [
             "Tool price alone",
-            "Logo appearance",
-            "Likely impact, exposure and feasibility"
+            "Likely impact, exposure and feasibility",
+            "Logo appearance"
           ],
-          2,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which logging choice is safer?",
           [
             "Plaintext session token",
-            "Event type and timestamp without secrets",
-            "User password"
+            "User password",
+            "Event type and timestamp without secrets"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -791,21 +791,21 @@
         [
           "What should a change plan include?",
           [
-            "Approval, test, and rollback",
+            "Removing audit logs",
             "Only a new title",
-            "Removing audit logs"
+            "Approval, test, and rollback"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "A device is online but DNS fails. What check is focused?",
           [
-            "Wallpaper",
-            "Speaker volume",
-            "Resolver configuration"
+            "Resolver configuration",
+            "Application display scaling",
+            "Link speed on the local switch"
           ],
-          2,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -821,11 +821,11 @@
         [
           "What proves a fix?",
           [
-            "Repeat the original user workflow successfully",
+            "Assume a restart worked",
             "Close the ticket first",
-            "Assume a restart worked"
+            "Repeat the original user workflow successfully"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -839,21 +839,21 @@
         [
           "What does encryption chiefly protect?",
           [
-            "Guaranteed uptime",
             "Confidentiality",
+            "Guaranteed uptime",
             "The physical screen"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which key remains secret in an asymmetric pair?",
           [
-            "Private key",
             "Public key",
+            "Private key",
             "Public domain name"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -869,21 +869,21 @@
         [
           "What does a signature generally support?",
           [
-            "Message secrecy alone",
             "Integrity and signer verification under trusted keys",
+            "Message secrecy alone",
             "Backup capacity"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What should follow public exposure of a private service key?",
           [
-            "Revoke or rotate and investigate",
             "Only rename the variable",
+            "Revoke or rotate and investigate",
             "Ignore old commits"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -898,10 +898,10 @@
           "What does a login_failed event establish?",
           [
             "A successful account takeover",
-            "A recorded unsuccessful attempt",
-            "Confirmed data theft"
+            "Confirmed data theft",
+            "A recorded unsuccessful attempt"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -918,28 +918,28 @@
           "A high alert count always means better detection?",
           [
             "Yes, regardless of quality",
-            "Only with red icons",
-            "No, noise may hide important events"
+            "No, noise may hide important events",
+            "Only with red icons"
           ],
-          2,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What makes an escalation useful?",
           [
             "Unsupported attribution",
-            "Observed evidence and uncertainties",
-            "Shared passwords"
+            "Shared passwords",
+            "Observed evidence and uncertainties"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "Which metric helps assess monitoring?",
           [
             "Actionable alert proportion",
-            "Office paint color",
-            "Number of wallpaper themes"
+            "Number of events received without checking outcomes",
+            "Total log file size irrespective of relevance"
           ],
           0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
@@ -965,21 +965,21 @@
         [
           "Which test hypothesis is sound?",
           [
-            "A narrow expected behavior with permitted verification",
+            "Collect real user data",
             "All systems are insecure",
-            "Collect real user data"
+            "A narrow expected behavior with permitted verification"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What belongs in a finding?",
           [
-            "Only a dramatic headline",
+            "Scope, evidence, impact and fix",
             "Confidential raw records",
-            "Scope, evidence, impact and fix"
+            "Only a dramatic headline"
           ],
-          2,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -995,11 +995,11 @@
         [
           "What closes a finding?",
           [
-            "Authorized retest and documented result",
+            "Renaming a ticket",
             "An unverified claim of a patch",
-            "Renaming a ticket"
+            "Authorized retest and documented result"
           ],
-          0,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -1013,21 +1013,21 @@
         [
           "A gateway responds but a hostname fails. What is a targeted check?",
           [
-            "Keyboard settings",
             "DNS resolution",
+            "Keyboard settings",
             "File permissions"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "How many conventional usable hosts are in a /24 subnet?",
           [
-            "254",
             "256",
+            "254",
             "24"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1043,21 +1043,21 @@
         [
           "What does TCP provide for many apps?",
           [
-            "Guaranteed application security",
             "Reliable ordered byte stream",
+            "Guaranteed application security",
             "DNS ownership"
           ],
-          1,
+          0,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What should a diagnostic memo separate?",
           [
-            "Facts and hypotheses",
             "Fonts and icons",
+            "Facts and hypotheses",
             "Public and private passwords"
           ],
-          0,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ]
       ]
@@ -1072,10 +1072,10 @@
           "What is the result after count=2 then count=count+1?",
           [
             "2",
-            "3",
-            "21"
+            "21",
+            "3"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1092,20 +1092,20 @@
           "How many failed entries are in [failed,success,failed]?",
           [
             "3",
-            "1",
-            "2"
+            "2",
+            "1"
           ],
-          2,
+          1,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
           "What is 3 of 12 as a percentage?",
           [
             "36%",
-            "25%",
-            "3%"
+            "3%",
+            "25%"
           ],
-          1,
+          2,
           "Review the corresponding lesson, explain why the supported answer follows from the evidence, and why the alternatives overstate or confuse the concept."
         ],
         [
@@ -1143,21 +1143,21 @@
         [
           "Which address is the broadcast of a typical 10.2.3.0/24 network?",
           [
-            "10.2.3.255",
+            "10.2.4.255",
             "10.2.3.1",
-            "10.2.4.255"
+            "10.2.3.255"
           ],
-          0,
+          2,
           "Correct response: 10.2.3.255. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "An IP address works but a domain fails. What do you inspect?",
           [
-            "Monitor resolution",
+            "DNS resolution",
             "Disk encryption",
-            "DNS resolution"
+            "Monitor resolution"
           ],
-          2,
+          0,
           "Correct response: DNS resolution. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1173,21 +1173,21 @@
         [
           "Which resource is volatile working memory?",
           [
-            "RAM",
+            "Backup tape",
             "SSD",
-            "Backup tape"
+            "RAM"
           ],
-          0,
+          2,
           "Correct response: RAM. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "A Linux file has mode 640. What can the owning group do?",
           [
-            "Modify the file",
+            "Read the file",
             "Execute the file",
-            "Read the file"
+            "Modify the file"
           ],
-          2,
+          0,
           "Correct response: Read the file. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1203,21 +1203,21 @@
         [
           "What should happen after a patch?",
           [
-            "Verify installed version and key workflows",
+            "Remove all logs",
             "Close the ticket without checks",
-            "Remove all logs"
+            "Verify installed version and key workflows"
           ],
-          0,
+          2,
           "Correct response: Verify installed version and key workflows. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "Which information helps make a help-desk ticket reproducible?",
           [
-            "Only the word broken",
+            "Timestamp, symptoms and tests performed",
             "Unrelated private credentials",
-            "Timestamp, symptoms and tests performed"
+            "Only the word broken"
           ],
-          2,
+          0,
           "Correct response: Timestamp, symptoms and tests performed. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1233,21 +1233,21 @@
         [
           "What helps restore a lost file reliably?",
           [
-            "Tested versioned backup",
+            "Changing the filename",
             "A sync-only mirror with no history",
-            "Changing the filename"
+            "Tested versioned backup"
           ],
-          0,
+          2,
           "Correct response: Tested versioned backup. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "What is a gateway's common purpose?",
           [
-            "Decrypt every website",
+            "Forward traffic toward another network",
             "Grant file permissions",
-            "Forward traffic toward another network"
+            "Decrypt every website"
           ],
-          2,
+          0,
           "Correct response: Forward traffic toward another network. The other choices either confuse the technology or assert facts without evidence."
         ]
       ]
@@ -1276,21 +1276,21 @@
         [
           "A failed login and later successful login are observed. What should you do?",
           [
-            "Correlate identity, source and authorized activity",
+            "Publish password records",
             "Assume credential theft",
-            "Publish password records"
+            "Correlate identity, source and authorized activity"
           ],
-          0,
+          2,
           "Correct response: Correlate identity, source and authorized activity. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "Which statement best defines least privilege?",
           [
-            "Grant every worker administrator access",
+            "Grant only access required for the task",
             "Never review permissions",
-            "Grant only access required for the task"
+            "Grant every worker administrator access"
           ],
-          2,
+          0,
           "Correct response: Grant only access required for the task. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1306,21 +1306,21 @@
         [
           "What does an authenticated cryptographic digest comparison help check?",
           [
-            "File integrity",
+            "Employee job title",
             "Guaranteed absence of software flaws",
-            "Employee job title"
+            "File integrity"
           ],
-          0,
+          2,
           "Correct response: File integrity. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "What does full-disk encryption chiefly protect?",
           [
-            "Network uptime",
+            "Confidentiality of stored data",
             "Physical screen protection",
-            "Confidentiality of stored data"
+            "Network uptime"
           ],
-          2,
+          0,
           "Correct response: Confidentiality of stored data. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1336,21 +1336,21 @@
         [
           "A risk rating should account for which factors?",
           [
-            "Exposure, impact and uncertainty",
+            "Only the alert's color",
             "Only the price of a device",
-            "Only the alert's color"
+            "Exposure, impact and uncertainty"
           ],
-          0,
+          2,
           "Correct response: Exposure, impact and uncertainty. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "An incident report should distinguish what?",
           [
-            "Officer rank and wallpaper",
-            "Private passwords and tokens",
-            "Confirmed facts and working hypotheses"
+            "Confirmed facts and working hypotheses",
+            "The names of all installed applications",
+            "The device's registered owner and rack location"
           ],
-          2,
+          0,
           "Correct response: Confirmed facts and working hypotheses. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1366,21 +1366,21 @@
         [
           "A backup job succeeds every day but no restore was tested. What's missing?",
           [
-            "Controlled restoration evidence",
+            "Administrative credentials in a public file",
             "More optimistic status messages",
-            "Administrative credentials in a public file"
+            "Controlled restoration evidence"
           ],
-          0,
+          2,
           "Correct response: Controlled restoration evidence. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "A team's production change precedes a service outage. What is justified?",
           [
-            "Proof of deliberate attack",
+            "A temporal correlation deserving investigation",
             "Proof the change is unrelated",
-            "A temporal correlation deserving investigation"
+            "Proof of deliberate attack"
           ],
-          2,
+          0,
           "Correct response: A temporal correlation deserving investigation. The other choices either confuse the technology or assert facts without evidence."
         ]
       ]
@@ -1409,21 +1409,21 @@
         [
           "A student's browser hides another user's grade link. What enforces privacy?",
           [
-            "Backend record authorization",
+            "A distinctive icon",
             "The hidden button",
-            "A distinctive icon"
+            "Backend record authorization"
           ],
-          0,
+          2,
           "Correct response: Backend record authorization. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "Which design mitigates SQL query manipulation?",
           [
-            "String concatenation of untrusted input",
+            "Parameterized queries",
             "Disabled error handling",
-            "Parameterized queries"
+            "String concatenation of untrusted input"
           ],
-          2,
+          0,
           "Correct response: Parameterized queries. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1439,21 +1439,21 @@
         [
           "A cloud storage bucket contains public images and private grades. Best design?",
           [
-            "Separate access policies by data classification",
+            "Disable auditing",
             "Make all objects public",
-            "Disable auditing"
+            "Separate access policies by data classification"
           ],
-          0,
+          2,
           "Correct response: Separate access policies by data classification. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "An app includes a privileged cloud token in client JavaScript. What is the risk?",
           [
-            "The token is secret if the filename is obscure",
+            "Public client delivery exposes privileged credentials",
             "CSS prevents access",
-            "Public client delivery exposes privileged credentials"
+            "The token is secret if the filename is obscure"
           ],
-          2,
+          0,
           "Correct response: Public client delivery exposes privileged credentials. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1469,21 +1469,21 @@
         [
           "What does a four-hour RPO measure?",
           [
-            "Tolerated loss of recent data",
+            "Encryption strength",
             "Guaranteed recovery in four hours",
-            "Encryption strength"
+            "Tolerated loss of recent data"
           ],
-          0,
+          2,
           "Correct response: Tolerated loss of recent data. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "Which finding is reproducible?",
           [
-            "A dramatic claim without details",
+            "Scope, observed condition, evidence, effect and retest",
             "A list of guesses",
-            "Scope, observed condition, evidence, effect and retest"
+            "A dramatic claim without details"
           ],
-          2,
+          0,
           "Correct response: Scope, observed condition, evidence, effect and retest. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
@@ -1499,21 +1499,21 @@
         [
           "A public demo application returns an unexpected synthetic record. What may be claimed?",
           [
-            "Behavior observed only in the authorized demo",
+            "Every endpoint is vulnerable",
             "Production data was stolen",
-            "Every endpoint is vulnerable"
+            "Behavior observed only in the authorized demo"
           ],
-          0,
+          2,
           "Correct response: Behavior observed only in the authorized demo. The other choices either confuse the technology or assert facts without evidence."
         ],
         [
           "What makes an executive security summary useful?",
           [
-            "Only raw system events",
+            "Risks, evidence, options, limitations and owners",
             "Guaranteed elimination of cyber risk",
-            "Risks, evidence, options, limitations and owners"
+            "Only raw system events"
           ],
-          2,
+          0,
           "Correct response: Risks, evidence, options, limitations and owners. The other choices either confuse the technology or assert facts without evidence."
         ]
       ]
@@ -1681,8 +1681,8 @@
           "A former contractor still has an active session. What should be verified?",
           [
             "Account disablement and actual session revocation across systems",
-            "Only their desktop wallpaper",
-            "Whether their badge photo is updated"
+            "Whether the next interactive login is blocked only",
+            "Whether the account was removed from one local device only"
           ],
           0,
           "Supported answer: Account disablement and actual session revocation across systems. This conclusion follows from the supplied evidence and avoids unsupported certainty."
@@ -1799,21 +1799,21 @@
         [
           "A motherboard requires both ATX 24-pin and EPS CPU power. Which connection is essential?",
           [
-            "The dedicated CPU EPS connector in addition to motherboard power",
+            "A SATA data cable",
             "Only the graphics card PCIe lead",
-            "A SATA data cable"
+            "The dedicated CPU EPS connector in addition to motherboard power"
           ],
-          0,
+          2,
           "Modern systems commonly require separate ATX board and CPU EPS power."
         ],
         [
           "A computer shuts off under high CPU load after a cooler change. Which evidence is most useful?",
           [
-            "A desktop wallpaper screenshot",
-            "How often the mouse is clicked",
-            "CPU temperatures, cooler mounting, fan operation and thermal logs"
+            "CPU temperatures, cooler mounting, fan operation and thermal logs",
+            "An idle desktop screenshot",
+            "A successful operating system sign-in"
           ],
-          2,
+          0,
           "Collect temperatures and cooling observations rather than presuming software fault."
         ],
         [
@@ -1829,21 +1829,21 @@
         [
           "What is the strongest evidence that a RAM-related repair succeeded?",
           [
-            "POST passes, correct capacity is detected and repeatable memory checks succeed",
+            "The power LED glows",
             "A successful screen photo",
-            "The power LED glows"
+            "POST passes, correct capacity is detected and repeatable memory checks succeed"
           ],
-          0,
+          2,
           "Power LEDs alone do not establish memory initialization or stability."
         ],
         [
           "Which action should be avoided during beginner PC servicing?",
           [
-            "Documenting cable placement",
+            "Opening a sealed power supply enclosure",
             "Checking the motherboard manual",
-            "Opening a sealed power supply enclosure"
+            "Documenting cable placement"
           ],
-          2,
+          0,
           "Power supply components can retain hazardous energy; leave internal PSU repair to qualified personnel."
         ],
         [
@@ -1859,21 +1859,21 @@
         [
           "An upgrade seems slower after the system is repaired. What is the most defensible next step?",
           [
-            "Compare baseline and current measurements under the same workload",
+            "Disable operating-system updates permanently",
             "Assume the SSD is counterfeit",
-            "Disable operating-system updates permanently"
+            "Compare baseline and current measurements under the same workload"
           ],
-          0,
+          2,
           "Comparable measurements help isolate performance changes."
         ],
         [
           "A repair for a friend's PC is authorized. What must be addressed before inspecting private files?",
           [
-            "Nothing; ownership grants unlimited access",
+            "Permission scope, privacy boundaries, backup responsibility and reversible changes",
             "An automatic cloud backup to your account",
-            "Permission scope, privacy boundaries, backup responsibility and reversible changes"
+            "Nothing; ownership grants unlimited access"
           ],
-          2,
+          0,
           "Consent to repair does not imply permission to access unrelated private data."
         ]
       ]
@@ -1907,21 +1907,21 @@
         [
           "What makes a VM snapshot different from a verified backup?",
           [
-            "A snapshot always survives disk loss",
             "A snapshot is a point-in-time VM state and may share the host's failure domain",
+            "A snapshot always survives disk loss",
             "A snapshot guarantees safe network segmentation"
           ],
-          1,
+          0,
           "An independent and tested backup addresses risks a local snapshot does not."
         ],
         [
           "What establishes that a virtual lab is isolated from household and public networks?",
           [
-            "Positive and negative connectivity checks confirming route and firewall boundaries",
             "Private IP addresses alone",
+            "Positive and negative connectivity checks confirming route and firewall boundaries",
             "A descriptive VM name"
           ],
-          0,
+          1,
           "Isolation must be validated by effective reachability tests."
         ],
         [
@@ -1937,21 +1937,21 @@
         [
           "A Kali Linux VM can ping a training server but HTTP fails. Which step best isolates the cause?",
           [
-            "Reinstall the entire operating system",
             "Inspect service listener, firewall rules and application HTTP response",
+            "Reinstall the entire operating system",
             "Treat the server as compromised"
           ],
-          1,
+          0,
           "ICMP reachability does not confirm an HTTP listener or permitted TCP path."
         ],
         [
           "A lab guest was saved using a snapshot. What verifies that a later exercise can be repeated?",
           [
-            "Restore the snapshot and retest required service, credentials and network conditions",
             "Assume the snapshot is self-validating",
+            "Restore the snapshot and retest required service, credentials and network conditions",
             "Reuse unknown credentials from another machine"
           ],
-          0,
+          1,
           "Restoration testing validates repeatability and expected environment state."
         ],
         [
@@ -1967,11 +1967,11 @@
         [
           "What evidence belongs in a home-lab change log?",
           [
-            "Only the student's score",
             "Initial state, command or change, observed results, validation and rollback",
+            "Only the student's score",
             "The Wi-Fi passwords of nearby devices"
           ],
-          1,
+          0,
           "Reproducible change records document what was altered and why."
         ]
       ]

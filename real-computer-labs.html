@@ -69,6 +69,73 @@ python3 local-vm-labs/batch6_local_web_assessment.py serve --workspace "$HOME/ac
 <pre>python3 local-vm-labs/batch7_integrated_capstone.py</pre>
 <p>Start both locally running Academy services using the workbook first. Windows: use <code>py -3</code>. The page never runs commands remotely or changes existing student progress.</p>
 <p><a class="button" href="https://github.com/gcfd8hy5mb-ai/ethical-hacking-academy/blob/main/local-vm-labs/BATCH7_INTEGRATED_CAPSTONE.md">Open full Batch 7 capstone workbook →</a></p></section>
+<section class="sheet"><h2>Batch 8 · Independent investigation and defensive red-team reporting</h2>
+<p>Five deep practical modules on evidence preservation, Windows event reasoning, Linux least-privilege administration, localhost fault isolation, and ethically scoped enterprise red-team simulation. Includes independent assignments, ten answer-explained questions and a 20-point human-review capstone rubric. No live external targets.</p>
+<pre>python3 local-vm-labs/batch7_integrated_capstone.py</pre>
+<p>Begin with the offline/read-only exercises; the optional executable example reuses the Batch 7 loopback-only fixture on an owned computer. Windows: use <code>py -3</code>.</p>
+<p><a class="button" href="./local-vm-labs/BATCH8_INDEPENDENT_INVESTIGATION.md">Open Batch 8 independent investigation workbook →</a></p></section>
+<section class="sheet"><h2>Batch 9 · Independent practical investigation</h2>
+<p>Five offline evidence investigations across Windows, Linux, DNS, cross-tenant web authorization and cloud session revocation. Includes a Python 3 objective selection grader (15 points), SHA-256 training-evidence checks, detailed troubleshooting workbook and 25-point human-reviewed final incident report. No network access, target scanning or external services.</p>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch9_independent_investigation.py init --workspace "$HOME\academy-batch9"
+py -3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HOME\academy-batch9" --case windows</pre>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch9_independent_investigation.py init --workspace "$HOME/academy-batch9"
+python3 local-vm-labs/batch9_independent_investigation.py inspect --workspace "$HOME/academy-batch9" --case windows</pre>
+<p>Edit answers.json in the new disposable workspace, then run the <code>grade</code> command explained in the workbook. This program does not affect lesson progress or cloud records.</p>
+<p><a class="button" href="./local-vm-labs/BATCH9_INDEPENDENT_PRACTICAL.md">Open Batch 9 full practical workbook →</a></p></section>
+<section class="sheet"><h2>Batch 10 · Live defensive red-team/blue-team practicum</h2>
+<p>Diagnose an unknown training fault in a <strong>real localhost HTTP service</strong>, lock your initial diagnosis, select an allowlisted repair and check live HTTP health, exact report data, caching policy and restricted-route denial. Four randomized fault types, ten-point objective scoring and a separate 30-point written report rubric. No external target access or existing student progress changes.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch10_live_defense_practicum.py init --workspace "$HOME/academy-batch10"
+python3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME/academy-batch10"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch10_live_defense_practicum.py init --workspace "$HOME\academy-batch10"
+py -3 local-vm-labs/batch10_live_defense_practicum.py serve --workspace "$HOME\academy-batch10"</pre>
+<p>Start the server in one terminal and use a second terminal for inspect, submit, repair and grade. The workbook explains each command and the scoring boundaries.</p>
+<p><a class="button" href="./local-vm-labs/BATCH10_LIVE_DEFENSE_PRACTICUM.md">Open Batch 10 full practicum workbook →</a></p></section>
+<section class="sheet"><h2>Batch 11 · SOC evidence correlation and incident response</h2>
+<p>New independent security-operations coursework links synthetic Windows, Linux, DNS, application and offboarding evidence. Includes a 16-event offline JSONL dataset, four evidence-driven investigations, SHA-256 integrity check, a 12-point objective checkpoint, seven regression tests, and a 30-point human-review capstone. No network scan or real host-log collection.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch11_soc_correlation.py init --workspace "$HOME/academy-batch11"
+python3 local-vm-labs/batch11_soc_correlation.py analyze --workspace "$HOME/academy-batch11"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch11_soc_correlation.py init --workspace "$HOME\academy-batch11"
+py -3 local-vm-labs/batch11_soc_correlation.py analyze --workspace "$HOME\academy-batch11"</pre>
+<p>Review the evidence, complete the answers.json template, and run the grade command in the workbook. All data remains in a new disposable local folder.</p>
+<p><a class="button" href="./local-vm-labs/BATCH11_SOC_CORRELATION.md">Open Batch 11 investigation workbook →</a></p></section>
+<section class="sheet"><h2>Batch 12 · Digital forensics, malware triage and recovery</h2>
+<p>Study inert suspicious-document indicators, endpoint-alert interpretation, evidence preservation, incident containment, backup integrity, and session revocation. Four fictional cases and a 12-point objective forensic reasoning check are paired with a detailed workbook and human-reviewed incident-response capstone. No actual malware or unknown code execution.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch12_forensics_triage.py init --workspace "$HOME/academy-batch12"
+python3 local-vm-labs/batch12_forensics_triage.py inspect --workspace "$HOME/academy-batch12"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch12_forensics_triage.py init --workspace "$HOME\academy-batch12"
+py -3 local-vm-labs/batch12_forensics_triage.py inspect --workspace "$HOME\academy-batch12"</pre>
+<p>Use a new disposable workspace and open the workbook for the independent assignments, answer choices and grading instructions. No existing student scores are modified.</p>
+<p><a class="button" href="./local-vm-labs/BATCH12_FORENSICS_RESPONSE.md">Open Batch 12 forensic response workbook →</a></p></section>
+<section class="sheet"><h2>Batch 13 · Authorized security assessment and reporting</h2>
+<p>Study rules of engagement, asset and trust-boundary modeling, evidence-based vulnerability validation, enterprise risk, positive and negative testing, and professional reporting. Four offline cases, a 16-point assessment and a written capstone; no real target access or exploit execution.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch13_assessment_reporting.py init --workspace "$HOME/academy-batch13"
+python3 local-vm-labs/batch13_assessment_reporting.py inspect --workspace "$HOME/academy-batch13"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch13_assessment_reporting.py init --workspace "$HOME\academy-batch13"
+py -3 local-vm-labs/batch13_assessment_reporting.py inspect --workspace "$HOME\academy-batch13"</pre>
+<p>Read the fictional evidence, select exact answer identifiers in answers.json, then use the workbook's grade and report instructions. The work does not change student progress.</p>
+<p><a class="button" href="./local-vm-labs/BATCH13_AUTHORIZED_ASSESSMENT.md">Open Batch 13 authorized assessment workbook →</a></p></section>
+<section class="sheet"><h2>Batch 14 · Enterprise identity, segmentation and defense</h2>
+<p>Practice least-privilege design, fictional role and service boundaries, network segmentation reasoning, controlled red-team hypotheses and detection engineering. A stateful offline model checks four correct access decisions plus four corresponding defense observations (8 objective points). The complete workbook includes a 30-point human-reviewed enterprise architecture capstone; no real identities or systems are accessed.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch14_enterprise_architecture.py init --workspace "$HOME/academy-batch14"
+python3 local-vm-labs/batch14_enterprise_architecture.py inspect --workspace "$HOME/academy-batch14"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch14_enterprise_architecture.py init --workspace "$HOME\academy-batch14"
+py -3 local-vm-labs/batch14_enterprise_architecture.py inspect --workspace "$HOME\academy-batch14"</pre>
+<p>Follow the workbook to inspect, enable fictional controls, record synthetic evidence and grade the simulated policy. No external targets or existing progress are changed.</p>
+<p><a class="button" href="./local-vm-labs/BATCH14_ENTERPRISE_DEFENSE.md">Open Batch 14 enterprise defense workbook →</a></p></section>
+<section class="sheet"><h2>Batch 15 · Windows/Linux assessment and defensive Python</h2>
+<p>Study owned-workstation baselines, Linux least-privilege diagnostics, safe JSON/Python evidence handling, vulnerability prioritization and post-fix verification. Includes four fictional asset cases, 12 objective points, seven regression tests and an independently reviewed enterprise report. No external targets or live OS changes.</p>
+<h3>Linux / WSL</h3><pre>python3 local-vm-labs/batch15_defensive_automation.py init --workspace "$HOME/academy-batch15"
+python3 local-vm-labs/batch15_defensive_automation.py inspect --workspace "$HOME/academy-batch15"</pre>
+<h3>Windows PowerShell</h3><pre>py -3 local-vm-labs/batch15_defensive_automation.py init --workspace "$HOME\academy-batch15"
+py -3 local-vm-labs/batch15_defensive_automation.py inspect --workspace "$HOME\academy-batch15"</pre>
+<p>Use the workbook for read-only host exercises and complete answers.json in a separate disposable training workspace before grading. Existing student progress is not modified.</p>
+<p><a class="button" href="./local-vm-labs/BATCH15_DEFENSIVE_AUTOMATION.md">Open Batch 15 practical coursework →</a></p></section>
+<section class="sheet"><h2>Core curriculum depth audit · 26 courses</h2>
+<p>Inspection of the primary curriculum identifies 198 lessons across 26 courses and prioritizes short lessons for academic depth and practical assessment improvements. The linked Phase 1 audit distinguishes existing instructional content from independent technical mastery.</p>
+<p><a class="button" href="./audits/26_COURSE_DEPTH_AUDIT_PHASE1.md">Read 26-course depth audit →</a></p>
+<h3>Course 25 · Security Assessment and Reporting Workshop</h3>
+<p>Ten distinct supplementary lessons add worked enterprise examples, step-by-step reporting methods, risk explanations, independent deliverables and assessment rubrics. These are a standalone supplement, not yet embedded in the primary 10 lesson screens.</p>
+<p><a class="button" href="./local-vm-labs/COURSE25_SECURITY_REPORTING_DEPTH_SUPPLEMENT.md">Open Course 25 deep-workbook supplement →</a></p></section>
 <section class="sheet"><h2>Evidence rubric</h2>
 <p>For each lab record: date and environment, scope, commands, prediction, observed output, competing explanation, limitations and safest next step. Five self-review categories worth 20 points each. Scores are not independently graded.</p>
 <p class="note"><strong>Important:</strong> Do not use these commands against friends, unknown devices, public hosts or employer systems without explicit permission.</p>

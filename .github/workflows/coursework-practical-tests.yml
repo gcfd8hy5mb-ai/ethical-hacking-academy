@@ -1,0 +1,47 @@
+name: Coursework Practical Lab Regression Checks
+on:
+  push:
+    branches:
+      - coursework/batch8-independent-incident-response
+    paths:
+      - 'local-vm-labs/**'
+      - 'tests/test_batch*.py'
+      - 'tests/test_core_curriculum_depth_integration.py'
+      - 'curriculum.json'
+      - 'exams.json'
+      - 'tests/test_exam_bank_integrity.py'
+      - '.github/workflows/coursework-practical-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-regression:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    timeout-minutes: 12
+    steps:
+      - name: Check out development branch
+        uses: actions/checkout@v4
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check Python sources compile
+        run: |
+          python -m py_compile local-vm-labs/batch9_independent_investigation.py local-vm-labs/batch10_live_defense_practicum.py local-vm-labs/batch11_soc_correlation.py local-vm-labs/batch12_forensics_triage.py local-vm-labs/batch13_assessment_reporting.py local-vm-labs/batch14_enterprise_architecture.py local-vm-labs/batch15_defensive_automation.py
+      - name: Exam bank integrity
+        run: python -m unittest discover -s tests -p 'test_exam_bank_integrity.py' -v
+      - name: Primary curriculum depth integration
+        run: python -m unittest discover -s tests -p 'test_core_curriculum_depth_integration.py' -v
+      - name: Batch 9-15 offline and localhost regressions
+        run: |
+          for batch in 9 10 11 12 13 14 15; do
+            echo "::group::Batch ${batch}"
+            python -m unittest discover -s tests -p "test_batch${batch}_*.py" -v
+            echo "::endgroup::"
+          done
