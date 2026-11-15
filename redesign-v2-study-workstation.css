@@ -1,0 +1,75 @@
+/* Approved desktop study workspace — presentation only.
+   Uses the established charcoal, cream and gold system; never touches progress keys. */
+@media(min-width:1400px){
+ #app .academy-v2-screen-course.wrap:has(~.desktop-context),
+ #app .academy-v2-screen-lesson.wrap:has(~.desktop-context){margin-right:275px}
+ #app .desktop-context{
+  background:linear-gradient(155deg,#172126,#0b1115)!important;
+  border:1px solid #806643!important;color:#f5ead3!important;
+  box-shadow:0 18px 48px #0007!important;border-radius:12px!important;
+  scrollbar-color:#957448 #10181c;
+ }
+ #app .desktop-context-label{color:#f0bc64!important;font:800 11px/1.45 ui-monospace,SFMono-Regular,Consolas,monospace!important}
+ #app .desktop-context h2{color:#ffe3a4!important;font:800 17px/1.4 ui-monospace,Consolas,monospace!important}
+ #app .desktop-context p{color:#d6cbb8!important}
+ #app .desktop-context-track{background:#394145!important}
+ #app .desktop-context-track span{background:linear-gradient(90deg,#b7802c,#ffdc91)!important}
+ #app .desktop-context a,#app .desktop-context button{
+  display:block!important;color:#f1d49a!important;
+  background:#152126!important;border:1px solid transparent!important;
+  border-radius:7px!important;font:750 12px/1.45 ui-monospace,monospace!important
+ }
+ #app .desktop-context a:hover,#app .desktop-context button:hover,
+ #app .desktop-context a:focus-visible,#app .desktop-context button:focus-visible{
+  background:#33291d!important;border-color:#e8b85f!important;color:#ffe5ac!important
+ }
+ #app .desktop-context-foot{border-top:1px solid #5f513e!important;color:#c7b89e!important}
+}
+@media(min-width:960px){
+ #app .academy-v2-screen-lesson .academy-workstation-title{
+  margin:0 0 18px;padding:22px 26px!important;border:1px solid #806742;
+  border-radius:11px;background:linear-gradient(125deg,#19252a,#0d1519)
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-title h1{
+  color:#ffe2a2!important;font:800 clamp(22px,2.25vw,35px)/1.25 ui-monospace,Consolas,monospace!important
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-jumps{
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px!important
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-jumps button{
+  min-width:0;white-space:normal;text-align:left!important
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-split{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px!important;align-items:start
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-split>.academy-reading-panel,
+ #app .academy-v2-screen-lesson .academy-workstation-split>.academy-practice-panel{
+  min-width:0!important;max-height:none!important;overflow:visible!important;position:static!important
+ }
+ #app .academy-v2-screen-lesson .academy-workstation-assessment{
+  clear:both;max-width:100%;margin-top:18px!important
+ }
+ #app .academy-v2-screen-lesson .academy-practice-followup{
+  margin-top:17px;padding:16px;border:1px solid #715c3c;border-radius:9px;background:#141e23
+ }
+ #app .academy-v2-screen-lesson :is(.academy-reading-panel,.academy-practice-panel) :is(pre,code){
+  max-width:100%;overflow-wrap:anywhere;white-space:pre-wrap
+ }
+}
+@media(min-width:960px) and (max-width:1199px){
+ #app .academy-v2-screen-lesson .academy-workstation-split{grid-template-columns:1fr}
+}
+@media(max-width:959px){
+ #app .academy-v2-screen-lesson .academy-workstation-jumps{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))}
+ #app .academy-v2-screen-lesson .academy-workstation-jumps button{min-width:0!important;white-space:normal!important}
+ #app .academy-v2-screen-lesson .academy-workstation-split{display:block!important}
+}
+@media(max-width:420px){
+ #app .academy-v2-screen-lesson .academy-workstation-jumps{grid-template-columns:1fr}
+}
+#app .academy-v2-screen-lesson :is(#academy-reading,#academy-practice-panel,#academy-knowledge-check,#academy-lab-report){
+ scroll-margin-top:20px
+}
+#app .academy-v2-screen-lesson :is(button,a):focus-visible{
+ outline:3px solid #f3bf65!important;outline-offset:3px
+}

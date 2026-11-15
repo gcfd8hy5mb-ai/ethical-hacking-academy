@@ -1,0 +1,64 @@
+/* V2 interior surfaces — branch-only visual extension. No curriculum, auth, or save logic changes. */
+#app .wrap>.kicker,#app .academy-eyebrow,#app .academy-level-number{color:#efbd5d!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important}
+#app .wrap>h1,#app .academy-page-intro h1,#app .academy-workstation-title h1{color:#ffe4a9!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important;letter-spacing:-.045em}
+#app .academy-page-intro p,#app .academy-workstation-title p,#app .wrap>p{color:#c9c2b5!important}
+#app .back{color:#f2c779!important;font:700 12px/1.4 ui-monospace,monospace!important;background:#182025;border:1px solid #7e6540;border-radius:8px;padding:11px 14px;text-decoration:none}
+#app .back:hover{background:#2c251b;color:#ffdd9b}
+#app .academy-level-grid .academy-level-card,
+#app .academy-module-grid .academy-lesson-tile,
+#app .course,#app .lesson-row,#app .tile{color:#f5e9d3!important;background:linear-gradient(145deg,#172125,#0c1216)!important;border:1px solid #66553a!important;border-radius:10px!important;box-shadow:none!important}
+#app .academy-level-grid .academy-level-card:hover,
+#app .academy-module-grid .academy-lesson-tile:hover,
+#app .course:hover,#app .lesson-row:hover{border-color:#e8bb62!important;background:#202a2c!important;transform:translateY(-1px)}
+#app .academy-level-title,#app .academy-module-grid .academy-lesson-tile>span,
+#app .course-body strong{color:#ffe4a9!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important}
+#app .academy-level-summary,#app .course-body small{color:#c5bba8!important}
+#app .academy-level-status,#app .academy-level-footer,#app .academy-module-grid .academy-lesson-tile small{color:#e8bd72!important}
+#app .academy-level-meter,#app .progress{background:#44443e!important}
+#app .academy-level-meter span,#app .progress span{background:linear-gradient(90deg,#b7802c,#ffdc91)!important}
+#app .academy-module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#app .academy-module-grid .academy-lesson-tile{min-height:120px;padding:18px 20px}
+#app .academy-workstation-jumps{display:flex;flex-wrap:wrap;gap:8px;position:static!important;top:auto!important;overflow:visible!important;background:transparent!important;border:0!important;margin:14px 0 22px;padding:0!important}
+#app .academy-workstation-jumps button{flex:0 1 auto;min-height:44px;border:1px solid #796343!important;border-radius:7px!important;background:#151e22!important;color:#f4cd83!important;font:700 12px/1.4 ui-monospace,monospace!important;padding:10px 14px!important}
+#app .academy-workstation-jumps button:hover{background:#342917!important;border-color:#e9bb60!important}
+#app .academy-workstation-split{align-items:start;min-width:0;gap:16px}
+#app .academy-workstation-split>.academy-reading-panel,
+#app .academy-workstation-split>.academy-practice-panel,
+#app .academy-workstation-assessment>.sheet,
+#app .sheet,#app .assessment,
+#app .practice-section{background:#121b1f!important;border:1px solid #66553d!important;color:#f2eadc!important;border-radius:11px!important;box-shadow:none!important;min-width:0}
+#app .academy-workstation-split>.academy-reading-panel,
+#app .academy-workstation-split>.academy-practice-panel{position:static!important;top:auto!important;max-height:none!important;height:auto!important;overflow:visible!important;overscroll-behavior:auto!important}
+#app .sheet h2,#app .sheet h3,#app .assessment h2,#app .practice-section h2,#app .academy-workstation-section-head h2{color:#f1c977!important;font-family:ui-monospace,SFMono-Regular,Consolas,monospace!important}
+#app .sheet p,#app .assessment p,#app .practice-section p,#app .body p,#app .body li{color:#e1d8c9!important;line-height:1.75}
+#app .body .lesson-section,#app .academy-reading-panel .lesson-section{background:#1b262a!important;color:#eee0ca!important;border:1px solid #5e503b!important;border-left:3px solid #e9b659!important;border-radius:7px!important}
+#app .body .lesson-section strong{color:#ffda93!important}
+#app .academy-practice-panel #academy-embedded-practice>.sheet,
+#app .academy-practical-steps,#app .academy-practice-block{background:#182328!important;border-color:#655337!important;color:#eadbc2!important}
+#app .academy-practice-panel pre,#app .academy-practice-command pre,#app .terminal,#app pre{background:#090f13!important;color:#c7f2cb!important;border:1px solid #58705b!important;border-radius:8px!important;white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+#app .lab{background:#151f23!important;border:1px solid #836841!important;border-radius:11px!important}
+#app .lab .chip{color:#eac076!important}
+#app .cmds button,#app .practice-links .button,#app .sheet .action-list .button,#app .button{border-radius:8px!important}
+#app .cmds button{background:#24332e!important;color:#e4f2dd!important;border:1px solid #647f62!important}
+#app .assessment .answers .answer{background:#192327!important;border:1px solid #62543f!important;color:#f2e7d0!important}
+#app .assessment .answer:hover,#app .assessment .answer.selected{background:#342a1c!important;border-color:#f2bf61!important}
+#app .feedback{background:#2d261c!important;border-left:3px solid #e8b35b!important;color:#f6e5c4!important}
+#app .academy-workstation-assessment{margin-top:18px}
+#app a:not(.button){color:#f5c977}
+#app .academy-workstation-split .academy-reading-panel,#app .academy-workstation-split .academy-practice-panel{scrollbar-width:auto!important}
+@media(min-width:960px){
+ #app .wrap{animation:none!important}
+ #app .academy-module-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #app .academy-workstation-split{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ #app .academy-workstation-split>.academy-reading-panel,#app .academy-workstation-split>.academy-practice-panel{padding:24px!important}
+}
+@media(min-width:960px) and (max-width:1199px){#app .academy-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#app .academy-workstation-split{grid-template-columns:1fr}}
+@media(max-width:959px){
+ #app .academy-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #app .academy-workstation-split{display:block}
+ #app .academy-workstation-split>.academy-reading-panel,#app .academy-workstation-split>.academy-practice-panel{margin:0 0 14px;padding:17px!important}
+ #app .academy-workstation-jumps button{flex:1 1 calc(50% - 8px)}
+ #app .sheet,#app .assessment{padding:18px!important}
+}
+@media(max-width:540px){#app .academy-module-grid{grid-template-columns:1fr}#app .academy-module-grid .academy-lesson-tile{min-height:90px}}
+@media(prefers-reduced-motion:reduce){#app .academy-level-card,#app .academy-lesson-tile{transition:none!important}}

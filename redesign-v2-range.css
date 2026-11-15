@@ -1,0 +1,28 @@
+/* Cyber Range directory: scoped presentation, no student-record writes. */
+#app .academy-range-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:24px 0}
+#app .academy-range-intro h1{font-size:26px!important;color:#f7edd7!important;margin:0 0 10px}
+#app .academy-range-intro p{max-width:700px;color:#c9bda8;line-height:1.7}
+#app .academy-range-intro>.button{flex-shrink:0}
+#app .academy-range-directory{background:#11181c;border:1px solid #806b49;border-radius:12px;padding:22px;margin:24px 0}
+#app .academy-range-directory label{display:block;color:#ffe0a0;font:700 13px ui-monospace,Consolas,monospace;margin-bottom:10px}
+#app #academy-range-search{width:100%;box-sizing:border-box;background:#090d10;border:1px solid #806b49;border-radius:7px;color:#f7edd7;padding:14px;font-size:16px;line-height:1.4;font-family:inherit;min-height:48px}
+#app #academy-range-search::placeholder{color:#afa593}
+#app .academy-range-filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+#app .academy-range-filters button{background:#182126;color:#e8d4af;border:1px solid #806b49;border-radius:7px;padding:11px 14px;min-height:44px;font:700 12px/1.4 ui-monospace,Consolas,monospace;cursor:pointer}
+#app .academy-range-filters button[aria-pressed="true"]{background:#49371c;color:#ffe0a0;border-color:#efbd5d}
+#app #academy-range-count{color:#c9bda8;font:12px/1.5 ui-monospace,Consolas,monospace;margin:0}
+#app .academy-range-group{margin:30px 0}
+#app .academy-range-heading h2{font-size:19px!important;color:#f1d08c!important;margin:0 0 8px}
+#app .academy-range-heading p{color:#c9bda8;margin:0 0 16px;line-height:1.6}
+#app .academy-range-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#app .academy-range-card{display:flex;flex-direction:column;gap:14px;min-width:0;min-height:156px;box-sizing:border-box;text-align:left;text-decoration:none;padding:20px;border:1px solid #695a43;border-radius:9px;background:linear-gradient(135deg,#182126,#0d1418);color:#f7edd7;cursor:pointer}
+#app .academy-range-card:hover{border-color:#efbd5d;background:#1c2528}
+#app .academy-range-kind{font:10px/1.4 ui-monospace,Consolas,monospace;letter-spacing:.06em;color:#c8ac79}
+#app .academy-range-card strong{font:700 14px/1.6 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+#app .academy-range-open{margin-top:auto;color:#efbd5d;font:700 12px/1.5 ui-monospace,Consolas,monospace}
+#app .academy-range-empty{padding:24px;border:1px dashed #806b49;border-radius:9px;color:#f7edd7}
+#app .academy-range-terminal{margin-top:32px!important}
+#app .academy-range-terminal .terminal{max-height:none;overflow-wrap:anywhere;white-space:pre-wrap}
+#app :is(.academy-range-group,.academy-range-card,.academy-range-empty)[hidden]{display:none!important}
+@media(max-width:1200px){#app .academy-range-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){#app .academy-range-grid{grid-template-columns:1fr}#app .academy-range-intro{align-items:stretch;flex-direction:column;gap:10px}#app .academy-range-directory{padding:16px}#app .academy-range-card{min-height:135px}#app .academy-range-filters button{flex:1 1 130px}}

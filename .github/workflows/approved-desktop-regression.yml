@@ -1,0 +1,41 @@
+name: Approved desktop redesign regression
+on:
+  push:
+    branches:
+      - redesign/approved-desktop-post-coursework-20261115
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'redesign-v2*.css'
+      - 'v2-world-map.svg'
+      - 'tests/test_approved_desktop_v2.mjs'
+      - 'tests/test_cyber_range.mjs'
+      - '.github/workflows/approved-desktop-regression.yml'
+  pull_request:
+    paths:
+      - 'app.js'
+      - 'index.html'
+      - 'redesign-v2*.css'
+      - 'v2-world-map.svg'
+      - 'tests/test_approved_desktop_v2.mjs'
+      - 'tests/test_cyber_range.mjs'
+      - '.github/workflows/approved-desktop-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify app syntax
+        run: node --check app.js
+      - name: Verify approved dashboard and progress compatibility
+        run: node tests/test_approved_desktop_v2.mjs
+      - name: Verify merged guided-practice sections
+        run: node tests/test_batch2_depth.mjs
+      - name: Verify Cyber Range destinations and filters
+        run: node tests/test_cyber_range.mjs
