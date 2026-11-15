@@ -135,6 +135,16 @@ class CurriculumDepthIntegrationTests(unittest.TestCase):
                 self.assertIn("TECHNICAL INTERPRETATION AND LIMITS:",body)
                 self.assertNotIn("GUIDED ANALYSIS: First identify the actors",body)
 
+    def test_linux_terminal_workshops_are_distinct(self):
+        course=DATA["courses"][5]
+        self.assertEqual(course["title"],"Beginner Linux and Terminal Skills")
+        self.assertEqual(len(course["lessons"]),8)
+        for lesson in course["lessons"]:
+            body=lesson[1]
+            self.assertEqual(body.count("LINUX FIELD INVESTIGATION —"),1)
+            self.assertIn("INDEPENDENT LAB OR PAPER PRACTICE:",body)
+            self.assertNotIn("PURPOSE AND RELEVANCE: Explain how this topic",body)
+
     def test_existing_quiz_schema_kept(self):
         for course in DATA["courses"]:
             for lesson in course["lessons"]:
