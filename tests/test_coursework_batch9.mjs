@@ -67,7 +67,8 @@ for(const test of interactive){
   assert.equal(scripts.length,1,test.page+' script count');
   const elements=new Map(ids.map(id=>[id,node()]));
   const document={getElementById(id){assert.ok(elements.has(id),'Unknown DOM element '+id);return elements.get(id);},
-    createElement(){return node();}};
+    createElement(){return node();},
+    querySelectorAll(selector){assert.equal(selector,'#case-tabs button');return elements.get('case-tabs').children;}};
   new Script(scripts[0],{filename:test.page}).runInContext(createContext({document}));
   const buttons=elements.get(test.container).children;
   assert.equal(buttons.length,test.expected,test.page+' scenario count');
